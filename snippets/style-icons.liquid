@@ -1,0 +1,37 @@
+{% comment %}
+  You can render style icons:
+  {% render "filters-style-icon", product: product %}
+  You can add paramters by passing them:
+  {% render "icons", name: "far-circle", width: 100 %}
+  The following parameters are required:
+  - product: object
+{% endcomment %}
+
+{%- case product.metafields.filters.style.value -%}
+  {%- when "Slip" or "Brief" -%}
+    {% render "icons", name: "slip", width: 15, height: 15 %}
+  {%- when "Cheeky Slip" or "Cheeky Brief" -%}
+    {% render "icons", name: "cheeky-slip", width: 15, height: 15 %}
+  {%- when "High Waist" -%}
+    {% render "icons", name: "high-waist", width: 17, height: 15 %}
+  {%- when "Brazilian" -%}
+    {% render "icons", name: "brazilian", width: 20, height: 13 %}
+  {%- when "Hipster" -%}
+    {% render "icons", name: "hipster", width: 20, height: 13 %}
+  {%- when "Tanga" or "Thong" -%}
+    {% render "icons", name: "thong", width: 20, height: 13 %}
+  {%- when "Shorts" -%}
+    {% render "icons", name: "Shorts", width: 15, height: 13, style: 'fill: none' %}
+  {%- when "Bralette" -%}
+    {% render "icons", name: "Bralette", width: 15, height: 13, style: 'fill: none' %}
+  {%- when "Bikini Top" -%}
+    {% render "icons", name: "Bikini Top", width: 15, height: 13, style: 'fill: none' %}
+  {%- when "Bikini Bandeau Top" -%}
+    {% render "icons", name: "Bikini Bandeau Top", width: 15, height: 13, style: 'fill: none' %}
+  {%- when "Body" or "Swimsuit" -%}
+    {% render "icons", name: "Body", width: 15, height: 15, style: 'fill: none' %}
+  {%- when "High Waist Curve" -%}
+    {% render "icons", name: "High Waist Curve", width: 15, height: 13, style: 'fill: none' %}
+  {%- when "Leggings" -%}
+    {% render "icons", name: "Leggings", width: 15, height: 13 %}
+{%- endcase -%}

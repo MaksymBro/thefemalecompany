@@ -1,0 +1,358 @@
+<style>
+  #shopify-section-{{ section.id }} {
+    --prev-next-button-background: var(--text-color);
+    --prev-next-button-color: var(--section-background);
+  }
+</style>
+
+{%- render 'section', background_color: section.settings.background, text_color: section.settings.text_color, container_width: 'none' -%}
+  {%- render 'section-header', heading: section.settings.title, subheading: section.settings.subheading, short_description: section.settings.content -%}
+
+  {%- comment -%}
+  If we have more than 3 blocks we assume that by default the content may be scrollable. This may not be the case and
+  the JavaScript will fired up to remove it in case it is needed, but if it is indeed scrollable this will avoid
+  a reflow of the browser rendering engine. From our tests 3 is a sane default.
+  {%- endcomment -%}
+  <gallery-list class="gallery">
+    <scrollable-content {% unless section.settings.show_arrows %}draggable{% endunless %} class="gallery__list-wrapper {% if section.blocks.size >= 3 %}is-scrollable{% endif %} hide-scrollbar">
+      <div class="container">
+        <div class="gallery__list">
+          {%- for block in section.blocks -%}
+            <gallery-item class="gallery__item" {{ block.shopify_attributes }}>
+              <figure class="gallery__figure">
+                {%- if block.settings.image -%}
+                  {%- assign mobile_size = 370 | times: block.settings.image.aspect_ratio | ceil -%}
+                  {%- assign tablet_size = 520 | times: block.settings.image.aspect_ratio | ceil -%}
+                  {%- assign desktop_size = 600 | times: block.settings.image.aspect_ratio | ceil -%}
+                  {%- capture sizes_attribute -%}(max-width: 740px) {{ mobile_size }}px, (max-width: 999px) {{ tablet_size }}px, {{ desktop_size }}px{%- endcapture -%}
+
+                  {{ block.settings.image | image_url: width: block.settings.image.width | image_tag: loading: 'lazy', sizes: sizes_attribute, widths: '300,400,500,600,700,800,900,1000,1100,1200,1300,1400,1500,1600,1700,1800,1900,2000', class: 'gallery__image' }}
+                {%- else -%}
+                  {{- 'image' | placeholder_svg_tag: 'gallery__image gallery__image placeholder-background' -}}
+                {%- endif -%}
+
+                {%- if block.settings.caption != blank -%}
+                  <figcaption class="gallery__caption rte">
+                    {{- block.settings.caption -}}
+                  </figcaption>
+                {%- endif -%}
+              </figure>
+            </gallery-item>
+          {%- endfor -%}
+        </div>
+      </div>
+    </scrollable-content>
+
+    {%- if section.blocks.size > 1 and section.settings.show_arrows -%}
+      <prev-next-buttons class="gallery__prev-next-buttons prev-next-buttons">
+        <button class="gallery__arrow prev-next-button prev-next-button--prev">
+          <span class="visually-hidden">{{ 'general.accessibility.previous' | t }}</span>
+          {%- include 'icon' with 'nav-arrow-left', direction_aware: true -%}
+        </button>
+
+        <button class="gallery__arrow prev-next-button prev-next-button--next">
+          <span class="visually-hidden">{{ 'general.accessibility.next' | t }}</span>
+          {%- include 'icon' with 'nav-arrow-right', direction_aware: true -%}
+        </button>
+      </prev-next-buttons>
+    {% endif %}
+
+    <div class="gallery__progress-bar-wrapper container">
+      <span class="gallery__progress-bar progress-bar" style="--divider: {{ section.blocks.size }}"></span>
+    </div>
+  </gallery-list>
+{%- render 'section-end' -%}
+
+{% schema %}
+{
+  "name": "Gallery",
+  "class": "shopify-section--gallery",
+  "disabled_on": {
+    "groups": ["header", "custom.overlay"]
+  },
+  "blocks": [
+    {
+      "type": "image",
+      "name": "Image",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image",
+          "info": "1500 x 1800 px .jpg recommended"
+        },
+        {
+          "type": "richtext",
+          "id": "caption",
+          "label": "Caption"
+        }
+      ]
+    }
+  ],
+  "settings": [
+    {
+      "type": "header",
+      "content": "Gallery settings"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_arrows",
+      "label": "Show navigation arrows",
+      "default": true
+    },
+    {
+      "type": "header",
+      "content": "Section header"
+    },
+    {
+      "type": "textarea",
+      "id": "subheading",
+      "label": "Subheading",
+      "default": "Subheading"
+    },
+    {
+      "type": "textarea",
+      "id": "title",
+      "label": "Heading",
+      "default": "Gallery"
+    },
+    {
+      "type": "richtext",
+      "id": "section_header_short_description",
+      "label": "Short description",
+      "default": "<p>Your short description.</p>"
+    },
+    {
+      "type": "select",
+      "id": "section_header_heading_size",
+      "label": "Heading size",
+      "options": [
+        {
+          "value": "h1",
+          "label": "Heading 1"
+        },
+        {
+          "value": "h2",
+          "label": "Heading 2"
+        },
+        {
+          "value": "h3",
+          "label": "Heading 3"
+        },
+        {
+          "value": "h4",
+          "label": "Heading 4"
+        },
+        {
+          "value": "h5",
+          "label": "Heading 5"
+        },
+        {
+          "value": "h6",
+          "label": "Heading 6"
+        }
+      ],
+      "default": "h3"
+    },
+    {
+      "type": "checkbox",
+      "id": "section_header_highest_hierarchy",
+      "label": "Highest hierarchy",
+      "info": "Check this if this is the highest hierarchy heading on the page. This will make this a 'h1' heading, which should only be used once per page.",
+      "default": false
+    },
+    {
+      "type": "select",
+      "id": "section_header_short_description_font_size",
+      "label": "Short description font size",
+      "options": [
+        {
+          "value": "xxsmall",
+          "label": "Extra extra Small"
+        },
+        {
+          "value": "xsmall",
+          "label": "Extra Small"
+        },
+        {
+          "value": "small",
+          "label": "Small"
+        },
+        {
+          "value": "medium",
+          "label": "Medium"
+        },
+        {
+          "value": "large",
+          "label": "Large"
+        }
+      ],
+      "default": "medium"
+    },
+    {
+      "type": "header",
+      "content": "Section settings"
+    },
+    {
+      "type": "select",
+      "id": "section_container_width",
+      "label": "Maximum width",
+      "options": [
+        {
+          "value": "xxs",
+          "label": "Extra extra Small"
+        },
+        {
+          "value": "xs",
+          "label": "Extra Small"
+        },
+        {
+          "value": "sm",
+          "label": "Small"
+        },
+        {
+          "value": "md",
+          "label": "Medium"
+        },
+        {
+          "value": "fluid",
+          "label": "Full width"
+        }
+      ],
+      "default": "fluid"
+    },
+    {
+      "type": "select",
+      "id": "section_text_alignment",
+      "label": "Text alignment",
+      "options": [
+        {
+          "value": "left",
+          "label": "Left"
+        },
+        {
+          "value": "center",
+          "label": "Center"
+        },
+        {
+          "value": "right",
+          "label": "Right"
+        }
+      ],
+      "default": "left"
+    },
+    {
+      "type": "color",
+      "id": "background",
+      "label": "Background color",
+      "default": "rgba(0,0,0,0)"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text color",
+      "default": "rgba(0,0,0,0)"
+    },
+    {
+      "type": "color",
+      "id": "section_heading_color",
+      "label": "Heading color",
+      "default": "rgba(0,0,0,0)"
+    },
+    {
+      "type": "color",
+      "id": "section_subheading_color",
+      "label": "Subheading color",
+      "default": "rgba(0,0,0,0)",
+      "info": "Defaults to heading color."
+    },
+    {
+      "type": "select",
+      "id": "section_heading_font_family",
+      "label": "Heading font",
+      "options": [
+        {
+          "value": "default",
+          "label": "Default"
+        },
+        {
+          "value": "circular",
+          "label": "Circular"
+        },
+        {
+          "value": "publico",
+          "label": "Publico"
+        }
+      ],
+      "default": "default"
+    },
+    {
+      "type": "header",
+      "content": "Section spacing"
+    },
+    {
+      "type": "range",
+      "id": "section_spacing_top",
+      "label": "Top spacing",
+      "unit": "px",
+      "min": 0,
+      "max": 200,
+      "step": 4,
+      "default": 48
+    },
+    {
+      "type": "range",
+      "id": "section_spacing_bottom",
+      "label": "Bottom spacing",
+      "unit": "px",
+      "min": 0,
+      "max": 200,
+      "step": 4,
+      "default": 48
+    },
+    {
+      "type": "checkbox",
+      "id": "section_spacing_different_mobile",
+      "label": "Use different height on mobile",
+      "default": false
+    },
+    {
+      "type": "range",
+      "id": "section_spacing_top_mobile",
+      "label": "Top spacing (mobile)",
+      "unit": "px",
+      "min": 0,
+      "max": 200,
+      "step": 4,
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "section_spacing_bottom_mobile",
+      "label": "Bottom spacing (mobile)",
+      "unit": "px",
+      "min": 0,
+      "max": 200,
+      "step": 4,
+      "default": 0
+    }
+  ],
+  "presets": [
+    {
+      "name": "Gallery",
+      "blocks": [
+        {
+          "type": "image"
+        },
+        {
+          "type": "image"
+        },
+        {
+          "type": "image"
+        }
+      ],
+      "settings": {}
+    }
+  ]
+}
+{% endschema %}

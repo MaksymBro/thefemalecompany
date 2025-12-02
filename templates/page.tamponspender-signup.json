@@ -1,0 +1,81 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "show_title": true,
+        "show_breadcrumbs": true,
+        "page_width": "medium"
+      }
+    },
+    "image_with_text_overlay_CihxBN": {
+      "type": "image-with-text-overlay",
+      "settings": {
+        "reveal_on_scroll": true,
+        "section_height": "medium",
+        "image": "shopify://shop_images/2023-07-20-TFC-TAMPONSPENDER3427_1_2.jpg",
+        "subheading": "Mach deinen Arbeitsplatz #periodpositive",
+        "title": "Jetzt Angebot anfragen",
+        "content": "<p>Du bist an kostenlosen Periodenprodukten interessiert? Frage hier direkt ein unverbindliches Angebot an!</p>",
+        "button_text": "",
+        "button_link": "",
+        "link_style": "link",
+        "background_type": "full_width",
+        "text_width": "medium",
+        "text_position": "middle_center",
+        "text_color": "#ffffff",
+        "button_background": "#ffffff",
+        "button_text_color": "#000000",
+        "overlay_color": "#000000",
+        "overlay_opacity": 30
+      }
+    },
+    "rich_text_P4jxxz": {
+      "type": "rich-text",
+      "settings": {
+        "subheading": "",
+        "title": "",
+        "content": "<h5>Klingt interessant? Gerne erstellen wir Dir ein ab 3 Spender ein individuelles Angebot. Falls du weniger benötigst, dann klicke hier und bestelle direkt und ganz unkompliziert unseren Tampon- & Bindenspender inklusive der Erstbefüllung.</h5>",
+        "button_text": "",
+        "button_link": "",
+        "background_type": "full_width",
+        "text_width": "medium",
+        "text_position": "center",
+        "text_alignment": "center",
+        "background": "rgba(0,0,0,0)",
+        "text_color": "rgba(0,0,0,0)",
+        "button_background": "rgba(0,0,0,0)",
+        "button_text_color": "rgba(0,0,0,0)"
+      }
+    },
+    "custom_html_LhA6mE": {
+      "type": "custom-html",
+      "settings": {
+        "subheading": "",
+        "title": "",
+        "html": "<div class=\"klaviyo-form-RMbF2t\"></div>",
+        "add_vertical_spacing": true,
+        "disable_inside_spacing": false,
+        "background_type": "boxed",
+        "background": "rgba(0,0,0,0)",
+        "text_color": "rgba(0,0,0,0)"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "image_with_text_overlay_CihxBN",
+    "rich_text_P4jxxz",
+    "custom_html_LhA6mE"
+  ]
+}

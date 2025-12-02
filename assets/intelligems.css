@@ -1,0 +1,45 @@
+.ig-volume-widget-container {
+  max-width: initial!important;
+  margin: 0!important;
+  justify-content: flex-start!important;
+  align-items: stretch!important;
+}
+
+.ig-volume-widget-button {
+  transition: border-color .1s ease-in-out;
+  flex: 1!important;
+  width: initial!important;
+  height: initial!important;
+}
+
+.ig-volume-widget-extra-message-hover, .ig-volume-widget-extra-message-empty {
+  width: 100%!important;
+  padding: 4px!important;
+  margin: 0!important;
+  transition: background-color .1s ease-in-out;
+  min-width: initial!important;
+}
+
+.ig-volume-widget-price-section {
+  padding: 0.5rem!important;
+}
+
+ig-volume-progress-bar-widget .ig-dp-container {
+  max-width: initial!important;
+  padding: 0.5rem 0!important;
+  height: auto!important;
+}
+
+ig-volume-progress-bar-widget .ig-dp-row-container{
+  padding: 8px 0!important;
+  height: auto!important;
+}
+
+ig-volume-progress-bar-widget .ig-dp-locked-breakpoint, ig-volume-progress-bar-widget .ig-dp-completed-breakpoint {
+  transform: scale(0.75)!important;
+}
+
+.ig-volume-progress-bar-container .css-5r7mn5, .ig-volume-progress-bar-container .css-g3mk3z, .ig-volume-progress-bar-container .css-730pvu, .ig-volume-progress-bar-container .css-to9nqy, .ig-volume-progress-bar-container .css-17ifsr4, .ig-volume-progress-bar-container .css-14fnzb0, .ig-volume-progress-bar-container .css-14ovu1b, .ig-volume-progress-bar-container .css-bgy7eq, .ig-volume-progress-bar-container .css-1elf35x {
+  height: 4px!important;
+  border-radius: 0!important;
+}

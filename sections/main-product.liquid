@@ -1,0 +1,1506 @@
+{% assign full_header = content_for_header %}
+{% if full_header contains 'view=quick-buy-drawer' %}
+  {% assign template_suffix = 'quick-buy-drawer' %}
+{% elsif full_header contains 'view=quick-buy-popover' %}
+  {% assign template_suffix = 'quick-buy-popover' %}
+{% else %}
+  {% assign template_suffix = template.suffix %}
+{% endif %}
+{%- unless template_suffix contains 'quick-buy' or template_suffix contains 'product-info' -%}
+  <style>
+    #shopify-section-{{ section.id }} {
+      {%- assign buy_buttons_block = section.blocks | where: 'type', 'buy_buttons' | first -%}
+
+      {%- if buy_buttons_block.settings.show_payment_button -%}
+        {%- if buy_buttons_block.settings.atc_button_background == 'rgba(0,0,0,0)' -%}
+          {%- assign secondary_button_background = settings.secondary_button_background -%}
+        {%- else -%}
+          {%- assign secondary_button_background = buy_buttons_block.settings.atc_button_background -%}
+        {%- endif -%}
+
+        {%- if buy_buttons_block.settings.atc_button_text_color == 'rgba(0,0,0,0)' -%}
+          {%- assign secondary_button_text_color = settings.secondary_button_text_color -%}
+        {%- else -%}
+          {%- assign secondary_button_text_color = buy_buttons_block.settings.atc_button_text_color -%}
+        {%- endif -%}
+
+        {%- if buy_buttons_block.settings.buy_now_button_background == 'rgba(0,0,0,0)' -%}
+          {%- assign primary_button_background = settings.primary_button_background -%}
+        {%- else -%}
+          {%- assign primary_button_background = buy_buttons_block.settings.buy_now_button_background -%}
+        {%- endif -%}
+
+        {%- if buy_buttons_block.settings.buy_now_button_text_color == 'rgba(0,0,0,0)' -%}
+          {%- assign primary_button_text_color = settings.primary_button_text_color -%}
+        {%- else -%}
+          {%- assign primary_button_text_color = buy_buttons_block.settings.buy_now_button_text_color -%}
+        {%- endif -%}
+      {%- else -%}
+        {%- if buy_buttons_block.settings.atc_button_background == 'rgba(0,0,0,0)' -%}
+          {%- assign primary_button_background = settings.primary_button_background -%}
+        {%- else -%}
+          {%- assign primary_button_background = buy_buttons_block.settings.atc_button_background -%}
+        {%- endif -%}
+
+        {%- if buy_buttons_block.settings.atc_button_text_color == 'rgba(0,0,0,0)' -%}
+          {%- assign primary_button_text_color = settings.primary_button_text_color -%}
+        {%- else -%}
+          {%- assign primary_button_text_color = buy_buttons_block.settings.atc_button_text_color -%}
+        {%- endif -%}
+      {%- endif -%}
+
+      --primary-button-background: {{ primary_button_background.red }}, {{ primary_button_background.green }}, {{ primary_button_background.blue }};
+      --primary-button-text-color: {{ primary_button_text_color.red }}, {{ primary_button_text_color.green }}, {{ primary_button_text_color.blue }};
+      --secondary-button-background: {{ secondary_button_background.red }}, {{ secondary_button_background.green }}, {{ secondary_button_background.blue }};
+      --secondary-button-text-color: {{ secondary_button_text_color.red }}, {{ secondary_button_text_color.green }}, {{ secondary_button_text_color.blue }};
+    }
+  </style>
+
+  <section>
+    {%- if section.settings.show_sticky_add_to_cart and product.available -%}
+      {%- render 'product-sticky-form', product: product -%}
+    {%- endif -%}
+
+    <div class="container">
+      <nav
+        aria-label="{{ 'general.breadcrumb.title' | t }}"
+        class="breadcrumb breadcrumb--small text--xsmall {% unless settings.show_breadcrumbs_pdp_mobile %}hidden-phone{% endunless %} {% unless settings.show_breadcrumbs_pdp_desktop %}hidden-tablet-and-up{% endunless %}"
+      >
+        <ol class="breadcrumb__list" role="list">
+          <li class="breadcrumb__item">
+            <a class="breadcrumb__link" href="{{ routes.root_url }}">{{ 'general.breadcrumb.home' | t }}</a>
+          </li>
+
+          <li class="breadcrumb__item">
+            <span class="breadcrumb__link" aria-current="page">
+              {{- product.title -}}
+            </span>
+          </li>
+        </ol>
+      </nav>
+
+      <!-- PRODUCT TOP PART -->
+      <div class="product product--thumbnails-{{ section.settings.desktop_thumbnails_position }}">
+        {%- render 'product-media', product: product -%}
+        {%- render 'product-info', product: product, update_url: true -%}
+      </div>
+    </div>
+  </section>
+{%- elsif template_suffix contains 'quick-buy' -%}
+  {%- comment -%}
+  The quick shop HTML being very different, we render it here. On mobile and tablet/desktop, the product renders also
+  quite differently, as it is in a drawer on tablet/desktop, and a popover on mobile.
+  {%- endcomment -%}
+
+  {%- capture quick_buy_product_info -%}
+    <div class="quick-buy-product">
+      {%- assign featured_media = product.selected_or_first_available_variant.featured_media | default: product.featured_media -%}
+
+      {%- if template_suffix == 'quick-buy-drawer' -%}
+        {{- featured_media | image_url: width: featured_media.width | image_tag: loading: 'lazy', sizes: '114px', widths: '114,228,342', class: 'quick-buy-product__image' -}}
+      {%- else -%}
+        {{- featured_media | image_url: width: featured_media.width | image_tag: loading: 'lazy', sizes: '65px', widths: '65,130,195', class: 'quick-buy-product__image' -}}
+      {%- endif -%}
+
+      <div class="quick-buy-product__info {% if template_suffix == 'quick-buy-popover' %}text--small{% endif %}">
+        <product-meta form-id="product-form-{{ section.id }}-{{ product.id }}" unit-price-class="text--xsmall" class="product-item-meta">
+          {%- if section.settings.show_vendor -%}
+            {%- assign vendor_handle = product.vendor | handle -%}
+            {%- assign collection_for_vendor = collections[vendor_handle] -%}
+
+            {%- unless collection_for_vendor.empty? -%}
+              <a href="{{ collection_for_vendor.url }}" class="product-item-meta__vendor heading {% if template_suffix == 'quick-buy-drawer' %}heading--small{% else %}heading--xsmall{% endif %}">{{ product.vendor }}</a>
+            {%- else -%}
+              <a href="{{ product.vendor | url_for_vendor }}" class="product-item-meta__vendor heading {% if template_suffix == 'quick-buy-drawer' %}heading--small{% else %}heading--xsmall{% endif %}">{{ product.vendor }}</a>
+            {%- endunless -%}
+          {%- endif -%}
+
+          <a href="{{ product.url }}" class="product-item-meta__title">{{ product.title }}</a>
+
+          <div class="product-item-meta__price-list-container" role="region" aria-live="polite">
+            <div class="price-list" data-product-price-list>
+              {%- if product.selected_or_first_available_variant.compare_at_price > product.selected_or_first_available_variant.price -%}
+                <span class="price price--highlight">
+                  <span class="visually-hidden">{{ 'product.general.sale_price' | t }}</span>
+                  {%- if settings.currency_code_enabled -%}
+                    {{- product.selected_or_first_available_variant.price | money_with_currency -}}
+                  {%- else -%}
+                    {{- product.selected_or_first_available_variant.price | money -}}
+                  {%- endif -%}
+                </span>
+
+                <span class="price price--compare">
+                  <span class="visually-hidden">{{ 'product.general.regular_price' | t }}</span>
+                  {%- if settings.currency_code_enabled -%}
+                    {{- product.selected_or_first_available_variant.compare_at_price | money_with_currency -}}
+                  {%- else -%}
+                    {{- product.selected_or_first_available_variant.compare_at_price | money -}}
+                  {%- endif -%}
+                  </span>
+              {%- else -%}
+                <span class="price">
+                  <span class="visually-hidden">{{ 'product.general.sale_price' | t }}</span>
+
+                  {%- if settings.currency_code_enabled -%}
+                    {{- product.selected_or_first_available_variant.price | money_with_currency -}}
+                  {%- else -%}
+                    {{- product.selected_or_first_available_variant.price | money -}}
+                  {%- endif -%}
+                </span>
+              {%- endif -%}
+
+              {%- if product.selected_or_first_available_variant.unit_price_measurement -%}
+                <div class="price text--subdued text--xsmall">
+                  <div class="unit-price-measurement">
+                    <span class="unit-price-measurement__price">{{ product.selected_or_first_available_variant.unit_price | money }}</span>
+                    <span class="unit-price-measurement__separator">/</span>
+
+                    {%- if product.selected_or_first_available_variant.unit_price_measurement.reference_value != 1 -%}
+                      <span class="unit-price-measurement__reference-value">{{ product.selected_or_first_available_variant.unit_price_measurement.reference_value }}</span>
+                    {%- endif -%}
+
+                    <span class="unit-price-measurement__reference-unit">{{ product.selected_or_first_available_variant.unit_price_measurement.reference_unit }}</span>
+                  </div>
+                </div>
+              {%- endif -%}
+            </div>
+          </div>
+
+          {% if product.metafields.descriptors.short_description %}
+            <div class="quick-buy-product__info-short-description">
+              {{ product.metafields.descriptors.short_description }}
+            </div>
+          {% endif %}
+
+          {%- if template_suffix == 'quick-buy-popover' or template_suffix == 'quick-buy-drawer' -%}
+            <a href="{{ product.url }}" class="link text--subdued">{{ 'product.general.view_details' | t }}</a>
+          {%- endif -%}
+
+        </product-meta>
+      </div>
+    </div>
+  {%- endcapture -%}
+
+  {%- if template_suffix == 'quick-buy-drawer' -%}
+    <quick-buy-drawer class="drawer drawer--large drawer--quick-buy">
+      <cart-notification hidden class="cart-notification cart-notification--drawer"></cart-notification>
+
+      <span class="drawer__overlay"></span>
+
+      <header class="drawer__header">
+        <p class="drawer__title heading h6">{{ 'product.form.choose_options' | t }}</p>
+
+        <button type="button" class="drawer__close-button tap-area" data-action="close" title="{{ 'general.accessibility.close' | t | escape }}">
+          {%- render 'icon' with 'close' -%}
+        </button>
+      </header>
+
+      <div class="drawer__content">
+        {{- quick_buy_product_info -}}
+        {%- render 'product-form', product: product -%}
+      </div>
+    </quick-buy-drawer>
+  {%- elsif template_suffix == 'quick-buy-popover' -%}
+    <quick-buy-popover class="popover popover--quick-buy">
+      <span class="popover__overlay"></span>
+
+      <header class="popover__header">
+        {{- quick_buy_product_info -}}
+
+        <button type="button" class="popover__close-button tap-area tap-area--large" data-action="close" title="{{ 'general.accessibility.close' | t | escape }}">
+          {%- render 'icon' with 'close' -%}
+        </button>
+      </header>
+
+      <div class="popover__content popover__content--no-padding">
+        {%- render 'product-form', product: product -%}
+      </div>
+    </quick-buy-popover>
+  {%- endif -%}
+{%- elsif template_suffix contains 'product-info' -%}
+  {%- capture product_info_content -%}
+    <div class="product-media__container">
+      {%- render 'product-media', product: product -%}
+    </div>
+
+    {%- render 'product-info', product: product, featured: true -%}
+  {%- endcapture -%}
+
+  {%- if template_suffix == 'product-info-drawer' -%}
+    <product-info-drawer class="drawer drawer--large drawer--product-info">
+      <span class="drawer__overlay"></span>
+
+      <header class="drawer__header">
+        <p class="drawer__title heading h6">{{ product.title }}</p>
+
+        <button type="button" class="drawer__close-button tap-area" data-action="close" title="{{ 'general.accessibility.close' | t | escape }}">
+          {%- render 'icon' with 'close' -%}
+        </button>
+      </header>
+
+      <div class="drawer__content">
+        {{ product_info_content }}
+      </div>
+    </product-info-drawer>
+  {%- elsif template_suffix == 'product-info-popover' -%}
+    <product-info-popover class="popover popover--product-info">
+      <span class="popover__overlay"></span>
+
+      <header class="popover__header">
+        <p class="popover__title heading h6">{{ product.title }}</p>
+
+        <button type="button" class="popover__close-button tap-area tap-area--large" data-action="close" title="{{ 'general.accessibility.close' | t | escape }}">
+          {%- render 'icon' with 'close' -%}
+        </button>
+      </header>
+
+      <div class="popover__content popover__content--no-padding">
+        {{ product_info_content }}
+      </div>
+    </product-info-popover>
+  {%- endif -%}
+{%- endunless -%}
+
+{% render 'hide-sticky-rewards-on-mobile-product-page' %}
+
+{% schema %}
+{
+  "name": "Product page",
+  "class": "shopify-section--main-product",
+  "blocks": [
+    {
+      "type": "@app"
+    },
+    {
+      "type": "variant_picker",
+      "name": "Variant picker",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "checkbox",
+          "id": "hide_sold_out_variants",
+          "label": "Hide sold out variants",
+          "default": false
+        },
+        {
+          "type": "select",
+          "id": "selector_mode",
+          "label": "Selector type",
+          "options": [
+            {
+              "value": "block",
+              "label": "Block"
+            },
+            {
+              "value": "dropdown",
+              "label": "Dropdown"
+            }
+          ],
+          "default": "block"
+        },
+        {
+          "type": "select",
+          "id": "color_mode",
+          "label": "Color selector type",
+          "info": "Variant image mode requires that all variant have an associated image. [Learn more](https://help.shopify.com/en/manual/products/product-media/add-images-variants#add-images-to-existing-variants)",
+          "options": [
+            {
+              "value": "block",
+              "label": "Block"
+            },
+            {
+              "value": "dropdown",
+              "label": "Dropdown"
+            },
+            {
+              "value": "color",
+              "label": "Color swatch"
+            },
+            {
+              "value": "variant_image",
+              "label": "Variant image"
+            }
+          ],
+          "default": "color"
+        },
+        {
+          "type": "page",
+          "id": "size_chart_page",
+          "label": "Size chart page",
+          "info": "Feature a page for size option"
+        },
+        {
+          "type": "page",
+          "id": "absorbancy_chart_page",
+          "label": "Absorbancy chart page",
+          "info": "Feature a page for absorbancy option"
+        }
+      ]
+    },
+    {
+      "type": "quantity_selector",
+      "name": "Quantity selector",
+      "limit": 1
+    },
+    {
+      "type": "product_page_link",
+      "name": "Product page link",
+      "limit": 1
+    },
+    {
+      "type": "buy_buttons",
+      "name": "Buy buttons",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "checkbox",
+          "id": "show_payment_button",
+          "label": "Show dynamic checkout button",
+          "info": "Each customer will see their preferred payment method from those available on your store, such as PayPal or Apple Pay. [Learn more](https://help.shopify.com/manual/using-themes/change-the-layout/dynamic-checkout)",
+          "default": true
+        },
+        {
+          "type": "checkbox",
+          "id": "show_gift_card_recipient",
+          "label": "Show recipient information form for gift card products",
+          "info": "Gift card products can optionally be sent directly to a recipient along with a personal message. [Learn more](https://help.shopify.com/manual/online-store/themes/customizing-themes/add-gift-card-recipient-fields)",
+          "default": false
+        },
+        {
+          "type": "color",
+          "id": "atc_button_background",
+          "label": "Add to cart background",
+          "default": "rgba(0,0,0,0)"
+        },
+        {
+          "type": "color",
+          "id": "atc_button_text_color",
+          "label": "Add to cart color",
+          "default": "rgba(0,0,0,0)"
+        },
+        {
+          "type": "color",
+          "id": "buy_now_button_background",
+          "label": "Buy now background",
+          "default": "rgba(0,0,0,0)"
+        },
+        {
+          "type": "color",
+          "id": "buy_now_button_text_color",
+          "label": "Buy now color",
+          "default": "rgba(0,0,0,0)"
+        }
+      ]
+    },
+    {
+      "type": "bundle_atc",
+      "name": "Bundle ATC"
+    },
+    {
+      "type": "back_in_stock_signup",
+      "name": "Back in Stock Signup",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "text",
+          "id": "klaviyo_list_id",
+          "label": "Klaviyo List ID"
+        }
+      ]
+    },
+    {
+      "name": "Description accordion",
+      "type": "description_accordion",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "checkbox",
+          "id": "open_by_default",
+          "label": "Open by default",
+          "default": true
+        },
+        {
+          "type": "checkbox",
+          "id": "use_metafields_for_usp",
+          "label": "Use metafield for USPs",
+          "info": "If set to true, USPs will be pulled from this metafield: product.metafields.descriptors.product_usps.value",
+          "default": false
+        },
+        {
+          "type": "header",
+          "content": "USPs with icons",
+          "visible_if": "{{ block.settings.use_metafields_for_usp != true }}"
+        },
+        {
+          "type": "paragraph",
+          "content": "Add content like USPs below together with icons.",
+          "visible_if": "{{ block.settings.use_metafields_for_usp != true }}"
+        },
+        {
+          "type": "image_picker",
+          "id": "image_1",
+          "label": "Image 1",
+          "visible_if": "{{ block.settings.use_metafields_for_usp != true }}"
+        },
+        {
+          "type": "inline_richtext",
+          "id": "heading_1",
+          "label": "Heading 1",
+          "visible_if": "{{ block.settings.use_metafields_for_usp != true }}"
+        },
+        {
+          "type": "inline_richtext",
+          "id": "description_1",
+          "label": "Description 1",
+          "visible_if": "{{ block.settings.use_metafields_for_usp != true }}"
+        },
+        {
+          "type": "image_picker",
+          "id": "image_2",
+          "label": "Image 2",
+          "visible_if": "{{ block.settings.use_metafields_for_usp != true }}"
+        },
+        {
+          "type": "inline_richtext",
+          "id": "heading_2",
+          "label": "Heading 2",
+          "visible_if": "{{ block.settings.use_metafields_for_usp != true }}"
+        },
+        {
+          "type": "inline_richtext",
+          "id": "description_2",
+          "label": "Description 2",
+          "visible_if": "{{ block.settings.use_metafields_for_usp != true }}"
+        },
+        {
+          "type": "image_picker",
+          "id": "image_3",
+          "label": "Image 3",
+          "visible_if": "{{ block.settings.use_metafields_for_usp != true }}"
+        },
+        {
+          "type": "inline_richtext",
+          "id": "heading_3",
+          "label": "Heading 3",
+          "visible_if": "{{ block.settings.use_metafields_for_usp != true }}"
+        },
+        {
+          "type": "inline_richtext",
+          "id": "description_3",
+          "label": "Description 3",
+          "visible_if": "{{ block.settings.use_metafields_for_usp != true }}"
+        },
+        {
+          "type": "image_picker",
+          "id": "image_4",
+          "label": "Image 4",
+          "visible_if": "{{ block.settings.use_metafields_for_usp != true }}"
+        },
+        {
+          "type": "inline_richtext",
+          "id": "heading_4",
+          "label": "Heading 4",
+          "visible_if": "{{ block.settings.use_metafields_for_usp != true }}"
+        },
+        {
+          "type": "inline_richtext",
+          "id": "description_4",
+          "label": "Description 4",
+          "visible_if": "{{ block.settings.use_metafields_for_usp != true }}"
+        },
+        {
+          "type": "image_picker",
+          "id": "image_5",
+          "label": "Image 5",
+          "visible_if": "{{ block.settings.use_metafields_for_usp != true }}"
+        },
+        {
+          "type": "inline_richtext",
+          "id": "heading_5",
+          "label": "Heading 5",
+          "visible_if": "{{ block.settings.use_metafields_for_usp != true }}"
+        },
+        {
+          "type": "inline_richtext",
+          "id": "description_5",
+          "label": "Description 5",
+          "visible_if": "{{ block.settings.use_metafields_for_usp != true }}"
+        },
+        {
+          "type": "image_picker",
+          "id": "image_6",
+          "label": "Image 6",
+          "visible_if": "{{ block.settings.use_metafields_for_usp != true }}"
+        },
+        {
+          "type": "inline_richtext",
+          "id": "heading_6",
+          "label": "Heading 6",
+          "visible_if": "{{ block.settings.use_metafields_for_usp != true }}"
+        },
+        {
+          "type": "inline_richtext",
+          "id": "description_6",
+          "label": "Description 6",
+          "visible_if": "{{ block.settings.use_metafields_for_usp != true }}"
+        }
+      ]
+    },
+    {
+      "type": "line_item_property",
+      "name": "Line item property",
+      "settings": [
+        {
+          "type": "paragraph",
+          "content": "Line item properties are used to collect customization information for an item added to the cart."
+        },
+        {
+          "type": "text",
+          "id": "label",
+          "label": "Label",
+          "default": "Your label"
+        },
+        {
+          "type": "select",
+          "id": "type",
+          "label": "Type",
+          "options": [
+            {
+              "value": "text",
+              "label": "Text"
+            },
+            {
+              "value": "checkbox",
+              "label": "Checkbox"
+            }
+          ],
+          "default": "text"
+        },
+        {
+          "type": "header",
+          "content": "Text",
+          "info": "Only applicable for line item property of type Text."
+        },
+        {
+          "type": "checkbox",
+          "id": "required",
+          "label": "Required",
+          "default": false
+        },
+        {
+          "type": "checkbox",
+          "id": "allow_long_text",
+          "label": "Allow long text",
+          "default": false
+        },
+        {
+          "type": "header",
+          "content": "Checkbox",
+          "info": "Only applicable for line item property of type Checkbox."
+        },
+        {
+          "type": "text",
+          "id": "checked_value",
+          "label": "Checked value",
+          "default": "Yes"
+        },
+        {
+          "type": "text",
+          "id": "unchecked_value",
+          "label": "Unchecked value",
+          "default": "No"
+        }
+      ]
+    },
+    {
+      "name": "Content accordion",
+      "type": "content_accordion",
+      "settings": [
+        {
+          "type": "checkbox",
+          "id": "open_by_default",
+          "label": "Open by default",
+          "default": false
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title"
+        },
+        {
+          "type": "richtext",
+          "id": "content",
+          "label": "Content"
+        },
+        {
+          "type": "page",
+          "id": "page",
+          "label": "Content from page",
+          "info": "If specified, takes precedence over inline content."
+        }
+      ]
+    },
+    {
+      "type": "low_on_stock_info",
+      "name": "Low on stock info",
+      "limit": 1
+    },
+    {
+      "type": "fulfillment_time_info",
+      "name": "Fulfillment time info",
+      "limit": 1
+    },
+    {
+      "name": "Testimonial",
+      "type": "testimonial",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "customer_image",
+          "label": "Customer image"
+        },
+        {
+          "type": "inline_richtext",
+          "id": "customer_name",
+          "label": "Customer name"
+        },
+        {
+          "type": "inline_richtext",
+          "id": "customer_text",
+          "label": "Customer text"
+        }
+      ]
+    },
+    {
+      "name": "Trust icons",
+      "type": "trust",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "paragraph",
+          "content": "Show extra text next to your product description to improve trust."
+        },
+        {
+          "type": "header",
+          "content": "Text 1"
+        },
+        {
+          "type": "select",
+          "id": "icon_1",
+          "label": "Icon",
+          "options": [
+            {
+              "value": "picto-coupon",
+              "label": "Coupon",
+              "group": "Shop"
+            },
+            {
+              "value": "picto-gift",
+              "label": "Gift",
+              "group": "Shop"
+            },
+            {
+              "value": "picto-taxes",
+              "label": "Taxes",
+              "group": "Shop"
+            },
+            {
+              "value": "picto-warranty",
+              "label": "Warranty",
+              "group": "Shop"
+            },
+            {
+              "value": "picto-like",
+              "label": "Like",
+              "group": "Shop"
+            },
+            {
+              "value": "picto-store",
+              "label": "Store",
+              "group": "Shop"
+            },
+            {
+              "value": "picto-store-pickup",
+              "label": "Store pickup",
+              "group": "Shop"
+            },
+            {
+              "value": "picto-love",
+              "label": "Love",
+              "group": "Shop"
+            },
+            {
+              "value": "picto-donation",
+              "label": "Donation",
+              "group": "Shop"
+            },
+            {
+              "value": "picto-box",
+              "label": "Box",
+              "group": "Shipping"
+            },
+            {
+              "value": "picto-address",
+              "label": "Address",
+              "group": "Shipping"
+            },
+            {
+              "value": "picto-address-pin",
+              "label": "Address pin",
+              "group": "Shipping"
+            },
+            {
+              "value": "picto-fast-delivery",
+              "label": "Fast delivery",
+              "group": "Shipping"
+            },
+            {
+              "value": "picto-delivery-truck",
+              "label": "Delivery truck",
+              "group": "Shipping"
+            },
+            {
+              "value": "picto-return-box",
+              "label": "Returns",
+              "group": "Shipping"
+            },
+            {
+              "value": "picto-worldwide",
+              "label": "World",
+              "group": "Shipping"
+            },
+            {
+              "value": "picto-plane",
+              "label": "Plane",
+              "group": "Shipping"
+            },
+            {
+              "value": "picto-credit-card",
+              "label": "Credit card",
+              "group": "Payment & Security"
+            },
+            {
+              "value": "picto-lock",
+              "label": "Lock",
+              "group": "Payment & Security"
+            },
+            {
+              "value": "picto-shield",
+              "label": "Shield",
+              "group": "Payment & Security"
+            },
+            {
+              "value": "picto-secure-payment",
+              "label": "Secure payment",
+              "group": "Payment & Security"
+            },
+            {
+              "value": "picto-mobile",
+              "label": "Mobile",
+              "group": "Communication"
+            },
+            {
+              "value": "picto-phone",
+              "label": "Phone",
+              "group": "Communication"
+            },
+            {
+              "value": "picto-chat",
+              "label": "Chat",
+              "group": "Communication"
+            },
+            {
+              "value": "picto-send",
+              "label": "Send",
+              "group": "Communication"
+            },
+            {
+              "value": "picto-email",
+              "label": "Email",
+              "group": "Communication"
+            },
+            {
+              "value": "picto-customer-support",
+              "label": "Customer support",
+              "group": "Communication"
+            },
+            {
+              "value": "picto-operator",
+              "label": "Support operator",
+              "group": "Communication"
+            },
+            {
+              "value": "picto-virus",
+              "label": "Virus",
+              "group": "Health"
+            },
+            {
+              "value": "picto-mask",
+              "label": "Mask",
+              "group": "Health"
+            }
+          ],
+          "default": "picto-customer-support"
+        },
+        {
+          "type": "image_picker",
+          "id": "custom_icon_1",
+          "label": "Custom icon",
+          "info": "48 x 48px .png with transparency recommended"
+        },
+        {
+          "type": "text",
+          "id": "title_1",
+          "label": "Heading",
+          "default": "Shipping & Returns"
+        },
+        {
+          "type": "richtext",
+          "id": "content_1",
+          "label": "Content",
+          "default": "<p>Add text about your shipping policy</p>"
+        },
+        {
+          "type": "checkbox",
+          "id": "nl_only_1",
+          "label": "Show this Icon only in Dutch",
+          "info": "This setting will only show this icon in the Dutch language. If you have multiple languages, you can use this setting to show the icon only in the Dutch language.",
+          "default": false
+        },
+        {
+          "type": "header",
+          "content": "Text 2"
+        },
+        {
+          "type": "select",
+          "id": "icon_2",
+          "label": "Icon",
+          "options": [
+            {
+              "value": "picto-coupon",
+              "label": "Coupon",
+              "group": "Shop"
+            },
+            {
+              "value": "picto-gift",
+              "label": "Gift",
+              "group": "Shop"
+            },
+            {
+              "value": "picto-taxes",
+              "label": "Taxes",
+              "group": "Shop"
+            },
+            {
+              "value": "picto-warranty",
+              "label": "Warranty",
+              "group": "Shop"
+            },
+            {
+              "value": "picto-like",
+              "label": "Like",
+              "group": "Shop"
+            },
+            {
+              "value": "picto-store",
+              "label": "Store",
+              "group": "Shop"
+            },
+            {
+              "value": "picto-store-pickup",
+              "label": "Store pickup",
+              "group": "Shop"
+            },
+            {
+              "value": "picto-love",
+              "label": "Love",
+              "group": "Shop"
+            },
+            {
+              "value": "picto-donation",
+              "label": "Donation",
+              "group": "Shop"
+            },
+            {
+              "value": "picto-box",
+              "label": "Box",
+              "group": "Shipping"
+            },
+            {
+              "value": "picto-address",
+              "label": "Address",
+              "group": "Shipping"
+            },
+            {
+              "value": "picto-address-pin",
+              "label": "Address pin",
+              "group": "Shipping"
+            },
+            {
+              "value": "picto-fast-delivery",
+              "label": "Fast delivery",
+              "group": "Shipping"
+            },
+            {
+              "value": "picto-delivery-truck",
+              "label": "Delivery truck",
+              "group": "Shipping"
+            },
+            {
+              "value": "picto-return-box",
+              "label": "Returns",
+              "group": "Shipping"
+            },
+            {
+              "value": "picto-worldwide",
+              "label": "World",
+              "group": "Shipping"
+            },
+            {
+              "value": "picto-plane",
+              "label": "Plane",
+              "group": "Shipping"
+            },
+            {
+              "value": "picto-credit-card",
+              "label": "Credit card",
+              "group": "Payment & Security"
+            },
+            {
+              "value": "picto-lock",
+              "label": "Lock",
+              "group": "Payment & Security"
+            },
+            {
+              "value": "picto-shield",
+              "label": "Shield",
+              "group": "Payment & Security"
+            },
+            {
+              "value": "picto-secure-payment",
+              "label": "Secure payment",
+              "group": "Payment & Security"
+            },
+            {
+              "value": "picto-mobile",
+              "label": "Mobile",
+              "group": "Communication"
+            },
+            {
+              "value": "picto-phone",
+              "label": "Phone",
+              "group": "Communication"
+            },
+            {
+              "value": "picto-chat",
+              "label": "Chat",
+              "group": "Communication"
+            },
+            {
+              "value": "picto-send",
+              "label": "Send",
+              "group": "Communication"
+            },
+            {
+              "value": "picto-email",
+              "label": "Email",
+              "group": "Communication"
+            },
+            {
+              "value": "picto-customer-support",
+              "label": "Customer support",
+              "group": "Communication"
+            },
+            {
+              "value": "picto-operator",
+              "label": "Support operator",
+              "group": "Communication"
+            },
+            {
+              "value": "picto-virus",
+              "label": "Virus",
+              "group": "Health"
+            },
+            {
+              "value": "picto-mask",
+              "label": "Mask",
+              "group": "Health"
+            }
+          ],
+          "default": "picto-warranty"
+        },
+        {
+          "type": "image_picker",
+          "id": "custom_icon_2",
+          "label": "Custom icon",
+          "info": "48 x 48px .png with transparency recommended"
+        },
+        {
+          "type": "text",
+          "id": "title_2",
+          "label": "Heading",
+          "default": "Warranty"
+        },
+        {
+          "type": "richtext",
+          "id": "content_2",
+          "label": "Content",
+          "default": "<p>Add text about your product warranty</p>"
+        },
+        {
+          "type": "checkbox",
+          "id": "nl_only_2",
+          "label": "Show this Icon only in Dutch",
+          "info": "This setting will only show this icon in the Dutch language. If you have multiple languages, you can use this setting to show the icon only in the Dutch language.",
+          "default": false
+        },
+        {
+          "type": "header",
+          "content": "Text 3"
+        },
+        {
+          "type": "select",
+          "id": "icon_3",
+          "label": "Icon",
+          "options": [
+            {
+              "value": "picto-coupon",
+              "label": "Coupon",
+              "group": "Shop"
+            },
+            {
+              "value": "picto-gift",
+              "label": "Gift",
+              "group": "Shop"
+            },
+            {
+              "value": "picto-taxes",
+              "label": "Taxes",
+              "group": "Shop"
+            },
+            {
+              "value": "picto-warranty",
+              "label": "Warranty",
+              "group": "Shop"
+            },
+            {
+              "value": "picto-like",
+              "label": "Like",
+              "group": "Shop"
+            },
+            {
+              "value": "picto-store",
+              "label": "Store",
+              "group": "Shop"
+            },
+            {
+              "value": "picto-store-pickup",
+              "label": "Store pickup",
+              "group": "Shop"
+            },
+            {
+              "value": "picto-love",
+              "label": "Love",
+              "group": "Shop"
+            },
+            {
+              "value": "picto-donation",
+              "label": "Donation",
+              "group": "Shop"
+            },
+            {
+              "value": "picto-box",
+              "label": "Box",
+              "group": "Shipping"
+            },
+            {
+              "value": "picto-address",
+              "label": "Address",
+              "group": "Shipping"
+            },
+            {
+              "value": "picto-address-pin",
+              "label": "Address pin",
+              "group": "Shipping"
+            },
+            {
+              "value": "picto-fast-delivery",
+              "label": "Fast delivery",
+              "group": "Shipping"
+            },
+            {
+              "value": "picto-delivery-truck",
+              "label": "Delivery truck",
+              "group": "Shipping"
+            },
+            {
+              "value": "picto-return-box",
+              "label": "Returns",
+              "group": "Shipping"
+            },
+            {
+              "value": "picto-worldwide",
+              "label": "World",
+              "group": "Shipping"
+            },
+            {
+              "value": "picto-plane",
+              "label": "Plane",
+              "group": "Shipping"
+            },
+            {
+              "value": "picto-credit-card",
+              "label": "Credit card",
+              "group": "Payment & Security"
+            },
+            {
+              "value": "picto-lock",
+              "label": "Lock",
+              "group": "Payment & Security"
+            },
+            {
+              "value": "picto-shield",
+              "label": "Shield",
+              "group": "Payment & Security"
+            },
+            {
+              "value": "picto-secure-payment",
+              "label": "Secure payment",
+              "group": "Payment & Security"
+            },
+            {
+              "value": "picto-mobile",
+              "label": "Mobile",
+              "group": "Communication"
+            },
+            {
+              "value": "picto-phone",
+              "label": "Phone",
+              "group": "Communication"
+            },
+            {
+              "value": "picto-chat",
+              "label": "Chat",
+              "group": "Communication"
+            },
+            {
+              "value": "picto-send",
+              "label": "Send",
+              "group": "Communication"
+            },
+            {
+              "value": "picto-email",
+              "label": "Email",
+              "group": "Communication"
+            },
+            {
+              "value": "picto-customer-support",
+              "label": "Customer support",
+              "group": "Communication"
+            },
+            {
+              "value": "picto-operator",
+              "label": "Support operator",
+              "group": "Communication"
+            },
+            {
+              "value": "picto-virus",
+              "label": "Virus",
+              "group": "Health"
+            },
+            {
+              "value": "picto-mask",
+              "label": "Mask",
+              "group": "Health"
+            }
+          ],
+          "default": "picto-secure-payment"
+        },
+        {
+          "type": "image_picker",
+          "id": "custom_icon_3",
+          "label": "Custom icon",
+          "info": "48 x 48px .png with transparency recommended"
+        },
+        {
+          "type": "text",
+          "id": "title_3",
+          "label": "Heading",
+          "default": "Secure Payment"
+        },
+        {
+          "type": "richtext",
+          "id": "content_3",
+          "label": "Content",
+          "default": "<p>Add text about your payment</p>"
+        },
+        {
+          "type": "checkbox",
+          "id": "nl_only_3",
+          "label": "Show this Icon only in Dutch",
+          "info": "This setting will only show this icon in the Dutch language. If you have multiple languages, you can use this setting to show the icon only in the Dutch language.",
+          "default": false
+        }
+      ]
+    },
+    {
+      "name": "Complementary products",
+      "type": "complementary_products",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "paragraph",
+          "content": "To select complementary products, use the Search & Discovery app. Only the first two products are visible. [Learn more](https://help.shopify.com/en/manual/online-store/search-and-discovery/product-recommendations#complementary-products)"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Heading",
+          "default": "Featured products"
+        }
+      ]
+    },
+    {
+      "name": "Complete the look",
+      "type": "complete_the_look",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Custom Heading",
+          "default": "Custom title",
+          "info": "Custom title for the Complete the look section. Leave empty to use the default title from theme locals."
+        },
+        {
+          "type": "color",
+          "id": "ctl_heading_color",
+          "label": "Heading color",
+          "default": "#1a1a1a"
+        },
+        {
+          "type": "color",
+          "id": "ctl_bg_color",
+          "label": "Background color"
+        },
+        {
+          "type": "product_list",
+          "id": "ctl_products",
+          "label": "Products"
+        }
+      ]
+    },
+    {
+      "name": "Link products as variants",
+      "type": "product_variant_links",
+      "settings": [
+        {
+          "type": "paragraph",
+          "content": "This block takes a list of products and a field that is present in all of these products. It then outputs each product as if it were a variant of the current product, by showing a selector containing the values of the field."
+        },
+        {
+          "type": "product_list",
+          "id": "products",
+          "label": "Products",
+          "info": "Select the products that you want to link as variants. This will only set the reference to the products. You still need to specify the value source below."
+        },
+        {
+          "type": "checkbox",
+          "id": "hide_unavailable",
+          "label": "Hide unavailable products",
+          "default": true
+        },
+        {
+          "type": "checkbox",
+          "id": "always_show_selector",
+          "label": "Always show selector",
+          "info": "If enabled, the variant selector will be shown even if no other products with different values are available.",
+          "default": false
+        },
+        {
+          "type": "text",
+          "id": "option_name",
+          "label": "Option name",
+          "default": "Color/Absorbancy/Style",
+        },
+        {
+          "type": "select",
+          "id": "selector_type",
+          "label": "Option selector type",
+          "info": "This setting controls how the option selector is displayed.",
+          "options": [
+            {
+              "value": "block",
+              "label": "Absorb"
+            },
+            {
+              "value": "color",
+              "label": "Color"
+            },
+            {
+              "value": "fit",
+              "label": "Fit"
+            }
+          ],
+          "default": "block"
+        },
+        {
+          "type": "header",
+          "content": "Option value source",
+        },
+        {
+          "type": "paragraph",
+          "content": "In order to show the option values, you need to specify which metafield we should get the value from for each product linked in the list above. Not needed for type: Color",
+          "visible_if": "{{ block.settings.selector_type != 'color' }}"
+        },
+        {
+          "type": "paragraph",
+          "content": "For selector type: Color, the option values are taken from the variant's color of the linked products. No additional configuration is needed.",
+          "visible_if": "{{ block.settings.selector_type == 'color' }}"
+        },
+        {
+          "type": "text",
+          "id": "option_value_metafield_namespace",
+          "label": "Metafield namespace",
+          "default": "filters",
+          "visible_if": "{{ block.settings.selector_type != 'color' }}"
+        },
+        {
+          "type": "text",
+          "id": "option_value_metafield_key",
+          "label": "Metafield key",
+          "default": "absorbancy",
+          "visible_if": "{{ block.settings.selector_type != 'color' }}"
+        }
+      ]
+    }
+  ],
+  "settings": [
+    {
+      "type": "checkbox",
+      "id": "show_vendor",
+      "label": "Show vendor",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "show_sku",
+      "label": "Show SKU",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "show_taxes_included",
+      "label": "Show taxes included. For all Languages, except Dutch.",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "show_product_rating",
+      "label": "Show product rating",
+      "info": "To display a rating, add a product rating app. [Learn more](https://help.shopify.com/en/manual/products/product-reviews/installation)",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "show_sticky_add_to_cart",
+      "label": "Show sticky add to cart",
+      "info": "Will be hidden if no Buy buttons block is added onto the page.",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "show_share_buttons",
+      "label": "Show share buttons",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "show_buy_button_next_to_quantity",
+      "label": "Show buy button next to quanity selector",
+      "info": "This setting will result in the buy button appearing next to the quantity selector. If there is no quanity selector, then the buy button will show as its own block",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "show_product_style",
+      "label": "Show Style Icon + Text",
+      "info": "shows/hides the panty styles from the filters.style Product Metafield.",
+      "default": true
+    },
+    {
+      "type": "page",
+      "id": "help_page",
+      "label": "Help page",
+      "info": "Feature a page to help your customers"
+    },
+    {
+      "type": "header",
+      "content": "Media"
+    },
+    {
+      "type": "paragraph",
+      "content": "Learn more about [media types](https://help.shopify.com/en/manual/products/product-media)"
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_video_autoplay",
+      "label": "Enable video autoplay",
+      "info": "Video are muted automatically to allow autoplay",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_video_looping",
+      "label": "Enable video looping",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_image_zoom",
+      "label": "Enable image zoom",
+      "info": "Zoom does not show video nor 3D models.",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "show_thumbnails_on_mobile",
+      "label": "Show thumbnails on mobile",
+      "default": false
+    },
+    {
+      "type": "select",
+      "id": "desktop_thumbnails_position",
+      "label": "Desktop thumbnails position",
+      "options": [
+        {
+          "value": "left",
+          "label": "Left"
+        },
+        {
+          "value": "bottom",
+          "label": "Bottom"
+        }
+      ],
+      "default": "bottom"
+    },
+    {
+      "type": "select",
+      "id": "transition_effect",
+      "label": "Transition effect",
+      "options": [
+        {
+          "value": "slide",
+          "label": "Slide"
+        },
+        {
+          "value": "fade",
+          "label": "Fade"
+        }
+      ],
+      "default": "slide"
+    }
+  ]
+}
+{% endschema %}

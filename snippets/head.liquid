@@ -1,0 +1,256 @@
+{% assign css_assets = 'theme.css,custom.css,utilities.css,animate-4.1.1.min.css' | split: ',' %}
+{% assign deferred_css_assets = 'reviewsio.css,kraken.css,recharge.css,klaviyo.css,pagefly-custom.css,toastr.css,bloggle.css,intelligems.css'
+  | split: ','
+%}
+{% assign js_assets = 'vendor.js,toastr.min.js,global.js,theme.js,analytics.js,custom.js' | split: ',' %}
+{% assign external_css_assets = '' %}
+
+<!-- META -->
+<meta charset="utf-8">
+<meta
+  name="viewport"
+  content="width=device-width, initial-scale=1.0, height=device-height, minimum-scale=1.0, maximum-scale=1.0"
+>
+<meta name="theme-color" content="{{ settings.header_background }}">
+<meta name="facebook-domain-verification" content="lfkibv0ofe5gspxnwgw91xh7pao0f4">
+
+<!-- Page info -->
+<title>
+  {% if page_title == blank -%}
+    {{- shop.name -}}
+  {%- else -%}
+    {{- page_title -}}
+    {%- if current_page != 1 %} &ndash; {{ 'general.meta.page' | t: page: current_page }}{% endif -%}
+    {%- unless page_title contains 'The Female Company' %} | The Female Company{% endunless -%}
+  {%- endif %}
+</title>
+{%- if settings.favicon -%}
+  <link rel="shortcut icon" href="{{ settings.favicon | img_url: '96x96' }}" type="image/png">
+{%- endif -%}
+
+<!-- SEO -->
+{% if template contains 'seo-hide' or seo_hide or current_tags | size > 0 %}
+  <meta name="robots" content="noindex">
+{% endif %}
+{%- if page_description -%}
+  <meta name="description" content="{{ page_description | escape }}">
+{%- endif -%}
+<link rel="canonical" href="{{ canonical_url }}">
+{% render 'social-meta-tags' %}
+{% render 'microdata-schema' %}
+
+<!-- General preload & prefetch -->
+<link rel="preconnect" href="https://cdn.shopify.com">
+<link rel="dns-prefetch" href="https://www.google-analytics.com">
+<link rel="preconnect" href="//app.usercentrics.eu">
+<link rel="preconnect" href="//api.usercentrics.eu">
+<link rel="preconnect" href="//privacy-proxy.usercentrics.eu">
+{% for css_asset in css_assets %}
+  <link rel="preload" as="style" href="{{ css_asset | asset_url }}">
+{% endfor %}
+{% for css_asset in external_css_assets %}
+  <link rel="preload" as="style" href="{{ css_asset }}">
+{% endfor %}
+{% for js_asset in js_assets %}
+  <link rel="preload" as="script" href="{{ js_asset | asset_url }}">
+{% endfor %}
+<link rel="preload" as="script" href="https://app.usercentrics.eu/browser-ui/latest/loader.js">
+<link rel="preload" as="script" href="https://privacy-proxy.usercentrics.eu/latest/uc-block.bundle.js">
+<link rel="preload" as="script" href="https://cdn.ablyft.com/s/67024591.js">
+<!-- Page based preload & prefetch -->
+{%- if request.page_type == 'product' -%}
+  {%- assign selected_media = product.selected_variant.featured_media | default: product.featured_media -%}
+
+  <link rel="preload" as="fetch" href="{{ product.url }}.js" crossorigin>
+
+  {%- if product.media.size > 1 -%}
+    <link rel="preload" as="script" href="{{ 'flickity.js' | asset_url }}">
+  {%- endif -%}
+{%- endif -%}
+
+<!-- APM/Exception management -->
+<script src="https://js.sentry-cdn.com/df6c8eba46234e27a991bf672cc26a42.min.js" crossorigin="anonymous"></script>
+<script>
+  Sentry.onLoad(function () {
+    Sentry.init({
+      denyUrls: [
+        'cdn.intelligems.io',
+        'widget.reviews.io',
+        'static.klaviyo.com',
+        'cdn.shopify.com/shopifycloud/payment-sheet/',
+        'monorail-edge.shopifysvc.com',
+        'cdn.shopify.com/shopifycloud/media-analytics/',
+        'cdn.shopify.com/shopifycloud/checkout-web/',
+        'buy.thefemalecompany.com/cdn/shopifycloud/',
+        'scripting.tracify.ai',
+        'usercentrics.eu'
+      ],
+      tracesSampleRate: 0.05,
+    });
+  });
+
+  // Capture liquid errors
+  document.addEventListener('DOMContentLoaded', () => {
+    const bodyText = document.body.innerText;
+    const liquidErrors = bodyText.match(/Liquid error(.*?):/g);
+
+    if (!liquidErrors) {
+      return;
+    }
+
+    liquidErrors.forEach((error) => {
+      Sentry.captureException(new Error(error));
+    });
+  });
+</script>
+
+<!-- Usercentrics -->
+<script
+  id="usercentrics-cmp"
+  src="https://app.usercentrics.eu/browser-ui/latest/loader.js"
+  data-settings-id="TxL-NT3yJ"
+  async
+></script>
+<script type="application/javascript" src="https://privacy-proxy.usercentrics.eu/latest/uc-block.bundle.js"></script>
+<script>
+  // Debug Usercentrics events
+  window.addEventListener('ucEvent', function (e) {
+    console.log('[USERCENTRICS CONSENT] Consent event', e.detail);
+  });
+
+  // Adjust Usercentrics Smart Data Protector behavior
+  uc.deactivateBlocking(['87JYasXPF']);
+</script>
+
+<!-- DataLayer -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments)};
+</script>
+
+<!-- Styles -->
+{% render 'css-variables', direction: direction %}
+{% render 'js-variables', direction: direction %}
+{% render 'fonts' %}
+{% for css_asset in css_assets %}
+  <link rel="stylesheet" href="{{ css_asset | asset_url }}">
+{% endfor %}
+{% for css_asset in deferred_css_assets %}
+  <link rel="preload" href="{{ css_asset | asset_url }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="{{ css_asset | asset_url }}"></noscript>
+{% endfor %}
+{% for css_asset in external_css_assets %}
+  <link rel="stylesheet" href="{{ css_asset }}">
+{% endfor %}
+{%- if request.path contains 'tools/recurring' -%}
+  <style>
+    {%- paginate collections['internal-hidden-products'].products by 10000 -%}
+      {%- for product in collections['internal-hidden-products'].products -%}
+        #rc__upsells--container #product_{{ product.id }} {
+          display: none;
+        }
+      {%- endfor -%}
+    {%- endpaginate -%}
+  </style>
+{%- endif -%}
+
+<!-- Scripts -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js" defer></script>
+<script src="https://cdn.ablyft.com/s/67024591.js"></script>
+<!-- Start Intelligems -->
+<script>
+  window.Shopify = window.Shopify || { theme: { id: {{ theme.id }}, role: '{{ theme.role }}' } };
+  window._template = {
+    directory: "{{ template.directory }}",
+    name: "{{ template.name }}",
+    suffix: "{{ template_suffix }}"
+  };
+</script>
+
+
+<script type="module" src="https://cdn.intelligems.io/esm/b9bad714bc5f/bundle.js"></script>
+<!-- End Intelligems -->
+{% for js_asset in js_assets %}
+  <script src="{{ js_asset | asset_url }}" defer></script>
+{% endfor %}
+
+<!-- Content for header -->
+{% comment %}
+  To increase performance, we switch all async Shopify Scripts to defer.
+{% endcomment %}
+{% assign modified_content_for_header = modified_content_for_header | replace: 's.async = true;', 's.defer = true;' %}
+
+{% comment %}
+  To make Scripts GDPR compliant, we remove scripts one by one from the script loader and add them again manually.
+  The leftover scripts are then rendered.
+
+  Example:
+  {% assign modified_content_for_header = modified_content_for_header | remove: "https://script.url/main.js" %}
+  <script src="https://script.url/main.js" data-usercentrics="Some Service Name" defer type="text/plain"></script>
+{% endcomment %}
+{% assign modified_content_for_header = modified_content_for_header %}
+
+<!-- Other -->
+{{ modified_content_for_header }}
+
+<!-- Shopify Consent -->
+<script>
+
+  document.addEventListener("DOMContentLoaded", ()=> {
+    window.Shopify.loadFeatures(
+      [
+        {
+          name: 'consent-tracking-api',
+          version: '0.1',
+        },
+      ],
+      (error) => {
+        if (error) {
+          throw new Error(error);
+        }
+
+        function updateShopifyConsent() {
+          const services = UC_UI.getServicesBaseInfo();
+          const functionalServices = services.filter((service) => service.categorySlug === 'functional');
+          const marketingServices = services.filter((service) => service.categorySlug === 'marketing');
+
+          const functionalAccepted = functionalServices.every((service) => service.consent.status === true);
+          const marketingAccepted = marketingServices.every((service) => service.consent.status === true);
+
+          const consentSettings = {
+            preferences: true,
+            analytics: functionalAccepted,
+            marketing: marketingAccepted,
+          };
+
+          console.log('[SHOPIFY CONSENT] Attempting consent update', consentSettings);
+
+          window.Shopify.customerPrivacy.setTrackingConsent(
+            consentSettings,
+            () => console.log('[SHOPIFY CONSENT] Consent updated', window.Shopify.customerPrivacy.currentVisitorConsent())
+          );
+        }
+
+        if (!window.UC_UI || !UC_UI.isInitialized()) {
+          window.addEventListener('UC_UI_INITIALIZED', function () {
+            updateShopifyConsent();
+
+            window.addEventListener('ucEvent', function (e) {
+              if (e.detail && e.detail.event == 'consent_status') {
+                updateShopifyConsent();
+              }
+            });
+          });
+        } else {
+          updateShopifyConsent();
+
+          window.addEventListener('ucEvent', function (e) {
+            if (e.detail && e.detail.event == 'consent_status') {
+              updateShopifyConsent();
+            }
+          });
+        }
+      }
+    );
+  });
+</script>

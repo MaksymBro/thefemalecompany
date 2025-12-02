@@ -1,0 +1,65 @@
+{%- comment -%}
+  Render the section header.
+  Falls back to "section.settings".
+
+  <example>
+    {%- render 'section-header', param_name: param_value -%}
+  </example>
+
+  @param {string} [heading] - The heading text,
+  @param {string} [subheading] - The subheading text.
+  @param {string} [short_description] - The short description text.
+  @param {h1|h2|h3|h4|h5|h6} [heading_tag] - The subheading HTML tag. Defaults to "h2".
+  @param {h1|h2|h3|h4|h5|h6} [subheading_tag] - The subheading HTML tag. Defaults to "h3".
+  @param {h1|h2|h3|h4|h5|h6} [heading_size] - The heading font size class. Defaults to "h3".
+  @param {xxsmall|xsmall|small|medium|large} [short_description_font_size] - The short description font size. Defaults to "large".
+{%- endcomment -%}
+
+{%- liquid
+  assign heading = heading | default: section.settings.section_header_heading
+  assign subheading = subheading | default: section.settings.section_header_subheading
+  assign short_description = short_description | default: section.settings.section_header_short_description
+  assign heading_size = heading_size | default: section.settings.section_header_heading_size | default: 'h3'
+  assign short_description_font_size = short_description_font_size | default: section.settings.section_header_short_description_font_size | default: 'large'
+
+  if subheading_tag == blank
+    if section.settings.section_header_highest_hierarchy == true
+      assign subheading_tag = 'h2'
+    else
+      assign subheading_tag = 'h3'
+    endif
+  endif
+
+  if heading_tag == blank
+    if section.settings.section_header_highest_hierarchy == true
+      assign heading_tag = 'h1'
+    else
+      assign heading_tag = 'h2'
+    endif
+  endif
+
+  assign subheading_tag = subheading_tag | default: 'h3'
+  assign heading_tag = heading_tag | default: 'h2'
+-%}
+
+{%- if heading != blank or subheading != blank -%}
+  <header class="section__header">
+    <div class="text-container">
+      {%- if subheading != blank -%}
+        <{{ subheading_tag }} class="heading heading--small">{{ subheading | newline_to_br }}</{{ subheading_tag }}>
+      {%- endif -%}
+
+      {%- if heading != blank -%}
+        <{{ heading_tag }} class="heading js-section-header-heading {{ heading_size }}">
+          {{- heading | newline_to_br -}}
+        </{{ heading_tag }}>
+      {%- endif -%}
+
+      {%- if short_description != blank -%}
+        <div class="section__header-short-description text--{{ short_description_font_size }}">
+          {{- short_description -}}
+        </div>
+      {%- endif -%}
+    </div>
+  </header>
+{%- endif -%}

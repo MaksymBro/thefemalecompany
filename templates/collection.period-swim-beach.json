@@ -1,0 +1,779 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "collection-banner": {
+      "type": "collection-banner",
+      "settings": {
+        "show_collection_image": true,
+        "show_collection_title": true,
+        "show_collection_description": true,
+        "section_height": "medium",
+        "text_width": "medium",
+        "heading_font_family": "publico",
+        "image_heading_color": "#fff45d",
+        "image_text_color": "#fff45d",
+        "image_overlay_color": "#1a1a1a",
+        "image_overlay_opacity": 25,
+        "quick_links": ""
+      }
+    },
+    "a2dd9a94-df11-40e7-ae05-09ef4b1e1c16": {
+      "type": "custom-html",
+      "settings": {
+        "subheading": "",
+        "title": "",
+        "html": "<div id=\"top\"></div>",
+        "add_vertical_spacing": false,
+        "disable_inside_spacing": false,
+        "background_type": "full_width",
+        "background": "rgba(0,0,0,0)",
+        "text_color": "rgba(0,0,0,0)"
+      }
+    },
+    "17259565501d5b98c1": {
+      "type": "apps",
+      "blocks": {
+        "reviews_io_reviewsio_rating_bar_hTUAEp": {
+          "type": "shopify://apps/reviews-io/blocks/reviewsio-rating-bar/92a082e5-b297-4e88-b428-ac96cbc505f9",
+          "settings": {
+            "widget_id": "WzwJIZk4v5mPVFUO"
+          }
+        }
+      },
+      "block_order": [
+        "reviews_io_reviewsio_rating_bar_hTUAEp"
+      ],
+      "disabled": true,
+      "settings": {
+        "include_horizontal_margins": false,
+        "include_vertical_margins": false
+      }
+    },
+    "bubble_section_4ge9m8": {
+      "type": "bubble-section",
+      "blocks": {
+        "bubble_ADPhPA": {
+          "type": "bubble",
+          "settings": {
+            "logo": "shopify://shop_images/Mask_group_1_322e0b1f-4824-4bc7-b5a2-20e24bad9bab.png",
+            "text": "Swim Pantys",
+            "link": "https://buy.thefemalecompany.com/collections/perioden-bademode?sort_by=manual&filter.p.m.filters.collection=Perioden+Bademode&filter.v.price.gte=&filter.v.price.lte=&filter.v.availability=1"
+          }
+        },
+        "bubble_8Yxbhq": {
+          "type": "bubble",
+          "settings": {
+            "logo": "shopify://shop_images/Mask_group_2_df8257e1-3311-4fbd-ad0b-3c966bbda8e0.png",
+            "text": "Tops",
+            "link": "https://buy.thefemalecompany.com/collections/perioden-bademode?sort_by=manual&filter.p.m.filters.collection=Perioden+Bademode+Top&filter.v.availability=1&filter.v.price.gte=&filter.v.price.lte="
+          }
+        },
+        "bubble_rYMTtW": {
+          "type": "bubble",
+          "settings": {
+            "logo": "shopify://shop_images/Mask_group_7.png",
+            "text": "Badeanzüge",
+            "link": "https://buy.thefemalecompany.com/collections/perioden-bademode?sort_by=manual&filter.p.m.filters.style=Body&filter.v.price.gte=&filter.v.price.lte=&filter.v.availability=1"
+          }
+        },
+        "bubble_ND4jjM": {
+          "type": "bubble",
+          "settings": {
+            "logo": "shopify://shop_images/Mask_group_8.png",
+            "text": "Performance®",
+            "link": "https://buy.thefemalecompany.com/collections/perioden-bademode?sort_by=manual&filter.p.m.filters.collection=Perioden+Bademode+PERFORMANCE%C2%AE%EF%B8%8F&filter.v.availability=1&filter.v.price.gte=&filter.v.price.lte="
+          }
+        },
+        "bubble_jQiVbw": {
+          "type": "bubble",
+          "settings": {
+            "logo": "shopify://shop_images/Mask_group_3.png",
+            "text": "Teens",
+            "link": "https://buy.thefemalecompany.com/collections/perioden-bademode?sort_by=manual&filter.p.m.filters.collection=Perioden+Bademode+Teens+Tops&filter.p.m.filters.collection=Perioden+Bademode+Teens&filter.v.availability=1&filter.v.price.gte=&filter.v.price.lte="
+          }
+        }
+      },
+      "block_order": [
+        "bubble_ADPhPA",
+        "bubble_8Yxbhq",
+        "bubble_rYMTtW",
+        "bubble_ND4jjM",
+        "bubble_jQiVbw"
+      ],
+      "settings": {
+        "reveal_on_scroll": true,
+        "max_logos_mobile": 3,
+        "max_width_logo_desktop": 150,
+        "max_width_logo_mobile": 100,
+        "logo_background": "rgba(0,0,0,0)",
+        "text_font_size_desktop": 20,
+        "text_font_size_mobile": 12,
+        "section_container_width": "md",
+        "section_background_color": "rgba(0,0,0,0)",
+        "section_spacing_top": 32,
+        "section_spacing_bottom": 32,
+        "section_spacing_different_mobile": false,
+        "section_spacing_top_mobile": 0,
+        "section_spacing_bottom_mobile": 0
+      }
+    },
+    "announcement_bar_LBGCRN": {
+      "type": "announcement-bar",
+      "blocks": {
+        "message_ymxnBY": {
+          "type": "message",
+          "settings": {
+            "text": "<p><strong>Bis zu 15% Rabatt</strong> beim Kauf von 3+ Pantys</p>",
+            "text_html": "",
+            "learn_more_text": "Learn more",
+            "annoucement_link": "",
+            "title": "",
+            "content": "",
+            "button_text": "",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "message_ymxnBY"
+      ],
+      "disabled": true,
+      "settings": {
+        "start_year": 2025,
+        "start_month": 1,
+        "start_day": 1,
+        "start_time": "10:00",
+        "end_year": 2050,
+        "end_month": 12,
+        "end_day": 31,
+        "end_time": "10:00",
+        "announcement_bar_position": "non_sticky",
+        "announcement_text_size": "normal",
+        "autoplay": true,
+        "cycle_speed": 7,
+        "background": "#ffe6e6",
+        "text_color": "#1a1a1a",
+        "button_background": "#ffffff",
+        "button_text_color": "#f58e9e"
+      }
+    },
+    "main": {
+      "type": "main-collection",
+      "blocks": {
+        "f86bb837-4a49-49c6-9951-80f42b6a1b93": {
+          "type": "image",
+          "settings": {
+            "subheading": "Period Swimwear",
+            "title": "",
+            "content": "<p><strong>Period Swimwear <br/></strong>Bei Aufenthalten am Wasser und für's kurze Baden bei leichter bis mittelstarker Periode.</p><p><strong>PERFORMANCE®<br/></strong>Für längere Aufenthalte im Wasser und für's Schwimmen wähle diese Styles.</p>",
+            "link_text": "",
+            "link_url": "",
+            "link_style": "link",
+            "text_position": "middle_left",
+            "background": "#ff659c",
+            "subheading_color": "rgba(0,0,0,0)",
+            "heading_color": "rgba(0,0,0,0)",
+            "text_color": "#ffffff",
+            "button_background": "#ffffff",
+            "button_text_color": "rgba(0,0,0,0)",
+            "image_overlay_color": "#000000",
+            "image_overlay_opacity": 0
+          }
+        }
+      },
+      "block_order": [
+        "f86bb837-4a49-49c6-9951-80f42b6a1b93"
+      ],
+      "settings": {
+        "products_per_page": 50,
+        "mobile_products_per_row": "2",
+        "desktop_products_per_row": 4,
+        "show_all_colors": true,
+        "hide_from_product_title_start": "Period Panty –",
+        "show_sort_by": true,
+        "show_filters": true,
+        "show_filter_group_name": true,
+        "show_color_swatch": true,
+        "open_first_filter_group": false,
+        "filter_position": "always_visible",
+        "promotion_position": "top",
+        "promotion_height": "small"
+      }
+    },
+    "697ed22c-8b70-40c1-a8e5-9a1e737d17f7": {
+      "type": "custom-html",
+      "settings": {
+        "subheading": "",
+        "title": "",
+        "html": "<center id=\"stay-dry\">\n</center>",
+        "add_vertical_spacing": false,
+        "disable_inside_spacing": true,
+        "background_type": "full_width",
+        "background": "#ff659c",
+        "text_color": "#ffffff"
+      }
+    },
+    "newsletter_on_image_yDRdXE": {
+      "type": "newsletter-on-image",
+      "disabled": true,
+      "settings": {
+        "klaviyo_list_id": "YwY7nU",
+        "reveal_on_scroll": true,
+        "image": "shopify://shop_images/Header_Web_3e978dca-a670-4f31-986e-798c56857045.jpg",
+        "subheading": "99 Problems but the beach ain't one",
+        "heading": "Get early access",
+        "content": "",
+        "text_position": "right",
+        "text_alignment": "left",
+        "text_background": "rgba(0,0,0,0)",
+        "text_color": "rgba(0,0,0,0)",
+        "button_background": "#ff659c",
+        "button_text_color": "rgba(0,0,0,0)"
+      }
+    },
+    "video_bYfKAF": {
+      "type": "video",
+      "settings": {
+        "subheading": "Die erste Period Swimwear, die wirklich funktioniert.* Unsere Technologie erklärt",
+        "title": "Unsere Technologie erklärt",
+        "video": "shopify://files/videos/USP_SWIM-General_DE.mov",
+        "video_url": "",
+        "image": "shopify://shop_images/SWIM_Story_1.png",
+        "background_type": "boxed",
+        "video_size": "small",
+        "autoplay": false,
+        "show_video_controls": true,
+        "background": "#ff659c",
+        "text_color": "#ffffff"
+      }
+    },
+    "multi_column_AzW8wd": {
+      "type": "multi-column",
+      "blocks": {
+        "item_hfULRb": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/TheFemaleCompany_Swimwear-3.jpg",
+            "image_width": 100,
+            "image_border": "rgba(0,0,0,0)",
+            "title": "Sau(g)stark",
+            "content": "<p>Bei leichten Tagen bist du mit der Period Swimwear beim Schwimmen im Wasser gut geschützt.</p>",
+            "link_text": "",
+            "link_url": "",
+            "link_style": "link",
+            "text_alignment": "left",
+            "vertical_alignment": "start"
+          }
+        },
+        "item_yNEEhk": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/Panty_In_Panty_System.jpg",
+            "image_width": 100,
+            "image_border": "rgba(0,0,0,0)",
+            "title": "Panty-in-Panty-System",
+            "content": "<p>Die Kombination einer Innen-Panty mit absorbierender Saugeinlage, geschützt von der Außen-Panty.</p>",
+            "link_text": "",
+            "link_url": "",
+            "link_style": "link",
+            "text_alignment": "left",
+            "vertical_alignment": "start"
+          }
+        },
+        "item_3DEDVp": {
+          "type": "item",
+          "disabled": true,
+          "settings": {
+            "image": "shopify://shop_images/TheFemaleCompany_Swimwear-22.jpg",
+            "image_width": 100,
+            "image_border": "rgba(0,0,0,0)",
+            "title": "Wasserabweisende Beschichtung",
+            "content": "<p>Das Material ist beschichtet, sodass das Wasser einfach abperlt.</p>",
+            "link_text": "",
+            "link_url": "",
+            "link_style": "link",
+            "text_alignment": "left",
+            "vertical_alignment": "start"
+          }
+        },
+        "item_N8FkBc": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/WaterStop_Silikon.jpg",
+            "image_width": 100,
+            "image_border": "rgba(0,0,0,0)",
+            "title": "WaterStop Silikon",
+            "content": "<p>Silikonstreifen an allen Materialenden schützen vor Verrutschen und dem Ein- und Ausdringen von Wasser.</p>",
+            "link_text": "",
+            "link_url": "",
+            "link_style": "link",
+            "text_alignment": "left",
+            "vertical_alignment": "start"
+          }
+        },
+        "item_xYxppE": {
+          "type": "item",
+          "disabled": true,
+          "settings": {
+            "image": "shopify://shop_images/TheFemaleCompany_Swimwear-7.jpg",
+            "image_width": 100,
+            "image_border": "rgba(0,0,0,0)",
+            "title": "Mix & Match",
+            "content": "<p>Hol' dir das passende Bikinitop in der für dich passenden Größe. </p>",
+            "link_text": "",
+            "link_url": "",
+            "link_style": "link",
+            "text_alignment": "left",
+            "vertical_alignment": "start"
+          }
+        },
+        "item_rgjKrK": {
+          "type": "item",
+          "disabled": true,
+          "settings": {
+            "image": "shopify://shop_images/TheFemaleCompany_Swimwear-17.jpg",
+            "image_width": 100,
+            "image_border": "rgba(0,0,0,0)",
+            "title": "Reusable",
+            "content": "<p>Schnelltrocknend: nach dem Schwimmen kurz auswaschen und trocknen lassen. Nach Nutzung in die Waschmaschine.</p>",
+            "link_text": "",
+            "link_url": "",
+            "link_style": "link",
+            "text_alignment": "left",
+            "vertical_alignment": "start"
+          }
+        }
+      },
+      "block_order": [
+        "item_hfULRb",
+        "item_yNEEhk",
+        "item_3DEDVp",
+        "item_N8FkBc",
+        "item_xYxppE",
+        "item_rgjKrK"
+      ],
+      "disabled": true,
+      "settings": {
+        "reveal_on_scroll": true,
+        "stack_items": false,
+        "subheading": "",
+        "title": "Period SWIM Panty",
+        "content": "<p>Die erste Period Swimwear, die wirklich funktioniert*. Die <strong>SWIM Panty</strong> wurde speziell <strong>zum Schwimmen mit Periode entwickelt</strong>. Mit <strong>4 technologischen Entwicklungen</strong>, die darauf ausgelegt sind, dass möglichst wenig Wasser in die Panty ein- und kein Blut aus der Panty herausdringt.</p>",
+        "column_alignment": "center",
+        "mobile_item_size": "large",
+        "desktop_item_size": "medium",
+        "spacing": "normal",
+        "background": "#ff659c",
+        "text_color": "#ffffff"
+      }
+    },
+    "rich_text_VqJ9dV": {
+      "type": "rich-text",
+      "disabled": true,
+      "settings": {
+        "subheading": "",
+        "title": "",
+        "content": "<p><strong>Info: </strong>Deine Periode fließt im Wasser weniger: Wer in Physik aufgepasst hat, weiß: Durch “Auftrieb” wird eine nach oben gerichtete Kraft erzeugt, die auf in Flüssigkeit eingetauchte Objekte ausgeübt wird (dich 😉). </p><p><em>„Der Druck des Wassers kann dazu führen, dass das Blut nicht wirklich aus der Vagina herausfließt – wenn du nicht gerade hustest oder niest.”</em></p><p>– Gynäkologin Dr. Elena Leinweber</p>",
+        "button_text": "",
+        "button_link": "",
+        "background_type": "full_width",
+        "text_width": "medium",
+        "text_position": "center",
+        "text_alignment": "center",
+        "background": "#ff659c",
+        "text_color": "#ffffff",
+        "button_background": "rgba(0,0,0,0)",
+        "button_text_color": "rgba(0,0,0,0)"
+      }
+    },
+    "multi_column_DhLY8x": {
+      "type": "multi-column",
+      "blocks": {
+        "item_hptamg": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/TheFemaleCompany_Swimwear-4_2.jpg",
+            "image_width": 100,
+            "image_border": "rgba(0,0,0,0)",
+            "title": "Sau(g)stark",
+            "content": "<p>MEDIUM – für bis zu mittelstarke Periode außerhalb des Wassers. Mit Fluid Protection und Flexi Technology.</p>",
+            "link_text": "",
+            "link_url": "",
+            "link_style": "link",
+            "text_alignment": "left",
+            "vertical_alignment": "start"
+          }
+        },
+        "item_zCXhCz": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/TheFemaleCompany_Swimwear-9_1.jpg",
+            "image_width": 100,
+            "image_border": "rgba(0,0,0,0)",
+            "title": "Unsichtbares Design",
+            "content": "<p>Versteckte integrierte Saugeinlage: nicht erkennbar, dass es sich um eine Period Panty handelt.</p>",
+            "link_text": "",
+            "link_url": "",
+            "link_style": "link",
+            "text_alignment": "left",
+            "vertical_alignment": "start"
+          }
+        },
+        "item_GQ3qiz": {
+          "type": "item",
+          "disabled": true,
+          "settings": {
+            "image": "shopify://shop_images/TheFemaleCompany_Swimwear-8_1.jpg",
+            "image_width": 100,
+            "image_border": "rgba(0,0,0,0)",
+            "title": "Mix & Match",
+            "content": "<p>Hol dir die passende Swim Panty, um auch beim Schwimmen im Wasser trocken zu bleiben.</p>",
+            "link_text": "",
+            "link_url": "",
+            "link_style": "link",
+            "text_alignment": "left",
+            "vertical_alignment": "start"
+          }
+        },
+        "item_ENHcA6": {
+          "type": "item",
+          "disabled": true,
+          "settings": {
+            "image": "shopify://shop_images/TheFemaleCompany_Swimwear-20.jpg",
+            "image_width": 100,
+            "image_border": "rgba(0,0,0,0)",
+            "title": "Reusable",
+            "content": "<p>Schnelltrocknend. Nach Nutzung in die Waschmaschine. Leicht zu reinigen und zu pflegen.</p>",
+            "link_text": "",
+            "link_url": "",
+            "link_style": "link",
+            "text_alignment": "left",
+            "vertical_alignment": "start"
+          }
+        }
+      },
+      "block_order": [
+        "item_hptamg",
+        "item_zCXhCz",
+        "item_GQ3qiz",
+        "item_ENHcA6"
+      ],
+      "disabled": true,
+      "settings": {
+        "reveal_on_scroll": true,
+        "stack_items": false,
+        "subheading": "",
+        "title": "Period BEACH Panty",
+        "content": "<p>Die <strong>BEACH Panty</strong> empfehlen wir zum <strong>Sonnen und Chillen am Pool</strong>. Entwickelt in der Saugstärke MEDIUM, sodass du auch bei mittelstarker Periode nicht auf einen Tag am Strand oder im Schwimmbad verzichten musst. <strong>Achtung:</strong> mit diesem Bikini kannst du zwar <strong>kurz ins Wasser</strong> gehen – fürs Schwimmen oder längere Aufenthalte im Wasser, kombiniere ihn mit SWIM PANTY.</p>",
+        "column_alignment": "center",
+        "mobile_item_size": "large",
+        "desktop_item_size": "medium",
+        "spacing": "normal",
+        "background": "#ff659c",
+        "text_color": "#ffffff"
+      }
+    },
+    "7cc3d404-c5c7-4cfc-8124-8c91cd082923": {
+      "type": "button",
+      "disabled": true,
+      "settings": {
+        "start_year": 2025,
+        "start_month": 1,
+        "start_day": 1,
+        "start_time": "10:00",
+        "end_year": 2050,
+        "end_month": 12,
+        "end_day": 31,
+        "end_time": "10:00",
+        "button_text": "Zurück nach oben",
+        "button_link": "#top",
+        "button_link_new_window": false,
+        "button_details": "",
+        "button_style": "ternary",
+        "button_outline": false,
+        "button_shadow": false,
+        "button_size": "md",
+        "button_fit": "inline",
+        "section_container_width": "md",
+        "section_text_alignment": "center",
+        "section_background_color": "#ff659c",
+        "section_spacing_top": 0,
+        "section_spacing_bottom": 32,
+        "section_spacing_different_mobile": false,
+        "section_spacing_top_mobile": 0,
+        "section_spacing_bottom_mobile": 0
+      }
+    },
+    "rich_text_97yP6y": {
+      "type": "rich-text",
+      "settings": {
+        "subheading": "",
+        "title": "",
+        "content": "<p>Unsere <strong>Period Swimwear</strong> hält dich am Strand und bei kurzen Aufenthalten im Wasser bei <strong>leichter bis mittelstarker Periode</strong> <strong>trocken</strong> – dank saugstarker Einlage in unsichtbarem Design. <br/><br/>Für längere Aufenthalte im Wasser und für's Schwimmen haben wir die <strong>PERFORMANCE® Period Swimwear</strong> Linie entwickelt. Mit 3 <strong>einzigartigen Technologien</strong>, ist diese darauf ausgelegt, dass auch beim Baden möglichst wenig Wasser in die Panty ein- und kein Blut aus der Panty ausdringt: Das <strong>Panty-in-Panty-System®</strong>, das <strong>WaterStop Silikon®</strong> und das <strong>wasserabweisende Material</strong>.  NEU: Mit optimiertem Fit!<br/><br/>**91% der Testerinnen bestätigen: Die Period Swimwear Panty kann bei leichter Periode beim Schwimmen getragen werden.</p>",
+        "button_text": "",
+        "button_link": "",
+        "background_type": "full_width",
+        "text_width": "fill",
+        "text_position": "left",
+        "text_alignment": "left",
+        "background": "#ff659c",
+        "text_color": "#ffffff",
+        "button_background": "rgba(0,0,0,0)",
+        "button_text_color": "rgba(0,0,0,0)"
+      }
+    },
+    "39d569d6-89ee-4c4c-af84-8d5ad5312425": {
+      "type": "faq",
+      "blocks": {
+        "9839cb17-4191-4e51-8bfd-81e28f54db5c": {
+          "type": "faq_collection",
+          "settings": {
+            "metaobject_handle": "faq-collection-swim",
+            "show_title": true
+          }
+        },
+        "35517a97-9151-4545-819c-d874291d2438": {
+          "type": "faq_collection",
+          "settings": {
+            "metaobject_handle": "faq-collection-beach",
+            "show_title": true
+          }
+        }
+      },
+      "block_order": [
+        "9839cb17-4191-4e51-8bfd-81e28f54db5c",
+        "35517a97-9151-4545-819c-d874291d2438"
+      ],
+      "settings": {
+        "show_navigation": true,
+        "enable_schema": true,
+        "section_header_subheading": "Ihr fragt, wir antworten",
+        "section_header_heading": "Häufig gestellte Fragen",
+        "section_header_short_description": "",
+        "section_header_heading_size": "h3",
+        "section_header_highest_hierarchy": false,
+        "section_header_short_description_font_size": "medium",
+        "section_container_width": "md",
+        "section_text_alignment": "left",
+        "section_background_color": "#ea516c",
+        "section_text_color": "#ffffff",
+        "section_heading_color": "#ffffff",
+        "section_subheading_color": "rgba(0,0,0,0)",
+        "section_heading_font_family": "default",
+        "section_spacing_top": 44,
+        "section_spacing_bottom": 28,
+        "section_spacing_different_mobile": true,
+        "section_spacing_top_mobile": 32,
+        "section_spacing_bottom_mobile": 32
+      }
+    },
+    "4f19f758-87c3-4595-ac6d-67ef58cb4b7b": {
+      "type": "button",
+      "settings": {
+        "start_year": 2025,
+        "start_month": 1,
+        "start_day": 1,
+        "start_time": "10:00",
+        "end_year": 2050,
+        "end_month": 12,
+        "end_day": 31,
+        "end_time": "10:00",
+        "button_text": "Zum Hilfe-Center",
+        "button_link": "https://help.thefemalecompany.com/",
+        "button_link_new_window": true,
+        "button_details": "",
+        "button_style": "white",
+        "button_outline": true,
+        "button_shadow": false,
+        "button_size": "md",
+        "button_fit": "inline",
+        "section_container_width": "md",
+        "section_text_alignment": "center",
+        "section_background_color": "#ea516c",
+        "section_spacing_top": 16,
+        "section_spacing_bottom": 44,
+        "section_spacing_different_mobile": true,
+        "section_spacing_top_mobile": 0,
+        "section_spacing_bottom_mobile": 32
+      }
+    },
+    "528ac3ca-ddd2-4007-b700-fbd0a4e2a6ec": {
+      "type": "blog-posts",
+      "settings": {
+        "blog": "perioden-bikini-ratgeber",
+        "subheading": "Mehr zum Thema",
+        "title": "Perioden Bikini Ratgeber",
+        "articles_count": 3,
+        "stack_mobile": false,
+        "show_category": true,
+        "show_excerpt": true,
+        "button_text": "Zum Ratgeber",
+        "button_url": "shopify://blogs/perioden-bikini-ratgeber",
+        "background": "#fdd1d8",
+        "text_color": "rgba(0,0,0,0)",
+        "button_background": "rgba(0,0,0,0)",
+        "button_text_color": "rgba(0,0,0,0)"
+      }
+    },
+    "609b6ac0-94db-46fb-942f-37e93ec6659c": {
+      "type": "image-with-text",
+      "blocks": {
+        "template--17669741314314__609b6ac0-94db-46fb-942f-37e93ec6659c-item-1": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/TheFemaleCompany_Swimwear-14.jpg",
+            "tab_label": "",
+            "subheading": "Stay Dry. Auch im Wasser.",
+            "title": "Stay Dry Layer Technologie™",
+            "content": "<p>Unsere <strong>Stay Dry Layer Technologie™</strong> saugt Flüssigkeit blitzschnell auf, sodass du auf dem Trockenen bleibst, bei leichten Tagen auch beim Schwimmen im Wasser. Die von Expert*innen entwickelte Stay Dry Layer Technology™ in der Menstruationsunterwäsche bietet <strong>mit 4 Schichten</strong> die optimale Saugkraft und schützt dich vor dem Auslaufen.</p><p>Die Supersaugpower von Periodenunterwäsche funktioniert dank innovativer Technologie. In den Schritt der Period Schwimm-Panty ist eine smarte, absorbierende Schicht eingearbeitet. Zwei Schichten sorgen dafür, dass Flüssigkeit zum einen schnell aufgesaugt und zum anderen fest eingeschlossen wird. Sie ist so flach in die Panty eingearbeitet, dass sie nicht auffällt und niemand bemerkt, dass du eine Period Panty trägst. Super comfy Tragegefühl garantiert, von Windelgefühl keine Spur.</p>",
+            "button_text": "",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--17669741314314__609b6ac0-94db-46fb-942f-37e93ec6659c-item-1"
+      ],
+      "disabled": true,
+      "settings": {
+        "reveal_on_scroll": true,
+        "background_type": "full_width",
+        "background_overlap": "image",
+        "image_position": "left",
+        "text_alignment": "center",
+        "cycle_speed": 8,
+        "accent_background": "rgba(0,0,0,0)",
+        "text_color": "rgba(0,0,0,0)",
+        "button_background": "rgba(0,0,0,0)",
+        "button_text_color": "rgba(0,0,0,0)"
+      }
+    },
+    "5234b890-eacd-4bc7-a285-91de319f80ad": {
+      "type": "image-with-text",
+      "blocks": {
+        "template--17669741314314__5234b890-eacd-4bc7-a285-91de319f80ad-item-1": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/TheFemaleCompany_Swimwear-22.jpg",
+            "tab_label": "",
+            "subheading": "Windelgefühl? Nicht mit uns.",
+            "title": "Comfy & Sexy",
+            "content": "<p>Die Saugschicht in der Period Panty ist so eingenäht, dass du sie <strong>beim Tragen kaum spürst</strong>. Von außen ist nicht sichtbar, dass du eine Period Panty trägst. Die <strong>wasserabweisende Materialbeschichtung</strong> sorgt dafür, dass das Wasser einfach abperlt.<br/><br/><strong>Die Abwechslung macht's</strong> – kombiniere Beach und Swim Pantys mit verschiedenen Oberteilen und spare 10€ im Set.</p>",
+            "button_text": "",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--17669741314314__5234b890-eacd-4bc7-a285-91de319f80ad-item-1"
+      ],
+      "disabled": true,
+      "settings": {
+        "reveal_on_scroll": true,
+        "background_type": "full_width",
+        "background_overlap": "image",
+        "image_position": "right",
+        "text_alignment": "center",
+        "cycle_speed": 8,
+        "accent_background": "rgba(0,0,0,0)",
+        "text_color": "rgba(0,0,0,0)",
+        "button_background": "rgba(0,0,0,0)",
+        "button_text_color": "rgba(0,0,0,0)"
+      }
+    },
+    "6eaa494e-eafe-4a2b-83f7-a759ad31cb51": {
+      "type": "image-with-text",
+      "blocks": {
+        "template--17669741314314__6eaa494e-eafe-4a2b-83f7-a759ad31cb51-item-1": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/TheFemaleCompany_Swimwear-27.jpg",
+            "tab_label": "",
+            "subheading": "Reusable",
+            "title": "Einfach zu pflegen",
+            "content": "<p>Unsere Swim und Beach Pantys können nach der Nutzung einfach ausgewaschen und in die Waschmaschine geworfen werden.<br/><br/>Damit dich dein Schlüppi aber möglichst lange schützen kann, solltest du ihn im <strong>Schonwaschgang und/oder im Wäschenetz </strong>waschen. Unsere Pantys sind außerdem vegan und tierversuchsfrei.</p>",
+            "button_text": "",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--17669741314314__6eaa494e-eafe-4a2b-83f7-a759ad31cb51-item-1"
+      ],
+      "disabled": true,
+      "settings": {
+        "reveal_on_scroll": true,
+        "background_type": "full_width",
+        "background_overlap": "image",
+        "image_position": "left",
+        "text_alignment": "center",
+        "cycle_speed": 8,
+        "accent_background": "rgba(0,0,0,0)",
+        "text_color": "rgba(0,0,0,0)",
+        "button_background": "rgba(0,0,0,0)",
+        "button_text_color": "rgba(0,0,0,0)"
+      }
+    },
+    "button_dmB8ii": {
+      "type": "button",
+      "settings": {
+        "start_year": 2025,
+        "start_month": 1,
+        "start_day": 1,
+        "start_time": "10:00",
+        "end_year": 2050,
+        "end_month": 12,
+        "end_day": 31,
+        "end_time": "10:00",
+        "button_text": "Zurück nach oben",
+        "button_link": "",
+        "button_link_new_window": false,
+        "button_details": "",
+        "button_style": "primary",
+        "button_outline": false,
+        "button_shadow": false,
+        "button_size": "md",
+        "button_fit": "inline",
+        "section_container_width": "md",
+        "section_text_alignment": "center",
+        "section_background_color": "rgba(0,0,0,0)",
+        "section_spacing_top": 32,
+        "section_spacing_bottom": 32,
+        "section_spacing_different_mobile": false,
+        "section_spacing_top_mobile": 0,
+        "section_spacing_bottom_mobile": 0
+      }
+    }
+  },
+  "order": [
+    "collection-banner",
+    "a2dd9a94-df11-40e7-ae05-09ef4b1e1c16",
+    "17259565501d5b98c1",
+    "bubble_section_4ge9m8",
+    "announcement_bar_LBGCRN",
+    "main",
+    "697ed22c-8b70-40c1-a8e5-9a1e737d17f7",
+    "newsletter_on_image_yDRdXE",
+    "video_bYfKAF",
+    "multi_column_AzW8wd",
+    "rich_text_VqJ9dV",
+    "multi_column_DhLY8x",
+    "7cc3d404-c5c7-4cfc-8124-8c91cd082923",
+    "rich_text_97yP6y",
+    "39d569d6-89ee-4c4c-af84-8d5ad5312425",
+    "4f19f758-87c3-4595-ac6d-67ef58cb4b7b",
+    "528ac3ca-ddd2-4007-b700-fbd0a4e2a6ec",
+    "609b6ac0-94db-46fb-942f-37e93ec6659c",
+    "5234b890-eacd-4bc7-a285-91de319f80ad",
+    "6eaa494e-eafe-4a2b-83f7-a759ad31cb51",
+    "button_dmB8ii"
+  ]
+}

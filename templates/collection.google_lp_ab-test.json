@@ -1,0 +1,447 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "marquee_k98Ean": {
+      "type": "marquee",
+      "disabled": true,
+      "settings": {
+        "content": "<p><strong>EQUAL PAY DAY DEAL   </strong>· <strong>NUR HEUTE </strong></p>",
+        "separator": "",
+        "section_link": "",
+        "repeat": 10,
+        "min_gap": 87,
+        "animation_speed": 70,
+        "text_color": "#ffffff",
+        "background": "#ff3f46"
+      }
+    },
+    "trustpilot_6wnrjc": {
+      "type": "trustpilot",
+      "disabled": true,
+      "name": "Trustpilot",
+      "settings": {
+        "widget": "horizontal_condensed",
+        "widget_color_scheme": "light",
+        "section_background_color": "#ffd4d6",
+        "trustpilot_current_rating": 4,
+        "trustpilot_review_count": "2000+",
+        "section_spacing_top": 8,
+        "section_spacing_bottom": 4,
+        "section_spacing_different_mobile": false,
+        "section_spacing_top_mobile": 0,
+        "section_spacing_bottom_mobile": 0
+      }
+    },
+    "section_header_TpgfHq": {
+      "type": "section-header",
+      "settings": {
+        "start_year": 2025,
+        "start_month": 1,
+        "start_day": 1,
+        "start_time": "10:00",
+        "end_year": 2050,
+        "end_month": 12,
+        "end_day": 31,
+        "end_time": "10:00",
+        "section_subheading": "",
+        "section_heading": "✅ Auslaufsichere Periodenunterwäsche ✅",
+        "allow_heading_override": false,
+        "section_short_description": "<p>Unsere Pantys halten bis zu 12h - <br/>ohne Wechsel durch den Tag</p>",
+        "heading_size": "h3",
+        "highest_hierarchy": false,
+        "section_heading_font_family": "default",
+        "short_description_font_size": "medium",
+        "section_text_color": "rgba(0,0,0,0)",
+        "section_heading_color": "rgba(0,0,0,0)",
+        "section_subheading_color": "rgba(0,0,0,0)",
+        "section_container_width": "sm",
+        "section_background_color": "#ffd4d6",
+        "section_spacing_top": 16,
+        "section_spacing_bottom": 8,
+        "section_spacing_different_mobile": false,
+        "section_spacing_top_mobile": 0,
+        "section_spacing_bottom_mobile": 0
+      }
+    },
+    "discount_code_showcase_P9ULWr": {
+      "type": "discount-code-showcase",
+      "settings": {
+        "fixed_discount_code": "UTERUS12",
+        "fixed_discount_amount": "12%",
+        "inner_section_background": "#f58e9e",
+        "discount_badge_background": "#ea697d",
+        "discount_badge_text_color": "#ffffff",
+        "section_container_width": "xxs",
+        "section_background_color": "#ffd4d6",
+        "section_text_color": "rgba(0,0,0,0)",
+        "section_heading_color": "rgba(0,0,0,0)",
+        "section_spacing_top": 8,
+        "section_spacing_bottom": 12,
+        "section_spacing_different_mobile": false,
+        "section_spacing_top_mobile": 0,
+        "section_spacing_bottom_mobile": 0
+      }
+    },
+    "daily_deal_showcase_hhAAce": {
+      "type": "daily-deal-showcase",
+      "disabled": true,
+      "settings": {
+        "start_year": 2025,
+        "start_month": 1,
+        "start_day": 1,
+        "start_time": "10:00",
+        "end_year": 2050,
+        "end_month": 12,
+        "end_day": 31,
+        "end_time": "10:00",
+        "daily_deal_name": "",
+        "daily_deal_description": "<p>Melde dich jetzt zum 48h Early Access mit -20% Extra-Rabatt an!</p>",
+        "inner_section_background": "#ffd9d9",
+        "timer_background": "#ff3f46",
+        "timer_text_color": "#ffffff",
+        "progress_color": "#ff3f46",
+        "icon_color": "#ff3f46",
+        "section_container_width": "xxs",
+        "section_background_color": "rgba(0,0,0,0)",
+        "section_text_color": "rgba(0,0,0,0)",
+        "section_heading_color": "#ff3f46",
+        "section_heading_font_family": "default",
+        "section_spacing_top": 0,
+        "section_spacing_bottom": 0,
+        "section_spacing_different_mobile": false,
+        "section_spacing_top_mobile": 0,
+        "section_spacing_bottom_mobile": 0
+      }
+    },
+    "daily_deal_showcase_zQwbPf": {
+      "type": "daily-deal-showcase",
+      "disabled": true,
+      "settings": {
+        "start_year": 2025,
+        "start_month": 1,
+        "start_day": 1,
+        "start_time": "10:00",
+        "end_year": 2050,
+        "end_month": 12,
+        "end_day": 31,
+        "end_time": "10:00",
+        "daily_deal_name": "Daily Deal",
+        "daily_deal_description": "<p>Description of the daily deal.</p>",
+        "inner_section_background": "#ffd9d9",
+        "timer_background": "#ff3f46",
+        "timer_text_color": "#ffffff",
+        "progress_color": "#ff3f46",
+        "icon_color": "#ff3f46",
+        "section_container_width": "xxs",
+        "section_background_color": "rgba(0,0,0,0)",
+        "section_text_color": "rgba(0,0,0,0)",
+        "section_heading_color": "#ff3f46",
+        "section_heading_font_family": "default",
+        "section_spacing_top": 32,
+        "section_spacing_bottom": 32,
+        "section_spacing_different_mobile": false,
+        "section_spacing_top_mobile": 0,
+        "section_spacing_bottom_mobile": 0
+      }
+    },
+    "slideshow_XEcieK": {
+      "type": "slideshow",
+      "blocks": {
+        "image_nLXYeY": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Header_Start_Sale_Asset_6.jpg",
+            "mobile_image": "shopify://shop_images/Header_mobile_Asset.jpg",
+            "text_position": "middle_center",
+            "subheading": "Unser PMS Pre-sale startet bald:",
+            "title": "Melde dich jetzt zum 48h Early Access mit -20% Extra-Rabatt an!",
+            "subtitle": "",
+            "subtitle_html": "",
+            "button_1_text": "Jetzt Anmelden",
+            "button_1_link": "shopify://pages/clitclub-sale",
+            "button_2_text": "",
+            "button_2_link": "",
+            "heading_font_family": "circular",
+            "heading_color": "#ff00ff",
+            "text_color": "#ff00ff",
+            "button_background": "#ff00ff",
+            "button_text_color": "#ffffff",
+            "overlay_color": "#000000",
+            "overlay_opacity": 0,
+            "schedule_publishing": false,
+            "publish_date": "01.01.2019 00:00",
+            "schedule_unpublishing": true,
+            "unpublish_date": "23.03.2025 23:59"
+          }
+        },
+        "image_hRWj7E": {
+          "type": "image",
+          "disabled": true,
+          "settings": {
+            "image": "shopify://shop_images/Header_Web__16_59711cf0-f500-4a9b-b7b4-fc07fe0a0ca3.jpg",
+            "mobile_image": "shopify://shop_images/Header_mobile_17_788005aa-845b-4ee2-aabd-9a36141891e4.jpg",
+            "text_position": "middle_center",
+            "subheading": "",
+            "title": "Bis zu 15% Rabatt",
+            "subtitle": "<p>Erhalte bis zu <strong>15% Mengenrabatt </strong>beim Kauf von <strong>drei oder mehr </strong>Period Pantys oder Daysics® </p>",
+            "subtitle_html": "",
+            "button_1_text": "",
+            "button_1_link": "",
+            "button_2_text": "",
+            "button_2_link": "",
+            "heading_font_family": "circular",
+            "heading_color": "#ffffff",
+            "text_color": "#ffffff",
+            "button_background": "#ffffff",
+            "button_text_color": "#000000",
+            "overlay_color": "#000000",
+            "overlay_opacity": 30,
+            "schedule_publishing": false,
+            "publish_date": "01.01.2019 00:00",
+            "schedule_unpublishing": false,
+            "unpublish_date": "26.12.2024 23:59"
+          }
+        },
+        "image_BdWeJm": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Colorful_834f2179-36a5-4066-8a93-a64da2d314b7.jpg",
+            "mobile_image": "shopify://shop_images/Google_Landingpage_Header_Mobile.png",
+            "text_position": "middle_center",
+            "subheading": "",
+            "title": "",
+            "subtitle": "<h1><strong>Sicher Dir 10% mit dem Code UTERUS10</strong></h1><h2><strong>Ziertifizierte Produktsicherheit. Geprüft ohne Schadstoffe</strong>, <strong>Biozide oder PFAs. </strong><br/></h2><p></p><p> </p>",
+            "subtitle_html": "",
+            "button_1_text": "",
+            "button_1_link": "",
+            "button_2_text": "",
+            "button_2_link": "",
+            "heading_font_family": "circular",
+            "heading_color": "#ffffff",
+            "text_color": "#ffffff",
+            "button_background": "#ffffff",
+            "button_text_color": "#000000",
+            "overlay_color": "#000000",
+            "overlay_opacity": 42,
+            "schedule_publishing": false,
+            "publish_date": "01.01.2019 00:00",
+            "schedule_unpublishing": false,
+            "unpublish_date": "01.01.2019 00:00"
+          }
+        }
+      },
+      "block_order": [
+        "image_nLXYeY",
+        "image_hRWj7E",
+        "image_BdWeJm"
+      ],
+      "disabled": true,
+      "settings": {
+        "section_height": "auto",
+        "transition_type": "sweep",
+        "autoplay": true,
+        "cycle_speed": 5,
+        "background": "rgba(0,0,0,0)",
+        "show_banner_usps": false,
+        "banner_usps_link": "",
+        "show_hide_button": false,
+        "banner_usps_bg_color": "#ffffff",
+        "banner_usps_text_color": "#2abb53",
+        "banner_usps_heading": "",
+        "banner_usps_heading_1": "",
+        "banner_usps_heading_2": "",
+        "banner_usps_heading_3": "",
+        "banner_usps_heading_4": ""
+      }
+    },
+    "collection-banner": {
+      "type": "collection-banner",
+      "disabled": true,
+      "settings": {
+        "show_collection_image": true,
+        "show_collection_title": false,
+        "show_collection_description": true,
+        "section_height": "medium",
+        "text_width": "large",
+        "heading_font_family": "circular",
+        "image_heading_color": "#ffffff",
+        "image_text_color": "#ffffff",
+        "image_overlay_color": "#000000",
+        "image_overlay_opacity": 42,
+        "quick_links": ""
+      }
+    },
+    "countdown_timer_it8wR6": {
+      "type": "countdown-timer",
+      "blocks": {
+        "text_PY8cfw": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Montag startet unser offizieller Sale:<br/><strong>Melde dich jetzt zum 48h Early Access mit -20% Extra-Rabatt an </strong>⏳</p>",
+            "offset_top_desktop": 20,
+            "offset_bottom_desktop": 20,
+            "offset_top_mobile": 10,
+            "offset_bottom_mobile": 10
+          }
+        },
+        "countdown_timer_GCKMAU": {
+          "type": "countdown_timer",
+          "settings": {
+            "show_countdown_words": true,
+            "countdown_start_date": "2025-03-10",
+            "countdown_start_time_hour": "18",
+            "countdown_start_time_minute": "00",
+            "countdown_date": "2025-03-23",
+            "countdown_time_hour": "23",
+            "countdown_time_minute": "59",
+            "timer_link": "shopify://pages/clitclub-sale",
+            "timer_font_size_mobile": 2.5,
+            "text_font_size_mobile": 0.8,
+            "timer_font_size_desktop": 4.5,
+            "text_font_size_desktop": 1.5,
+            "offset_top_desktop": 20,
+            "offset_bottom_desktop": 20,
+            "offset_top_mobile": 10,
+            "offset_bottom_mobile": 10
+          }
+        }
+      },
+      "block_order": [
+        "text_PY8cfw",
+        "countdown_timer_GCKMAU"
+      ],
+      "disabled": true,
+      "settings": {
+        "countdown_text_color": "#ff00ff",
+        "background_color": "#fff0f0",
+        "text_color": "#ff00ff"
+      }
+    },
+    "countdown_timer_fYmAQk": {
+      "type": "countdown-timer",
+      "blocks": {
+        "text_BD8rYq": {
+          "type": "text",
+          "settings": {
+            "text": "<p><strong>Der Deal endet in:<br/></strong><br/>Ab 110 €<strong> schenken wir dir eine Wetbag </strong><br/>+ mit deinem Rabattcode sicherst du dir <strong>zusätzlich 20 % auf deine gesamte Bestellung</strong>!</p>",
+            "offset_top_desktop": 20,
+            "offset_bottom_desktop": 20,
+            "offset_top_mobile": 10,
+            "offset_bottom_mobile": 10
+          }
+        },
+        "countdown_timer_HAfJm7": {
+          "type": "countdown_timer",
+          "settings": {
+            "show_countdown_words": true,
+            "countdown_start_date": "2024-12-10",
+            "countdown_start_time_hour": "00",
+            "countdown_start_time_minute": "00",
+            "countdown_date": "2024-12-13",
+            "countdown_time_hour": "23",
+            "countdown_time_minute": "59",
+            "timer_link": "",
+            "timer_font_size_mobile": 2.5,
+            "text_font_size_mobile": 0.8,
+            "timer_font_size_desktop": 4.5,
+            "text_font_size_desktop": 1.5,
+            "offset_top_desktop": 20,
+            "offset_bottom_desktop": 20,
+            "offset_top_mobile": 10,
+            "offset_bottom_mobile": 10
+          }
+        }
+      },
+      "block_order": [
+        "text_BD8rYq",
+        "countdown_timer_HAfJm7"
+      ],
+      "disabled": true,
+      "settings": {
+        "countdown_text_color": "#1a1a1a",
+        "background_color": "#fff0f0",
+        "text_color": "#1a1a1a"
+      }
+    },
+    "custom_html_bqmENx": {
+      "type": "custom-html",
+      "disabled": true,
+      "settings": {
+        "subheading": "",
+        "title": "",
+        "html": "<p id=\"discount-code\" style=\"cursor: pointer; color: back;\" onclick=\"copyToClipboard('DEINRABATTCODE')\">\n Rabattcode: UTERUS20 </p> (Click to Copy)\n<p></p>\n<p id=\"copy-feedback\" style=\"color: green; display: none;\">Rabattcode kopiert!</p>",
+        "add_vertical_spacing": true,
+        "disable_inside_spacing": false,
+        "background_type": "full_width",
+        "background": "rgba(0,0,0,0)",
+        "text_color": "rgba(0,0,0,0)"
+      }
+    },
+    "main": {
+      "type": "main-collection",
+      "blocks": {
+        "image_HzCLwi": {
+          "type": "image",
+          "disabled": true,
+          "settings": {
+            "subheading": "",
+            "title": "So funktioniert unser Deal:",
+            "content": "<p>1. Lege drei Produkte deiner Wahl in den Warenkorb, dabei kannst du alle Produkte im Shop auswählen! <br/>2. Anschließend gehe zum Warenkorb <br/>3. Dort wird der Preis von dem günstigsten Produkt automatisch abgezogen!<br/></p>",
+            "link_text": "",
+            "link_url": "",
+            "link_style": "link",
+            "text_position": "middle_left",
+            "background": "#f58e9e",
+            "subheading_color": "rgba(0,0,0,0)",
+            "heading_color": "rgba(0,0,0,0)",
+            "text_color": "#ffffff",
+            "button_background": "#ffffff",
+            "button_text_color": "rgba(0,0,0,0)",
+            "image_overlay_color": "#000000",
+            "image_overlay_opacity": 0
+          }
+        }
+      },
+      "block_order": [
+        "image_HzCLwi"
+      ],
+      "settings": {
+        "products_per_page": 38,
+        "mobile_products_per_row": "2",
+        "desktop_products_per_row": 4,
+        "show_all_colors": true,
+        "hide_from_product_title_start": "",
+        "show_sort_by": true,
+        "show_filters": true,
+        "show_filter_group_name": true,
+        "show_color_swatch": true,
+        "open_first_filter_group": false,
+        "filter_position": "drawer",
+        "promotion_position": "top",
+        "promotion_height": "small"
+      }
+    }
+  },
+  "order": [
+    "marquee_k98Ean",
+    "trustpilot_6wnrjc",
+    "section_header_TpgfHq",
+    "discount_code_showcase_P9ULWr",
+    "daily_deal_showcase_hhAAce",
+    "daily_deal_showcase_zQwbPf",
+    "slideshow_XEcieK",
+    "collection-banner",
+    "countdown_timer_it8wR6",
+    "countdown_timer_fYmAQk",
+    "custom_html_bqmENx",
+    "main"
+  ]
+}

@@ -1,0 +1,183 @@
+{%- comment -%}
+------------------------------------------------------------------------------------------------------------------------
+NOTE TO DEVELOPERS: welcome to Focal theme! We hope that you will enjoy editing this theme as much as we did for
+  developing it. We have put a lot of work to make this theme as developer friendly as possible by offering you
+  hooks to integrate into critical parts of the theme. You will find the complete technical documentation (including
+  all events, dependencies...) in the "custom.js" file, located in the Assets folder.
+------------------------------------------------------------------------------------------------------------------------
+{%- endcomment -%}
+
+{% comment %}ly_liquid_scripts_begin{% endcomment %}{% capture ly_liquid_content %}{% comment %}ly_liquid_scripts_end{% endcomment %}<!doctype html>
+{%- assign direction = 'ltr' -%}
+{%- case request.locale.iso_code -%}
+  {%- when 'ar' or 'arc' or 'dv' or 'fa' or 'ha' or 'he' or 'kwh' or 'ks' or 'ku' or 'ps' or 'ur' or 'yi' -%}
+    {%- assign direction = 'rtl' -%}
+{%- endcase -%}
+<html class="no-js" lang="{{ request.locale.iso_code }}" dir="{% comment %}ly_dir_replace_for_[{{ direction }}]_begin{% endcomment %}{%- assign language_code = '_' | append: request.locale.iso_code -%}{%- if '_ar_ha_he_fa_ks_ku_ps_ur_yi' contains language_code -%}{%- assign dir = 'rtl' -%}{%- else -%}{%- capture dir -%}{{ direction }}{%- endcapture -%}{%- endif -%}{{- dir -}}{% comment %}ly_dir_replace_end{% endcomment %}">
+  <head>{% render "load-tracify" %}    
+    {% capture modified_content_for_header %}
+      {{ content_for_header }}
+    {% endcapture %}
+    {% render 'head', modified_content_for_header: modified_content_for_header, direction: direction %}
+    
+  {% comment %}ly_dir_styles_begin{% endcomment %}
+    {%- assign language_code = '_' | append: request.locale.iso_code -%}
+    {%- if '_ar_ha_he_fa_ks_ku_ps_ur_yi' contains language_code -%}
+      {{- 'ly-rtl.css' | asset_url | stylesheet_tag -}}
+    {%- endif -%}
+  {% comment %}ly_dir_styles_end{% endcomment %}
+
+  {%- assign feature_classes = '' -%}
+
+  {%- if settings.show_image_zoom -%}
+    {% assign feature_classes = feature_classes | append: ' features--image-zoom' %}
+  {%- endif -%}
+
+    {{ content_for_header }}
+    
+      <meta name="google-site-verification" content="Ni670diFqYVeuz4gQWQ2vtiUzYkE8pXXWkyU-FuCOdc" />
+  {% include 'pagefly-app-header' %}</head>
+  
+  <body class="no-focus-outline {{ feature_classes }}" data-instant-allow-query-string>
+
+    {%- comment -%}Common SVG definitions that we are re-using in several places{%- endcomment -%}
+    <svg class="visually-hidden">
+      <linearGradient id="rating-star-gradient-half">
+        <stop offset="50%" stop-color="rgb(var(--product-star-rating))" />
+        <stop offset="50%" stop-color="rgb(var(--product-star-rating))" stop-opacity="0.4" />
+      </linearGradient>
+    </svg>
+
+    <svg class="visually-hidden">
+      <linearGradient id="reviews-nuggets-widget-gradient">
+        <stop offset="50%" stop-color="#10B0A6" />
+        <stop offset="50%" stop-color="#10B0A6" stop-opacity="0.4" />
+      </linearGradient>
+    </svg>
+
+    <a href="#main" class="visually-hidden skip-to-content">{{ 'general.accessibility.skip_to_content' | t }}</a>
+    <loading-bar class="loading-bar"></loading-bar>
+
+    {%- if request.page_type != 'gift_card' and request.page_type != 'password' -%}
+      {%- sections 'header-group' -%}
+      {%- sections 'overlay-group' -%}
+
+      {%- unless settings.cart_type == 'page' or request.page_type == 'cart' -%}
+        {%- section 'mini-cart' -%}
+      {%- endunless -%}
+    {%- endif -%}
+
+    <div id="main" role="main" class="anchor">
+      {%- comment -%}
+      IMPLEMENTATION NOTE: on collection and search page, the theme was designed to show on mobile the filter bar and/or sort
+        by at the very top of the page. However, due to the fact that sections are isolated, I had to move the code
+        here. Then, the collection section, based on the selected settings, will eventually hide those elements in CSS
+      {%- endcomment -%}
+
+      {%- if request.page_type == 'collection' and settings.show_breadcrumbs_collection_mobile -%}
+        <nav aria-label="{{ 'general.breadcrumb.title' | t }}" class="breadcrumb breadcrumb--sticky breadcrumb--small text--xsmall hidden-tablet-and-up js-breadcrumbs">
+          <ol class="breadcrumb__list" role="list">
+            <li class="breadcrumb__item">
+              <a class="breadcrumb__link" href="{{ routes.root_url }}">{{ 'general.breadcrumb.home' | t }}</a>
+            </li>
+
+            <li class="breadcrumb__item">
+            <span class="breadcrumb__link" aria-current="page">
+              {%- if collection.handle == 'all' -%}
+                {{- 'collection.general.all_products' | t -}}
+              {%- else -%}
+                {{- collection.title -}}
+              {%- endif -%}
+            </span>
+            </li>
+          </ol>
+        </nav>
+
+        <script>
+            document.documentElement.style.setProperty("--breadcrumbs-height", document.querySelector(".js-breadcrumbs").clientHeight + "px");
+        </script>
+      {%- endif -%}
+
+      {%- if request.page_type == 'collection' or request.page_type == 'search' -%}
+        {%- assign active_filters_count = 0 -%}
+
+        {%- if request.page_type == 'collection' -%}
+          {%- assign filters = collection.filters -%}
+        {%- else -%}
+          {%- assign filters = search.filters -%}
+        {%- endif -%}
+
+        {%- for filter in filters -%}
+          {%- if filter.type == 'list' -%}
+            {%- assign active_filters_count = active_filters_count | plus: filter.active_values.size -%}
+          {%- elsif filter.type == 'price_range' and filter.min_value.value or filter.max_value.value -%}
+            {%- assign active_filters_count = active_filters_count | plus: 1 -%}
+          {%- endif -%}
+        {%- endfor -%}
+
+        {%- assign is_toolbar_collapsed = false -%}
+
+        {%- if request.page_type == 'search' and search.results.first.object_type != 'product' and search.results_count > 0 -%}
+          {%- assign is_toolbar_collapsed = true -%}
+        {%- endif -%}
+
+        <div id="mobile-facet-toolbar" class="mobile-toolbar {% if is_toolbar_collapsed %}is-collapsed{% endif %} hidden-lap-and-up">
+          <button is="toggle-button" class="mobile-toolbar__item mobile-toolbar__item--filters {% if active_filters_count > 0 %}has-filters{% endif %}" aria-expanded="false" aria-controls="facet-filters" style="display: none">
+            {%- render 'icon' with 'filters' -%}
+            <span class="mobile-toolbar__item-label">{{- 'collection.general.filters' | t -}}</span>
+          </button>
+
+          <button is="toggle-button" class="mobile-toolbar__item mobile-toolbar__item--sort" aria-expanded="false" aria-controls="sort-by-popover" style="display: none">
+            <span class="mobile-toolbar__item-label">{{- 'collection.general.sort_by' | t -}}</span>
+            {%- render 'icon' with 'chevron' -%}
+          </button>
+        </div>
+      {%- endif -%}
+
+      {% if template contains 'cart' %}
+          {{ content_for_layout }}
+      {% else %}  
+        {{ content_for_layout | replace: 'src="https://cdn.pagefly.io/pagefly/', 'data-src-helper="https://cdn.pagefly.io/pagefly/'
+                              | replace_last: 'data-src-helper="https://cdn.pagefly.io/pagefly/', 'src="https://cdn.pagefly.io/pagefly/'
+        }}
+      {% endif %}
+
+      <script>
+        document.querySelectorAll('.coming-soon-button').forEach((item)=> {
+          item.addEventListener('click', function (){
+            window._klOnsite = window._klOnsite || [];
+            window._klOnsite.push(['openForm', '{{- settings.pdp_coming_soon_signup_id -}}']);
+          });
+        })
+      </script>
+
+      {%- if settings.show_upsell_popup -%}
+        {%- render 'upsell-popup' -%}
+      {%- endif -%}
+    </div>
+
+    {%- if request.page_type != 'gift_card' and request.page_type != 'password' -%}
+      {%- sections 'footer-group' -%}
+    {%- endif -%}
+
+  {% render 'footer' %}
+  <!-- langify-v2-scripts-begin -->{% comment %}ly_liquid_scripts_begin{% endcomment %} {% endcapture %}{% render 'ly-liquid-scripts' content: ly_liquid_content %}{% comment %}ly_liquid_scripts_end{% endcomment %}{% comment %}ly_core_scripts_begin{% endcomment %}{% render 'ly-core-scripts' %}{% comment %}ly_core_scripts_end{% endcomment %}{% comment %}ly_switcher_factory_begin{% endcomment %}{% render 'ly-switcher-factory' %}{% comment %}ly_switcher_factory_end{% endcomment %}<!-- langify-v2-scripts-end -->
+
+          <script>
+  function copyToClipboard(text) {
+    // Text in die Zwischenablage kopieren
+    navigator.clipboard.writeText(text).then(function() {
+      // Rückmeldung anzeigen
+      const feedback = document.getElementById('copy-feedback');
+      feedback.style.display = 'block';
+      setTimeout(() => feedback.style.display = 'none', 2000); // Feedback nach 2 Sekunden ausblenden
+    }).catch(function(err) {
+      console.error('Fehler beim Kopieren des Textes:', err);
+    });
+  }
+</script>
+
+</body>
+</html>
+
+{% if content_for_header contains "kimonix_void_script" %}<script async id="kimonix_elements_script" src="https://api.kimonix.com/kimonix_elements.js?shop=thefemalecompany.myshopify.com"></script>{% endif %}

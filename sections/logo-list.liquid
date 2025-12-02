@@ -1,0 +1,326 @@
+<style>
+  #shopify-section-{{ section.id }} {
+    --prev-next-button-background: {{ settings.background.red }}, {{ settings.background.green }}, {{ settings.background.blue }};
+    --prev-next-button-color: {{ settings.text_color.red }}, {{ settings.text_color.green }}, {{ settings.text_color.blue }};
+
+    --section-logo-background: {{ section.settings.logo_background.red }} {{ section.settings.logo_background.green }} {{ section.settings.logo_background.blue }} / {{ section.settings.logo_background.alpha }};
+  }
+
+  {%- assign n_logos = section.blocks.size | default: 6 -%}
+  {%- assign logos_shown_desktop = n_logos -%}
+  {%- assign logos_shown_mobile = n_logos | at_most: section.settings.max_logos_mobile -%}
+
+  @media screen and (min-width: 741px) {
+    #shopify-section-{{ section.id }} {
+      --section-logo-count: {{ logos_shown_desktop }};
+      --section-logo-max-width: {{ section.settings.max_width_logo_desktop }}px;
+    }
+  }
+
+  @media screen and (max-width: 740px) {
+    #shopify-section-{{ section.id }} {
+      --section-logo-count: {{ logos_shown_mobile }};
+      --section-logo-max-width: {{ section.settings.max_width_logo_mobile }}px;
+    }
+
+    #shopify-section-{{ section.id }} .logo-list__list .logo-list__item:nth-child(n+{{ logos_shown_mobile | plus: 1 }}) {
+      display: none;
+    }
+  }
+</style>
+
+{%- render 'section' -%}
+{%- capture section_content -%}
+    <div class="logo-list__list">
+      {%- for block in section.blocks -%}
+        {%- capture logo_content -%}
+          {%- if block.settings.logo != blank -%}
+            {%- assign max_logo_width = section.settings.max_width_logo_desktop | at_least: section.settings.max_width_logo_mobile %}
+            {%- assign logo_max_size_mobile = block.settings.logo.width | divided_by: 2 | at_most: section.settings.max_width_logo_mobile -%}
+            {%- assign logo_max_size_desktop = block.settings.logo.width | divided_by: 2 | at_most: section.settings.max_width_logo_desktop -%}
+            {%- capture logo_widths -%}{{ logo_max_size_mobile }},{{ logo_max_size_mobile | times: 2 }},{{ logo_max_size_desktop }},{{ logo_max_size_desktop | times: 2 }}{%- endcapture -%}
+            {%- capture logo_sizes -%}(max-width: 740px) {{ logo_max_size_mobile }}px, {{ logo_max_size_desktop }}px{%- endcapture -%}
+
+            {{ block.settings.logo | image_url: width: block.settings.logo.width | image_tag: loading: 'lazy', sizes: logo_sizes, widths: logo_widths, class: 'logo-list__image' }}
+          {%- else -%}
+            {{- 'image' | placeholder_svg_tag: 'logo-list__image logo-list__image--placeholder' -}}
+          {%- endif -%}
+        {%- endcapture -%}
+
+        {%- if block.settings.link -%}
+          <a href="{{ block.settings.link }}" {% if section.settings.reveal_on_scroll %}reveal{% endif %} class="logo-list__item" {{ block.shopify_attributes }}>
+            {{- logo_content -}}
+          </a>
+        {%- else -%}
+          <div class="logo-list__item" {% if section.settings.reveal_on_scroll %}reveal{% endif %} {{ block.shopify_attributes }}>
+            {{- logo_content -}}
+          </div>
+        {%- endif -%}
+      {%- else -%}
+        {%- for i in (1..6) -%}
+          <div class="logo-list__item" {% if section.settings.reveal_on_scroll %}reveal{% endif %}>
+            {{- 'image' | placeholder_svg_tag: 'logo-list__image logo-list__image--placeholder' -}}
+          </div>
+        {%- endfor -%}
+      {%- endfor -%}
+    </div>
+  {%- endcapture -%}
+
+{%- if section.settings.layout == 'stacked' -%}
+  <logo-list
+    {% if section.settings.reveal_on_scroll %}
+      reveal-on-scroll
+    {% endif %}
+    class="logo-list logo-list--grid"
+  >
+    {{- section_content -}}
+  </logo-list>
+{%- elsif section.settings.layout == 'single_row' -%}
+  <logo-list
+    {% if section.settings.reveal_on_scroll %}
+      reveal-on-scroll
+    {% endif %}
+    class="logo-list logo-list--single-row"
+  >
+    {{- section_content -}}
+  </logo-list>
+{%- else -%}
+  <div class="scroller">
+    <div class="scroller__inner">
+      <logo-list
+        {% if section.settings.reveal_on_scroll %}
+          reveal-on-scroll
+        {% endif %}
+        class="logo-list logo-list--carousel"
+      >
+        {%- if section.blocks.size > 6 -%}
+          <prev-next-buttons class="logo-list__prev-next hidden-pocket">
+            <button class="logo-list__arrow prev-next-button prev-next-button--prev" disabled>
+              <span class="visually-hidden">{{ 'general.accessibility.previous' | t }}</span>
+              {%- include 'icon' with 'nav-arrow-left', block: true, direction_aware: true -%}
+            </button>
+
+            <button class="logo-list__arrow prev-next-button prev-next-button--next">
+              <span class="visually-hidden">{{ 'general.accessibility.next' | t }}</span>
+              {%- include 'icon' with 'nav-arrow-right', block: true, direction_aware: true -%}
+            </button>
+          </prev-next-buttons>
+        {%- endif -%}
+
+        {{- section_content -}}
+      </logo-list>
+    </div>
+  </div>
+{%- endif -%}
+{%- render 'section-end' -%}
+
+{% schema %}
+{
+  "name": "Logo list",
+  "class": "shopify-section--logo-list",
+  "disabled_on": {
+    "groups": ["header", "custom.overlay"]
+  },
+  "settings": [
+    {
+      "type": "header",
+      "content": "Styling"
+    },
+    {
+      "type": "checkbox",
+      "id": "reveal_on_scroll",
+      "label": "Reveal on scroll",
+      "info": "Show animation when section becomes visible.",
+      "default": true
+    },
+    {
+      "type": "select",
+      "id": "layout",
+      "label": "Layout",
+      "default": "stacked",
+      "options": [
+        {
+          "value": "stacked",
+          "label": "Stacked"
+        },
+        {
+          "value": "carousel",
+          "label": "Carousel"
+        },
+        {
+          "value": "single_row",
+          "label": "Single Row"
+        }
+      ]
+    },
+    {
+      "type": "range",
+      "id": "max_logos_mobile",
+      "label": "Max logos mobile",
+      "min": 1,
+      "max": 24,
+      "step": 1,
+      "default": 3,
+      "info": "The maximum number of logos to show on mobile."
+    },
+    {
+      "type": "range",
+      "id": "max_width_logo_desktop",
+      "label": "Logo maximum width (Desktop)",
+      "min": 20,
+      "max": 500,
+      "step": 5,
+      "default": 200,
+      "unit": "px"
+    },
+    {
+      "type": "range",
+      "id": "max_width_logo_mobile",
+      "label": "Logo maximum width (Mobile)",
+      "min": 20,
+      "max": 500,
+      "step": 5,
+      "default": 140,
+      "unit": "px"
+    },
+    {
+      "type": "color",
+      "id": "logo_background",
+      "label": "Logo background",
+      "default": "rgba(0,0,0,0)"
+    },
+    {
+      "type": "header",
+      "content": "Section settings"
+    },
+    {
+      "type": "select",
+      "id": "section_container_width",
+      "label": "Maximum width",
+      "options": [
+        {
+          "value": "xxs",
+          "label": "Extra extra Small"
+        },
+        {
+          "value": "xs",
+          "label": "Extra Small"
+        },
+        {
+          "value": "sm",
+          "label": "Small"
+        },
+        {
+          "value": "md",
+          "label": "Medium"
+        },
+        {
+          "value": "fluid",
+          "label": "Full width"
+        }
+      ],
+      "default": "md"
+    },
+    {
+      "type": "color",
+      "id": "section_background_color",
+      "label": "Background color",
+      "default": "rgba(0,0,0,0)"
+    },
+    {
+      "type": "header",
+      "content": "Section spacing"
+    },
+    {
+      "type": "range",
+      "id": "section_spacing_top",
+      "label": "Top spacing",
+      "unit": "px",
+      "min": 0,
+      "max": 200,
+      "step": 4,
+      "default": 32
+    },
+    {
+      "type": "range",
+      "id": "section_spacing_bottom",
+      "label": "Bottom spacing",
+      "unit": "px",
+      "min": 0,
+      "max": 200,
+      "step": 4,
+      "default": 32
+    },
+    {
+      "type": "checkbox",
+      "id": "section_spacing_different_mobile",
+      "label": "Use different height on mobile",
+      "default": false
+    },
+    {
+      "type": "range",
+      "id": "section_spacing_top_mobile",
+      "label": "Top spacing (mobile)",
+      "unit": "px",
+      "min": 0,
+      "max": 200,
+      "step": 4,
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "section_spacing_bottom_mobile",
+      "label": "Bottom spacing (mobile)",
+      "unit": "px",
+      "min": 0,
+      "max": 200,
+      "step": 4,
+      "default": 0
+    }
+  ],
+  "blocks": [
+    {
+      "name": "Logo",
+      "type": "logo",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "logo",
+          "label": "Image",
+          "info": "450 x 150px .png recommended"
+        },
+        {
+          "type": "url",
+          "id": "link",
+          "label": "Link"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Logo list",
+      "blocks": [
+        {
+          "type": "logo"
+        },
+        {
+          "type": "logo"
+        },
+        {
+          "type": "logo"
+        },
+        {
+          "type": "logo"
+        },
+        {
+          "type": "logo"
+        },
+        {
+          "type": "logo"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

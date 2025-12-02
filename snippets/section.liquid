@@ -1,0 +1,119 @@
+{%- comment -%}
+  Render the start of a section. Always use together with "section-end".
+  If parameters are not passed directly, will use "section.settings" and then theme settings.
+
+  <example>
+    {%- render 'section' -%}
+    <p>My section content</p>
+    {%- render 'section-end' -%}
+  </example>
+
+  <example>
+    {%- render 'section', param_name: param_value -%}
+    <p>My section content with customer option.</p>
+    {%- render 'section-end' -%}
+  </example>
+
+  @param {string} [background_color] - The section background color.
+  @param {string} [text_color] - The section text color.
+  @param {string} [heading_color] - The section heading color.
+  @param {string} [subheading_color] - The section subheading color. Falls back to heading color.
+  @param {xxs|xs|sm]md|fluid|none} [container_width] - The container maximum width. Defaults to "md".
+  @param {left|center|right} [text_align] - The text alignment of the container. Defaults to "left".
+  @param {circular|publico} [heading_font_family] - The heading font family. Defaults to "circular".
+  @param {number} [spacing_top] - The spacing (in px) at the top of the section.
+  @param {number} [spacing_bottom] - The spacing (in px) at the bottom of the section.
+  @param {number} [spacing_top_mobile] - The spacing (in px) at the top of the section. Only for mobile.
+  @param {number} [spacing_bottom_mobile] - The spacing (in px) at the bottom of the section. Only for mobile.
+  @param {string} [section_classes] - Classes added to the .section element.
+  @param {string} [container_classes] - Classes added to the .container element.
+  @param {string} [section_attributes] - String of HTML attributes to add to the section. Example: 'style="overflow-x: hidden;" data-some-attr="value"'
+{%- endcomment -%}
+
+{%- liquid
+  assign section_classes = "section section--v2" | append: " " | append: section_classes
+  
+  assign container_classes = container_classes
+  if container_width != 'none'
+    assign container_classes = container_classes | append: " container"
+    assign container_width = container_width | default: section.settings.section_container_width | default: "md"
+    assign container_classes = container_classes | append: " container--" | append: container_width
+  endif
+
+  assign text_align = text_align | default: section.settings.section_text_alignment | default: "left"
+  assign section_classes = section_classes | append: " text--" | append: text_align
+-%}
+
+<style>
+  #shopify-section-{{ section.id }} {
+    /* Section background */
+    {%- liquid 
+      assign section_background = background_color | default: section.settings.section_background_color
+      if section_background == 'rgba(0,0,0,0)' or section_background == blank
+        assign section_background = settings.background
+      endif
+    -%}
+    --section-background: {{ section_background.red }}, {{ section_background.green }}, {{ section_background.blue }};
+
+    /* Text color */
+    {%- liquid
+      assign text_color = text_color | default: section.settings.section_text_color
+      if text_color == 'rgba(0,0,0,0)' or text_color == blank
+        assign text_color = settings.text_color
+      endif
+    -%}
+    --text-color: {{ text_color.red }}, {{ text_color.green }}, {{ text_color.blue }};
+
+    /* Heading color */
+    {%- liquid 
+      assign heading_color = heading_color | default: section.settings.section_heading_color
+      if heading_color == 'rgba(0,0,0,0)' or heading_color == blank
+        assign heading_color = settings.heading_color
+      endif
+    -%}
+    --heading-color: {{ heading_color.red }}, {{ heading_color.green }}, {{ heading_color.blue }};
+
+    /* Subheading color */
+    {%- liquid
+      assign subheading_color = subheading_color | default: section.settings.section_subheading_color
+      if subheading_color == 'rgba(0,0,0,0)' or subheading_color == blank
+        assign subheading_color = heading_color
+      endif
+    -%}
+    --subheading-color: {{ subheading_color.red }}, {{ subheading_color.green }}, {{ subheading_color.blue }};
+
+    /* Heading font family */
+    {%- assign heading_font_family = heading_font_family | default: section.settings.section_heading_font_family | default: "circular" -%}
+    --heading-font-family: var(--font-{{ section.settings.section_heading_font_family }});
+
+    /* Spacing */
+    {%- assign spacing_top = spacing_top | default: section.settings.section_spacing_top | default: 32 %}
+    --section-spacing-top: {{ spacing_top }}px;
+    {%- assign spacing_bottom = spacing_bottom | default: section.settings.section_spacing_bottom | default: 32 %}
+    --section-spacing-bottom: {{ spacing_bottom }}px;
+
+    {%- liquid 
+      assign spacing_top_mobile = spacing_top_mobile
+      if spacing_top_mobile == blank and section.settings.section_spacing_different_mobile == true and section.settings.section_spacing_top_mobile != blank
+        assign spacing_top_mobile = section.settings.section_spacing_top_mobile
+      endif
+
+      assign spacing_bottom_mobile = spacing_bottom_mobile
+      if spacing_bottom_mobile == blank and section.settings.section_spacing_different_mobile == true and section.settings.section_spacing_bottom_mobile != blank
+        assign spacing_bottom_mobile = section.settings.section_spacing_bottom_mobile
+      endif
+    -%}
+
+    @media screen and (max-width: 741px) {
+      {%- if spacing_top_mobile != blank -%}
+        --section-spacing-top: {{ spacing_top_mobile }}px;
+      {%- endif -%}
+      {%- if spacing_bottom_mobile != blank -%}
+        --section-spacing-bottom: {{ spacing_bottom_mobile }}px;
+      {%- endif -%}
+    }
+  }
+</style>
+
+<section class="{{ section_classes }}" {{ section_attributes }}>
+  <div class="{{ container_classes }}">

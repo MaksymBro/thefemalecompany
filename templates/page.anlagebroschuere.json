@@ -1,0 +1,39 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "show_title": true,
+        "show_breadcrumbs": true,
+        "page_width": "medium"
+      }
+    },
+    "custom_html_FtDXQR": {
+      "type": "custom-html",
+      "settings": {
+        "subheading": "Werde Teil von The Female Company",
+        "title": "",
+        "html": "<p style=\"text-align: center\"><iframe src=\"https://drive.google.com/file/d/19PXHMzX-iSEl_DpXHPS2OVOmT6oBalD5/preview\" width=\"330\" height=\"480\" p=\"\">\n</iframe></p>",
+        "add_vertical_spacing": false,
+        "disable_inside_spacing": false,
+        "background_type": "full_width",
+        "background": "rgba(0,0,0,0)",
+        "text_color": "rgba(0,0,0,0)"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "custom_html_FtDXQR"
+  ]
+}

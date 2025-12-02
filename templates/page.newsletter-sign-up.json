@@ -1,0 +1,169 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "show_title": true,
+        "show_breadcrumbs": true,
+        "page_width": "medium"
+      }
+    },
+    "image_with_text_overlay_CihxBN": {
+      "type": "image-with-text-overlay",
+      "settings": {
+        "reveal_on_scroll": true,
+        "section_height": "small",
+        "image": "shopify://shop_images/IMG_0853.jpg",
+        "subheading": "Gewinnspiel",
+        "title": "Gewinne einen Aufenthalt im Vabali Spa Hamburg",
+        "content": "",
+        "button_text": "",
+        "button_link": "",
+        "link_style": "link",
+        "background_type": "full_width",
+        "text_width": "medium",
+        "text_position": "middle_center",
+        "text_color": "#ffffff",
+        "button_background": "#ffffff",
+        "button_text_color": "#000000",
+        "overlay_color": "#000000",
+        "overlay_opacity": 30
+      }
+    },
+    "rich_text_dWzwmX": {
+      "type": "rich-text",
+      "settings": {
+        "subheading": "Das ist enthalten:",
+        "title": "",
+        "content": "<ul><li>1 Übernachtung in einem Premium Zimmer</li><li>Für dich und deine*n Bestie</li><li>Frühstücksbüffet und Spa-Nutzung an beiden Tagen</li><li>Im Wert von über 400 Euro</li></ul>",
+        "button_text": "",
+        "button_link": "",
+        "background_type": "full_width",
+        "text_width": "medium",
+        "text_position": "center",
+        "text_alignment": "left",
+        "background": "rgba(0,0,0,0)",
+        "text_color": "#1a1a1a",
+        "button_background": "rgba(0,0,0,0)",
+        "button_text_color": "rgba(0,0,0,0)"
+      }
+    },
+    "custom_html_inVJQ8": {
+      "type": "custom-html",
+      "settings": {
+        "subheading": "Mitmachen & gewinnen",
+        "title": "Gewinnspielanmeldung",
+        "html": "<div class=\"klaviyo-form-TmcUCw\"></div>",
+        "add_vertical_spacing": true,
+        "disable_inside_spacing": false,
+        "background_type": "full_width",
+        "background": "rgba(0,0,0,0)",
+        "text_color": "rgba(0,0,0,0)"
+      }
+    },
+    "section_header_wk3jVB": {
+      "type": "section-header",
+      "settings": {
+        "section_subheading": "",
+        "section_heading": "Teilnahmebedingungen",
+        "section_short_description": "",
+        "heading_size": "h3",
+        "highest_hierarchy": false,
+        "section_heading_font_family": "default",
+        "short_description_font_size": "medium",
+        "section_text_color": "rgba(0,0,0,0)",
+        "section_heading_color": "rgba(0,0,0,0)",
+        "section_subheading_color": "rgba(0,0,0,0)",
+        "section_container_width": "sm",
+        "section_background_color": "rgba(0,0,0,0)",
+        "section_spacing_top": 32,
+        "section_spacing_bottom": 32,
+        "section_spacing_different_mobile": false,
+        "section_spacing_top_mobile": 0,
+        "section_spacing_bottom_mobile": 0
+      }
+    },
+    "rich_text_hYTTak": {
+      "type": "rich-text",
+      "settings": {
+        "subheading": "",
+        "title": "",
+        "content": "<p><strong>Wer stellt den Gewinn? </strong><br/>Den Gewinn verlosen wir mit unserem Kooperationspartner Vabali Spa Hamburg GmbH & Co. KG</p><p><strong>Welche Voraussetzungen zur Teilnahme gibt es?</strong></p><ul><li>Mindestalter: 18 Jahre</li><li>Dieses Gewinnspiel steht in keiner Verbindung zu Instagram.</li></ul><p><em><strong>Wann startet das Gewinnspiel?  </strong></em><br/>Das Gewinnspiel startet am 2.7.24 und endet am 14.7.24</p><p><strong>Was kann man gewinnen? </strong><em><br/></em>Verlost wird ein Gutschein für eine Übernachtung in einem Premium-Zimmer inkl. Spa an beiden Tagen für 2 Personen inklusive Frühstücksbuffet mit Heißgetränken</p><p><strong>Welche Vorrausetzung zur Teilnahme gibt es? </strong><em><br/></em>Vorrausetzung zur Teilnahme ist die Anmeldung zu unserem Newsletter über diese Seite <a href=\"https://buy.thefemalecompany.com/pages/gewinnspiel-vabali/\">https://buy.thefemalecompany.com/pages/gewinnspiel-vabali/</a> </p><p><strong>Wann wird der Preis verlost? </strong><em><br/></em><strong>Teilnahmeschluss: </strong>14. Juli 2024. Wir verlosen den Gewinn nach Ende des Gewinnspiels und informieren die Teilnehmenden bis spätestens Ende Juli.<br/><br/><strong>Nach welchen Prinzip wird der Gewinnende gelost?</strong><br/>Wir verlosen nach dem Zufallsprinzip<br/><br/><strong>Wie erfahre ich, ob ich gewonnen habe? </strong><em><br/></em>Wir informieren die Person, die gewonnen hat per E-Mail</p><p>Mehr Informationen zu unserem Datenschutz findest du hier <a href=\"https://buy.thefemalecompany.com/policies/privacy-policy\">https://buy.thefemalecompany.com/policies/privacy-policy</a></p>",
+        "button_text": "",
+        "button_link": "",
+        "background_type": "full_width",
+        "text_width": "medium",
+        "text_position": "center",
+        "text_alignment": "left",
+        "background": "rgba(0,0,0,0)",
+        "text_color": "rgba(0,0,0,0)",
+        "button_background": "rgba(0,0,0,0)",
+        "button_text_color": "rgba(0,0,0,0)"
+      }
+    },
+    "announcement_bar_pm4gkn": {
+      "type": "announcement-bar",
+      "blocks": {
+        "message_DhUXmF": {
+          "type": "message",
+          "settings": {
+            "text": "<p><strong>Bis zu 15% Rabatt</strong> beim Kauf von 3+ Pantys</p>",
+            "text_html": "",
+            "learn_more_text": "Learn more",
+            "title": "",
+            "content": "",
+            "button_text": "",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "message_DhUXmF"
+      ],
+      "disabled": true,
+      "settings": {
+        "announcement_bar_position": "non_sticky",
+        "announcement_text_size": "normal",
+        "autoplay": true,
+        "cycle_speed": 7,
+        "background": "#f58e9e",
+        "text_color": "#ffffff",
+        "button_background": "#ffffff",
+        "button_text_color": "#f58e9e"
+      }
+    },
+    "marquee_t3LLf7": {
+      "type": "marquee",
+      "disabled": true,
+      "settings": {
+        "content": "<p><strong>Your content</strong></p>",
+        "separator": "·",
+        "repeat": 13,
+        "min_gap": 32,
+        "animation_speed": 30,
+        "text_color": "#ffe6e6",
+        "background": "#de2a2a"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "image_with_text_overlay_CihxBN",
+    "rich_text_dWzwmX",
+    "custom_html_inVJQ8",
+    "section_header_wk3jVB",
+    "rich_text_hYTTak",
+    "announcement_bar_pm4gkn",
+    "marquee_t3LLf7"
+  ]
+}

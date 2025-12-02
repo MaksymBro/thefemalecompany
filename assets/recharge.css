@@ -1,0 +1,121 @@
+/* Hide old subscriptions */
+.combo-box__option-item[value="1/2 Mini + 1/2 Normal"],
+.combo-box__option-item[value="1/2 Normal + 1/2 Super"],
+.combo-box__option-item[value="1/2 Normal + 1/2 Super Plus"],
+.combo-box__option-item[value="2/3 Mini + 1/3 Normal"] {
+  display: none!important;
+}
+
+/* ReCharge subscription widget */
+.product-form .rc-container {
+  margin-bottom: 1rem;
+}
+
+.product-form .rc_container_wrapper::before {
+  content: "Lieferung:";
+  margin-bottom: 8px;
+  display: block;
+}  
+
+.product-form .rc-template__radio-group .rc-radio-group__options {
+  border-radius: 0;
+  border: 1px solid rgb(var(--border-color));
+}
+
+.product-form .rc-template__radio-group .rc-radio:not(:first-child) {
+  border-top: 1px solid rgb(var(--border-color));
+}
+  
+.product-form .rc-radio-group__options .rc-radio {
+  padding: 8px;
+}
+  
+.product-form .rc-radio-group__options .rc-radio.rc-option--active::after {
+  display: inline-block;
+  transform: rotate(45deg);
+  height: 0.75em;
+  width: 0.3em;
+  border-bottom: 2px solid #000;
+  border-right: 2px solid #000;
+  content: " ";
+  margin: -4px 6px 0 auto;
+  animation: fadeIn 0.1s ease-in-out;
+}
+  
+.product-form .rc-template__radio-group .rc-radio.rc-option__subsave .rc-radio__label {
+  font-weight: normal;
+}
+  
+.product-form .rc-template__radio-group .rc-radio .rc-radio__label .rc-option__price {
+  margin-right: 0;
+  width: 60px;
+}
+  
+.product-form .rc_popup {
+  padding: 8px 0 0 0;
+}
+
+  
+.product-form .rc_popup__hover {
+  padding-bottom: 0;
+  font-size: 80%;
+}
+  
+.product-form .rc_popup__hover .reload-icon {
+  height: 12px;
+  width: 12px;
+}
+  
+.product-form .rc_popup__block {
+  animation: .1s fadeIn ease-in-out;
+}
+
+.product-form .rc_popup__learn_more {
+  display: none;
+}
+
+.product-form .rc_popup__block__content {
+  padding-bottom: 0!important;
+}
+
+.product-form .rc_popup__block__footer {
+  display: none!important;
+}
+  
+.product-form .rc-template__radio-group .rc-radio-group__options+.rc-selling-plans {
+  border: 1px solid rgb(var(--border-color));
+  margin-top: 0;
+  border-top: 0;
+  padding: 1rem;
+  background: var(--rc-active-bg);
+  animation: 0.2s fadeIn ease-in-out;
+  margin-top: -10px;
+}
+  
+.product-form .rc-selling-plans__label {
+  display: block;
+  margin-bottom: 4px;
+}
+
+.product-form .rc-selling-plans::after {
+  content: "Periods are irregular \2013  deshalb kannst du nach Kauf dein Abo auch tagesweise anpassen.";
+  font-weight: normal;
+  font-size: smaller;
+  opacity: 0.6;
+  margin-top: 6px;
+  display: block;
+}
+  
+.product-form .rc-selling-plans select {
+  padding: 10px 16px 10px 8px;
+  width: 100%;
+  border: 1px solid rgb(var(--border-color));
+  border-radius: var(--button-border-radius);
+  background: transparent;
+  cursor: pointer;
+}
+
+/* Remove subscription login */
+div#rc_login {
+  display: none!important;
+}

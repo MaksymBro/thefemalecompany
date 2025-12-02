@@ -1,0 +1,36 @@
+{% comment %}
+  Snippet to handle customer registration redirect
+  This snippet is included in the main-customers-register.liquid section
+{% endcomment %}
+
+<script>
+  console.log("Registration redirect snippet loaded");
+  
+  document.addEventListener('DOMContentLoaded', function() {
+    // Get the registration form
+    const registerForm = document.getElementById('register-customer');
+    
+    if (registerForm) {
+      console.log("Found registration form, modifying it");
+      
+      // Add a hidden input field to specify the return_to URL
+      const hiddenInput = document.createElement('input');
+      hiddenInput.type = 'hidden';
+      hiddenInput.name = 'return_to';
+      hiddenInput.value = '{{ settings.customer_registration_redirect | default: "/pages/successful-registration" }}';
+      
+      // Log the redirect URL
+      console.log("Setting redirect URL to:", hiddenInput.value);
+      
+      // Add the hidden input to the form
+      registerForm.appendChild(hiddenInput);
+      
+      // Add submit event listener for logging
+      registerForm.addEventListener('submit', function() {
+        console.log("Form submitted with redirect URL:", hiddenInput.value);
+      });
+    } else {
+      console.log("Registration form not found");
+    }
+  });
+</script>

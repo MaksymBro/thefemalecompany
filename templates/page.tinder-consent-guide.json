@@ -1,0 +1,130 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "settings": {
+        "show_title": false,
+        "show_breadcrumbs": true,
+        "page_width": "medium"
+      }
+    },
+    "9a515ded-5105-4e2f-ab37-726d4e7fe87c": {
+      "type": "image-with-text-block",
+      "settings": {
+        "reveal_on_scroll": true,
+        "image": "shopify://shop_images/Header_Web_ConsentGuide_Tinder_prewiev_6.jpg",
+        "mobile_image": "shopify://shop_images/Header_Mobile_ConsentGuide_Tinder_prewiev.jpg",
+        "subheading": "Du bestimmst die Regeln",
+        "title": "Konsens ist Key!",
+        "content": "<p><strong>Dein Guide für einvernehmliches Dating in 2024</strong></p><p>Um ein stärkeres Bewusstsein für persönliche Grenzen und Respekt im zwischenmenschlichen Umgang zu fördern, haben wir uns mit Tinder zusammengetan, um aktiv über dieses Thema zu sprechen. Denn Konsens ist keine Option, sondern ein Muss! Entdecke jetzt unsere Tipps rund um das Thema Konsens und Dating.</p><p><strong>Hol dir hier deinen kostenlosen Konsens Guide.</strong></p>",
+        "button_text": "Jetzt herunterladen",
+        "button_link": "https://cdn.shopify.com/s/files/1/0613/9261/7710/files/CONSENT-GUIDE-v8.pdf?v=1704715909",
+        "background_type": "full_width",
+        "text_position": "right",
+        "text_alignment": "center",
+        "text_background": "#f6d3de",
+        "text_color": "#1a1a1a",
+        "button_background": "rgba(0,0,0,0)",
+        "button_text_color": "rgba(0,0,0,0)"
+      }
+    },
+    "d4e7f46c-43cc-47f9-9041-0b3104b1f88c": {
+      "type": "image-with-text-overlay",
+      "disabled": true,
+      "settings": {
+        "reveal_on_scroll": true,
+        "section_height": "auto",
+        "image": "shopify://shop_images/KV_LP_ConsentGuide.png",
+        "subheading": "",
+        "title": "",
+        "content": "",
+        "button_text": "",
+        "button_link": "",
+        "link_style": "link",
+        "background_type": "full_width",
+        "text_width": "medium",
+        "text_position": "middle_center",
+        "text_color": "#ffffff",
+        "button_background": "#ffffff",
+        "button_text_color": "#000000",
+        "overlay_color": "#000000",
+        "overlay_opacity": 0
+      }
+    },
+    "1eba3615-8adb-45e7-a457-bbb34122f065": {
+      "type": "section-header",
+      "disabled": true,
+      "settings": {
+        "section_subheading": "Du bestimmst die Regeln",
+        "section_heading": "Konsens ist Key!",
+        "section_short_description": "<p><strong>Dein Guide für consentual Dating in 2024</strong></p><p>Um ein stärkeres Bewusstsein für persönliche Grenzen und Respekt im zwischenmenschlichen Umgang zu fördern, haben wir uns mit Tinder zusammengetan, um aktiv über dieses Thema zu sprechen. Denn Konsens ist keine Option, sondern ein Muss! Entdecke jetzt unsere Tipps rund um das Thema Konsens und Dating.</p><p><strong>Hol dir hier deinen kostenlosen Konsens Guide.</strong></p>",
+        "heading_size": "h2",
+        "highest_hierarchy": true,
+        "section_heading_font_family": "circular",
+        "short_description_font_size": "medium",
+        "section_text_color": "rgba(0,0,0,0)",
+        "section_heading_color": "#fd5068",
+        "section_subheading_color": "#1a1a1a",
+        "section_container_width": "sm",
+        "section_background_color": "#f6d3de",
+        "section_spacing_top": 32,
+        "section_spacing_bottom": 32,
+        "section_spacing_different_mobile": true,
+        "section_spacing_top_mobile": 16,
+        "section_spacing_bottom_mobile": 24
+      }
+    },
+    "ccfd1458-6af1-4ed0-a2ce-745e5089efca": {
+      "type": "button",
+      "disabled": true,
+      "settings": {
+        "button_text": "Jetzt herunterladen",
+        "button_link": "https://cdn.shopify.com/s/files/1/0613/9261/7710/files/CONSENT-GUIDE.pdf?v=1702906352",
+        "button_link_new_window": true,
+        "button_details": "",
+        "button_style": "primary",
+        "button_outline": false,
+        "button_shadow": false,
+        "button_size": "md",
+        "button_fit": "inline",
+        "section_container_width": "md",
+        "section_text_alignment": "center",
+        "section_background_color": "#f6d3de",
+        "section_spacing_top": 32,
+        "section_spacing_bottom": 32,
+        "section_spacing_different_mobile": true,
+        "section_spacing_top_mobile": 0,
+        "section_spacing_bottom_mobile": 24
+      }
+    },
+    "ca05e55b-1adb-42d9-a9e1-1b54154c2d1f": {
+      "type": "marquee",
+      "settings": {
+        "content": "<p><a href=\"https://www.instagram.com/thefemalecompany/\" target=\"_blank\" title=\"https://www.instagram.com/thefemalecompany/\"><strong>Konsens ist sexy!</strong> Teile deine Meinung auf <strong>Instagram</strong></a></p>",
+        "separator": "📣",
+        "repeat": 3,
+        "min_gap": 8,
+        "animation_speed": 200,
+        "text_color": "#ffffff",
+        "background": "#d676da"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "9a515ded-5105-4e2f-ab37-726d4e7fe87c",
+    "d4e7f46c-43cc-47f9-9041-0b3104b1f88c",
+    "1eba3615-8adb-45e7-a457-bbb34122f065",
+    "ccfd1458-6af1-4ed0-a2ce-745e5089efca",
+    "ca05e55b-1adb-42d9-a9e1-1b54154c2d1f"
+  ]
+}

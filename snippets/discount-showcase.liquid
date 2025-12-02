@@ -1,0 +1,80 @@
+{%- comment -%}
+  Discount Showcase Snippet
+  Displays discount code and discounted price on product cards and PDPs
+  
+  Parameters:
+  - product: The product object
+  - product_price: The current product price (variant price)
+  - product_compare_at_price: The compare at price (if available)
+  - context: 'collection' or 'pdp' to determine styling
+{%- endcomment -%}
+
+{%- if settings.discount_showcase_enabled -%}
+  {%- liquid
+    assign discount_showcase_id = 'discount-showcase-' | append: product.id
+    assign product_base_price = product_price
+  -%}
+
+  <div 
+    class="discount-showcase discount-showcase--{{ context | default: 'collection' }} discount-showcase--loading"
+    data-discount-showcase
+    data-product-id="{{ product.id }}"
+    data-product-price="{{ product_base_price }}"
+    data-fallback-code="{{ settings.fallback_discount_code | escape }}"
+    data-fallback-percentage="{{ settings.fallback_discount_percentage }}"
+    data-show-second-badge="{{ settings.show_second_savings_badge_pdp }}"
+    id="{{ discount_showcase_id }}"
+  >
+    <div class="discount-showcase__price">
+      {%- if context == 'pdp' -%}
+        <div class="discount-showcase__pdp-wrapper">
+          <div class="discount-showcase__discounted-price-wrapper">
+            <span class="discount-showcase__discounted-price discount-showcase__discounted-price--pdp" data-discount-price></span>
+          </div>
+          <div class="discount-showcase__text-wrapper">
+            <span class="discount-showcase__text discount-showcase__text--pdp">
+              <span data-discount-text-prefix></span>
+              <button 
+                type="button" 
+                class="discount-showcase__code-button" 
+                data-discount-code-button
+                aria-label="Copy discount code"
+              >
+                <span class="discount-showcase__code" data-discount-code></span>
+                <span class="discount-showcase__copy-icon" data-discount-copy-icon>
+                  {%- render 'icons', name: 'far-clipboard' -%}
+                </span>
+                <span class="discount-showcase__applied-icon" data-discount-applied-icon style="display: none;">
+                  {%- render 'icon', icon: 'check', width: 16, height: 16 -%}
+                </span>
+              </button>
+            </span>
+          </div>
+          {%- if settings.show_second_savings_badge_pdp -%}
+            <div class="discount-showcase__badge" data-discount-badge style="display: none;">
+              <span data-discount-badge-text></span>
+            </div>
+          {%- endif -%}
+        </div>
+      {%- else -%}
+        <div class="discount-showcase__desktop">
+          <span class="discount-showcase__discounted-price" data-discount-price></span>
+          <span class="discount-showcase__text">
+            <span data-discount-text-prefix></span>
+            <span class="discount-showcase__code" data-discount-code></span>
+          </span>
+        </div>
+        
+        <div class="discount-showcase__mobile">
+          <div class="discount-showcase__mobile-line1">
+            <span class="discount-showcase__discounted-price" data-discount-price-mobile></span>
+            <span class="discount-showcase__text" data-discount-text-prefix-mobile></span>
+          </div>
+          <div class="discount-showcase__mobile-line2">
+            <span class="discount-showcase__code" data-discount-code-mobile></span>
+          </div>
+        </div>
+      {%- endif -%}
+    </div>
+  </div>
+{%- endif -%}

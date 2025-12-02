@@ -1,0 +1,249 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "type": "footer",
+  "name": "Footer group",
+  "sections": {
+    "instagram_Yf8nT3": {
+      "type": "instagram",
+      "settings": {
+        "show_section": false,
+        "heading": "Let’s become real friends on <a href=\"https://www.instagram.com/thefemalecompany\">Instagram</a>"
+      }
+    },
+    "text-with-icons": {
+      "type": "text-with-icons",
+      "blocks": {
+        "item-1": {
+          "type": "item",
+          "settings": {
+            "icon": "picto-box",
+            "custom_icon_width": 50,
+            "title": "Kostenloser Versand",
+            "content": "<p>Kostenloser Versand innerhalb Deutschlands ab einem Einkaufswert von 65€.</p>"
+          }
+        },
+        "item-2": {
+          "type": "item",
+          "settings": {
+            "icon": "picto-email",
+            "custom_icon_width": 50,
+            "title": "Wir sind für dich da",
+            "content": "<p>Du erreichst uns jederzeit per E-Mail.</p><p><a href=\"mailto:love@thefemalecompany.com\" title=\"mailto:love@thefemalecompany.com\">E-Mail</a></p>"
+          }
+        },
+        "item-3": {
+          "type": "item",
+          "settings": {
+            "icon": "picto-secure-payment",
+            "custom_icon_width": 50,
+            "title": "Sichere Zahlung",
+            "content": "<p>Deine Zahlung wird sicher und verschlüsselt verarbeitet.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "item-1",
+        "item-2",
+        "item-3"
+      ],
+      "settings": {
+        "background": "#ffe6e6",
+        "text_color": "rgba(0,0,0,0)",
+        "no_slideshow": false
+      }
+    },
+    "instagram": {
+      "type": "instagram",
+      "blocks": {
+        "2e784fda-4b55-48f9-b311-326d21fa46c1": {
+          "type": "images",
+          "settings": {
+            "image": "shopify://shop_images/503548771_18310760884215722_4969059287047681598_n_1.png"
+          }
+        },
+        "89955c10-7c87-417b-9228-8ada73157bc3": {
+          "type": "images",
+          "settings": {
+            "image": "shopify://shop_images/Vorlage_BreakingNews-1_3310c7e6-a3a5-4a75-a895-98b9cc7683f4.png"
+          }
+        },
+        "35122938-7933-4b95-a243-4c190b123b88": {
+          "type": "images",
+          "settings": {
+            "image": "shopify://shop_images/Vorlage_BreakingNews-2_59bd008e-ff0e-4946-8b32-93098f1d322d.png"
+          }
+        },
+        "c7fb4ce6-550e-4de0-a1af-818527b12374": {
+          "type": "images",
+          "settings": {
+            "image": "shopify://shop_images/Vorlage_BreakingNews_6d2b0556-21cc-4ab8-9b59-02d40d33b303.png"
+          }
+        },
+        "66243bb3-63d7-4aae-aaa4-36c577f41494": {
+          "type": "images",
+          "settings": {
+            "image": "shopify://shop_images/Vorlage_BreakingNews-11_7ae0751a-458a-4c69-8b7c-15955473e9eb.png"
+          }
+        },
+        "9b6ead6e-8a4f-447c-8377-f011dfa7a9a6": {
+          "type": "images",
+          "settings": {
+            "image": "shopify://shop_images/Active_Ada_2-4_8d389d80-46e2-4e83-9fbc-ec105f062591.png"
+          }
+        },
+        "253a55fd-34c9-4180-99f7-9ec668b9cd10": {
+          "type": "images",
+          "settings": {
+            "image": "shopify://shop_images/Vorlage_Breaking2_1_dd49e086-edfb-4ff7-bebe-4be0aca2b73c.png"
+          }
+        },
+        "f007511f-8532-4d73-a253-4c2fe58de9a6": {
+          "type": "images",
+          "settings": {
+            "image": "shopify://shop_images/Active_Ada_2-4-1_82e3d3d8-9193-48f3-b580-c859398dbf17.png"
+          }
+        },
+        "44e9fbd3-1b5a-4eb0-bed6-1dab19b6dc0b": {
+          "type": "images",
+          "settings": {
+            "image": "shopify://shop_images/Active_Ada_2-3_65b040b8-7b12-476e-ae0b-9c95dc47dcb2.png"
+          }
+        },
+        "d912c1e8-a2bc-4176-9194-dc155c5a61d8": {
+          "type": "images",
+          "settings": {
+            "image": "shopify://shop_images/Active_Ada_2-2.png"
+          }
+        },
+        "2392c441-b1a3-44b5-8fd6-2bef8d2e8d26": {
+          "type": "images",
+          "settings": {
+            "image": "shopify://shop_images/Vorlage_1_1_907c6977-42b0-4f2c-acf9-1cb0db7ce5dd.png"
+          }
+        },
+        "b4f694fe-d0f3-4b2c-86f3-932f1828bb65": {
+          "type": "images",
+          "settings": {
+            "image": "shopify://shop_images/Active_Ada_2_d2f578fb-9f73-4fbc-a884-5ac3b657d1a5.png"
+          }
+        },
+        "62b10e6a-a329-4ee5-8747-44ed91d65e9b": {
+          "type": "images",
+          "settings": {
+            "image": "shopify://shop_images/Story_Nipples_6de90089-4a3a-4e0d-bba6-1342441bd06d.png"
+          }
+        },
+        "06e0b4cc-cda3-45fb-a074-e1972dda0c73": {
+          "type": "images",
+          "settings": {
+            "image": "shopify://shop_images/Titebild-1_333c1e0d-d909-48b8-81b8-65fbdf03108f.png"
+          }
+        },
+        "320092e8-e1e8-4a8b-99bc-f3feedfff598": {
+          "type": "images",
+          "settings": {
+            "image": "shopify://shop_images/Vorlage_1_1-1_59ab1473-7aa9-4b7e-9cf6-7fa13a3f4503.png"
+          }
+        }
+      },
+      "block_order": [
+        "2e784fda-4b55-48f9-b311-326d21fa46c1",
+        "89955c10-7c87-417b-9228-8ada73157bc3",
+        "35122938-7933-4b95-a243-4c190b123b88",
+        "c7fb4ce6-550e-4de0-a1af-818527b12374",
+        "66243bb3-63d7-4aae-aaa4-36c577f41494",
+        "9b6ead6e-8a4f-447c-8377-f011dfa7a9a6",
+        "253a55fd-34c9-4180-99f7-9ec668b9cd10",
+        "f007511f-8532-4d73-a253-4c2fe58de9a6",
+        "44e9fbd3-1b5a-4eb0-bed6-1dab19b6dc0b",
+        "d912c1e8-a2bc-4176-9194-dc155c5a61d8",
+        "2392c441-b1a3-44b5-8fd6-2bef8d2e8d26",
+        "b4f694fe-d0f3-4b2c-86f3-932f1828bb65",
+        "62b10e6a-a329-4ee5-8747-44ed91d65e9b",
+        "06e0b4cc-cda3-45fb-a074-e1972dda0c73",
+        "320092e8-e1e8-4a8b-99bc-f3feedfff598"
+      ],
+      "custom_css": [
+        ".social-media__header {background: white; color: black;}"
+      ],
+      "settings": {
+        "show_section": true,
+        "heading": "Let’s become real friends on <a href=\"https://www.instagram.com/thefemalecompany\">Instagram</a>"
+      }
+    },
+    "newsletter": {
+      "type": "static-newsletter",
+      "settings": {
+        "show_section": false,
+        "reveal_on_scroll": true,
+        "subheading": "Subscribe to our newsletter",
+        "content": "<p>Promotions, new products and sales. Directly to your inbox.</p>",
+        "text_position": "right",
+        "text_alignment": "left",
+        "text_background": "#ffffff",
+        "text_color": "rgba(0,0,0,0)",
+        "button_background": "rgba(0,0,0,0)",
+        "button_text_color": "rgba(0,0,0,0)"
+      }
+    },
+    "footer": {
+      "type": "footer",
+      "blocks": {
+        "newsletter": {
+          "type": "newsletter",
+          "settings": {
+            "klaviyo_list_id": "RPtjBz",
+            "title": "Exklusive Rabatte",
+            "content": "<p>Melde dich hier für unsere <a href=\"https://buy.thefemalecompany.com/pages/gewinnspiel-rimowa\" title=\"https://buy.thefemalecompany.com/pages/gewinnspiel-rimowa\">Newsletter-Only Deals</a> an und erhalte exklusive Rabatt während unserem Sale!!</p>"
+          }
+        },
+        "links": {
+          "type": "links",
+          "settings": {
+            "menu": "footer-2"
+          }
+        },
+        "acca5256-9fba-4a07-99ef-8f6678ba3ffb": {
+          "type": "links",
+          "settings": {
+            "menu": "footer"
+          }
+        },
+        "social_media": {
+          "type": "social_media",
+          "settings": {
+            "title": "Folg uns",
+            "content": ""
+          }
+        }
+      },
+      "block_order": [
+        "newsletter",
+        "links",
+        "acca5256-9fba-4a07-99ef-8f6678ba3ffb",
+        "social_media"
+      ],
+      "settings": {
+        "show_payment_icons": true,
+        "enable_follow_on_shop": true,
+        "show_country_selector": true,
+        "show_locale_selector": true
+      }
+    }
+  },
+  "order": [
+    "instagram_Yf8nT3",
+    "text-with-icons",
+    "instagram",
+    "newsletter",
+    "footer"
+  ]
+}

@@ -1,0 +1,137 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "rich_text_hR7wMX": {
+      "type": "rich-text",
+      "name": "Rich text",
+      "settings": {
+        "subheading": "Deine Registrierung war erfolgreich",
+        "title": "Du bist Teil unseres ClitClubs 🔥",
+        "content": "<p><strong>Willkommen - Wir freuen uns!</strong><br/><br/>Was du davon hast? Finde es gleich auf unserer ClitClub-Seite heraus:</p>",
+        "button_text": "",
+        "button_link": "",
+        "background_type": "full_width",
+        "text_width": "medium",
+        "text_position": "center",
+        "text_alignment": "center",
+        "background": "rgba(0,0,0,0)",
+        "text_color": "rgba(0,0,0,0)",
+        "button_background": "rgba(0,0,0,0)",
+        "button_text_color": "rgba(0,0,0,0)"
+      }
+    },
+    "button_MHxygH": {
+      "type": "button",
+      "name": "Button",
+      "settings": {
+        "start_year": 2025,
+        "start_month": 1,
+        "start_day": 1,
+        "start_time": "10:00",
+        "end_year": 2050,
+        "end_month": 12,
+        "end_day": 31,
+        "end_time": "10:00",
+        "button_text": "ClitClub",
+        "button_link": "https://buy.thefemalecompany.com/pages/clitclub",
+        "button_link_new_window": false,
+        "button_details": "",
+        "button_style": "primary",
+        "button_outline": false,
+        "button_shadow": false,
+        "button_size": "md",
+        "button_fit": "inline",
+        "section_container_width": "md",
+        "section_text_alignment": "center",
+        "section_background_color": "rgba(0,0,0,0)",
+        "section_spacing_top": 32,
+        "section_spacing_bottom": 32,
+        "section_spacing_different_mobile": false,
+        "section_spacing_top_mobile": 0,
+        "section_spacing_bottom_mobile": 0
+      }
+    },
+    "rich_text_gxFKWV": {
+      "type": "rich-text",
+      "name": "Rich text",
+      "settings": {
+        "subheading": "",
+        "title": "",
+        "content": "<p>Bereit zum Shoppen? Dann wirf einen Blick auf unsere heißesten Styles:</p>",
+        "button_text": "",
+        "button_link": "",
+        "background_type": "full_width",
+        "text_width": "medium",
+        "text_position": "center",
+        "text_alignment": "center",
+        "background": "rgba(0,0,0,0)",
+        "text_color": "rgba(0,0,0,0)",
+        "button_background": "rgba(0,0,0,0)",
+        "button_text_color": "rgba(0,0,0,0)"
+      }
+    },
+    "button_dfX6Gx": {
+      "type": "button",
+      "name": "Button",
+      "settings": {
+        "start_year": 2025,
+        "start_month": 1,
+        "start_day": 1,
+        "start_time": "10:00",
+        "end_year": 2050,
+        "end_month": 12,
+        "end_day": 31,
+        "end_time": "10:00",
+        "button_text": "Zu der Periodenunterwäsche",
+        "button_link": "https://buy.thefemalecompany.com/collections/periodenunterwaesche-online-kaufen",
+        "button_link_new_window": false,
+        "button_details": "",
+        "button_style": "primary",
+        "button_outline": false,
+        "button_shadow": false,
+        "button_size": "md",
+        "button_fit": "inline",
+        "section_container_width": "md",
+        "section_text_alignment": "center",
+        "section_background_color": "rgba(0,0,0,0)",
+        "section_spacing_top": 32,
+        "section_spacing_bottom": 32,
+        "section_spacing_different_mobile": false,
+        "section_spacing_top_mobile": 0,
+        "section_spacing_bottom_mobile": 0
+      }
+    },
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "show_title": true,
+        "show_breadcrumbs": true,
+        "page_width": "medium"
+      }
+    },
+    "17319518099c123bd9": {
+      "type": "apps",
+      "settings": {
+        "include_horizontal_margins": true,
+        "include_vertical_margins": true
+      }
+    }
+  },
+  "order": [
+    "rich_text_hR7wMX",
+    "button_MHxygH",
+    "rich_text_gxFKWV",
+    "button_dfX6Gx",
+    "main",
+    "17319518099c123bd9"
+  ]
+}

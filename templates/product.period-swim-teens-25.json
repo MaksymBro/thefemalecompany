@@ -1,0 +1,562 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-product",
+      "blocks": {
+        "d08bb69c-eb33-41aa-842f-2fa64b45bd5f": {
+          "type": "back_in_stock_signup",
+          "settings": {
+            "klaviyo_list_id": "V6RJtz"
+          }
+        },
+        "variant_picker": {
+          "type": "variant_picker",
+          "settings": {
+            "hide_sold_out_variants": false,
+            "selector_mode": "dropdown",
+            "color_mode": "color",
+            "size_chart_page": "{{ product.metafields.descriptors.size_guide.value }}",
+            "absorbancy_chart_page": ""
+          }
+        },
+        "f0d2cc62-543d-4ad8-bdd7-18c3d04a52c1": {
+          "type": "fulfillment_time_info",
+          "settings": {}
+        },
+        "yotpo_loyalty_rewards_product_points_module_app_block_xJDTVk": {
+          "type": "shopify://apps/yotpo-loyalty-rewards/blocks/product-points-module-app-block/2f9660df-5018-4e02-9868-ee1fb88d6ccd",
+          "settings": {}
+        },
+        "02190bcc-9ff0-4f94-8898-2b2cb44da8ea": {
+          "type": "low_on_stock_info",
+          "settings": {}
+        },
+        "quantity_selector": {
+          "type": "quantity_selector",
+          "settings": {}
+        },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_payment_button": false,
+            "show_gift_card_recipient": false,
+            "atc_button_background": "rgba(0,0,0,0)",
+            "atc_button_text_color": "rgba(0,0,0,0)",
+            "buy_now_button_background": "rgba(0,0,0,0)",
+            "buy_now_button_text_color": "rgba(0,0,0,0)"
+          }
+        },
+        "a5ac472c-f2be-447e-bdc1-42de5d4d5016": {
+          "type": "trust",
+          "settings": {
+            "icon_1": "picto-warranty",
+            "title_1": "60 Tage Geld-zurück-Garantie",
+            "content_1": "<p>Wenn du unzufrieden bist, erhältst du bis zu <strong>60 Tage lang dein Geld von uns zurück</strong>. Folgendes ist zu beachten:</p><ol><li>Du musst die Retoure bei uns anmelden. Mehr Infos <a href=\"/policies/refund-policy\" title=\"Refund Policy\">hier</a>.</li><li>Alle Produkte die zurückerstattet werden sollen, müssen an uns zurückgesendet werden.</li><li>Die Kosten der Rücksendung müssen selbst getragen werden. Ausgenommen sind Produkte mit Mängeln.</li></ol><p></p>",
+            "nl_only_1": false,
+            "icon_2": "picto-secure-payment",
+            "title_2": "Zahle in 30 Tagen mit Pay Later by Klarna",
+            "content_2": "",
+            "nl_only_2": false,
+            "icon_3": "picto-secure-payment",
+            "title_3": "",
+            "content_3": "",
+            "nl_only_3": true
+          }
+        },
+        "0d0a5849-05ff-4be4-9622-4f7c3f06ed86": {
+          "type": "complementary_products",
+          "settings": {
+            "title": "Empfohlene Produkte"
+          }
+        },
+        "complete_the_look_Dmxiiy": {
+          "type": "complete_the_look",
+          "settings": {
+            "title": "Passend dazu:",
+            "ctl_heading_color": "#1a1a1a",
+            "ctl_bg_color": "",
+            "ctl_products": "{{ product.metafields.promotion.complete_the_look.value }}"
+          }
+        },
+        "244be36c-36e1-4348-aa9f-0f5c48a1dab5": {
+          "type": "description_accordion",
+          "settings": {
+            "open_by_default": true,
+            "image_1": "shopify://shop_images/Icon_PantyinPanty.svg",
+            "heading_1": "<strong>Panty-in-Panty-System:</strong>",
+            "description_1": "Die Kombination einer Innen-Panty mit absorbierender Saugeinlage, geschützt von der Außen-Panty mit wasserabweisender Materialbeschichtung.",
+            "image_2": "shopify://shop_images/Icon_WaterStop_Silicone.svg",
+            "heading_2": "<strong>WaterStop Silikon®: NEU</strong>",
+            "description_2": "Duale Silikonstreifen am Innen Panty  schützt vor dem Ein- und Ausdringen von Wasser",
+            "image_3": "shopify://shop_images/Icon_Saugstark_99f4981c-44d7-49c7-b468-b6a6c2f0cfd1.svg",
+            "heading_3": "<strong>Saugstark</strong>",
+            "description_3": "Für längere Aufenthalte im Wasser & Schwimmen.",
+            "image_4": "shopify://shop_images/icon__plant_3.svg",
+            "heading_4": "<strong>Non Toxic</strong>",
+            "description_4": "Ohne Biozide & Schadstoffe. Garantiert & getestet.",
+            "image_5": "shopify://shop_images/Icon_WaterStop_Silicone.svg",
+            "heading_5": "<strong>Fluid Protection</strong>:",
+            "description_5": "Gegen seitliches Auslaufen",
+            "image_6": "shopify://shop_images/Icon_FloatingTechnology_1.svg",
+            "heading_6": "<strong>Flexi Technology:</strong>",
+            "description_6": "Passt sich flexibel dem Körper an."
+          }
+        },
+        "5d99506a-360d-4c5f-aa4b-422abcc9c271": {
+          "type": "content_accordion",
+          "settings": {
+            "open_by_default": false,
+            "title": "{{ product.metafields.descriptors.content_2_title.value }}",
+            "content": "<p>{{ product.metafields.descriptors.content_2_body | metafield_tag }}</p>",
+            "page": ""
+          }
+        },
+        "0c6c32fe-0356-4aeb-943d-7c7543e9bfa3": {
+          "type": "content_accordion",
+          "settings": {
+            "open_by_default": false,
+            "title": "{{ product.metafields.descriptors.content_3_title.value }}",
+            "content": "<p>{{ product.metafields.descriptors.content_3_body | metafield_tag }}</p>",
+            "page": ""
+          }
+        },
+        "6c2c03e5-473f-4aff-a17e-9f4de44cb2d5": {
+          "type": "content_accordion",
+          "settings": {
+            "open_by_default": false,
+            "title": "{{ product.metafields.descriptors.content_4_title.value }}",
+            "content": "<p>{{ product.metafields.descriptors.content_4_body | metafield_tag }}</p>",
+            "page": ""
+          }
+        },
+        "38141612-4b30-409e-963b-7688e53ba9e8": {
+          "type": "product_variant_links",
+          "settings": {
+            "products": "{{ product.metafields.relationships.other_color.value }}",
+            "hide_unavailable": true,
+            "option_name": "Farbe",
+            "selector_type": "color",
+            "option_value_metafield_namespace": "",
+            "option_value_metafield_key": ""
+          }
+        }
+      },
+      "block_order": [
+        "d08bb69c-eb33-41aa-842f-2fa64b45bd5f",
+        "variant_picker",
+        "f0d2cc62-543d-4ad8-bdd7-18c3d04a52c1",
+        "yotpo_loyalty_rewards_product_points_module_app_block_xJDTVk",
+        "02190bcc-9ff0-4f94-8898-2b2cb44da8ea",
+        "quantity_selector",
+        "buy_buttons",
+        "a5ac472c-f2be-447e-bdc1-42de5d4d5016",
+        "0d0a5849-05ff-4be4-9622-4f7c3f06ed86",
+        "complete_the_look_Dmxiiy",
+        "244be36c-36e1-4348-aa9f-0f5c48a1dab5",
+        "5d99506a-360d-4c5f-aa4b-422abcc9c271",
+        "0c6c32fe-0356-4aeb-943d-7c7543e9bfa3",
+        "6c2c03e5-473f-4aff-a17e-9f4de44cb2d5",
+        "38141612-4b30-409e-963b-7688e53ba9e8"
+      ],
+      "settings": {
+        "show_vendor": false,
+        "show_sku": false,
+        "show_taxes_included": true,
+        "show_product_rating": true,
+        "show_sticky_add_to_cart": true,
+        "show_share_buttons": false,
+        "show_buy_button_next_to_quantity": true,
+        "show_product_style": true,
+        "help_page": "",
+        "enable_video_autoplay": true,
+        "enable_video_looping": true,
+        "enable_image_zoom": true,
+        "show_thumbnails_on_mobile": false,
+        "desktop_thumbnails_position": "bottom",
+        "transition_effect": "slide"
+      }
+    },
+    "product-recommendations": {
+      "type": "product-recommendations",
+      "settings": {
+        "subheading": "",
+        "title": "Dir könnte auch gefallen",
+        "recommendations_count": 10,
+        "background": "rgba(0,0,0,0)",
+        "text_color": "rgba(0,0,0,0)"
+      }
+    },
+    "recently_viewed_products_RyA3P8": {
+      "type": "recently-viewed-products",
+      "disabled": true,
+      "settings": {
+        "subheading": "Don't forget about me",
+        "title": "Zuletzt angesehen",
+        "products_count": 4,
+        "background": "rgba(0,0,0,0)",
+        "text_color": "rgba(0,0,0,0)"
+      }
+    },
+    "multi_column_wbmMay": {
+      "type": "multi-column",
+      "blocks": {
+        "item_3dqFRN": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/Panty-in-Panty-black.jpg",
+            "image_width": 100,
+            "image_border": "rgba(0,0,0,0)",
+            "title": "Panty-in-Panty Technologie",
+            "content": "<p>Die Kombination einer <strong>Innen-Panty </strong>mit absorbierender Saugeinlage, geschützt von der <strong>Außen-Panty</strong> mit <strong>wasserabweisender Materialbeschichtung.</strong></p>",
+            "link_text": "",
+            "link_url": "",
+            "link_style": "link",
+            "text_alignment": "center",
+            "vertical_alignment": "start"
+          }
+        },
+        "item_pygD6L": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/Swim-Teens-1.jpg",
+            "image_width": 100,
+            "image_border": "rgba(0,0,0,0)",
+            "title": "Sau(g)stark",
+            "content": "<p>Bei <strong>leichten Tagen</strong> bist du in der Period Swimwear <strong>gut geschützt</strong>.</p>",
+            "link_text": "",
+            "link_url": "",
+            "link_style": "link",
+            "text_alignment": "center",
+            "vertical_alignment": "start"
+          }
+        },
+        "item_P9JVLf": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/Water-Stop-Silicone-Black.jpg",
+            "image_width": 100,
+            "image_border": "rgba(0,0,0,0)",
+            "title": "WaterStop Silikon",
+            "content": "<p><strong>Silikonstreifen</strong> an allen Materialenden schützen vor Verrutschen und dem <strong>Ein- und Ausdringen von Wasser.</strong></p>",
+            "link_text": "",
+            "link_url": "",
+            "link_style": "link",
+            "text_alignment": "center",
+            "vertical_alignment": "start"
+          }
+        }
+      },
+      "block_order": [
+        "item_3dqFRN",
+        "item_pygD6L",
+        "item_P9JVLf"
+      ],
+      "settings": {
+        "reveal_on_scroll": true,
+        "stack_items": false,
+        "subheading": "So funktioniert's",
+        "title": "Period SWIM Panty für Teenager",
+        "content": "<p>76 % der Befragten unter 18 Jahre müssen vom Schwimmunterricht fernbleiben, weil sie keine Tampons nutzen.<br/><strong>Time for change! <br/></strong>Wir haben über ein Jahr lang entwickelt: Die erste Period Swimwear, die wirklich funktioniert*.<br/>Mit 4 technologischen Entwicklungen, die darauf ausgelegt sind, dass möglichst wenig Wasser in die Panty ein- und kein Blut aus der Panty ausdringt.</p>",
+        "column_alignment": "center",
+        "mobile_item_size": "medium",
+        "desktop_item_size": "medium",
+        "spacing": "normal",
+        "background": "#c18ef5",
+        "text_color": "#ffffff"
+      }
+    },
+    "image_with_text_ULiMfK": {
+      "type": "image-with-text",
+      "blocks": {
+        "item_mwtdFQ": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/Melis.jpg",
+            "tab_label": "Melis",
+            "subheading": "Founded & designed in Berlin",
+            "title": "",
+            "content": "<p>Hi, ich bin Melis und bin Produktmanagerin bei The Female Company. Zusammen mit meinem Team habe ich deine Period Panty entwickelt, so, wie ich sie mir bei meiner ersten Periode gewünscht hätte. Dank zahlreicher Tests auf Saugstärke und Material, kannst du dich sicher und wohl fühlen kannst. </p>",
+            "button_text": "",
+            "button_link": ""
+          }
+        },
+        "item_VCkTMm": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/Anni.jpg",
+            "tab_label": "Anni",
+            "subheading": "Founded & DESIGNED IN BERLIN",
+            "title": "",
+            "content": "<p>Hey there! Ich bin Anni, Gründerin von The Female Company. Meine Vision ist es, alle Tabus rund um die Periode zu brechen und Menstruierende zu empowern.</p>",
+            "button_text": "",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "item_mwtdFQ",
+        "item_VCkTMm"
+      ],
+      "custom_css": [],
+      "settings": {
+        "reveal_on_scroll": true,
+        "background_type": "full_width",
+        "background_overlap": "both",
+        "image_position": "right",
+        "text_alignment": "center",
+        "cycle_speed": 8,
+        "accent_background": "#d3adfa",
+        "text_color": "#ffffff",
+        "button_background": "rgba(0,0,0,0)",
+        "button_text_color": "rgba(0,0,0,0)"
+      }
+    },
+    "501518bb-2e87-4f66-a218-daa76b03931f": {
+      "type": "pagefly-section",
+      "disabled": true,
+      "custom_css": [],
+      "settings": {
+        "section_id": "pf-f628790f"
+      }
+    },
+    "56cc8734-2ea7-4830-97f5-35068a8c06d1": {
+      "type": "pagefly-section",
+      "disabled": true,
+      "settings": {
+        "section_id": "pf-e3fee6ed"
+      }
+    },
+    "1f012764-0c44-4795-9f6f-c1e3ac0fd568": {
+      "type": "pagefly-section",
+      "disabled": true,
+      "settings": {
+        "section_id": "pf-2a5ca1f0"
+      }
+    },
+    "video_with_text_aK7Kcz": {
+      "type": "video-with-text",
+      "blocks": {
+        "item_NJa68N": {
+          "type": "item",
+          "settings": {
+            "video": "shopify://files/videos/how to wash final (1).mp4",
+            "tab_label": "",
+            "subheading": "KEEP IT CLEAN",
+            "title": "So wäschst du deine SWIM Panty",
+            "content": "<ul><li>Wasche deine SWIM Panty <strong>per Hand mit kaltem Wasser </strong>aus – so löst sich das Blut.</li><li>Wirf’ sie dann einfach mit <strong>ähnlich farbiger Wäsche in <br/>den Schonwaschgang</strong> deiner Waschmaschine.</li><li> Wasche deine SWIM Panty <strong>bei 40 Grad</strong> (ab und zu kannst du sie auch bei 60 Grad waschen). </li><li>Am besten nutzt du <strong>Feinwaschmittel und verzichtest auf Weichspüler,</strong> um die Fasern deiner Panty zu schonen und die maximale Saugkraft zu bewahren.</li><li>Lass' sie dann einfach <strong>an der Luft trocknen.</strong></li></ul>",
+            "button_text": "",
+            "button_link": ""
+          }
+        },
+        "item_Bd7waX": {
+          "type": "item",
+          "settings": {
+            "video": "shopify://files/videos/how to wash final (1).mp4",
+            "tab_label": "",
+            "subheading": "KEEP IT CLEAN",
+            "title": "So wäschst du Period Pantys",
+            "content": "<p>1. Wasche deine Period Panty per Hand mit kaltem Wasser aus – so löst sich das Blut.<br/><br/>2. Wirf’ sie dann einfach mit ähnlich farbiger Wäsche in <br/>den Schonwaschgang deiner Waschmaschine.<br/><br/>3. Wasche deine Panty bei 40 Grad (ab und zu kannst du sie auch bei 60 Grad waschen). <br/><br/>4. Am besten nutzt du Feinwaschmittel und verzichtest auf Weichspüler, um die Fasern deiner Panty zu schonen und die maximale Saugkraft zu bewahren.<br/><br/>5. Lass' sie dann einfach an der Luft trocknen.</p>",
+            "button_text": "",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "item_NJa68N",
+        "item_Bd7waX"
+      ],
+      "custom_css": [],
+      "settings": {
+        "reveal_on_scroll": true,
+        "background_type": "full_width",
+        "background_overlap": "both",
+        "video_position": "left",
+        "text_alignment": "left",
+        "accent_background": "#c18ef5",
+        "text_color": "#ffffff",
+        "button_background": "rgba(0,0,0,0)",
+        "button_text_color": "rgba(0,0,0,0)"
+      }
+    },
+    "marquee_4DmwMg": {
+      "type": "marquee",
+      "custom_css": [
+        ".marquee__content span {font-family: \"Publico\"; font-weight: bold; font-size: 30px;}"
+      ],
+      "settings": {
+        "content": "<p><strong>WHO RUN THE WORLD </strong></p>",
+        "separator": "",
+        "section_link": "",
+        "repeat": 10,
+        "min_gap": 33,
+        "animation_speed": 200,
+        "text_color": "#fff45d",
+        "background": "#c18ef5"
+      }
+    },
+    "faq_TyUhFY": {
+      "type": "faq",
+      "blocks": {
+        "faq_collection_BhhfK4": {
+          "type": "faq_collection",
+          "settings": {
+            "metaobject_handle": "swim-teens",
+            "show_title": true
+          }
+        }
+      },
+      "block_order": [
+        "faq_collection_BhhfK4"
+      ],
+      "settings": {
+        "show_navigation": false,
+        "enable_schema": false,
+        "section_header_subheading": "IHR FRAGT, WIR ANTWORTEN",
+        "section_header_heading": "Häufig gestellte Fragen",
+        "section_header_short_description": "",
+        "section_header_heading_size": "h3",
+        "section_header_highest_hierarchy": false,
+        "section_header_short_description_font_size": "medium",
+        "section_container_width": "md",
+        "section_text_alignment": "left",
+        "section_background_color": "#c18ef5",
+        "section_text_color": "#ffffff",
+        "section_heading_color": "#ffffff",
+        "section_subheading_color": "rgba(0,0,0,0)",
+        "section_heading_font_family": "default",
+        "section_spacing_top": 32,
+        "section_spacing_bottom": 32,
+        "section_spacing_different_mobile": false,
+        "section_spacing_top_mobile": 0,
+        "section_spacing_bottom_mobile": 0
+      }
+    },
+    "promotion_blocks_FJdbPH": {
+      "type": "promotion-blocks",
+      "blocks": {
+        "quote_btHmEa": {
+          "type": "quote",
+          "settings": {
+            "highlight": false,
+            "subheading": "",
+            "content": "Endlich fühle mich sicher wenn ich meine Periode habe.",
+            "author": "Charly, 14",
+            "background": "#d3adfa",
+            "text_color": "#ffffff"
+          }
+        },
+        "quote_XbfDFF": {
+          "type": "quote",
+          "settings": {
+            "highlight": false,
+            "subheading": "",
+            "content": "Meine Tochter geht endlich wieder gerne in den Schwimmunterricht wenn sie ihre Tage hat.",
+            "author": "Claudia, 41",
+            "background": "#d3adfa",
+            "text_color": "#ffffff"
+          }
+        },
+        "quote_CXVLFY": {
+          "type": "quote",
+          "settings": {
+            "highlight": false,
+            "subheading": "",
+            "content": "Ich benutze keine Tampons, deswegen ist der Bikini ein echter Gamechanger im Urlaub",
+            "author": "Rina, 16",
+            "background": "#d3adfa",
+            "text_color": "#ffffff"
+          }
+        }
+      },
+      "block_order": [
+        "quote_btHmEa",
+        "quote_XbfDFF",
+        "quote_CXVLFY"
+      ],
+      "settings": {
+        "subheading": "",
+        "title": "Das sagen unsere Kundi*nnen",
+        "section_size": "small",
+        "stack_on_mobile": false,
+        "background": "#d3adfa",
+        "text_color": "#ffffff"
+      }
+    },
+    "spacer_98gjYT": {
+      "type": "spacer",
+      "settings": {
+        "height": 40,
+        "different_mobile_height": false,
+        "mobile_height": 0,
+        "background_color": "rgba(0,0,0,0)"
+      }
+    },
+    "1666179092243d9cde": {
+      "type": "apps",
+      "blocks": {
+        "e0862bb4-1e1a-44c5-a83d-aaed3f12395d": {
+          "type": "shopify://apps/reviews-io/blocks/reviewsio-polaris/92a082e5-b297-4e88-b428-ac96cbc505f9",
+          "settings": {
+            "star": "#f58e9e",
+            "review_type": "product_review,questions",
+            "per_page": 4,
+            "primary_btn_bg_color": "#f58e9e",
+            "primary_btn_border_color": "rgba(0,0,0,0)",
+            "primary_btn_text_color": "#ffffff",
+            "secondary_btn_border_color": "#f7aea6",
+            "secondary_btn_text_color": "#56112a",
+            "border_color": "#ffbfbf",
+            "heading_text_color": "#1a1a1a",
+            "heading_font": "sans-serif",
+            "body_text_color": "#000000",
+            "badge_icon_color": "#000000",
+            "badge_text_color": "#000000",
+            "enable_rich_snippets": true,
+            "show_location": true,
+            "show_tab_selector": false,
+            "show_dates": true,
+            "show_avatar": true,
+            "enable_sentiment_analysis": false,
+            "enable_replies": true,
+            "widget_spacing": 0,
+            "capitalise_headers_and_buttons": false,
+            "show_review_title": true,
+            "default_sort": "helpful_desc"
+          }
+        }
+      },
+      "block_order": [
+        "e0862bb4-1e1a-44c5-a83d-aaed3f12395d"
+      ],
+      "settings": {
+        "include_horizontal_margins": true,
+        "include_vertical_margins": false
+      }
+    }
+  },
+  "order": [
+    "main",
+    "product-recommendations",
+    "recently_viewed_products_RyA3P8",
+    "multi_column_wbmMay",
+    "image_with_text_ULiMfK",
+    "501518bb-2e87-4f66-a218-daa76b03931f",
+    "56cc8734-2ea7-4830-97f5-35068a8c06d1",
+    "1f012764-0c44-4795-9f6f-c1e3ac0fd568",
+    "video_with_text_aK7Kcz",
+    "marquee_4DmwMg",
+    "faq_TyUhFY",
+    "promotion_blocks_FJdbPH",
+    "spacer_98gjYT",
+    "1666179092243d9cde"
+  ]
+}

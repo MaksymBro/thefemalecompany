@@ -1,0 +1,319 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "settings": {
+        "show_title": false,
+        "show_breadcrumbs": true,
+        "page_width": "medium"
+      }
+    },
+    "image_with_text_overlay_TUHG8N": {
+      "type": "image-with-text-overlay",
+      "settings": {
+        "reveal_on_scroll": true,
+        "section_height": "small",
+        "image": "shopify://shop_images/Header_Collection_Sale.jpg",
+        "subheading": "",
+        "title": "",
+        "content": "",
+        "button_text": "",
+        "button_link": "",
+        "link_style": "link",
+        "background_type": "full_width",
+        "text_width": "medium",
+        "text_position": "middle_center",
+        "text_color": "#ffffff",
+        "button_background": "#ffffff",
+        "button_text_color": "#000000",
+        "overlay_color": "#000000",
+        "overlay_opacity": 10
+      }
+    },
+    "9a30e508-01d2-41dc-b59b-96c06d50c332": {
+      "type": "newsletter-on-image",
+      "disabled": true,
+      "settings": {
+        "klaviyo_list_id": "YkyPXR",
+        "reveal_on_scroll": true,
+        "image": "shopify://shop_images/Rectangle_609_1.jpg",
+        "subheading": "Secret Code: 10% on Top",
+        "heading": "Erhalte Early Access & 10% Rabatt on top!",
+        "content": "<p>Bis zu <strong>50 % Rabatt</strong> auf Period Pantys. Unlock Early Access & sicher dir 10% Rabatt extra on top: Jetzt anmelden und nie wieder auslaufen!</p>",
+        "text_position": "center",
+        "text_alignment": "left",
+        "text_background": "rgba(0,0,0,0)",
+        "text_color": "rgba(0,0,0,0)",
+        "button_background": "#ff3f46",
+        "button_text_color": "rgba(0,0,0,0)"
+      }
+    },
+    "slideshow_k3ende": {
+      "type": "slideshow",
+      "blocks": {
+        "image_kTAQ8R": {
+          "type": "image",
+          "disabled": true,
+          "settings": {
+            "image": "shopify://shop_images/Header_Collection_Sale.jpg",
+            "mobile_image": "shopify://shop_images/Header_mobile_Presale__Preview.jpg",
+            "text_position": "middle_center",
+            "subheading": "",
+            "title": "",
+            "subtitle": "",
+            "subtitle_html": "",
+            "button_1_text": "",
+            "button_1_link": "",
+            "button_2_text": "",
+            "button_2_link": "",
+            "heading_font_family": "circular",
+            "heading_color": "#ffffff",
+            "text_color": "#ffffff",
+            "button_background": "#ffffff",
+            "button_text_color": "#000000",
+            "overlay_color": "rgba(0,0,0,0)",
+            "overlay_opacity": 9,
+            "schedule_publishing": false,
+            "publish_date": "01.01.2019 00:00",
+            "schedule_unpublishing": false,
+            "unpublish_date": "01.01.2019 00:00"
+          }
+        }
+      },
+      "block_order": [
+        "image_kTAQ8R"
+      ],
+      "disabled": true,
+      "settings": {
+        "section_height": "auto",
+        "transition_type": "sweep",
+        "autoplay": true,
+        "cycle_speed": 5,
+        "background": "rgba(0,0,0,0)"
+      }
+    },
+    "countdown_timer_QKdHpH": {
+      "type": "countdown-timer",
+      "blocks": {
+        "text_LJnFhD": {
+          "type": "text",
+          "settings": {
+            "text": "<p><strong>SPF-Sale Early Access startet in:</strong></p>",
+            "offset_top_desktop": 21,
+            "offset_bottom_desktop": 18,
+            "offset_top_mobile": 20,
+            "offset_bottom_mobile": 23
+          }
+        },
+        "countdown_timer_mDcfgA": {
+          "type": "countdown_timer",
+          "settings": {
+            "show_countdown_words": true,
+            "countdown_start_date": "2024-07-09",
+            "countdown_start_time_hour": "11",
+            "countdown_start_time_minute": "00",
+            "countdown_date": "2024-07-15",
+            "countdown_time_hour": "08",
+            "countdown_time_minute": "01",
+            "timer_link": "",
+            "timer_font_size_mobile": 2.3,
+            "text_font_size_mobile": 0.7,
+            "timer_font_size_desktop": 5,
+            "text_font_size_desktop": 2,
+            "offset_top_desktop": 20,
+            "offset_bottom_desktop": 20,
+            "offset_top_mobile": 16,
+            "offset_bottom_mobile": 0
+          }
+        }
+      },
+      "block_order": [
+        "text_LJnFhD",
+        "countdown_timer_mDcfgA"
+      ],
+      "disabled": true,
+      "settings": {
+        "countdown_text_color": "#1a1a1a",
+        "background_color": "#fff0f0",
+        "text_color": "#1a1a1a"
+      }
+    },
+    "featured_collections_PTyiwb": {
+      "type": "featured-collections",
+      "blocks": {
+        "collection_XzNfkV": {
+          "type": "collection",
+          "settings": {
+            "collection": "periodenunterwaesche-online-kaufen",
+            "label": "",
+            "button_text": "Zu den Pantys",
+            "button_url": "",
+            "hide_from_product_title_start": "",
+            "filterable_options": ""
+          }
+        }
+      },
+      "block_order": [
+        "collection_XzNfkV"
+      ],
+      "disabled": true,
+      "settings": {
+        "products_count": 8,
+        "products_per_row": 4,
+        "stack_products": false,
+        "show_cta": false,
+        "filter_toggle_button_background": "rgba(0,0,0,0)",
+        "filter_toggle_active_button_background": "rgba(0,0,0,0)",
+        "filter_toggle_button_color": "rgba(0,0,0,0)",
+        "button_background": "rgba(0,0,0,0)",
+        "button_text_color": "rgba(0,0,0,0)",
+        "subheading": "",
+        "title": "",
+        "content": "",
+        "section_header_heading_size": "h4",
+        "section_header_highest_hierarchy": false,
+        "section_header_short_description_font_size": "medium",
+        "section_container_width": "md",
+        "background": "rgba(0,0,0,0)",
+        "text_color": "rgba(0,0,0,0)",
+        "heading_color": "rgba(0,0,0,0)",
+        "section_subheading_color": "rgba(0,0,0,0)",
+        "section_heading_font_family": "default",
+        "section_spacing_top": 68,
+        "section_spacing_bottom": 68,
+        "section_spacing_different_mobile": true,
+        "section_spacing_top_mobile": 48,
+        "section_spacing_bottom_mobile": 48
+      }
+    },
+    "gallery_zc3NAr": {
+      "type": "gallery",
+      "blocks": {
+        "image_YAk7Dr": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Cherry_Brazilian-2_e81eeb5a-61eb-4f92-a9a4-ee5f764723d6.jpg",
+            "caption": "<h4><strong>Dein Preis: 26,70 €</strong></h4><p>Regulärer Preis: 34,90 €</p>"
+          }
+        },
+        "image_jbfb9U": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Slip_Black_Strong_4.jpg",
+            "caption": "<h4><strong>Dein Preis: 22,87 €</strong></h4><p>Regulärer Preis: 29,90 €</p>"
+          }
+        },
+        "image_VbipBV": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/LaceSlip_new_Periodenunterwaesche-3_1_44a104dc-c119-42cc-b985-f12cdffca741.jpg",
+            "caption": "<h4><strong>Dein Preis: 34,35 €</strong></h4><p>Regulärer Preis: 44,90 €</p>"
+          }
+        },
+        "image_YQ7QBx": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/VCut_Brazilian-1_0268ce95-739c-4efe-98fc-1dd608939115.jpg",
+            "caption": "<h4><strong>Dein Preis: 25,56 €</strong></h4><p>Regulärer Preis: 29,90 €</p>"
+          }
+        }
+      },
+      "block_order": [
+        "image_YAk7Dr",
+        "image_jbfb9U",
+        "image_VbipBV",
+        "image_YQ7QBx"
+      ],
+      "disabled": true,
+      "settings": {
+        "show_arrows": true,
+        "subheading": "",
+        "title": "",
+        "section_header_short_description": "",
+        "section_header_heading_size": "h3",
+        "section_header_highest_hierarchy": false,
+        "section_header_short_description_font_size": "medium",
+        "section_container_width": "xxs",
+        "section_text_alignment": "left",
+        "background": "rgba(0,0,0,0)",
+        "text_color": "rgba(0,0,0,0)",
+        "section_heading_color": "rgba(0,0,0,0)",
+        "section_subheading_color": "rgba(0,0,0,0)",
+        "section_heading_font_family": "default",
+        "section_spacing_top": 48,
+        "section_spacing_bottom": 48,
+        "section_spacing_different_mobile": false,
+        "section_spacing_top_mobile": 0,
+        "section_spacing_bottom_mobile": 0
+      }
+    },
+    "countdown_timer_LxFWCd": {
+      "type": "countdown-timer",
+      "blocks": {
+        "countdown_timer_nNq63C": {
+          "type": "countdown_timer",
+          "settings": {
+            "show_countdown_words": false,
+            "countdown_start_date": "",
+            "countdown_start_time_hour": "18",
+            "countdown_start_time_minute": "00",
+            "countdown_date": "",
+            "countdown_time_hour": "18",
+            "countdown_time_minute": "00",
+            "timer_link": "",
+            "timer_font_size_mobile": 2.5,
+            "text_font_size_mobile": 0.8,
+            "timer_font_size_desktop": 4.5,
+            "text_font_size_desktop": 1.5,
+            "offset_top_desktop": 20,
+            "offset_bottom_desktop": 20,
+            "offset_top_mobile": 10,
+            "offset_bottom_mobile": 10
+          }
+        }
+      },
+      "block_order": [
+        "countdown_timer_nNq63C"
+      ],
+      "disabled": true,
+      "settings": {
+        "countdown_text_color": "#1a1a1a",
+        "background_color": "#FFF0F0",
+        "text_color": "#1a1a1a"
+      }
+    },
+    "custom_html_dK6MN4": {
+      "type": "custom-html",
+      "settings": {
+        "subheading": "Beat the heat with cool prices! Erhalte 10% on top + early Pre Access zu allen Sales Aktionen!",
+        "title": "Jetzt für Early Access und 10% Rabatt on top anmelden",
+        "html": "<div class=\"klaviyo-form-YkyPXR\"></div>",
+        "add_vertical_spacing": true,
+        "disable_inside_spacing": false,
+        "background_type": "boxed",
+        "background": "#f58e9e",
+        "text_color": "#f2fd35"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "image_with_text_overlay_TUHG8N",
+    "9a30e508-01d2-41dc-b59b-96c06d50c332",
+    "slideshow_k3ende",
+    "countdown_timer_QKdHpH",
+    "featured_collections_PTyiwb",
+    "gallery_zc3NAr",
+    "countdown_timer_LxFWCd",
+    "custom_html_dK6MN4"
+  ]
+}

@@ -1,0 +1,1146 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "current": {
+    "icon_stroke_width": 2,
+    "button_border_radius": 0,
+    "block_border_radius": "none",
+    "vertical_spacing": "large",
+    "pdp_atc_button_behaviour": "default",
+    "show_breadcrumbs_collection_mobile": false,
+    "heading_color": "#1a1a1a",
+    "text_color": "#1a1a1a",
+    "background": "#ffffff",
+    "secondary_background": "#ffe6e6",
+    "success_color": "#2e9e7b",
+    "error_color": "#de2a2a",
+    "header_background": "#ffffff",
+    "header_text_color": "#cc0807",
+    "footer_background": "#ffffff",
+    "footer_text_color": "#1a1a1a",
+    "primary_button_background": "#cc0807",
+    "primary_button_text_color": "#ffffff",
+    "secondary_button_background": "#cc0807",
+    "secondary_button_text_color": "#ffffff",
+    "product_rating_color": "#f58e9e",
+    "product_on_sale_accent": "#cc0807",
+    "product_sold_out_accent": "#cc0807",
+    "product_custom_label_background": "#f58e9e",
+    "product_custom_label_2_background": "#ffffff",
+    "product_in_stock_text_color": "#2e9e7b",
+    "product_low_stock_text_color": "#de2a2a",
+    "heading_font": "itc_caslon_no_224_n5",
+    "heading_font_size": "small",
+    "heading_text_transform": "normal",
+    "text_font": "avenir_next_n4",
+    "text_font_size": 15,
+    "currency_code_enabled": false,
+    "stagger_products_apparition": false,
+    "stagger_blog_posts_apparition": false,
+    "reveal_product_media": false,
+    "round_color_swatches": true,
+    "color_swatch_config": "Schwarz:#000000\nGrau:#969696\nRosa Rib:rosarib.png\nBotanical Garden: #2A5B4D\nBotanical Gardens: #2A5B4D\nBotanical Garden/ Caribbean Green: Botanical_Green_Caribbean_Green_552e35bf-e9a5-4fe2-8e12-48f19127174e.png\nViolett:#9537A1\nBurgundy Red:#942a3b\nDusky Pink:#e3bcbd\nSporty:sporty_color.png\nRot:#d62c34\nCardinal Red:#d62c34\nLeo:icon_leo.png\nLeo Sienna:icon_leo.png\nLila:#9270AD\nCherry:#A31023\nRose:#F9DBE9\nLilac:#B28EC3\nBerry:#5D1D3B\nGrapefruit:#FFBBB3\nSand:#decbc5\nSienna:#e2bca7\nDark Brown:#642C1D\nHot Coral:#F1514D\nTeal Blue:#98C0D9\nCaribbean Green:#50D3CB\nElectric Blue:#0281d5\nEstate Blue: #19478A\nTeal Blue & Rose:RB_Color.png\nLight Blue & Rose:RL_Color.png\nLight Lilac & Rose:LB_Color.png\nEdelstahl: #969696\nWeiß: #FFFFFF\nOffwhite: #FFFFFF\nLeo/ Raisin: https://cdn.shopify.com/s/files/1/0613/9261/7710/files/Colorswatches_Leo.png?v=1738042773\nLeo Sienna: https://cdn.shopify.com/s/files/1/0613/9261/7710/files/Colorswatches_Leo_Sienna.png?v=1738042774\nCheetah/ Maroon:CheM_Color.png\nMagenta Purple: #a50259\nMix: Farbenmix_Farbauswahl.png\nPeacock: #6381a0\nPurple: #6052ad\nBotanical Garden: #496d73\nDark Purple: #6E0346\nBaton Rouge: #bb3980\nFlambe:#d3507a\nPeach:#ec5800\nInsignia Blue:#303e55\nBeet red:#951A2F\nBright Violet:#5B4A93\nleo brown:#C3A07B\nrusty red:#772D27\nmidnight blue:#223265\niron:#766867\nSchwarz-Weiß: Colorswatch_black_white.png\nBurgundy:#551329\nKhaki:#82A17E\nIvy:#4C5F32\nLeo Sienna / Violet:Icon_Leo_purple.png\nSchwarz / LeoSienna:Icon_Leo_schwarz.png\nSchwarz/Leo Sienna:Icon_Leo_schwarz.png\nBlack / Leo Sienna:Icon_Leo_schwarz.png\nPattern Green: Icon_Muster_Gruen.png\nIcy Morn: #E4E5E0\nDark Sage: #556669\nAnthracite: #494E5A\nDuffelbag: #566953\nLavendula: #DABEDF\nLeo Wasabi: Leo_Wasabi.png\nWispy Clouds: #EAD7D0\nLeo/Lavendula: Leo_Lavendula.png\nSchwarz / Trooper: Schwarz_Trooper.png\nSpicy Cinnamon: #AC3925\nFig: #58263D\nOffwhite: #D5CDC1\nSchwarz/Weiß: Colorswatch_black_white.png",
+    "show_vendor": false,
+    "show_secondary_image": true,
+    "product_add_to_cart": true,
+    "show_product_rating": true,
+    "show_discount": true,
+    "show_product_style": true,
+    "discount_mode": "percentage",
+    "discount_percentage_threshold": 0,
+    "product_color_display": "swatch",
+    "product_image_size": "natural",
+    "pdp_coming_soon_signup_id": "",
+    "show_breadcrumbs_pdp_desktop": false,
+    "show_breadcrumbs_pdp_mobile": false,
+    "cart_type": "drawer",
+    "cart_icon": "shopping_bag",
+    "cart_free_shipping_threshold": "DE:65,AT:65,NL:65,CH:100,OTHER:150",
+    "cart_free_gift_threshold": "",
+    "social_instagram": "https://www.instagram.com/thefemalecompany/",
+    "social_tiktok": "https://www.tiktok.com/@thefemalecompany",
+    "social_linkedin": "https://www.linkedin.com/company/the-female-company/",
+    "favicon": "shopify://shop_images/thefemalecompany_favicon_02639fa5-eed8-4989-afb8-18d34fb62fdc.png",
+    "customer_registration_redirect": "/pages/successful-registration",
+    "volume_discount_pdp": false,
+    "volume_discount_cart": false,
+    "free_shipping_bar_cart": true,
+    "intelligems_free_shipping_bar_cart": true,
+    "show_upsell_popup": false,
+    "show_upsell_in_cart": false,
+    "hide_progress_on_complete_in_popup": false,
+    "hide_progress_on_complete_in_cart": false,
+    "upsell_shipping_icon": "shopify://shop_images/Vector.svg",
+    "upsell_free_shipping_threshold": "DE:50,AT:50,NL:50,CH:50,OTHER:150",
+    "upsell_discount_icon1": "shopify://shop_images/Vector_1_626489fe-6b4c-4525-8753-3bf6211937f5.svg",
+    "upsell_discount_progress_goal1": 3,
+    "upsell_discount_value1": 10,
+    "upsell_discount_icon2": "shopify://shop_images/Vector_1_626489fe-6b4c-4525-8753-3bf6211937f5.svg",
+    "upsell_discount_progress_goal2": 5,
+    "upsell_discount_value2": 15,
+    "a_b_test_products": [],
+    "discount_showcase_enabled": true,
+    "fallback_discount_code": "Blackweek40",
+    "fallback_discount_percentage": 40,
+    "show_second_savings_badge_pdp": true,
+    "checkout_logo_image": "shopify://shop_images/TheFemaleCompany_Logo_Tomato_04b8553b-b2a9-41dd-ae06-bb33e0ed2df8.png",
+    "checkout_logo_size": "small",
+    "checkout_body_background_color": "#fff0f0",
+    "checkout_input_background_color_mode": "transparent",
+    "checkout_sidebar_background_color": "#ffe6e6",
+    "checkout_accent_color": "#cc0807",
+    "checkout_button_color": "#ff3f46",
+    "checkout_error_color": "#cc0807",
+    "search_enable_blog_posts": false,
+    "cart_show_free_shipping_threshold": true,
+    "accent_color": "#405de6",
+    "sections": {
+      "announcement-bar": {
+        "type": "announcement-bar",
+        "blocks": {
+          "message-1": {
+            "type": "message",
+            "settings": {
+              "text": "",
+              "text_html": "{%- assign free_shipping_thresholds = settings.cart_free_shipping_threshold | remove: ' ' | split: ',' -%}\n\n        {%- for threshold in free_shipping_thresholds -%}\n          {%- assign threshold_parts = threshold | split: ':' -%}\n          {%- assign country_code = threshold_parts | first | upcase -%}\n\n          {%- if country_code == localization.country.iso_code -%}\n            {%- assign matched_free_shipping_threshold = threshold_parts | last | times: 100 -%}\n            {%- break -%}\n          {%- endif -%}\n\n  {%- if country_code == \"OTHER\" -%}\n      {%- assign fallback_threshold = threshold_parts | last | times: 100 -%}\n    {%- endif -%}\n  {%- endfor -%}\n\n  {%- if matched_free_shipping_threshold == blank and fallback_threshold != blank -%}\n  {%- assign matched_free_shipping_threshold = fallback_threshold -%}\n{%- endif -%}\n<strong>Kostenloser Versand</strong> ab {{ matched_free_shipping_threshold | money_without_trailing_zeros }} 🚚 ",
+              "learn_more_text": "",
+              "title": "",
+              "content": "",
+              "button_text": "",
+              "button_link": ""
+            }
+          },
+          "f86ffc46-3eac-49c3-8b78-c37489c92d96": {
+            "type": "message",
+            "settings": {
+              "text": "",
+              "text_html": "<div style=\"display: flex; align-items: center; justify-content: center;\">\n<div class=\"trustpilot-widget\" data-locale=\"de-DE\" data-template-id=\"5406e65db0d04a09e042d5fc\" data-businessunit-id=\"5f859355793967000176fdc6\" data-style-height=\"24px\" data-style-width=\"140px\" data-theme=\"dark\" data-tags=\"SelectedReview\" data-font-family=\"Fira Sans\" style=\"transform: scale(0.75); width: 130px;\">\n  <a href=\"https://de.trustpilot.com/review/thefemalecompany.com\" target=\"_blank\" rel=\"noopener\">4.5 von 5</a>\n</div>\n<span>4,5/5 bei 1268 Bewertungen</span>\n</div>",
+              "learn_more_text": "Learn more",
+              "title": "",
+              "content": "",
+              "button_text": "",
+              "button_link": ""
+            }
+          }
+        },
+        "block_order": [
+          "message-1",
+          "f86ffc46-3eac-49c3-8b78-c37489c92d96"
+        ],
+        "settings": {
+          "announcement_bar_position": "non_sticky",
+          "announcement_text_size": "normal",
+          "autoplay": true,
+          "cycle_speed": 3.5,
+          "background": "#f58e9e",
+          "text_color": "#ffffff",
+          "button_background": "#ffffff",
+          "button_text_color": "#f58e9e"
+        }
+      },
+      "header": {
+        "type": "header",
+        "blocks": {
+          "543e7d2a-b89f-496c-a22c-81f45f4acef9": {
+            "type": "mega_menu",
+            "settings": {
+              "menu_item": "Periodenunterwäsche",
+              "images_position": "right",
+              "image_1_heading": "",
+              "image_1_text": "",
+              "image_1_link": "",
+              "image_2_heading": "",
+              "image_2_text": "",
+              "image_2_link": "",
+              "image_3_heading": "",
+              "image_3_text": "",
+              "image_3_link": "",
+              "image_4_heading": "",
+              "image_4_text": "",
+              "image_4_link": "",
+              "image_5_heading": "",
+              "image_5_text": "",
+              "image_5_link": "",
+              "image_6": "shopify://shop_images/PeriodPanty_MixnMatch_quad.jpg",
+              "image_6_heading": "Build your Set!",
+              "image_6_text": "Spare bis zu 20% beim Kauf von mehreren Panty Styles.",
+              "image_6_link": "shopify://collections/periodenunterwaesche-online-kaufen"
+            }
+          },
+          "7a0c1037-51ce-4d8e-a25d-f5136af82cab": {
+            "type": "mega_menu",
+            "settings": {
+              "menu_item": "Periode",
+              "images_position": "right",
+              "image_1": "shopify://shop_images/periodenabo_regelmaessige_lieferung.jpg",
+              "image_1_heading": "Dein Lieferservice",
+              "image_1_text": "Aktiviere die automatische Lieferung und spare bis zu 25%.",
+              "image_1_link": "shopify://collections/periodenprodukte-tampons-binden-slipeinlagen-im-abo",
+              "image_2_heading": "",
+              "image_2_text": "",
+              "image_2_link": "",
+              "image_3_heading": "",
+              "image_3_text": "",
+              "image_3_link": "",
+              "image_4_heading": "",
+              "image_4_text": "",
+              "image_4_link": "",
+              "image_5_heading": "",
+              "image_5_text": "",
+              "image_5_link": "",
+              "image_6_heading": "",
+              "image_6_text": "",
+              "image_6_link": ""
+            }
+          },
+          "522ab8f1-a618-4e74-b741-e63c2ab0f39b": {
+            "type": "mega_menu",
+            "settings": {
+              "menu_item": "Schwangerschaft",
+              "images_position": "right",
+              "image_1": "shopify://shop_images/1_wochenbett_binden_d41c1071-61e8-435b-87ad-dd681a2a636b.jpg",
+              "image_1_heading": "Mammabox",
+              "image_1_text": "Dein Wochenbett Survival-Kit.",
+              "image_1_link": "shopify://products/mammabox-survival-kit-wochenbett",
+              "image_2": "shopify://shop_images/erste-menstruation-box.jpg",
+              "image_2_heading": "Erste Periode Set",
+              "image_2_text": "Für die erste Periode deines Kindes.",
+              "image_2_link": "shopify://products/erste-periode-set",
+              "image_3_heading": "",
+              "image_3_text": "",
+              "image_3_link": "",
+              "image_4_heading": "",
+              "image_4_text": "",
+              "image_4_link": "",
+              "image_5_heading": "",
+              "image_5_text": "",
+              "image_5_link": "",
+              "image_6_heading": "",
+              "image_6_text": "",
+              "image_6_link": ""
+            }
+          },
+          "a403ba45-a9ac-4157-be3d-6598439fc0d3": {
+            "type": "mega_menu",
+            "settings": {
+              "menu_item": "Über uns",
+              "images_position": "right",
+              "image_1": "shopify://shop_images/periodenunterwasche.jpg",
+              "image_1_heading": "Wie funktioniert Periodenunterwäsche?",
+              "image_1_text": "",
+              "image_1_link": "https://www.thefemalecompany.com/magazin/periodenunterwaesche-faq/",
+              "image_2": "shopify://shop_images/periodenblut_67567fe6-9a15-4e57-9c15-f5cdabe3485d.jpg",
+              "image_2_heading": "Das verrät die Farbe deines Periodenblutes!",
+              "image_2_text": "",
+              "image_2_link": "https://www.thefemalecompany.com/magazin/braunes-blut-periode-in-allen-farben-erklaert/",
+              "image_3_heading": "",
+              "image_3_text": "",
+              "image_3_link": "",
+              "image_4_heading": "",
+              "image_4_text": "",
+              "image_4_link": "",
+              "image_5_heading": "",
+              "image_5_text": "",
+              "image_5_link": "",
+              "image_6_heading": "",
+              "image_6_text": "",
+              "image_6_link": ""
+            }
+          },
+          "a252e5c6-e8a0-417b-ac4b-39cdd7a95702": {
+            "type": "mega_menu",
+            "settings": {
+              "menu_item": "Intimpflege",
+              "images_position": "right",
+              "image_1": "shopify://shop_images/01_Rasierhobel_guenstig.jpg",
+              "image_1_heading": "Neu: Rasierhobel",
+              "image_1_text": "Dein letzter Rasierer – Zero Waste und gegen Rasierpickel.",
+              "image_1_link": "shopify://collections/rasierhobel",
+              "image_2_heading": "",
+              "image_2_text": "",
+              "image_2_link": "",
+              "image_3_heading": "",
+              "image_3_text": "",
+              "image_3_link": "",
+              "image_4_heading": "",
+              "image_4_text": "",
+              "image_4_link": "",
+              "image_5_heading": "",
+              "image_5_text": "",
+              "image_5_link": "",
+              "image_6_heading": "",
+              "image_6_text": "",
+              "image_6_link": ""
+            }
+          },
+          "6322eac2-a253-4ba0-b4b6-70d76fc44a93": {
+            "type": "mega_menu",
+            "settings": {
+              "menu_item": "Ausfluss",
+              "images_position": "right",
+              "image_1": "shopify://shop_images/daysics_ausflussunterwaesche.jpg",
+              "image_1_heading": "Jetzt neu!",
+              "image_1_text": "Daysics® – die nachhaltige Alternative zu Slipeinlagen.",
+              "image_1_link": "shopify://collections/daysics",
+              "image_2_heading": "",
+              "image_2_text": "",
+              "image_2_link": "",
+              "image_3_heading": "",
+              "image_3_text": "",
+              "image_3_link": "",
+              "image_4_heading": "",
+              "image_4_text": "",
+              "image_4_link": "",
+              "image_5_heading": "",
+              "image_5_text": "",
+              "image_5_link": "",
+              "image_6_heading": "",
+              "image_6_text": "",
+              "image_6_link": ""
+            }
+          }
+        },
+        "block_order": [
+          "543e7d2a-b89f-496c-a22c-81f45f4acef9",
+          "7a0c1037-51ce-4d8e-a25d-f5136af82cab",
+          "522ab8f1-a618-4e74-b741-e63c2ab0f39b",
+          "a403ba45-a9ac-4157-be3d-6598439fc0d3",
+          "a252e5c6-e8a0-417b-ac4b-39cdd7a95702",
+          "6322eac2-a253-4ba0-b4b6-70d76fc44a93"
+        ],
+        "settings": {
+          "enable_sticky_header": true,
+          "logo": "shopify://shop_images/TheFemaleCompany_Logo_Tomato_0845e135-164e-4595-9f69-9c21bab917ff.png",
+          "logo_max_width": 250,
+          "mobile_logo_max_width": 170,
+          "navigation_menu": "navbar",
+          "sidebar_navigation_menu": "main-menu-mobile",
+          "header_layout": "logo_left_navigation_inline",
+          "show_icons": true,
+          "reduce_desktop_padding": true,
+          "show_locale_selector": true,
+          "show_country_selector": false,
+          "enable_transparent_header": false,
+          "transparent_header_text_color": "#ffffff",
+          "search_menu": "main-menu-mobile"
+        }
+      },
+      "footer": {
+        "type": "footer",
+        "blocks": {
+          "newsletter": {
+            "type": "newsletter",
+            "settings": {
+              "klaviyo_list_id": "YnpHJc",
+              "title": "MELDE DICH HIER ZUM CLITCLUB AN UND ERHALTE ALS ERSTE*R ZUGANG ZUM SUMMER SALE!",
+              "content": "<p>Spar bis zu 35% auf alles bei uns im Summer Sale und sicher dir jetzt zusätzlich 5% Rabatt on top auf den Sale Preis mit einem Secret Code!</p>"
+            }
+          },
+          "17a74666-9f9f-466c-966c-0f52784befd8": {
+            "type": "links",
+            "settings": {
+              "menu": "footer-2"
+            }
+          },
+          "links": {
+            "type": "links",
+            "settings": {
+              "menu": "footer"
+            }
+          },
+          "9817e000-f4d9-4dd3-b77d-12194ac48b46": {
+            "type": "social_media",
+            "settings": {
+              "title": "Folg uns",
+              "content": ""
+            }
+          }
+        },
+        "block_order": [
+          "newsletter",
+          "17a74666-9f9f-466c-966c-0f52784befd8",
+          "links",
+          "9817e000-f4d9-4dd3-b77d-12194ac48b46"
+        ],
+        "settings": {
+          "show_payment_icons": true,
+          "show_country_selector": true,
+          "show_locale_selector": false
+        }
+      },
+      "mini-cart": {
+        "type": "mini-cart",
+        "blocks": {
+          "payment_type_CWXtHh": {
+            "type": "payment_type",
+            "settings": {
+              "payment_icon": "paypal"
+            }
+          },
+          "payment_type_qawVyh": {
+            "type": "payment_type",
+            "settings": {
+              "payment_icon": "klarna"
+            }
+          },
+          "payment_type_qXC6iD": {
+            "type": "payment_type",
+            "settings": {
+              "payment_icon": "master"
+            }
+          },
+          "payment_type_PkE7wg": {
+            "type": "payment_type",
+            "settings": {
+              "payment_icon": "visa"
+            }
+          },
+          "payment_type_WNQhiM": {
+            "type": "payment_type",
+            "settings": {
+              "payment_icon": "amazon_payments"
+            }
+          },
+          "payment_type_HMa9rF": {
+            "type": "payment_type",
+            "settings": {
+              "payment_icon": "ideal"
+            }
+          }
+        },
+        "block_order": [
+          "payment_type_CWXtHh",
+          "payment_type_qawVyh",
+          "payment_type_qXC6iD",
+          "payment_type_PkE7wg",
+          "payment_type_WNQhiM",
+          "payment_type_HMa9rF"
+        ],
+        "settings": {
+          "show_order_note": false,
+          "show_checkout_button": true,
+          "show_payment_icons": true,
+          "show_usps": false,
+          "show_shipping_infos": true,
+          "empty_button_link": "shopify://collections/all",
+          "recommendations_priority": "related",
+          "show_recommendations": true,
+          "recommendations_title": "Dir könnte ebenfalls gefallen",
+          "hidden_string": "",
+          "show_recommendations_accordion": true,
+          "is_sticky_recommendations": true
+        }
+      },
+      "static-text-with-icons": {
+        "type": "static-text-with-icons",
+        "blocks": {
+          "static-text-with-icons-0": {
+            "type": "item",
+            "settings": {
+              "icon": "picto-box",
+              "custom_icon_width": 50,
+              "title": "Kostenloser Versand",
+              "content": "<p>Kostenloser Versand innerhalb Deutschlands ab einem Einkaufswert von 50€.</p>"
+            }
+          },
+          "static-text-with-icons-1": {
+            "type": "item",
+            "settings": {
+              "icon": "picto-phone",
+              "custom_icon_width": 50,
+              "title": "Wir sind für dich da",
+              "content": "<p>Du erreichst uns jederzeit per E-Mail.</p><p><a href=\"mailto:love@thefemalecompany.com\" title=\"mailto:love@thefemalecompany.com\">E-Mail</a></p>"
+            }
+          },
+          "static-text-with-icons-2": {
+            "type": "item",
+            "settings": {
+              "icon": "picto-secure-payment",
+              "custom_icon_width": 50,
+              "title": "Sichere Zahlung",
+              "content": "<p>Deine Zahlung wird sicher und verschlüsselt verarbeitet.</p>"
+            }
+          }
+        },
+        "block_order": [
+          "static-text-with-icons-0",
+          "static-text-with-icons-1",
+          "static-text-with-icons-2"
+        ],
+        "settings": {
+          "show_section": true,
+          "background": "#ffe6e6",
+          "text_color": "rgba(0,0,0,0)"
+        }
+      },
+      "static-newsletter": {
+        "type": "static-newsletter",
+        "settings": {
+          "show_section": false,
+          "reveal_on_scroll": true,
+          "subheading": "Subscribe to our newsletter",
+          "content": "<p>Promotions, new products and sales. Directly to your inbox.</p>",
+          "text_position": "right",
+          "text_alignment": "left",
+          "text_background": "rgba(0,0,0,0)",
+          "text_color": "rgba(0,0,0,0)",
+          "button_background": "rgba(0,0,0,0)",
+          "button_text_color": "rgba(0,0,0,0)"
+        }
+      },
+      "main-gift-card": {
+        "type": "main-gift-card",
+        "settings": {
+          "logo": "shopify://shop_images/TheFemaleCompany_Logo_Tomato_04b8553b-b2a9-41dd-ae06-bb33e0ed2df8.png",
+          "logo_max_width": 250,
+          "mobile_logo_max_width": 170,
+          "image": "shopify://shop_images/Weihnachtsgeschenk_Gutschein_1.jpg",
+          "background": "#ffe6e6",
+          "content_background": "#fff0f0",
+          "text_color": "#de2a2a"
+        }
+      },
+      "instagram": {
+        "type": "instagram",
+        "blocks": {
+          "17a5465d-0476-463b-a370-3f44356a9dac": {
+            "type": "images",
+            "settings": {
+              "image": "shopify://shop_images/Periodenunterwaesche_sozial-3_2b623499-2bb1-4a2c-863e-5d77e7e06e6d.jpg"
+            }
+          },
+          "bb9cb6c0-95c4-4efa-9666-35a71a2cf575": {
+            "type": "images",
+            "settings": {
+              "image": "shopify://shop_images/Shirt_Feministin_caf6300d-023f-41c2-8953-902f3c2df179.jpg"
+            }
+          },
+          "99f6d96b-309c-49d1-b2da-25fa9cd3656a": {
+            "type": "images",
+            "settings": {
+              "image": "shopify://shop_images/HalloHebamme_Wochenbett_Bio_Wochenbetteinlagen-scaled.jpg"
+            }
+          },
+          "069832f3-0dab-46db-a280-bcc69100f06f": {
+            "type": "images",
+            "settings": {
+              "image": "shopify://shop_images/270320296_1067393477390277_1805204227229229635_n.jpg"
+            }
+          },
+          "790b45be-79bf-4d62-8ff0-a59e0d235fdf": {
+            "type": "images",
+            "settings": {
+              "image": "shopify://shop_images/austria-2m2m-the-female-company.jpg"
+            }
+          },
+          "21bceae8-f2b6-40e8-bdc6-371ef100ae54": {
+            "type": "images",
+            "settings": {
+              "image": "shopify://shop_images/259750962_972954223598668_8235721054249435067_n.jpg"
+            }
+          },
+          "16fa88a1-4488-4ae9-b381-0a03780d1216": {
+            "type": "images",
+            "settings": {
+              "image": "shopify://shop_images/104431901_736261403856744_7529660598033423342_n.jpg"
+            }
+          },
+          "537288cb-4dee-4ee9-9a4e-784e45fd4ec0": {
+            "type": "images",
+            "settings": {
+              "image": "shopify://shop_images/vulvaversum-designbox-kim-hoss.jpg"
+            }
+          },
+          "3560cdd8-9aaf-41d0-8976-9e6e30f64118": {
+            "type": "images",
+            "settings": {
+              "image": "shopify://shop_images/272860786_240816004883964_7515260603183465338_n.jpg"
+            }
+          },
+          "c6b055d4-55c3-4006-b445-780344912759": {
+            "type": "images",
+            "settings": {
+              "image": "shopify://shop_images/116583269_1155358264839822_6223249750598774762_n.jpg"
+            }
+          },
+          "9ed3590f-37de-48aa-8c3f-b12a0fc1d464": {
+            "type": "images",
+            "settings": {
+              "image": "shopify://shop_images/264572167_208358051362734_8958690893442403634_n.jpg"
+            }
+          },
+          "95eba9e7-f361-416b-a3e4-29e07143f880": {
+            "type": "images",
+            "settings": {
+              "image": "shopify://shop_images/244274363_4444507698973161_1085138553660661696_n.jpg"
+            }
+          },
+          "e7071329-3d15-494c-9a77-e07c9c9c68aa": {
+            "type": "images",
+            "settings": {
+              "image": "shopify://shop_images/jedeboxspendet.jpg"
+            }
+          },
+          "7af82f74-582d-4780-94ce-6d72615ee97a": {
+            "type": "images",
+            "settings": {
+              "image": "shopify://shop_images/menstruationscup.jpg"
+            }
+          },
+          "b096ac39-9cd3-4720-b398-5bda2f4970aa": {
+            "type": "images",
+            "settings": {
+              "image": "shopify://shop_images/TheFemaleCompanyxTheFloox-BehindtheScenes-47-2.jpg"
+            }
+          }
+        },
+        "block_order": [
+          "17a5465d-0476-463b-a370-3f44356a9dac",
+          "bb9cb6c0-95c4-4efa-9666-35a71a2cf575",
+          "99f6d96b-309c-49d1-b2da-25fa9cd3656a",
+          "069832f3-0dab-46db-a280-bcc69100f06f",
+          "790b45be-79bf-4d62-8ff0-a59e0d235fdf",
+          "21bceae8-f2b6-40e8-bdc6-371ef100ae54",
+          "16fa88a1-4488-4ae9-b381-0a03780d1216",
+          "537288cb-4dee-4ee9-9a4e-784e45fd4ec0",
+          "3560cdd8-9aaf-41d0-8976-9e6e30f64118",
+          "c6b055d4-55c3-4006-b445-780344912759",
+          "9ed3590f-37de-48aa-8c3f-b12a0fc1d464",
+          "95eba9e7-f361-416b-a3e4-29e07143f880",
+          "e7071329-3d15-494c-9a77-e07c9c9c68aa",
+          "7af82f74-582d-4780-94ce-6d72615ee97a",
+          "b096ac39-9cd3-4720-b398-5bda2f4970aa"
+        ],
+        "settings": {
+          "show_section": true,
+          "heading": "Let’s become real friends on <a href=\"https://www.instagram.com/thefemalecompany\">Instagram</a>"
+        }
+      }
+    },
+    "content_for_index": [],
+    "blocks": {
+      "10830403595879607806": {
+        "type": "shopify://apps/reviews-io/blocks/reviewsio-core/92a082e5-b297-4e88-b428-ac96cbc505f9",
+        "disabled": false,
+        "settings": {
+          "url_key": "www.thefemalecompany.com",
+          "lang": "auto"
+        }
+      },
+      "15316669992541710076": {
+        "type": "shopify://apps/reviews-io/blocks/reviewsio-rating-snippet/92a082e5-b297-4e88-b428-ac96cbc505f9",
+        "disabled": false,
+        "settings": {
+          "star": "#f58e9e",
+          "text_color": "#1a1a1a",
+          "snippet_mode": "default",
+          "text": "",
+          "line_break": false,
+          "listen_for_changes": false,
+          "rating_without_brackets": true,
+          "format_review_count": false,
+          "show_popup": true,
+          "anchor_to_reviews_widget": true,
+          "show_empty_stars": true
+        }
+      },
+      "855628211100114053": {
+        "type": "shopify://apps/klaviyo-email-marketing-sms/blocks/klaviyo-onsite-embed/2632fe16-c075-4321-a88b-50b567f42507",
+        "disabled": false,
+        "settings": {}
+      },
+      "16278478101612877664": {
+        "type": "shopify://apps/pagefly-page-builder/blocks/app-embed/83e179f7-59a0-4589-8c66-c0dddf959200",
+        "disabled": false,
+        "settings": {}
+      },
+      "1877152918344802950": {
+        "type": "shopify://apps/intelligems-a-b-testing/blocks/intelligems-script/fa83b64c-0c77-4c0c-b4b2-b94b42f5ef19",
+        "disabled": true,
+        "settings": {}
+      },
+      "10605408327587305396": {
+        "type": "shopify://apps/eg-auto-add-to-cart/blocks/app-embed/0f7d4f74-1e89-4820-aec4-6564d7e535d2",
+        "disabled": false,
+        "settings": {
+          "version": "v3"
+        }
+      },
+      "8962992520437913685": {
+        "type": "shopify://apps/yotpo-loyalty-rewards/blocks/loader-app-embed-block/2f9660df-5018-4e02-9868-ee1fb88d6ccd",
+        "disabled": false,
+        "settings": {
+          "inject_modules_loader": true,
+          "inject_sdk_loader": false
+        }
+      },
+      "18387101310985349768": {
+        "type": "shopify://apps/progus-store-locator/blocks/app-embed/d7896016-8cc9-45e0-860e-ba85ba3d5be4",
+        "disabled": true,
+        "settings": {
+          "show_title": true,
+          "our_locations": "Our locations",
+          "text_color": "#ffffff",
+          "bg_color": "#000000",
+          "icon": "map-marker",
+          "icon_color": "#ffffff",
+          "size": "2",
+          "shape": "2",
+          "position": "2"
+        }
+      },
+      "7034547658529847102": {
+        "type": "shopify://apps/clarity/blocks/embedClarity/dfb67dae-d473-4d02-a5f4-95be02ed73c2",
+        "disabled": false,
+        "settings": {}
+      },
+      "4705145147225299685": {
+        "type": "shopify://apps/tolstoy-shoppable-video-quiz/blocks/widget-block/06fa8282-42ff-403e-b67c-1936776aed11",
+        "disabled": false,
+        "settings": {}
+      },
+      "16216491870256628967": {
+        "type": "shopify://apps/ta-labels-badges/blocks/bss-pl-config-data/91bfe765-b604-49a1-805e-3599fa600b24",
+        "disabled": false,
+        "settings": {}
+      }
+    }
+  },
+  "presets": {
+    "Carbon": {
+      "button_border_radius": 0,
+      "block_border_radius": "none",
+      "heading_color": "#282828",
+      "text_color": "#282828",
+      "secondary_background": "#f5f5f5",
+      "success_color": "#2e9e7b",
+      "error_color": "#de2a2a",
+      "header_background": "#282828",
+      "footer_background": "#282828",
+      "footer_text_color": "#ffffff",
+      "primary_button_background": "#405de6",
+      "secondary_button_background": "#f3ff34",
+      "secondary_button_text_color": "#282828",
+      "product_on_sale_accent": "#de2a2a",
+      "product_custom_label_background": "#405de6",
+      "product_custom_label_2_background": "#f3ff34",
+      "product_in_stock_text_color": "#2e9e7b",
+      "product_low_stock_text_color": "#de2a2a",
+      "heading_font": "zurich_extended_n8",
+      "heading_font_size": "medium",
+      "heading_text_transform": "uppercase",
+      "text_font": "zurich_n4",
+      "text_font_size": 15,
+      "currency_code_enabled": false,
+      "stagger_products_apparition": true,
+      "round_color_swatches": false,
+      "show_vendor": false,
+      "show_secondary_image": true,
+      "product_color_display": "count",
+      "product_image_size": "natural",
+      "show_product_rating": false,
+      "cart_type": "message",
+      "cart_show_free_shipping_threshold": true,
+      "accent_color": "#405de6",
+      "checkout_sidebar_background_color": "#f5f5f5",
+      "checkout_accent_color": "#282828",
+      "checkout_button_color": "#405de6",
+      "checkout_error_color": "#de2a2a",
+      "sections": {
+        "announcement-bar": {
+          "type": "announcement-bar",
+          "blocks": {
+            "message-1": {
+              "type": "message",
+              "settings": {}
+            }
+          },
+          "block_order": [
+            "message-1"
+          ],
+          "settings": {
+            "announcement_bar_position": "non_sticky",
+            "announcement_text_size": "normal",
+            "autoplay": true,
+            "cycle_speed": 5,
+            "background": "#f3ff34",
+            "text_color": "#282828",
+            "button_background": "#282828",
+            "button_text_color": "#ffffff"
+          }
+        },
+        "header": {
+          "type": "header",
+          "settings": {
+            "enable_sticky_header": true,
+            "navigation_menu": "main-menu",
+            "header_layout": "logo_left_navigation_center",
+            "show_icons": false,
+            "reduce_desktop_padding": false,
+            "enable_transparent_header": false,
+            "transparent_header_text_color": "#ffffff"
+          }
+        },
+        "footer": {
+          "type": "footer",
+          "blocks": {
+            "text": {
+              "type": "text",
+              "settings": {}
+            },
+            "links": {
+              "type": "links",
+              "settings": {
+                "menu": "footer"
+              }
+            },
+            "newsletter": {
+              "type": "newsletter",
+              "settings": {}
+            },
+            "social_media": {
+              "type": "social_media",
+              "settings": {}
+            }
+          },
+          "block_order": [
+            "text",
+            "links",
+            "newsletter",
+            "social_media"
+          ],
+          "settings": {}
+        }
+      }
+    },
+    "Ivory": {
+      "button_border_radius": 4,
+      "block_border_radius": "small",
+      "heading_color": "#1a1a1a",
+      "text_color": "#1a1a1a",
+      "secondary_background": "#f5f1ec",
+      "success_color": "#2e9e7b",
+      "error_color": "#de2a2a",
+      "header_background": "#56112a",
+      "header_text_color": "#ffffff",
+      "footer_background": "#56112a",
+      "footer_text_color": "#ffffff",
+      "primary_button_background": "#56112a",
+      "primary_button_text_color": "#ffffff",
+      "secondary_button_background": "#f7aea6",
+      "secondary_button_text_color": "#56112a",
+      "product_on_sale_accent": "#913b59",
+      "product_custom_label_background": "#405de6",
+      "product_custom_label_2_background": "#f3e5b6",
+      "product_in_stock_text_color": "#2e9e7b",
+      "product_low_stock_text_color": "#de2a2a",
+      "heading_font": "itc_caslon_no_224_n5",
+      "heading_font_size": "medium",
+      "heading_text_transform": "normal",
+      "text_font": "avenir_next_n4",
+      "text_font_size": 15,
+      "stagger_products_apparition": true,
+      "round_color_swatches": true,
+      "show_vendor": false,
+      "show_secondary_image": true,
+      "product_color_display": "count",
+      "product_image_size": "natural",
+      "cart_type": "page",
+      "accent_color": "#405de6",
+      "checkout_sidebar_background_color": "#f6f3ed",
+      "checkout_accent_color": "#353535",
+      "checkout_button_color": "#353535",
+      "checkout_error_color": "#de2a2a",
+      "sections": {
+        "announcement-bar": {
+          "type": "announcement-bar",
+          "blocks": {
+            "message-1": {
+              "type": "message",
+              "settings": {}
+            }
+          },
+          "block_order": [
+            "message-1"
+          ],
+          "settings": {
+            "announcement_bar_position": "non_sticky",
+            "announcement_text_size": "small",
+            "autoplay": true,
+            "cycle_speed": 5,
+            "background": "#f7aea6",
+            "text_color": "#56112a",
+            "button_background": "#56112a",
+            "button_text_color": "#ffffff"
+          }
+        },
+        "header": {
+          "type": "header",
+          "settings": {
+            "enable_sticky_header": true,
+            "navigation_menu": "main-menu",
+            "header_layout": "logo_center_navigation_inline",
+            "show_icons": false,
+            "reduce_desktop_padding": false,
+            "enable_transparent_header": false,
+            "transparent_header_text_color": "#ffffff"
+          }
+        },
+        "footer": {
+          "type": "footer",
+          "blocks": {
+            "text": {
+              "type": "text",
+              "settings": {}
+            },
+            "links": {
+              "type": "links",
+              "settings": {
+                "menu": "footer"
+              }
+            },
+            "newsletter": {
+              "type": "newsletter",
+              "settings": {}
+            },
+            "social_media": {
+              "type": "social_media",
+              "settings": {}
+            }
+          },
+          "block_order": [
+            "text",
+            "links",
+            "newsletter",
+            "social_media"
+          ],
+          "settings": {}
+        }
+      }
+    },
+    "Quartz": {
+      "icon_stroke_width": 1.3,
+      "button_border_radius": 0,
+      "block_border_radius": "none",
+      "vertical_spacing": "medium",
+      "heading_color": "#0d0d0d",
+      "text_color": "#2e2e2e",
+      "background": "#ffffff",
+      "secondary_background": "#f5f5f5",
+      "success_color": "#3c6e71",
+      "error_color": "#de2a2a",
+      "header_background": "#ffffff",
+      "header_text_color": "#2e2e2e",
+      "footer_background": "#ffffff",
+      "footer_text_color": "#2e2e2e",
+      "primary_button_background": "#051e38",
+      "primary_button_text_color": "#ffffff",
+      "secondary_button_background": "#dfdfdf",
+      "secondary_button_text_color": "#2e2e2e",
+      "product_on_sale_accent": "#de2b2b",
+      "product_sold_out_accent": "#5b5b5b",
+      "product_custom_label_background": "#051e38",
+      "product_custom_label_2_background": "#2e9e7b",
+      "product_in_stock_text_color": "#2e9e7b",
+      "product_low_stock_text_color": "#de2b2b",
+      "heading_font": "futura_n3",
+      "heading_font_size": "medium",
+      "heading_text_transform": "uppercase",
+      "text_font": "din_next_n4",
+      "text_font_size": 15,
+      "stagger_products_apparition": true,
+      "round_color_swatches": false,
+      "show_vendor": false,
+      "show_secondary_image": true,
+      "product_color_display": "hide",
+      "product_image_size": "natural",
+      "cart_type": "page",
+      "cart_icon": "tote_bag",
+      "checkout_sidebar_background_color": "#f5f5f5",
+      "checkout_accent_color": "#051e38",
+      "checkout_button_color": "#051e38",
+      "checkout_error_color": "#de2a2a",
+      "accent_color": "#405de6",
+      "sections": {
+        "announcement-bar": {
+          "type": "announcement-bar",
+          "blocks": {
+            "message-1": {
+              "type": "message",
+              "settings": {}
+            }
+          },
+          "block_order": [
+            "message-1"
+          ],
+          "settings": {
+            "announcement_bar_position": "non_sticky",
+            "announcement_text_size": "small",
+            "autoplay": true,
+            "cycle_speed": 5,
+            "background": "#051e38",
+            "text_color": "#ffffff",
+            "button_background": "#ffffff",
+            "button_text_color": "#051e38"
+          }
+        },
+        "header": {
+          "type": "header",
+          "settings": {
+            "enable_sticky_header": true,
+            "navigation_menu": "main-menu",
+            "header_layout": "logo_center_navigation_inline",
+            "show_icons": true,
+            "reduce_desktop_padding": false,
+            "enable_transparent_header": true,
+            "transparent_header_text_color": "#ffffff"
+          }
+        },
+        "footer": {
+          "type": "footer",
+          "blocks": {
+            "text": {
+              "type": "text",
+              "settings": {}
+            },
+            "links": {
+              "type": "links",
+              "settings": {
+                "menu": "footer"
+              }
+            },
+            "newsletter": {
+              "type": "newsletter",
+              "settings": {}
+            },
+            "social_media": {
+              "type": "social_media",
+              "settings": {}
+            }
+          },
+          "block_order": [
+            "text",
+            "links",
+            "newsletter",
+            "social_media"
+          ],
+          "settings": {}
+        }
+      }
+    },
+    "Sapphire": {
+      "icon_stroke_width": 1.2,
+      "button_border_radius": 0,
+      "block_border_radius": "none",
+      "heading_color": "#0c1b54",
+      "text_color": "#0c1b54",
+      "background": "#ffffff",
+      "secondary_background": "#f7f7f7",
+      "success_color": "#708a7d",
+      "error_color": "#d2545a",
+      "header_background": "#0c1b54",
+      "footer_background": "#0c1b54",
+      "footer_text_color": "#ffffff",
+      "primary_button_background": "#0c1b54",
+      "secondary_button_background": "#f7f7f7",
+      "secondary_button_text_color": "#0c1b54",
+      "product_rating_color": "#a48156",
+      "product_on_sale_accent": "#d2545a",
+      "product_custom_label_background": "#405de6",
+      "product_custom_label_2_background": "#f3ff34",
+      "product_in_stock_text_color": "#2e9e7b",
+      "product_low_stock_text_color": "#d2545a",
+      "heading_font": "chong_modern_n4",
+      "heading_font_size": "large",
+      "heading_text_transform": "normal",
+      "text_font": "trade_gothic_n4",
+      "text_font_size": 15,
+      "stagger_products_apparition": true,
+      "round_color_swatches": true,
+      "show_vendor": true,
+      "show_secondary_image": true,
+      "show_product_rating": true,
+      "product_color_display": "hide",
+      "product_image_size": "natural",
+      "cart_type": "message",
+      "checkout_sidebar_background_color": "#f5f5f5",
+      "checkout_accent_color": "#282828",
+      "checkout_button_color": "#405de6",
+      "checkout_error_color": "#de2a2a",
+      "accent_color": "#405de6",
+      "sections": {
+        "announcement-bar": {
+          "type": "announcement-bar",
+          "blocks": {
+            "message-1": {
+              "type": "message",
+              "settings": {}
+            }
+          },
+          "block_order": [
+            "message-1"
+          ],
+          "settings": {
+            "announcement_bar_position": "non_sticky",
+            "announcement_text_size": "small",
+            "autoplay": true,
+            "cycle_speed": 5,
+            "background": "#ffe5db",
+            "text_color": "#0c1b54",
+            "button_background": "#0c1b54",
+            "button_text_color": "#ffffff"
+          }
+        },
+        "header": {
+          "type": "header",
+          "settings": {
+            "enable_sticky_header": true,
+            "navigation_menu": "main-menu",
+            "header_layout": "logo_center_navigation_inline",
+            "show_icons": true,
+            "reduce_desktop_padding": false,
+            "enable_transparent_header": true,
+            "transparent_header_text_color": "#ffffff"
+          }
+        },
+        "footer": {
+          "type": "footer",
+          "blocks": {
+            "text": {
+              "type": "text",
+              "settings": {}
+            },
+            "links": {
+              "type": "links",
+              "settings": {
+                "menu": "footer"
+              }
+            },
+            "newsletter": {
+              "type": "newsletter",
+              "settings": {}
+            },
+            "social_media": {
+              "type": "social_media",
+              "settings": {}
+            }
+          },
+          "block_order": [
+            "text",
+            "links",
+            "newsletter",
+            "social_media"
+          ],
+          "settings": {}
+        }
+      }
+    }
+  }
+}

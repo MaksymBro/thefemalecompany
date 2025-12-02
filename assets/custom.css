@@ -1,0 +1,365 @@
+/* Progress step */
+.progress-step {
+  --progress-step-color: rgba(var(--text-color), 0.2);
+  --progress-step-text-color: var(--progress-step-color);
+  --progress-step-completed-color: rgb(var(--color-green));
+  --progress-step-completed-text-color: var(--progress-step-completed-color);
+  --progress-step-in-progress-color: rgba(var(--text-color), 0.8);
+  --progress-step-in-progress-text-color: var(--progress-step-in-progress-color);
+  --progress-step-bar-height: 3px;
+  
+  display: block;
+}
+
+.progress-step__message-wrapper {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 6px;
+}
+
+.progress-step__message {
+  flex-basis: 100%;
+  margin: 0 0 8px 0;
+  line-height: 1.1;
+  color: var(--progress-step-message-color);
+}
+
+.progress-step__message svg {
+  margin-right: 10px;
+}
+
+.progress-step__message svg path {
+  fill: currentColor;
+}
+  
+.progress-step__steps {
+  display: flex;
+}
+
+.progress-step__step {
+  position: relative;
+  flex: 1;
+  margin-right: 3px;
+  padding-top: var(--progress-step-bar-height);
+  transition: font-weight var(--button-transition);
+  color: var(--progress-step-text-color);
+}
+  
+.progress-step__step svg {
+  fill: currentColor;
+}
+  
+.progress-step--reversed .progress-step__step {
+  padding-top: 0;
+  padding-bottom: var(--progress-step-bar-height);
+}
+  
+.progress-step__step::before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: var(--progress-step-bar-height);
+  background-color: var(--progress-step-color);
+  position: absolute;
+  top: 0;
+}
+  
+.progress-step--reversed .progress-step__step::before {
+  position: absolute;
+  bottom: 0;
+  top: initial;
+}
+  
+.progress-step__step::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  display: block;
+  background-color: var(--progress-step-fill-color, transparent);
+  width: var(--progress-step-fill-percentage, 0%);
+  height: var(--progress-step-bar-height);
+  transition: background-color var(--button-transition);
+}
+  
+.progress-step--reversed .progress-step__step::after {
+  position: absolute;
+  bottom: 0;
+  top: initial;
+}
+  
+.progress-step__step.completed {
+  --progress-step-fill-color: var(--progress-step-completed-color);
+  --progress-step-fill-percentage: 100%;
+    
+  color: var(--progress-step-completed-text-color);
+  font-weight: bold;
+}
+  
+.progress-step__step.in-progress {
+  --progress-step-fill-color: var(--progress-step-in-progress-color);
+  --progress-step-fill-percentage: 100%;
+    
+  color: var(--progress-step-in-progress-text-color);
+  font-weight: bold;
+}
+
+.progress-step__step:last-of-type {
+  margin-right: 0;
+}
+  
+/* Cart total progress */
+
+cart-total-progress .progress-step__step,
+cart-total-progress .progress-step__step.completed {
+  --progress-step-fill-color: var(--progress-step-in-progress-color);
+}
+
+cart-total-progress.completed .progress-step__step,
+cart-total-progress.completed .progress-step__step.completed {
+  --progress-step-fill-color: var(--progress-step-completed-text-color);
+}
+
+cart-total-progress .progress-step__step:not(.in-progress),
+cart-total-progress .progress-step__step .progress-step__step-text.in-progress,
+cart-total-progress .progress-step__step .progress-step__step-text.completed {
+  display: none;
+}
+
+cart-total-progress .progress-step__step.completed,
+cart-total-progress .progress-step__step.in-progress .progress-step__step-text.in-progress,
+cart-total-progress .progress-step__step.completed .progress-step__step-text.completed {
+  display: inline-flex;
+  width: 100%;
+}
+
+cart-total-progress .progress-step__step-text {
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+  margin-top: 5px;
+  font-weight: 400;
+  letter-spacing: 0.03em;
+}
+
+cart-total-progress .progress-step__message {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 5px;
+  font-weight: 700;
+}
+
+cart-total-progress .progress-step__step {
+  margin-right: 0;
+}
+
+cart-total-progress .progress-step__step:not(.completed) svg {
+  display: none;
+}
+
+/* Cart discount progress */
+.cart-discount-progress {
+  margin: auto;
+  padding: 0.75rem var(--container-gutter); 
+  line-height: 1.35;
+  max-width: 500px;
+}
+
+.cart-discount-progress .text--xsmall {
+  line-height: 1.25;
+}
+  
+.mini-cart .cart-discount-progress {
+  margin-left: calc(-1 * var(--container-gutter));
+  margin-right: calc(-1 * var(--container-gutter));
+}
+
+ig-shipping-progress-container {
+  display: block;
+  margin-left: calc(-1* var(--container-gutter));
+  margin-right: calc(-1* var(--container-gutter));
+}
+
+ig-shipping-progress-container .ig-dp-container {
+  max-width: 100%;
+  width: 100%;
+}
+
+/* Bulk discount */
+.quantity-settings {
+  --quantity-selector-height: 40px;
+  display: flex;
+  align-items: center;
+}
+  
+.panty-bulk-discount-notice .notice__footer {
+  margin-top: 0;
+}
+  
+.panty-bulk-discount-notice [data-toggle] {
+  text-decoration: underline;
+}
+
+.bulk-discount__quick-quantity {
+  height: var(--quantity-selector-height);
+  vertical-align: middle;
+  margin-left: 6px;
+  outline: 1px solid rgb(var(--border-color));
+  line-height: 1.2;
+  padding: 0 6px;
+  letter-spacing: -0.5px;
+  flex: 1;
+  text-align: center;
+}
+  
+.bulk-discount__quick-quantity:focus {
+  outline: 1px solid rgb(var(--border-color))!important;
+}
+
+/* NOTICE */
+
+/* EXAMPLE:
+                      <div class="notice notice--info">
+                        <div class="notice__icon">
+                          {% render 'icon' with 'far-info-circle' %}
+                        </div>
+                        <div class="notice__content">
+                          <div class="notice__header">
+                            <p><strong>Du suchst dein Abo?</strong></p>
+                          </div>
+                          <div class="notice__body">
+                            <p>Wir ziehen dein Abo grade in unser neues Kund*innenportal um. Bitte schau in ein paar Tagen nochmal vorbei.</p>
+                          </div>
+                          <div class="notice__footer">
+                            <a class="notice__action" href="https://www.thefemalecompany.com/kontakt/">Zum Kund*innenservice</a>
+                          </div>
+                        </div>
+                      </div>
+*/
+
+.notice {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 2rem;
+  padding: 13px 14px;
+  background: rgb(var(--notice-background));
+  color: rgb(var(--text-color));
+}
+    
+.notice__icon {
+  width: 16px;
+  fill: currentColor;
+  stroke: currentColor;
+}
+    
+.notice__icon svg {
+  vertical-align: -0.125em;
+}
+    
+.notice__content {
+  flex: 1;
+  margin-left: 8px;
+}
+    
+.notice__header {
+  margin-bottom: 0.25rem;
+}
+    
+.notice__body {
+  font-size: small;
+}
+
+.notice[data-collapsible] .notice__body {
+  display: none;
+}
+
+.notice[data-collapsible][data-open] .notice__body {
+  display: block;
+}
+    
+.notice__footer {
+  margin-top: 0.75rem;
+  font-size: small;
+  width: 100%;
+  flex-basis: 100%;
+}
+    
+.notice__action {
+  border: 1px solid rgb(var(--text-color));
+  padding: 0.125rem 0.75rem;
+  display: inline-block;
+  font-size: smaller;
+  border-radius: 3px;
+  transition: background var(--button-transition);
+}
+    
+.notice__action:hover {
+  background: rgb(var(--text-color));
+  color: rgb(var(--notice-background));
+}
+
+.notice--we-peep {
+  --text-color: 255, 255, 255;
+  --notice-background: var(--color-we-peep);
+}
+
+.notice--we-peep .notice__icon {
+  display: inline-flex;
+  margin-right: 10px;
+}
+
+.notice--we-peep .notice__icon svg {
+  width: 18px;
+}
+
+.notice--we-peep .notice__icon svg path {
+  fill: var(--progress-step-message-color);
+}
+
+.notice--we-peep .notice__content {
+  margin-left: 0;
+}
+
+.notice--flamingo-pink, .notice--info {
+  --text-color: 255, 255, 255;
+  --notice-background: var(--color-flamingo-pink);
+}
+ 
+.notice--fire-orange {
+  --text-color: 255, 255, 255;
+  --notice-background: var(--color-fire-orange);
+}
+  
+.notice--burgundy-red {
+  --text-color: 255, 255, 255;
+  --notice-background: var(--color-burgundy-red);
+}
+  
+.notice--green {
+  --text-color: 255, 255, 255;
+  --notice-background: var(--color-green);
+}
+
+._hj-widget-container{
+	position: relative;
+	z-index: 1 !important;
+}
+
+/* Desktop header menu link badge */
+.desktop-nav__link-badge {
+  font-size: 0.6em;
+  font-weight: bold;
+  color: rgb(var(--color-neon-red));
+  position: absolute;
+  top: -0.7em;
+  right: -1.3em;
+}
+
+.mobile-nav__link-badge {
+  font-size: 0.6em;
+  font-weight: bold;
+  color: rgb(var(--color-neon-red));
+  position: relative;
+  top: -0.6em;
+  right: 0.2em;
+}

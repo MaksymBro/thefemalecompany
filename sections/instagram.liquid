@@ -1,0 +1,123 @@
+{%- if section.settings.show_section -%}
+  <div class="social-media__container">
+    <div class="social-media__header">
+      <div class="social-media__text">
+        {{- section.settings.heading -}}
+      </div>
+      {%- render 'tfc-icons', icon_ref: 'instagram', icon_class: 'tfc-svg-icon' -%}
+    </div>
+    <div class="social-media__images">
+      <div class="social-media__images-list">
+        {%- for block in section.blocks -%}
+          {%- if block.settings.image -%}
+            {%- assign mobile_size = 125 | times: block.settings.image.aspect_ratio | ceil -%}
+            {%- assign tablet_size = 150 | times: block.settings.image.aspect_ratio | ceil -%}
+            {%- assign desktop_size = 150 | times: block.settings.image.aspect_ratio | ceil -%}
+    
+            {%- capture sizes -%}(max-width: 740px) {{ mobile_size }}px, (max-width: 999px) {{ tablet_size }}px, {{ desktop_size }}px{%- endcapture -%}
+            {{ block.settings.image | image_url: width: block.settings.image.width | image_tag: loading: 'lazy', sizes: sizes, widths: '125,150,250,300,375,450' }}
+          {%- else -%}
+            {{- 'image' | placeholder_svg_tag: 'placeholder-background' -}}
+          {%- endif -%}
+        {%- endfor -%}
+      </div>
+    </div>
+  </div>
+
+  <style>
+    .social-media__container {
+      background-color: var(--tfc-color-dusky-pink);
+    }
+    .social-media__header {
+      color: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding-bottom: 1.875rem;
+      padding-left: 2.5rem;
+      padding-right: 2.5rem;
+      padding-top: 1.875rem;
+      line-height: 1.45;
+      font-size: 2.1875rem;
+    }
+
+    .social-media__text a {
+      text-decoration: underline;
+    }
+
+    .social-media__header .tfc-svg-icon {
+      font-size: 8rem;
+      margin-left: 1rem;
+    }
+
+    @media screen and (min-width: 768px) {
+      .social-media__header .tfc-svg-icon {
+        font-size: 3rem;
+      }
+    }
+
+    .social-media__images {
+      overflow: hidden;
+    }
+
+    .social-media__images-list {
+      display: flex;
+      justify-content: center;
+    }
+
+    .social-media__images-list img {
+      height: 125px;
+      width: auto;
+    }
+
+    @media screen and (min-width: 1000px) {
+      .social-media__images-list img {
+        height: 150px;
+      }
+    }
+
+    .social-media__images-list .placeholder-background {
+      height: 150px;
+      width: auto;
+    }
+  </style>
+{%- endif -%}
+
+{% schema %}
+{
+  "name": "Instagram section",
+  "settings": [
+    {
+      "type": "checkbox",
+      "id": "show_section",
+      "label": "Show section",
+      "default": false
+    },
+    {
+      "type": "html",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Let’s become real friends on <a href=\"https://www.instagram.com/thefemalecompany\">Instagram</a>"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "images",
+      "name": "Image",
+      "limit": 16,
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Instagram section"
+    }
+  ]
+}
+{% endschema %}

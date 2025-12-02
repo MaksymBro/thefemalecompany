@@ -1,0 +1,9 @@
+  <div class="product-form__quantity-message-wrapper text--small {% if variant.inventory_quantity > 10 or variant.inventory_management == blank %}hidden{% endif %}" {{ block.shopify_attributes }}>
+  {%- render 'icon' with 'low-in-stock', width: 15, height: 14, inline: true -%}
+
+  <div class="product-form__quantity-message">
+    {%- if variant.inventory_quantity > 0 and variant.inventory_quantity <= 10 -%}
+      {{- 'product.info.quantity_alert_html' | t: quantity: variant.inventory_quantity -}}
+    {%- endif -%}
+  </div>
+</div>

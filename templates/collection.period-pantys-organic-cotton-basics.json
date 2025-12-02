@@ -1,0 +1,628 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "collection-banner": {
+      "type": "collection-banner",
+      "disabled": true,
+      "settings": {
+        "show_collection_image": true,
+        "show_collection_title": true,
+        "show_collection_description": true,
+        "section_height": "small",
+        "text_width": "medium",
+        "heading_font_family": "circular",
+        "image_heading_color": "#ffe6e6",
+        "image_text_color": "#ffe6e6",
+        "image_overlay_color": "#1a1a1a",
+        "image_overlay_opacity": 25,
+        "quick_links": ""
+      }
+    },
+    "pagefly_section_Ffbg4Y": {
+      "type": "pagefly-section",
+      "disabled": true,
+      "settings": {
+        "section_id": "pf-43e5af48"
+      }
+    },
+    "a2dd9a94-df11-40e7-ae05-09ef4b1e1c16": {
+      "type": "custom-html",
+      "disabled": true,
+      "settings": {
+        "subheading": "",
+        "title": "",
+        "html": "<div id=\"top\"></div>",
+        "add_vertical_spacing": false,
+        "disable_inside_spacing": false,
+        "background_type": "full_width",
+        "background": "rgba(0,0,0,0)",
+        "text_color": "rgba(0,0,0,0)"
+      }
+    },
+    "4882da3e-a7b7-48ff-992c-fd877cc635e9": {
+      "type": "logo-list",
+      "blocks": {
+        "template--17669741314314__4882da3e-a7b7-48ff-992c-fd877cc635e9-logo-1": {
+          "type": "logo",
+          "settings": {
+            "logo": "shopify://shop_images/Basics_Slip_Bubble.png",
+            "link": "/collections/bio-baumwolle-periodenunterwaesche?sort_by=manual&filter.p.m.filters.style=Slip"
+          }
+        },
+        "template--17669741314314__4882da3e-a7b7-48ff-992c-fd877cc635e9-logo-2": {
+          "type": "logo",
+          "settings": {
+            "logo": "shopify://shop_images/Basics_High_Waist_Bubble.png",
+            "link": "/collections/bio-baumwolle-periodenunterwaesche?sort_by=manual&filter.p.m.filters.style=High+Waist"
+          }
+        },
+        "logo_WtJVYh": {
+          "type": "logo",
+          "settings": {
+            "logo": "shopify://shop_images/Basics_Brazilian_Bubble_1.png",
+            "link": "/collections/bio-baumwolle-periodenunterwaesche?sort_by=manual&filter.p.m.filters.style=Brazilian"
+          }
+        },
+        "logo_qAENkH": {
+          "type": "logo",
+          "settings": {
+            "logo": "shopify://shop_images/Basics_Hipster_Bubble.png",
+            "link": "/collections/bio-baumwolle-periodenunterwaesche?sort_by=manual&filter.p.m.filters.style=Hipster"
+          }
+        },
+        "logo_Qratrg": {
+          "type": "logo",
+          "settings": {
+            "logo": "shopify://shop_images/Thumbnail_Mesh_Tanga.png",
+            "link": "https://buy.thefemalecompany.com/collections/bio-baumwolle-periodenunterwaesche?filter.p.m.filters.style=Tanga&sort_by=manual"
+          }
+        }
+      },
+      "block_order": [
+        "template--17669741314314__4882da3e-a7b7-48ff-992c-fd877cc635e9-logo-1",
+        "template--17669741314314__4882da3e-a7b7-48ff-992c-fd877cc635e9-logo-2",
+        "logo_WtJVYh",
+        "logo_qAENkH",
+        "logo_Qratrg"
+      ],
+      "disabled": true,
+      "settings": {
+        "reveal_on_scroll": false,
+        "layout": "carousel",
+        "max_logos_mobile": 10,
+        "max_width_logo_desktop": 150,
+        "max_width_logo_mobile": 100,
+        "logo_background": "rgba(0,0,0,0)",
+        "section_container_width": "md",
+        "section_background_color": "rgba(0,0,0,0)",
+        "section_spacing_top": 32,
+        "section_spacing_bottom": 32,
+        "section_spacing_different_mobile": true,
+        "section_spacing_top_mobile": 0,
+        "section_spacing_bottom_mobile": 0
+      }
+    },
+    "main": {
+      "type": "main-collection",
+      "blocks": {
+        "0871d722-ba82-412b-bc83-ae0948e295a2": {
+          "type": "image",
+          "disabled": true,
+          "settings": {
+            "subheading": "",
+            "title": "Bis zu 20% Rabatt!",
+            "content": "<p>Erhalte bis zu 20% Mengenrabatt ab dem Kauf von <strong>3+ Period Pantys oder Daysics®</strong>. Du kannst beliebige Styles mischen.</p>",
+            "link_text": "",
+            "link_url": "",
+            "link_style": "link",
+            "text_position": "middle_left",
+            "background": "#ffd4d6",
+            "subheading_color": "#942a3b",
+            "heading_color": "#942a3b",
+            "text_color": "#942a3b",
+            "button_background": "#ffffff",
+            "button_text_color": "#1e316a",
+            "image_overlay_color": "#000000",
+            "image_overlay_opacity": 0
+          }
+        },
+        "f86bb837-4a49-49c6-9951-80f42b6a1b93": {
+          "type": "image",
+          "settings": {
+            "subheading": "Stay Dry Layer Technologie™",
+            "title": "",
+            "content": "<p>Entwickelt mit Textiltechniker*innen und Gynäkolog*innen: nur <strong>max. 1mm</strong> dicker als normale Unterwäsche und trotzdem super <strong>sau(g)stark</strong>.</p>",
+            "link_text": "mehr erfahren",
+            "link_url": "#stay-dry",
+            "link_style": "link",
+            "text_position": "middle_left",
+            "background": "#ffe6e6",
+            "subheading_color": "rgba(0,0,0,0)",
+            "heading_color": "rgba(0,0,0,0)",
+            "text_color": "#942a3b",
+            "button_background": "#ffffff",
+            "button_text_color": "rgba(0,0,0,0)",
+            "image_overlay_color": "#000000",
+            "image_overlay_opacity": 0
+          }
+        }
+      },
+      "block_order": [
+        "0871d722-ba82-412b-bc83-ae0948e295a2",
+        "f86bb837-4a49-49c6-9951-80f42b6a1b93"
+      ],
+      "settings": {
+        "products_per_page": 50,
+        "mobile_products_per_row": "2",
+        "desktop_products_per_row": 4,
+        "show_all_colors": true,
+        "hide_from_product_title_start": "Period Panty –",
+        "show_sort_by": true,
+        "show_filters": true,
+        "show_filter_group_name": true,
+        "show_color_swatch": true,
+        "open_first_filter_group": false,
+        "filter_position": "always_visible",
+        "promotion_position": "top",
+        "promotion_height": "small"
+      }
+    },
+    "697ed22c-8b70-40c1-a8e5-9a1e737d17f7": {
+      "type": "custom-html",
+      "settings": {
+        "subheading": "Default Mode: Dry Pantys",
+        "title": "Stay Dry Layer Technologie™",
+        "html": "<center id=\"stay-dry\">Entwickelt mit Textiltechniker*innen und Gynäkolog*innen: nur <strong>max. 1mm</strong> dicker als normale Unterwäsche und trotzdem super <strong>sau(g)stark</strong>.</center>",
+        "add_vertical_spacing": false,
+        "disable_inside_spacing": false,
+        "background_type": "full_width",
+        "background": "#ffe6e6",
+        "text_color": "rgba(0,0,0,0)"
+      }
+    },
+    "feda577e-11fc-46a6-b585-7c78638f36a1": {
+      "type": "multi-column",
+      "blocks": {
+        "template--17669741314314__feda577e-11fc-46a6-b585-7c78638f36a1-item-1": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/panty_layer_closeup_layer1.jpg",
+            "image_width": 100,
+            "image_border": "rgba(0,0,0,0)",
+            "title": "Layer 1: Stay Dry Layer™",
+            "content": "<p><strong>Saugt Flüssigkeit</strong> blitzschnell auf und trocknet innerhalb weniger <strong>Sekunden</strong>.</p>",
+            "link_text": "",
+            "link_url": "",
+            "link_style": "link",
+            "text_alignment": "left",
+            "vertical_alignment": "start"
+          }
+        },
+        "template--17669741314314__feda577e-11fc-46a6-b585-7c78638f36a1-item-2": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/panty_layer_closeup_layer2_alt.jpg",
+            "image_width": 100,
+            "image_border": "rgba(0,0,0,0)",
+            "title": "Layer 2: Ultra-absorbierende Schicht",
+            "content": "<p><strong>Speichert</strong> die Flüssigkeit und <strong>schließt sie sicher ein</strong>.</p>",
+            "link_text": "",
+            "link_url": "",
+            "link_style": "link",
+            "text_alignment": "left",
+            "vertical_alignment": "start"
+          }
+        },
+        "template--17669741314314__feda577e-11fc-46a6-b585-7c78638f36a1-item-3": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/panty_layer_closeup_layer3.jpg",
+            "image_width": 100,
+            "image_border": "rgba(0,0,0,0)",
+            "title": "Layer 3: Wasserdichte Membran",
+            "content": "<p>Sorgt für <strong>zero Auslaufgefahr</strong>, auch bei längerer Tragedauer.</p>",
+            "link_text": "",
+            "link_url": "",
+            "link_style": "link",
+            "text_alignment": "left",
+            "vertical_alignment": "start"
+          }
+        },
+        "template--17669741314314__feda577e-11fc-46a6-b585-7c78638f36a1-item-4": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/panty_layer_closeup_layer4_070ad79d-1f21-4c24-8941-cc2cf0159468.jpg",
+            "image_width": 100,
+            "image_border": "rgba(0,0,0,0)",
+            "title": "Layer 4: Weiche Bio-Baumwolle",
+            "content": "<p>Super weiche Bio-Baumwolle für extra <strong>comfy</strong> <strong>Tragegefühl</strong>.</p>",
+            "link_text": "",
+            "link_url": "",
+            "link_style": "link",
+            "text_alignment": "left",
+            "vertical_alignment": "start"
+          }
+        }
+      },
+      "block_order": [
+        "template--17669741314314__feda577e-11fc-46a6-b585-7c78638f36a1-item-1",
+        "template--17669741314314__feda577e-11fc-46a6-b585-7c78638f36a1-item-2",
+        "template--17669741314314__feda577e-11fc-46a6-b585-7c78638f36a1-item-3",
+        "template--17669741314314__feda577e-11fc-46a6-b585-7c78638f36a1-item-4"
+      ],
+      "settings": {
+        "reveal_on_scroll": true,
+        "stack_items": false,
+        "subheading": "",
+        "title": "",
+        "content": "",
+        "column_alignment": "center",
+        "mobile_item_size": "medium",
+        "desktop_item_size": "medium",
+        "spacing": "tight",
+        "background": "#ffe6e6",
+        "text_color": "rgba(0,0,0,0)"
+      }
+    },
+    "6df6aa54-d7ca-4d51-8172-71d083a6ae85": {
+      "type": "video",
+      "settings": {
+        "subheading": "",
+        "title": "",
+        "video": "shopify://files/videos/leakproof_layer_compliation_480noaudio1mbit.mp4",
+        "video_url": "",
+        "background_type": "boxed",
+        "video_size": "small",
+        "autoplay": true,
+        "show_video_controls": false,
+        "background": "#ffe6e6",
+        "text_color": "rgba(0,0,0,0)"
+      }
+    },
+    "7cc3d404-c5c7-4cfc-8124-8c91cd082923": {
+      "type": "button",
+      "settings": {
+        "start_year": 2025,
+        "start_month": 1,
+        "start_day": 1,
+        "start_time": "10:00",
+        "end_year": 2050,
+        "end_month": 12,
+        "end_day": 31,
+        "end_time": "10:00",
+        "button_text": "Zurück nach oben",
+        "button_link": "#top",
+        "button_link_new_window": false,
+        "button_details": "",
+        "button_style": "primary",
+        "button_outline": false,
+        "button_shadow": false,
+        "button_size": "md",
+        "button_fit": "inline",
+        "section_container_width": "md",
+        "section_text_alignment": "center",
+        "section_background_color": "#ffe6e6",
+        "section_spacing_top": 0,
+        "section_spacing_bottom": 32,
+        "section_spacing_different_mobile": false,
+        "section_spacing_top_mobile": 0,
+        "section_spacing_bottom_mobile": 0
+      }
+    },
+    "c8301c43-1254-4976-8f39-0d3af5d27dae": {
+      "type": "pagefly-section",
+      "settings": {
+        "section_id": "pf-914450bf"
+      }
+    },
+    "6a453231-19fd-480f-bd79-5a5ad1c669a9": {
+      "type": "section-header",
+      "settings": {
+        "start_year": 2025,
+        "start_month": 1,
+        "start_day": 1,
+        "start_time": "10:00",
+        "end_year": 2050,
+        "end_month": 12,
+        "end_day": 31,
+        "end_time": "10:00",
+        "section_subheading": "Mehr Reviews auf Reviews.io",
+        "section_heading": "",
+        "allow_heading_override": false,
+        "section_short_description": "",
+        "heading_size": "h3",
+        "highest_hierarchy": false,
+        "section_heading_font_family": "default",
+        "short_description_font_size": "medium",
+        "section_text_color": "rgba(0,0,0,0)",
+        "section_heading_color": "rgba(0,0,0,0)",
+        "section_subheading_color": "rgba(0,0,0,0)",
+        "section_container_width": "sm",
+        "section_background_color": "rgba(0,0,0,0)",
+        "section_spacing_top": 32,
+        "section_spacing_bottom": 16,
+        "section_spacing_different_mobile": true,
+        "section_spacing_top_mobile": 24,
+        "section_spacing_bottom_mobile": 8
+      }
+    },
+    "17067007329ffdb02d": {
+      "type": "apps",
+      "blocks": {
+        "reviews_io_reviewsio_rating_bar_KDxczQ": {
+          "type": "shopify://apps/reviews-io/blocks/reviewsio-rating-bar/92a082e5-b297-4e88-b428-ac96cbc505f9",
+          "settings": {
+            "widget_id": "WzwJIZk4v5mPVFUO"
+          }
+        }
+      },
+      "block_order": [
+        "reviews_io_reviewsio_rating_bar_KDxczQ"
+      ],
+      "settings": {
+        "include_horizontal_margins": true,
+        "include_vertical_margins": false
+      }
+    },
+    "spacer_Pmr4Xx": {
+      "type": "spacer",
+      "settings": {
+        "height": 16,
+        "different_mobile_height": false,
+        "mobile_height": 0,
+        "background_color": "rgba(0,0,0,0)"
+      }
+    },
+    "39d569d6-89ee-4c4c-af84-8d5ad5312425": {
+      "type": "faq",
+      "blocks": {
+        "9839cb17-4191-4e51-8bfd-81e28f54db5c": {
+          "type": "faq_collection",
+          "settings": {
+            "metaobject_handle": "faq-collection-periodpanty-purchase-assistance",
+            "show_title": true
+          }
+        },
+        "35517a97-9151-4545-819c-d874291d2438": {
+          "type": "faq_collection",
+          "settings": {
+            "metaobject_handle": "faq-collection-periodpanty-usage",
+            "show_title": true
+          }
+        }
+      },
+      "block_order": [
+        "9839cb17-4191-4e51-8bfd-81e28f54db5c",
+        "35517a97-9151-4545-819c-d874291d2438"
+      ],
+      "settings": {
+        "show_navigation": true,
+        "enable_schema": true,
+        "section_header_subheading": "Ihr fragt, wir antworten",
+        "section_header_heading": "Häufig gestellte Fragen",
+        "section_header_short_description": "",
+        "section_header_heading_size": "h3",
+        "section_header_highest_hierarchy": false,
+        "section_header_short_description_font_size": "medium",
+        "section_container_width": "md",
+        "section_text_alignment": "left",
+        "section_background_color": "#dc5268",
+        "section_text_color": "#ffffff",
+        "section_heading_color": "#ffffff",
+        "section_subheading_color": "rgba(0,0,0,0)",
+        "section_heading_font_family": "default",
+        "section_spacing_top": 44,
+        "section_spacing_bottom": 28,
+        "section_spacing_different_mobile": true,
+        "section_spacing_top_mobile": 32,
+        "section_spacing_bottom_mobile": 32
+      }
+    },
+    "4f19f758-87c3-4595-ac6d-67ef58cb4b7b": {
+      "type": "button",
+      "settings": {
+        "start_year": 2025,
+        "start_month": 1,
+        "start_day": 1,
+        "start_time": "10:00",
+        "end_year": 2050,
+        "end_month": 12,
+        "end_day": 31,
+        "end_time": "10:00",
+        "button_text": "Zum Hilfe-Center",
+        "button_link": "https://help.thefemalecompany.com/",
+        "button_link_new_window": true,
+        "button_details": "",
+        "button_style": "white",
+        "button_outline": true,
+        "button_shadow": false,
+        "button_size": "md",
+        "button_fit": "inline",
+        "section_container_width": "md",
+        "section_text_alignment": "center",
+        "section_background_color": "#dc5268",
+        "section_spacing_top": 16,
+        "section_spacing_bottom": 44,
+        "section_spacing_different_mobile": true,
+        "section_spacing_top_mobile": 0,
+        "section_spacing_bottom_mobile": 32
+      }
+    },
+    "528ac3ca-ddd2-4007-b700-fbd0a4e2a6ec": {
+      "type": "blog-posts",
+      "settings": {
+        "blog": "periodenunterwaesche-ratgeber",
+        "subheading": "Mehr zum Thema",
+        "title": "Periodenunterwäsche-Ratgeber",
+        "articles_count": 3,
+        "stack_mobile": false,
+        "show_category": true,
+        "show_excerpt": true,
+        "button_text": "Zum Ratgeber",
+        "button_url": "shopify://blogs/periodenunterwaesche-ratgeber",
+        "background": "#fdd1d8",
+        "text_color": "rgba(0,0,0,0)",
+        "button_background": "rgba(0,0,0,0)",
+        "button_text_color": "rgba(0,0,0,0)"
+      }
+    },
+    "609b6ac0-94db-46fb-942f-37e93ec6659c": {
+      "type": "image-with-text",
+      "blocks": {
+        "template--17669741314314__609b6ac0-94db-46fb-942f-37e93ec6659c-item-1": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/Cherry_Hipster_NAB6_a91ca842-e669-4858-b5e7-dec107719cec.jpg",
+            "tab_label": "",
+            "subheading": "Feuchtgebiete? Gibt's woanders.",
+            "title": "Stay Dry Layer Technologie™",
+            "content": "<p>Unsere <strong>Stay Dry Layer Technologie™</strong> saugt Flüssigkeit blitzschnell auf, sodass du auf dem Trockenen bleibst. Die von Expert*innen entwickelte Stay Dry Layer Technology™ in der Menstruationsunterwäsche bietet <strong>mit 4 Schichten</strong> die optimale Saugkraft und bleibt dabei <strong>atmungsaktiv</strong>.</p><p>Die Supersaugpower von Periodenunterwäsche funktioniert dank innovativer Technologie. In den Schritt der Period Panty ist eine smarte, absorbierende Schicht eingearbeitet. Zwei Schichten sorgen dafür, dass Flüssigkeit zum einen schnell aufgesaugt und zum anderen fest eingeschlossen wird. Sie ist so flach in die Panty eingearbeitet, dass sie kaum auffällt. Super comfy Tragegefühl garantiert, von Windelgefühl keine Spur.</p>",
+            "button_text": "",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--17669741314314__609b6ac0-94db-46fb-942f-37e93ec6659c-item-1"
+      ],
+      "settings": {
+        "reveal_on_scroll": true,
+        "background_type": "full_width",
+        "background_overlap": "image",
+        "image_position": "left",
+        "text_alignment": "center",
+        "cycle_speed": 8,
+        "accent_background": "rgba(0,0,0,0)",
+        "text_color": "rgba(0,0,0,0)",
+        "button_background": "rgba(0,0,0,0)",
+        "button_text_color": "rgba(0,0,0,0)"
+      }
+    },
+    "5234b890-eacd-4bc7-a285-91de319f80ad": {
+      "type": "image-with-text",
+      "blocks": {
+        "template--17669741314314__5234b890-eacd-4bc7-a285-91de319f80ad-item-1": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/Group_1132_35146f64-af2f-4ade-abe4-f05253f98a44.jpg",
+            "tab_label": "",
+            "subheading": "Windelgefühl? Nicht mit uns.",
+            "title": "Comfy & Sexy",
+            "content": "<p>Die Saugschicht in der Period Panty ist so eingenäht, dass du sie <strong>beim Tragen kaum spürst</strong>. Die weiche Bio-Baumwolle sorgt für <strong>maximalen Popo-Komfort </strong>und mit unseren <strong>verschiedenen Styles</strong> fühlst du dich auch während der Periode sexy (wenn du dich danach fühlst). Bye bye Oma-Schlüppi!<br/><br/><strong>Die Abwechslung macht's</strong> – wir bieten Period Pantys in verschiedenen Modellen und Formen an, sodass für alle Gelegenheiten ein passender Slip dabei ist.</p>",
+            "button_text": "",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--17669741314314__5234b890-eacd-4bc7-a285-91de319f80ad-item-1"
+      ],
+      "settings": {
+        "reveal_on_scroll": true,
+        "background_type": "full_width",
+        "background_overlap": "image",
+        "image_position": "right",
+        "text_alignment": "center",
+        "cycle_speed": 8,
+        "accent_background": "rgba(0,0,0,0)",
+        "text_color": "rgba(0,0,0,0)",
+        "button_background": "rgba(0,0,0,0)",
+        "button_text_color": "rgba(0,0,0,0)"
+      }
+    },
+    "6eaa494e-eafe-4a2b-83f7-a759ad31cb51": {
+      "type": "image-with-text",
+      "blocks": {
+        "template--17669741314314__6eaa494e-eafe-4a2b-83f7-a759ad31cb51-item-1": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/2022-10-12-FEMALE-COMPANY-REBELLES-6832_ret_1.jpg",
+            "tab_label": "",
+            "subheading": "Material",
+            "title": "Less toxic than your ex",
+            "content": "<p>Unsere Pantys kommen <strong>ganz ohne Biozide aus</strong> (nur einige wenige Modelle enthalten noch Biozide – die Infos dazu findest du auf den jeweiligen Panty-Detailseiten).</p><p>Die meisten unserer Pantys sind bei <strong>60 Grad</strong> waschbar. Da die Waschtemperatur stark von den unterschiedlichen Materialien abhängt, gilt das allerdings nicht für alle Pantys. Für manche ist es einfach besser sie bei 40 Grad zu waschen, um maximale Langlebigkeit zu ermöglichen.<br/><br/>Damit dich dein Schlüppi aber möglichst lange schützen kann, solltest du ihn im <strong>Schonwaschgang und/oder im Wäschenetz </strong>waschen. Unsere Pantys sind außerdem vegan, tierversuchsfrei und aus Bio-Baumwolle.</p>",
+            "button_text": "",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--17669741314314__6eaa494e-eafe-4a2b-83f7-a759ad31cb51-item-1"
+      ],
+      "settings": {
+        "reveal_on_scroll": true,
+        "background_type": "full_width",
+        "background_overlap": "image",
+        "image_position": "left",
+        "text_alignment": "center",
+        "cycle_speed": 8,
+        "accent_background": "rgba(0,0,0,0)",
+        "text_color": "rgba(0,0,0,0)",
+        "button_background": "rgba(0,0,0,0)",
+        "button_text_color": "rgba(0,0,0,0)"
+      }
+    },
+    "6cb43d1a-8f6d-4cf7-813f-67ffae9a140d": {
+      "type": "image-with-text",
+      "blocks": {
+        "template--17669741314314__6cb43d1a-8f6d-4cf7-813f-67ffae9a140d-item-1": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/Header_Web_Cherry_7018d1c5-b619-454e-8f0a-f29e16afc2a1.jpg",
+            "tab_label": "",
+            "subheading": "Zu teuer? Say no more!",
+            "title": "Je mehr desto günstiger",
+            "content": "<p>Uns ist schon klar, dass Periodenunterwäsche einen tieferen Griff in den Geldbeutel<strong> </strong>verlangt, als herkömmliche Tampons.<br/><br/>Deshalb gibt es bei uns einen<strong> Mengenrabatt</strong>. <br/>Hol dir genug Pantys für deine ganze Periode – und spare dabei <strong>bis zu 15%</strong>. <br/><br/>So geht's: Füge deine Lieblingspantys zum Warenkorb hinzu. Du kannst verschiedene Styles mischen! Im Warenkorb wird dir<strong> der Rabatt automatisch abgezogen</strong>.</p>",
+            "button_text": "",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--17669741314314__6cb43d1a-8f6d-4cf7-813f-67ffae9a140d-item-1"
+      ],
+      "settings": {
+        "reveal_on_scroll": true,
+        "background_type": "full_width",
+        "background_overlap": "image",
+        "image_position": "right",
+        "text_alignment": "center",
+        "cycle_speed": 8,
+        "accent_background": "rgba(0,0,0,0)",
+        "text_color": "rgba(0,0,0,0)",
+        "button_background": "rgba(0,0,0,0)",
+        "button_text_color": "rgba(0,0,0,0)"
+      }
+    }
+  },
+  "order": [
+    "collection-banner",
+    "pagefly_section_Ffbg4Y",
+    "a2dd9a94-df11-40e7-ae05-09ef4b1e1c16",
+    "4882da3e-a7b7-48ff-992c-fd877cc635e9",
+    "main",
+    "697ed22c-8b70-40c1-a8e5-9a1e737d17f7",
+    "feda577e-11fc-46a6-b585-7c78638f36a1",
+    "6df6aa54-d7ca-4d51-8172-71d083a6ae85",
+    "7cc3d404-c5c7-4cfc-8124-8c91cd082923",
+    "c8301c43-1254-4976-8f39-0d3af5d27dae",
+    "6a453231-19fd-480f-bd79-5a5ad1c669a9",
+    "17067007329ffdb02d",
+    "spacer_Pmr4Xx",
+    "39d569d6-89ee-4c4c-af84-8d5ad5312425",
+    "4f19f758-87c3-4595-ac6d-67ef58cb4b7b",
+    "528ac3ca-ddd2-4007-b700-fbd0a4e2a6ec",
+    "609b6ac0-94db-46fb-942f-37e93ec6659c",
+    "5234b890-eacd-4bc7-a285-91de319f80ad",
+    "6eaa494e-eafe-4a2b-83f7-a759ad31cb51",
+    "6cb43d1a-8f6d-4cf7-813f-67ffae9a140d"
+  ]
+}

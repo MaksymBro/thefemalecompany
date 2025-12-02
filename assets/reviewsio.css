@@ -1,0 +1,23 @@
+.ruk_rating_snippet i {
+  font-size: 15px!important;
+}
+
+.ruk_rating_snippet .ruk-rating-snippet-count {
+  margin-left: 4px;
+}
+
+.reviewsio_rating-stars--micro .ruk-rating-snippet-count {
+  margin-left: 2px;
+}
+
+.reviewsio_rating-stars--micro span:nth-of-type(2) {
+  display: none!important;
+}
+
+.reviewsio_rating-stars--micro .ruk-rating-snippet-count:nth-of-type(3) {
+  display: none;
+}
+
+.reviewsio_rating-stars--full .ruk-rating-snippet-count {
+  margin-left: 2px;
+}

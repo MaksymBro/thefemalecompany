@@ -1,0 +1,668 @@
+{%- assign color_label_list = 'general.label.color' | t | replace: ', ', ',' | downcase | split: ',' -%}
+{%- assign color_white_label = 'general.label.white' | t | downcase -%}
+{%- assign quick_buy_icon_name = 'quick-buy-' | append: settings.cart_icon | replace: '_', '-' -%}
+{%- assign product_form_id = 'product-form-' | append: section.id | append: '-' | append: product.id -%}
+
+{%- for testproduct in settings.a_b_test_products -%}
+  {%- if testproduct.id == product.id -%}
+    {%- assign a_b_test_product_id = true -%}
+    {% break %}
+  {%- endif -%}
+{%- endfor -%}
+
+{%- if product.url contains '?' -%}
+  {%- assign product_url_contains_query = true -%}
+{%- else -%}
+  {%- assign product_url_contains_query = false -%}
+{%- endif -%}
+
+{%- comment -%}
+  This enables us to override the shown price via metafields.
+{%- endcomment -%}
+{%- assign product_price = product.price -%}
+{%- assign product_compare_at_price = product.compare_at_price %}
+{%- if product.metafields.pricing.override_shown_price != blank -%}
+  {%- assign price_override_active = true -%}
+  {%- assign product_price = product.metafields.pricing.override_shown_price.value -%}
+
+  {%- if product_compare_at_price == blank and product_price < product.price -%}
+    {%- assign product_compare_at_price = product.price -%}
+  {%- endif -%}
+{%- endif -%}
+
+{% assign cart_currency = cart.currency %}
+{% assign page_product_has_discount = false %}
+{% assign recommended_product_has_discount = false %}
+{% assign discount_amount = 0 %}
+{% for automatic_discounts in metaobjects.automatic_discounts_rebuild.values %} 
+  {% comment %}
+  {% assign discount_name = automatic_discounts.system.handle %}{% endcomment %}
+
+  {% for purchase_product in automatic_discounts.purchase_these.value %}
+    {% if page_product.id == purchase_product.id %}
+      {% assign page_product_has_discount = true %}
+    {% endif %}
+    {% for cart_product in cart.items %}
+      {% if cart_product.product.id == purchase_product.id %}
+        {% assign page_product_has_discount = true %}
+      {% endif %}
+    {% endfor %}
+  {% endfor %}
+
+  {% for discount_product in automatic_discounts.get_discount_on_these.value %}
+    {% if product.id == discount_product.id %}
+      {% assign recommended_product_has_discount = true %}
+    {% endif %}
+  {% endfor %}
+
+  {% if page_product_has_discount == true and recommended_product_has_discount == true and cart_currency.iso_code == "EUR" %}
+    {% assign discount_amount = automatic_discounts.discount_amount.value | replace: ",", "." | times: 100 %}
+  {% endif %}
+
+{% endfor %}
+
+<product-item
+  data-cy-product-item
+  class="product-item {% unless product.available %}product-item--sold-out{% endunless %}"
+  data-id="{{ product.id }}"
+>
+  <div
+    class="product-item__image-wrapper {% if settings.show_secondary_image and product.media.size > 1 and hide_secondary_image != true %}product-item__image-wrapper--multiple{% endif %}">
+    <a
+      href="{{ product.url }}"
+      data-instant
+      class="product-item__aspect-ratio aspect-ratio {% if settings.product_image_size != 'natural' %}aspect-ratio--{{ settings.product_image_size }}{% endif %}"
+      style="padding-bottom: {{ 100.0 | divided_by: product.featured_media.preview_image.aspect_ratio }}%; --aspect-ratio: {{ product.featured_media.preview_image.aspect_ratio }}"
+      data-cy-product-item-link
+      data-click-handler="{{- product.title -}}"
+    >
+      {%- if a_b_test_product_id and product.metafields.a_b_test.product_image_1 != blank -%}
+        {{ product.metafields.a_b_test.product_image_1 | image_url: width: product.featured_media.width | image_tag: loading: 'lazy', sizes: sizes_attribute, widths: '200,300,400,500,600,700,800,900,1000,1100,1200', class: 'product-item__primary-image', data-media-id: product.featured_media.id, data-cy-product-item-primary-image: '' }}
+      {%- elsif product.featured_media -%}
+        {{ product.featured_media | image_url: width: product.featured_media.width | image_tag: loading: 'lazy', sizes: sizes_attribute, widths: '200,300,400,500,600,700,800,900,1000,1100,1200', class: 'product-item__primary-image', data-media-id: product.featured_media.id, data-cy-product-item-primary-image: '' }}
+      {%- endif -%}
+
+      {%- if settings.show_secondary_image and product.media.size > 1 and hide_secondary_image != true -%}
+        {%- assign next_media = product.media[product.featured_media.position] | default: product.media[1] -%}
+
+        {{- next_media | image_url: width: next_media.width | image_tag: loading: 'lazy', sizes: sizes_attribute, widths: '200,300,400,500,600,700,800,900,1000,1100,1200', class: 'product-item__secondary-image' -}}
+      {%- endif -%}
+    </a>
+
+    {% if discount_amount > 0 and product_price >= product_compare_at_price and cart_currency.iso_code == "EUR" %}
+      {% comment %}only automatic discount{% endcomment %}
+      {% assign new_discounted_price = product_price | minus: discount_amount %}
+      <span class="discount-badge">
+        - {{ discount_amount | money_without_trailing_zeros }}
+      </span>
+    {% elsif discount_amount > 0 and product_price < product_compare_at_price and cart_currency.iso_code == "EUR" %}
+      {% comment %}automatic discount and additionally compare-at-price{% endcomment %}
+      {% assign new_discounted_price = product_price | minus: discount_amount %}
+      {%- assign savings = product_compare_at_price | minus: new_discounted_price | times: 100.0 | divided_by: product_compare_at_price | round | append: '%' -%}   
+      <span class="discount-badge">
+        - {{ savings }}
+      </span>
+    {% elsif product_price < product_compare_at_price and cart_currency.iso_code == "EUR" %}
+      {% comment %}no automatic discount, but compare-at-price {% endcomment %}
+      {%- assign savings = product_compare_at_price | minus: product_price | times: 100.0 | divided_by: product_compare_at_price | round | append: '%' -%} 
+      <span class="discount-badge">
+        - {{ savings }}
+      </span>
+    {% endif %}
+  </div>
+
+  <div class="product-item__info">
+      <a
+        href="{{ product.url }}"
+        data-instant
+        class="product-item-meta__title"
+        data-cy-product-item-title
+        data-click-handler="{{- product.title -}}"
+      >
+        {{ product.title }}
+      </a>
+
+      <div class="product-item-meta__price-list-container" data-cy-product-item-price-container>
+        <div class="price-list price-list--centered">
+          {%- if price_override_active != true and product.price_varies and product_compare_at_price -%}
+            {%- assign cheapest_variant = product.variants | sort: 'price' | first -%}
+
+            {%- capture price_min -%}
+              {%- if settings.currency_code_enabled -%}
+                {% if new_discounted_price %}
+                  {{ new_discounted_price | money_with_currency }}
+                {% else %}
+                  {{- cheapest_variant.price | money_with_currency -}}
+                {% endif %}
+              {%- else -%}
+                {% if new_discounted_price %}
+                  {{ new_discounted_price | money }}
+                {% else %}
+                  {{- cheapest_variant.price | money -}}
+                {% endif %}
+              {%- endif -%}
+            {%- endcapture -%}
+
+            {%- if cheapest_variant.price < cheapest_variant.compare_at_price -%}
+              <span class="price price--highlight">
+                <span class="visually-hidden">{{ 'product.general.sale_price' | t }}</span>
+
+               {{- 'collection.product.from_price_html' | t: price_min: price_min -}}
+              </span>
+
+              <span class="price price--compare text--xsmall">
+                <span class="visually-hidden">{{ 'product.general.regular_price' | t }}</span>
+
+                {%- if settings.currency_code_enabled -%}
+                  {{- cheapest_variant.compare_at_price | money_with_currency -}}
+                {%- else -%}
+                  {{- cheapest_variant.compare_at_price | money -}}
+                {%- endif -%}
+              </span>
+            {%- else -%}
+              <span class="price">
+                <span class="visually-hidden">{{ 'product.general.sale_price' | t }}</span>
+
+                {{- 'collection.product.from_price_html' | t: price_min: price_min -}}
+              </span>
+            {%- endif -%}
+          {%- elsif product_price < product_compare_at_price -%}
+            <span class="price price--highlight">
+              <span class="visually-hidden">{{ 'product.general.sale_price' | t }}</span>
+
+              {%- if settings.currency_code_enabled -%}
+                {% if new_discounted_price %}
+                  {{ new_discounted_price | money_with_currency }}
+                {% else %}
+                  {{- product_price | money_with_currency -}}
+                {% endif %}
+              {%- else -%}
+                {% if new_discounted_price %}
+                  {{ new_discounted_price | money }}
+                {% else %}
+                  {{- product_price | money -}}
+                {% endif %}
+              {%- endif -%}
+            </span>
+
+            <span class="price price--compare text--xsmall">
+              <span class="visually-hidden">{{ 'product.general.regular_price' | t }}</span>
+              {%- if settings.currency_code_enabled -%}
+                {{- product_compare_at_price | money_with_currency -}}
+              {%- else -%}
+                {{- product_compare_at_price | money -}}
+              {%- endif -%}
+            </span>
+          {%- elsif price_override_active != true and product.price_varies -%}
+            {%- capture price_min -%}
+              {%- if settings.currency_code_enabled -%}
+                {{ product.price_min | money_with_currency }}
+              {%- else -%}
+                {{ product.price_min | money }}
+              {%- endif -%}
+            {%- endcapture -%}
+
+            {%- capture price_max -%}
+              {%- if settings.currency_code_enabled -%}
+                {{- product.price_max | money_with_currency -}}
+              {%- else -%}
+                {{- product.price_max | money -}}
+              {%- endif -%}
+            {%- endcapture -%}
+
+            <span class="price">
+              <span class="visually-hidden">{{ 'product.general.sale_price' | t }}</span>
+
+              {{- 'collection.product.from_price_html' | t: price_min: price_min, price_max: price_max -}}
+            </span>
+          {%- else -%}
+            <span class="price {% if new_discounted_price %}price--highlight{% endif %}">
+              <span class="visually-hidden">{{ 'product.general.sale_price' | t }}</span>
+
+              {%- if settings.currency_code_enabled -%}
+                {% if new_discounted_price %}
+                  {{ new_discounted_price | money_with_currency }}
+                {% else %}
+                  {{- product_price | money_with_currency -}}
+                {% endif %}
+              {%- else -%}
+                {% if new_discounted_price %}
+                  {{ new_discounted_price | money }}
+                {% else %}
+                  {{- product_price | money -}}
+                {% endif %}
+              {%- endif -%}
+            </span>
+
+            {% if new_discounted_price %}
+              <span class="price price--compare text--xsmall">
+                <span class="visually-hidden">{{ 'product.general.regular_price' | t }}</span>
+                {%- if settings.currency_code_enabled -%}
+                  {{- product_price | money_with_currency -}}
+                {%- else -%}
+                  {{- product_price | money -}}
+                {%- endif -%}
+              </span>
+            {% endif %}
+          {%- endif -%}
+
+          {%- if product.selected_or_first_available_variant.unit_price_measurement -%}
+            <div class="price price--block text--xsmall text--subdued">
+              <div class="unit-price-measurement">
+                <span class="unit-price-measurement__price">
+                  {{ product.selected_or_first_available_variant.unit_price | money }}
+                </span>
+
+                <span class="unit-price-measurement__separator">/</span>
+
+                {%- if product.selected_or_first_available_variant.unit_price_measurement.reference_value != 1 -%}
+                  <span class="unit-price-measurement__reference-value">
+                    {{ product.selected_or_first_available_variant.unit_price_measurement.reference_value }}
+                  </span>
+                {%- endif -%}
+
+                <span class="unit-price-measurement__reference-unit">
+                  {{ product.selected_or_first_available_variant.unit_price_measurement.reference_unit }}
+                </span>
+              </div>
+            </div>
+          {%- endif -%}
+        </div>
+      </div>
+
+      <div class="product-form">
+        {%- unless product.has_only_default_variant -%}
+          <product-variants handle="{{ product.handle }}" form-id="{{ product_form_id }}" {% if update_url %}update-url{% endif %} {% if block.settings.hide_sold_out_variants %}hide-sold-out-variants{% endif %} class="product-form__variants" {{ block.shopify_attributes }}>
+            {%- for option in product.options_with_values -%}
+              {%- assign option_downcase = option.name | downcase -%}
+              {%- capture option_id -%}option-{{ section.id }}-{{ template.suffix }}-{{ product.id }}-{{ forloop.index }}{%- endcapture -%}
+
+              {%- assign hide_selector = false -%}
+
+              {%- assign selector_type = "dropdown" -%}
+
+              {% if color_label_list contains option_downcase %}
+                {%- assign selector_type = "color" -%}
+
+                {%- if option.values.size <= 1 -%}
+                  {%- assign hide_selector = true -%}
+                {%- endif -%}
+
+                {%- if selector_type == 'variant_image' -%}
+                  {%- comment -%}To use this mode every variant must have an attached media{%- endcomment -%}
+                  {%- for variant in product.variants -%}
+                    {%- unless variant.featured_media -%}
+                      {%- assign selector_type = 'color' -%}
+                      {%- break -%}
+                    {%- endunless -%}
+                  {%- endfor -%}
+                {%- endif -%}
+              {%- endif -%}
+
+              <div class="product-form__option-selector" data-selector-type="{{ selector_type | replace: '_', '-' | escape }}">
+                <div class="product-form__option-info" style="{%- if hide_selector == true -%}margin-bottom: 0;{%- endif -%}">
+                  <span class="product-form__option-name">{{ option.name }}:</span>
+
+                  {%- if selector_type != 'dropdown' -%}
+                    <span id="{{ option_id }}-value" class="product-form__option-value">
+                      {{ option.selected_value }}
+                    </span>
+                  {%- endif -%}
+                </div>
+
+                {%- case selector_type -%}
+                  {%- when 'color' -%}
+                    <div class="color-swatch-list" style="display: none;">
+                      {%- assign color_swatch_config = settings.color_swatch_config | newline_to_br | split: '<br />' -%}
+
+                      {%- for value in option.values -%}
+                        {%- assign color_value_downcase = value | downcase -%}
+
+                        <div class="color-swatch {% if color_white_label == color_value_downcase %}color-swatch--white{% endif %}">
+                          <input
+                            class="color-swatch__radio visually-hidden" type="radio"
+                            name="option{{ option.position }}" form="{{ product_form_id }}"
+                            id="{{ option_id }}-{{ forloop.index }}" value="{{ value | escape }}"
+                            {% if value == option.selected_value %}checked="checked"{% endif %}
+                            data-bind-value="{{ option_id }}-value"
+                          >
+
+                          <label
+                            class="color-swatch__item" for="{{ option_id }}-{{ forloop.index }}"
+                            style="{% render 'color-swatch-style', color_swatch_config: color_swatch_config, value: value %}"
+                          >
+                            <span class="visually-hidden">{{ value }}</span>
+                          </label>
+                        </div>
+                      {%- endfor -%}
+                    </div>
+
+                    {%- assign products_with_current = product.handle | append: "," -%}
+
+                    {% assign product_variant_links_block = product.metafields.relationships.other_color.value %}
+
+                    {%- for linked_color_product in product_variant_links_block -%}
+                      {%- assign products_with_current = products_with_current | append: linked_color_product.handle | append: "," -%}
+                    {%- endfor -%}
+
+                    {%- assign products_with_current = products_with_current | remove_last: "," | split: "," -%}
+
+                    {%- assign linked_products_colors = "" -%}
+                    {%- assign sorted_color_products = "" -%}
+
+                    {%- for linked_color_product_handle in products_with_current -%}
+                      {%- assign linked_color_product = all_products[linked_color_product_handle] -%}
+
+                      {%- for product_option in linked_color_product.options -%}
+                        {%- assign color_option_name = "kleur, Kleur, farbe, Farbe, color, Color" -%}
+
+                        {%- if color_option_name contains product_option -%}
+                          {%- assign color_index = 'option' | append: forloop.index -%}
+
+                          {%- break -%}
+                        {%- endif -%}
+                      {%- endfor -%}
+
+                      {%- assign linked_color_product_color_name = linked_color_product.variants[0][color_index] -%}
+                      {%- assign linked_products_colors = linked_products_colors | append: linked_color_product_color_name | append: "," -%}
+                    {%- endfor -%}
+
+                    {%- assign linked_products_colors = linked_products_colors | remove_last: "," | split: "," | sort -%}
+
+                    {%- for linked_product_color in linked_products_colors -%}
+                      {%- for linked_color_product_handle in products_with_current -%}
+                        {%- assign linked_color_product = all_products[linked_color_product_handle] -%}
+
+                        {%- for product_option in linked_color_product.options -%}
+                          {%- assign color_option_name = "kleur, Kleur, farbe, Farbe, color, Color" -%}
+
+                          {%- if color_option_name contains product_option -%}
+                            {%- assign color_index = 'option' | append: forloop.index -%}
+
+                            {%- break -%}
+                          {%- endif -%}
+                        {%- endfor -%}
+
+                        {%- if linked_color_product.variants[0][color_index] == linked_product_color -%}
+                          {%- assign sorted_color_products = sorted_color_products | append: linked_color_product.handle | append: "," -%}
+
+                          {%- break -%}
+                        {%- endif -%}
+                      {%- endfor -%}
+                    {%- endfor -%}
+
+                    {%- for product_option in product.options -%}
+                      {%- assign color_option_name = "kleur, Kleur, farbe, Farbe, color, Color" -%}
+
+                      {%- if color_option_name contains product_option -%}
+                        {%- assign current_product_color_index = 'option' | append: forloop.index -%}
+
+                        {%- break -%}
+                      {%- endif -%}
+                    {%- endfor -%}
+
+                    {%- assign current_product_color_name = product.variants[0][current_product_color_index] -%}
+
+                    {%- assign sorted_color_products = sorted_color_products | remove_last: "," | split: "," -%}
+
+                    <div class="color-swatch-list">
+                      {%- for color_product_handle in sorted_color_products -%}
+                        {%- assign color_product = all_products[color_product_handle] -%}
+
+                        {%- if color_product.metafields.custom.hide_on_storefront == true -%}
+                          {% continue %}
+                        {%- endif -%}
+
+                        {%- if color_product.available != true -%}
+                          {%- continue -%}
+                        {%- endif -%}
+
+                        {%- for color_product_option in color_product.options -%}
+                          {%- assign color_option_name = "kleur, Kleur, farbe, Farbe, color, Color" -%}
+
+                          {%- if color_option_name contains color_product_option -%}
+                            {%- assign color_product_option_index = 'option' | append: forloop.index -%}
+
+                            {%- break -%}
+                          {%- endif -%}
+                        {%- endfor -%}
+
+                        {%- assign color_name = color_product.variants[0][color_product_option_index] -%}
+                        {%- assign color_value_downcase = color_name | downcase -%}
+
+                        {%- if color_product.url == product.url -%}
+                          <div class="color-swatch {% if color_white_label == color_value_downcase %}color-swatch--white{% endif %}">
+                            <button data-productid="{{ color_product.id }}" data-href="{{- color_product.url -}}" class="color-swatch__item checked" style="{%- render 'color-swatch-style', color_swatch_config: color_swatch_config, value: color_name -%}">
+                              <span class="visually-hidden">{{- color_name -}}</span>
+                            </button>
+                          </div>
+                        {%- else -%}
+                          {%- if color_product.available == true -%}
+                            <div class="color-swatch {% if color_white_label == color_value_downcase %}color-swatch--white{% endif %}">
+                              <button data-productid="{{ color_product.id }}" data-href="{{- color_product.url -}}" class="color-swatch__item" style="{%- render 'color-swatch-style', color_swatch_config: color_swatch_config, value: color_name -%}">
+                                <span class="visually-hidden">{{- color_name -}}</span>
+                              </button>
+                            </div>
+                          {%- else -%}
+                            <div class="color-swatch {% if color_white_label == color_value_downcase %}color-swatch--white{% endif %}">
+                              <button data-productid="{{ color_product.id }}" data-href="{{- color_product.url -}}" class="color-swatch__item block-swatch__item--unavailable" style="{%- render 'color-swatch-style', color_swatch_config: color_swatch_config, value: color_name -%}">
+                                <span class="visually-hidden">{{- color_name -}}</span>
+                              </button>
+                            </div>
+                          {%- endif -%}
+                        {%- endif -%}
+                      {%- endfor -%}
+                    </div>
+
+                  {%- when 'dropdown' -%}
+                    <div class="select-wrapper">
+                      <combo-box initial-focus-selector="[aria-selected='true']" id="{{ option_id }}-combo-box" class="combo-box">
+                        <span class="combo-box__overlay"></span>
+
+                        <header class="combo-box__header">
+                          <p class="combo-box__title heading h6">{{ option.name }}</p>
+
+                          <button
+                            type="button"
+                            class="combo-box__close-button tap-area"
+                            data-action="close"
+                            title="{{ 'general.accessibility.close' | t | escape }}"
+                          >
+                            {%- render 'icon' with 'close' -%}
+                          </button>
+                        </header>
+
+                        <div class="combo-box__option-list" role="listbox">
+                          {%- assign show_low_on_stock = true -%}
+                          {%- assign options_size = product.options.size -%}
+
+                          {%- for product_option in product.options_with_values -%}
+                            {%- assign color_option_name = "farbe, Farbe, color, Color" -%}
+
+                            {%- if color_option_name contains product_option.name -%}
+                              {%- unless product_option.values.size > 1 -%}
+                                {%- assign options_size = options_size | minus: 1 -%}
+                              {%- endunless -%}
+
+                              {%- break -%}
+                            {%- endif -%}
+                          {%- endfor -%}
+
+                          {%- for value in option.values -%}
+                            {% assign option_position = "option" | append: option.position %}
+                            {% assign current_variant = product.variants | where: option_position, value %}
+                            {% assign current_variant = current_variant | first %}
+
+                            {%- capture low_on_stock -%}
+                              {% if current_variant.inventory_quantity > 0 and current_variant.inventory_quantity <= 10 and show_low_on_stock != false and options_size == 1 %}
+                                {% render 'form-low-on-stock-message', variant: current_variant %}
+                              {% endif %}
+                            {%- endcapture -%}
+
+                            <button
+                              type="button"
+                              role="option"
+                              class="combo-box__option-item"
+                              value="{{ value | escape }}"
+                              {% if current_variant.inventory_quantity > 0 and current_variant.inventory_quantity <= 10 and options_size == 1 %}
+                                data-remaining-quantity="{{ current_variant.inventory_quantity }}"
+                              {% endif %}
+                              aria-selected="{% if value == option.selected_value %}true{% else %}false{% endif %}"
+                            >
+                              {{ value }} {{- low_on_stock -}}
+                            </button>
+                          {%- endfor -%}
+                        </div>
+
+                        <select
+                          class="visually-hidden" name="option{{ option.position }}"
+                          form="{{ product_form_id }}"
+                          data-bind-value="{{ option_id }}-value" aria-label="{{ option.name | escape }}"
+                        >
+                          {%- for value in option.values -%}
+                            <option value="{{ value | escape }}" {% if value == option.selected_value %}selected{% endif %}>
+                              {{ value }}
+                            </option>
+                          {%- endfor -%}
+                        </select>
+                      </combo-box>
+
+                      <button
+                        type="button" is="toggle-button" class="select" aria-expanded="false"
+                        aria-haspopup="listbox" aria-controls="{{ option_id }}-combo-box"
+                      >
+                        <span id="{{ option_id }}-value" class="select__selected-value">
+                          {{ option.selected_value }}
+                        </span>
+
+                        {%- render 'icon' with 'chevron' -%}
+                      </button>
+                    </div>
+                {%- endcase -%}
+              </div>
+            {%- endfor -%}
+
+            <noscript>
+              <label class="input__block-label" for="product-select-{{ section.id }}-{{ product.id }}">
+                {{ 'product.form.variant' | t }}
+              </label>
+
+              <div class="select-wrapper">
+                <select
+                  class="select"
+                  autocomplete="off"
+                  id="product-select-{{ section.id }}-{{ product.id }}"
+                  name="id"
+                  data-productid="{{ product.id }}" form="{{ product_form_id }}"
+                >
+                  {%- for variant in product.variants -%}
+                    <option
+                      {% if variant == product.selected_or_first_available_variant %}selected="selected"{% endif %}
+                      {% unless variant.available %}disabled="disabled"{% endunless %}
+                      value="{{ variant.id }}" data-sku="{{ variant.sku }}"
+                    >
+                      {{ variant.title }} - {{ variant.price | money }}
+                    </option>
+                  {%- endfor -%}
+                </select>
+
+                {%- render 'icon' with 'chevron' -%}
+              </div>
+            </noscript>
+          </product-variants>
+        {% endunless %}
+        {%- form 'product', product, class: "complete-the-look__button complete-the-look__button--desktop", data-productid: product.id, is: 'product-form', id: product_form_id -%}
+          {%- if product.metafields.promotion.panty_volume_discount.value == true -%}
+            <input type="hidden" name="properties[_panty_bulk_discount_elligible]" value="true">
+          {%- endif -%}
+
+          {%- if a_b_test_product_id and product.metafields.a_b_test.product_image_1 != blank -%}
+            <input type="hidden" name="properties[_a_b_test_product_image]" value="true">
+          {%- endif -%}
+
+          <input
+            type="hidden"
+            disabled
+            name="id"
+            data-productid="{{ product.id }}"
+            value="{{ product.selected_or_first_available_variant.id }}"
+          >
+
+          <product-payment-container
+            form-id="{{ product_form_id }}"
+            {% if update_url %}id="MainPaymentContainer"{% endif %}
+            class="product-form__payment-container" {{ block.shopify_attributes }}
+          >
+            <button
+              id="AddToCart"
+              type="submit"
+              is="loader-button"
+              data-atc-handler="{{- product.title -}}"
+              data-use-primary
+              data-product-add-to-cart-button
+              data-cy-product-add-to-cart-button
+              data-button-content="{% if product.template_suffix == 'pre-order' or product.metafields.logistics.pre_order.value == true %}{{ 'product.form.pre_order' | t | escape }}{% else %}{{ 'product.form.add_to_cart_panty' | t | escape }}{% endif %}"
+              class="product-form__add-button button {% unless product.selected_or_first_available_variant.available %}button--ternary{% else %}button--primary{% endunless %} button--full"
+              {% unless product.selected_or_first_available_variant.available %}disabled{% endunless %}
+            >
+              {%- if product.selected_or_first_available_variant.available -%}
+                {%- if product.template_suffix == 'pre-order' or product.metafields.logistics.pre_order.value == true -%}
+                  {{- 'product.form.pre_order' | t -}}
+                {%- else -%}
+                  {{- 'product.form.add_to_cart_panty' | t -}}
+                {%- endif -%}
+              {%- else -%}
+                {{- 'product.form.sold_out' | t -}}
+              {%- endif -%}
+            </button>
+          </product-payment-container>
+        {%- endform -%}
+      </div>
+    </div>
+
+  {%- form 'product', product, class: "complete-the-look__button complete-the-look__button--mobile", data-productid: product.id, is: 'product-form', id: product_form_id -%}
+    {%- if product.metafields.promotion.panty_volume_discount.value == true -%}
+      <input type="hidden" name="properties[_panty_bulk_discount_elligible]" value="true">
+    {%- endif -%}
+
+    {%- if a_b_test_product_id and product.metafields.a_b_test.product_image_1 != blank -%}
+      <input type="hidden" name="properties[_a_b_test_product_image]" value="true">
+    {%- endif -%}
+
+    <input
+      type="hidden"
+      disabled
+      name="id"
+      data-productid="{{ product.id }}"
+      value="{{ product.selected_or_first_available_variant.id }}"
+    >
+
+    <product-payment-container
+      form-id="{{ product_form_id }}"
+      {% if update_url %}id="MainPaymentContainer"{% endif %}
+      class="product-form__payment-container" {{ block.shopify_attributes }}
+    >
+      <button
+        id="AddToCart"
+        type="submit"
+        is="loader-button"
+        data-use-primary
+        data-product-add-to-cart-button
+        data-cy-product-add-to-cart-button
+        data-button-content="{% if product.template_suffix == 'pre-order' or product.metafields.logistics.pre_order.value == true %}{{ 'product.form.pre_order' | t | escape }}{% else %}{{ 'product.form.add_to_cart_panty' | t | escape }}{% endif %}"
+        class="product-form__add-button button {% unless product.selected_or_first_available_variant.available %}button--ternary{% else %}button--primary{% endunless %} button--full"
+        {% unless product.selected_or_first_available_variant.available %}disabled{% endunless %}
+      >
+        {%- if product.selected_or_first_available_variant.available -%}
+          {%- if product.template_suffix == 'pre-order' or product.metafields.logistics.pre_order.value == true -%}
+            {{- 'product.form.pre_order' | t -}}
+          {%- else -%}
+            {{- 'product.form.add_to_cart_panty' | t -}}
+          {%- endif -%}
+        {%- else -%}
+          {{- 'product.form.sold_out' | t -}}
+        {%- endif -%}
+      </button>
+    </product-payment-container>
+  {%- endform -%}
+</product-item>

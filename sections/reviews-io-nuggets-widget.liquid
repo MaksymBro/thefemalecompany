@@ -1,0 +1,137 @@
+<link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+{{ "reviews-io-nuggets-widget.css" | asset_url | stylesheet_tag: preload: preload }}
+
+{%- if section.blocks.size > 0 -%}
+  <section class="section reviews-nuggets-widget">
+    <div class="container">
+      <div class="reviews-nuggets-widget__carousel" data-flickity='{ "wrapAround": true, "pageDots": false, "adaptiveHeight": true }'>
+        {%- for block in section.blocks -%}
+          {%- assign review_bg = block.settings.review_bg -%}
+          {%- assign review_text_color = block.settings.review_text_color -%}
+          {%- assign customer_quote = block.settings.customer_quote -%}
+          {%- assign customer_name = block.settings.customer_name -%}
+          {%- assign customer_city = block.settings.customer_city -%}
+          {%- assign customer_country = block.settings.customer_country -%}
+          {%- assign customer_amount = block.settings.customer_amount -%}
+
+          {%- if customer_quote != blank and customer_name != blank and customer_amount != blank -%}
+            <div class="reviews-nuggets-widget__carousel-cell" {% if review_bg != blank %}style="--review-bg: {{ review_bg }}"{% endif %}>
+              <blockquote class="reviews-nuggets-widget__blockquote" {% if review_text_color != blank %}style="--review-text-color: {{ review_text_color }}"{% endif %}>
+                <div class="reviews-nuggets-widget__blockquote-content">
+                  <div class="reviews-nuggets-widget__quotation-mark reviews-nuggets-widget__quotation-mark--left">“</div>
+
+                  <div class="reviews-nuggets-widget__quotation-mark reviews-nuggets-widget__quotation-mark--right">”</div>
+
+                  <p class="reviews-nuggets-widget__quotation-text">
+                    {{- customer_quote -}}
+                  </p>
+                </div>
+
+                <div class="reviews-nuggets-widget__footer">
+                  <div class="reviews-nuggets-widget__stars" aria-label="{{ 'general.accessibility.star_reviews_info' | t: rating_value: product.metafields.reviews.rating.value, rating_max: product.metafields.reviews.rating.value.scale_max }}">
+                    {%- assign rating_decimal = 0 -%}
+                    {%- assign decimal = customer_amount | modulo: 1 -%}
+
+                    {%- if decimal >= 0.3 and decimal <= 0.7 -%}
+                      {%- assign rating_decimal = 0.5 -%}
+                    {%- elsif decimal > 0.7 -%}
+                      {%- assign rating_decimal = 1 -%}
+                    {%- endif -%}
+
+                    {%- assign rating_as_float = customer_amount | times: 1.0 -%}
+
+                    {%- for i in (1..5) -%}
+                      {%- if rating_as_float >= i -%}
+                        {%- render 'icon' with 'rating-star', class: 'reviews-nuggets-widget__star rating__star--full' -%}
+                      {%- else -%}
+
+                      {%- if rating_decimal == 0.5 -%}
+                        {%- render 'icon' with 'reviews-nuggets-widget-star-half', class: 'reviews-nuggets-widget__star rating__star--half' -%}
+                      {%- elsif rating_decimal == 1 -%}
+                        {%- render 'icon' with 'rating-star', class: 'reviews-nuggets-widget__star rating__star--full' -%}
+                      {%- else -%}
+                        {%- render 'icon' with 'rating-star', class: 'reviews-nuggets-widget__star rating__star--empty' -%}
+                      {%- endif -%}
+                        {%- assign rating_decimal = false -%}
+                      {%- endif -%}
+                    {%- endfor -%}
+                  </div>
+
+                  <div class="reviews-nuggets-widget__author">
+                    {{ customer_name }}{% if customer_city != blank %}, {{ customer_city }}{% endif %}{% if customer_country != blank %}, {{ customer_country }}{% endif %}
+                  </div>
+                </div>
+              </blockquote>
+            </div>
+          {%- endif -%}
+        {%- endfor -%}
+      </div>
+    </div>
+  </section>
+{%- endif -%}
+
+<script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+
+
+{%- schema -%}
+  {
+    "name": "Reviews.io Nuggets Widget",
+    "settings": [
+    ],
+    "blocks": [
+      {
+        "name": "Review",
+        "type": "block",
+        "settings": [
+          {
+            "type": "color",
+            "id": "review_bg",
+            "label": "Review background color",
+            "info": "Choose the background color of the whole review box."
+          },
+          {
+            "type": "color",
+            "id": "review_text_color",
+            "label": "Review text color",
+            "info": "Choose the color of the review text itself."
+          },
+          {
+            "type": "text",
+            "id": "customer_quote",
+            "label": "Customer Quote",
+            "info": "Enter the review quote from the customer."
+          },
+          {
+            "type": "text",
+            "id": "customer_name",
+            "label": "Customer Name",
+            "info": "Enter the Customer's name. This will be displayed below the review."
+          },
+          {
+            "type": "text",
+            "id": "customer_city",
+            "label": "Customer City",
+            "info": "Enter the Customer's city. This will be displayed below the review."
+          },
+          {
+            "type": "text",
+            "id": "customer_country",
+            "label": "Customer Country",
+            "info": "Enter the Customer's country. This will be displayed below the review."
+          },
+          {
+            "type": "text",
+            "id": "customer_amount",
+            "label": "Review Ammount",
+            "info": "Star Amount of the review. 0-5 Stars. 0.5 steps are possible. Example: 4.5 for 4 and a half stars."
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "Reviews.io Nuggets Widget"
+      }
+    ]
+  }
+{%- endschema -%}

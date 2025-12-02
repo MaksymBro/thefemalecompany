@@ -1,0 +1,882 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "collection-banner": {
+      "type": "collection-banner",
+      "settings": {
+        "show_collection_image": true,
+        "show_collection_title": true,
+        "show_collection_description": true,
+        "section_height": "small",
+        "text_width": "large",
+        "heading_font_family": "circular",
+        "image_heading_color": "#fff45d",
+        "image_text_color": "#ffffff",
+        "image_overlay_color": "#1a1a1a",
+        "image_overlay_opacity": 25,
+        "quick_links": ""
+      }
+    },
+    "1726824743aaf7f5c4": {
+      "type": "apps",
+      "blocks": {
+        "reviews_io_reviewsio_rating_bar_G4cPcN": {
+          "type": "shopify://apps/reviews-io/blocks/reviewsio-rating-bar/92a082e5-b297-4e88-b428-ac96cbc505f9",
+          "settings": {
+            "widget_id": "WzwJIZk4v5mPVFUO"
+          }
+        }
+      },
+      "block_order": [
+        "reviews_io_reviewsio_rating_bar_G4cPcN"
+      ],
+      "settings": {
+        "include_horizontal_margins": false,
+        "include_vertical_margins": false
+      }
+    },
+    "custom_html_p4U3Nh": {
+      "type": "custom-html",
+      "settings": {
+        "subheading": "",
+        "title": "",
+        "html": "<div id=\"top\"></div>",
+        "add_vertical_spacing": false,
+        "disable_inside_spacing": false,
+        "background_type": "full_width",
+        "background": "rgba(0,0,0,0)",
+        "text_color": "rgba(0,0,0,0)"
+      }
+    },
+    "bubble_section_nmEmKz": {
+      "type": "bubble-section",
+      "blocks": {
+        "bubble_J34Yg3": {
+          "type": "bubble",
+          "settings": {
+            "logo": "shopify://shop_images/Teen-Panty-Bubble.png",
+            "text": "Period Pantys",
+            "link": "https://buy.thefemalecompany.com/collections/period-pantys-bikinis-fur-teenager?sort_by=best-selling&filter.p.product_type=Periodenunterw%C3%A4sche&filter.v.price.gte=&filter.v.price.lte=&filter.v.availability=1"
+          }
+        },
+        "bubble_miM3NX": {
+          "type": "bubble",
+          "settings": {
+            "logo": "shopify://shop_images/Bubble-Swim-Teens.png",
+            "text": "Swimwear",
+            "link": "https://buy.thefemalecompany.com/collections/period-pantys-bikinis-fur-teenager?sort_by=best-selling&filter.p.m.filters.collection=Perioden+Bademode&filter.p.m.filters.collection=Perioden+Bademode+PERFORMANCE%C2%AE%EF%B8%8F&filter.p.m.filters.collection=Perioden+Bademode+Teens+Tops&filter.p.m.filters.collection=Perioden+Bademode+Teens&filter.v.availability=1&filter.v.price.gte=&filter.v.price.lte="
+          }
+        },
+        "bubble_pWfUgV": {
+          "type": "bubble",
+          "settings": {
+            "logo": "shopify://shop_images/Periode_Bubble_2.png",
+            "text": "Tampons & Co",
+            "link": "https://buy.thefemalecompany.com/collections/teens?sort_by=manual&filter.v.availability=1&filter.p.product_type=Slipeinlagen+%26+Binden&filter.p.product_type=Tampons&filter.v.price.gte=&filter.v.price.lte="
+          }
+        }
+      },
+      "block_order": [
+        "bubble_J34Yg3",
+        "bubble_miM3NX",
+        "bubble_pWfUgV"
+      ],
+      "settings": {
+        "reveal_on_scroll": true,
+        "max_logos_mobile": 3,
+        "max_width_logo_desktop": 130,
+        "max_width_logo_mobile": 135,
+        "logo_background": "rgba(0,0,0,0)",
+        "text_font_size_desktop": 17,
+        "text_font_size_mobile": 15,
+        "section_container_width": "fluid",
+        "section_background_color": "rgba(0,0,0,0)",
+        "section_spacing_top": 20,
+        "section_spacing_bottom": 0,
+        "section_spacing_different_mobile": false,
+        "section_spacing_top_mobile": 0,
+        "section_spacing_bottom_mobile": 0
+      }
+    },
+    "main": {
+      "type": "main-collection",
+      "blocks": {
+        "a982827b-0486-4c7d-8dd5-a1368a263081": {
+          "type": "image",
+          "settings": {
+            "subheading": "Period Pantys für Teenager",
+            "title": "",
+            "content": "<p>The Female Company hat über 1,5 Millionen Period Pantys verkauft. Unsere neuen Period Pantys sind den Bedürfnissen an die “Erste Periode\" angepasst und sorgen dafür, dass du dich während deiner Periode rundum wohl fühlst, wenn du beispielsweise auf Tampons verzichten möchtest. </p>",
+            "link_text": "",
+            "link_url": "",
+            "link_style": "link",
+            "text_position": "middle_left",
+            "background": "#e7a8fb",
+            "subheading_color": "#ffffff",
+            "heading_color": "#ffffff",
+            "text_color": "#ffffff",
+            "button_background": "#ffffff",
+            "button_text_color": "rgba(0,0,0,0)",
+            "image_overlay_color": "#000000",
+            "image_overlay_opacity": 0
+          }
+        }
+      },
+      "block_order": [
+        "a982827b-0486-4c7d-8dd5-a1368a263081"
+      ],
+      "settings": {
+        "products_per_page": 24,
+        "mobile_products_per_row": "2",
+        "desktop_products_per_row": 4,
+        "show_all_colors": false,
+        "hide_from_product_title_start": "",
+        "show_sort_by": true,
+        "show_filters": true,
+        "show_filter_group_name": true,
+        "show_color_swatch": true,
+        "open_first_filter_group": false,
+        "filter_position": "always_visible",
+        "promotion_position": "top",
+        "promotion_height": "small"
+      }
+    },
+    "17054184737768a641": {
+      "type": "apps",
+      "blocks": {
+        "reviews_io_reviewsio_nuggets_NgFRcK": {
+          "type": "shopify://apps/reviews-io/blocks/reviewsio-nuggets/92a082e5-b297-4e88-b428-ac96cbc505f9",
+          "settings": {
+            "widget_id": "NREncGv2V34fIjTA",
+            "is_product_specific": false,
+            "tags": "Daysics",
+            "branch": ""
+          }
+        }
+      },
+      "block_order": [
+        "reviews_io_reviewsio_nuggets_NgFRcK"
+      ],
+      "disabled": true,
+      "settings": {
+        "include_horizontal_margins": true,
+        "include_vertical_margins": true
+      }
+    },
+    "53a9144a-cd36-46cb-80ac-15b9ab41f67b": {
+      "type": "text-with-icons",
+      "blocks": {
+        "template--17141241643274__53a9144a-cd36-46cb-80ac-15b9ab41f67b-item-2": {
+          "type": "item",
+          "settings": {
+            "icon": "picto-phone",
+            "custom_icon": "shopify://shop_images/icon__plant.svg",
+            "custom_icon_width": 40,
+            "title": "SCHADSTOFFfrei",
+            "content": ""
+          }
+        },
+        "template--17141241643274__53a9144a-cd36-46cb-80ac-15b9ab41f67b-item-3": {
+          "type": "item",
+          "settings": {
+            "icon": "picto-lock",
+            "custom_icon": "shopify://shop_images/Icon_Wearing_Period.svg",
+            "custom_icon_width": 40,
+            "title": "Bis zu 12h auslaufsicher",
+            "content": ""
+          }
+        },
+        "template--17141241643274__53a9144a-cd36-46cb-80ac-15b9ab41f67b-item-1": {
+          "type": "item",
+          "settings": {
+            "icon": "picto-box",
+            "custom_icon": "shopify://shop_images/Icon_Vegan.png",
+            "custom_icon_width": 40,
+            "title": "Ohne Tierversuche",
+            "content": ""
+          }
+        },
+        "item_qaxKA4": {
+          "type": "item",
+          "settings": {
+            "icon": "picto-customer-support",
+            "custom_icon": "shopify://shop_images/Icon_Leakproof.svg",
+            "custom_icon_width": 50,
+            "title": "Superdry nach 21 Sekunden",
+            "content": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--17141241643274__53a9144a-cd36-46cb-80ac-15b9ab41f67b-item-2",
+        "template--17141241643274__53a9144a-cd36-46cb-80ac-15b9ab41f67b-item-3",
+        "template--17141241643274__53a9144a-cd36-46cb-80ac-15b9ab41f67b-item-1",
+        "item_qaxKA4"
+      ],
+      "settings": {
+        "background": "#e3cef7",
+        "text_color": "#ff3f46",
+        "no_slideshow": false
+      }
+    },
+    "multi_column_PbtL33": {
+      "type": "multi-column",
+      "blocks": {
+        "item_qTCKEc": {
+          "type": "item",
+          "settings": {
+            "image_width": 37,
+            "image_border": "rgba(0,0,0,0)",
+            "title": "Schadstofffrei",
+            "content": "<p>Unsere Labortests haben ergeben: Unsere Produkte sind garantiert <strong>biozid- und schadstofffrei. </strong></p>",
+            "link_text": "",
+            "link_url": "",
+            "link_style": "link",
+            "text_alignment": "center",
+            "vertical_alignment": "start"
+          }
+        },
+        "item_zcGDFa": {
+          "type": "item",
+          "settings": {
+            "image_width": 40,
+            "image_border": "rgba(0,0,0,0)",
+            "title": "Vegan",
+            "content": "<p>Unsere Produkte werden <strong>vegan und ohne Tierversuche</strong> hergestellt. </p>",
+            "link_text": "",
+            "link_url": "",
+            "link_style": "link",
+            "text_alignment": "center",
+            "vertical_alignment": "start"
+          }
+        },
+        "item_Xj9fXb": {
+          "type": "item",
+          "settings": {
+            "image_width": 36,
+            "image_border": "rgba(0,0,0,0)",
+            "title": "12h auslaufsicher",
+            "content": "<p>Du brauchst <strong>keine Angst mehr haben, auszulaufen.</strong> Besonders praktisch, wenn du <strong>unterwegs</strong> bist!</p>",
+            "link_text": "",
+            "link_url": "",
+            "link_style": "link",
+            "text_alignment": "center",
+            "vertical_alignment": "start"
+          }
+        },
+        "item_WYRemD": {
+          "type": "item",
+          "settings": {
+            "image_width": 48,
+            "image_border": "rgba(0,0,0,0)",
+            "title": "Super Dry",
+            "content": "<p>Die neue Technologie sorgt für <strong>schnelles Einziehen und ein trockenes Gefühl </strong>innerhalb von 21 Sekunden. </p>",
+            "link_text": "",
+            "link_url": "",
+            "link_style": "link",
+            "text_alignment": "center",
+            "vertical_alignment": "start"
+          }
+        },
+        "item_ihk6Nj": {
+          "type": "item",
+          "settings": {
+            "image_width": 100,
+            "image_border": "rgba(0,0,0,0)",
+            "title": "Du sparst Geld",
+            "content": "<p>Period Pantys sind <strong>wiederverwendbar. </strong>So sparst du auf lange Sicht Geld, weil du weniger Geld für Tampons ausgibst. </p>",
+            "link_text": "",
+            "link_url": "",
+            "link_style": "link",
+            "text_alignment": "center",
+            "vertical_alignment": "start"
+          }
+        },
+        "item_VqDWnk": {
+          "type": "item",
+          "settings": {
+            "image_width": 100,
+            "image_border": "rgba(0,0,0,0)",
+            "title": "Gut für die Umwelt",
+            "content": "<p>Du schonst nicht nur deinen Geldbeutel, sondern auch die Umwelt, da <strong>weniger Müll produziert </strong>wird. </p>",
+            "link_text": "",
+            "link_url": "",
+            "link_style": "link",
+            "text_alignment": "center",
+            "vertical_alignment": "start"
+          }
+        }
+      },
+      "block_order": [
+        "item_qTCKEc",
+        "item_zcGDFa",
+        "item_Xj9fXb",
+        "item_WYRemD",
+        "item_ihk6Nj",
+        "item_VqDWnk"
+      ],
+      "settings": {
+        "reveal_on_scroll": true,
+        "stack_items": true,
+        "subheading": "Periodenunterwäsche für Teenager",
+        "title": "Vorteile von Periodenunterwäsche",
+        "content": "",
+        "column_alignment": "center",
+        "mobile_item_size": "small",
+        "desktop_item_size": "large",
+        "spacing": "loose",
+        "background": "#d3adfa",
+        "text_color": "#ffffff"
+      }
+    },
+    "section_header_xbmmqX": {
+      "type": "section-header",
+      "disabled": true,
+      "settings": {
+        "start_year": 2025,
+        "start_month": 1,
+        "start_day": 1,
+        "start_time": "10:00",
+        "end_year": 2050,
+        "end_month": 12,
+        "end_day": 31,
+        "end_time": "10:00",
+        "section_subheading": "Wie funktioniert das eigentlich?",
+        "section_heading": "So funktioniert Periodenunterwäsche",
+        "allow_heading_override": false,
+        "section_short_description": "<p>Imina aus unserem Team erklärt euch, wie Periodenunterwäsche und -bikinis funktionieren und wie ihr sie wascht. </p>",
+        "heading_size": "h3",
+        "highest_hierarchy": false,
+        "section_heading_font_family": "default",
+        "short_description_font_size": "medium",
+        "section_text_color": "#ffffff",
+        "section_heading_color": "#ffffff",
+        "section_subheading_color": "#ffffff",
+        "section_container_width": "sm",
+        "section_background_color": "#d3adfa",
+        "section_spacing_top": 32,
+        "section_spacing_bottom": 32,
+        "section_spacing_different_mobile": false,
+        "section_spacing_top_mobile": 0,
+        "section_spacing_bottom_mobile": 0
+      }
+    },
+    "pagefly_section_HrrAxz": {
+      "type": "pagefly-section",
+      "disabled": true,
+      "settings": {
+        "section_id": "pf-f7f96560"
+      }
+    },
+    "text_with_icons_6rRiLH": {
+      "type": "text-with-icons",
+      "blocks": {
+        "item_UnnBNK": {
+          "type": "item",
+          "settings": {
+            "icon": "picto-box",
+            "custom_icon": "shopify://shop_images/Icon_Thin_Layer.svg",
+            "custom_icon_width": 65,
+            "title": "1mm dicker als unterwäsche",
+            "content": ""
+          }
+        },
+        "item_4hkipe": {
+          "type": "item",
+          "settings": {
+            "icon": "picto-phone",
+            "custom_icon": "shopify://shop_images/Icon_Certified.svg",
+            "custom_icon_width": 40,
+            "title": "Hohenstein Getestet",
+            "content": ""
+          }
+        },
+        "item_Baknac": {
+          "type": "item",
+          "settings": {
+            "icon": "picto-lock",
+            "custom_icon": "shopify://shop_images/Icon_AirCirculation.png",
+            "custom_icon_width": 50,
+            "title": "Atmungsaktiv",
+            "content": ""
+          }
+        }
+      },
+      "block_order": [
+        "item_UnnBNK",
+        "item_4hkipe",
+        "item_Baknac"
+      ],
+      "disabled": true,
+      "settings": {
+        "background": "#f0beff",
+        "text_color": "#ff3f46",
+        "no_slideshow": true
+      }
+    },
+    "video_with_text_n7YVBN": {
+      "type": "video-with-text",
+      "blocks": {
+        "item_8VmyC3": {
+          "type": "item",
+          "settings": {
+            "video": "shopify://files/videos/how to wash final (1).mp4",
+            "tab_label": "Item",
+            "subheading": "Subheading",
+            "title": "Video with text",
+            "content": "<p>Use video with text to give your customers insight into your brand. Select video and text that relates to your style and story.</p>",
+            "button_text": "",
+            "button_link": ""
+          }
+        },
+        "item_mf9Wn7": {
+          "type": "item",
+          "settings": {
+            "video": "shopify://files/videos/how to wash final (1).mp4",
+            "tab_label": "Item",
+            "subheading": "Subheading",
+            "title": "Video with text",
+            "content": "<p>Use video with text to give your customers insight into your brand. Select video and text that relates to your style and story.</p>",
+            "button_text": "",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "item_8VmyC3",
+        "item_mf9Wn7"
+      ],
+      "disabled": true,
+      "settings": {
+        "reveal_on_scroll": true,
+        "background_type": "full_width",
+        "background_overlap": "video",
+        "video_position": "left",
+        "text_alignment": "center",
+        "accent_background": "rgba(0,0,0,0)",
+        "text_color": "rgba(0,0,0,0)",
+        "button_background": "rgba(0,0,0,0)",
+        "button_text_color": "rgba(0,0,0,0)"
+      }
+    },
+    "multi_column_qhxGYK": {
+      "type": "multi-column",
+      "blocks": {
+        "item_jYFzbB": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/panty_layer_closeup_layer1.jpg",
+            "image_width": 100,
+            "image_border": "rgba(0,0,0,0)",
+            "title": "Layer 1: Stay Dry Layer™",
+            "content": "<p><strong>Saugt Flüssigkeit</strong>, wie <strong>Ausfluss</strong> oder <strong>leichte Blutungen</strong> blitzschnell auf und trocknet innerhalb weniger <strong>Sekunden</strong>.</p>",
+            "link_text": "",
+            "link_url": "",
+            "link_style": "link",
+            "text_alignment": "left",
+            "vertical_alignment": "start"
+          }
+        },
+        "item_wVQiVk": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/panty_layer_closeup_layer2_alt.jpg",
+            "image_width": 100,
+            "image_border": "rgba(0,0,0,0)",
+            "title": "Layer 2: Absorbierende Schicht",
+            "content": "<p><strong>Speichert</strong> die Flüssigkeit und schließt sie<strong> sicher </strong>und<strong> trocken </strong>ein.</p>",
+            "link_text": "",
+            "link_url": "",
+            "link_style": "link",
+            "text_alignment": "left",
+            "vertical_alignment": "start"
+          }
+        },
+        "item_jGMwNr": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/panty_layer_closeup_layer3.jpg",
+            "image_width": 100,
+            "image_border": "rgba(0,0,0,0)",
+            "title": "Layer 3: Wasserdichte Membran",
+            "content": "<p>Sorgt für <strong>zero Auslaufgefahr</strong>, auch bei längerer Tragedauer.</p>",
+            "link_text": "",
+            "link_url": "",
+            "link_style": "link",
+            "text_alignment": "left",
+            "vertical_alignment": "start"
+          }
+        },
+        "item_RJTdnY": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/panty_layer_closeup_layer4_070ad79d-1f21-4c24-8941-cc2cf0159468.jpg",
+            "image_width": 100,
+            "image_border": "rgba(0,0,0,0)",
+            "title": "Layer 4: Weicher Oberstoff",
+            "content": "<p>Super weiche Bio-Baumwolle bzw. recyceltes Polyester für ein extra <strong>comfy</strong> <strong>Tragegefühl</strong>.</p>",
+            "link_text": "",
+            "link_url": "",
+            "link_style": "link",
+            "text_alignment": "left",
+            "vertical_alignment": "start"
+          }
+        }
+      },
+      "block_order": [
+        "item_jYFzbB",
+        "item_wVQiVk",
+        "item_jGMwNr",
+        "item_RJTdnY"
+      ],
+      "disabled": true,
+      "settings": {
+        "reveal_on_scroll": true,
+        "stack_items": false,
+        "subheading": "Stay Dry: Every Day",
+        "title": "Stay Dry Layer Technologie™",
+        "content": "<p>Entwickelt mit Textiltechniker*innen und Gynäkolog*innen: dünn wie deine <strong>normale Unterwäsche</strong> und trotzdem <strong>sau(g)stark</strong>. Die Daysics® können damit bis zu <strong>zwei Slipeinlagen</strong> ersetzen.</p>",
+        "column_alignment": "center",
+        "mobile_item_size": "medium",
+        "desktop_item_size": "medium",
+        "spacing": "tight",
+        "background": "#d3adfa",
+        "text_color": "#ffffff"
+      }
+    },
+    "image_with_text_CFfJyW": {
+      "type": "image-with-text",
+      "blocks": {
+        "item_aa3eHj": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/daysics_schadstoffe-1673959726916_500x_549eb876-09ba-4cea-95be-bf374ad89b68.webp",
+            "tab_label": "",
+            "subheading": "",
+            "title": "In 76 % der Slipeinlagen befinden sich halogenorganische Rückstände.",
+            "content": "<p>Laut <a href=\"https://www.oekotest.de/kosmetik-wellness/Slipeinlagen-und-Binden-im-Test-Wie-schneiden-Jessa-Always-Co-ab_13216_1.html\" target=\"_blank\">ÖKO TEST</a> von 2022. Manche davon gelten als krebserregend, viele als allergieauslösend und fast alle schaden der Umwelt.<br/><br/><strong>Nicht mit uns: </strong>Unsere Produkte bestehen aus Bio-Baumwolle, unterlaufen ein aufwändiges Testverfahren & sind dank OEKO-TEX® Standard 100 als schadstofffrei ausgewiesen.</p>",
+            "button_text": "",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "item_aa3eHj"
+      ],
+      "disabled": true,
+      "settings": {
+        "reveal_on_scroll": true,
+        "background_type": "full_width",
+        "background_overlap": "both",
+        "image_position": "left",
+        "text_alignment": "left",
+        "cycle_speed": 8,
+        "accent_background": "#e7a8fb",
+        "text_color": "#ffffff",
+        "button_background": "rgba(0,0,0,0)",
+        "button_text_color": "rgba(0,0,0,0)"
+      }
+    },
+    "pagefly_section_EULYGt": {
+      "type": "pagefly-section",
+      "settings": {
+        "section_id": "pf-f7f96560"
+      }
+    },
+    "faq_bDYPmn": {
+      "type": "faq",
+      "blocks": {
+        "faq_collection_GmReAU": {
+          "type": "faq_collection",
+          "settings": {
+            "metaobject_handle": "teens",
+            "show_title": true
+          }
+        },
+        "faq_collection_QWXQdR": {
+          "type": "faq_collection",
+          "settings": {
+            "metaobject_handle": "swim-teens",
+            "show_title": true
+          }
+        }
+      },
+      "block_order": [
+        "faq_collection_GmReAU",
+        "faq_collection_QWXQdR"
+      ],
+      "settings": {
+        "show_navigation": false,
+        "enable_schema": false,
+        "section_header_subheading": "Ihr fragt, wir antworten",
+        "section_header_heading": "Häufig gestellte Fragen",
+        "section_header_short_description": "",
+        "section_header_heading_size": "h3",
+        "section_header_highest_hierarchy": false,
+        "section_header_short_description_font_size": "medium",
+        "section_container_width": "md",
+        "section_text_alignment": "left",
+        "section_background_color": "#c18ef5",
+        "section_text_color": "#ffffff",
+        "section_heading_color": "#ffffff",
+        "section_subheading_color": "rgba(0,0,0,0)",
+        "section_heading_font_family": "default",
+        "section_spacing_top": 32,
+        "section_spacing_bottom": 32,
+        "section_spacing_different_mobile": false,
+        "section_spacing_top_mobile": 0,
+        "section_spacing_bottom_mobile": 0
+      }
+    },
+    "button_9XNLbT": {
+      "type": "button",
+      "disabled": true,
+      "settings": {
+        "start_year": 2025,
+        "start_month": 1,
+        "start_day": 1,
+        "start_time": "10:00",
+        "end_year": 2050,
+        "end_month": 12,
+        "end_day": 31,
+        "end_time": "10:00",
+        "button_text": "Zum Hilfe-Center",
+        "button_link": "https://help.thefemalecompany.com/",
+        "button_link_new_window": true,
+        "button_details": "",
+        "button_style": "white",
+        "button_outline": true,
+        "button_shadow": false,
+        "button_size": "md",
+        "button_fit": "inline",
+        "section_container_width": "md",
+        "section_text_alignment": "center",
+        "section_background_color": "#f3cbfc",
+        "section_spacing_top": 16,
+        "section_spacing_bottom": 44,
+        "section_spacing_different_mobile": true,
+        "section_spacing_top_mobile": 0,
+        "section_spacing_bottom_mobile": 32
+      }
+    },
+    "086ade51-e68b-4bd2-96fa-049b4cd450cb": {
+      "type": "pagefly-section",
+      "disabled": true,
+      "settings": {
+        "section_id": "pf-e3fee6ed"
+      }
+    },
+    "e531ecc9-004e-4a76-82be-8b86bd160d26": {
+      "type": "pagefly-section",
+      "disabled": true,
+      "settings": {
+        "section_id": "pf-3fbe0e3b"
+      }
+    },
+    "bf166710-487b-4d98-8b70-938b294efa6b": {
+      "type": "pagefly-section",
+      "disabled": true,
+      "settings": {
+        "section_id": "pf-7e67f8c7"
+      }
+    },
+    "section_header_eHHt8J": {
+      "type": "section-header",
+      "settings": {
+        "start_year": 2025,
+        "start_month": 1,
+        "start_day": 1,
+        "start_time": "10:00",
+        "end_year": 2050,
+        "end_month": 12,
+        "end_day": 31,
+        "end_time": "10:00",
+        "section_subheading": "V u l v a   M a g",
+        "section_heading": "Alles rund um die erste Periode",
+        "allow_heading_override": false,
+        "section_short_description": "",
+        "heading_size": "h3",
+        "highest_hierarchy": false,
+        "section_heading_font_family": "default",
+        "short_description_font_size": "medium",
+        "section_text_color": "#ff3f46",
+        "section_heading_color": "#ff3f46",
+        "section_subheading_color": "rgba(0,0,0,0)",
+        "section_container_width": "sm",
+        "section_background_color": "#d3adfa",
+        "section_spacing_top": 32,
+        "section_spacing_bottom": 0,
+        "section_spacing_different_mobile": false,
+        "section_spacing_top_mobile": 0,
+        "section_spacing_bottom_mobile": 0
+      }
+    },
+    "762d5a4e-78b3-42e8-9ccb-ce81b30133fc": {
+      "type": "image-with-text",
+      "blocks": {
+        "template--17141241643274__762d5a4e-78b3-42e8-9ccb-ce81b30133fc-item-1": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/2024-09-12_female-company-teens-2135-copy-1.jpg",
+            "tab_label": "",
+            "subheading": "",
+            "title": "",
+            "content": "<p>Die erste Periode steht an - Das kann einen schon mal nervös machen .. muss es aber nicht! Dein Körper macht jetzt Entwicklungen durch, die ganz natürlich sind. Und ja, Neues kann Angst machen - Aber menstruieren kannst du locker! Und die paar Tipps die du brauchst, haben wir!</p>",
+            "button_text": "Weiterlesen",
+            "button_link": "https://buy.thefemalecompany.com/blogs/periodenunterwaesche-ratgeber/periodenunterwasche-nutzen-erste-periode"
+          }
+        }
+      },
+      "block_order": [
+        "template--17141241643274__762d5a4e-78b3-42e8-9ccb-ce81b30133fc-item-1"
+      ],
+      "settings": {
+        "reveal_on_scroll": true,
+        "background_type": "full_width",
+        "background_overlap": "both",
+        "image_position": "left",
+        "text_alignment": "center",
+        "cycle_speed": 8,
+        "accent_background": "#d3adfa",
+        "text_color": "#ffffff",
+        "button_background": "rgba(0,0,0,0)",
+        "button_text_color": "rgba(0,0,0,0)"
+      }
+    },
+    "multi_column_NA8cLN": {
+      "type": "multi-column",
+      "blocks": {
+        "item_tczhar": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/Bildschirmfoto_2024-09-20_um_15.07.14.png",
+            "image_width": 100,
+            "image_border": "rgba(0,0,0,0)",
+            "title": "",
+            "content": "",
+            "link_text": "",
+            "link_url": "shopify://collections/b2b-tamponspender",
+            "link_style": "link",
+            "text_alignment": "center",
+            "vertical_alignment": "start"
+          }
+        },
+        "item_D4y4PW": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/Bildschirmfoto_2024-09-20_um_15.06.50.png",
+            "image_width": 100,
+            "image_border": "rgba(0,0,0,0)",
+            "title": "",
+            "content": "",
+            "link_text": "",
+            "link_url": "",
+            "link_style": "link",
+            "text_alignment": "center",
+            "vertical_alignment": "start"
+          }
+        },
+        "item_NrYwJT": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/Bildschirmfoto_2024-09-20_um_15.07.14.png",
+            "image_width": 100,
+            "image_border": "rgba(0,0,0,0)",
+            "title": "",
+            "content": "",
+            "link_text": "",
+            "link_url": "",
+            "link_style": "link",
+            "text_alignment": "center",
+            "vertical_alignment": "start"
+          }
+        },
+        "item_VrKXDK": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/Bildschirmfoto_2024-09-20_um_15.07.05.png",
+            "image_width": 100,
+            "image_border": "rgba(0,0,0,0)",
+            "title": "",
+            "content": "",
+            "link_text": "",
+            "link_url": "",
+            "link_style": "link",
+            "text_alignment": "center",
+            "vertical_alignment": "start"
+          }
+        }
+      },
+      "block_order": [
+        "item_tczhar",
+        "item_D4y4PW",
+        "item_NrYwJT",
+        "item_VrKXDK"
+      ],
+      "disabled": true,
+      "settings": {
+        "reveal_on_scroll": true,
+        "stack_items": false,
+        "subheading": "SCHLAU GEFRAGT",
+        "title": "Wird decken Mythen rund um den Zyklus auf",
+        "content": "",
+        "column_alignment": "center",
+        "mobile_item_size": "medium",
+        "desktop_item_size": "medium",
+        "spacing": "normal",
+        "background": "#c18ef5",
+        "text_color": "#fff45d"
+      }
+    },
+    "marquee_BxHtyR": {
+      "type": "marquee",
+      "custom_css": [
+        ".marquee__content span {font-family: \"Publico\"; font-weight: bold; font-size: 30px;}"
+      ],
+      "settings": {
+        "content": "<p><strong>WHO RUN THE WORLD?</strong></p>",
+        "separator": "",
+        "section_link": "",
+        "repeat": 13,
+        "min_gap": 17,
+        "animation_speed": 200,
+        "text_color": "#fff45d",
+        "background": "#c18ef5"
+      }
+    }
+  },
+  "order": [
+    "collection-banner",
+    "1726824743aaf7f5c4",
+    "custom_html_p4U3Nh",
+    "bubble_section_nmEmKz",
+    "main",
+    "17054184737768a641",
+    "53a9144a-cd36-46cb-80ac-15b9ab41f67b",
+    "multi_column_PbtL33",
+    "section_header_xbmmqX",
+    "pagefly_section_HrrAxz",
+    "text_with_icons_6rRiLH",
+    "video_with_text_n7YVBN",
+    "multi_column_qhxGYK",
+    "image_with_text_CFfJyW",
+    "pagefly_section_EULYGt",
+    "faq_bDYPmn",
+    "button_9XNLbT",
+    "086ade51-e68b-4bd2-96fa-049b4cd450cb",
+    "e531ecc9-004e-4a76-82be-8b86bd160d26",
+    "bf166710-487b-4d98-8b70-938b294efa6b",
+    "section_header_eHHt8J",
+    "762d5a4e-78b3-42e8-9ccb-ce81b30133fc",
+    "multi_column_NA8cLN",
+    "marquee_BxHtyR"
+  ]
+}

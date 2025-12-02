@@ -1,0 +1,19 @@
+.text-circular, .text--circular {
+  font-family: var(--font-circular);
+}
+
+.text-publico, .text--publico {
+  font-family: var(--font-publico);
+}
+
+.text--bold {
+  font-weight: var(--text-font-bold-weight);
+}
+
+.d-block {
+  display: block;
+}
+
+.d-none {
+  display: none;
+}

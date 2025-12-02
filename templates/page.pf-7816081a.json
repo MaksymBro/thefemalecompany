@@ -1,0 +1,84 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "pf-7816081a": {
+      "type": "pf-7816081a",
+      "settings": {}
+    },
+    "featured_product_NVDi3m": {
+      "type": "featured-product",
+      "blocks": {
+        "variant_picker_UtLRHa": {
+          "type": "variant_picker",
+          "settings": {
+            "hide_sold_out_variants": false,
+            "selector_mode": "block",
+            "color_mode": "color",
+            "size_chart_page": ""
+          }
+        },
+        "quantity_selector_xUNFc7": {
+          "type": "quantity_selector",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "variant_picker_UtLRHa",
+        "quantity_selector_xUNFc7"
+      ],
+      "disabled": true,
+      "settings": {
+        "product": "world-womens-day-t-shirt",
+        "subheading": "",
+        "title": "",
+        "show_vendor": false,
+        "show_sku": false,
+        "show_taxes_included": false,
+        "show_product_rating": false,
+        "show_share_buttons": false,
+        "help_page": "",
+        "enable_video_autoplay": true,
+        "enable_video_looping": false,
+        "enable_image_zoom": true,
+        "show_thumbnails_on_mobile": false,
+        "desktop_thumbnails_position": "bottom",
+        "transition_effect": "slide",
+        "background": "rgba(0,0,0,0)",
+        "text_color": "rgba(0,0,0,0)"
+      }
+    },
+    "pagefly_section_BGcRe4": {
+      "type": "pagefly-section",
+      "settings": {
+        "section_id": "pf-c030242d"
+      }
+    },
+    "pagefly_section_NWnWyD": {
+      "type": "pagefly-section",
+      "settings": {
+        "section_id": "pf-3852e12c"
+      }
+    },
+    "pagefly_section_HfYaEM": {
+      "type": "pagefly-section",
+      "settings": {
+        "section_id": "pf-679d5251"
+      }
+    }
+  },
+  "order": [
+    "pf-7816081a",
+    "featured_product_NVDi3m",
+    "pagefly_section_BGcRe4",
+    "pagefly_section_NWnWyD",
+    "pagefly_section_HfYaEM"
+  ]
+}

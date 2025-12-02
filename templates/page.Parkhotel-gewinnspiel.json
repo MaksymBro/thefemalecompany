@@ -1,0 +1,139 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "show_title": true,
+        "show_breadcrumbs": true,
+        "page_width": "medium"
+      }
+    },
+    "image_with_text_overlay_CihxBN": {
+      "type": "image-with-text-overlay",
+      "settings": {
+        "reveal_on_scroll": true,
+        "section_height": "small",
+        "image": "shopify://shop_images/42b48a447cf5c36deab855913266a48d_1_bcb661f9-2230-4931-8aa9-618e6ee334ba.png",
+        "subheading": "Gewinnspiel",
+        "title": "Gewinne einen Aufenthalt im Bleiche Resort & Spa + unsere neue Swim Kollektion",
+        "content": "",
+        "button_text": "",
+        "button_link": "",
+        "link_style": "link",
+        "background_type": "full_width",
+        "text_width": "medium",
+        "text_position": "middle_center",
+        "text_color": "#ffffff",
+        "button_background": "#ffffff",
+        "button_text_color": "#000000",
+        "overlay_color": "#000000",
+        "overlay_opacity": 30
+      }
+    },
+    "custom_html_inVJQ8": {
+      "type": "custom-html",
+      "settings": {
+        "subheading": "Mitmachen & gewinnen",
+        "title": "Gewinnspielanmeldung",
+        "html": "<div class=\"klaviyo-form-YfKGnp\"></div>",
+        "add_vertical_spacing": true,
+        "disable_inside_spacing": false,
+        "background_type": "full_width",
+        "background": "rgba(0,0,0,0)",
+        "text_color": "rgba(0,0,0,0)"
+      }
+    },
+    "rich_text_dWzwmX": {
+      "type": "rich-text",
+      "settings": {
+        "subheading": "Das ist enthalten:",
+        "title": "",
+        "content": "<ul><li>Für dich und eine Begleitperson</li><li>2 Nächte inklusive Frühstück</li><li>Zusätzlich: Gutschein für die neue Period Swim Kollektion von The Female Company</li></ul><p></p>",
+        "button_text": "",
+        "button_link": "",
+        "background_type": "full_width",
+        "text_width": "medium",
+        "text_position": "center",
+        "text_alignment": "left",
+        "background": "rgba(0,0,0,0)",
+        "text_color": "#1a1a1a",
+        "button_background": "rgba(0,0,0,0)",
+        "button_text_color": "rgba(0,0,0,0)"
+      }
+    },
+    "17588693393e97ace2": {
+      "type": "apps",
+      "blocks": {
+        "klaviyo_email_marketing_sms_form_embed_block_WPTnP3": {
+          "type": "shopify://apps/klaviyo-email-marketing-sms/blocks/form-embed-block/2632fe16-c075-4321-a88b-50b567f42507",
+          "settings": {
+            "formId": "<div class=\"klaviyo-form-S9CsxR\"></div>"
+          }
+        }
+      },
+      "block_order": [
+        "klaviyo_email_marketing_sms_form_embed_block_WPTnP3"
+      ],
+      "settings": {
+        "include_horizontal_margins": true,
+        "include_vertical_margins": true
+      }
+    },
+    "rich_text_qKKB6r": {
+      "type": "rich-text",
+      "name": "Rich text",
+      "settings": {
+        "subheading": "",
+        "title": "",
+        "content": "<p><strong>Bleiche Resort & Spa – aussergewöhnliches Wellnessdomizil im Spreewald<br/><br/></strong>Nur eine Autostunde südlich von Berlin liegt das Bleiche Resort & Spa, eingebettet in die einzigartige Natur des UNESCO-geschützten Spreewaldes. Das Haus verbindet unaufgeregten Luxus mit Natürlichkeit, Kunst und Kultur. 90 individuell gestaltete Zimmer und Suiten, eine Buchhandlung und Bibliothek mit über 15.000 Büchern sowie Autor*innen-Residenzen prägen die besondere Atmosphäre. Kulinarisch setzt das Resort auf regionale Frische in acht Hotelrestaurants, Bar und auf der Sonnenterrasse. Herzstück ist die 5.000 m² große Landtherme, das Badehaus im Spreewälder Stil mit Pools, Saunen, Hamam, Spa-Kino und großzügigen Ruhebereichen. Weitläufige Gärten, Wasserarme und der hauseigene Kahnhafen machen die »Bleiche« zu einem außergewöhnlichen Rückzugsort für Körper, Geist und Seele.<a href=\"http://www.bleiche.de/\" target=\"_blank\">www.bleiche.de</a></p>",
+        "button_text": "",
+        "button_link": "",
+        "background_type": "full_width",
+        "text_width": "medium",
+        "text_position": "center",
+        "text_alignment": "left",
+        "background": "rgba(0,0,0,0)",
+        "text_color": "rgba(0,0,0,0)",
+        "button_background": "rgba(0,0,0,0)",
+        "button_text_color": "rgba(0,0,0,0)"
+      }
+    },
+    "rich_text_hYTTak": {
+      "type": "rich-text",
+      "settings": {
+        "subheading": "",
+        "title": "",
+        "content": "<p>Der Gutschein umfasst folgende Leistungen:</p><p><strong>2 Übernachtung für 2 Personen im Doppelzimmer</strong></p><p>Anreise Sonntag bis Mittwoch, nicht an Feiertagen und nach Verfügbarkeit, gültig für 1 Jahr. Inkl. Genusspauschale und Landtherme. Für mehr Details: <a href=\"http://www.bleiche.de/\"><em>www.bleiche.de</em></a></p><p><strong>Bei Ihrem Aufenthalt erwarten Sie</strong></p><ul><li>Ihr persönlicher Bademantel für den Aufenthalt</li><li>Nutzung der Landtherme mit dem Schwimmbad am Kamin, beheiztem Außenpool, Whirlpool, Saunen, Saline, Dampfbad, Fitnessraum, dem Familienpool mit extra Sauna, den großzügigen Ruheräumen mit extra vielen Liegen, der Bleiche Bibliothek zu Kunst und Philosophie sowie den Landtherme Lichtspielen</li><li>Mineralwasser am Tag der Anreise in Ihrem Zimmer</li><li>Teilnahme an täglichen Fitness- & Entspannungsangeboten nach vorheriger Reservierung</li><li>Nutzung der vielfältigen Außensportanlagen  </li><li>Unsere großzügige Gartenanlage mit viel Platz für Ihren Liegestuhl</li><li>Nutzung unseres SPA-Cinema Landtherme Lichtspiele mit täglich wechselndem, ausgesuchten Filmprogramm</li><li>Nutzung unserer Bibliotheken zu ausgesucht schönen und interessanten Themen</li><li>Shuttle vom und zum Bahnhof Vetschau nach rechtzeitiger Anmeldung</li><li>Eintritt zu unseren regelmäßigen Lesungen während des Aufenthaltes der Spreewald-Literatur-Stipendiaten</li></ul><p><br/><strong>INKLUSIVE GENUSSPAUSCHALE</strong></p><ul><li>Frühstück ab 7:30 Uhr, wann immer sie ausgeschlafen haben</li><li>Kulinarische Kleinigkeiten in unserem Bios für zwischendurch</li><li>Unser exklusives Bleiche-Abendmenü<br/></li></ul><p></p>",
+        "button_text": "",
+        "button_link": "",
+        "background_type": "full_width",
+        "text_width": "medium",
+        "text_position": "center",
+        "text_alignment": "left",
+        "background": "rgba(0,0,0,0)",
+        "text_color": "rgba(0,0,0,0)",
+        "button_background": "rgba(0,0,0,0)",
+        "button_text_color": "rgba(0,0,0,0)"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "image_with_text_overlay_CihxBN",
+    "custom_html_inVJQ8",
+    "rich_text_dWzwmX",
+    "17588693393e97ace2",
+    "rich_text_qKKB6r",
+    "rich_text_hYTTak"
+  ]
+}

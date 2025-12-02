@@ -1,0 +1,28 @@
+{%- assign absorbency_count = absorbency_count | default: product.metafields.filters.absorbancy.value -%}
+{%- assign absorbency_count = absorbency_count | replace: ' Drops', '' | times: 1.0 -%}
+{%- assign absorbency_decimal = absorbency_count | modulo: 1 -%}
+{%- assign absorbency_drops_left = 4 | minus: absorbency_count | floor -%}
+{%- assign absorbency_count = absorbency_count | floor %}
+
+<span class="product-item-meta__filters-absorbency-icons" style="white-space: nowrap; overflow: hidden;">
+  {%- assign droplet_width = 8 %}
+  {%- assign droplet_height = 10 %}
+
+  {%- for i in (1..absorbency_count) -%}
+    {%- render 'icon' with width: droplet_width, height: droplet_height, inline: true, icon: 'absorbency-droplet' %}
+  {%- endfor -%}
+
+  {%- if absorbency_decimal > 0 -%}
+    {%- render 'icon' with width: droplet_width, height: droplet_height, inline: true, icon: 'absorbency-droplet-half' %}
+  {%- endif -%}
+
+  {%- if absorbency_count == 0 -%}
+    {%- render 'icon' with width: droplet_width, height: droplet_height, inline: true, icon: 'absorbency-droplet-empty' %}
+  {%- endif -%}
+
+  {%- comment -%}
+    {%- for i in (1..absorbency_drops_left) -%}
+      {%- render 'icon' with width: droplet_width, height: droplet_height, inline: true, icon: 'absorbency-droplet-empty' %}
+    {%- endfor -%}
+  {%- endcomment -%}
+</span>

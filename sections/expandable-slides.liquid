@@ -1,0 +1,1697 @@
+{%- liquid
+  assign now = 'now' | date: '%s'
+  assign should_render = true
+
+  if section.settings.schedule_publishing
+    assign publish_date = section.settings.publish_date | date: '%s'
+
+    if publish_date != blank and now < publish_date
+      assign should_render = false
+    endif
+  endif
+
+  if section.settings.schedule_unpublishing
+    assign unpublish_date = section.settings.unpublish_date | date: '%s'
+
+    if unpublish_date != blank and now > unpublish_date
+      assign should_render = false
+    endif
+  endif
+-%}
+
+{% if should_render %}
+  <style>
+    #shopify-section-{{ section.id }} {
+      --section-background: {{ section.settings.background.red }}, {{ section.settings.background.green }}, {{ section.settings.background.blue }};
+      --text-color: {{ section.settings.text_color.red }}, {{ section.settings.text_color.green }}, {{ section.settings.text_color.blue }};
+      --active-text-color: {{ section.settings.active_text_color.red }}, {{ section.settings.active_text_color.green }}, {{ section.settings.active_text_color.blue }};
+      --dropdown-background: {{ section.settings.dropdown_background.red }}, {{ section.settings.dropdown_background.green }}, {{ section.settings.dropdown_background.blue }};
+      --dropdown-text-color: {{ section.settings.dropdown_text_color.red }}, {{ section.settings.dropdown_text_color.green }}, {{ section.settings.dropdown_text_color.blue }};
+      --usps-dropdown-text-color: {{ section.settings.usps_dropdown_text_color.red }}, {{ section.settings.usps_dropdown_text_color.green }}, {{ section.settings.usps_dropdown_text_color.blue }};
+      --section-autoplay-duration: {% if section.settings.autoplay %}{{ section.settings.cycle_speed }}s{% else %}0s{% endif %};
+      --section-animation-play-state: paused;
+    }
+
+    /* Custom spacing for this section */
+    section.section.expandable-slides {
+      padding-top: {{ section.settings.top_spacing }}px !important;
+      padding-bottom: {{ section.settings.bottom_spacing }}px !important;
+    }
+
+    {% if section.settings.use_different_mobile_spacing %}
+    @media screen and (max-width: 749px) {
+      section.section.expandable-slides {
+        padding-top: {{ section.settings.mobile_top_spacing }}px !important;
+        padding-bottom: {{ section.settings.mobile_bottom_spacing }}px !important;
+      }
+    }
+    {% endif %}
+  </style>
+
+  <section
+    class="section expandable-slides"
+    data-autoplay="{{ section.settings.autoplay }}"
+    data-cycle-speed="{{ section.settings.cycle_speed }}"
+  >
+    <div class="container">
+      <div class="expandable-slides__wrapper">
+        <div class="expandable-slides__carousel js-slides-carousel">
+          {%- liquid
+            assign slide_blocks = section.blocks
+            assign total_blocks = slide_blocks.size
+            assign first_half_count = total_blocks | divided_by: 2
+          -%}
+
+          {%- for block in slide_blocks limit: first_half_count -%}
+            {%- liquid
+              assign now = 'now' | date: '%s'
+              assign block_visible = true
+
+              if block.settings.schedule_publishing
+                assign publish_date = block.settings.publish_date | date: '%s'
+
+                if publish_date != blank and now < publish_date
+                  assign block_visible = false
+                endif
+              endif
+
+              if block.settings.schedule_unpublishing
+                assign unpublish_date = block.settings.unpublish_date | date: '%s'
+
+                if unpublish_date != blank and now > unpublish_date
+                  assign block_visible = false
+                endif
+              endif
+            -%}
+
+            {%- if block_visible -%}
+              <div
+                class="expandable-slides__slide js-slide {% if block.settings.has_dropdown %}expandable-slides__slide--has-dropdown{% endif %}"
+                {{ block.shopify_attributes }}
+                data-slide-index="{{ forloop.index }}"
+                data-content-type="slide"
+                data-slide-id="{{ block.id }}"
+                {% if block.settings.mobile_background != blank %}
+                  data-mobile-bg="{{ block.settings.mobile_background }}"
+                {% endif %}
+              >
+                <div
+                  class="expandable-slides__title js-slide-title{% if block.settings.has_dropdown %} expandable-slides__title--expandable{% endif %}"
+                  {% if block.settings.mobile_text_color != blank %}
+                    data-mobile-color="{{ block.settings.mobile_text_color }}"
+                  {% endif %}
+                >
+                  {{ block.settings.title }}
+                </div>
+
+                {% if block.settings.has_dropdown == false and block.settings.link_url != blank %}
+                  <a href="{{ block.settings.link_url }}" class="expandable-slides__link"></a>
+                {% endif %}
+              </div>
+            {%- endif -%}
+          {%- endfor -%}
+
+          {%- if section.settings.banner_usps_heading != blank and section.settings.show_banner_usps -%}
+            {%- liquid
+              assign usps_visible = true
+
+              if section.settings.usps_schedule_publishing
+                assign publish_date = section.settings.usps_publish_date | date: '%s'
+                if publish_date != blank and now < publish_date
+                  assign usps_visible = false
+                endif
+              endif
+
+              if section.settings.usps_schedule_unpublishing
+                assign unpublish_date = section.settings.usps_unpublish_date | date: '%s'
+                if unpublish_date != blank and now > unpublish_date
+                  assign usps_visible = false
+                endif
+              endif
+            -%}
+
+            {%- if usps_visible -%}
+              <div
+                class="expandable-slides__slide expandable-slides__slide--usps expandable-slides__slide--has-dropdown js-slide"
+                data-slide-index="{{ first_half_count }}"
+                data-content-type="usps"
+                {% if section.settings.usps_mobile_background != blank %}
+                  data-mobile-bg="{{ section.settings.usps_mobile_background }}"
+                {% endif %}
+              >
+                <div
+                  class="expandable-slides__title js-slide-title"
+                  style="color: rgb({{ section.settings.usps_text_color.red }}, {{ section.settings.usps_text_color.green }}, {{ section.settings.usps_text_color.blue }}); text-decoration: underline; text-decoration-color: rgb({{ section.settings.usps_text_color.red }}, {{ section.settings.usps_text_color.green }}, {{ section.settings.usps_text_color.blue }});"
+                  {% if section.settings.usps_mobile_text_color != blank %}
+                    data-mobile-color="{{ section.settings.usps_mobile_text_color }}"
+                  {% endif %}
+                >
+                  {{ section.settings.banner_usps_heading }}
+                </div>
+
+                {% if section.settings.banner_usps_link != blank %}
+                  <a href="{{ section.settings.banner_usps_link }}" class="expandable-slides__link"></a>
+                {% endif %}
+              </div>
+            {%- endif -%}
+          {%- endif -%}
+
+          {%- for block in slide_blocks offset: first_half_count -%}
+            {%- liquid
+              assign now = 'now' | date: '%s'
+              assign block_visible = true
+
+              if block.settings.schedule_publishing
+                assign publish_date = block.settings.publish_date | date: '%s'
+
+                if publish_date != blank and now < publish_date
+                  assign block_visible = false
+                endif
+              endif
+
+              if block.settings.schedule_unpublishing
+                assign unpublish_date = block.settings.unpublish_date | date: '%s'
+
+                if unpublish_date != blank and now > unpublish_date
+                  assign block_visible = false
+                endif
+              endif
+            -%}
+
+            {%- if block_visible -%}
+              <div
+                class="expandable-slides__slide js-slide {% if block.settings.has_dropdown %}expandable-slides__slide--has-dropdown{% endif %}"
+                {{ block.shopify_attributes }}
+                data-slide-index="{{ forloop.index | plus: first_half_count }}"
+                data-content-type="slide"
+                data-slide-id="{{ block.id }}"
+                {% if block.settings.mobile_background != blank %}
+                  data-mobile-bg="{{ block.settings.mobile_background }}"
+                {% endif %}
+              >
+                <div
+                  class="expandable-slides__title js-slide-title{% if block.settings.has_dropdown %} expandable-slides__title--expandable{% endif %}"
+                  {% if block.settings.mobile_text_color != blank %}
+                    data-mobile-color="{{ block.settings.mobile_text_color }}"
+                  {% endif %}
+                >
+                  {{ block.settings.title }}
+                </div>
+
+                {% if block.settings.has_dropdown == false and block.settings.link_url != blank %}
+                  <a href="{{ block.settings.link_url }}" class="expandable-slides__link"></a>
+                {% endif %}
+              </div>
+            {%- endif -%}
+          {%- endfor -%}
+        </div>
+
+        <!-- Shared full-width dropdown container -->
+        <div class="expandable-slides__shared-dropdown">
+          <!-- USPs content -->
+          <div
+            class="expandable-slides__dropdown js-dropdown expandable-slides__dropdown--usps"
+            data-dropdown-type="usps"
+          >
+            <div class="expandable-slides__content">
+              <div class="expandable-slides__usps-grid">
+                {%- for i in (1..4) -%}
+                  {%- assign type_svg = 'banner_usps_svg_' | append: i -%}
+                  {%- assign type_heading = 'banner_usps_heading_' | append: i -%}
+                  {%- assign banner_usps_svg = section.settings[type_svg] -%}
+                  {%- assign banner_usps_col_heading = section.settings[type_heading] -%}
+
+                  {%- if banner_usps_svg != blank and banner_usps_col_heading != blank -%}
+                    <div class="expandable-slides__usps-item">
+                      <img
+                        class="expandable-slides__usps-image"
+                        src="{{- banner_usps_svg | img_url -}}"
+                        alt="{{- banner_usps_svg.alt -}}"
+                        width="50"
+                        height="50"
+                      >
+
+                      <h3 class="expandable-slides__usps-heading">
+                        {{- banner_usps_col_heading -}}
+                      </h3>
+                    </div>
+                  {%- endif -%}
+                {%- endfor -%}
+              </div>
+
+              <button
+                class="expandable-slides__close js-close-dropdown"
+                aria-label="{{ 'general.accessibility.close' | t }}"
+              >
+                <svg
+                  viewBox="0 0 24 24"
+                  width="24"
+                  height="24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <polyline points="18 15 12 9 6 15"></polyline>
+                </svg>
+              </button>
+            </div>
+          </div>
+
+          <!-- Regular slide content -->
+          {% for block in section.blocks %}
+            {% if block.settings.has_dropdown %}
+              <div
+                class="expandable-slides__dropdown js-dropdown"
+                data-dropdown-type="slide"
+                data-slide-id="{{ block.id }}"
+              >
+                <div class="expandable-slides__content">
+                  {% if block.settings.content != blank %}
+                    <div class="expandable-slides__text">
+                      {{ block.settings.content }}
+                    </div>
+                  {% endif %}
+
+                  {% if block.settings.link_text != blank and block.settings.link_url != blank %}
+                    <div class="expandable-slides__button-wrapper">
+                      <a href="{{ block.settings.link_url }}" class="expandable-slides__button">
+                        {{ block.settings.link_text }}
+                      </a>
+                    </div>
+                  {% endif %}
+
+                  <button
+                    class="expandable-slides__close js-close-dropdown"
+                    aria-label="{{ 'general.accessibility.close' | t }}"
+                  >
+                    <svg
+                      viewBox="0 0 24 24"
+                      width="24"
+                      height="24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <polyline points="18 15 12 9 6 15"></polyline>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            {% endif %}
+          {% endfor %}
+        </div>
+
+        <div class="expandable-slides__dots js-slides-dots"></div>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    class ExpandableSlides {
+      constructor(container) {
+        this.container = container;
+        this.carousel = container.querySelector('.js-slides-carousel');
+        this.slides = container.querySelectorAll('.js-slide');
+        this.slideTitles = container.querySelectorAll('.js-slide-title');
+        this.dropdowns = container.querySelectorAll('.js-dropdown');
+        this.closeButtons = container.querySelectorAll('.js-close-dropdown');
+        this.dotsContainer = container.querySelector('.js-slides-dots');
+        this.sharedDropdown = container.querySelector('.expandable-slides__shared-dropdown');
+        this.autoplay = container.dataset.autoplay === 'true';
+        this.cycleSpeed = parseInt(container.dataset.cycleSpeed, 10);
+        this.activeSlideIndex = 0;
+        this.interval = null;
+        this.isDesktop = window.innerWidth >= 750;
+        this.activeDropdown = null;
+        this.init();
+      }
+
+      init() {
+        // Close any open dropdowns on page load
+        this.closeAllDropdowns();
+
+        this.createDots();
+        this.bindEvents();
+
+        if (!this.isDesktop) {
+          this.setupInfiniteScroll();
+        }
+
+        if (this.isDesktop) {
+          this.clearMobileStyles();
+        } else {
+          this.applyMobileStyles();
+        }
+
+        if (!this.isDesktop) {
+          this.slides.forEach((slide) => {
+            slide.style.width = '100%';
+          });
+
+          this.carousel.style.width = '100%';
+
+          // Make sure Zertifizierte Produktsicherheit is the first slide on mobile
+          this.ensureFirstSlideIsUSP();
+        }
+
+        if (this.autoplay && !this.isDesktop) {
+          // Check if we should sync with the slideshow
+          if (this.container.dataset.syncWithSlideshow === 'true') {
+            // Wait for slideshow to start
+            document.addEventListener('slideshow:started', () => {
+              this.startAutoplay();
+            });
+          } else {
+            this.startAutoplay();
+          }
+        }
+
+        window.addEventListener('pageshow', () => this.closeAllDropdowns());
+        window.addEventListener('load', () => this.closeAllDropdowns());
+      }
+
+      setupInfiniteScroll() {
+        if (this.slides.length > 1) {
+          const firstSlide = this.slides[0];
+          const lastSlide = this.slides[this.slides.length - 1];
+
+          const firstSlideClone = firstSlide.cloneNode(true);
+          firstSlideClone.classList.add('slide-clone');
+          firstSlideClone.dataset.clone = 'true';
+
+          const lastSlideClone = lastSlide.cloneNode(true);
+          lastSlideClone.classList.add('slide-clone');
+          lastSlideClone.dataset.clone = 'true';
+
+          this.carousel.appendChild(firstSlideClone);
+          this.carousel.insertBefore(lastSlideClone, this.carousel.firstChild);
+
+          this.carousel.style.transform = 'translateX(-100%)';
+          this.activeSlideIndex = 0;
+
+          this.slides = this.container.querySelectorAll('.js-slide');
+        }
+      }
+
+      createDots() {
+        if (!this.isDesktop) {
+          const realSlides = Array.from(this.slides).filter((slide) => !slide.classList.contains('slide-clone'));
+          const hasClones = this.carousel.querySelector('.slide-clone') !== null;
+
+          realSlides.forEach((_, index) => {
+            const dot = document.createElement('button');
+            dot.classList.add('expandable-slides__dot');
+            dot.setAttribute('aria-label', `Go to slide ${index + 1}`);
+
+            const targetIndex = hasClones ? index + 1 : index;
+            dot.dataset.slideIndex = targetIndex;
+
+            this.dotsContainer.appendChild(dot);
+          });
+
+          this.dots = this.dotsContainer.querySelectorAll('.expandable-slides__dot');
+          this.updateActiveDot(0);
+        }
+      }
+
+      bindEvents() {
+        this.slideTitles.forEach((title) => {
+          title.addEventListener('click', (e) => {
+            const slideElement = title.closest('.js-slide');
+            const slideIndex = Array.from(this.slides).indexOf(slideElement);
+            this.handleSlideClick(slideIndex, slideElement);
+          });
+        });
+
+        this.closeButtons.forEach((button) => {
+          button.addEventListener('click', (e) => {
+            e.preventDefault();
+            e.stopPropagation();
+            this.closeAllDropdowns();
+          });
+        });
+
+        if (!this.isDesktop) {
+          this.carousel.addEventListener('touchstart', (e) => this.handleTouchStart(e));
+          this.carousel.addEventListener('touchmove', (e) => this.handleTouchMove(e));
+          this.carousel.addEventListener('touchend', (e) => this.handleTouchEnd(e));
+
+          if (this.dots) {
+            this.dots.forEach((dot, index) => {
+              dot.addEventListener('click', () => this.goToSlide(index));
+            });
+          }
+
+          document.addEventListener('click', (e) => {
+            if (!this.container.contains(e.target) && this.activeDropdown) {
+              this.closeAllDropdowns();
+              if (this.autoplay) {
+                this.startAutoplay();
+              }
+            }
+          });
+        }
+
+        window.addEventListener('resize', this.handleResize.bind(this));
+        window.addEventListener('scroll', this.handleScroll.bind(this));
+
+        window.addEventListener('popstate', () => {
+          this.closeAllDropdowns();
+          if (!this.isDesktop && this.autoplay) {
+            this.startAutoplay();
+          }
+        });
+      }
+
+      handleSlideClick(index, slideElement) {
+        const slide = slideElement || this.slides[index];
+        const hasDropdown = slide.classList.contains('expandable-slides__slide--has-dropdown');
+        const slideId = slide.dataset.slideId;
+        const contentType = slide.dataset.contentType || 'slide';
+        const isClone = slide.classList.contains('slide-clone');
+
+        let originalSlide = slide;
+        if (isClone) {
+          if (index === this.slides.length - 1) {
+            originalSlide = Array.from(this.slides).find(
+              (s) => !s.classList.contains('slide-clone') && s.dataset.slideId === slideId
+            );
+          } else if (index === 0) {
+            originalSlide = Array.from(this.slides)
+              .filter((s) => !s.classList.contains('slide-clone') && s.dataset.slideId === slideId)
+              .pop();
+          }
+        }
+        this.slides.forEach((s) => {
+          if (s === slide) {
+            s.setAttribute('data-active', 'true');
+          } else {
+            s.removeAttribute('data-active');
+          }
+        });
+
+        if (this.isDesktop) {
+          if (hasDropdown) {
+            let targetDropdown;
+            if (contentType === 'usps') {
+              targetDropdown = this.container.querySelector(`.js-dropdown[data-dropdown-type="usps"]`);
+            } else {
+              targetDropdown = this.container.querySelector(`.js-dropdown[data-slide-id="${slideId}"]`);
+
+              if (targetDropdown && contentType === 'slide') {
+                if (!this.isDesktop) {
+                  targetDropdown.style.backgroundColor = '#f58e9e';
+                  targetDropdown.style.color = '#ffffff';
+                } else {
+                  // Desktop: Use regular slide colors
+                  const mobileBg = slide.dataset.mobileBg;
+                  const titleEl = slide.querySelector('.js-slide-title');
+                  const mobileColor = titleEl ? titleEl.dataset.mobileColor : null;
+
+                  targetDropdown.style.backgroundColor = window.getComputedStyle(slide).backgroundColor;
+                  targetDropdown.style.color = window.getComputedStyle(titleEl).color;
+                }
+              }
+            }
+
+            if (targetDropdown) {
+              const isOpen = targetDropdown.classList.contains('is-open');
+
+              this.closeAllDropdowns();
+
+              if (!isOpen) {
+                targetDropdown.classList.add('is-open');
+                slide.classList.add('is-active');
+                this.sharedDropdown.classList.add('is-active');
+
+                this.activeDropdown = targetDropdown;
+              }
+            }
+          } else if (slide.querySelector('.expandable-slides__link')) {
+            window.location.href = slide.querySelector('.expandable-slides__link').getAttribute('href');
+          }
+        } else {
+          this.stopAutoplay();
+
+          if (hasDropdown) {
+            let targetDropdown;
+            if (contentType === 'usps') {
+              targetDropdown = this.container.querySelector(`.js-dropdown[data-dropdown-type="usps"]`);
+            } else {
+              targetDropdown = this.container.querySelector(`.js-dropdown[data-slide-id="${slideId}"]`);
+
+              if (targetDropdown && contentType === 'slide') {
+                targetDropdown.style.backgroundColor = '#f58e9e';
+                targetDropdown.style.color = '#ffffff';
+              }
+            }
+
+            if (targetDropdown) {
+              const hasIsOpen = targetDropdown.classList.contains('is-open');
+              slide.classList.add('is-active');
+
+              const isCurrentlyOpen = hasIsOpen && this.activeDropdown === targetDropdown;
+
+              if (isCurrentlyOpen) {
+                this.closeAllDropdowns();
+                if (this.autoplay) {
+                  this.startAutoplay();
+                }
+              } else {
+                this.closeAllDropdowns();
+                targetDropdown.classList.add('is-open');
+                slide.classList.add('is-active');
+                this.sharedDropdown.classList.add('is-active');
+                this.activeDropdown = targetDropdown;
+                this.stopAutoplay();
+              }
+
+              return;
+            }
+          }
+
+          const prevActiveIndex = this.activeSlideIndex;
+          if (prevActiveIndex !== index) {
+            this.goToSlide(index);
+          } else {
+            this.activeSlideIndex = index;
+            const position = -index * 100;
+            this.carousel.style.transform = `translateX(${position}%)`;
+            const realSlideIndex = isClone
+              ? index === 0
+                ? this.slides.length - 3
+                : 0 // Last or first real slide
+              : Math.max(0, index - (this.carousel.querySelector('.slide-clone') ? 1 : 0)); // Adjust for clones
+
+            this.updateActiveDot(realSlideIndex);
+          }
+
+          // Handle link click if this slide has a link but no dropdown
+          if (!hasDropdown && slide.querySelector('.expandable-slides__link')) {
+            window.location.href = slide.querySelector('.expandable-slides__link').getAttribute('href');
+          }
+        }
+      }
+
+      goToSlide(index) {
+        if (this.isDesktop) return;
+
+        const prevActiveIndex = this.activeSlideIndex;
+        const hasClones = this.carousel.querySelector('.slide-clone') !== null;
+
+        if (hasClones) {
+          if (index >= this.slides.length - 1) {
+            this.activeSlideIndex = index;
+            const position = -index * 100;
+            this.carousel.style.transition = 'transform 0.4s ease';
+            this.carousel.style.transform = `translateX(${position}%)`;
+
+            setTimeout(() => {
+              this.carousel.style.transition = 'none';
+              this.activeSlideIndex = 1;
+              this.carousel.style.transform = `translateX(-100%)`;
+
+              this.updateActiveDot(0);
+
+              this.carousel.offsetHeight;
+              setTimeout(() => {
+                this.carousel.style.transition = 'transform 0.4s ease';
+              }, 10);
+            }, 400);
+
+            this.updateActiveDot(0);
+            return;
+          } else if (index === 0) {
+            this.activeSlideIndex = index;
+            const position = -index * 100;
+            this.carousel.style.transition = 'transform 0.4s ease';
+            this.carousel.style.transform = `translateX(${position}%)`;
+
+            setTimeout(() => {
+              this.carousel.style.transition = 'none';
+              this.activeSlideIndex = this.slides.length - 2;
+              this.carousel.style.transform = `translateX(-${(this.slides.length - 2) * 100}%)`;
+
+              this.updateActiveDot(this.slides.length - 3);
+
+              this.carousel.offsetHeight;
+              setTimeout(() => {
+                this.carousel.style.transition = 'transform 0.4s ease';
+              }, 10);
+            }, 400);
+
+            this.updateActiveDot(this.slides.length - 3);
+            return;
+          }
+        }
+
+        if (index < 0) {
+          this.carousel.style.transition = 'none';
+          this.activeSlideIndex = this.slides.length - 1;
+          this.carousel.style.transform = `translateX(-${this.slides.length - 1}00%)`;
+
+          this.carousel.offsetHeight;
+
+          setTimeout(() => {
+            this.carousel.style.transition = 'transform 0.4s ease';
+          }, 10);
+        } else if (index >= this.slides.length) {
+          this.carousel.style.transition = 'none';
+          this.activeSlideIndex = 0;
+          this.carousel.style.transform = `translateX(0%)`;
+
+          this.carousel.offsetHeight;
+
+          setTimeout(() => {
+            this.carousel.style.transition = 'transform 0.4s ease';
+          }, 10);
+        } else {
+          this.activeSlideIndex = index;
+          const position = -index * 100;
+          this.carousel.style.transition = 'transform 0.4s ease';
+          this.carousel.style.transform = `translateX(${position}%)`;
+        }
+
+        // Adjust the dot index to account for clones if present
+        const adjustedDotIndex = hasClones
+          ? Math.max(0, Math.min(this.activeSlideIndex - 1, this.slides.length - 3))
+          : this.activeSlideIndex;
+        this.updateActiveDot(adjustedDotIndex);
+
+        if (prevActiveIndex !== this.activeSlideIndex) {
+          this.closeAllDropdowns();
+        }
+      }
+
+      nextSlide() {
+        const nextIndex = (this.activeSlideIndex + 1) % this.slides.length;
+        this.goToSlide(nextIndex);
+      }
+
+      updateActiveDot(index) {
+        if (this.dots) {
+          this.dots.forEach((dot, i) => {
+            dot.classList.toggle('is-active', i === index);
+          });
+        }
+      }
+
+      closeAllDropdowns() {
+        this.dropdowns.forEach((dropdown) => {
+          dropdown.classList.remove('is-open');
+
+          // Reset any custom styling applied to dropdowns
+          if (dropdown.dataset.dropdownType !== 'usps') {
+            dropdown.style.backgroundColor = '';
+            dropdown.style.color = '';
+          }
+        });
+
+        this.slides.forEach((slide) => {
+          slide.classList.remove('is-active');
+        });
+
+        this.sharedDropdown.classList.remove('is-active');
+        this.activeDropdown = null;
+      }
+
+      startAutoplay() {
+        if (this.isDesktop) return;
+
+        this.stopAutoplay();
+        this.interval = setInterval(() => {
+          const isDropdownOpen = Array.from(this.dropdowns).some((dropdown) => dropdown.classList.contains('is-open'));
+
+          if (!isDropdownOpen) {
+            this.nextSlide();
+          }
+        }, this.cycleSpeed * 1000);
+      }
+
+      stopAutoplay() {
+        if (this.interval) {
+          clearInterval(this.interval);
+          this.interval = null;
+        }
+      }
+
+      handleTouchStart(e) {
+        this.touchStartX = e.touches[0].clientX;
+        this.touchStartY = e.touches[0].clientY;
+        this.stopAutoplay();
+      }
+
+      handleTouchMove(e) {
+        if (!this.touchStartX) return;
+
+        const touchX = e.touches[0].clientX;
+        const touchY = e.touches[0].clientY;
+        const diffX = this.touchStartX - touchX;
+        const diffY = this.touchStartY - touchY;
+
+        if (Math.abs(diffX) > Math.abs(diffY)) {
+          e.preventDefault();
+
+          const isDropdownOpen = Array.from(this.dropdowns).some((dropdown) => dropdown.classList.contains('is-open'));
+
+          if (!isDropdownOpen) {
+            const slideWidth = this.carousel.clientWidth; // Use clientWidth for more reliable width
+            const position = -this.activeSlideIndex * 100 - (diffX / slideWidth) * 100;
+            this.carousel.style.transform = `translateX(${position}%)`;
+          }
+        }
+      }
+
+      handleTouchEnd(e) {
+        if (!this.touchStartX) return;
+
+        const touchX = e.changedTouches[0].clientX;
+        const diffX = this.touchStartX - touchX;
+        const isDropdownOpen = Array.from(this.dropdowns).some((dropdown) => dropdown.classList.contains('is-open'));
+
+        if (!isDropdownOpen) {
+          if (Math.abs(diffX) > 50) {
+            if (diffX > 0) {
+              // Swipe left, go to next slide
+              this.goToSlide(this.activeSlideIndex + 1);
+            } else {
+              // Swipe right, go to previous slide
+              this.goToSlide(this.activeSlideIndex - 1);
+            }
+          } else {
+            this.goToSlide(this.activeSlideIndex);
+          }
+
+          if (this.autoplay) {
+            this.startAutoplay();
+          }
+        }
+
+        this.touchStartX = null;
+        this.touchStartY = null;
+      }
+
+      handleScroll() {
+        if (this.isDesktop && this.activeDropdown) {
+          const dropdownRect = this.activeDropdown.getBoundingClientRect();
+          const containerRect = this.container.getBoundingClientRect();
+
+          // If dropdown is scrolled partially out of view, close it
+          if (
+            dropdownRect.bottom < 0 ||
+            dropdownRect.top > window.innerHeight ||
+            containerRect.bottom < 0 ||
+            containerRect.top > window.innerHeight
+          ) {
+            this.closeAllDropdowns();
+          }
+        }
+      }
+
+      handleResize() {
+        const wasDesktop = this.isDesktop;
+        this.isDesktop = window.innerWidth >= 750;
+
+        if (wasDesktop !== this.isDesktop) {
+          this.closeAllDropdowns();
+
+          if (this.isDesktop) {
+            this.stopAutoplay();
+            this.carousel.style.transform = '';
+
+            const clones = this.container.querySelectorAll('.slide-clone');
+            clones.forEach((clone) => clone.remove());
+
+            this.slides = this.container.querySelectorAll('.js-slide');
+            this.activeSlideIndex = 0;
+
+            this.clearMobileStyles();
+          } else {
+            this.slides.forEach((slide) => {
+              slide.style.width = '100%';
+            });
+
+            this.applyMobileStyles();
+
+            this.setupInfiniteScroll();
+            if (this.dotsContainer) {
+              this.dotsContainer.innerHTML = '';
+              this.createDots();
+            }
+
+            this.ensureFirstSlideIsUSP();
+
+            if (this.autoplay) {
+              this.startAutoplay();
+            }
+          }
+        }
+      }
+
+      applyMobileStyles() {
+        if (!this.isDesktop) {
+          this.slides.forEach((slide) => {
+            const mobileBg = slide.dataset.mobileBg;
+            if (mobileBg) {
+              slide.style.backgroundColor = mobileBg;
+              slide.style.width = '100%';
+              slide.style.height = '100%';
+              slide.style.margin = '0';
+              slide.style.padding = '10px 0';
+              slide.style.borderRadius = '0';
+            }
+
+            const titleEl = slide.querySelector('.js-slide-title');
+            if (titleEl) {
+              const mobileColor = titleEl.dataset.mobileColor;
+              if (mobileColor) {
+                titleEl.style.color = mobileColor;
+
+                if (titleEl.style.textDecoration.includes('underline')) {
+                  titleEl.style.textDecorationColor = mobileColor;
+                }
+              }
+            }
+          });
+
+          this.carousel.style.width = '100%';
+          this.carousel.style.margin = '0';
+        }
+      }
+
+      clearMobileStyles() {
+        this.slides.forEach((slide) => {
+          slide.style.backgroundColor = '';
+
+          const titleEl = slide.querySelector('.js-slide-title');
+          if (titleEl) {
+            if (titleEl.dataset.mobileColor) {
+              if (slide.classList.contains('expandable-slides__slide--usps')) {
+                const uspsTextColor = getComputedStyle(document.documentElement)
+                  .getPropertyValue('--usps-text-color')
+                  .trim();
+                titleEl.style.color = `rgb(${uspsTextColor})`;
+                titleEl.style.textDecorationColor = `rgb(${uspsTextColor})`;
+              } else {
+                titleEl.style.color = '';
+              }
+            }
+          }
+        });
+      }
+
+      ensureFirstSlideIsUSP() {
+        if (!this.isDesktop) {
+          const uspSlide = this.container.querySelector('.expandable-slides__slide--usps');
+          if (uspSlide) {
+            const slidesArray = Array.from(this.slides);
+            const targetIndex = slidesArray.indexOf(uspSlide);
+
+            if (targetIndex !== -1) {
+              // Jump to the certification slide instantly (no visible transition)
+              const previousTransition = this.carousel.style.transition;
+              this.carousel.style.transition = 'none';
+
+              this.activeSlideIndex = targetIndex;
+              this.carousel.style.transform = `translateX(-${targetIndex}00%)`;
+
+              // Update dots to match the visible slide
+              const hasClones = this.carousel.querySelector('.slide-clone') !== null;
+              const adjustedDotIndex = hasClones
+                ? Math.max(0, Math.min(targetIndex - 1, this.slides.length - 3))
+                : targetIndex;
+              this.updateActiveDot(adjustedDotIndex);
+
+              // Force reflow and restore transition for further interactions
+              this.carousel.offsetHeight;
+              this.carousel.style.transition = previousTransition || 'transform 0.4s ease';
+            }
+          }
+        }
+      }
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      const expandableSlidesContainers = document.querySelectorAll('.expandable-slides');
+      expandableSlidesContainers.forEach((container) => {
+        new ExpandableSlides(container);
+      });
+    });
+  </script>
+
+  <style>
+    .expandable-slides {
+      background-color: rgb(var(--section-background));
+      color: rgb(var(--text-color));
+      overflow: visible;
+      position: relative;
+    }
+
+    .expandable-slides__wrapper {
+      position: relative;
+      padding: 10px 0;
+      overflow: hidden;
+    }
+
+    .expandable-slides__carousel {
+      display: flex;
+      transition: transform 0.4s ease;
+      position: relative;
+      z-index: 1;
+      width: 100%;
+    }
+
+    .expandable-slides__slide {
+      position: relative;
+      flex: 0 0 100%;
+      padding: 15px 0;
+      cursor: pointer;
+      width: 100%;
+      box-sizing: border-box;
+    }
+
+    .expandable-slides__title {
+      position: relative;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-weight: bold;
+      padding-right: 20px;
+      user-select: none;
+    }
+
+    section.section.expandable-slides {
+      padding: 0;
+      background-color: #ffffff !important;
+      margin: 0;
+      border-bottom: 1px solid #d0d0d0;
+    }
+
+    .expandable-slides__title--expandable {
+      text-decoration: underline;
+    }
+
+    .expandable-slides__shared-dropdown {
+      width: 100%;
+    }
+
+    .expandable-slides__dropdown {
+      display: none;
+      background-color: rgb(var(--dropdown-background));
+      color: rgb(var(--dropdown-text-color));
+      width: 100%;
+      overflow: hidden;
+      max-height: 0;
+      transition: max-height 0.5s ease;
+    }
+
+    .expandable-slides__dropdown.is-open {
+      display: block;
+      max-height: none;
+      width: 100%;
+    }
+
+    /* Ensure all content within dropdown inherits the dropdown's color */
+    .expandable-slides__dropdown p,
+    .expandable-slides__dropdown li,
+    .expandable-slides__dropdown h1,
+    .expandable-slides__dropdown h2,
+    .expandable-slides__dropdown h3,
+    .expandable-slides__dropdown h4,
+    .expandable-slides__dropdown h5,
+    .expandable-slides__dropdown h6,
+    .expandable-slides__dropdown span {
+      color: inherit;
+    }
+
+    .expandable-slides__dropdown--usps {
+      color: rgb(var(--usps-dropdown-text-color));
+    }
+
+    .expandable-slides__content {
+      position: relative;
+      padding: 20px;
+      line-height: 1.5;
+      width: 100%;
+      box-sizing: border-box;
+    }
+
+    .expandable-slides__text {
+      margin-bottom: 15px;
+    }
+
+    .expandable-slides__button-wrapper {
+      margin-top: 15px;
+    }
+
+    .expandable-slides__button {
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: transparent;
+      color: inherit;
+      text-decoration: none;
+      border: 1px solid currentColor;
+      border-radius: 4px;
+    }
+
+          .expandable-slides__close {
+      position: relative;
+      width: 36px;
+      height: 30px;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 5px auto 0;
+      color: inherit;
+    }
+
+    .expandable-slides__close svg {
+      width: 24px;
+      height: 24px;
+      stroke: currentColor;
+    }
+
+    .expandable-slides__dots {
+      display: none !important;
+    }
+
+    .expandable-slides__dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background-color: rgba(var(--text-color), 0.3);
+      margin: 0 5px;
+      padding: 0;
+      border: none;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .expandable-slides__dot.is-active {
+      background-color: rgb(var(--active-text-color));
+    }
+
+    .expandable-slides__link {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+    }
+
+    .expandable-slides__usps-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+    }
+
+    .expandable-slides__usps-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+
+    .expandable-slides__usps-image {
+      width: 50px;
+      height: 50px;
+      margin-bottom: 10px;
+    }
+
+    .expandable-slides__usps-heading {
+      font-size: 1rem;
+      margin: 0;
+    }
+
+    @media screen and (min-width: 750px) {
+      .expandable-slides__wrapper {
+        padding: 0;
+      }
+
+      .expandable-slides__carousel {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .expandable-slides__slide {
+        flex: 1;
+        border-bottom: none;
+        padding: 15px;
+        text-align: center;
+      }
+
+      .expandable-slides__slide--usps .expandable-slides__title {
+        color: rgb(var(--usps-text-color, var(--active-text-color)));
+      }
+
+      .expandable-slides__title {
+        justify-content: center;
+        text-align: center;
+        padding-right: 0;
+        font-weight: 600;
+        line-height: 1.2;
+      }
+
+      .expandable-slides__slide:last-child {
+        border-right: none;
+      }
+
+      .expandable-slides__content {
+        max-width: 100%;
+        margin: 0 auto;
+      }
+
+      .expandable-slides__dots {
+        display: none;
+      }
+
+      .expandable-slides__usps-grid {
+        grid-template-columns: repeat(4, 1fr);
+      }
+    }
+
+    @media screen and (max-width: 749px) {
+      .expandable-slides__wrapper {
+        padding: 0;
+        overflow: hidden;
+        width: 100%;
+        max-width: 100%;
+      }
+
+      .expandable-slides__carousel {
+        margin: 0;
+        width: 100%;
+        max-width: 100%;
+      }
+
+      .expandable-slides__slide {
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 60px;
+        padding: 10px 0;
+        margin: 0;
+        border-radius: 0;
+        width: 100% !important;
+        height: 100%;
+      }
+
+      .expandable-slides__slide--usps {
+      }
+
+      .expandable-slides__title {
+        justify-content: center;
+        padding-right: 0;
+        text-align: center;
+      }
+
+      /* Force dropdown backgrounds and text color on mobile */
+      .expandable-slides__dropdown[data-dropdown-type='slide'] {
+        background-color: #f58e9e !important;
+        color: #ffffff !important;
+      }
+
+      .expandable-slides__dropdown[data-dropdown-type='slide'] p,
+      .expandable-slides__dropdown[data-dropdown-type='slide'] li,
+      .expandable-slides__dropdown[data-dropdown-type='slide'] h1,
+      .expandable-slides__dropdown[data-dropdown-type='slide'] h2,
+      .expandable-slides__dropdown[data-dropdown-type='slide'] h3,
+      .expandable-slides__dropdown[data-dropdown-type='slide'] h4,
+      .expandable-slides__dropdown[data-dropdown-type='slide'] h5,
+      .expandable-slides__dropdown[data-dropdown-type='slide'] h6,
+      .expandable-slides__dropdown[data-dropdown-type='slide'] span,
+      .expandable-slides__dropdown[data-dropdown-type='slide'] a {
+        color: #ffffff !important;
+      }
+
+      .expandable-slides__dropdown[data-dropdown-type='slide'] a {
+        text-decoration-color: #ffffff !important;
+        border-color: #ffffff !important;
+      }
+
+      .expandable-slides__dropdown[data-dropdown-type='slide'] .expandable-slides__close svg {
+        stroke: #ffffff !important;
+      }
+
+      /* Fix buttons in the dropdown */
+      .expandable-slides__dropdown[data-dropdown-type='slide'] .expandable-slides__button {
+        border: 1px solid #ffffff !important;
+      }
+
+      .expandable-slides__dropdown--usps .expandable-slides__content {
+        padding: 5px 0;
+      }
+
+      .expandable-slides__usps-grid {
+        display: grid !important;
+        grid-template-columns: repeat(4, 1fr) !important;
+        justify-content: space-between;
+        align-items: flex-start;
+        flex-wrap: wrap;
+        gap: 5px;
+
+        width: 100%;
+        overflow-x: visible;
+        padding: 0 5px;
+      }
+
+      .expandable-slides__usps-grid::-webkit-scrollbar {
+        display: none;
+      }
+
+      .expandable-slides__usps-item {
+        flex: 1 1 auto;
+        width: 100%;
+        max-width: none;
+        padding: 0 5px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+      }
+
+      .expandable-slides__usps-heading {
+        font-size: 10px;
+        white-space: normal;
+        margin-top: 2px;
+        text-align: center;
+        line-height: 1.1;
+        height: auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 24px;
+      }
+
+      .expandable-slides__usps-image {
+        width: 30px;
+        height: 30px;
+        margin-bottom: 2px;
+      }
+
+      .expandable-slides__slide.slide-clone {
+        flex: 0 0 100%;
+        width: 100% !important;
+      }
+    }
+
+    @media screen and (min-width: 750px) {
+      .expandable-slides__slide {
+        background-color: transparent !important;
+      }
+    }
+
+    @media screen and (min-width: 750px) {
+      section.section.expandable-slides {
+      }
+    }
+
+    @media screen and (max-width: 749px) {
+      .expandable-slides .container {
+        padding: 0;
+        margin: 0;
+        width: 100%;
+        max-width: 100%;
+      }
+    }
+  </style>
+{% endif %}
+
+{% schema %}
+{
+  "name": "Certification & USPs",
+  "class": "shopify-section--expandable-slides",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Slide Settings"
+    },
+    {
+      "type": "checkbox",
+      "id": "autoplay",
+      "label": "Auto-rotate slides",
+      "default": true,
+      "info": "Only active on mobile"
+    },
+    {
+      "type": "range",
+      "id": "cycle_speed",
+      "min": 3,
+      "max": 10,
+      "step": 1,
+      "unit": "s",
+      "label": "Change slides every",
+      "default": 5
+    },
+    {
+      "type": "checkbox",
+      "id": "sync_with_slideshow",
+      "label": "Sync with slideshow above",
+      "default": false,
+      "info": "If checked, will start rotation at the same time as the slideshow above"
+    },
+    {
+      "type": "header",
+      "content": "Section spacing"
+    },
+    {
+      "type": "range",
+      "id": "top_spacing",
+      "min": 0,
+      "max": 100,
+      "step": 2,
+      "unit": "px",
+      "label": "Top spacing",
+      "default": 32
+    },
+    {
+      "type": "range",
+      "id": "bottom_spacing",
+      "min": 0,
+      "max": 100,
+      "step": 2,
+      "unit": "px",
+      "label": "Bottom spacing",
+      "default": 32
+    },
+    {
+      "type": "checkbox",
+      "id": "use_different_mobile_spacing",
+      "label": "Use different height on mobile",
+      "default": true
+    },
+    {
+      "type": "range",
+      "id": "mobile_top_spacing",
+      "min": 0,
+      "max": 100,
+      "step": 2,
+      "unit": "px",
+      "label": "Top spacing (mobile)",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "mobile_bottom_spacing",
+      "min": 0,
+      "max": 100,
+      "step": 2,
+      "unit": "px",
+      "label": "Bottom spacing (mobile)",
+      "default": 0
+    },
+    {
+      "type": "header",
+      "content": "Zertifizierte Produktsicherheit Section"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_banner_usps",
+      "label": "Show Zertifizierte Produktsicherheit",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "banner_usps_heading",
+      "label": "USPs Heading",
+      "default": "Zertifizierte Produktsicherheit"
+    },
+    {
+      "type": "url",
+      "id": "banner_usps_link",
+      "label": "USPs Link"
+    },
+    {
+      "type": "header",
+      "content": "Scheduling for Zertifizierte Produktsicherheit"
+    },
+    {
+      "type": "checkbox",
+      "id": "usps_schedule_publishing",
+      "label": "Schedule publishing"
+    },
+    {
+      "type": "text",
+      "id": "usps_publish_date",
+      "label": "Publish date",
+      "info": "Format: DD.MM.YYYY HH:MM"
+    },
+    {
+      "type": "checkbox",
+      "id": "usps_schedule_unpublishing",
+      "label": "Schedule unpublishing"
+    },
+    {
+      "type": "text",
+      "id": "usps_unpublish_date",
+      "label": "Unpublish date",
+      "info": "Format: DD.MM.YYYY HH:MM"
+    },
+    {
+      "type": "color",
+      "id": "usps_text_color",
+      "label": "Zertifizierte Produktsicherheit title color",
+      "default": "#ff3f46"
+    },
+    {
+      "type": "color",
+      "id": "usps_dropdown_text_color",
+      "label": "Zertifizierte Produktsicherheit dropdown text color",
+      "default": "#00aa55"
+    },
+    {
+      "type": "header",
+      "content": "Mobile Styling for Zertifizierte Produktsicherheit"
+    },
+    {
+      "type": "color",
+      "id": "usps_mobile_background",
+      "label": "Mobile background color",
+      "default": "#f7f7f7"
+    },
+    {
+      "type": "color",
+      "id": "usps_mobile_text_color",
+      "label": "Mobile text color",
+      "default": "#ff3f46"
+    },
+    {
+      "type": "header",
+      "content": "Colors"
+    },
+    {
+      "type": "color",
+      "id": "background",
+      "label": "Background",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text color",
+      "default": "#000000"
+    },
+    {
+      "type": "color",
+      "id": "active_text_color",
+      "label": "Active text color",
+      "default": "#ff3f46"
+    },
+    {
+      "type": "color",
+      "id": "dropdown_background",
+      "label": "Dropdown background",
+      "default": "#f7f7f7"
+    },
+    {
+      "type": "color",
+      "id": "dropdown_text_color",
+      "label": "Dropdown text color",
+      "default": "#000000"
+    },
+    {
+      "type": "header",
+      "content": "Scheduling"
+    },
+    {
+      "type": "checkbox",
+      "id": "schedule_publishing",
+      "label": "Schedule publishing"
+    },
+    {
+      "type": "text",
+      "id": "publish_date",
+      "label": "Publish date",
+      "info": "Format: DD.MM.YYYY HH:MM"
+    },
+    {
+      "type": "checkbox",
+      "id": "schedule_unpublishing",
+      "label": "Schedule unpublishing"
+    },
+    {
+      "type": "text",
+      "id": "unpublish_date",
+      "label": "Unpublish date",
+      "info": "Format: DD.MM.YYYY HH:MM"
+    },
+    {
+      "type": "image_picker",
+      "id": "banner_usps_svg_1",
+      "label": "USP Icon 1"
+    },
+    {
+      "type": "text",
+      "id": "banner_usps_heading_1",
+      "label": "USP Text 1",
+      "default": "GEPRÜFT AUF ÜBER 1000 SCHADSTOFFE"
+    },
+    {
+      "type": "image_picker",
+      "id": "banner_usps_svg_2",
+      "label": "USP Icon 2"
+    },
+    {
+      "type": "text",
+      "id": "banner_usps_heading_2",
+      "label": "USP Text 2",
+      "default": "LABORTEST JULY24: FREI VON ARSEN & BLEI"
+    },
+    {
+      "type": "image_picker",
+      "id": "banner_usps_svg_3",
+      "label": "USP Icon 3"
+    },
+    {
+      "type": "text",
+      "id": "banner_usps_heading_3",
+      "label": "USP Text 3",
+      "default": "OHNE BIOZIDE & OHNE PFAS"
+    },
+    {
+      "type": "image_picker",
+      "id": "banner_usps_svg_4",
+      "label": "USP Icon 4"
+    },
+    {
+      "type": "text",
+      "id": "banner_usps_heading_4",
+      "label": "USP Text 4",
+      "default": "OEKO-TEX100 STANDARD"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "slide",
+      "name": "Slide",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title",
+          "default": "60 Tage Geld zurück Garantie"
+        },
+        {
+          "type": "checkbox",
+          "id": "has_dropdown",
+          "label": "Enable dropdown content",
+          "default": true
+        },
+        {
+          "type": "richtext",
+          "id": "content",
+          "label": "Content",
+          "default": "<p>Add detailed information about this feature here.</p>"
+        },
+        {
+          "type": "text",
+          "id": "link_text",
+          "label": "Button text"
+        },
+        {
+          "type": "url",
+          "id": "link_url",
+          "label": "Button link"
+        },
+        {
+          "type": "header",
+          "content": "Mobile Styling"
+        },
+        {
+          "type": "color",
+          "id": "mobile_background",
+          "label": "Mobile background color",
+          "default": "#f7f7f7"
+        },
+        {
+          "type": "color",
+          "id": "mobile_text_color",
+          "label": "Mobile text color",
+          "default": "#000000"
+        },
+        {
+          "type": "header",
+          "content": "Scheduling"
+        },
+        {
+          "type": "checkbox",
+          "id": "schedule_publishing",
+          "label": "Schedule publishing"
+        },
+        {
+          "type": "text",
+          "id": "publish_date",
+          "label": "Publish date",
+          "info": "Format: DD.MM.YYYY HH:MM"
+        },
+        {
+          "type": "checkbox",
+          "id": "schedule_unpublishing",
+          "label": "Schedule unpublishing"
+        },
+        {
+          "type": "text",
+          "id": "unpublish_date",
+          "label": "Unpublish date",
+          "info": "Format: DD.MM.YYYY HH:MM"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Certification & USPs",
+      "blocks": [
+        {
+          "type": "slide",
+          "settings": {
+            "title": "60 Tage Geld zurück Garantie",
+            "has_dropdown": true,
+            "content": "<p>Du bist nicht zufrieden? Kein Problem, wir erstatten dir innerhalb von 60 Tagen den vollen Kaufpreis zurück.</p>"
+          }
+        },
+        {
+          "type": "slide",
+          "settings": {
+            "title": "Kostenloser Versand ab 65€",
+            "has_dropdown": false,
+            "link_url": "/pages/shipping"
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

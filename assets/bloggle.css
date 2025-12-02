@@ -1,0 +1,56 @@
+.article #bloggy--article .padding_vertical--small {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.article #bloggy--article .padding_vertical--medium {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.article #bloggy--article .padding_vertical--large {
+  padding-top: 120px;
+  padding-bottom: 120px;
+}
+
+@media screen and (max-width: 767px) {
+  .article #bloggy--article .padding_vertical--small {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+  
+  .article #bloggy--article .padding_vertical--medium {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+  
+  .article #bloggy--article .padding_vertical--large {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .article #bloggy--article .padding_vertical--small {
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+
+  .article #bloggy--article .padding_vertical--medium {
+    padding-top: 25px;
+    padding-bottom: 25px;
+  }
+
+  .article #bloggy--article .padding_vertical--large {
+    padding-top: 45px;
+    padding-bottom: 45px;
+  }
+}
+
+.bggle_table-of-content, .bggle_summary {
+  padding: 1rem 1.5rem!important;
+}
+
+.bggle_table-of-content > p {
+  font-weight: bold;
+}

@@ -1,0 +1,22 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "parent": "collection.period-pantys.json",
+  "context": {
+    "market": "netherlands"
+  },
+  "sections": {
+    "c8301c43-1254-4976-8f39-0d3af5d27dae": {
+      "disabled": true,
+      "settings": {},
+      "blocks": {}
+    }
+  }
+}

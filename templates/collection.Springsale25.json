@@ -1,0 +1,134 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "collection-banner": {
+      "type": "collection-banner",
+      "disabled": true,
+      "settings": {
+        "show_collection_image": true,
+        "show_collection_title": true,
+        "show_collection_description": true,
+        "section_height": "medium",
+        "text_width": "large",
+        "heading_font_family": "circular",
+        "image_heading_color": "#ffffff",
+        "image_text_color": "#ffffff",
+        "image_overlay_color": "#000000",
+        "image_overlay_opacity": 42,
+        "quick_links": ""
+      }
+    },
+    "slideshow_iQWd4W": {
+      "type": "slideshow",
+      "blocks": {
+        "image_XLPgkV": {
+          "type": "image",
+          "disabled": true,
+          "settings": {
+            "image": "shopify://shop_images/Header_Web__1_53ad8958-07ab-4f77-bdae-4e7b5b6571b0.jpg",
+            "mobile_image": "shopify://shop_images/Header_mobile_2_cb36cbcb-06ff-4b36-bb02-bc88e55c8191.jpg",
+            "text_position": "middle_center",
+            "subheading": "",
+            "title": "WINTER SALE LIMITED 2+1 DEAL",
+            "subtitle": "<p>Lege zwei Pantys und einen Bralette in deinen Warenkorb und erhalte die Bralette kostenlos dazu (automatisch im Warenkorb)<br/><br/>Gilt nur auf ausgewählte Produkte </p>",
+            "subtitle_html": "",
+            "button_1_text": "",
+            "button_1_link": "",
+            "button_2_text": "",
+            "button_2_link": "",
+            "heading_font_family": "circular",
+            "heading_color": "#ffffff",
+            "text_color": "#ffffff",
+            "button_background": "#ff3f46",
+            "button_text_color": "#ffffff",
+            "overlay_color": "#000000",
+            "overlay_opacity": 34,
+            "schedule_publishing": false,
+            "publish_date": "25.01.2025 00:01",
+            "schedule_unpublishing": true,
+            "unpublish_date": "30.01.2025 23:59"
+          }
+        },
+        "image_aVAJUG": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Header_Web_c970a352-2f20-414a-8483-526f9deebeb4.jpg",
+            "mobile_image": "shopify://shop_images/Header_mobile_1_5a61c391-027b-4661-b01a-a1ccc2c579d3.jpg",
+            "text_position": "middle_center",
+            "subheading": "",
+            "title": "WINTER SALE BIS -50% OFF",
+            "subtitle": "",
+            "subtitle_html": "",
+            "button_1_text": "",
+            "button_1_link": "",
+            "button_2_text": "",
+            "button_2_link": "",
+            "heading_font_family": "circular",
+            "heading_color": "#ffffff",
+            "text_color": "#ffffff",
+            "button_background": "#ff3f46",
+            "button_text_color": "#ffffff",
+            "overlay_color": "#000000",
+            "overlay_opacity": 33,
+            "schedule_publishing": true,
+            "publish_date": "31.01.2025 00:01",
+            "schedule_unpublishing": true,
+            "unpublish_date": "09.02.2025 23:59"
+          }
+        }
+      },
+      "block_order": [
+        "image_XLPgkV",
+        "image_aVAJUG"
+      ],
+      "settings": {
+        "section_height": "small",
+        "transition_type": "sweep",
+        "autoplay": true,
+        "cycle_speed": 5,
+        "background": "rgba(0,0,0,0)",
+        "show_banner_usps": false,
+        "banner_usps_link": "",
+        "show_hide_button": false,
+        "banner_usps_bg_color": "#ffffff",
+        "banner_usps_text_color": "#2abb53",
+        "banner_usps_heading": "",
+        "banner_usps_heading_1": "",
+        "banner_usps_heading_2": "",
+        "banner_usps_heading_3": "",
+        "banner_usps_heading_4": ""
+      }
+    },
+    "main": {
+      "type": "main-collection",
+      "settings": {
+        "products_per_page": 50,
+        "mobile_products_per_row": "2",
+        "desktop_products_per_row": 4,
+        "show_all_colors": true,
+        "hide_from_product_title_start": "",
+        "show_sort_by": true,
+        "show_filters": true,
+        "show_filter_group_name": true,
+        "show_color_swatch": true,
+        "open_first_filter_group": false,
+        "filter_position": "drawer",
+        "promotion_position": "top",
+        "promotion_height": "small"
+      }
+    }
+  },
+  "order": [
+    "collection-banner",
+    "slideshow_iQWd4W",
+    "main"
+  ]
+}

@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="{{ locale }}" dir="{{ direction }}" class="{{ checkout_html_classes }}">
+  <head> 
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, height=device-height, minimum-scale=1.0, user-scalable=0">
+    <meta name="referrer" content="origin">
+    <meta name="theme-color" content="{{ settings.header_background }}">
+    
+    <title>{{ page_title }}</title>
+    
+    {%- if settings.favicon -%}
+      <link rel="shortcut icon" href="{{ settings.favicon | img_url: '96x96' }}" type="image/png">
+    {%- endif -%}
+    
+    <!-- General preload & prefetch -->
+    <link rel="preconnect" href="https://cdn.shopify.com">
+    <link rel="dns-prefetch" href="https://productreviews.shopifycdn.com">
+    <link rel="dns-prefetch" href="https://www.google-analytics.com">
+    <link rel="preconnect" href="//app.usercentrics.eu">
+    <link rel="preconnect" href="//api.usercentrics.eu">
+    <link rel="preconnect" href="//privacy-proxy.usercentrics.eu">
+    <link rel="preload" as="script" href="//app.usercentrics.eu/browser-ui/latest/loader.js">
+    <link rel="preload" as="script" href="//privacy-proxy.usercentrics.eu/latest/uc-block.bundle.js">
+    
+    <!-- APM/Exception management -->
+    <script
+      src="https://browser.sentry-cdn.com/7.36.0/bundle.tracing.replay.min.js"
+      integrity="sha384-7tfJTi5j94hjodX3ESndyn59/88CYVw9kwwqXDzVHJH1FOT9KB/FAie508nQlJXJ"
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      Sentry.init({
+        dsn: "https://df6c8eba46234e27a991bf672cc26a42@o362604.ingest.sentry.io/4504633106497536",
+        denyUrls: ["static.klaviyo.com", "cdn.shopify.com/shopifycloud/payment-sheet/"],
+        integrations: [new Sentry.BrowserTracing(), new Sentry.Integrations.Replay()],
+        tracesSampleRate: 0.1,
+        replaysSessionSampleRate: 0.1,
+        replaysOnErrorSampleRate: 1.0,
+      });
+    </script>
+
+    <!-- Usercentrics -->
+    <script id="usercentrics-cmp" src="https://app.usercentrics.eu/browser-ui/latest/loader.js" data-settings-id="TxL-NT3yJ" async></script>
+    <script type="application/javascript" src="https://privacy-proxy.usercentrics.eu/latest/uc-block.bundle.js"></script>
+
+    <!-- Styles -->
+    {% render 'css-variables', direction: direction %}
+    {% render 'js-variables', direction: direction %}
+    {% render 'fonts' %}
+
+    <!-- Scripts -->
+    <!-- Tracify not required -->
+
+    {{ content_for_header }}
+
+    {{ checkout_stylesheets }}
+    <style>
+      
+      .product-table tr.product {
+        display: none;
+      }
+      .bundle .product__price del {
+        display: none;
+      }
+      .bundle .product__description .reduction-code {
+        display: none;
+      }
+      .order-summary-toggle__inner s {
+        display: none;
+      }
+      .product .product-thumbnail__quantity:after {
+        content: "x";
+      }
+
+      .dynamic-checkout .dynamic-checkout__content {
+        padding: 0.5rem;
+      }
+
+      .dynamic-checkout .dynamic-checkout__buttons ul[data-shopify-buttoncontainer="true"] {
+        flex-direction: row!important;
+      }
+
+      .dynamic-checkout .dynamic-checkout__buttons ul[data-shopify-buttoncontainer="true"] li {
+        flex: 1;
+        margin-right: 6px!important;
+      }
+
+      .dynamic-checkout .dynamic-checkout__buttons ul[data-shopify-buttoncontainer="true"] li:last-of-type {
+        margin-right: 0!important;
+      }
+
+      .dynamic-checkout .dynamic-checkout__buttons ul[data-shopify-buttoncontainer="true"] li svg {
+        transform: scale(0.8);
+      }
+
+      .dynamic-checkout__content:after {
+        content: "{{ 'shopify.checkout.express_payment_notice' | t }}";
+        font-size: 0.8571428571em;
+        margin-top: 0.5rem;
+        display: block;
+        text-align: center;
+      }
+
+      .popper {
+        background-color: rgb(245, 142, 158);
+        color: white;
+        padding: 5px 10px;
+        border-radius: 4px;
+        font-size: 13px;
+        display: none;
+      }
+
+      .popper[data-show] {
+        display: block;
+      }
+
+      .arrow,
+      .arrow::before {
+        position: absolute;
+        width: 8px;
+        height: 8px;
+        background: inherit;
+      }
+      
+      .arrow {
+        visibility: hidden;
+      }
+      
+      .arrow::before {
+        visibility: visible;
+        content: '';
+        transform: rotate(45deg);
+      }
+
+      .popper[data-popper-placement^='top'] > .arrow {
+        bottom: -4px;
+      }
+      
+      .popper[data-popper-placement^='bottom'] > .arrow {
+        top: -4px;
+      }
+      
+      .popper[data-popper-placement^='left'] > .arrow {
+        right: -4px;
+      }
+      
+      .popper[data-popper-placement^='right'] > .arrow {
+        left: -4px;
+      }
+    </style>
+    {{ checkout_scripts }}
+  </head>
+  <body>
+    {{ skip_to_content_link }}
+
+    <header class="banner" data-header role="banner">
+      <div class="wrap">
+        {{ content_for_logo }}
+      </div>
+    </header>
+
+    {{ order_summary_toggle }}
+    <div id="discount-code-tooltip" class="popper" role="tooltip" style="max-width: 200px;">
+      Ausklappen um Rabattcode einzugeben!
+      <div class="arrow" data-popper-arrow></div>
+    </div>
+    <div class="content" data-content>
+      <div class="wrap">
+        <div class="main">
+          <header class="main__header" role="banner">
+            {{ content_for_logo }}
+            {{ breadcrumb }}
+            {{ alternative_payment_methods }}
+          </header>
+          <main class="main__content" role="main">
+            {{ content_for_layout }}
+          </main>
+          <footer class="main__footer" role="contentinfo">
+            {{ content_for_footer }}
+          </footer>
+        </div>
+        <aside class="sidebar" role="complementary">
+          <div class="sidebar__header">
+            {{ content_for_logo }}
+          </div>
+          <div class="sidebar__content">
+            {{ content_for_order_summary }}
+          </div>
+        </aside>
+      </div>
+    </div>
+
+    {{ tracking_code }}
+
+    <script src="{{ 'global.js' | asset_url }}" ></script>
+
+    {% comment %}
+    <script>
+      const discountCodeMessages = {
+        "AFFBENEFIT-X129U": "Hinweis: Da wir unsere Produkte während unseres Sales stark reduziert haben, gibt es für die Dauer des Lagersales mit diesem Code 5% Rabatt.",
+        "AFFBENEFIT": "Hinweis: Da wir unsere Produkte während unseres Sales stark reduziert haben, gibt es für die Dauer des Lagersales mit diesem Code 5% Rabatt.",
+        "IAMWOMAN15": "Hinweis: Da wir unsere Produkte während unseres Sales stark reduziert haben, gibt es für die Dauer des Lagersales mit diesem Code 5% Rabatt.",
+        "IAMWOMAN5": "Hinweis: Da wir unsere Produkte während unseres Sales stark reduziert haben, gibt es für die Dauer des Lagersales mit diesem Code 5% Rabatt.",
+        "UNI15": "Hinweis: Da wir unsere Produkte während unseres Sales stark reduziert haben, gibt es für die Dauer des Lagersales mit diesem Code 5% Rabatt.",
+        "affglamour15": "Hinweis: Da wir unsere Produkte während unseres Sales stark reduziert haben, gibt es für die Dauer des Lagersales mit diesem Code 5% Rabatt.",
+        "TMR-TFC%1ZYK5": "Hinweis: Da wir unsere Produkte während unseres Sales stark reduziert haben, gibt es für die Dauer des Lagersales mit diesem Code 5% Rabatt.",
+        "AFF_BLEEDGREEN": "Hinweis: Da wir unsere Produkte während unseres Sales stark reduziert haben, gibt es für die Dauer des Lagersales mit diesem Code 5% Rabatt.",
+        "AFFBURDA15": "Hinweis: Da wir unsere Produkte während unseres Sales stark reduziert haben, gibt es für die Dauer des Lagersales mit diesem Code 5% Rabatt.",
+        "SFTLOVE25": "Hinweis: Da wir unsere Produkte während unseres Sales stark reduziert haben, gibt es für die Dauer des Lagersales mit diesem Code 5% Rabatt.",
+        "internal_test_order": "Achtung: Code nur für interne Nutzung. Die Bestellung wird automatisch storniert."
+      };
+
+      const discountCodeMessageEntries = Object.entries(discountCodeMessages);
+      const discountCodesWithMessage = Object.keys(discountCodeMessages).map((code) => code.toUpperCase());
+      
+      if(typeof Checkout !== "undefined") {
+        Checkout.$(document).on("page:load page:change", function() {
+          const discountCodeField = Checkout.$('#checkout_reduction_code');
+
+          function addCodeMessage() {
+            if(!discountCodeField.length) {
+              return;
+            }
+            
+            const currentCode = discountCodeField.val().toUpperCase();
+            const appliedCodes = Array.from(document.querySelectorAll('.reduction-code__text')).map((el) => el.innerText);
+
+            Checkout.$('#custom-discount-code-message').remove();
+
+            if(discountCodesWithMessage.includes(currentCode) || appliedCodes.some((code) => discountCodesWithMessage.includes(code.toUpperCase()))) {
+              console.log("Found message for code", currentCode);
+
+              const message = discountCodeMessageEntries.find(([code, message]) => code.toUpperCase() === currentCode || appliedCodes.map((code) => code.toUpperCase()).includes(code.toUpperCase()))[1];
+              console.log("Message is:", message);
+
+              Checkout.$(`<p id="custom-discount-code-message" style="clear: both; padding: 1rem; background: #fff676; border-radius: 5px; margin: 1rem 0;">${message}</p>`).insertAfter(discountCodeField.parent().parent().parent());
+            }
+          }
+
+          discountCodeField.on('input', addCodeMessage);
+          addCodeMessage();
+        });
+      }
+    </script>
+  {% endcomment %}
+
+    <script>
+      function validateStreet() {
+        var address1 = Checkout.$('#checkout_shipping_address_address1');
+
+        var address1_invalid = false;
+
+        if(Shopify.Checkout.step === 'contact_information' && address1.length !== 0) {
+          address1_invalid = !address1.val().match(/[0-9]+/) && address1.val() !== "";
+          setTimeout(function() { address1.parents('div[data-address-field="address1"]').toggleClass('field--error', address1_invalid); }, 0);
+        }
+
+        Checkout.$('#continue_button').attr('disabled', address1_invalid).css('opacity', address1_invalid ? 0.3 : 1);
+      }
+
+      if(Checkout) {
+        Checkout.$(document).on("page:load page:change", function() {
+          Checkout.$('#checkout_shipping_address_address1').on('input change', validateStreet);
+
+          var bundle_masters = {};
+          var bundle_items = {};
+          
+          const currencyFormat = window.themeVariables.settings.currencyCodeEnabled ? window.themeVariables.settings.moneyWithCurrencyFormat : window.themeVariables.settings.moneyFormat;
+          {%- for item in checkout.line_items -%}
+            {%- unless item.properties["_bundle"] == "item" -%}
+              Checkout.$(".product-table tr.product").eq({{ forloop.index0 }}).css("display", "table-row");
+            {%- endunless -%}
+            {%- if item.properties["_bundle"] == "master" -%}
+              bundle_masters[{{ item.properties["_bundle_id"] }}] = {
+                position: {{ forloop.index0 }},
+                price_original: {{ item.properties["_bundle_price"] | times: item.quantity }},
+                price_discounted: 0
+              };
+              var bundle_master_price = {{ item.properties["_bundle_price"] | times: item.quantity }};
+              var bundle_product_tr = Checkout.$(".product-table tr.product").eq({{ forloop.index0 }});
+              bundle_product_tr.addClass("bundle");
+
+              bundle_product_tr.find(".product__price span").text(formatMoney(bundle_master_price, currencyFormat));
+              bundle_product_tr.find(".product__price del").text(formatMoney(bundle_master_price, currencyFormat));
+              var bundle_description = bundle_product_tr.find(".product__description__property");
+              bundle_description.html(bundle_description.html().replaceAll("Enthält:", "").replaceAll("|", "<br>"));
+            {%- endif -%}
+            {% if item.properties["_bundle"] == "item" %}
+              bundle_items[{{ forloop.index0 }}] = {{ item.properties["_bundle_id"] }};
+            {% endif %}
+          {%- endfor -%}
+          var reduction_code = Checkout.jQuery(".order-summary__section--discount .reduction-code__text").text();
+          if (reduction_code != "") {
+            for (let key in bundle_items) {
+              var bundle_item = Checkout.$(".product-table tr.product").eq(key);
+              var price_text = bundle_item.find(".product__price span").text();
+              var price = 0;
+              if (price_text != "Kostenlos") {
+                var price = bundle_item.find(".product__price span").text().replaceAll(/\D/g, "");
+              }
+              var bundle_id = bundle_items[key];
+              bundle_masters[bundle_id]["price_discounted"] += parseInt(price, 10);
+            }
+            for (let key in bundle_masters) {
+              var bundle_master = bundle_masters[key];
+              if (bundle_master.price_discounted != bundle_master.price_original) {
+                var price = (bundle_master.price_discounted / 100).toFixed(2).replace(".", ",") + " €";
+                Checkout.$(".product-table tr.product").eq(bundle_master.position).find(".product__price span").text(price);
+                Checkout.$(".product-table tr.product").eq(bundle_master.position).find(".product__price del").css('display', 'inline');
+                var reduction_value = ((bundle_master.price_original - bundle_master.price_discounted) / 100).toFixed(2).replace(".", ",") + " €";
+                Checkout.$(".product-table tr.product").eq(bundle_master.position).find(".product__description").append('<ul><li class="reduction-code" style="display:block;"><svg class="icon-svg icon-svg--color-adaptive-light icon-svg--size-16 reduction-code__icon remove-while-loading" aria-hidden="true" focusable="false"> <use xlink:href="#tags-filled"></use> </svg><span class="reduction-code__text skeleton-while-loading--left"> '+reduction_code+' (-'+reduction_value+')</span></li></ul>');
+              }
+            }
+          }
+
+        });
+      }
+    </script>
+    
+    <style>
+      p[data-address-civic-number-warning] {
+        color: #cc0807;
+      }
+    </style>
+    
+    <script src="https://unpkg.com/@popperjs/core@2"></script>
+    <script>
+      const orderSummaryToggle = document.querySelector('.order-summary-toggle__text span');
+      const tooltip = document.querySelector('#discount-code-tooltip');
+    
+      let popperInstance = null;
+
+      function showPopper() {
+        tooltip.setAttribute('data-show', '');
+
+        popperInstance.setOptions((options) => ({
+          ...options,
+          modifiers: [
+            ...options.modifiers,
+            { name: 'eventListeners', enabled: true },
+          ],
+        }));
+        
+        popperInstance.update();
+      }
+      
+      function hidePopper() {
+        tooltip.removeAttribute('data-show');
+
+        popperInstance.setOptions((options) => ({
+          ...options,
+          modifiers: [
+            ...options.modifiers,
+            { name: 'eventListeners', enabled: false },
+          ],
+        }));
+      }
+
+      if(Shopify.Checkout.step === 'contact_information' && window.innerWidth <= 767) {
+        popperInstance = Popper.createPopper(orderSummaryToggle, tooltip, {
+          placement: 'bottom',
+          modifiers: [
+            {
+              name: 'offset',
+              options: {
+                offset: [0, 8],
+              },
+            },
+          ],
+        });
+        
+        showPopper();
+        setTimeout(hidePopper, 5000);
+      }
+    </script>
+        
+    {% render 'footer' %}
+</body>
+</html>

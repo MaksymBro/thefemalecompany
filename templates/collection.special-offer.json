@@ -1,0 +1,553 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "slideshow_mD3fbG": {
+      "type": "slideshow",
+      "blocks": {
+        "image_jXHpgy": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/2_1_Deal_Dezember_2024.jpg",
+            "mobile_image": "shopify://shop_images/2_1_Deal_Dezember_2024_Mobile.jpg",
+            "text_position": "middle_center",
+            "subheading": "",
+            "title": "Clitmas Deal 2+1 🎁",
+            "subtitle": "<p><strong>Lege 3 Produkte in deinen Warenkorb</strong> und der Preis für das günstigste Produkt wird <strong>automatisch abgezogen!</strong></p>",
+            "subtitle_html": "",
+            "button_1_text": "",
+            "button_1_link": "",
+            "button_2_text": "",
+            "button_2_link": "",
+            "heading_font_family": "circular",
+            "heading_color": "#ffffff",
+            "text_color": "#ffffff",
+            "button_background": "#ffffff",
+            "button_text_color": "#000000",
+            "overlay_color": "#000000",
+            "overlay_opacity": 30,
+            "schedule_publishing": true,
+            "publish_date": "27.12.2024 00:01",
+            "schedule_unpublishing": true,
+            "unpublish_date": "01.01.2025 23:59"
+          }
+        },
+        "image_KLnzhT": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Header_Web__2_359c6ba3-4372-4560-9c5a-ccc8f166a0b1.jpg",
+            "mobile_image": "shopify://shop_images/Header_mobile_52c31357-37df-4d21-982f-5d9022469446.jpg",
+            "text_position": "middle_center",
+            "subheading": "",
+            "title": "Leo V-Cut Kollektion",
+            "subtitle": "<p>Non-toxic Period Panty Kollektion. Made by women* with wild hearts and bossy brains.</p>",
+            "subtitle_html": "",
+            "button_1_text": "",
+            "button_1_link": "",
+            "button_2_text": "",
+            "button_2_link": "",
+            "heading_font_family": "circular",
+            "heading_color": "#ffffff",
+            "text_color": "#ffffff",
+            "button_background": "#ffffff",
+            "button_text_color": "#000000",
+            "overlay_color": "#000000",
+            "overlay_opacity": 30,
+            "schedule_publishing": true,
+            "publish_date": "26.12.2024 00:01",
+            "schedule_unpublishing": true,
+            "unpublish_date": "02.01.2025 23:59"
+          }
+        },
+        "image_947Wdk": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Header_Web__16_59711cf0-f500-4a9b-b7b4-fc07fe0a0ca3.jpg",
+            "mobile_image": "shopify://shop_images/Header_mobile_17_788005aa-845b-4ee2-aabd-9a36141891e4.jpg",
+            "text_position": "middle_center",
+            "subheading": "",
+            "title": "Bis zu 15% Rabatt",
+            "subtitle": "<p>Erhalte bis zu <strong>15% Mengenrabatt </strong>beim Kauf von <strong>drei oder mehr </strong>Period Pantys oder Daysics® </p>",
+            "subtitle_html": "",
+            "button_1_text": "",
+            "button_1_link": "",
+            "button_2_text": "",
+            "button_2_link": "",
+            "heading_font_family": "circular",
+            "heading_color": "#ffffff",
+            "text_color": "#ffffff",
+            "button_background": "#ffffff",
+            "button_text_color": "#000000",
+            "overlay_color": "#000000",
+            "overlay_opacity": 30,
+            "schedule_publishing": false,
+            "publish_date": "26.12.2024 23:59",
+            "schedule_unpublishing": false,
+            "unpublish_date": "02.01.2025 23:59"
+          }
+        }
+      },
+      "block_order": [
+        "image_jXHpgy",
+        "image_KLnzhT",
+        "image_947Wdk"
+      ],
+      "disabled": true,
+      "settings": {
+        "section_height": "auto",
+        "transition_type": "sweep",
+        "autoplay": true,
+        "cycle_speed": 5,
+        "background": "rgba(0,0,0,0)",
+        "show_banner_usps": false,
+        "banner_usps_link": "",
+        "show_hide_button": false,
+        "banner_usps_bg_color": "#ffffff",
+        "banner_usps_text_color": "#2abb53",
+        "banner_usps_heading": "",
+        "banner_usps_heading_1": "",
+        "banner_usps_heading_2": "",
+        "banner_usps_heading_3": "",
+        "banner_usps_heading_4": ""
+      }
+    },
+    "rich_text_nxaxJy": {
+      "type": "rich-text",
+      "name": "Rich text",
+      "settings": {
+        "subheading": "",
+        "title": "Bralettes - bis zu 70%",
+        "content": "<p>Zero Wires. Zero Pressure. 100% Softness.</p>",
+        "button_text": "",
+        "button_link": "",
+        "background_type": "full_width",
+        "text_width": "medium",
+        "text_position": "center",
+        "text_alignment": "center",
+        "background": "rgba(0,0,0,0)",
+        "text_color": "#cc0807",
+        "button_background": "rgba(0,0,0,0)",
+        "button_text_color": "rgba(0,0,0,0)"
+      }
+    },
+    "collection-banner": {
+      "type": "collection-banner",
+      "disabled": true,
+      "settings": {
+        "show_collection_image": true,
+        "show_collection_title": true,
+        "show_collection_description": true,
+        "section_height": "medium",
+        "text_width": "large",
+        "heading_font_family": "circular",
+        "image_heading_color": "#ffffff",
+        "image_text_color": "#ffffff",
+        "image_overlay_color": "#000000",
+        "image_overlay_opacity": 42,
+        "quick_links": ""
+      }
+    },
+    "pagefly_section_yr4AbP": {
+      "type": "pagefly-section",
+      "disabled": true,
+      "settings": {
+        "section_id": "pf-43e5af48"
+      }
+    },
+    "countdown_timer_fTtaWr": {
+      "type": "countdown-timer",
+      "blocks": {
+        "text_Wb7xKR": {
+          "type": "text",
+          "settings": {
+            "text": "<p><strong>Der Deal endet in:<br/><br/>2+1 Deal: Lege drei Produkte in den Warenkorb</strong> und du erhältst das günstige von uns geschenkt!</p>",
+            "offset_top_desktop": 20,
+            "offset_bottom_desktop": 20,
+            "offset_top_mobile": 10,
+            "offset_bottom_mobile": 10
+          }
+        },
+        "countdown_timer_WHxhdx": {
+          "type": "countdown_timer",
+          "settings": {
+            "show_countdown_words": true,
+            "countdown_start_date": "2024-12-27",
+            "countdown_start_time_hour": "00",
+            "countdown_start_time_minute": "00",
+            "countdown_date": "2025-01-01",
+            "countdown_time_hour": "23",
+            "countdown_time_minute": "59",
+            "timer_link": "",
+            "timer_font_size_mobile": 2.5,
+            "text_font_size_mobile": 0.8,
+            "timer_font_size_desktop": 4.5,
+            "text_font_size_desktop": 1.5,
+            "offset_top_desktop": 20,
+            "offset_bottom_desktop": 20,
+            "offset_top_mobile": 10,
+            "offset_bottom_mobile": 10
+          }
+        }
+      },
+      "block_order": [
+        "text_Wb7xKR",
+        "countdown_timer_WHxhdx"
+      ],
+      "settings": {
+        "countdown_text_color": "#1a1a1a",
+        "background_color": "#fff0f0",
+        "text_color": "#1a1a1a"
+      }
+    },
+    "rich_text_3GDQkt": {
+      "type": "rich-text",
+      "disabled": true,
+      "name": "Rich text",
+      "settings": {
+        "subheading": "",
+        "title": "Bralettes",
+        "content": "",
+        "button_text": "",
+        "button_link": "",
+        "background_type": "full_width",
+        "text_width": "medium",
+        "text_position": "center",
+        "text_alignment": "center",
+        "background": "rgba(0,0,0,0)",
+        "text_color": "rgba(0,0,0,0)",
+        "button_background": "rgba(0,0,0,0)",
+        "button_text_color": "rgba(0,0,0,0)"
+      }
+    },
+    "main": {
+      "type": "main-collection",
+      "settings": {
+        "products_per_page": 50,
+        "mobile_products_per_row": "2",
+        "desktop_products_per_row": 4,
+        "show_all_colors": true,
+        "hide_from_product_title_start": "",
+        "show_sort_by": true,
+        "show_filters": true,
+        "show_filter_group_name": true,
+        "show_color_swatch": true,
+        "open_first_filter_group": false,
+        "filter_position": "drawer",
+        "promotion_position": "top",
+        "promotion_height": "small"
+      }
+    },
+    "featured_collections_cUwcrT": {
+      "type": "featured-collections",
+      "blocks": {
+        "collection_HiFjVV": {
+          "type": "collection",
+          "settings": {
+            "collection": "rasierhobel",
+            "label": "",
+            "button_text": "",
+            "button_url": "",
+            "hide_from_product_title_start": "",
+            "filterable_options": ""
+          }
+        }
+      },
+      "block_order": [
+        "collection_HiFjVV"
+      ],
+      "name": "Featured collections",
+      "settings": {
+        "start_year": 2025,
+        "start_month": 1,
+        "start_day": 1,
+        "start_time": "10:00",
+        "end_year": 2050,
+        "end_month": 12,
+        "end_day": 31,
+        "end_time": "10:00",
+        "products_count": 8,
+        "products_per_row": 4,
+        "stack_products": true,
+        "show_cta": false,
+        "filter_toggle_button_background": "rgba(0,0,0,0)",
+        "filter_toggle_active_button_background": "rgba(0,0,0,0)",
+        "filter_toggle_button_color": "rgba(0,0,0,0)",
+        "button_background": "rgba(0,0,0,0)",
+        "button_text_color": "rgba(0,0,0,0)",
+        "subheading": "",
+        "title": "Plastikfrei Rasieren - bis zu 50%",
+        "content": "<p>Zero Waste. Zero Cuts. 100% Smooth. Unsere Plastikfreien und natürlichen Rasur Essentials.</p>",
+        "section_header_heading_size": "h3",
+        "section_header_highest_hierarchy": false,
+        "section_header_short_description_font_size": "medium",
+        "section_container_width": "md",
+        "background": "rgba(0,0,0,0)",
+        "text_color": "rgba(0,0,0,0)",
+        "heading_color": "#cc0807",
+        "section_subheading_color": "rgba(0,0,0,0)",
+        "section_heading_font_family": "default",
+        "section_spacing_top": 0,
+        "section_spacing_bottom": 0,
+        "section_spacing_different_mobile": true,
+        "section_spacing_top_mobile": 20,
+        "section_spacing_bottom_mobile": 48
+      }
+    },
+    "featured_collections_MJLNgj": {
+      "type": "featured-collections",
+      "blocks": {
+        "collection_qmwkKq": {
+          "type": "collection",
+          "settings": {
+            "collection": "vulvaletten",
+            "label": "",
+            "button_text": "",
+            "button_url": "",
+            "hide_from_product_title_start": "",
+            "filterable_options": ""
+          }
+        }
+      },
+      "block_order": [
+        "collection_qmwkKq"
+      ],
+      "name": "Featured collections",
+      "settings": {
+        "start_year": 2025,
+        "start_month": 1,
+        "start_day": 1,
+        "start_time": "10:00",
+        "end_year": 2050,
+        "end_month": 12,
+        "end_day": 31,
+        "end_time": "10:00",
+        "products_count": 8,
+        "products_per_row": 4,
+        "stack_products": true,
+        "show_cta": false,
+        "filter_toggle_button_background": "rgba(0,0,0,0)",
+        "filter_toggle_active_button_background": "rgba(0,0,0,0)",
+        "filter_toggle_button_color": "rgba(0,0,0,0)",
+        "button_background": "rgba(0,0,0,0)",
+        "button_text_color": "rgba(0,0,0,0)",
+        "subheading": "",
+        "title": "Empowering Statement Pieces - bis zu 60%",
+        "content": "<p>Starke Messages für jeden Tag!</p>",
+        "section_header_heading_size": "h3",
+        "section_header_highest_hierarchy": false,
+        "section_header_short_description_font_size": "medium",
+        "section_container_width": "md",
+        "background": "rgba(0,0,0,0)",
+        "text_color": "rgba(0,0,0,0)",
+        "heading_color": "#cc0807",
+        "section_subheading_color": "rgba(0,0,0,0)",
+        "section_heading_font_family": "default",
+        "section_spacing_top": 48,
+        "section_spacing_bottom": 0,
+        "section_spacing_different_mobile": true,
+        "section_spacing_top_mobile": 20,
+        "section_spacing_bottom_mobile": 24
+      }
+    },
+    "featured_collections_6T9C3i": {
+      "type": "featured-collections",
+      "blocks": {
+        "collection_mgij3K": {
+          "type": "collection",
+          "settings": {
+            "collection": "schmuck",
+            "label": "",
+            "button_text": "",
+            "button_url": "",
+            "hide_from_product_title_start": "",
+            "filterable_options": ""
+          }
+        }
+      },
+      "block_order": [
+        "collection_mgij3K"
+      ],
+      "name": "Featured collections",
+      "settings": {
+        "start_year": 2025,
+        "start_month": 1,
+        "start_day": 1,
+        "start_time": "10:00",
+        "end_year": 2050,
+        "end_month": 12,
+        "end_day": 31,
+        "end_time": "10:00",
+        "products_count": 8,
+        "products_per_row": 4,
+        "stack_products": true,
+        "show_cta": false,
+        "filter_toggle_button_background": "rgba(0,0,0,0)",
+        "filter_toggle_active_button_background": "rgba(0,0,0,0)",
+        "filter_toggle_button_color": "rgba(0,0,0,0)",
+        "button_background": "rgba(0,0,0,0)",
+        "button_text_color": "rgba(0,0,0,0)",
+        "subheading": "",
+        "title": "",
+        "content": "",
+        "section_header_heading_size": "h3",
+        "section_header_highest_hierarchy": false,
+        "section_header_short_description_font_size": "medium",
+        "section_container_width": "md",
+        "background": "rgba(0,0,0,0)",
+        "text_color": "rgba(0,0,0,0)",
+        "heading_color": "rgba(0,0,0,0)",
+        "section_subheading_color": "rgba(0,0,0,0)",
+        "section_heading_font_family": "default",
+        "section_spacing_top": 88,
+        "section_spacing_bottom": 68,
+        "section_spacing_different_mobile": true,
+        "section_spacing_top_mobile": 0,
+        "section_spacing_bottom_mobile": 36
+      }
+    },
+    "shop_the_look_KYaxde": {
+      "type": "shop-the-look",
+      "name": "Shop the look",
+      "settings": {
+        "reveal_on_scroll": true,
+        "label": "Shop the looks"
+      }
+    },
+    "featured_product_pPBXLY": {
+      "type": "featured-product",
+      "blocks": {
+        "variant_picker_Gyn9JA": {
+          "type": "variant_picker",
+          "disabled": true,
+          "settings": {
+            "hide_sold_out_variants": false,
+            "selector_mode": "block",
+            "color_mode": "color",
+            "size_chart_page": ""
+          }
+        },
+        "quantity_selector_XkBt8H": {
+          "type": "quantity_selector",
+          "disabled": true,
+          "settings": {}
+        },
+        "buy_buttons_kgM4Vi": {
+          "type": "buy_buttons",
+          "disabled": true,
+          "settings": {
+            "show_payment_button": true,
+            "show_gift_card_recipient": false,
+            "atc_button_background": "rgba(0,0,0,0)",
+            "atc_button_text_color": "rgba(0,0,0,0)",
+            "buy_now_button_background": "rgba(0,0,0,0)",
+            "buy_now_button_text_color": "rgba(0,0,0,0)"
+          }
+        }
+      },
+      "block_order": [
+        "variant_picker_Gyn9JA",
+        "quantity_selector_XkBt8H",
+        "buy_buttons_kgM4Vi"
+      ],
+      "disabled": true,
+      "name": "Featured product",
+      "settings": {
+        "product": "fallofthepatriarchy-shirt",
+        "subheading": "Subheading",
+        "title": "Featured product",
+        "show_vendor": false,
+        "show_sku": false,
+        "show_taxes_included": false,
+        "show_product_rating": false,
+        "show_share_buttons": false,
+        "help_page": "",
+        "enable_video_autoplay": true,
+        "enable_video_looping": false,
+        "enable_image_zoom": true,
+        "show_thumbnails_on_mobile": false,
+        "desktop_thumbnails_position": "bottom",
+        "transition_effect": "slide",
+        "background": "rgba(0,0,0,0)",
+        "text_color": "rgba(0,0,0,0)"
+      }
+    },
+    "featured_collections_LkjmxY": {
+      "type": "featured-collections",
+      "blocks": {
+        "collection_r4CABf": {
+          "type": "collection",
+          "settings": {
+            "collection": "essentials",
+            "label": "",
+            "button_text": "",
+            "button_url": "",
+            "hide_from_product_title_start": "",
+            "filterable_options": ""
+          }
+        }
+      },
+      "block_order": [
+        "collection_r4CABf"
+      ],
+      "name": "Featured collections",
+      "settings": {
+        "start_year": 2025,
+        "start_month": 1,
+        "start_day": 1,
+        "start_time": "10:00",
+        "end_year": 2050,
+        "end_month": 12,
+        "end_day": 31,
+        "end_time": "10:00",
+        "products_count": 8,
+        "products_per_row": 4,
+        "stack_products": true,
+        "show_cta": false,
+        "filter_toggle_button_background": "rgba(0,0,0,0)",
+        "filter_toggle_active_button_background": "rgba(0,0,0,0)",
+        "filter_toggle_button_color": "rgba(0,0,0,0)",
+        "button_background": "rgba(0,0,0,0)",
+        "button_text_color": "rgba(0,0,0,0)",
+        "subheading": "",
+        "title": "Spare bis zu 20% auf Perioden Produkte",
+        "content": "",
+        "section_header_heading_size": "h3",
+        "section_header_highest_hierarchy": false,
+        "section_header_short_description_font_size": "medium",
+        "section_container_width": "md",
+        "background": "rgba(0,0,0,0)",
+        "text_color": "rgba(0,0,0,0)",
+        "heading_color": "#cc0807",
+        "section_subheading_color": "rgba(0,0,0,0)",
+        "section_heading_font_family": "default",
+        "section_spacing_top": 20,
+        "section_spacing_bottom": 24,
+        "section_spacing_different_mobile": true,
+        "section_spacing_top_mobile": 12,
+        "section_spacing_bottom_mobile": 48
+      }
+    }
+  },
+  "order": [
+    "slideshow_mD3fbG",
+    "rich_text_nxaxJy",
+    "collection-banner",
+    "pagefly_section_yr4AbP",
+    "countdown_timer_fTtaWr",
+    "rich_text_3GDQkt",
+    "main",
+    "featured_collections_cUwcrT",
+    "featured_collections_MJLNgj",
+    "featured_collections_6T9C3i",
+    "shop_the_look_KYaxde",
+    "featured_product_pPBXLY",
+    "featured_collections_LkjmxY"
+  ]
+}

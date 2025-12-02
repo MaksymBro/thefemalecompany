@@ -1,0 +1,309 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-product",
+      "blocks": {
+        "a248d963-ecab-481a-9f9a-1124e1f4fd67": {
+          "type": "back_in_stock_signup",
+          "settings": {
+            "klaviyo_list_id": "V6RJtz"
+          }
+        },
+        "variant_picker": {
+          "type": "variant_picker",
+          "settings": {
+            "hide_sold_out_variants": false,
+            "selector_mode": "dropdown",
+            "color_mode": "color",
+            "size_chart_page": "{{ product.metafields.descriptors.size_guide.value }}",
+            "absorbancy_chart_page": ""
+          }
+        },
+        "f0d2cc62-543d-4ad8-bdd7-18c3d04a52c1": {
+          "type": "fulfillment_time_info",
+          "settings": {}
+        },
+        "yotpo_loyalty_rewards_product_points_module_app_block_JhMnBd": {
+          "type": "shopify://apps/yotpo-loyalty-rewards/blocks/product-points-module-app-block/2f9660df-5018-4e02-9868-ee1fb88d6ccd",
+          "settings": {}
+        },
+        "02190bcc-9ff0-4f94-8898-2b2cb44da8ea": {
+          "type": "low_on_stock_info",
+          "settings": {}
+        },
+        "quantity_selector": {
+          "type": "quantity_selector",
+          "settings": {}
+        },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_payment_button": false,
+            "show_gift_card_recipient": false,
+            "atc_button_background": "rgba(0,0,0,0)",
+            "atc_button_text_color": "rgba(0,0,0,0)",
+            "buy_now_button_background": "rgba(0,0,0,0)",
+            "buy_now_button_text_color": "rgba(0,0,0,0)"
+          }
+        },
+        "a5ac472c-f2be-447e-bdc1-42de5d4d5016": {
+          "type": "trust",
+          "settings": {
+            "icon_1": "picto-warranty",
+            "title_1": "60 Tage Geld-zurück-Garantie",
+            "content_1": "<p>Wenn du unzufrieden bist, erhältst du bis zu <strong>60 Tage lang dein Geld von uns zurück</strong>. Folgendes ist zu beachten:</p><ol><li>Du musst die Retoure bei uns anmelden. Mehr Infos <a href=\"/policies/refund-policy\" title=\"Refund Policy\">hier</a>.</li><li>Alle Produkte die zurückerstattet werden sollen, müssen an uns zurückgesendet werden.</li><li>Die Kosten der Rücksendung müssen selbst getragen werden. Ausgenommen sind Produkte mit Mängeln.</li></ol><p></p>",
+            "nl_only_1": false,
+            "icon_2": "picto-secure-payment",
+            "title_2": "Zahle in 30 Tagen mit Pay Later by Klarna",
+            "content_2": "",
+            "nl_only_2": false,
+            "icon_3": "picto-secure-payment",
+            "title_3": "iDeal Payment",
+            "content_3": "",
+            "nl_only_3": true
+          }
+        },
+        "0d0a5849-05ff-4be4-9622-4f7c3f06ed86": {
+          "type": "complementary_products",
+          "settings": {
+            "title": "Empfohlene Produkte"
+          }
+        },
+        "244be36c-36e1-4348-aa9f-0f5c48a1dab5": {
+          "type": "description_accordion",
+          "settings": {
+            "open_by_default": true,
+            "image_1": "shopify://shop_images/1_Jahr_Goldgarantie.png",
+            "heading_1": "<strong>1 Jahr Goldgarantie</strong>",
+            "description_1": "Wir garantieren dir langlebigen Schmuck. Können wir unser Versprechen nicht halten, kannst du deinen Schmuck ein Jahr lang zurückgeben.",
+            "image_2": "shopify://shop_images/Icon_Saugstark_92beefaf-a66e-4b0b-8553-96c92e1c63fb.svg",
+            "heading_2": "<strong>Wasserfest</strong>",
+            "description_2": "am Strand, in der Dusche, beim Händewaschen... die wasserfeste PVD-Beschichtung hält allem Stand. Keine Verfärbungen.",
+            "image_3": "shopify://shop_images/PVC_gold-coated_Extra_lange_Lebensdauer.png",
+            "heading_3": "<strong>Extra lange Lebensdauer</strong>",
+            "description_3": "Dank widerstandsfähiger PVD-Gold Beschichtung extra kratz- und verschleißfest. Der Coatingprozess ist etwa 10x stärker als normale Goldplattierungen.",
+            "image_4": "shopify://shop_images/Stainless_Steel_-_Verfaerbungsresistent_rostfrei.png",
+            "heading_4": "<strong>Verfärbungsresistent und rostfrei</strong>",
+            "description_4": "Keine Verfärbungen oder Rosten durch Schweiß oder andere Flüssigkeiten",
+            "image_5": "shopify://shop_images/Icon_MediumSupport.png",
+            "heading_5": "<strong>Hypoallergen</strong>",
+            "description_5": "Extra hautverträglich",
+            "heading_6": "",
+            "description_6": ""
+          }
+        },
+        "5d99506a-360d-4c5f-aa4b-422abcc9c271": {
+          "type": "content_accordion",
+          "settings": {
+            "open_by_default": false,
+            "title": "{{ product.metafields.descriptors.content_2_title.value }}",
+            "content": "<p>{{ product.metafields.descriptors.content_2_body | metafield_tag }}</p>",
+            "page": ""
+          }
+        },
+        "0c6c32fe-0356-4aeb-943d-7c7543e9bfa3": {
+          "type": "content_accordion",
+          "settings": {
+            "open_by_default": false,
+            "title": "{{ product.metafields.descriptors.content_3_title.value }}",
+            "content": "<p>{{ product.metafields.descriptors.content_3_body | metafield_tag }}</p>",
+            "page": ""
+          }
+        },
+        "6c2c03e5-473f-4aff-a17e-9f4de44cb2d5": {
+          "type": "content_accordion",
+          "settings": {
+            "open_by_default": false,
+            "title": "{{ product.metafields.descriptors.content_4_title.value }}",
+            "content": "<p>{{ product.metafields.descriptors.content_4_body | metafield_tag }}</p>",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "a248d963-ecab-481a-9f9a-1124e1f4fd67",
+        "variant_picker",
+        "f0d2cc62-543d-4ad8-bdd7-18c3d04a52c1",
+        "yotpo_loyalty_rewards_product_points_module_app_block_JhMnBd",
+        "02190bcc-9ff0-4f94-8898-2b2cb44da8ea",
+        "quantity_selector",
+        "buy_buttons",
+        "a5ac472c-f2be-447e-bdc1-42de5d4d5016",
+        "0d0a5849-05ff-4be4-9622-4f7c3f06ed86",
+        "244be36c-36e1-4348-aa9f-0f5c48a1dab5",
+        "5d99506a-360d-4c5f-aa4b-422abcc9c271",
+        "0c6c32fe-0356-4aeb-943d-7c7543e9bfa3",
+        "6c2c03e5-473f-4aff-a17e-9f4de44cb2d5"
+      ],
+      "settings": {
+        "show_vendor": false,
+        "show_sku": false,
+        "show_taxes_included": true,
+        "show_product_rating": true,
+        "show_sticky_add_to_cart": true,
+        "show_share_buttons": false,
+        "show_buy_button_next_to_quantity": true,
+        "show_product_style": true,
+        "help_page": "",
+        "enable_video_autoplay": true,
+        "enable_video_looping": true,
+        "enable_image_zoom": true,
+        "show_thumbnails_on_mobile": false,
+        "desktop_thumbnails_position": "bottom",
+        "transition_effect": "slide"
+      }
+    },
+    "product-recommendations": {
+      "type": "product-recommendations",
+      "settings": {
+        "subheading": "",
+        "title": "Dir könnte auch gefallen",
+        "recommendations_count": 10,
+        "background": "rgba(0,0,0,0)",
+        "text_color": "rgba(0,0,0,0)"
+      }
+    },
+    "863b1481-ced4-4188-92e5-249aba4378a8": {
+      "type": "pagefly-section",
+      "settings": {
+        "section_id": "pf-7dfe1e03"
+      }
+    },
+    "509ce420-0b6b-436e-9777-04bcb50b11ad": {
+      "type": "gallery",
+      "blocks": {
+        "template--17903116124426__509ce420-0b6b-436e-9777-04bcb50b11ad-1687341866ad188253-0": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/clitclub_community.png",
+            "caption": ""
+          }
+        },
+        "template--17903116124426__509ce420-0b6b-436e-9777-04bcb50b11ad-1687341866ad188253-1": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/ClitCollection_Earrings-3.jpg",
+            "caption": ""
+          }
+        },
+        "template--17903116124426__509ce420-0b6b-436e-9777-04bcb50b11ad-1687341866ad188253-2": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/header_clitclub.jpg",
+            "caption": ""
+          }
+        },
+        "65ca690b-26c6-4fd2-94f8-e0da1cc969c9": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/ClitCollection_Necklace-6.jpg",
+            "caption": ""
+          }
+        },
+        "6902888a-10df-4b78-bdc0-9770687d64ff": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/ClitCollection_Bracelet-2.jpg",
+            "caption": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--17903116124426__509ce420-0b6b-436e-9777-04bcb50b11ad-1687341866ad188253-0",
+        "template--17903116124426__509ce420-0b6b-436e-9777-04bcb50b11ad-1687341866ad188253-1",
+        "template--17903116124426__509ce420-0b6b-436e-9777-04bcb50b11ad-1687341866ad188253-2",
+        "65ca690b-26c6-4fd2-94f8-e0da1cc969c9",
+        "6902888a-10df-4b78-bdc0-9770687d64ff"
+      ],
+      "settings": {
+        "show_arrows": true,
+        "subheading": "Fits aus der Community",
+        "title": "Always Chic. Always Clit.",
+        "section_header_short_description": "",
+        "section_header_heading_size": "h3",
+        "section_header_highest_hierarchy": false,
+        "section_header_short_description_font_size": "medium",
+        "section_container_width": "fluid",
+        "section_text_alignment": "left",
+        "background": "#ffe6e6",
+        "text_color": "rgba(0,0,0,0)",
+        "section_heading_color": "rgba(0,0,0,0)",
+        "section_subheading_color": "rgba(0,0,0,0)",
+        "section_heading_font_family": "default",
+        "section_spacing_top": 60,
+        "section_spacing_bottom": 60,
+        "section_spacing_different_mobile": false,
+        "section_spacing_top_mobile": 0,
+        "section_spacing_bottom_mobile": 0
+      }
+    },
+    "ff5910ea-563e-4599-8fd0-4c8d9ac718ae": {
+      "type": "spacer",
+      "settings": {
+        "height": 36,
+        "different_mobile_height": false,
+        "mobile_height": 0,
+        "background_color": "rgba(0,0,0,0)"
+      }
+    },
+    "1666179092243d9cde": {
+      "type": "apps",
+      "blocks": {
+        "e0862bb4-1e1a-44c5-a83d-aaed3f12395d": {
+          "type": "shopify://apps/reviews-io/blocks/reviewsio-polaris/92a082e5-b297-4e88-b428-ac96cbc505f9",
+          "settings": {
+            "star": "#f58e9e",
+            "review_type": "product_review,questions",
+            "per_page": 4,
+            "primary_btn_bg_color": "#f58e9e",
+            "primary_btn_border_color": "rgba(0,0,0,0)",
+            "primary_btn_text_color": "#ffffff",
+            "secondary_btn_border_color": "#f7aea6",
+            "secondary_btn_text_color": "#56112a",
+            "border_color": "#ffbfbf",
+            "heading_text_color": "#1a1a1a",
+            "heading_font": "sans-serif",
+            "body_text_color": "#000000",
+            "badge_icon_color": "#000000",
+            "badge_text_color": "#000000",
+            "enable_rich_snippets": true,
+            "show_location": true,
+            "show_tab_selector": false,
+            "show_dates": true,
+            "show_avatar": true,
+            "enable_sentiment_analysis": false,
+            "enable_replies": true,
+            "widget_spacing": 0,
+            "capitalise_headers_and_buttons": false,
+            "show_review_title": true,
+            "default_sort": "helpful_desc"
+          }
+        }
+      },
+      "block_order": [
+        "e0862bb4-1e1a-44c5-a83d-aaed3f12395d"
+      ],
+      "settings": {
+        "include_horizontal_margins": true,
+        "include_vertical_margins": false
+      }
+    }
+  },
+  "order": [
+    "main",
+    "product-recommendations",
+    "863b1481-ced4-4188-92e5-249aba4378a8",
+    "509ce420-0b6b-436e-9777-04bcb50b11ad",
+    "ff5910ea-563e-4599-8fd0-4c8d9ac718ae",
+    "1666179092243d9cde"
+  ]
+}

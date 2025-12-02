@@ -1,0 +1,182 @@
+{% if settings.upsell_free_shipping_threshold != blank or settings.upsell_discount_progress_goal1 != 0 or settings.upsell_discount_progress_goal2 != 0 %}
+  {%- if settings.upsell_free_shipping_threshold != blank -%}
+    {%- assign free_shipping_thresholds = settings.upsell_free_shipping_threshold | remove: ' ' | split: ',' -%}
+
+    {%- for threshold in free_shipping_thresholds -%}
+      {%- assign threshold_parts = threshold | split: ':' -%}
+      {%- assign country_code = threshold_parts | first | upcase -%}
+
+      {%- if country_code == localization.country.iso_code -%}
+        {%- assign matched_free_shipping_threshold = threshold_parts | last | times: 100 -%}
+        {%- break -%}
+      {%- endif -%}
+
+      {%- if country_code == "OTHER" -%}
+        {%- assign fallback_threshold = threshold_parts | last | times: 100 -%}
+      {%- endif -%}
+    {%- endfor -%}
+
+    {%- if matched_free_shipping_threshold == blank and fallback_threshold != blank -%}
+      {%- assign matched_free_shipping_threshold = fallback_threshold -%}
+    {%- endif -%}
+  {%- endif -%}
+
+  <upsell-popup class="upsell-popup{% if settings.hide_progress_on_complete_in_popup %} hidden-on-complete{%- endif -%}">
+  <div class="upsell-popup__overlay" data-upsell-popup-overlay></div>
+
+  <div class="upsell-popup__container">
+    <header>
+      <h2 class="upsell-popup__title">
+        {{ "general.upselling_popup.title" | t }}
+      </h2>
+
+      <button
+        type="button"
+        class="upsell-popup__close-button tap-area"
+        data-action="close"
+        title="{{ 'general.accessibility.close' | t | escape }}"
+        data-upsell-popup-close-button
+      >
+        {%- render 'icon' with 'close' -%}
+      </button>
+    </header>
+
+    <main>
+      <upselling-progress class="upselling-progress {% if settings.hide_progress_on_complete_in_popup %}upselling-progress--hide-on-complete{% endif %}">
+        <div class="upselling-progress__container">
+          {% if settings.upsell_free_shipping_threshold != blank %}
+            <cart-total-progress
+            data-progress-bar-container
+            class="upselling-progress__bar-container"
+          >
+            <div class="upselling-progress__header">
+              {%- if settings.upsell_shipping_icon -%}
+                <img
+                  class="upselling-progress__icon"
+                  src="{{- settings.upsell_shipping_icon | img_url: "24x" -}}"
+                  alt="{{- settings.upsell_shipping_icon.alt -}}"
+                >
+              {%- endif -%}
+
+              <div class="upselling-progress__title">
+                {{- "general.upselling_popup.shipping_title" | t -}}
+              </div>
+
+              <svg width="12" height="10" viewBox="0 0 12 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M4.07573 9.29855L0.175729 5.39855C-0.0585762 5.16424 -0.0585762 4.78434 0.175729 4.55002L1.02424 3.70148C1.25854 3.46716 1.63846 3.46716 1.87277 3.70148L4.49999 6.32869L10.1272 0.701485C10.3615 0.467181 10.7414 0.467181 10.9758 0.701485L11.8243 1.55002C12.0586 1.78432 12.0586 2.16422 11.8243 2.39855L4.92426 9.29857C4.68993 9.53288 4.31003 9.53288 4.07573 9.29855Z" fill="#2ABB53"/>
+              </svg>
+            </div>
+
+            <div class="upselling-progress__bar-wrapper">
+              {%- if matched_free_shipping_threshold != blank -%}
+                <span
+                  class="upselling-progress__bar"
+                  data-progress-step
+                  data-hide-on-complete="{{ settings.hide_progress_on_complete_in_popup }}"
+                  data-min-total="{{ matched_free_shipping_threshold }}"
+                  data-in-progress-message="{{ 'cart.gifts.free_shipping_remaining' | t }}"
+                  data-complete-message="{{ 'cart.gifts.free_shipping_achieved' | t }}"
+                ></span>
+              {%- endif -%}
+            </div>
+
+            <div class="upselling-progress__remaining-text" data-progress-step-message>&nbsp;</div>
+          </cart-total-progress>
+          {% endif %}
+
+          {% if settings.upsell_discount_progress_goal1 != 0 %}
+            <panty-bulk-discount
+            data-progress-bar-container
+            class="upselling-progress__bar-container"
+          >
+            <div class="upselling-progress__header">
+              {%- if settings.upsell_discount_icon1 -%}
+                <img
+                  class="upselling-progress__icon upselling-progress__icon--discount"
+                  src="{{- settings.upsell_discount_icon1 | img_url: "24x" -}}"
+                  alt="{{- settings.upsell_discount_icon1.alt -}}"
+                >
+              {%- endif -%}
+
+              <div class="upselling-progress__title">
+                {{- "general.upselling_popup.discount_title" | t: discount: settings.upsell_discount_value1 -}}
+              </div>
+
+              <svg width="12" height="10" viewBox="0 0 12 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M4.07573 9.29855L0.175729 5.39855C-0.0585762 5.16424 -0.0585762 4.78434 0.175729 4.55002L1.02424 3.70148C1.25854 3.46716 1.63846 3.46716 1.87277 3.70148L4.49999 6.32869L10.1272 0.701485C10.3615 0.467181 10.7414 0.467181 10.9758 0.701485L11.8243 1.55002C12.0586 1.78432 12.0586 2.16422 11.8243 2.39855L4.92426 9.29857C4.68993 9.53288 4.31003 9.53288 4.07573 9.29855Z" fill="#2ABB53"/>
+              </svg>
+            </div>
+
+            <div class="upselling-progress__bar-wrapper">
+              <span
+                class="upselling-progress__bar"
+                data-progress-bar
+                data-progress-bar-goal="{{ settings.upsell_discount_progress_goal1 }}"
+                data-progress-bar-discount="{{ settings.upsell_discount_value1 }}%"
+                data-hide-on-complete="{{ settings.hide_progress_on_complete_in_popup }}"
+              ></span>
+            </div>
+
+            <div class="upselling-progress__remaining-text" data-progress-step-message>&nbsp;</div>
+          </panty-bulk-discount>
+          {% endif %}
+
+          {% if settings.upsell_discount_progress_goal1 != 0 %}
+            <panty-bulk-discount
+            data-progress-bar-container
+            class="upselling-progress__bar-container"
+          >
+            <div class="upselling-progress__header">
+              {%- if settings.upsell_discount_icon2 -%}
+                <img
+                  class="upselling-progress__icon upselling-progress__icon--discount"
+                  src="{{- settings.upsell_discount_icon2 | img_url: "24x" -}}"
+                  alt="{{- settings.upsell_discount_icon2.alt -}}"
+                >
+              {%- endif -%}
+
+              <div class="upselling-progress__title">
+                {{- "general.upselling_popup.discount_title" | t: discount: settings.upsell_discount_value2 -}}
+              </div>
+
+              <svg width="12" height="10" viewBox="0 0 12 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M4.07573 9.29855L0.175729 5.39855C-0.0585762 5.16424 -0.0585762 4.78434 0.175729 4.55002L1.02424 3.70148C1.25854 3.46716 1.63846 3.46716 1.87277 3.70148L4.49999 6.32869L10.1272 0.701485C10.3615 0.467181 10.7414 0.467181 10.9758 0.701485L11.8243 1.55002C12.0586 1.78432 12.0586 2.16422 11.8243 2.39855L4.92426 9.29857C4.68993 9.53288 4.31003 9.53288 4.07573 9.29855Z" fill="#2ABB53"/>
+              </svg>
+            </div>
+
+            <div class="upselling-progress__bar-wrapper">
+              <span
+                class="upselling-progress__bar"
+                data-progress-bar
+                data-progress-bar-goal="{{ settings.upsell_discount_progress_goal2 }}"
+                data-progress-bar-discount="{{ settings.upsell_discount_value2 }}%"
+                data-hide-on-complete="{{ settings.hide_progress_on_complete_in_popup }}"
+              ></span>
+            </div>
+
+            <div class="upselling-progress__remaining-text" data-progress-step-message>&nbsp;</div>
+          </panty-bulk-discount>
+          {% endif %}
+        </div>
+      </upselling-progress>
+    </main>
+
+    <footer>
+      <a
+        href="{{ routes.cart_url }}"
+        {% unless settings.cart_type == 'page' or request.page_type == 'cart' %}
+          is="toggle-link"
+          aria-controls="mini-cart"
+          aria-expanded="false"
+        {% endunless %}
+        class="button button--full button--primary upsell-popup__cart-button"
+        aria-label="{{ 'header.general.cart' | t | escape }}"
+        data-no-instant
+        data-upsell-popup-checkout-button
+      >
+        {{ "general.upselling_popup.checkout" | t }}
+      </a>
+    </footer>
+  </div>
+</upsell-popup>
+{% endif %}

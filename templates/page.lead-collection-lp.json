@@ -1,0 +1,221 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "settings": {
+        "show_title": false,
+        "show_breadcrumbs": true,
+        "page_width": "medium"
+      }
+    },
+    "image_with_text_overlay_TUHG8N": {
+      "type": "image-with-text-overlay",
+      "settings": {
+        "reveal_on_scroll": true,
+        "section_height": "auto",
+        "image": "shopify://shop_images/Header_Web__9_1.jpg",
+        "subheading": "",
+        "title": "",
+        "content": "",
+        "button_text": "",
+        "button_link": "",
+        "link_style": "link",
+        "background_type": "full_width",
+        "text_width": "medium",
+        "text_position": "middle_center",
+        "text_color": "#ffffff",
+        "button_background": "#ffffff",
+        "button_text_color": "#000000",
+        "overlay_color": "#000000",
+        "overlay_opacity": 10
+      }
+    },
+    "9a30e508-01d2-41dc-b59b-96c06d50c332": {
+      "type": "newsletter-on-image",
+      "settings": {
+        "klaviyo_list_id": "XvLbgh",
+        "reveal_on_scroll": true,
+        "image": "shopify://shop_images/Rectangle_609_1.jpg",
+        "subheading": "Secret Code: 10% on Top",
+        "heading": "PMS Sale – Early Access",
+        "content": "<p>SIGN UP NOW OR CRY LATER: Jetzt anmelden und vor allen anderen bei unserem PMS SALE shoppen! Erhalte auf bis 50% reduzierte Artikel nochmal 10% on Top!</p>",
+        "text_position": "center",
+        "text_alignment": "left",
+        "text_background": "rgba(0,0,0,0)",
+        "text_color": "rgba(0,0,0,0)",
+        "button_background": "#ff3f46",
+        "button_text_color": "rgba(0,0,0,0)"
+      }
+    },
+    "countdown_timer_QKdHpH": {
+      "type": "countdown-timer",
+      "blocks": {
+        "text_LJnFhD": {
+          "type": "text",
+          "settings": {
+            "text": "<p>PMS-Sale Early Access startet in:</p>",
+            "offset_top_desktop": 32,
+            "offset_bottom_desktop": 0,
+            "offset_top_mobile": 32,
+            "offset_bottom_mobile": 0
+          }
+        },
+        "countdown_timer_mDcfgA": {
+          "type": "countdown_timer",
+          "settings": {
+            "show_countdown_words": true,
+            "countdown_start_date": "2024-03-13",
+            "countdown_start_time_hour": "13",
+            "countdown_start_time_minute": "00",
+            "countdown_date": "2024-03-21",
+            "countdown_time_hour": "08",
+            "countdown_time_minute": "01",
+            "timer_link": "",
+            "timer_font_size_mobile": 2,
+            "text_font_size_mobile": 0.7,
+            "timer_font_size_desktop": 5,
+            "text_font_size_desktop": 2,
+            "offset_top_desktop": 20,
+            "offset_bottom_desktop": 20,
+            "offset_top_mobile": 16,
+            "offset_bottom_mobile": 0
+          }
+        }
+      },
+      "block_order": [
+        "text_LJnFhD",
+        "countdown_timer_mDcfgA"
+      ],
+      "settings": {
+        "countdown_text_color": "#1a1a1a",
+        "background_color": "#fff0f0",
+        "text_color": "#1a1a1a"
+      }
+    },
+    "featured_collections_PTyiwb": {
+      "type": "featured-collections",
+      "blocks": {
+        "collection_XzNfkV": {
+          "type": "collection",
+          "settings": {
+            "collection": "periodenunterwaesche-online-kaufen",
+            "label": "",
+            "button_text": "Zu den Pantys",
+            "button_url": "",
+            "hide_from_product_title_start": "",
+            "filterable_options": ""
+          }
+        }
+      },
+      "block_order": [
+        "collection_XzNfkV"
+      ],
+      "disabled": true,
+      "settings": {
+        "products_count": 8,
+        "products_per_row": 4,
+        "stack_products": false,
+        "show_cta": false,
+        "filter_toggle_button_background": "rgba(0,0,0,0)",
+        "filter_toggle_active_button_background": "rgba(0,0,0,0)",
+        "filter_toggle_button_color": "rgba(0,0,0,0)",
+        "button_background": "rgba(0,0,0,0)",
+        "button_text_color": "rgba(0,0,0,0)",
+        "subheading": "",
+        "title": "",
+        "content": "",
+        "section_header_heading_size": "h4",
+        "section_header_highest_hierarchy": false,
+        "section_header_short_description_font_size": "medium",
+        "section_container_width": "md",
+        "background": "rgba(0,0,0,0)",
+        "text_color": "rgba(0,0,0,0)",
+        "heading_color": "rgba(0,0,0,0)",
+        "section_subheading_color": "rgba(0,0,0,0)",
+        "section_heading_font_family": "default",
+        "section_spacing_top": 68,
+        "section_spacing_bottom": 68,
+        "section_spacing_different_mobile": true,
+        "section_spacing_top_mobile": 48,
+        "section_spacing_bottom_mobile": 48
+      }
+    },
+    "gallery_zc3NAr": {
+      "type": "gallery",
+      "blocks": {
+        "image_YAk7Dr": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Cherry_Brazilian-2_e81eeb5a-61eb-4f92-a9a4-ee5f764723d6.jpg",
+            "caption": "<h4><strong>Dein Preis: 26,70 €</strong></h4><p>Regulärer Preis: 34,90 €</p>"
+          }
+        },
+        "image_jbfb9U": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Slip_Black_Strong_4.jpg",
+            "caption": "<h4><strong>Dein Preis: 22,87 €</strong></h4><p>Regulärer Preis: 29,90 €</p>"
+          }
+        },
+        "image_VbipBV": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/LaceSlip_new_Periodenunterwaesche-3_1_44a104dc-c119-42cc-b985-f12cdffca741.jpg",
+            "caption": "<h4><strong>Dein Preis: 34,35 €</strong></h4><p>Regulärer Preis: 44,90 €</p>"
+          }
+        },
+        "image_YQ7QBx": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/VCut_Brazilian-1_0268ce95-739c-4efe-98fc-1dd608939115.jpg",
+            "caption": "<h4><strong>Dein Preis: 25,56 €</strong></h4><p>Regulärer Preis: 29,90 €</p>"
+          }
+        }
+      },
+      "block_order": [
+        "image_YAk7Dr",
+        "image_jbfb9U",
+        "image_VbipBV",
+        "image_YQ7QBx"
+      ],
+      "settings": {
+        "show_arrows": true,
+        "subheading": "",
+        "title": "",
+        "section_header_short_description": "",
+        "section_header_heading_size": "h3",
+        "section_header_highest_hierarchy": false,
+        "section_header_short_description_font_size": "medium",
+        "section_container_width": "xxs",
+        "section_text_alignment": "left",
+        "background": "rgba(0,0,0,0)",
+        "text_color": "rgba(0,0,0,0)",
+        "section_heading_color": "rgba(0,0,0,0)",
+        "section_subheading_color": "rgba(0,0,0,0)",
+        "section_heading_font_family": "default",
+        "section_spacing_top": 48,
+        "section_spacing_bottom": 48,
+        "section_spacing_different_mobile": false,
+        "section_spacing_top_mobile": 0,
+        "section_spacing_bottom_mobile": 0
+      }
+    }
+  },
+  "order": [
+    "main",
+    "image_with_text_overlay_TUHG8N",
+    "9a30e508-01d2-41dc-b59b-96c06d50c332",
+    "countdown_timer_QKdHpH",
+    "featured_collections_PTyiwb",
+    "gallery_zc3NAr"
+  ]
+}

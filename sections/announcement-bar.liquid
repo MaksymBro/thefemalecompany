@@ -1,0 +1,1547 @@
+{% capture start_date %}
+  {{ section.settings.start_year }}-{{ section.settings.start_month }}-{{ section.settings.start_day }} {{ section.settings.start_time }}
+{% endcapture %}
+{%- assign start_date = start_date | date: '%Y-%m-%d %H:%M' -%}
+{% capture end_date %}
+  {{ section.settings.end_year }}-{{ section.settings.end_month }}-{{ section.settings.end_day }} {{ section.settings.end_time }}
+{% endcapture %}
+{%- assign end_date = end_date | date: '%Y-%m-%d %H:%M' -%}
+{% assign current_date = 'now' | date: '%Y-%m-%d %H:%M' %}
+
+{% if current_date >= start_date and current_date < end_date %}
+<style>
+  :root {
+    --enable-sticky-announcement-bar: {% if section.settings.announcement_bar_position == 'non_sticky' or section.settings.announcement_bar_position == 'sticky_desktop' %}0{% else %}1{% endif %};
+  }
+
+  #shopify-section-{{ section.id }} {
+    --heading-color: {{ section.settings.text_color.red }}, {{ section.settings.text_color.green }}, {{ section.settings.text_color.blue }};
+    --text-color: {{ section.settings.text_color.red }}, {{ section.settings.text_color.green }}, {{ section.settings.text_color.blue }};
+    --primary-button-background: {{ section.settings.button_background.red }}, {{ section.settings.button_background.green }}, {{ section.settings.button_background.blue }};
+    --primary-button-text-color: {{ section.settings.button_text_color.red }}, {{ section.settings.button_text_color.green }}, {{ section.settings.button_text_color.blue }};
+    --section-background: {{ section.settings.background.red }}, {{ section.settings.background.green }}, {{ section.settings.background.blue }};
+
+    {%- if section.settings.announcement_bar_position == 'sticky' or section.settings.announcement_bar_position == 'sticky_mobile' -%}
+      position: -webkit-sticky;
+      position: sticky;
+      top: 0;
+      z-index: 5; /* Make sure it goes over header */
+    {%- else -%}
+      position: relative;
+    {%- endif -%}
+  }
+
+  @media screen and (min-width: 741px) {
+    :root {
+      --enable-sticky-announcement-bar: {% if section.settings.announcement_bar_position == 'non_sticky' or section.settings.announcement_bar_position == 'sticky_mobile' %}0{% else %}1{% endif %};
+    }
+
+    #shopify-section-{{ section.id }} {
+      {%- if section.settings.announcement_bar_position == 'sticky' or section.settings.announcement_bar_position == 'sticky_desktop' -%}
+        position: -webkit-sticky;
+        position: sticky;
+        top: 0;
+        z-index: 5; /* Make sure it goes over header */
+      {%- else -%}
+        position: relative;
+        z-index: unset;
+      {%- endif -%}
+    }
+  }
+  /* new */
+  .announcement-bar__discount-inline {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin: 2px 0 2px 0;
+}
+
+.announcement-bar__discount-text {
+  color: #fff;
+}
+
+.announcement-bar__discount-button {
+  display: inline-flex;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.2);  /* same background as bar, just a subtle pill */
+  border: none;
+  padding: 2px 6px;
+  border-radius: 4px;
+  cursor: pointer;
+  color: #fff;
+}
+
+.announcement-bar__discount-code {
+  font-weight: bold;
+  margin-right: 4px;
+}
+
+.announcement-bar__discount-icon {
+  width: 14px;
+  height: 14px;
+}
+
+.announcement-bar__discount-copy-label {
+  font-size: 12px;
+}
+.discount-code-showcase--fixed .discount-code-showcase__text {
+  margin: 0;
+  font-size: 1em;
+  color: rgb(var(--text-color));
+}
+
+.discount-code-showcase--fixed .discount-code-showcase__code {
+  margin: 0;
+}
+
+.discount-code-showcase__heading {
+  margin-bottom: 2px;
+}
+
+.discount-code-showcase__text {
+  color: rgb(var(--text-color));
+}
+
+.discount-code-showcase__code-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 0;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: rgb(var(--text-color));
+}
+
+.discount-code-showcase__code-text {
+  display: inline-block;
+  padding: 0px 5px;
+  font-weight: bold;
+  font-size: 1em;
+  color: rgb(var(--primary-button-text-color));
+  background: rgb(var(--primary-button-background));
+  border-radius: 4px;
+}
+
+.discount-code-showcase__code-button:hover .discount-code-showcase__code-text {
+  opacity: 0.9;
+}
+
+@media screen and (max-width: 749px) {
+  .discount-code-showcase--fixed {
+    padding: 8px 12px;
+  }
+
+  .discount-code-showcase--fixed .discount-code-showcase__text {
+    font-size: 0.9em;
+  }
+
+ .discount-block {
+    display: none !important;
+  }
+
+  }
+
+  #toast-container{
+  z-index: 100002 !important;
+  }
+</style>
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  var blocks = document.querySelectorAll('.discount-block');
+  var currentPath = window.location.pathname;
+
+
+  for (var i = 0; i < blocks.length; i++) {
+    var block = blocks[i];
+    var blockId = block.dataset.blockId;
+    var rawMatchers = block.getAttribute("data-url-matchers");
+    var matchers = rawMatchers;
+
+
+    if (!matchers) {
+      matchers = "";
+    }
+
+    var matcherArray = matchers
+      .split(',')
+      .map(function(m) { return m.trim(); })
+      .filter(Boolean);
+
+
+    var hideKey = 'hideDiscountBlock_' + blockId;
+    var sessionFlag = sessionStorage.getItem(hideKey);
+
+
+    var urlMatches = matcherArray.some(function(matcher) {
+      var matched = currentPath.includes(matcher);
+      return matched;
+    });
+
+
+    if (sessionFlag || urlMatches) {
+      if (urlMatches) {
+        sessionStorage.setItem(hideKey, '1');
+      }
+      var parentItem = block.closest('announcement-bar-item');
+      if (parentItem) {
+        parentItem.remove();
+        var announcementBar = document.querySelector('announcement-bar');
+        if (announcementBar) {
+          announcementBar.items = Array.from(announcementBar.querySelectorAll('announcement-bar-item'));
+        
+          announcementBar.select(0, false);
+        }
+
+      } else {
+        block.remove();
+        var announcementBar = document.querySelector('announcement-bar');
+        if (announcementBar) {
+          announcementBar.items = Array.from(announcementBar.querySelectorAll('announcement-bar-item'));
+        
+          announcementBar.select(0, false);
+        }
+
+      }
+    } else {
+      block.classList.remove('discount-block');
+    }
+  }
+
+});
+
+
+  
+function copyTextToClipboard(text) {
+  if (!navigator.clipboard) {
+    var textArea = document.createElement('textarea');
+    textArea.value = text;
+    textArea.style.top = '0';
+    textArea.style.left = '0';
+    textArea.style.position = 'fixed';
+    document.body.appendChild(textArea);
+    textArea.focus();
+    textArea.select();
+    try {
+      document.execCommand('copy');
+      toastr.success("{{ 'header.general.copied_to_clipboard' | t | escape }}");
+    } catch (e) {
+      toastr.success('Please copy manually.');
+    }
+    document.body.removeChild(textArea);
+    return;
+  }
+  navigator.clipboard.writeText(text).then(
+    function () { toastr.success('{{ 'header.general.copied_to_clipboard' | t | escape }}'); },
+    function () { toastr.success('Please copy manually.'); }
+  );
+}
+</script>
+
+{%- if section.blocks.size > 0 -%}
+  <section>
+    <announcement-bar {% if section.blocks.size > 1 and section.settings.autoplay %}auto-play cycle-speed="{{ section.settings.cycle_speed | escape }}"{% endif %} class="announcement-bar {% if section.blocks.size > 1 %}announcement-bar--multiple{% endif %}">
+      {%- if section.blocks.size > 1 -%}
+        <button data-action="prev" class="tap-area tap-area--large">
+          <span class="visually-hidden">{{ 'general.accessibility.previous' | t }}</span>
+          {% render 'icon' with 'nav-arrow-left-small', direction_aware: true %}
+        </button>
+      {%- endif -%}
+
+      <div class="announcement-bar__list">
+          {%- for block in section.blocks -%}
+            {%- assign has_extra_content = false -%}
+  
+            {%- if block.settings.content != blank or block.settings.image != blank -%}
+              {%- assign has_extra_content = true -%}
+            {%- endif -%}
+  
+            <announcement-bar-item {% unless forloop.first %}hidden{% endunless %} {% if has_extra_content %}has-content{% endif %} class="announcement-bar__item" {{ block.shopify_attributes }}>
+              {%- case block.type -%}
+                {%- when "discount" -%}
+                <div
+                  id="discount-block-{{ block.id }}"
+                  class="discount-block discount-code-showcase__fixed-content announcement-bar__discount-inline"
+                  data-block-id="{{ block.id }}"
+                  data-url-matchers="{{ block.settings.url_matchers | escape }}"
+                >
+                  <p class="discount-code-showcase__text text--small">
+                    {{ block.settings.discount_text }}
+                  </p>
+                  <div class="discount-code-showcase__code">
+                    <button
+                      class="discount-code-showcase__code-button"
+                      type="button"
+                      data-code="{{ block.settings.discount_code }}"
+                      onclick="copyTextToClipboard('{{ block.settings.discount_code }}')"
+                    >
+                      <span class="discount-code-showcase__code-text">
+                        {{ block.settings.discount_code }}
+                      </span>
+                      <span class="text--xsmall text--muted">
+                        {% render 'icons', name: 'far-clipboard' %}
+                        {{ block.settings.button_text_copy }}
+                      </span>
+                    </button>
+                  </div>
+                </div>
+
+
+
+
+
+                {%- when "message" -%}
+                  {%- case section.settings.announcement_text_size -%}
+                    {%- when 'small' -%}
+                      {%- assign text_size_class = 'text--xsmall' -%}
+                    {%- when 'normal' -%}
+                      {%- assign text_size_class = 'text--small' -%}
+                    {%- when 'large' -%}
+                      {%- assign text_size_class = '' -%}
+                  {%- endcase -%}
+
+                  {% assign message_content = block.settings.text | append: block.settings.text_html %}
+                  <div 
+                    class="announcement-bar__message {{ text_size_class }}"
+                  {% if block.settings.annoucement_link %}
+                    onclick="location.href='{{ block.settings.annoucement_link }}';"
+                    style="cursor:pointer;"
+                  {% endif %}
+                  >
+                    {%- if block.settings.content != blank or block.settings.image != blank -%}
+                      {%- if block.settings.learn_more_text != blank -%}
+                        {%- if message_content contains "</p>" -%}
+                          {%- assign text_array = message_content | split: "</p>" -%}
+                          {%- for text_el in text_array -%}
+                            {%- if forloop.last == true -%}
+                              {{ text_el }} <button class="link" data-action="open-content">{{ block.settings.learn_more_text | escape }}</button></p>
+                            {%- else -%}
+                              {{ text_el | append: "</p>" }}
+                            {%- endif -%}
+                          {%- endfor -%}
+                        {%- else -%}
+                          <p>{{ message_content }} <button class="link" data-action="open-content">{{ block.settings.learn_more_text | escape }}</button></p>
+                        {%- endif -%}
+                      {%- else -%}
+                        <button class="link" data-action="open-content">{{ message_content }}</button>
+                      {%- endif -%}
+                    {%- else -%}
+                      {{ message_content }}
+                    {%- endif -%}
+                  </div>
+
+                  {%- if block.settings.content != blank or block.settings.image != blank -%}
+                    <div hidden class="announcement-bar__content {% if block.settings.image != blank %}has-image{% endif %}">
+                      <div class="announcement-bar__content-overlay"></div>
+
+                      <div class="announcement-bar__content-overflow">
+                        <div class="announcement-bar__content-inner">
+                          <button type="button" class="announcement-bar__close-button tap-area" data-action="close-content">
+                            <span class="visually-hidden">{{ 'general.accessibility.close' | t }}</span>
+                            {%- render 'icon' with 'close' -%}
+                          </button>
+
+                          {%- if block.settings.image != blank -%}
+                            {%- capture sizes_attribute -%}{% if block.settings.content != blank %}50vw{% else %}100vw{% endif %}{%- endcapture -%}
+                            {{- block.settings.image | image_url: width: block.settings.image.width | image_tag: loading: 'lazy', sizes: sizes_attribute, widths: '400,500,600,700,800,900,1000,1200,1400,1600,1800,2000,2200,2400,2600,2800,3000', class: 'announcement-bar__content-image' -}}
+                          {%- endif -%}
+
+                          {%- if block.settings.content != blank -%}
+                            <div class="announcement-bar__content-text-wrapper">
+                              <div class="announcement-bar__content-text text-container">
+                                {%- if block.settings.title != blank -%}
+                                  <h3 class="heading h5">{{ block.settings.title | escape }}</h3>
+                                {%- endif -%}
+
+                                {%- if block.settings.content != blank -%}
+                                  {{- block.settings.content -}}
+                                {%- endif -%}
+
+                                {%- if block.settings.button_text != blank -%}
+                                  <div class="button-wrapper">
+                                    <a href="{{ block.settings.button_link }}" class="button button--primary">{{ block.settings.button_text | escape }}</a>
+                                  </div>
+                                {%- endif -%}
+                              </div>
+                            </div>
+                          {%- endif -%}
+                        </div>
+                      </div>
+                    </div>
+                  {%- endif -%}
+                {%- when "reviews" -%}
+
+                {% assign rating = block.settings.rating_value %}
+
+                {%- assign rating_decimal = 0 -%}
+                {%- assign decimal = rating | modulo: 1 -%}
+
+                {%- if decimal >= 0.3 and decimal <= 0.7 -%}
+                  {%- assign rating_decimal = 0.5 -%}
+                {%- elsif decimal > 0.7 -%}
+                  {%- assign rating_decimal = 1 -%}
+                {%- endif -%}
+
+                <div class="announcement-bar__reviews">
+                  {%- if block.settings.logo != blank %}
+                    <img
+                      src="{{ block.settings.logo | img_url: "24x" }}"
+                      alt="{{ block.settings.logo.alt }}"
+                      class="announcement-bar__reviews-rating-logo"
+                    >
+                  {%- endif -%}
+
+                  <span
+                    aria-hidden="true"
+                    class="announcement-bar__reviews-rating-star"
+                    style="--rating: {{ rating | floor -}}; --rating-max: 5; --rating-decimal: {{ rating_decimal -}}; --star-color: {{ block.settings.star_color }}"
+                  ></span>
+
+                  {%- assign rating_value = rating | append: ' / 5' -%}
+
+                  {%- assign rating_text_en = block.settings.rating_text_en | replace: '{rating_value}', rating_value | replace: '{rating_count}', block.settings.rating_count -%}
+                  {%- assign rating_text_de = block.settings.rating_text_de | replace: '{rating_value}', rating_value | replace: '{rating_count}', block.settings.rating_count -%}
+
+                  <span class="announcement-bar__reviews-rating-text">
+                      {% if request.locale.iso_code == 'en' and rating_text_en != blank %}
+                        {{ rating_text_en }}
+                      {% elsif request.locale.iso_code == 'de' and rating_text_de != blank %}
+                        {{ rating_text_de }}
+                      {% endif %}
+                    </span>
+                </div>
+              {%- endcase -%}
+
+            </announcement-bar-item>
+          {%- endfor -%}
+      </div>
+
+      {%- if section.blocks.size > 1 -%}
+        <button data-action="next" class="tap-area tap-area--large">
+          <span class="visually-hidden">{{ 'general.accessibility.next' | t }}</span>
+          {% render 'icon' with 'nav-arrow-right-small', direction_aware: true %}
+        </button>
+      {%- endif -%}
+    </announcement-bar>
+  </section>
+
+  <script>
+    document.documentElement.style.setProperty('--announcement-bar-height', document.getElementById('shopify-section-{{ section.id }}').clientHeight + 'px');
+  </script>
+{%- endif -%}
+{% endif %}
+{% schema %}
+{
+  "name": "Announcement bar",
+  "class": "shopify-section--announcement-bar",
+  "max_blocks": 5,
+  "blocks": [
+    {
+      "type": "message",
+      "name": "Message",
+      "settings": [
+        {
+          "type": "richtext",
+          "id": "text",
+          "label": "Text"
+        },
+        {
+          "type": "liquid",
+          "id": "text_html",
+          "label": "HTML/Liquid Inhalt"
+        },
+        {
+          "type": "text",
+          "id": "learn_more_text",
+          "label": "Learn more text",
+          "default": "Learn more",
+          "info": "Add details below to show this text."
+        },
+        {
+          "type": "url",
+          "id": "annoucement_link",
+          "label": "Annoucement Bar link"
+        },
+        {
+          "type": "header",
+          "content": "Details"
+        },
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image",
+          "info": "1400 x 800px .jpg recommended (if content is set), 2400 x 800 .jpg recommended (if no content)"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title"
+        },
+        {
+          "type": "richtext",
+          "id": "content",
+          "label": "Content"
+        },
+        {
+          "type": "text",
+          "id": "button_text",
+          "label": "Button text"
+        },
+        {
+          "type": "url",
+          "id": "button_link",
+          "label": "Button link"
+        }
+      ]
+    },
+    {
+      "type": "reviews",
+      "name": "Reviews",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "logo",
+          "label": "Logo"
+        },
+        {
+          "type": "range",
+          "id": "rating_value",
+          "min": 0.1,
+          "max": 5.0,
+          "step": 0.1,
+          "unit": "Val",
+          "label": "Rating value",
+          "default": 5.0
+        },
+        {
+          "type": "number",
+          "id": "rating_count",
+          "label": "Reviews count",
+          "default": 123
+        },
+        {
+          "type": "text",
+          "id": "rating_text_de",
+          "label": "Rating text DE",
+          "default": "{rating_value} basierend auf {rating_count} Bewertungen"
+        },
+        {
+          "type": "text",
+          "id": "rating_text_en",
+          "label": "Rating text EN",
+          "default": "{rating_value} based on {rating_count} reviews"
+        },
+        {
+          "type": "color",
+          "id": "star_color",
+          "label": "Stars color",
+          "default": "#10B0A6"
+        }
+      ]
+    },
+    {
+      "type": "discount",
+      "name": "Discount",
+      "settings": [
+        {
+          "type": "text",
+          "id": "discount_code",
+          "label": "Discount Code",
+          "default": "SAVE10"
+        },
+        {
+          "type": "text",
+          "id": "discount_text",
+          "label": "Discount Text",
+          "default": "Save 10% with code:"
+        },
+        {
+          "type": "text",
+          "id": "button_text_copy",
+          "label": "Text on Copy Button",
+          "default": "Copy"
+        },
+        {
+          "type": "textarea",
+          "id": "url_matchers",
+          "label": "Hide on URL paths (comma-separated)",
+          "info": "E.g.: /collections/abc,/products/xyz. Once a customer visists any of these pages, the discount block will be hidden for the current session."
+        }
+
+      ]
+    }
+
+  ],
+  "settings": [
+    {
+      "type": "header",
+      "content": "Start date"
+    },
+    {
+      "type": "range",
+      "id": "start_year",
+      "label": "Year",
+      "min": 2025,
+      "max": 2050,
+      "step": 1,
+      "default": 2025
+    },
+    {
+      "type": "range",
+      "id": "start_month",
+      "label": "Month",
+      "min": 1,
+      "max": 12,
+      "step": 1,
+      "default": 1
+    },
+    {
+      "type": "range",
+      "id": "start_day",
+      "label": "Day",
+      "min": 1,
+      "max": 31,
+      "step": 1,
+      "default": 1
+    },
+    {
+      "type": "select",
+      "id": "start_time",
+      "label": "Time",
+      "options": [
+        {
+          "value": "00:00",
+          "label": "0:00"
+        },
+        {
+          "value": "00:15",
+          "label": "0:15"
+        },
+        {
+          "value": "00:30",
+          "label": "0:30"
+        },
+        {
+          "value": "00:45",
+          "label": "0:45"
+        },
+        {
+          "value": "01:00",
+          "label": "1:00"
+        },
+        {
+          "value": "01:15",
+          "label": "1:15"
+        },
+        {
+          "value": "01:30",
+          "label": "1:30"
+        },
+        {
+          "value": "01:45",
+          "label": "1:45"
+        },
+        {
+          "value": "02:00",
+          "label": "2:00"
+        },
+        {
+          "value": "02:15",
+          "label": "2:15"
+        },
+        {
+          "value": "02:30",
+          "label": "2:30"
+        },
+        {
+          "value": "02:45",
+          "label": "2:45"
+        },
+        {
+          "value": "03:00",
+          "label": "3:00"
+        },
+        {
+          "value": "03:15",
+          "label": "3:15"
+        },
+        {
+          "value": "03:30",
+          "label": "3:30"
+        },
+        {
+          "value": "03:45",
+          "label": "3:45"
+        },
+        {
+          "value": "04:00",
+          "label": "4:00"
+        },
+        {
+          "value": "04:15",
+          "label": "4:15"
+        },
+        {
+          "value": "04:30",
+          "label": "4:30"
+        },
+        {
+          "value": "04:45",
+          "label": "4:45"
+        },
+        {
+          "value": "05:00",
+          "label": "5:00"
+        },
+        {
+          "value": "05:15",
+          "label": "5:15"
+        },
+        {
+          "value": "05:30",
+          "label": "5:30"
+        },
+        {
+          "value": "05:45",
+          "label": "5:45"
+        },
+        {
+          "value": "06:00",
+          "label": "6:00"
+        },
+        {
+          "value": "06:15",
+          "label": "6:15"
+        },
+        {
+          "value": "06:30",
+          "label": "6:30"
+        },
+        {
+          "value": "06:45",
+          "label": "6:45"
+        },
+        {
+          "value": "07:00",
+          "label": "7:00"
+        },
+        {
+          "value": "07:15",
+          "label": "7:15"
+        },
+        {
+          "value": "07:30",
+          "label": "7:30"
+        },
+        {
+          "value": "07:45",
+          "label": "7:45"
+        },
+        {
+          "value": "08:00",
+          "label": "8:00"
+        },
+        {
+          "value": "08:15",
+          "label": "8:15"
+        },
+        {
+          "value": "08:30",
+          "label": "8:30"
+        },
+        {
+          "value": "08:45",
+          "label": "8:45"
+        },
+        {
+          "value": "09:00",
+          "label": "9:00"
+        },
+        {
+          "value": "09:15",
+          "label": "9:15"
+        },
+        {
+          "value": "09:30",
+          "label": "9:30"
+        },
+        {
+          "value": "09:45",
+          "label": "9:45"
+        },
+        {
+          "value": "10:00",
+          "label": "10:00"
+        },
+        {
+          "value": "10:15",
+          "label": "10:15"
+        },
+        {
+          "value": "10:30",
+          "label": "10:30"
+        },
+        {
+          "value": "10:45",
+          "label": "10:45"
+        },
+        {
+          "value": "11:00",
+          "label": "11:00"
+        },
+        {
+          "value": "11:15",
+          "label": "11:15"
+        },
+        {
+          "value": "11:30",
+          "label": "11:30"
+        },
+        {
+          "value": "11:45",
+          "label": "11:45"
+        },
+        {
+          "value": "12:00",
+          "label": "12:00"
+        },
+        {
+          "value": "12:15",
+          "label": "12:15"
+        },
+        {
+          "value": "12:30",
+          "label": "12:30"
+        },
+        {
+          "value": "12:45",
+          "label": "12:45"
+        },
+        {
+          "value": "13:00",
+          "label": "13:00"
+        },
+        {
+          "value": "13:15",
+          "label": "13:15"
+        },
+        {
+          "value": "13:30",
+          "label": "13:30"
+        },
+        {
+          "value": "13:45",
+          "label": "13:45"
+        },
+        {
+          "value": "14:00",
+          "label": "14:00"
+        },
+        {
+          "value": "14:15",
+          "label": "14:15"
+        },
+        {
+          "value": "14:30",
+          "label": "14:30"
+        },
+        {
+          "value": "14:45",
+          "label": "14:45"
+        },
+        {
+          "value": "15:00",
+          "label": "15:00"
+        },
+        {
+          "value": "15:15",
+          "label": "15:15"
+        },
+        {
+          "value": "15:30",
+          "label": "15:30"
+        },
+        {
+          "value": "15:45",
+          "label": "15:45"
+        },
+        {
+          "value": "16:00",
+          "label": "16:00"
+        },
+        {
+          "value": "16:15",
+          "label": "16:15"
+        },
+        {
+          "value": "16:30",
+          "label": "16:30"
+        },
+        {
+          "value": "16:45",
+          "label": "16:45"
+        },
+        {
+          "value": "17:00",
+          "label": "17:00"
+        },
+        {
+          "value": "17:15",
+          "label": "17:15"
+        },
+        {
+          "value": "17:30",
+          "label": "17:30"
+        },
+        {
+          "value": "17:45",
+          "label": "17:45"
+        },
+        {
+          "value": "18:00",
+          "label": "18:00"
+        },
+        {
+          "value": "18:15",
+          "label": "18:15"
+        },
+        {
+          "value": "18:30",
+          "label": "18:30"
+        },
+        {
+          "value": "18:45",
+          "label": "18:45"
+        },
+        {
+          "value": "19:00",
+          "label": "19:00"
+        },
+        {
+          "value": "19:15",
+          "label": "19:15"
+        },
+        {
+          "value": "19:30",
+          "label": "19:30"
+        },
+        {
+          "value": "19:45",
+          "label": "19:45"
+        },
+        {
+          "value": "20:00",
+          "label": "20:00"
+        },
+        {
+          "value": "20:15",
+          "label": "20:15"
+        },
+        {
+          "value": "20:30",
+          "label": "20:30"
+        },
+        {
+          "value": "20:45",
+          "label": "20:45"
+        },
+        {
+          "value": "21:00",
+          "label": "21:00"
+        },
+        {
+          "value": "21:15",
+          "label": "21:15"
+        },
+        {
+          "value": "21:30",
+          "label": "21:30"
+        },
+        {
+          "value": "21:45",
+          "label": "21:45"
+        },
+        {
+          "value": "22:00",
+          "label": "22:00"
+        },
+        {
+          "value": "22:15",
+          "label": "22:15"
+        },
+        {
+          "value": "22:30",
+          "label": "22:30"
+        },
+        {
+          "value": "22:45",
+          "label": "22:45"
+        },
+        {
+          "value": "23:00",
+          "label": "23:00"
+        },
+        {
+          "value": "23:15",
+          "label": "23:15"
+        },
+        {
+          "value": "23:30",
+          "label": "23:30"
+        },
+        {
+          "value": "23:45",
+          "label": "23:45"
+        }
+      ],
+      "default": "10:00"
+    },
+    {
+      "type": "header",
+      "content": "End date"
+    },
+    {
+      "type": "range",
+      "id": "end_year",
+      "label": "Year",
+      "min": 2025,
+      "max": 2050,
+      "step": 1,
+      "default": 2050
+    },
+    {
+      "type": "range",
+      "id": "end_month",
+      "label": "Month",
+      "min": 1,
+      "max": 12,
+      "step": 1,
+      "default": 12
+    },
+    {
+      "type": "range",
+      "id": "end_day",
+      "label": "Day",
+      "min": 1,
+      "max": 31,
+      "step": 1,
+      "default": 31
+    },
+    {
+      "type": "select",
+      "id": "end_time",
+      "label": "Time",
+      "options": [
+        {
+          "value": "00:00",
+          "label": "0:00"
+        },
+        {
+          "value": "00:15",
+          "label": "0:15"
+        },
+        {
+          "value": "00:30",
+          "label": "0:30"
+        },
+        {
+          "value": "00:45",
+          "label": "0:45"
+        },
+        {
+          "value": "01:00",
+          "label": "1:00"
+        },
+        {
+          "value": "01:15",
+          "label": "1:15"
+        },
+        {
+          "value": "01:30",
+          "label": "1:30"
+        },
+        {
+          "value": "01:45",
+          "label": "1:45"
+        },
+        {
+          "value": "02:00",
+          "label": "2:00"
+        },
+        {
+          "value": "02:15",
+          "label": "2:15"
+        },
+        {
+          "value": "02:30",
+          "label": "2:30"
+        },
+        {
+          "value": "02:45",
+          "label": "2:45"
+        },
+        {
+          "value": "03:00",
+          "label": "3:00"
+        },
+        {
+          "value": "03:15",
+          "label": "3:15"
+        },
+        {
+          "value": "03:30",
+          "label": "3:30"
+        },
+        {
+          "value": "03:45",
+          "label": "3:45"
+        },
+        {
+          "value": "04:00",
+          "label": "4:00"
+        },
+        {
+          "value": "04:15",
+          "label": "4:15"
+        },
+        {
+          "value": "04:30",
+          "label": "4:30"
+        },
+        {
+          "value": "04:45",
+          "label": "4:45"
+        },
+        {
+          "value": "05:00",
+          "label": "5:00"
+        },
+        {
+          "value": "05:15",
+          "label": "5:15"
+        },
+        {
+          "value": "05:30",
+          "label": "5:30"
+        },
+        {
+          "value": "05:45",
+          "label": "5:45"
+        },
+        {
+          "value": "06:00",
+          "label": "6:00"
+        },
+        {
+          "value": "06:15",
+          "label": "6:15"
+        },
+        {
+          "value": "06:30",
+          "label": "6:30"
+        },
+        {
+          "value": "06:45",
+          "label": "6:45"
+        },
+        {
+          "value": "07:00",
+          "label": "7:00"
+        },
+        {
+          "value": "07:15",
+          "label": "7:15"
+        },
+        {
+          "value": "07:30",
+          "label": "7:30"
+        },
+        {
+          "value": "07:45",
+          "label": "7:45"
+        },
+        {
+          "value": "08:00",
+          "label": "8:00"
+        },
+        {
+          "value": "08:15",
+          "label": "8:15"
+        },
+        {
+          "value": "08:30",
+          "label": "8:30"
+        },
+        {
+          "value": "08:45",
+          "label": "8:45"
+        },
+        {
+          "value": "09:00",
+          "label": "9:00"
+        },
+        {
+          "value": "09:15",
+          "label": "9:15"
+        },
+        {
+          "value": "09:30",
+          "label": "9:30"
+        },
+        {
+          "value": "09:45",
+          "label": "9:45"
+        },
+        {
+          "value": "10:00",
+          "label": "10:00"
+        },
+        {
+          "value": "10:15",
+          "label": "10:15"
+        },
+        {
+          "value": "10:30",
+          "label": "10:30"
+        },
+        {
+          "value": "10:45",
+          "label": "10:45"
+        },
+        {
+          "value": "11:00",
+          "label": "11:00"
+        },
+        {
+          "value": "11:15",
+          "label": "11:15"
+        },
+        {
+          "value": "11:30",
+          "label": "11:30"
+        },
+        {
+          "value": "11:45",
+          "label": "11:45"
+        },
+        {
+          "value": "12:00",
+          "label": "12:00"
+        },
+        {
+          "value": "12:15",
+          "label": "12:15"
+        },
+        {
+          "value": "12:30",
+          "label": "12:30"
+        },
+        {
+          "value": "12:45",
+          "label": "12:45"
+        },
+        {
+          "value": "13:00",
+          "label": "13:00"
+        },
+        {
+          "value": "13:15",
+          "label": "13:15"
+        },
+        {
+          "value": "13:30",
+          "label": "13:30"
+        },
+        {
+          "value": "13:45",
+          "label": "13:45"
+        },
+        {
+          "value": "14:00",
+          "label": "14:00"
+        },
+        {
+          "value": "14:15",
+          "label": "14:15"
+        },
+        {
+          "value": "14:30",
+          "label": "14:30"
+        },
+        {
+          "value": "14:45",
+          "label": "14:45"
+        },
+        {
+          "value": "15:00",
+          "label": "15:00"
+        },
+        {
+          "value": "15:15",
+          "label": "15:15"
+        },
+        {
+          "value": "15:30",
+          "label": "15:30"
+        },
+        {
+          "value": "15:45",
+          "label": "15:45"
+        },
+        {
+          "value": "16:00",
+          "label": "16:00"
+        },
+        {
+          "value": "16:15",
+          "label": "16:15"
+        },
+        {
+          "value": "16:30",
+          "label": "16:30"
+        },
+        {
+          "value": "16:45",
+          "label": "16:45"
+        },
+        {
+          "value": "17:00",
+          "label": "17:00"
+        },
+        {
+          "value": "17:15",
+          "label": "17:15"
+        },
+        {
+          "value": "17:30",
+          "label": "17:30"
+        },
+        {
+          "value": "17:45",
+          "label": "17:45"
+        },
+        {
+          "value": "18:00",
+          "label": "18:00"
+        },
+        {
+          "value": "18:15",
+          "label": "18:15"
+        },
+        {
+          "value": "18:30",
+          "label": "18:30"
+        },
+        {
+          "value": "18:45",
+          "label": "18:45"
+        },
+        {
+          "value": "19:00",
+          "label": "19:00"
+        },
+        {
+          "value": "19:15",
+          "label": "19:15"
+        },
+        {
+          "value": "19:30",
+          "label": "19:30"
+        },
+        {
+          "value": "19:45",
+          "label": "19:45"
+        },
+        {
+          "value": "20:00",
+          "label": "20:00"
+        },
+        {
+          "value": "20:15",
+          "label": "20:15"
+        },
+        {
+          "value": "20:30",
+          "label": "20:30"
+        },
+        {
+          "value": "20:45",
+          "label": "20:45"
+        },
+        {
+          "value": "21:00",
+          "label": "21:00"
+        },
+        {
+          "value": "21:15",
+          "label": "21:15"
+        },
+        {
+          "value": "21:30",
+          "label": "21:30"
+        },
+        {
+          "value": "21:45",
+          "label": "21:45"
+        },
+        {
+          "value": "22:00",
+          "label": "22:00"
+        },
+        {
+          "value": "22:15",
+          "label": "22:15"
+        },
+        {
+          "value": "22:30",
+          "label": "22:30"
+        },
+        {
+          "value": "22:45",
+          "label": "22:45"
+        },
+        {
+          "value": "23:00",
+          "label": "23:00"
+        },
+        {
+          "value": "23:15",
+          "label": "23:15"
+        },
+        {
+          "value": "23:30",
+          "label": "23:30"
+        },
+        {
+          "value": "23:45",
+          "label": "23:45"
+        }
+      ],
+      "default": "10:00"
+    },
+    {
+      "type": "header",
+      "content": "General settings"
+    },
+    {
+      "type": "select",
+      "id": "announcement_bar_position",
+      "label": "Position",
+      "options": [
+        {
+          "value": "non_sticky",
+          "label": "Non sticky"
+        },
+        {
+          "value": "sticky_desktop",
+          "label": "Sticky on desktop only"
+        },
+        {
+          "value": "sticky_mobile",
+          "label": "Sticky on mobile only"
+        },
+        {
+          "value": "sticky",
+          "label": "Sticky everywhere"
+        }
+      ],
+      "default": "non_sticky"
+    },
+    {
+      "type": "select",
+      "id": "announcement_text_size",
+      "label": "Text size",
+      "options": [
+        {
+          "value": "small",
+          "label": "Small"
+        },
+        {
+          "value": "normal",
+          "label": "Normal"
+        },
+        {
+          "value": "large",
+          "label": "Large"
+        }
+      ],
+      "default": "normal"
+    },
+    {
+      "type": "checkbox",
+      "id": "autoplay",
+      "label": "Auto rotate between messages",
+      "default": true
+    },
+    {
+      "type": "range",
+      "id": "cycle_speed",
+      "min": 1,
+      "max": 20,
+      "step": 0.5,
+      "unit": "sec",
+      "label": "Change message every",
+      "default": 5
+    },
+    {
+      "type": "header",
+      "content": "Colors"
+    },
+    {
+      "type": "color",
+      "id": "background",
+      "label": "Background",
+      "default": "#1e2d7d"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "button_background",
+      "label": "Button background",
+      "default": "#1e2d7d"
+    },
+    {
+      "type": "color",
+      "id": "button_text_color",
+      "label": "Button text",
+      "default": "#ffffff"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Announcement bar",
+      "settings": {
+        "announcement_bar_position": "non_sticky",
+        "announcement_text_size": "normal",
+        "autoplay": true,
+        "cycle_speed": 7,
+        "background": "#f58e9e",
+        "text_color": "#ffffff",
+        "button_background": "#ffffff",
+        "button_text_color": "#f58e9e"
+      },
+      "blocks": [
+        {
+          "type": "message",
+          "settings": {
+          "text": "<p><strong>Bis zu 15% Rabatt<\/strong> beim Kauf von 3+ Pantys<\/p>",
+          "text_html": "",
+          "learn_more_text": "Learn more",
+          "title": "",
+          "content": "",
+          "button_text": "",
+          "button_link": ""
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

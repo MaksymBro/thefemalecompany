@@ -1,0 +1,777 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "show_title": false,
+        "show_breadcrumbs": false,
+        "page_width": "medium"
+      }
+    },
+    "61e17178-afdb-46ac-9fdb-cd9347b23974": {
+      "type": "section-header",
+      "settings": {
+        "section_subheading": "Daar zijn we dan eindelijk",
+        "section_heading": "Hey Nederland!",
+        "section_short_description": "<p>Vanaf nu kun je nu onze supersterke Period Panty’s ook in Nederland bestellen.</p>",
+        "heading_size": "h1",
+        "highest_hierarchy": true,
+        "section_heading_font_family": "publico",
+        "short_description_font_size": "large",
+        "section_text_color": "#f58e9e",
+        "section_heading_color": "#f88193",
+        "section_subheading_color": "rgba(0,0,0,0)",
+        "section_container_width": "sm",
+        "section_background_color": "#ffe6e6",
+        "section_spacing_top": 56,
+        "section_spacing_bottom": 28,
+        "section_spacing_different_mobile": true,
+        "section_spacing_top_mobile": 28,
+        "section_spacing_bottom_mobile": 16
+      }
+    },
+    "7fb64368-dfdf-4a28-abb3-011ecf95186d": {
+      "type": "discount-code-showcase",
+      "settings": {
+        "inner_section_background": "#ffd9d9",
+        "discount_badge_background": "#ea697d",
+        "discount_badge_text_color": "#ffffff",
+        "section_container_width": "xxs",
+        "section_background_color": "#ffe6e6",
+        "section_text_color": "rgba(0,0,0,0)",
+        "section_heading_color": "rgba(0,0,0,0)",
+        "section_spacing_top": 0,
+        "section_spacing_bottom": 0,
+        "section_spacing_different_mobile": false,
+        "section_spacing_top_mobile": 0,
+        "section_spacing_bottom_mobile": 0
+      }
+    },
+    "f2350b70-0512-410f-9b0f-20d5b42c0b03": {
+      "type": "button",
+      "settings": {
+        "button_text": "Ontdek nu alle pantys",
+        "button_link": "shopify://collections/influencer",
+        "button_link_new_window": false,
+        "button_details": "60 dagen geld terug",
+        "button_style": "primary",
+        "button_outline": false,
+        "button_shadow": true,
+        "button_size": "lg",
+        "button_fit": "responsive",
+        "section_container_width": "md",
+        "section_text_alignment": "center",
+        "section_background_color": "#ffe6e6",
+        "section_spacing_top": 32,
+        "section_spacing_bottom": 12,
+        "section_spacing_different_mobile": true,
+        "section_spacing_top_mobile": 16,
+        "section_spacing_bottom_mobile": 12
+      }
+    },
+    "dbb24502-dac8-43d6-90f1-d9417bebce22": {
+      "type": "text-with-icons",
+      "blocks": {
+        "template--18418468258058__dbb24502-dac8-43d6-90f1-d9417bebce22-item-1": {
+          "type": "item",
+          "settings": {
+            "icon": "picto-box",
+            "custom_icon": "shopify://shop_images/IDEAL_Logo.png",
+            "custom_icon_width": 40,
+            "title": "Betaal met iDeal",
+            "content": ""
+          }
+        },
+        "template--18418468258058__dbb24502-dac8-43d6-90f1-d9417bebce22-item-2": {
+          "type": "item",
+          "settings": {
+            "icon": "picto-phone",
+            "custom_icon": "shopify://shop_images/Icon_Hygiene.png",
+            "custom_icon_width": 40,
+            "title": "Geurremmend & hygiënisch",
+            "content": ""
+          }
+        },
+        "template--18418468258058__dbb24502-dac8-43d6-90f1-d9417bebce22-item-3": {
+          "type": "item",
+          "settings": {
+            "icon": "picto-lock",
+            "custom_icon": "shopify://shop_images/icon__plant.png",
+            "custom_icon_width": 40,
+            "title": "Vegan",
+            "content": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--18418468258058__dbb24502-dac8-43d6-90f1-d9417bebce22-item-1",
+        "template--18418468258058__dbb24502-dac8-43d6-90f1-d9417bebce22-item-2",
+        "template--18418468258058__dbb24502-dac8-43d6-90f1-d9417bebce22-item-3"
+      ],
+      "settings": {
+        "background": "#ffe6e6",
+        "text_color": "#ff3f46",
+        "no_slideshow": true
+      }
+    },
+    "ea166ad0-9709-4679-912b-cf846b884ab2": {
+      "type": "trustpilot",
+      "settings": {
+        "widget": "horizontal_condensed",
+        "widget_color_scheme": "light",
+        "section_background_color": "#ffe6e6",
+        "section_spacing_top": 0,
+        "section_spacing_bottom": 52,
+        "section_spacing_different_mobile": true,
+        "section_spacing_top_mobile": 0,
+        "section_spacing_bottom_mobile": 28
+      }
+    },
+    "9bec0e8e-c77a-4a03-955c-e8ed90f29f52": {
+      "type": "section-header",
+      "disabled": true,
+      "settings": {
+        "section_subheading": "Natürliche Produkte für deinen Körper",
+        "section_heading": "Unsere Produkte",
+        "section_short_description": "<p><strong>Aktion:</strong> Erhalte bis zu <strong>-15% Rabatt</strong> beim Kauf mehrerer Period Pantys oder Daysics<strong>®</strong>.</p>",
+        "heading_size": "h2",
+        "highest_hierarchy": false,
+        "section_heading_font_family": "publico",
+        "short_description_font_size": "large",
+        "section_text_color": "#1a1a1a",
+        "section_heading_color": "#1a1a1a",
+        "section_subheading_color": "#2e9e7b",
+        "section_container_width": "sm",
+        "section_background_color": "#ffd4d6",
+        "section_spacing_top": 48,
+        "section_spacing_bottom": 20,
+        "section_spacing_different_mobile": false,
+        "section_spacing_top_mobile": 0,
+        "section_spacing_bottom_mobile": 0
+      }
+    },
+    "3fd2d92e-1f90-436d-9bba-3d7e25307e15": {
+      "type": "pagefly-section",
+      "disabled": true,
+      "custom_css": [],
+      "settings": {
+        "section_id": "pf-b58a9263"
+      }
+    },
+    "70baa46d-4430-4c56-89c4-a11acbe9c7cd": {
+      "type": "marquee",
+      "settings": {
+        "content": "<p><strong>Binnenkort ook nederlandstalig</strong></p>",
+        "separator": "🇳🇱",
+        "repeat": 2,
+        "min_gap": 16,
+        "animation_speed": 90,
+        "text_color": "#ffffff",
+        "background": "#f58e9e"
+      }
+    },
+    "0cc90731-aa68-4263-b107-7cbc05891d82": {
+      "type": "featured-collections",
+      "blocks": {
+        "e7adf44a-9639-4d7c-9596-8006a381acc8": {
+          "type": "collection",
+          "settings": {
+            "collection": "influencer",
+            "label": "FEATURED",
+            "button_text": "Naar de pantys",
+            "button_url": "shopify://collections/influencer",
+            "hide_from_product_title_start": "",
+            "filterable_options": "Farbe,Größe"
+          }
+        },
+        "template--17757543727370__0cc90731-aa68-4263-b107-7cbc05891d82-1678205693312c61ef-0": {
+          "type": "collection",
+          "settings": {
+            "collection": "periodenunterwaesche-online-kaufen",
+            "label": "",
+            "button_text": "Naar de pantys",
+            "button_url": "",
+            "hide_from_product_title_start": "Period Panty –",
+            "filterable_options": "Größe,Farbe"
+          }
+        },
+        "1df08295-1776-4b54-b09b-2772f58882aa": {
+          "type": "collection",
+          "settings": {
+            "collection": "daysics",
+            "label": "Ausflussunterwäsche",
+            "button_text": "Naar de pantys",
+            "button_url": "",
+            "hide_from_product_title_start": "",
+            "filterable_options": "Größe,Farbe"
+          }
+        },
+        "2e096a56-36e9-4af1-8037-4e4dcfe37ef8": {
+          "type": "collection",
+          "settings": {
+            "collection": "periode-periodenprodukte",
+            "label": "",
+            "button_text": "Naar de producten",
+            "button_url": "",
+            "hide_from_product_title_start": "",
+            "filterable_options": ""
+          }
+        },
+        "29962df3-ebb5-41d9-a367-dfbd09cfdfeb": {
+          "type": "collection",
+          "settings": {
+            "collection": "rasierhobel",
+            "label": "",
+            "button_text": "Naar de producten",
+            "button_url": "",
+            "hide_from_product_title_start": "",
+            "filterable_options": ""
+          }
+        },
+        "885c3e52-612e-456e-b34b-939de979d2af": {
+          "type": "collection",
+          "settings": {
+            "collection": "schwangerschaft-muetter-wochenbett",
+            "label": "",
+            "button_text": "Naar de producten",
+            "button_url": "",
+            "hide_from_product_title_start": "",
+            "filterable_options": ""
+          }
+        },
+        "e6a51af0-e29a-46d1-9a74-3cd12e6dff0e": {
+          "type": "collection",
+          "settings": {
+            "collection": "mehr",
+            "label": "",
+            "button_text": "Naar de producten",
+            "button_url": "",
+            "hide_from_product_title_start": "",
+            "filterable_options": ""
+          }
+        }
+      },
+      "block_order": [
+        "e7adf44a-9639-4d7c-9596-8006a381acc8",
+        "template--17757543727370__0cc90731-aa68-4263-b107-7cbc05891d82-1678205693312c61ef-0",
+        "1df08295-1776-4b54-b09b-2772f58882aa",
+        "2e096a56-36e9-4af1-8037-4e4dcfe37ef8",
+        "29962df3-ebb5-41d9-a367-dfbd09cfdfeb",
+        "885c3e52-612e-456e-b34b-939de979d2af",
+        "e6a51af0-e29a-46d1-9a74-3cd12e6dff0e"
+      ],
+      "settings": {
+        "products_count": 24,
+        "products_per_row": 4,
+        "stack_products": false,
+        "show_cta": false,
+        "filter_toggle_button_background": "rgba(0,0,0,0)",
+        "filter_toggle_active_button_background": "rgba(0,0,0,0)",
+        "filter_toggle_button_color": "rgba(0,0,0,0)",
+        "button_background": "rgba(0,0,0,0)",
+        "button_text_color": "rgba(0,0,0,0)",
+        "subheading": "",
+        "title": "",
+        "content": "",
+        "section_header_heading_size": "h3",
+        "section_header_highest_hierarchy": false,
+        "section_header_short_description_font_size": "medium",
+        "section_container_width": "md",
+        "background": "#ffd4d6",
+        "text_color": "rgba(0,0,0,0)",
+        "heading_color": "rgba(0,0,0,0)",
+        "section_subheading_color": "rgba(0,0,0,0)",
+        "section_heading_font_family": "default",
+        "section_spacing_top": 44,
+        "section_spacing_bottom": 68,
+        "section_spacing_different_mobile": true,
+        "section_spacing_top_mobile": 24,
+        "section_spacing_bottom_mobile": 44
+      }
+    },
+    "26b25d90-0374-4635-b10a-ba8bb08f0598": {
+      "type": "section-header",
+      "settings": {
+        "section_subheading": "Bekend van",
+        "section_heading": "",
+        "section_short_description": "",
+        "heading_size": "h3",
+        "highest_hierarchy": false,
+        "section_heading_font_family": "default",
+        "short_description_font_size": "medium",
+        "section_text_color": "rgba(0,0,0,0)",
+        "section_heading_color": "rgba(0,0,0,0)",
+        "section_subheading_color": "rgba(0,0,0,0)",
+        "section_container_width": "sm",
+        "section_background_color": "#ffe6e6",
+        "section_spacing_top": 24,
+        "section_spacing_bottom": 4,
+        "section_spacing_different_mobile": true,
+        "section_spacing_top_mobile": 20,
+        "section_spacing_bottom_mobile": 0
+      }
+    },
+    "59fe3625-d3b6-4bf8-90b0-5c4fd7b7e4ee": {
+      "type": "logo-list",
+      "blocks": {
+        "template--17807395815690__59fe3625-d3b6-4bf8-90b0-5c4fd7b7e4ee-1680609114673cf8f6-4": {
+          "type": "logo",
+          "settings": {
+            "logo": "shopify://shop_images/ELLE_Magazine_Logo_f7b80060-7e09-40f2-ab6f-9888d295acb6.png",
+            "link": ""
+          }
+        },
+        "template--17807395815690__59fe3625-d3b6-4bf8-90b0-5c4fd7b7e4ee-1680609114673cf8f6-5": {
+          "type": "logo",
+          "settings": {
+            "logo": "shopify://shop_images/InStyle.png",
+            "link": ""
+          }
+        },
+        "template--17807395815690__59fe3625-d3b6-4bf8-90b0-5c4fd7b7e4ee-1680609114673cf8f6-0": {
+          "type": "logo",
+          "settings": {
+            "logo": "shopify://shop_images/Harper_s_Bazaar_Logo.png",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--17807395815690__59fe3625-d3b6-4bf8-90b0-5c4fd7b7e4ee-1680609114673cf8f6-4",
+        "template--17807395815690__59fe3625-d3b6-4bf8-90b0-5c4fd7b7e4ee-1680609114673cf8f6-5",
+        "template--17807395815690__59fe3625-d3b6-4bf8-90b0-5c4fd7b7e4ee-1680609114673cf8f6-0"
+      ],
+      "settings": {
+        "reveal_on_scroll": true,
+        "layout": "single_row",
+        "max_logos_mobile": 5,
+        "max_width_logo_desktop": 80,
+        "max_width_logo_mobile": 70,
+        "logo_background": "rgba(0,0,0,0)",
+        "section_container_width": "md",
+        "section_background_color": "#ffe6e6",
+        "section_spacing_top": 0,
+        "section_spacing_bottom": 20,
+        "section_spacing_different_mobile": true,
+        "section_spacing_top_mobile": 0,
+        "section_spacing_bottom_mobile": 16
+      }
+    },
+    "bc7247dd-0a71-4d83-a184-f8476da4dd13": {
+      "type": "image-with-text",
+      "blocks": {
+        "template--18418468258058__bc7247dd-0a71-4d83-a184-f8476da4dd13-item-1": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/Seamless_Slip_NAB-3_857dd22d-a080-4205-980f-6112ddd96464.jpg",
+            "tab_label": "Ultra absorberend",
+            "subheading": "",
+            "title": "Ultra absorberend",
+            "content": "<p>Natte zone’s? Hier niet. Onze <strong>Stay Dry Layer Technology™ </strong>absorbeert vloeistoffen razendsnel, zodat jij altijd droog blijft. Afhankelijk van het model, absorberen onze period panty’s voor tot wel <strong>6 tampons</strong> aan vloeistof.</p>",
+            "button_text": "",
+            "button_link": ""
+          }
+        },
+        "ff70e264-f8c5-4060-b48b-58e9dd05f5db": {
+          "type": "item",
+          "settings": {
+            "tab_label": "Vegan & duurzaam",
+            "subheading": "",
+            "title": "Vegan & duurzaam",
+            "content": "<p>Onze period panties zijn gemaakt van <strong>biologisch katoen</strong>, zijn <strong>vegan</strong> en <strong>dierproefvrij</strong>. Je kunt ze zo wassen en hergebruiken – volledig <strong>afvalvrij</strong>.</p>",
+            "button_text": "",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--18418468258058__bc7247dd-0a71-4d83-a184-f8476da4dd13-item-1",
+        "ff70e264-f8c5-4060-b48b-58e9dd05f5db"
+      ],
+      "settings": {
+        "reveal_on_scroll": true,
+        "background_type": "full_width",
+        "background_overlap": "both",
+        "image_position": "left",
+        "text_alignment": "center",
+        "cycle_speed": 8,
+        "accent_background": "#ffe6e6",
+        "text_color": "rgba(0,0,0,0)",
+        "button_background": "rgba(0,0,0,0)",
+        "button_text_color": "rgba(0,0,0,0)"
+      }
+    },
+    "0812c401-7441-465e-9448-84f7aac687cd": {
+      "type": "image-with-text",
+      "blocks": {
+        "template--18418468258058__0812c401-7441-465e-9448-84f7aac687cd-item-1": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/Seamless_Slip_Sienna_NAB_1963e733-4f8c-489b-aeea-a0c5041368ae.jpg",
+            "tab_label": "Gegarandeerd lekvrij",
+            "subheading": "",
+            "title": "Gegarandeerd lekvrij",
+            "content": "<p>Ons ongesteldheidsondergoed <strong>houdt je droog</strong> – ook tijdens dagen waarop je extra sterk vloeit. Eerst zien dan geloven? Probeer onze period panty’s en krijg <strong>binnen 60 dagen je geld terug</strong>, als je niet tevreden bent.</p>",
+            "button_text": "",
+            "button_link": ""
+          }
+        },
+        "1a622fb9-cb2f-4ce1-8683-c8f928392144": {
+          "type": "item",
+          "settings": {
+            "tab_label": "Antibacterieel en geurremmend",
+            "subheading": "",
+            "title": "Antibacterieel en geurremmend",
+            "content": "<p>De technologie in ons ongesteldheidsondergoed is niet alleen geurremmend, maar bestrijdt ook bacteriën. Voor maximale hygiëne.</p>",
+            "button_text": "",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--18418468258058__0812c401-7441-465e-9448-84f7aac687cd-item-1",
+        "1a622fb9-cb2f-4ce1-8683-c8f928392144"
+      ],
+      "settings": {
+        "reveal_on_scroll": true,
+        "background_type": "full_width",
+        "background_overlap": "both",
+        "image_position": "right",
+        "text_alignment": "center",
+        "cycle_speed": 8,
+        "accent_background": "#ffe6e6",
+        "text_color": "rgba(0,0,0,0)",
+        "button_background": "rgba(0,0,0,0)",
+        "button_text_color": "rgba(0,0,0,0)"
+      }
+    },
+    "97013c53-8d2e-4f12-a346-9f50b101e833": {
+      "type": "image-with-text-block",
+      "settings": {
+        "reveal_on_scroll": true,
+        "image": "shopify://shop_images/Anni_Sinja_Gruenderinnen_TheFemaleCompany_1.jpg",
+        "subheading": "Onze Visie",
+        "title": "Changing an industry, one period at a time.",
+        "content": "<p>Wij zijn Anni en Sinja, de oprichters van The Female Company. Wij willen weten wat in ons zit (letterlijk) en taboes doorbreken! Geen blauwe vloeistoffen, “edele delen” en “maandelijkse periodes”. Vrouw zijn is iets waar wij ons namelijk niet voor schamen.</p>",
+        "button_text": "Meer weten",
+        "button_link": "shopify://pages/vision",
+        "background_type": "full_width",
+        "text_position": "right",
+        "text_alignment": "center",
+        "text_background": "#f37b8e",
+        "text_color": "#ffffff",
+        "button_background": "#ffffff",
+        "button_text_color": "#1a1a1a"
+      }
+    },
+    "851ff655-c39f-491f-9540-2161a622229c": {
+      "type": "pagefly-section",
+      "settings": {
+        "section_id": "pf-eaab072e"
+      }
+    },
+    "a34e9e55-269b-446a-bd27-eff98c41fe3e": {
+      "type": "pagefly-section",
+      "settings": {
+        "section_id": "pf-914450bf"
+      }
+    },
+    "7638c4e5-2843-481a-8f65-2d06db682a57": {
+      "type": "section-header",
+      "disabled": true,
+      "settings": {
+        "section_subheading": "Mehr Reviews auf Trustpilot.com",
+        "section_heading": "",
+        "section_short_description": "",
+        "heading_size": "h3",
+        "highest_hierarchy": false,
+        "section_heading_font_family": "default",
+        "short_description_font_size": "medium",
+        "section_text_color": "rgba(0,0,0,0)",
+        "section_heading_color": "rgba(0,0,0,0)",
+        "section_subheading_color": "rgba(0,0,0,0)",
+        "section_container_width": "sm",
+        "section_background_color": "#ffa4b2",
+        "section_spacing_top": 24,
+        "section_spacing_bottom": 0,
+        "section_spacing_different_mobile": false,
+        "section_spacing_top_mobile": 0,
+        "section_spacing_bottom_mobile": 0
+      }
+    },
+    "18b34a81-707b-440c-a079-afc3a76fd27b": {
+      "type": "trustpilot",
+      "disabled": true,
+      "settings": {
+        "widget": "horizontal_condensed",
+        "widget_color_scheme": "light",
+        "section_background_color": "#ffa4b2",
+        "section_spacing_top": 16,
+        "section_spacing_bottom": 24,
+        "section_spacing_different_mobile": false,
+        "section_spacing_top_mobile": 0,
+        "section_spacing_bottom_mobile": 0
+      }
+    },
+    "1d93d689-6b53-466d-8f3d-90a20dbb9c5e": {
+      "type": "layer-technology",
+      "blocks": {
+        "template--17840247636234__1d93d689-6b53-466d-8f3d-90a20dbb9c5e-1682588893893d20dd-0": {
+          "type": "layer",
+          "disabled": true,
+          "settings": {
+            "image": "shopify://shop_images/panty_layer_closeup_layer1.jpg",
+            "subheading": "Layer #1",
+            "title": "Stay Dry Layer™",
+            "description": "<p>Saugt Flüssigkeit <strong>blitzschnell auf</strong> und trocknet innerhalb <strong>weniger Sekunden</strong>.</p>",
+            "layer_background_color": "#e8719d",
+            "layer_border_color": "#7f1c40",
+            "layer_subheading_color": "#7f1c40",
+            "layer_text_color": "#ffffff"
+          }
+        },
+        "template--17840247636234__1d93d689-6b53-466d-8f3d-90a20dbb9c5e-1682588893893d20dd-1": {
+          "type": "layer",
+          "disabled": true,
+          "settings": {
+            "image": "shopify://shop_images/panty_layer_closeup_layer2_alt.jpg",
+            "subheading": "Layer #2",
+            "title": "Ultra-absorbierende Schicht",
+            "description": "<p>Speichert <strong>bis zu 6 Tampons</strong> an Flüssigkeit und <strong>schließt sie sicher ein</strong>.</p>",
+            "layer_background_color": "#d87ace",
+            "layer_border_color": "#9b3bb3",
+            "layer_subheading_color": "#9b3bb3",
+            "layer_text_color": "#ffffff"
+          }
+        },
+        "template--17840247636234__1d93d689-6b53-466d-8f3d-90a20dbb9c5e-1682588893893d20dd-2": {
+          "type": "layer",
+          "disabled": true,
+          "settings": {
+            "image": "shopify://shop_images/panty_layer_closeup_layer3.jpg",
+            "subheading": "Layer #3",
+            "title": "Wasserdichte Membran",
+            "description": "<p>Sorgt für <strong>zero Auslaufgefahr</strong>, auch bei längerer Tragedauer.</p>",
+            "layer_background_color": "#ff9986",
+            "layer_border_color": "#ec310f",
+            "layer_subheading_color": "#ec310f",
+            "layer_text_color": "#ffffff"
+          }
+        },
+        "template--17840247636234__1d93d689-6b53-466d-8f3d-90a20dbb9c5e-1682588893893d20dd-3": {
+          "type": "layer",
+          "disabled": true,
+          "settings": {
+            "image": "shopify://shop_images/panty_layer_closeup_layer4_070ad79d-1f21-4c24-8941-cc2cf0159468.jpg",
+            "subheading": "Layer #4",
+            "title": "Weiche Bio-Baumwolle",
+            "description": "<p>Super weiche Bio-Baumwolle für <strong>extra comfy Tragegefüh</strong>l!</p>",
+            "layer_background_color": "#f36565",
+            "layer_border_color": "#ffc8c8",
+            "layer_subheading_color": "#ffc8c8",
+            "layer_text_color": "#ffffff"
+          }
+        }
+      },
+      "block_order": [
+        "template--17840247636234__1d93d689-6b53-466d-8f3d-90a20dbb9c5e-1682588893893d20dd-0",
+        "template--17840247636234__1d93d689-6b53-466d-8f3d-90a20dbb9c5e-1682588893893d20dd-1",
+        "template--17840247636234__1d93d689-6b53-466d-8f3d-90a20dbb9c5e-1682588893893d20dd-2",
+        "template--17840247636234__1d93d689-6b53-466d-8f3d-90a20dbb9c5e-1682588893893d20dd-3"
+      ],
+      "disabled": true,
+      "settings": {
+        "section_header_subheading": "So funktioniert's",
+        "section_header_heading": "Stay Dry Layer Technologie™",
+        "section_header_short_description": "<p>Entwickelt mit <strong>Textiltechniker*innen</strong> und <strong>Gynnäkolog*innen</strong>: Extra dünn und trotzdem sau(g)stark.</p>",
+        "section_header_heading_size": "h2",
+        "section_header_highest_hierarchy": false,
+        "section_header_short_description_font_size": "medium",
+        "section_container_width": "sm",
+        "section_background_color": "#f58e9e",
+        "section_text_color": "#ffffff",
+        "section_heading_color": "#ffffff",
+        "section_subheading_color": "#ffe6e6",
+        "section_heading_font_family": "default",
+        "section_spacing_top": 40,
+        "section_spacing_bottom": 12,
+        "section_spacing_different_mobile": false,
+        "section_spacing_top_mobile": 0,
+        "section_spacing_bottom_mobile": 0
+      }
+    },
+    "3741dea7-0c3d-46ad-baa4-300756384dc5": {
+      "type": "button",
+      "disabled": true,
+      "settings": {
+        "button_text": "Überzeug dich selbst",
+        "button_link": "shopify://collections/periodenunterwaesche-online-kaufen",
+        "button_link_new_window": false,
+        "button_details": "",
+        "button_style": "primary",
+        "button_outline": false,
+        "button_shadow": false,
+        "button_size": "md",
+        "button_fit": "inline",
+        "section_container_width": "md",
+        "section_text_alignment": "center",
+        "section_background_color": "#f58e9e",
+        "section_spacing_top": 0,
+        "section_spacing_bottom": 32,
+        "section_spacing_different_mobile": false,
+        "section_spacing_top_mobile": 0,
+        "section_spacing_bottom_mobile": 0
+      }
+    },
+    "3838a1f1-c5e5-4584-b146-8dbc963a049e": {
+      "type": "faq",
+      "blocks": {
+        "45f0113e-2572-4f47-b486-033da1bb6073": {
+          "type": "faq_collection",
+          "settings": {
+            "metaobject_handle": "faq-collection-periodpanty-purchase-assistance",
+            "show_title": true
+          }
+        },
+        "6c0b0067-a165-401d-96a7-5b9a60def1a6": {
+          "type": "faq_collection",
+          "settings": {
+            "metaobject_handle": "faq-collection-periodpanty-usage",
+            "show_title": true
+          }
+        }
+      },
+      "block_order": [
+        "45f0113e-2572-4f47-b486-033da1bb6073",
+        "6c0b0067-a165-401d-96a7-5b9a60def1a6"
+      ],
+      "settings": {
+        "show_navigation": true,
+        "enable_schema": false,
+        "section_header_subheading": "Ihr fragt, wir antworten",
+        "section_header_heading": "Häufig gestellte Fragen",
+        "section_header_short_description": "",
+        "section_header_heading_size": "h3",
+        "section_header_highest_hierarchy": false,
+        "section_header_short_description_font_size": "medium",
+        "section_container_width": "md",
+        "section_text_alignment": "left",
+        "section_background_color": "#dc5268",
+        "section_text_color": "#ffffff",
+        "section_heading_color": "#ffffff",
+        "section_subheading_color": "rgba(0,0,0,0)",
+        "section_heading_font_family": "default",
+        "section_spacing_top": 60,
+        "section_spacing_bottom": 0,
+        "section_spacing_different_mobile": true,
+        "section_spacing_top_mobile": 48,
+        "section_spacing_bottom_mobile": 0
+      }
+    },
+    "24619cd4-2f88-41b6-b126-674f15081a6f": {
+      "type": "button",
+      "settings": {
+        "button_text": "Zum Hilfe-Center",
+        "button_link": "https://help.thefemalecompany.com/",
+        "button_link_new_window": true,
+        "button_details": "",
+        "button_style": "white",
+        "button_outline": false,
+        "button_shadow": false,
+        "button_size": "md",
+        "button_fit": "inline",
+        "section_container_width": "md",
+        "section_text_alignment": "center",
+        "section_background_color": "#dc5268",
+        "section_spacing_top": 16,
+        "section_spacing_bottom": 48,
+        "section_spacing_different_mobile": true,
+        "section_spacing_top_mobile": 16,
+        "section_spacing_bottom_mobile": 44
+      }
+    },
+    "7bdc631d-9a8d-4071-a419-40ad233a114b": {
+      "type": "section-header",
+      "disabled": true,
+      "settings": {
+        "section_subheading": "Dir fehlen noch Infos?",
+        "section_heading": "",
+        "section_short_description": "",
+        "heading_size": "h3",
+        "highest_hierarchy": false,
+        "section_heading_font_family": "default",
+        "short_description_font_size": "medium",
+        "section_text_color": "rgba(0,0,0,0)",
+        "section_heading_color": "rgba(0,0,0,0)",
+        "section_subheading_color": "#ffffff",
+        "section_container_width": "sm",
+        "section_background_color": "#fcadb9",
+        "section_spacing_top": 32,
+        "section_spacing_bottom": 8,
+        "section_spacing_different_mobile": false,
+        "section_spacing_top_mobile": 0,
+        "section_spacing_bottom_mobile": 0
+      }
+    },
+    "17e56877-68b6-4ed3-aaaa-1b7725bfa72b": {
+      "type": "button",
+      "disabled": true,
+      "settings": {
+        "button_text": "Gib uns Feedback",
+        "button_link": "https://the-femalecompany.typeform.com/to/fM58I5wx",
+        "button_link_new_window": true,
+        "button_details": "",
+        "button_style": "white",
+        "button_outline": true,
+        "button_shadow": false,
+        "button_size": "md",
+        "button_fit": "inline",
+        "section_container_width": "md",
+        "section_text_alignment": "center",
+        "section_background_color": "#fcadb9",
+        "section_spacing_top": 8,
+        "section_spacing_bottom": 32,
+        "section_spacing_different_mobile": false,
+        "section_spacing_top_mobile": 0,
+        "section_spacing_bottom_mobile": 0
+      }
+    }
+  },
+  "order": [
+    "main",
+    "61e17178-afdb-46ac-9fdb-cd9347b23974",
+    "7fb64368-dfdf-4a28-abb3-011ecf95186d",
+    "f2350b70-0512-410f-9b0f-20d5b42c0b03",
+    "dbb24502-dac8-43d6-90f1-d9417bebce22",
+    "ea166ad0-9709-4679-912b-cf846b884ab2",
+    "9bec0e8e-c77a-4a03-955c-e8ed90f29f52",
+    "3fd2d92e-1f90-436d-9bba-3d7e25307e15",
+    "70baa46d-4430-4c56-89c4-a11acbe9c7cd",
+    "0cc90731-aa68-4263-b107-7cbc05891d82",
+    "26b25d90-0374-4635-b10a-ba8bb08f0598",
+    "59fe3625-d3b6-4bf8-90b0-5c4fd7b7e4ee",
+    "bc7247dd-0a71-4d83-a184-f8476da4dd13",
+    "0812c401-7441-465e-9448-84f7aac687cd",
+    "97013c53-8d2e-4f12-a346-9f50b101e833",
+    "851ff655-c39f-491f-9540-2161a622229c",
+    "a34e9e55-269b-446a-bd27-eff98c41fe3e",
+    "7638c4e5-2843-481a-8f65-2d06db682a57",
+    "18b34a81-707b-440c-a079-afc3a76fd27b",
+    "1d93d689-6b53-466d-8f3d-90a20dbb9c5e",
+    "3741dea7-0c3d-46ad-baa4-300756384dc5",
+    "3838a1f1-c5e5-4584-b146-8dbc963a049e",
+    "24619cd4-2f88-41b6-b126-674f15081a6f",
+    "7bdc631d-9a8d-4071-a419-40ad233a114b",
+    "17e56877-68b6-4ed3-aaaa-1b7725bfa72b"
+  ]
+}

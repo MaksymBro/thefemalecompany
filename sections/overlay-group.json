@@ -1,0 +1,74 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "type": "custom.overlay",
+  "name": "Overlay group",
+  "sections": {
+    "newsletter-popup": {
+      "type": "newsletter-popup",
+      "disabled": true,
+      "settings": {
+        "apparition_delay": 5,
+        "show_only_on_index": true,
+        "show_only_for_visitors": true,
+        "show_only_once": true,
+        "image_position": "left",
+        "title": "Get 10% off",
+        "content": "<p>Promotions, new products and sales. Directly to your inbox.</p>"
+      }
+    },
+    "section_header_bHp877": {
+      "type": "section-header",
+      "disabled": true,
+      "name": "Section header",
+      "settings": {
+        "start_year": 2025,
+        "start_month": 1,
+        "start_day": 1,
+        "start_time": "10:00",
+        "end_year": 2050,
+        "end_month": 12,
+        "end_day": 31,
+        "end_time": "10:00",
+        "section_subheading": "Es tut uns leid!",
+        "section_heading": "",
+        "allow_heading_override": false,
+        "section_short_description": "<p>Credits sind leider aktuell im Sale nicht mit unseren Deals kombinierbar!</p>",
+        "heading_size": "h3",
+        "highest_hierarchy": false,
+        "section_heading_font_family": "default",
+        "short_description_font_size": "medium",
+        "section_text_color": "rgba(0,0,0,0)",
+        "section_heading_color": "rgba(0,0,0,0)",
+        "section_subheading_color": "rgba(0,0,0,0)",
+        "section_container_width": "sm",
+        "section_background_color": "rgba(0,0,0,0)",
+        "section_spacing_top": 24,
+        "section_spacing_bottom": 16,
+        "section_spacing_different_mobile": false,
+        "section_spacing_top_mobile": 20,
+        "section_spacing_bottom_mobile": 28
+      }
+    },
+    "privacy-banner": {
+      "type": "privacy-banner",
+      "disabled": true,
+      "settings": {
+        "cookie_bar_title": "Cookie policy",
+        "cookie_bar_content": "<p>I agree to the processing of my data in accordance with the conditions set out in the policy of Privacy.</p>"
+      }
+    }
+  },
+  "order": [
+    "newsletter-popup",
+    "section_header_bHp877",
+    "privacy-banner"
+  ]
+}

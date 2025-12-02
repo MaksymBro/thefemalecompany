@@ -1,0 +1,388 @@
+/* ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "slideshow_iaBQji": {
+      "type": "slideshow",
+      "blocks": {
+        "image_kyeRtX": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Header_Web_b7d32787-2209-4638-9ed6-cb8df1ab3ddd.jpg",
+            "mobile_image": "shopify://shop_images/Header_mobile_7.jpg",
+            "text_position": "bottom_left",
+            "subheading": "Ultra Strong – Just like you",
+            "title": "Die saugstärkste Period Panty am Markt",
+            "subtitle": "<p>Die neue Ultra Strong:\u2028<strong>144 % leistungsstärker</strong> als zuvor.</p>",
+            "subtitle_html": "",
+            "button_1_text": "",
+            "button_1_link": "",
+            "button_2_text": "",
+            "button_2_link": "",
+            "heading_font_family": "circular",
+            "heading_color": "#ffffff",
+            "text_color": "#ffffff",
+            "button_background": "#ffffff",
+            "button_text_color": "#000000",
+            "overlay_color": "#000000",
+            "overlay_opacity": 10,
+            "schedule_publishing": false,
+            "publish_date": "01.01.2019 00:00",
+            "schedule_unpublishing": false,
+            "unpublish_date": "01.01.2019 00:00"
+          }
+        }
+      },
+      "block_order": ["image_kyeRtX"],
+      "settings": {
+        "section_height": "small",
+        "transition_type": "sweep",
+        "autoplay": true,
+        "cycle_speed": 5,
+        "background": "rgba(0,0,0,0)"
+      }
+    },
+    "marquee_UDbbmz": {
+      "type": "marquee",
+      "disabled": true,
+      "settings": {
+        "content": "<p><strong>144% saugstärker als zuvor   ·     Flexi Technology    ·    Fluid Protection</strong></p>",
+        "separator": "🩸",
+        "repeat": 10,
+        "min_gap": 8,
+        "animation_speed": 200,
+        "text_color": "#ffffff",
+        "background": "#ff3f46"
+      }
+    },
+    "7d4072fc-8b3f-4915-a081-bc8d2c88574b": {
+      "type": "featured-collections",
+      "blocks": {
+        "template--17126084804874__7d4072fc-8b3f-4915-a081-bc8d2c88574b-16740505228860a039-0": {
+          "type": "collection",
+          "settings": {
+            "collection": "exclusive-launch",
+            "label": "",
+            "button_text": "Mehr Periodenunterwäsche",
+            "button_url": "shopify://collections/periodenunterwaesche-online-kaufen",
+            "hide_from_product_title_start": "",
+            "filterable_options": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--17126084804874__7d4072fc-8b3f-4915-a081-bc8d2c88574b-16740505228860a039-0"
+      ],
+      "settings": {
+        "products_count": 7,
+        "products_per_row": 4,
+        "stack_products": false,
+        "show_cta": false,
+        "filter_toggle_button_background": "rgba(0,0,0,0)",
+        "filter_toggle_active_button_background": "rgba(0,0,0,0)",
+        "filter_toggle_button_color": "rgba(0,0,0,0)",
+        "button_background": "#ff3f46",
+        "button_text_color": "rgba(0,0,0,0)",
+        "subheading": "This Period Panty sucks",
+        "title": "Ultra Strong – Just like you",
+        "content": "<p>Die Innovation des Jahres: Die <strong>saugstärkste</strong> & <strong>am schnellsten trockene</strong> Seamless Period Panty am Markt. Trockenes Gefühl innerhalb von <strong>21 Sekunden</strong>.</p>",
+        "section_header_heading_size": "h3",
+        "section_header_highest_hierarchy": false,
+        "section_header_short_description_font_size": "medium",
+        "section_container_width": "md",
+        "background": "#fff0f0",
+        "text_color": "#1a1a1a",
+        "heading_color": "rgba(0,0,0,0)",
+        "section_subheading_color": "rgba(0,0,0,0)",
+        "section_heading_font_family": "default",
+        "section_spacing_top": 48,
+        "section_spacing_bottom": 48,
+        "section_spacing_different_mobile": true,
+        "section_spacing_top_mobile": 32,
+        "section_spacing_bottom_mobile": 32
+      }
+    },
+    "image_with_text_nRKbQC": {
+      "type": "image-with-text",
+      "blocks": {
+        "item_B4QLPa": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/Seamless_FlexyTech_28ab9703-6438-4706-bbe0-14aea2ccb844.jpg",
+            "tab_label": "Item",
+            "subheading": "",
+            "title": "Flexi Technology",
+            "content": "<p>Die <strong>erste europäische Panty </strong>mit <strong>schwebender Saugeinlage</strong>. Passt sich <strong>deinem Körper </strong>an und nimmt das Blut dort auf, wo es <strong>gerade fließt</strong>.</p>",
+            "button_text": "",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": ["item_B4QLPa"],
+      "settings": {
+        "reveal_on_scroll": true,
+        "background_type": "full_width",
+        "background_overlap": "both",
+        "image_position": "left",
+        "text_alignment": "left",
+        "cycle_speed": 8,
+        "accent_background": "#ffe6e6",
+        "text_color": "rgba(0,0,0,0)",
+        "button_background": "rgba(0,0,0,0)",
+        "button_text_color": "rgba(0,0,0,0)"
+      }
+    },
+    "image_with_text_ygPFpa": {
+      "type": "image-with-text",
+      "blocks": {
+        "item_eRYVae": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/Seamless_FluidProtect_6df64591-0838-4f95-99fb-622489194e4a.jpg",
+            "tab_label": "Item",
+            "subheading": "",
+            "title": "Fluid Protection",
+            "content": "<p><strong>Verhindert seitliches Auslaufen </strong>durch innovative Fluid Protection <strong>Nahtverarbeitung</strong>. So auslaufsicher wie nie zuvor.</p>",
+            "button_text": "",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": ["item_eRYVae"],
+      "settings": {
+        "reveal_on_scroll": true,
+        "background_type": "full_width",
+        "background_overlap": "both",
+        "image_position": "right",
+        "text_alignment": "left",
+        "cycle_speed": 8,
+        "accent_background": "#ffe6e6",
+        "text_color": "rgba(0,0,0,0)",
+        "button_background": "rgba(0,0,0,0)",
+        "button_text_color": "rgba(0,0,0,0)"
+      }
+    },
+    "video_VmmdJd": {
+      "type": "video",
+      "settings": {
+        "subheading": "",
+        "title": "",
+        "video": "shopify://files/videos/c82425f398a4443097ddaddaaba1f93a.HD-1080p-7.2Mbps-21375950_0cd4b353-532e-49b7-a664-f153c759a090.mp4",
+        "video_url": "",
+        "background_type": "full_width",
+        "video_size": "auto",
+        "autoplay": true,
+        "show_video_controls": false,
+        "background": "rgba(0,0,0,0)",
+        "text_color": "rgba(0,0,0,0)"
+      }
+    },
+    "main": {
+      "type": "main-page",
+      "settings": {
+        "show_title": false,
+        "show_breadcrumbs": false,
+        "page_width": "medium"
+      }
+    },
+    "spacer_AjDRnD": {
+      "type": "spacer",
+      "settings": {
+        "height": 16,
+        "different_mobile_height": false,
+        "mobile_height": 0,
+        "background_color": "rgba(0,0,0,0)"
+      }
+    },
+    "1706271588c8227443": {
+      "type": "apps",
+      "blocks": {
+        "reviews_io_reviewsio_rating_bar_niicxH": {
+          "type": "shopify://apps/reviews-io/blocks/reviewsio-rating-bar/92a082e5-b297-4e88-b428-ac96cbc505f9",
+          "settings": {
+            "widget_id": "WzwJIZk4v5mPVFUO"
+          }
+        }
+      },
+      "block_order": ["reviews_io_reviewsio_rating_bar_niicxH"],
+      "settings": {
+        "include_horizontal_margins": true,
+        "include_vertical_margins": false
+      }
+    },
+    "spacer_ULGMxx": {
+      "type": "spacer",
+      "settings": {
+        "height": 16,
+        "different_mobile_height": false,
+        "mobile_height": 0,
+        "background_color": "rgba(0,0,0,0)"
+      }
+    },
+    "featured_collections_zidFHy": {
+      "type": "featured-collections",
+      "blocks": {
+        "collection_pfAxM4": {
+          "type": "collection",
+          "settings": {
+            "collection": "periodenunterwaesche-online-kaufen",
+            "label": "",
+            "button_text": "Mehr Seamless Styles",
+            "button_url": "/collections/periodenunterwaesche-online-kaufen?sort_by=manual&filter.p.m.filters.collection=Seamless",
+            "hide_from_product_title_start": "",
+            "filterable_options": ""
+          }
+        }
+      },
+      "block_order": ["collection_pfAxM4"],
+      "settings": {
+        "products_count": 4,
+        "products_per_row": 4,
+        "stack_products": false,
+        "show_cta": false,
+        "filter_toggle_button_background": "rgba(0,0,0,0)",
+        "filter_toggle_active_button_background": "rgba(0,0,0,0)",
+        "filter_toggle_button_color": "rgba(0,0,0,0)",
+        "button_background": "#ff3f46",
+        "button_text_color": "rgba(0,0,0,0)",
+        "subheading": "",
+        "title": "SEAMLESS Naked Collection",
+        "content": "<p>Unsichtbar unter jeder Kleidung. Nur 1mm dicker als normale Unterwäsche.</p>",
+        "section_header_heading_size": "h3",
+        "section_header_highest_hierarchy": false,
+        "section_header_short_description_font_size": "medium",
+        "section_container_width": "md",
+        "background": "#ffe6e6",
+        "text_color": "#1a1a1a",
+        "heading_color": "rgba(0,0,0,0)",
+        "section_subheading_color": "rgba(0,0,0,0)",
+        "section_heading_font_family": "default",
+        "section_spacing_top": 48,
+        "section_spacing_bottom": 48,
+        "section_spacing_different_mobile": true,
+        "section_spacing_top_mobile": 32,
+        "section_spacing_bottom_mobile": 32
+      }
+    },
+    "multi_column_AP3bB4": {
+      "type": "multi-column",
+      "blocks": {
+        "item_zdJHd4": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/panty_layer_closeup_layer1.jpg",
+            "image_width": 100,
+            "image_border": "rgba(0,0,0,0)",
+            "title": "Layer 1: Stay Dry Layer™",
+            "content": "<p><strong>Saugt Flüssigkeit </strong>blitzschnell auf und trocknet innerhalb von nur <strong>21</strong> <strong>Sekunden</strong>.</p>",
+            "link_text": "",
+            "link_url": "",
+            "link_style": "link",
+            "text_alignment": "left",
+            "vertical_alignment": "start"
+          }
+        },
+        "item_RA76AD": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/panty_layer_closeup_layer2_alt.jpg",
+            "image_width": 100,
+            "image_border": "rgba(0,0,0,0)",
+            "title": "Layer 2: Ultra-absorbierende Schicht",
+            "content": "<p><strong>Speichert </strong>die Flüssigkeit und schließt sie sicher ein.</p>",
+            "link_text": "",
+            "link_url": "",
+            "link_style": "link",
+            "text_alignment": "left",
+            "vertical_alignment": "start"
+          }
+        },
+        "item_Ew73Dh": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/panty_layer_closeup_layer3.jpg",
+            "image_width": 100,
+            "image_border": "rgba(0,0,0,0)",
+            "title": "Layer 3: Wasserdichte Membran",
+            "content": "<p>Sorgt für <strong>zero Auslaufgefahr</strong>, auch bei längerer Tragedauer.</p>",
+            "link_text": "",
+            "link_url": "",
+            "link_style": "link",
+            "text_alignment": "left",
+            "vertical_alignment": "start"
+          }
+        },
+        "item_JTTBf8": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/panty_layer_closeup_layer4_070ad79d-1f21-4c24-8941-cc2cf0159468.jpg",
+            "image_width": 100,
+            "image_border": "rgba(0,0,0,0)",
+            "title": "Layer 4: Ultra Soft",
+            "content": "<p>Super weicher Oberstoff für extra <strong>comfyTragegefühl</strong>.</p>",
+            "link_text": "",
+            "link_url": "",
+            "link_style": "link",
+            "text_alignment": "left",
+            "vertical_alignment": "start"
+          }
+        }
+      },
+      "block_order": [
+        "item_zdJHd4",
+        "item_RA76AD",
+        "item_Ew73Dh",
+        "item_JTTBf8"
+      ],
+      "settings": {
+        "reveal_on_scroll": true,
+        "stack_items": false,
+        "subheading": "Default Mode Dry Pantys",
+        "title": "Stay Dry Layer Technologie™",
+        "content": "<p>Entwickelt mit Textiltechniker*innen und Gynäkolog*innen: nur <strong>1 mm </strong>dicker als normale Unterwäsche und die <strong>leistungsstärkste Seamless Period Panty </strong>in <strong>am Markt</strong>.</p>",
+        "column_alignment": "center",
+        "mobile_item_size": "medium",
+        "desktop_item_size": "medium",
+        "spacing": "normal",
+        "background": "rgba(0,0,0,0)",
+        "text_color": "rgba(0,0,0,0)"
+      }
+    },
+    "video_ectbBP": {
+      "type": "video",
+      "settings": {
+        "subheading": "",
+        "title": "",
+        "video": "shopify://files/videos/leakproof_layer_compliation_480noaudio1mbit.mp4",
+        "video_url": "",
+        "background_type": "full_width",
+        "video_size": "auto",
+        "autoplay": true,
+        "show_video_controls": false,
+        "background": "rgba(0,0,0,0)",
+        "text_color": "rgba(0,0,0,0)"
+      }
+    }
+  },
+  "order": [
+    "slideshow_iaBQji",
+    "marquee_UDbbmz",
+    "7d4072fc-8b3f-4915-a081-bc8d2c88574b",
+    "image_with_text_nRKbQC",
+    "image_with_text_ygPFpa",
+    "video_VmmdJd",
+    "main",
+    "spacer_AjDRnD",
+    "1706271588c8227443",
+    "spacer_ULGMxx",
+    "featured_collections_zidFHy",
+    "multi_column_AP3bB4",
+    "video_ectbBP"
+  ]
+}

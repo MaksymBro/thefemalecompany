@@ -1,0 +1,794 @@
+{%- capture product_form_id -%}product-form-{{ section.id }}-{{ product.id }}{%- endcapture -%}
+
+{%- comment -%}
+  This enables us to override the shown price via metafields.
+{%- endcomment -%}
+{%- assign product_price = product.selected_or_first_available_variant.price -%}
+{%- assign product_compare_at_price = product.selected_or_first_available_variant.compare_at_price %}
+{%- if product.metafields.pricing.override_shown_price != blank -%}
+  {%- assign price_override_active = true -%}
+  {%- assign product_price = product.metafields.pricing.override_shown_price.value -%}
+
+  {%- if product_compare_at_price == blank and product_price < product.selected_or_first_available_variant.price -%}
+    {%- assign product_compare_at_price = product.selected_or_first_available_variant.price -%}
+  {%- endif -%}
+{%- endif -%}
+
+<div class="product__info">
+  <!-- PRODUCT META -->
+  <product-meta form-id="{{ product_form_id }}" price-class="price--large" class="product-meta">
+    {%- if section.settings.show_vendor -%}
+      <h2 class="product-meta__vendor heading heading--small">
+        {%- assign vendor_handle = product.vendor | handle -%}
+        {%- assign vendor_collection = collections[vendor_handle] -%}
+
+        {%- if vendor_collection != blank -%}
+          <a href="{{ vendor_collection.url }}">{{ product.vendor }}</a>
+        {%- else -%}
+          <a href="{{ product.vendor | url_for_vendor }}">{{ product.vendor }}</a>
+        {%- endif -%}
+      </h2>
+    {%- endif -%}
+
+    {% unless featured %}
+      <h1 class="product-meta__title heading h4" data-cy-product-title="{{ product.title }}">
+        {{ product.title }}
+      </h1>
+      {% else %}
+      <h2 class="product-meta__title heading h4">
+        <a href="{{ product.url }}">{{ product.title }}</a>
+      </h2>
+    {% endunless %}
+
+    {%- if product.metafields.filters.absorbancy.value != blank or product.metafields.filters.style.value != blank -%}
+      <div class="product-item-meta__filters text--xsmall">
+        {%- if product.metafields.filters.absorbancy.value != blank -%}
+          <div class="product-item-meta__filters-filter product-item-meta__filters-absorbency">
+            {%- assign absorbency_count = product.metafields.filters.absorbancy.value %}
+            {% render 'absorbency-droplets', absorbency_count: absorbency_count, absorbency_show_empty_drops: absorbency_show_empty_drops %}
+          </div>
+        {%- endif -%}
+        {%- if product.metafields.filters.style.value != blank and section.settings.show_product_style -%}
+          <div class="product-item-meta__filters-filter product-item-meta__filters-style">
+                <span class="product-item-meta__filters-style-icon">
+                  {% render "style-icons", product: product %}
+                </span>
+
+            <span style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis; font-size: 14px;">
+                  {{ product.metafields.filters.style.value }}
+                </span>
+          </div>
+        {%- endif -%}
+      </div>
+    {%- endif -%}
+
+    {%- if section.settings.show_sku -%}
+      <div class="product-meta__reference">
+        {%- if section.settings.show_sku -%}
+          <span class="product-meta__sku text--subdued text--xxsmall" {% if product.selected_or_first_available_variant.sku == blank %}style="display: none"{% endif %} data-product-sku-container>
+            {{- 'product.general.sku' | t }}
+            <span class="product-meta__sku-number" data-product-sku-number>{{ product.selected_or_first_available_variant.sku }}</span>
+          </span>
+        {%- endif -%}
+      </div>
+    {%- endif -%}
+
+    {%- assign short_summary = "" -%}
+    {%- if product.metafields.descriptors.short_summary != blank -%}
+      {%- assign short_summary = product.metafields.descriptors.short_summary -%}
+      {%- elsif product.metafields.descriptors.summary[localization.language.iso_code] != blank -%}
+      {%- assign short_summary = product.metafields.descriptors.summary[localization.language.iso_code] -%}
+      {%- elsif product.metafields.descriptors.short_description != blank -%}
+      {%- assign short_summary = product.metafields.descriptors.short_description -%}
+    {%- endif -%}
+
+    {%- unless short_summary == blank -%}
+      <div class="product-meta__short-description">
+        {{ short_summary }}
+      </div>
+    {%- endunless -%}
+
+    <div class="product-meta__price-list-container" role="region" aria-live="polite">
+      <div class="product-meta__prices-wrapper">
+        <div class="price-list" data-product-price-list data-product-id="{{ product.id }}" {% if price_override_active %} data-override-shown-price="{{ product_price }}"{% endif %}>
+          
+          {%- if product_compare_at_price > product_price -%}
+            
+            <span class="price price--highlight price--large" data-product-id="{{ product.id }}" data-product-price>
+              <span class="visually-hidden">{{ 'product.general.sale_price' | t }}</span>
+
+              {%- if settings.currency_code_enabled -%}
+                {{- product_price | money_with_currency -}}
+              {%- else -%}
+                {{- product_price | money -}}
+              {%- endif -%}
+            </span>
+
+            <span class="price price--compare" data-product-id="{{ product.id }}" data-product-price-compare>
+              <span class="visually-hidden">{{ 'product.general.regular_price' | t }}</span>
+
+              {%- if settings.currency_code_enabled -%}
+                {{- product_compare_at_price | money_with_currency -}}
+              {%- else -%}
+                {{- product_compare_at_price | money -}}
+              {%- endif -%}
+            </span>
+            
+          {%- else -%}
+            
+            <span class="price price--large" data-product-id="{{ product.id }}" data-product-price>
+              <span class="visually-hidden">{{ 'product.general.sale_price' | t }}</span>
+              {%- if settings.currency_code_enabled -%}
+                {{- product_price | money_with_currency -}}
+              {%- else -%}
+                {{- product_price | money -}}
+              {%- endif -%}
+            </span>
+          
+          {%- endif -%}
+
+          {%- if product.selected_or_first_available_variant.unit_price_measurement -%}
+            <div class="price text--subdued">
+              <div class="unit-price-measurement">
+                <span class="unit-price-measurement__price">{{ product.selected_or_first_available_variant.unit_price | money }}</span>
+                <span class="unit-price-measurement__separator">/</span>
+
+                {%- if product.selected_or_first_available_variant.unit_price_measurement.reference_value != 1 -%}
+                  <span class="unit-price-measurement__reference-value">{{ product.selected_or_first_available_variant.unit_price_measurement.reference_value }}</span>
+                {%- endif -%}
+
+                <span class="unit-price-measurement__reference-unit">{{ product.selected_or_first_available_variant.unit_price_measurement.reference_unit }}</span>
+              </div>
+            </div>
+          {%- endif -%}
+        </div>
+
+        <div class="product-meta__label-list label-list" data-product-label-list data-hide-savings-label="{{ product.metafields.badges.badge_savings_content_hide }}">
+          {%- unless product.selected_or_first_available_variant.available -%}
+            <span class="label label--subdued">{{ 'collection.product.sold_out' | t }}</span>
+          {%- elsif product_compare_at_price > product_price -%}
+            {%- if settings.discount_mode == 'percentage' -%}
+              {%- assign savings = product_compare_at_price | minus: product_price | times: 100.0 | divided_by: product.selected_or_first_available_variant.compare_at_price | round | append: '%' -%}
+            {%- else -%}
+              {%- capture savings -%}{{ product_compare_at_price | minus: product_price | money }}{%- endcapture -%}
+            {%- endif -%}
+
+            {% unless product.metafields.badges.badge_savings_content_hide %}
+            <span class="label label--highlight">{{ 'collection.product.discount_html' | t: savings: savings }}</span>
+            {% endunless %}
+          {%- endunless -%}
+        </div>
+
+        {%- if section.settings.show_product_rating -%}
+          <div class="ruk_rating_snippet" data-sku="{{ product.handle }};{{ product.variants | map: 'sku' | join: ';' }};{{ product.variants | map: 'id' | join: ';' }}"></div>
+        {%- endif -%}
+      </div>
+      {%- render 'discount-showcase', product: product, product_price: product_price, product_compare_at_price: product_compare_at_price, context: 'pdp' -%}
+
+      {%- if section.settings.show_taxes_included and request.locale.iso_code != 'nl' and localization.country.iso_code != 'NL'-%}
+        {%- if cart.taxes_included or shop.shipping_policy.body != blank -%}
+          <p class="product-meta__taxes-included text--xsmall product-meta__tax-disclaimer">
+            {%- if cart.taxes_included -%}
+              {{ 'product.general.include_taxes' | t }}
+            {%- endif -%}
+            {%- if product.metafields.logistics.free_shipping.value == true -%}
+              {{ 'product.general.free_shipping_html' | t }}
+            {%- elsif shop.shipping_policy.body != blank -%}
+              {{ 'product.general.shipping_policy_html' | t: link: shop.shipping_policy.url }}
+            {%- endif -%}
+          </p>
+        {%- endif -%}
+      {%- endif -%}
+    </div>
+
+    <product-payment-terms form-id="{{ product_form_id }}">
+      {%- assign product_installment_form_id = 'product-installment-form-' | append: section.id | append: '-' | append: product.id -%}
+
+      {%- form 'product', product, data-productid: product.id, id: product_installment_form_id -%}
+        <input
+          type="hidden"
+          name="id"
+          data-productid="{{ product.id }}"
+          value="{{ product.selected_or_first_available_variant.id }}"
+          data-cy-product-variant-id="{{ product.selected_or_first_available_variant.id }}">
+        {{- form | payment_terms -}}
+      {%- endform -%}
+    </product-payment-terms>
+  </product-meta>
+
+  {%- render 'product-form', product: product, update_url: update_url -%}
+
+  {% assign trust_block = section.blocks | where: 'type', 'trust' | first %}
+
+  {%- if trust_block != blank -%}
+    {%- capture trust_content -%}
+      {%- for i in (1..3) -%}
+        {%- capture icon_setting -%}icon_{{ i }}{%- endcapture -%}
+        {%- capture custom_icon_setting -%}custom_icon_{{ i }}{%- endcapture -%}
+        {%- capture title_setting -%}title_{{ i }}{%- endcapture -%}
+        {%- capture content_setting -%}content_{{ i }}{%- endcapture -%}
+        {%- capture nl_only -%}nl_only_{{ i }}{%- endcapture -%}
+
+        {% if trust_block.settings[nl_only] and request.locale.iso_code != 'nl' %}
+          {% continue %}
+        {% endif %}
+
+        {%- if trust_block.settings[title_setting] != blank -%}
+          {%- assign custom_icon = trust_block.settings[custom_icon_setting] -%}
+
+          {%- capture trust_icon -%}
+            {%- if custom_icon != blank -%}
+              {{- custom_icon | image_url: width: custom_icon.width | image_tag: loading: 'lazy', sizes: '24px', widths: '24,48,72,96', class: 'product-meta__trust-icon' -}}
+            {%- else -%}
+              {%- render 'icon' with trust_block.settings[icon_setting], class: 'product-tabs__trust-icon' -%}
+            {%- endif -%}
+          {%- endcapture -%}
+
+          {%- if trust_block.settings[content_setting] != blank -%}
+            <button is="toggle-button" class="product-meta__trust-title icon-text link text--subdued hidden-phone" aria-controls="product-{{ section.id }}-{{ trust_block.id }}-trust-{{ forloop.index }}-drawer" aria-expanded="false">
+              {{- trust_icon -}} {{- trust_block.settings[title_setting] | escape -}}
+            </button>
+
+            <button is="toggle-button" class="product-meta__trust-title icon-text link text--subdued hidden-tablet-and-up" aria-controls="product-{{ section.id }}-{{ trust_block.id }}-trust-{{ forloop.index }}-popover" aria-expanded="false">
+              {{- trust_icon -}} {{- trust_block.settings[title_setting] | escape -}}
+            </button>
+          {%- else -%}
+            <span class="product-meta__trust-title icon-text text--subdued">
+              {{- trust_icon -}} {{- trust_block.settings[title_setting] | escape -}}
+            </span>
+          {%- endif -%}
+        {%- endif -%}
+      {%- endfor -%}
+    {%- endcapture -%}
+
+    <div class="product-meta__trust-icons" {{ trust_block.shopify_attributes }}>
+      {{- trust_content -}}
+    </div>
+
+    {%- capture trust_drawer_content -%}
+      {%- for i in (1..3) -%}
+        {%- capture icon_setting -%}icon_{{ i }}{%- endcapture -%}
+        {%- capture custom_icon_setting -%}custom_icon_{{ i }}{%- endcapture -%}
+        {%- capture title_setting -%}title_{{ i }}{%- endcapture -%}
+        {%- capture content_setting -%}content_{{ i }}{%- endcapture -%}
+        {%- capture nl_only -%}nl_only_{{ i }}{%- endcapture -%}
+
+        {% if trust_block.settings[nl_only] and request.locale.iso_code != 'nl' %}
+          {% continue %}
+        {% endif %}
+
+        {%- if trust_block.settings[title_setting] != blank and trust_block.settings[content_setting] != blank -%}
+          {%- assign custom_icon = trust_block.settings[custom_icon_setting] -%}
+
+          {%- capture trust_icon -%}
+            {%- if custom_icon != blank -%}
+              {{- custom_image | image_url: width: custom_image.width | image_tag: loading: 'lazy', sizes: "24px", widths: '24,48,72,96', class: "product-tabs__trust-icon" -}}
+            {%- else -%}
+              {%- render 'icon' with trust_block.settings[icon_setting], class: 'product-tabs__trust-icon' -%}
+            {%- endif -%}
+          {%- endcapture -%}
+
+          {%- comment -%}Drawer is for tablet and desktop{%- endcomment -%}
+          <drawer-content id="product-{{ section.id }}-{{ trust_block.id }}-trust-{{ forloop.index }}-drawer" class="drawer drawer--large hidden-phone">
+            <span class="drawer__overlay"></span>
+
+            <header class="drawer__header">
+              <p class="drawer__title heading h6">{{- trust_icon -}} {{- trust_block.settings[title_setting] | escape -}}</p>
+
+              <button type="button" class="drawer__close-button tap-area" data-action="close" title="{{ 'general.accessibility.close' | t | escape }}">
+                {%- render 'icon' with 'close' -%}
+              </button>
+            </header>
+
+            <div class="drawer__content drawer__content--padded-start">
+              <div class="rte">
+                {{- trust_block.settings[content_setting] -}}
+              </div>
+            </div>
+          </drawer-content>
+
+          {%- comment -%}Popover is for mobile{%- endcomment -%}
+          <popover-content id="product-{{ section.id }}-{{ trust_block.id }}-trust-{{ forloop.index }}-popover" class="popover hidden-tablet-and-up">
+            <span class="popover__overlay"></span>
+
+            <header class="popover__header">
+              <p class="popover__title heading h6">{{- trust_icon -}} {{- trust_block.settings[title_setting] | escape -}}</p>
+
+              <button type="button" class="popover__close-button tap-area tap-area--large" data-action="close" title="{{ 'general.accessibility.close' | t | escape }}">
+                {%- render 'icon' with 'close' -%}
+              </button>
+            </header>
+
+            <div class="popover__content">
+              <div class="rte">
+                {{- trust_block.settings[content_setting] -}}
+              </div>
+            </div>
+          </popover-content>
+        {%- endif -%}
+      {%- endfor -%}
+    {%- endcapture -%}
+
+    {{- trust_drawer_content -}}
+  {%- endif -%}
+
+  {%- assign complete_the_look_block = section.blocks | where: 'type', 'complete_the_look' | first -%}
+
+  {%- if complete_the_look_block != blank -%}
+    {%- assign ctl_heading_color = complete_the_look_block.settings.ctl_heading_color -%}
+    {%- assign ctl_bg_color = complete_the_look_block.settings.ctl_bg_color -%}
+    {%- assign look_products = complete_the_look_block.settings.ctl_products -%}
+    {%- assign look_products_titles = '' -%}
+    {%- assign rendered_products = 0 -%}
+
+    {%- if look_products != blank -%}
+      <complete-the-look class="complete-the-look js-complete-the-look" style="--ctl-bg-color: {{ ctl_bg_color }};">
+        <div class="complete-the-look__container">
+          {%- if complete_the_look_block.settings.title != blank -%}
+            <p class="complete-the-look__title heading" style="--ctl-heading-color: {{ ctl_heading_color }};">
+              {{- complete_the_look_block.settings.title | escape -}}
+            </p>
+          {% else %}
+            <p class="complete-the-look__title heading" style="--ctl-heading-color: {{ ctl_heading_color }};">
+              {{ 'collection.product.upsell_heading' | t }}
+            </p>
+          {%- endif -%}
+
+          <div class="complete-the-look__products">
+            {%- for look_product in look_products -%}
+              {%- unless look_product.available -%}
+                {%- continue -%}
+              {%- endunless -%}
+
+              {%- render 'complete-the-look-product', page_product: product, product: look_product, sizes_attribute: '(max-width: 740px) 105px, 215px' -%}
+
+              {%- assign rendered_products = rendered_products | plus: 1 -%}
+
+              {%- assign look_products_titles = look_products_titles | append: look_product.title | append: "," -%}
+
+              {%- if rendered_products == 3 -%}
+                {%- break -%}
+              {%- endif -%}
+            {%- endfor -%}
+          </div>
+
+          {%- assign look_products_titles = look_products_titles | split: "," -%}
+        </div>
+
+        <script type="application/ld+json">
+          {
+            "products_titles": {{ look_products_titles | json }}
+          }
+        </script>
+      </complete-the-look>
+    {%- endif -%}
+  {%- endif -%}
+
+  {%- assign complementary_products_block = section.blocks | where: 'type', 'complementary_products' | first -%}
+
+  {%- if complementary_products_block != blank -%}
+    <product-recommendations class="product-content__featured-products" intent="complementary" recommendations-count="2" product-id="{{ product.id }}" section-id="{{ section.id }}">
+      {%- if recommendations.performed and recommendations.products_count > 0 -%}
+        {%- if complementary_products_block.settings.title != blank -%}
+          <p class="product-content__featured-products-title heading heading--small">{{ complementary_products_block.settings.title | escape }}</p>
+        {%- endif -%}
+
+        <div class="scroller">
+          <div class="scroller__inner">
+            <div class="product-content__featured-products-list">
+              {%- for product in recommendations.products -%}
+                {%- render 'product-item', product: product, reduced_content: true, reduced_font_size: true, sizes_attribute: '(max-width: 740px) 105px, 215px' -%}
+              {%- endfor -%}
+            </div>
+          </div>
+        </div>
+      {%- endif -%}
+    </product-recommendations>
+  {%- endif -%}
+
+  {%- capture product_content -%}
+    {%- capture product_tabs -%}
+      {%- assign processed_blocks = 0 -%}
+      {%- assign product_tabs_from_metafields = 0 -%}
+      {%- assign content_counter = 2 -%}
+
+      {%- assign metafield_index = 1 -%}
+      {%- for block in section.blocks -%}
+        {%- case block.type -%}
+        {%- when 'description_accordion' -%}
+          {%- capture description -%}
+            {%- assign open_by_default = block.settings.open_by_default -%}
+            {%- if block.settings.use_metafields_for_usp  -%}
+
+            {%- assign usp_entries = product.metafields.descriptors.product_usps.value -%}
+            {%- for usp_entry in usp_entries limit: 6 -%}
+                {%- assign icon = usp_entry.icon.value -%}
+                {%- if usp_entry.heading != blank -%}
+                  <div class="product-tabs__description">
+                    {% if icon != blank %}
+                      <img
+                        class="product-tabs__description-image"
+                        src="{{ icon | img_url: '40x40' }}"
+                        srcset="{{ icon | img_url: '40x40' }} 1x, {{ icon | img_url: '80x80' }} 2x"
+                        alt="{{ usp_entry.internal_title.value | escape }}"
+                        width="40"
+                        height="40"
+                        loading="lazy"
+                      >
+                    {% else %}
+                      <div class="product-tabs__description-image" style="width: 40px; height: 40px;"></div>
+                    {% endif %}
+            
+                    <div class="product-tabs__description-content">
+                      <div class="product-tabs__description-heading">
+                        {{ usp_entry.heading | metafield_tag }}
+                      </div>
+                      
+                      {% if usp_entry.description != blank %}
+                        <div class="product-tabs__description-text text--small">
+                          {{ usp_entry.description | metafield_tag }}
+                        </div>
+                      {% endif %}
+                    </div>
+                  </div>
+                {%- endif -%}
+              {%- endfor -%}
+
+
+            {%- else -%}    
+              {%- for index in (1..6) -%}
+                {%- assign image_setting       = 'image_' | append: index -%}
+                {%- assign heading_setting     = 'heading_' | append: index -%}
+                {%- assign description_setting = 'description_' | append: index -%}
+  
+                {%- assign image       = block.settings[image_setting] -%}
+                {%- assign heading     = block.settings[heading_setting] -%}
+                {%- assign description = block.settings[description_setting] -%}
+  
+                {%- if heading != blank -%}
+                  <div class="product-tabs__description">
+                    
+                    {% if image != blank %}
+                    <img
+                      class="product-tabs__description-image"
+                      src="{{- image | img_url: '40x40' -}}"
+                      srcset="{{- image | img_url: '40x40' -}} 1x, {{- image | img_url: '80x80' -}} 2x "
+                      alt="{{ image.alt }}"
+                      width="40"
+                      height="40"
+                      loading="lazy"
+                    >
+                    {% else %}
+                      <div class="product-tabs__description-image" style="width: 40px; height: 40px;"></div>
+                    {% endif %}
+  
+                    <div class="product-tabs__description-content">
+                      <p class="product-tabs__description-heading">
+                        {{- heading -}}
+                      </p>
+  
+                      {%- if description != blank -%}
+                        <p class="product-tabs__description-text text--small">
+                          {{- description -}}
+                        </p>
+                      {%- endif -%}
+                    </div>
+                  </div>
+                {%- endif -%}
+              {%- endfor -%}
+            {%- endif -%}
+            
+            {%- if product.description != blank -%}
+              {{- product.description -}}
+            {%- endif -%}
+          {%- endcapture -%}
+
+          {%- if description != blank -%}
+            <div {% unless processed_blocks == 0 %}hidden{% endunless %} id="block-{{ section.id }}-{{ block.id }}-{{ product.id }}" class="product-tabs__tab-item-wrapper">
+              <button type="button" is="toggle-button" class="collapsible-toggle heading heading--small" aria-controls="block-{{ section.id }}-{{ block.id }}-{{ product.id }}-content" aria-expanded="{% if open_by_default == true %}true{% else %}false{% endif %}">
+                {{- 'product.general.description' | t -}}
+                {%- render 'icon' with 'chevron' -%}
+              </button>
+
+              <collapsible-content {% if open_by_default == true %}open{% endif %} id="block-{{ section.id }}-{{ block.id }}-{{ product.id }}-content" class="collapsible">
+                <div class="product-tabs__tab-item-content rte">
+                  {{- description -}}
+                </div>
+              </collapsible-content>
+            </div>
+
+            {%- assign processed_blocks = processed_blocks | plus: 1 -%}
+          {%- endif -%}
+
+        {%- when 'content_accordion' -%}
+          {%- comment -%}Current, i18n compatible metafields{%- endcomment -%}
+          {%- assign content_title_metafield_name = "content_" | append: content_counter | append: "_title" -%}
+          {%- assign content_body_metafield_name = "content_" | append: content_counter | append: "_body" -%}
+          {%- assign content_title = product.metafields.descriptors[content_title_metafield_name] -%}
+          {%- assign content_body = product.metafields.descriptors[content_body_metafield_name] -%}
+          {%- assign content_counter = content_counter | plus: 1 %}
+
+          {%- comment -%}LEGACY METAFIELDS{%- endcomment -%}
+          {%- assign product_tabs_from_metafields = product_tabs_from_metafields | plus: 1 -%}
+          {%- assign title_metafield = "tab_" | append: product_tabs_from_metafields | append: "_title" %}
+          {%- assign content_metafield = "tab_" | append: product_tabs_from_metafields | append: "_content" %}
+          {%- assign legacy_title = product.metafields.descriptors[title_metafield][localization.language.iso_code] -%}
+          {%- assign legacy_content = product.metafields.descriptors[content_metafield][localization.language.iso_code] -%}
+          {%- assign open_by_default = block.settings.open_by_default -%}
+          {%- assign title = blank -%}
+          {%- assign content = blank -%}
+
+          {%- if block.settings.page != blank -%}
+            {%- assign title = block.settings.title | default: block.settings.page.title -%}
+            {%- assign content = block.settings.page.content -%}
+          {%- elsif content_title != blank and content_body != blank -%}
+            {%- assign title = content_title -%}
+            {%- assign content = content_body -%}
+          {%- elsif legacy_title != blank and legacy_content != blank -%}
+            {%- assign title = legacy_title -%}
+            {%- assign content = legacy_content -%}
+          {%- elsif block.settings.title != blank and block.settings.content != blank -%}
+            {%- assign title = block.settings.title -%}
+            {%- assign content = block.settings.content -%}
+
+            {%- if content contains 'metafield' -%}
+              {%- for metafield in product.metafields.product_tabs -%}
+                {%- assign key = metafield | first -%}
+                {%- assign value = metafield | last -%}
+                {%- if key contains metafield_index and key contains 'content' -%}
+                  {%- comment -%}Add newlines if the metafield does not contain HTML{%- endcomment -%}
+                  {%- assign content_length = value | strip | size -%}
+                  {%- assign content_without_html_length = value | strip | strip_html | size -%}
+                  {%- if content_length > content_without_html_length -%}
+                    {%- assign content = value -%}
+                  {%- else -%}
+                    {%- assign content = value | newline_to_br -%}
+                  {%- endif -%}
+                  {%- assign metafield_index = metafield_index | plus: 1 -%}
+                  {%- break -%}
+                {%- endif -%}
+              {%- endfor -%}
+            {%- endif -%}
+          {%- endif -%}
+
+          {%- if title != blank and content != blank -%}
+            <div id="block-{{ section.id }}-{{ block.id }}-{{ product.id }}" class="product-tabs__tab-item-wrapper" {{ block.shopify_attributes }}>
+              <button type="button" is="toggle-button" class="collapsible-toggle heading heading--small" aria-expanded="{% if open_by_default == true %}true{% else %}false{% endif %}" aria-controls="block-{{ section.id }}-{{ block.id }}-{{ product.id }}-content">
+                {{- title -}}
+                {%- render 'icon' with 'chevron' -%}
+              </button>
+
+              <collapsible-content {% if open_by_default == true %}open{% endif %} id="block-{{ section.id }}-{{ block.id }}-{{ product.id }}-content" class="collapsible">
+                <div class="product-tabs__tab-item-content rte">
+                  {{- content -}}
+                </div>
+              </collapsible-content>
+            </div>
+
+            {%- assign processed_blocks = processed_blocks | plus: 1 -%}
+          {%- endif -%}
+        {%- endcase -%}
+      {%- endfor -%}
+    {%- endcapture -%}
+
+    {%- if product_tabs != blank -%}
+      <div class="product-content__tabs anchor" id="product-{{ product.id }}-tabs">
+        <div class="product-tabs">
+          <div class="product-tabs__content">
+            {{- product_tabs -}}
+          </div>
+        </div>
+      </div>
+    {%- endif -%}
+  {%- endcapture -%}
+
+  {%- if product_content != blank -%}
+    <div class="product-accordions">
+      <div id="product-{{ product.id }}-content" class="product-content anchor">
+        {{- product_content -}}
+      </div>
+    </div>
+  {%- endif -%}
+
+  {%- assign help_page = section.settings.help_page -%}
+
+  {%- if section.settings.show_share_buttons or help_page != blank -%}
+    <div class="product-meta__aside">
+      {%- if section.settings.show_share_buttons -%}
+        <div class="product-meta__share text--subdued">
+          {%- assign share_url = shop.url | append: product.url -%}
+          {%- assign twitter_text = product.title | url_param_escape -%}
+          {%- assign pinterest_description = product.description | strip_html | truncatewords: 15 | url_param_escape -%}
+          {%- assign pinterest_image = product.featured_image | img_url: '800x' | prepend: 'https:' -%}
+
+          <button is="share-toggle-button" share-url="{{ share_url | escape }}" share-title="{{ product.title | escape }}" class="product-meta__share-label link hidden-tablet-and-up" aria-controls="mobile-share-buttons-{{ section.id }}" aria-expanded="false">{{ 'product.general.share' | t }}</button>
+          <div class="product-meta__share-label hidden-phone">{{ 'product.general.share' | t }}</div>
+
+          <popover-content id="mobile-share-buttons-{{ section.id }}" class="popover hidden-tablet-and-up">
+            <span class="popover__overlay"></span>
+
+            <header class="popover__header">
+              <span class="popover__title heading h6">{{- 'article.general.share' | t -}}</span>
+
+              <button type="button" class="popover__close-button tap-area tap-area--large" data-action="close" title="{{ 'general.accessibility.close' | t | escape }}">
+                {%- render 'icon' with 'close' -%}
+              </button>
+            </header>
+
+            <div class="mobile-share-buttons">
+              <a class="mobile-share-buttons__item mobile-share-buttons__item--facebook" href="https://www.facebook.com/sharer.php?u={{ share_url }}" target="_blank" rel="noopener" aria-label="{{ 'general.social.facebook_share' | t }}">
+                {%- render 'icon' with 'facebook-share-mobile' -%} Facebook
+              </a>
+
+              <a class="mobile-share-buttons__item mobile-share-buttons__item--pinterest" href="https://pinterest.com/pin/create/button/?url={{ share_url }}{% if pinterest_image != blank %}&media={{ pinterest_image }}{% endif %}&description={{ pinterest_description }}" target="_blank" rel="noopener" aria-label="{{ 'general.social.pinterest_pin' | t }}">
+                {%- render 'icon' with 'pinterest-share-mobile' -%} Pinterest
+              </a>
+
+              <a class="mobile-share-buttons__item mobile-share-buttons__item--twitter" href="https://twitter.com/share?{% if twitter_text != blank %}text={{twitter_text}}&{% endif %}url={{ share_url }}" target="_blank" rel="noopener" aria-label="{{ 'general.social.twitter_tweet' | t }}">
+                {%- render 'icon' with 'twitter-share-mobile' -%} Twitter
+              </a>
+
+              <a class="mobile-share-buttons__item mobile-share-buttons__item--mail" href="mailto:?&subject={{ article.title | escape }}&body={{ share_url }}" aria-label="{{ 'general.social.email_share' | t }}">
+                {%- render 'icon' with 'email-share-mobile' -%} {{ 'general.social.email_label' | t }}
+              </a>
+            </div>
+          </popover-content>
+
+          <div class="product-meta__share-button-list hidden-phone">
+            <a class="product-meta__share-button-item product-meta__share-button-item--facebook link tap-area" href="https://www.facebook.com/sharer.php?u={{ share_url }}" target="_blank" rel="noopener" aria-label="{{ 'general.social.facebook_share' | t }}">
+              {%- render 'icon' with 'facebook', width: 8, height: 14 -%}
+            </a>
+
+            <a class="product-meta__share-button-item product-meta__share-button-item--pinterest link tap-area" href="https://pinterest.com/pin/create/button/?url={{ share_url }}{% if pinterest_image != blank %}&media={{ pinterest_image }}{% endif %}&description={{ pinterest_description }}" target="_blank" rel="noopener" aria-label="{{ 'general.social.pinterest_pin' | t }}">
+              {%- render 'icon' with 'pinterest', width: 10, height: 14 -%}
+            </a>
+
+            <a class="product-meta__share-button-item product-meta__share-button-item--twitter link tap-area" href="https://twitter.com/share?{% if twitter_text != blank %}text={{ twitter_text }}&{% endif %}url={{ share_url }}" target="_blank" rel="noopener" aria-label="{{ 'general.social.twitter_tweet' | t }}">
+              {%- render 'icon' with 'twitter', width: 17, height: 14 -%}
+            </a>
+
+            <a class="product-meta__share-button-item product-meta__share-button-item--mail link tap-area" href="mailto:?&subject={{ product.title | escape }}&body={{ share_url }}" aria-label="{{ 'general.social.email_share' | t }}">
+              {%- render 'icon' with 'share', width: 13, height: 13 -%}
+            </a>
+          </div>
+        </div>
+      {%- endif -%}
+
+      {%- if help_page != blank -%}
+        <button is="toggle-button" class="product-meta__help link text--subdued hidden-tablet-and-up" aria-controls="product-{{ section.id }}-help-popover" aria-expanded="false">{{ 'product.general.need_help' | t }}</button>
+        <button is="toggle-button" class="product-meta__help link text--subdued hidden-phone" aria-controls="product-{{ section.id }}-help-drawer" aria-expanded="false">{{ 'product.general.need_help' | t }}</button>
+      {%- endif -%}
+    </div>
+  {%- endif -%}
+
+  {%- if help_page != blank -%}
+    {%- comment -%}Drawer for tablet and higher{%- endcomment -%}
+    <drawer-content id="product-{{ section.id }}-help-drawer" class="drawer drawer--large hidden-phone">
+      <span class="drawer__overlay"></span>
+
+      <header class="drawer__header">
+        <p class="drawer__title heading h6">{{ help_page.title }}</p>
+
+        <button type="button" class="drawer__close-button tap-area" data-action="close" title="{{ 'general.accessibility.close' | t | escape }}">
+          {%- render 'icon' with 'close' -%}
+        </button>
+      </header>
+
+      <div class="drawer__content drawer__content--padded-start">
+        <div class="rte">
+          {{- help_page.content -}}
+        </div>
+      </div>
+    </drawer-content>
+
+    {%- comment -%}Popover for mobile{%- endcomment -%}
+    <popover-content hidden id="product-{{ section.id }}-help-popover" class="popover hidden-lap-and-up">
+      <span class="popover__overlay"></span>
+
+      <header class="popover__header">
+        <p class="popover__title heading h6">{{ help_page.title }}</p>
+
+        <button type="button" class="popover__close-button tap-area tap-area--large" data-action="close" title="{{ 'general.accessibility.close' | t | escape }}">
+          {%- render 'icon' with 'close' -%}
+        </button>
+      </header>
+
+      <div class="popover__content">
+        <div class="rte">
+          {{- help_page.content -}}
+        </div>
+      </div>
+    </popover-content>
+  {%- endif -%}
+</div>
+
+{% assign cart_product_has_discount = false %}
+{% for automatic_discounts in metaobjects.automatic_discounts_rebuild.values %} 
+  {% for purchase_product in automatic_discounts.purchase_these.value %}
+    {% for cart_product in cart.items %}
+      {% if cart_product.product.id == purchase_product.id %}
+        {% assign cart_product_has_discount = true %}
+      {% endif %}
+    {% endfor %}
+  {% endfor %}
+{% endfor %}
+
+<script >
+var text_from_price = "{{- 'collection.product.from_price_html' | t: price_min: "" | strip -}}";
+var cart_product_has_discount = {{ cart_product_has_discount }};
+function setDiscountOnVariantChange(recommended_product_id){
+  const page_product_id = document.querySelector( '.product__info .product-form .product-form__quantity form.shopify-product-form' ).getAttribute('data-productid');
+  let page_product_has_discount = false;
+  let recommended_product_has_discount = false;
+  let discount_amount = 0;
+  function setAutomaticDiscount(automaticDiscounts)
+  {
+    console.log(automaticDiscounts);
+    for (i=0; i<automaticDiscounts.automatic_discounts.length; i++)
+    {
+      for(j=0; j<automaticDiscounts.automatic_discounts[i].purchase_these.length; j++)
+      {
+        if (page_product_id == automaticDiscounts.automatic_discounts[i].purchase_these[j].Id)
+        {
+          page_product_has_discount = true;
+        }
+      }
+      for(n=0; n<automaticDiscounts.automatic_discounts[i].get_discount_on_these.length; n++)
+      {
+        if (recommended_product_id == automaticDiscounts.automatic_discounts[i].get_discount_on_these[n].Id)
+        {
+          recommended_product_has_discount = true;
+          if (page_product_has_discount == true || cart_product_has_discount == true)
+          {
+            discount_amount = automaticDiscounts.automatic_discounts[i].discount_amount;
+            let old_price = automaticDiscounts.automatic_discounts[i].get_discount_on_these[n].Original_Price;
+            let new_price = old_price - discount_amount;
+            let price_container = document.querySelector( 'product-variants[form-id="product-form--'+recommended_product_id+'"]').closest('.product-item__info').querySelector( '.price' );
+            let original_price_container = document.querySelector( 'product-variants[form-id="product-form--'+recommended_product_id+'"]').closest('.product-item__info').querySelector( '.price--compare' );
+            let badge_container = document.querySelector( 'product-variants[form-id="product-form--'+recommended_product_id+'"]').closest('product-item').querySelector( '.discount-badge' );
+            let savings;
+            badge_container.style.display = "block";
+            if(price_container.innerHTML.includes(text_from_price) || automaticDiscounts.automatic_discounts[i].get_discount_on_these[n].Price_Varies == true)
+            {
+              price_container.innerHTML = text_from_price + " " + Number(new_price / 100).toFixed(2).replace(/[.]/, ",") + " €";
+            }
+            else
+            {
+              price_container.innerHTML = Number(new_price / 100).toFixed(2).replace(/[.]/, ",") + " €";
+            }
+            price_container.classList.add("price--highlight");
+            if (!original_price_container)
+            {
+              const newPriceSpan = document.createElement("span");
+              newPriceSpan.innerHTML = Number(old_price / 100).toFixed(2).replace(/[.]/, ",") + " €";
+              newPriceSpan.classList.add("price", "price--compare", "text--xsmall");
+              price_container.parentNode.insertBefore(newPriceSpan, price_container.nextSibling);
+            }
+            if(automaticDiscounts.automatic_discounts[i].get_discount_on_these[n].Original_CompareAtPrice)
+            {
+              let original_compareAtPrice = automaticDiscounts.automatic_discounts[i].get_discount_on_these[n].Original_CompareAtPrice;
+              savings = Math.round((original_compareAtPrice - new_price) * 100 / original_compareAtPrice);
+              badge_container.innerHTML = "- " + savings + "%";
+            }
+            else
+            {
+              savings = Math.round(discount_amount / 100);
+              badge_container.innerHTML = "- " + savings + " €";
+            }
+          }
+        }
+      }
+    }
+  }
+
+  var automaticDiscounts;
+  fetch(window.location.origin+'/{{ product.url }}?view=automatic-discounts-json')
+  //fetch('{{ shop.url }}{{ product.url }}?view=automatic-discounts-json') //live
+  //fetch('http://127.0.0.1:9292{{ product.url }}?view=automatic-discounts-json') //lokal
+  .then(res => res.json())
+  .then(automaticDiscounts => setAutomaticDiscount(automaticDiscounts))
+  .catch(function(e) {
+    console.log("Error", e);
+  });
+}
+</script>

@@ -1,0 +1,217 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "collection-banner": {
+      "type": "collection-banner",
+      "settings": {
+        "show_collection_image": true,
+        "show_collection_title": true,
+        "show_collection_description": true,
+        "section_height": "small",
+        "text_width": "medium",
+        "heading_font_family": "circular",
+        "image_heading_color": "#ffffff",
+        "image_text_color": "#ffffff",
+        "image_overlay_color": "#000000",
+        "image_overlay_opacity": 21,
+        "quick_links": ""
+      }
+    },
+    "main": {
+      "type": "main-collection",
+      "settings": {
+        "products_per_page": 50,
+        "mobile_products_per_row": "2",
+        "desktop_products_per_row": 4,
+        "show_all_colors": true,
+        "hide_from_product_title_start": "",
+        "show_sort_by": true,
+        "show_filters": true,
+        "show_filter_group_name": true,
+        "show_color_swatch": true,
+        "open_first_filter_group": false,
+        "filter_position": "drawer",
+        "promotion_position": "top",
+        "promotion_height": "small"
+      }
+    },
+    "9498e6c4-0bd6-448c-b700-22a2388ae415": {
+      "type": "featured-collections",
+      "blocks": {
+        "template--17863973339402__9498e6c4-0bd6-448c-b700-22a2388ae415-168620899315b112f2-0": {
+          "type": "collection",
+          "settings": {
+            "collection": "periodenunterwaesche-online-kaufen",
+            "label": "",
+            "button_text": "Mehr Periodenunterwäsche",
+            "button_url": "",
+            "hide_from_product_title_start": "Period Panty –",
+            "filterable_options": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--17863973339402__9498e6c4-0bd6-448c-b700-22a2388ae415-168620899315b112f2-0"
+      ],
+      "settings": {
+        "products_count": 50,
+        "products_per_row": 4,
+        "stack_products": false,
+        "show_cta": false,
+        "filter_toggle_button_background": "rgba(0,0,0,0)",
+        "filter_toggle_active_button_background": "rgba(0,0,0,0)",
+        "filter_toggle_button_color": "rgba(0,0,0,0)",
+        "button_background": "rgba(0,0,0,0)",
+        "button_text_color": "rgba(0,0,0,0)",
+        "subheading": "Die Alternative zu Tampons, Binden etc.",
+        "title": "Periodenunterwäsche",
+        "content": "<p>Sieht aus wie dein Lieblings-Slip, aber saugt bis zu <strong>6 Tampons an Flüssigkeit sicher auf</strong>.</p>",
+        "section_header_heading_size": "h3",
+        "section_header_highest_hierarchy": false,
+        "section_header_short_description_font_size": "medium",
+        "section_container_width": "md",
+        "background": "#ffecec",
+        "text_color": "rgba(0,0,0,0)",
+        "heading_color": "rgba(0,0,0,0)",
+        "section_subheading_color": "rgba(0,0,0,0)",
+        "section_heading_font_family": "default",
+        "section_spacing_top": 68,
+        "section_spacing_bottom": 68,
+        "section_spacing_different_mobile": true,
+        "section_spacing_top_mobile": 48,
+        "section_spacing_bottom_mobile": 48
+      }
+    },
+    "668bc750-39fb-49dc-8083-7e8a480d7201": {
+      "type": "image-with-text",
+      "blocks": {
+        "template--17863973339402__668bc750-39fb-49dc-8083-7e8a480d7201-16873357793d4c3576-0": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/Tamponswitch_KatharinaAlba_SuperPlus_Close_ret_Hochformat_SOCIAL_add6a149-845a-479e-8418-8450b5f2924d.jpg",
+            "tab_label": "Item",
+            "subheading": "Nachhaltigkeit",
+            "title": "Tampons aus Bio-Baumwolle",
+            "content": "<p>Unsere Tampons werden aus Baumwolle hergestellt, die ohne den Einsatz von chemischen Düngemitteln, Pestiziden oder gentechnisch veränderten Organismen angebaut wird. <br/>Bio-Baumwolle ist bekannt für ihre Weichheit und Hautverträglichkeit. Sie kann dazu beitragen, Reizungen und allergische Reaktionen zu reduzieren, insbesondere bei Personen mit empfindlicher Haut oder Allergien gegen bestimmte Chemikalien oder synthetische Materialien.<br/>Im Gegensatz zu herkömmlichen Tampons, die oft Kunststoffe oder andere nicht biologisch abbaubare Materialien enthalten, sind Bio-Baumwolle Tampons biologisch abbaubar. Sie zersetzen sich natürlich und haben so weniger langfristige Auswirkungen auf die Umwelt.<br/></p>",
+            "button_text": "",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--17863973339402__668bc750-39fb-49dc-8083-7e8a480d7201-16873357793d4c3576-0"
+      ],
+      "settings": {
+        "reveal_on_scroll": true,
+        "background_type": "full_width",
+        "background_overlap": "image",
+        "image_position": "left",
+        "text_alignment": "center",
+        "cycle_speed": 8,
+        "accent_background": "rgba(0,0,0,0)",
+        "text_color": "rgba(0,0,0,0)",
+        "button_background": "rgba(0,0,0,0)",
+        "button_text_color": "rgba(0,0,0,0)"
+      }
+    },
+    "fb807a74-9c40-45cc-b3f2-c96c826e3c85": {
+      "type": "image-with-text",
+      "blocks": {
+        "template--17863973339402__fb807a74-9c40-45cc-b3f2-c96c826e3c85-16873357793d4c3576-0": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/2022-10-12-FEMALE-COMPANY-REBELLES-8725_ret_1.jpg",
+            "tab_label": "Item",
+            "subheading": "Sensibilität",
+            "title": "Slipeinlagen ohne Windelgefühl",
+            "content": "<p>Unsere Slipeinlagen sind nicht nur super slim, sodass sie deine Bewegungsfreiheit während des Menstruieren nicht einschränken, sondern auch frei von synthetischen Zusätzen. Unsere Binden und Slipeinlagen enthalten keine synthetischen Duftstoffe, Farbstoffe oder Bleichmittel. Dies kann dazu beitragen, das Risiko von Reizungen, allergischen Reaktionen und möglichen negativen Auswirkungen auf die Gesundheit zu reduzieren.<br/></p>",
+            "button_text": "",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--17863973339402__fb807a74-9c40-45cc-b3f2-c96c826e3c85-16873357793d4c3576-0"
+      ],
+      "settings": {
+        "reveal_on_scroll": true,
+        "background_type": "full_width",
+        "background_overlap": "image",
+        "image_position": "right",
+        "text_alignment": "center",
+        "cycle_speed": 8,
+        "accent_background": "rgba(0,0,0,0)",
+        "text_color": "rgba(0,0,0,0)",
+        "button_background": "rgba(0,0,0,0)",
+        "button_text_color": "rgba(0,0,0,0)"
+      }
+    },
+    "33c63b5f-3f1d-48a5-aca2-6165bd184c36": {
+      "type": "image-with-text",
+      "blocks": {
+        "template--17863973339402__33c63b5f-3f1d-48a5-aca2-6165bd184c36-16873357793d4c3576-0": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/2021-04-24-FEMALE-COMPANY-5536_ret_1.jpg",
+            "tab_label": "Item",
+            "subheading": "Schmerzlinderung",
+            "title": "Zum Entspannen",
+            "content": "<p>Wärme kann helfen, die Muskeln im Unterleib zu entspannen. Regelschmerzen entstehen oft durch die Kontraktion der Gebärmuttermuskulatur, um die Gebärmutterschleimhaut abzustoßen. Durch die Anwendung von Wärme auf den Unterbauch können sich die Muskeln entspannen und die Schmerzen lindern.<br/>Wärme kann auch aufgrund der Freisetzung von Endorphinen, den körpereigenen Schmerzmitteln, eine schmerzlindernde Wirkung haben. Die angenehme Wärme kann dazu beitragen, das Schmerzempfinden zu reduzieren und ein Gefühl von Wohlbefinden erzeugen.<br/></p>",
+            "button_text": "",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--17863973339402__33c63b5f-3f1d-48a5-aca2-6165bd184c36-16873357793d4c3576-0"
+      ],
+      "settings": {
+        "reveal_on_scroll": true,
+        "background_type": "full_width",
+        "background_overlap": "image",
+        "image_position": "left",
+        "text_alignment": "center",
+        "cycle_speed": 8,
+        "accent_background": "rgba(0,0,0,0)",
+        "text_color": "rgba(0,0,0,0)",
+        "button_background": "rgba(0,0,0,0)",
+        "button_text_color": "rgba(0,0,0,0)"
+      }
+    },
+    "d71fb6b2-12e9-4284-ab2f-95c6cc87b4f2": {
+      "type": "blog-posts",
+      "settings": {
+        "blog": "perioden-ratgeber",
+        "subheading": "Mehr zum Thema",
+        "title": "Perioden Ratgeber",
+        "articles_count": 3,
+        "stack_mobile": false,
+        "show_category": false,
+        "show_excerpt": true,
+        "button_text": "Zum Blog",
+        "button_url": "",
+        "background": "rgba(0,0,0,0)",
+        "text_color": "rgba(0,0,0,0)",
+        "button_background": "rgba(0,0,0,0)",
+        "button_text_color": "rgba(0,0,0,0)"
+      }
+    }
+  },
+  "order": [
+    "collection-banner",
+    "main",
+    "9498e6c4-0bd6-448c-b700-22a2388ae415",
+    "668bc750-39fb-49dc-8083-7e8a480d7201",
+    "fb807a74-9c40-45cc-b3f2-c96c826e3c85",
+    "33c63b5f-3f1d-48a5-aca2-6165bd184c36",
+    "d71fb6b2-12e9-4284-ab2f-95c6cc87b4f2"
+  ]
+}

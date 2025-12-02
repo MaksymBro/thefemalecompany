@@ -1,0 +1,1515 @@
+{% capture start_date %}
+  {{ section.settings.start_year }}-{{ section.settings.start_month }}-{{ section.settings.start_day }} {{ section.settings.start_time }}
+{% endcapture %}
+{%- assign start_date = start_date | date: '%Y-%m-%d %H:%M' -%}
+{% capture end_date %}
+  {{ section.settings.end_year }}-{{ section.settings.end_month }}-{{ section.settings.end_day }} {{ section.settings.end_time }}
+{% endcapture %}
+{%- assign end_date = end_date | date: '%Y-%m-%d %H:%M' -%}
+{% assign current_date = 'now' | date: '%Y-%m-%d %H:%M' %}
+
+{% if current_date >= start_date and current_date < end_date %}
+  <style>
+    #shopify-section-{{ section.id }} {
+      {%- if section.settings.button_background == 'rgba(0,0,0,0)' -%}
+        {%- assign button_background = settings.primary_button_background -%}
+      {%- else -%}
+        {%- assign button_background = section.settings.button_background -%}
+      {%- endif -%}
+
+      {%- if section.settings.button_text_color == 'rgba(0,0,0,0)' -%}
+        {%- assign button_text_color = settings.primary_button_text_color -%}
+      {%- else -%}
+        {%- assign button_text_color = section.settings.button_text_color -%}
+      {%- endif -%}
+
+      --primary-button-background: {{ button_background.red }}, {{ button_background.green }}, {{ button_background.blue }};
+      --primary-button-text-color: {{ button_text_color.red }}, {{ button_text_color.green }}, {{ button_text_color.blue }};
+
+      --prev-next-button-background: {{ settings.background.red }}, {{ settings.background.green }}, {{ settings.background.blue }};
+      --prev-next-button-color: {{ settings.text_color.red }}, {{ settings.text_color.green }}, {{ settings.text_color.blue }};
+
+      --section-products-per-row: 2;
+
+      {%- if section.settings.filter_toggle_button_background == 'rgba(0,0,0,0)' -%}
+        --filter-button-background: var(--color-grapefruit-pink);
+      {%- else -%}
+        --filter-button-background: {{ section.settings.filter_toggle_button_background.red }}, {{ section.settings.filter_toggle_button_background.green }}, {{ section.settings.filter_toggle_button_background.blue }};
+      {%- endif -%}
+
+      {%- if section.settings.filter_toggle_button_color == 'rgba(0,0,0,0)' -%}
+        --filter-button-color: 255, 255 ,255;
+      {%- else -%}
+        --filter-button-color: {{ section.settings.filter_toggle_button_color.red }}, {{ section.settings.filter_toggle_button_color.green }}, {{ section.settings.filter_toggle_button_color.blue }};
+      {%- endif -%}
+
+      {%- if section.settings.filter_toggle_active_button_background == 'rgba(0,0,0,0)' -%}
+        --filter-active-button-background: var(--color-flamingo-pink);
+      {%- else -%}
+        --filter-active-button-background: {{ section.settings.filter_toggle_active_button_background.red }}, {{ section.settings.filter_toggle_active_button_background.green }}, {{ section.settings.filter_toggle_active_button_background.blue }};
+      {%- endif -%}
+
+      --filter-active-button-color: var(--filter-button-color);
+      --filter-option-list-background: 255, 226, 226;
+    }
+
+    @media screen and (min-width: 741px) {
+      #shopify-section-{{ section.id }} {
+        --section-products-per-row: {{ section.settings.products_per_row | at_most: 3 }};
+      }
+    }
+
+    @media screen and (min-width: 1000px) {
+      #shopify-section-{{ section.id }} {
+        --section-products-per-row: {{ section.settings.products_per_row | at_most: 4 }};
+      }
+    }
+
+    @media screen and (min-width: 1200px) {
+      #shopify-section-{{ section.id }} {
+        --section-products-per-row: {{ section.settings.products_per_row }};
+      }
+    }
+  </style>
+
+  {%- render 'section',
+    background_color: section.settings.background,
+    text_color: section.settings.text_color,
+    heading_color: section.settings.heading_color
+  -%}
+  {%- render 'section-header',
+    heading: section.settings.title,
+    subheading: section.settings.subheading,
+    short_description: section.settings.content
+  -%}
+
+  {%- if section.blocks.size > 1 -%}
+    <tabs-nav class="tabs-nav tabs-nav--center tabs-nav--edge2edge">
+      <scrollable-content class="tabs-nav__scroller hide-scrollbar">
+        <div class="tabs-nav__scroller-inner">
+          <div class="tabs-nav__item-list">
+            {%- for block in section.blocks -%}
+              {%- capture on_boarding_title -%}{{ 'general.onboarding.collection_title' | t }} {{ forloop.index }}{%- endcapture -%}
+
+              <button
+                type="button"
+                class="tabs-nav__item heading"
+                aria-expanded="{% if forloop.first %}true{% else %}false{% endif %}"
+                aria-controls="block-{{ section.id }}-{{ block.id }}"
+                {{ block.shopify_attributes }}
+              >
+                {%- assign tab_collection_image = block.settings.tab_collection_image
+                  | default: block.settings.collection.featured_image
+                -%}
+                {%- if tab_collection_image != blank -%}
+                  {{
+                    tab_collection_image
+                    | image_url: width: 23, height: 23, crop: 'center'
+                    | image_tag: class: 'tabs-nav__item-thumbnail'
+                  }}
+                {%- endif -%}
+                {{- block.settings.label | default: block.settings.collection.title | default: on_boarding_title -}}
+              </button>
+            {%- endfor -%}
+          </div>
+        </div>
+      </scrollable-content>
+    </tabs-nav>
+  {%- endif -%}
+
+  <div class="featured-collections">
+    {%- for block in section.blocks -%}
+      {%- assign collection = block.settings.collection -%}
+      {%- assign smallest_image_aspect_ratio = 0 -%}
+
+      <product-list
+        {% if settings.stagger_products_apparition %}
+          stagger-apparition
+        {% endif %}
+        {% unless forloop.first %}
+          hidden
+        {% endunless %}
+        id="block-{{ section.id }}-{{ block.id }}"
+        class="product-list product-list--center"
+        data-collection-handle="{{ collection.handle }}"
+        {% if block.settings.filterable_options != blank %}
+          data-filterable-options="{{ block.settings.filterable_options }}"
+        {% endif %}
+      >
+        <div class="product-list__filters">{% comment %}Rendered via JavaScript{% endcomment %}</div>
+
+        <div
+          {% unless section.settings.stack_products %}
+            class="scroller"
+          {% endunless %}
+        >
+          <div class="product-list__inner {% unless section.settings.stack_products %}product-list__inner--scroller hide-scrollbar{% endunless %}">
+            {%- assign number_of_products_minus_one = section.settings.products_per_row | minus: 1 -%}
+            {%- assign gap_width = 24.0
+              | divided_by: section.settings.products_per_row
+              | times: number_of_products_minus_one
+            -%}
+            {%- capture sizes_attribute -%}(max-width: 740px) 52vw, calc(min(100vw - 80px, 1520px) / {{ section.settings.products_per_row }} - {{ gap_width | ceil }}px){%- endcapture -%}
+
+            {%- for product in collection.products limit: section.settings.products_count -%}
+              {%- if product.metafields.custom.hide_on_storefront == true -%}
+                {% continue %}
+              {%- endif -%}
+              {%- if product.featured_media -%}
+                {%- assign smallest_image_aspect_ratio = smallest_image_aspect_ratio
+                  | at_least: product.featured_media.aspect_ratio
+                -%}
+              {%- endif -%}
+
+              {%- render 'product-item',
+                product: product,
+                collection: collection,
+                show_cta: section.settings.show_cta,
+                block: block,
+                sizes_attribute: sizes_attribute,
+                reveal: settings.stagger_products_apparition,
+                hide_from_product_title_start: block.settings.hide_from_product_title_start
+              -%}
+            {%- else -%}
+              {%- assign smallest_image_aspect_ratio = 1 -%}
+
+              {%- for i in (1..section.settings.products_count) -%}
+                {%- capture product_image -%}product-{% cycle '1', '2', '3', '4', '5' %}{% endcapture %}
+                {%- render 'product-item-placeholder',
+                  product_image: product_image,
+                  show_cta: section.settings.show_cta,
+                  reveal: settings.stagger_products_apparition
+                -%}
+              {%- endfor -%}
+            {%- endfor -%}
+          </div>
+        </div>
+
+        {%- unless section.settings.stack_products -%}
+          {%- if collection.products_count == 0 -%}
+            {%- assign products_shown = section.settings.products_count -%}
+          {%- else -%}
+            {%- assign products_shown = collection.products_count
+              | default: section.settings.products_count
+              | at_most: section.settings.products_count
+            -%}
+          {%- endif -%}
+
+          {%- if products_shown > section.settings.products_per_row -%}
+            {%- if smallest_image_aspect_ratio == 0 -%}
+              {%- assign smallest_image_aspect_ratio = 1 -%}
+            {%- endif -%}
+
+            <prev-next-buttons
+              class="product-list__prev-next hidden-pocket"
+              style="--smallest-image-aspect-ratio: {{ smallest_image_aspect_ratio }}"
+            >
+              <button class="product-list__arrow prev-next-button prev-next-button--prev" disabled>
+                <span class="visually-hidden">{{ 'general.accessibility.previous' | t }}</span>
+                {%- include 'icon' with 'nav-arrow-left', block: true, direction_aware: true -%}
+              </button>
+
+              <button class="product-list__arrow prev-next-button prev-next-button--next">
+                <span class="visually-hidden">{{ 'general.accessibility.next' | t }}</span>
+                {%- include 'icon' with 'nav-arrow-right', block: true, direction_aware: true -%}
+              </button>
+            </prev-next-buttons>
+          {%- endif -%}
+        {%- endunless -%}
+
+        {%- if block.settings.button_text != blank -%}
+          <div class="section__footer">
+            <a class="button button--primary" href="{{ block.settings.button_url | default: collection.url }}">
+              {{- block.settings.button_text -}}
+            </a>
+          </div>
+        {%- endif -%}
+      </product-list>
+    {%- endfor -%}
+  </div>
+  {%- render 'section-end' -%}
+{% endif %}
+
+{% stylesheet %}
+  .product-list__filters {
+    margin-bottom: 1rem;
+    margin-top: -1rem;
+
+    --heading-color: 0, 0, 0;
+  }
+
+  .product-list__filter-option-list {
+    padding: 1rem 1.25rem;
+    margin-top: 0.75rem;
+    background: rgb(var(--filter-option-list-background));
+
+    animation: fadeIn;
+    animation-duration: 0.5s;
+  }
+
+  .product-list__filter-option-list[data-collapsed] {
+    display: none;
+  }
+
+  .product-list__filter-option-list-heading {
+    margin-bottom: 0.75rem;
+    font-size: 1rem;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .product-list__filter-option-list-heading-close {
+    padding: 0 0.5rem;
+  }
+
+  .product-list__filter-option-title {
+    padding: 4px 12px;
+    border-radius: 3px;
+    background-color: rgba(var(--filter-button-background), 0.6);
+    color: rgb(var(--filter-button-color));
+    transition: background-color var(--button-transition);
+  }
+
+  .product-list__filter-option-title[data-open] {
+    background-color: rgb(var(--filter-button-background));
+  }
+
+  .product-list__filter-option-title[data-active] {
+    font-weight: bold;
+    background-color: rgba(var(--filter-active-button-background), 0.8);
+    color: rgb(var(--filter-active-button-color));
+  }
+
+  .product-list__filter-option-title[data-active][data-open] {
+    background-color: rgb(var(--filter-active-button-background));
+  }
+
+  .product-list__filter-option-title svg {
+    margin-right: 4px;
+  }
+
+  .product-list__filter-option-title[data-active-filters]:not(
+      .product-list__filter-option-title[data-active-filters='0']
+    )::after {
+    content: '(' attr(data-active-filters) ')';
+    margin-left: 1px;
+    font-size: 80%;
+  }
+
+  @media (min-width: 1000px) {
+    .product-list__filters {
+      margin-left: 28px;
+      margin-right: 28px;
+      margin-top: -2rem;
+    }
+  }
+{% endstylesheet %}
+
+{% schema %}
+{
+  "name": "Featured collections",
+  "class": "shopify-section--featured-collections",
+  "max_blocks": 10,
+  "disabled_on": {
+    "templates": ["password"],
+    "groups": ["header", "custom.overlay"]
+  },
+  "blocks": [
+    {
+      "type": "collection",
+      "name": "Collection",
+      "settings": [
+        {
+          "type": "collection",
+          "id": "collection",
+          "label": "Collection"
+        },
+        {
+          "type": "text",
+          "id": "label",
+          "label": "Tab label",
+          "info": "Shown when more than 1 collection is featured. Collection title is used if none is set."
+        },
+        {
+          "type": "image_picker",
+          "id": "tab_collection_image",
+          "label": "Tab image",
+          "info": "Shown inside the tab as a small thumbnail. Collection image is used if none is set."
+        },
+        {
+          "type": "text",
+          "id": "button_text",
+          "label": "Button text",
+          "default": "Show more"
+        },
+        {
+          "type": "url",
+          "id": "button_url",
+          "label": "Button link",
+          "info": "If empty, the collection URL is used."
+        },
+        {
+          "type": "text",
+          "id": "hide_from_product_title_start",
+          "label": "Hide from beginning of product name",
+          "info": "Enter text that should be removed from the beginning of all product names. Example: If you enter 'Period Panty ', then the product 'Period Panty Extra Strong - Slip 2.0' will be shown as 'Extra Strong - Slip 2.0'."
+        },
+        {
+          "type": "header",
+          "content": "Filter"
+        },
+        {
+          "type": "text",
+          "id": "filterable_options",
+          "label": "Filterable options",
+          "info": "Comma-separated list of options to filter by. For example, \"Color,Size\". Leave blank to disable filtering."
+        }
+      ]
+    }
+  ],
+  "settings": [
+    {
+      "type": "header",
+      "content": "Start date"
+    },
+    {
+      "type": "range",
+      "id": "start_year",
+      "label": "Year",
+      "min": 2025,
+      "max": 2050,
+      "step": 1,
+      "default": 2025
+    },
+    {
+      "type": "range",
+      "id": "start_month",
+      "label": "Month",
+      "min": 1,
+      "max": 12,
+      "step": 1,
+      "default": 1
+    },
+    {
+      "type": "range",
+      "id": "start_day",
+      "label": "Day",
+      "min": 1,
+      "max": 31,
+      "step": 1,
+      "default": 1
+    },
+    {
+      "type": "select",
+      "id": "start_time",
+      "label": "Time",
+      "options": [
+        {
+          "value": "00:00",
+          "label": "0:00"
+        },
+        {
+          "value": "00:15",
+          "label": "0:15"
+        },
+        {
+          "value": "00:30",
+          "label": "0:30"
+        },
+        {
+          "value": "00:45",
+          "label": "0:45"
+        },
+        {
+          "value": "01:00",
+          "label": "1:00"
+        },
+        {
+          "value": "01:15",
+          "label": "1:15"
+        },
+        {
+          "value": "01:30",
+          "label": "1:30"
+        },
+        {
+          "value": "01:45",
+          "label": "1:45"
+        },
+        {
+          "value": "02:00",
+          "label": "2:00"
+        },
+        {
+          "value": "02:15",
+          "label": "2:15"
+        },
+        {
+          "value": "02:30",
+          "label": "2:30"
+        },
+        {
+          "value": "02:45",
+          "label": "2:45"
+        },
+        {
+          "value": "03:00",
+          "label": "3:00"
+        },
+        {
+          "value": "03:15",
+          "label": "3:15"
+        },
+        {
+          "value": "03:30",
+          "label": "3:30"
+        },
+        {
+          "value": "03:45",
+          "label": "3:45"
+        },
+        {
+          "value": "04:00",
+          "label": "4:00"
+        },
+        {
+          "value": "04:15",
+          "label": "4:15"
+        },
+        {
+          "value": "04:30",
+          "label": "4:30"
+        },
+        {
+          "value": "04:45",
+          "label": "4:45"
+        },
+        {
+          "value": "05:00",
+          "label": "5:00"
+        },
+        {
+          "value": "05:15",
+          "label": "5:15"
+        },
+        {
+          "value": "05:30",
+          "label": "5:30"
+        },
+        {
+          "value": "05:45",
+          "label": "5:45"
+        },
+        {
+          "value": "06:00",
+          "label": "6:00"
+        },
+        {
+          "value": "06:15",
+          "label": "6:15"
+        },
+        {
+          "value": "06:30",
+          "label": "6:30"
+        },
+        {
+          "value": "06:45",
+          "label": "6:45"
+        },
+        {
+          "value": "07:00",
+          "label": "7:00"
+        },
+        {
+          "value": "07:15",
+          "label": "7:15"
+        },
+        {
+          "value": "07:30",
+          "label": "7:30"
+        },
+        {
+          "value": "07:45",
+          "label": "7:45"
+        },
+        {
+          "value": "08:00",
+          "label": "8:00"
+        },
+        {
+          "value": "08:15",
+          "label": "8:15"
+        },
+        {
+          "value": "08:30",
+          "label": "8:30"
+        },
+        {
+          "value": "08:45",
+          "label": "8:45"
+        },
+        {
+          "value": "09:00",
+          "label": "9:00"
+        },
+        {
+          "value": "09:15",
+          "label": "9:15"
+        },
+        {
+          "value": "09:30",
+          "label": "9:30"
+        },
+        {
+          "value": "09:45",
+          "label": "9:45"
+        },
+        {
+          "value": "10:00",
+          "label": "10:00"
+        },
+        {
+          "value": "10:15",
+          "label": "10:15"
+        },
+        {
+          "value": "10:30",
+          "label": "10:30"
+        },
+        {
+          "value": "10:45",
+          "label": "10:45"
+        },
+        {
+          "value": "11:00",
+          "label": "11:00"
+        },
+        {
+          "value": "11:15",
+          "label": "11:15"
+        },
+        {
+          "value": "11:30",
+          "label": "11:30"
+        },
+        {
+          "value": "11:45",
+          "label": "11:45"
+        },
+        {
+          "value": "12:00",
+          "label": "12:00"
+        },
+        {
+          "value": "12:15",
+          "label": "12:15"
+        },
+        {
+          "value": "12:30",
+          "label": "12:30"
+        },
+        {
+          "value": "12:45",
+          "label": "12:45"
+        },
+        {
+          "value": "13:00",
+          "label": "13:00"
+        },
+        {
+          "value": "13:15",
+          "label": "13:15"
+        },
+        {
+          "value": "13:30",
+          "label": "13:30"
+        },
+        {
+          "value": "13:45",
+          "label": "13:45"
+        },
+        {
+          "value": "14:00",
+          "label": "14:00"
+        },
+        {
+          "value": "14:15",
+          "label": "14:15"
+        },
+        {
+          "value": "14:30",
+          "label": "14:30"
+        },
+        {
+          "value": "14:45",
+          "label": "14:45"
+        },
+        {
+          "value": "15:00",
+          "label": "15:00"
+        },
+        {
+          "value": "15:15",
+          "label": "15:15"
+        },
+        {
+          "value": "15:30",
+          "label": "15:30"
+        },
+        {
+          "value": "15:45",
+          "label": "15:45"
+        },
+        {
+          "value": "16:00",
+          "label": "16:00"
+        },
+        {
+          "value": "16:15",
+          "label": "16:15"
+        },
+        {
+          "value": "16:30",
+          "label": "16:30"
+        },
+        {
+          "value": "16:45",
+          "label": "16:45"
+        },
+        {
+          "value": "17:00",
+          "label": "17:00"
+        },
+        {
+          "value": "17:15",
+          "label": "17:15"
+        },
+        {
+          "value": "17:30",
+          "label": "17:30"
+        },
+        {
+          "value": "17:45",
+          "label": "17:45"
+        },
+        {
+          "value": "18:00",
+          "label": "18:00"
+        },
+        {
+          "value": "18:15",
+          "label": "18:15"
+        },
+        {
+          "value": "18:30",
+          "label": "18:30"
+        },
+        {
+          "value": "18:45",
+          "label": "18:45"
+        },
+        {
+          "value": "19:00",
+          "label": "19:00"
+        },
+        {
+          "value": "19:15",
+          "label": "19:15"
+        },
+        {
+          "value": "19:30",
+          "label": "19:30"
+        },
+        {
+          "value": "19:45",
+          "label": "19:45"
+        },
+        {
+          "value": "20:00",
+          "label": "20:00"
+        },
+        {
+          "value": "20:15",
+          "label": "20:15"
+        },
+        {
+          "value": "20:30",
+          "label": "20:30"
+        },
+        {
+          "value": "20:45",
+          "label": "20:45"
+        },
+        {
+          "value": "21:00",
+          "label": "21:00"
+        },
+        {
+          "value": "21:15",
+          "label": "21:15"
+        },
+        {
+          "value": "21:30",
+          "label": "21:30"
+        },
+        {
+          "value": "21:45",
+          "label": "21:45"
+        },
+        {
+          "value": "22:00",
+          "label": "22:00"
+        },
+        {
+          "value": "22:15",
+          "label": "22:15"
+        },
+        {
+          "value": "22:30",
+          "label": "22:30"
+        },
+        {
+          "value": "22:45",
+          "label": "22:45"
+        },
+        {
+          "value": "23:00",
+          "label": "23:00"
+        },
+        {
+          "value": "23:15",
+          "label": "23:15"
+        },
+        {
+          "value": "23:30",
+          "label": "23:30"
+        },
+        {
+          "value": "23:45",
+          "label": "23:45"
+        }
+      ],
+      "default": "10:00"
+    },
+    {
+      "type": "header",
+      "content": "End date"
+    },
+    {
+      "type": "range",
+      "id": "end_year",
+      "label": "Year",
+      "min": 2025,
+      "max": 2050,
+      "step": 1,
+      "default": 2050
+    },
+    {
+      "type": "range",
+      "id": "end_month",
+      "label": "Month",
+      "min": 1,
+      "max": 12,
+      "step": 1,
+      "default": 12
+    },
+    {
+      "type": "range",
+      "id": "end_day",
+      "label": "Day",
+      "min": 1,
+      "max": 31,
+      "step": 1,
+      "default": 31
+    },
+    {
+      "type": "select",
+      "id": "end_time",
+      "label": "Time",
+      "options": [
+        {
+          "value": "00:00",
+          "label": "0:00"
+        },
+        {
+          "value": "00:15",
+          "label": "0:15"
+        },
+        {
+          "value": "00:30",
+          "label": "0:30"
+        },
+        {
+          "value": "00:45",
+          "label": "0:45"
+        },
+        {
+          "value": "01:00",
+          "label": "1:00"
+        },
+        {
+          "value": "01:15",
+          "label": "1:15"
+        },
+        {
+          "value": "01:30",
+          "label": "1:30"
+        },
+        {
+          "value": "01:45",
+          "label": "1:45"
+        },
+        {
+          "value": "02:00",
+          "label": "2:00"
+        },
+        {
+          "value": "02:15",
+          "label": "2:15"
+        },
+        {
+          "value": "02:30",
+          "label": "2:30"
+        },
+        {
+          "value": "02:45",
+          "label": "2:45"
+        },
+        {
+          "value": "03:00",
+          "label": "3:00"
+        },
+        {
+          "value": "03:15",
+          "label": "3:15"
+        },
+        {
+          "value": "03:30",
+          "label": "3:30"
+        },
+        {
+          "value": "03:45",
+          "label": "3:45"
+        },
+        {
+          "value": "04:00",
+          "label": "4:00"
+        },
+        {
+          "value": "04:15",
+          "label": "4:15"
+        },
+        {
+          "value": "04:30",
+          "label": "4:30"
+        },
+        {
+          "value": "04:45",
+          "label": "4:45"
+        },
+        {
+          "value": "05:00",
+          "label": "5:00"
+        },
+        {
+          "value": "05:15",
+          "label": "5:15"
+        },
+        {
+          "value": "05:30",
+          "label": "5:30"
+        },
+        {
+          "value": "05:45",
+          "label": "5:45"
+        },
+        {
+          "value": "06:00",
+          "label": "6:00"
+        },
+        {
+          "value": "06:15",
+          "label": "6:15"
+        },
+        {
+          "value": "06:30",
+          "label": "6:30"
+        },
+        {
+          "value": "06:45",
+          "label": "6:45"
+        },
+        {
+          "value": "07:00",
+          "label": "7:00"
+        },
+        {
+          "value": "07:15",
+          "label": "7:15"
+        },
+        {
+          "value": "07:30",
+          "label": "7:30"
+        },
+        {
+          "value": "07:45",
+          "label": "7:45"
+        },
+        {
+          "value": "08:00",
+          "label": "8:00"
+        },
+        {
+          "value": "08:15",
+          "label": "8:15"
+        },
+        {
+          "value": "08:30",
+          "label": "8:30"
+        },
+        {
+          "value": "08:45",
+          "label": "8:45"
+        },
+        {
+          "value": "09:00",
+          "label": "9:00"
+        },
+        {
+          "value": "09:15",
+          "label": "9:15"
+        },
+        {
+          "value": "09:30",
+          "label": "9:30"
+        },
+        {
+          "value": "09:45",
+          "label": "9:45"
+        },
+        {
+          "value": "10:00",
+          "label": "10:00"
+        },
+        {
+          "value": "10:15",
+          "label": "10:15"
+        },
+        {
+          "value": "10:30",
+          "label": "10:30"
+        },
+        {
+          "value": "10:45",
+          "label": "10:45"
+        },
+        {
+          "value": "11:00",
+          "label": "11:00"
+        },
+        {
+          "value": "11:15",
+          "label": "11:15"
+        },
+        {
+          "value": "11:30",
+          "label": "11:30"
+        },
+        {
+          "value": "11:45",
+          "label": "11:45"
+        },
+        {
+          "value": "12:00",
+          "label": "12:00"
+        },
+        {
+          "value": "12:15",
+          "label": "12:15"
+        },
+        {
+          "value": "12:30",
+          "label": "12:30"
+        },
+        {
+          "value": "12:45",
+          "label": "12:45"
+        },
+        {
+          "value": "13:00",
+          "label": "13:00"
+        },
+        {
+          "value": "13:15",
+          "label": "13:15"
+        },
+        {
+          "value": "13:30",
+          "label": "13:30"
+        },
+        {
+          "value": "13:45",
+          "label": "13:45"
+        },
+        {
+          "value": "14:00",
+          "label": "14:00"
+        },
+        {
+          "value": "14:15",
+          "label": "14:15"
+        },
+        {
+          "value": "14:30",
+          "label": "14:30"
+        },
+        {
+          "value": "14:45",
+          "label": "14:45"
+        },
+        {
+          "value": "15:00",
+          "label": "15:00"
+        },
+        {
+          "value": "15:15",
+          "label": "15:15"
+        },
+        {
+          "value": "15:30",
+          "label": "15:30"
+        },
+        {
+          "value": "15:45",
+          "label": "15:45"
+        },
+        {
+          "value": "16:00",
+          "label": "16:00"
+        },
+        {
+          "value": "16:15",
+          "label": "16:15"
+        },
+        {
+          "value": "16:30",
+          "label": "16:30"
+        },
+        {
+          "value": "16:45",
+          "label": "16:45"
+        },
+        {
+          "value": "17:00",
+          "label": "17:00"
+        },
+        {
+          "value": "17:15",
+          "label": "17:15"
+        },
+        {
+          "value": "17:30",
+          "label": "17:30"
+        },
+        {
+          "value": "17:45",
+          "label": "17:45"
+        },
+        {
+          "value": "18:00",
+          "label": "18:00"
+        },
+        {
+          "value": "18:15",
+          "label": "18:15"
+        },
+        {
+          "value": "18:30",
+          "label": "18:30"
+        },
+        {
+          "value": "18:45",
+          "label": "18:45"
+        },
+        {
+          "value": "19:00",
+          "label": "19:00"
+        },
+        {
+          "value": "19:15",
+          "label": "19:15"
+        },
+        {
+          "value": "19:30",
+          "label": "19:30"
+        },
+        {
+          "value": "19:45",
+          "label": "19:45"
+        },
+        {
+          "value": "20:00",
+          "label": "20:00"
+        },
+        {
+          "value": "20:15",
+          "label": "20:15"
+        },
+        {
+          "value": "20:30",
+          "label": "20:30"
+        },
+        {
+          "value": "20:45",
+          "label": "20:45"
+        },
+        {
+          "value": "21:00",
+          "label": "21:00"
+        },
+        {
+          "value": "21:15",
+          "label": "21:15"
+        },
+        {
+          "value": "21:30",
+          "label": "21:30"
+        },
+        {
+          "value": "21:45",
+          "label": "21:45"
+        },
+        {
+          "value": "22:00",
+          "label": "22:00"
+        },
+        {
+          "value": "22:15",
+          "label": "22:15"
+        },
+        {
+          "value": "22:30",
+          "label": "22:30"
+        },
+        {
+          "value": "22:45",
+          "label": "22:45"
+        },
+        {
+          "value": "23:00",
+          "label": "23:00"
+        },
+        {
+          "value": "23:15",
+          "label": "23:15"
+        },
+        {
+          "value": "23:30",
+          "label": "23:30"
+        },
+        {
+          "value": "23:45",
+          "label": "23:45"
+        }
+      ],
+      "default": "10:00"
+    },
+    {
+      "type": "header",
+      "content": "Content"
+    },
+    {
+      "type": "range",
+      "id": "products_count",
+      "label": "Products to show",
+      "min": 4,
+      "max": 50,
+      "step": 1,
+      "default": 8
+    },
+    {
+      "type": "range",
+      "id": "products_per_row",
+      "label": "Products per row (desktop)",
+      "min": 2,
+      "max": 6,
+      "step": 1,
+      "default": 4
+    },
+    {
+      "type": "checkbox",
+      "id": "stack_products",
+      "label": "Stack products",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "show_cta",
+      "label": "Show add to cart below info",
+      "info": "If enabled, we recommend using 4 products per row at maximum.",
+      "default": false
+    },
+    {
+      "type": "header",
+      "content": "Colors"
+    },
+    {
+      "type": "color",
+      "id": "filter_toggle_button_background",
+      "label": "Filter button background",
+      "default": "rgba(0,0,0,0)"
+    },
+    {
+      "type": "color",
+      "id": "filter_toggle_active_button_background",
+      "label": "Filter button background (when active)",
+      "default": "rgba(0,0,0,0)"
+    },
+    {
+      "type": "color",
+      "id": "filter_toggle_button_color",
+      "label": "Filter button color",
+      "default": "rgba(0,0,0,0)"
+    },
+    {
+      "type": "color",
+      "id": "button_background",
+      "label": "Button background",
+      "default": "rgba(0,0,0,0)"
+    },
+    {
+      "type": "color",
+      "id": "button_text_color",
+      "label": "Button text",
+      "default": "rgba(0,0,0,0)"
+    },
+    {
+      "type": "header",
+      "content": "Section header"
+    },
+    {
+      "type": "textarea",
+      "id": "subheading",
+      "label": "Subheading",
+      "default": "Subheading"
+    },
+    {
+      "type": "textarea",
+      "id": "title",
+      "label": "Heading",
+      "default": "Heading"
+    },
+    {
+      "type": "richtext",
+      "id": "content",
+      "label": "Short description",
+      "default": "<p>Your short description.</p>"
+    },
+    {
+      "type": "select",
+      "id": "section_header_heading_size",
+      "label": "Heading size",
+      "options": [
+        {
+          "value": "h1",
+          "label": "Heading 1"
+        },
+        {
+          "value": "h2",
+          "label": "Heading 2"
+        },
+        {
+          "value": "h3",
+          "label": "Heading 3"
+        },
+        {
+          "value": "h4",
+          "label": "Heading 4"
+        },
+        {
+          "value": "h5",
+          "label": "Heading 5"
+        },
+        {
+          "value": "h6",
+          "label": "Heading 6"
+        }
+      ],
+      "default": "h3"
+    },
+    {
+      "type": "checkbox",
+      "id": "section_header_highest_hierarchy",
+      "label": "Highest hierarchy",
+      "info": "Check this if this is the highest hierarchy heading on the page. This will make this a 'h1' heading, which should only be used once per page.",
+      "default": false
+    },
+    {
+      "type": "select",
+      "id": "section_header_short_description_font_size",
+      "label": "Short description font size",
+      "options": [
+        {
+          "value": "xxsmall",
+          "label": "Extra extra Small"
+        },
+        {
+          "value": "xsmall",
+          "label": "Extra Small"
+        },
+        {
+          "value": "small",
+          "label": "Small"
+        },
+        {
+          "value": "medium",
+          "label": "Medium"
+        },
+        {
+          "value": "large",
+          "label": "Large"
+        }
+      ],
+      "default": "medium"
+    },
+    {
+      "type": "header",
+      "content": "Section settings"
+    },
+    {
+      "type": "select",
+      "id": "section_container_width",
+      "label": "Maximum width",
+      "options": [
+        {
+          "value": "xxs",
+          "label": "Extra extra Small"
+        },
+        {
+          "value": "xs",
+          "label": "Extra Small"
+        },
+        {
+          "value": "sm",
+          "label": "Small"
+        },
+        {
+          "value": "md",
+          "label": "Medium"
+        },
+        {
+          "value": "fluid",
+          "label": "Full width"
+        }
+      ],
+      "default": "md"
+    },
+    {
+      "type": "color",
+      "id": "background",
+      "label": "Background color",
+      "default": "rgba(0,0,0,0)"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text color",
+      "default": "rgba(0,0,0,0)"
+    },
+    {
+      "type": "color",
+      "id": "heading_color",
+      "label": "Heading color",
+      "default": "rgba(0,0,0,0)"
+    },
+    {
+      "type": "color",
+      "id": "section_subheading_color",
+      "label": "Subheading color",
+      "default": "rgba(0,0,0,0)",
+      "info": "Defaults to heading color."
+    },
+    {
+      "type": "select",
+      "id": "section_heading_font_family",
+      "label": "Heading font",
+      "options": [
+        {
+          "value": "default",
+          "label": "Default"
+        },
+        {
+          "value": "circular",
+          "label": "Circular"
+        },
+        {
+          "value": "publico",
+          "label": "Publico"
+        }
+      ],
+      "default": "default"
+    },
+    {
+      "type": "header",
+      "content": "Section spacing"
+    },
+    {
+      "type": "range",
+      "id": "section_spacing_top",
+      "label": "Top spacing",
+      "unit": "px",
+      "min": 0,
+      "max": 200,
+      "step": 4,
+      "default": 68
+    },
+    {
+      "type": "range",
+      "id": "section_spacing_bottom",
+      "label": "Bottom spacing",
+      "unit": "px",
+      "min": 0,
+      "max": 200,
+      "step": 4,
+      "default": 68
+    },
+    {
+      "type": "checkbox",
+      "id": "section_spacing_different_mobile",
+      "label": "Use different height on mobile",
+      "default": true
+    },
+    {
+      "type": "range",
+      "id": "section_spacing_top_mobile",
+      "label": "Top spacing (mobile)",
+      "unit": "px",
+      "min": 0,
+      "max": 200,
+      "step": 4,
+      "default": 48
+    },
+    {
+      "type": "range",
+      "id": "section_spacing_bottom_mobile",
+      "label": "Bottom spacing (mobile)",
+      "unit": "px",
+      "min": 0,
+      "max": 200,
+      "step": 4,
+      "default": 48
+    }
+  ],
+  "presets": [
+    {
+      "name": "Featured collections",
+      "blocks": [
+        {
+          "type": "collection"
+        }
+      ],
+      "settings": {}
+    }
+  ]
+}
+{% endschema %}

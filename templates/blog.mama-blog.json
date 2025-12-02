@@ -1,0 +1,49 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "6a3462df-7baa-4c92-8b3e-24c55f540ba1": {
+      "type": "image-with-text-overlay",
+      "settings": {
+        "reveal_on_scroll": true,
+        "section_height": "small",
+        "image": "shopify://shop_images/2021-09-20-FEMALE-COMPANY-MAMMA-6578_ret_1.jpg",
+        "subheading": "Motherhood",
+        "title": "It all start's with a late period...",
+        "content": "<p>Dein doppelter Boden bei Wochenbett-Fluten und Safety-Zone für Ausfluss in der Schwangerschaft.</p>",
+        "button_text": "Zu den Produkten",
+        "button_link": "shopify://collections/schwangerschaft-muetter-wochenbett",
+        "link_style": "button",
+        "background_type": "full_width",
+        "text_width": "medium",
+        "text_position": "middle_center",
+        "text_color": "#ffffff",
+        "button_background": "#ff3f46",
+        "button_text_color": "#ffffff",
+        "overlay_color": "#000000",
+        "overlay_opacity": 30
+      }
+    },
+    "main": {
+      "type": "main-blog",
+      "settings": {
+        "show_blog_title": true,
+        "show_tags": true,
+        "show_category": true,
+        "show_excerpt": true,
+        "articles_per_page": 9
+      }
+    }
+  },
+  "order": [
+    "6a3462df-7baa-4c92-8b3e-24c55f540ba1",
+    "main"
+  ]
+}

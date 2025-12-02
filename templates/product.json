@@ -1,0 +1,303 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-product",
+      "blocks": {
+        "682d2cf6-67b4-4aa4-b235-29503816505a": {
+          "type": "back_in_stock_signup",
+          "settings": {
+            "klaviyo_list_id": "V6RJtz"
+          }
+        },
+        "variant_picker": {
+          "type": "variant_picker",
+          "settings": {
+            "hide_sold_out_variants": false,
+            "selector_mode": "dropdown",
+            "color_mode": "color",
+            "size_chart_page": "{{ product.metafields.descriptors.size_guide.value }}",
+            "absorbancy_chart_page": ""
+          }
+        },
+        "f0d2cc62-543d-4ad8-bdd7-18c3d04a52c1": {
+          "type": "fulfillment_time_info",
+          "settings": {}
+        },
+        "yotpo_loyalty_rewards_product_points_module_app_block_pdBzmq": {
+          "type": "shopify://apps/yotpo-loyalty-rewards/blocks/product-points-module-app-block/2f9660df-5018-4e02-9868-ee1fb88d6ccd",
+          "settings": {}
+        },
+        "02190bcc-9ff0-4f94-8898-2b2cb44da8ea": {
+          "type": "low_on_stock_info",
+          "settings": {}
+        },
+        "quantity_selector": {
+          "type": "quantity_selector",
+          "settings": {}
+        },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_payment_button": false,
+            "show_gift_card_recipient": false,
+            "atc_button_background": "rgba(0,0,0,0)",
+            "atc_button_text_color": "rgba(0,0,0,0)",
+            "buy_now_button_background": "rgba(0,0,0,0)",
+            "buy_now_button_text_color": "rgba(0,0,0,0)"
+          }
+        },
+        "a5ac472c-f2be-447e-bdc1-42de5d4d5016": {
+          "type": "trust",
+          "settings": {
+            "icon_1": "picto-warranty",
+            "title_1": "60 Tage Geld-zurück-Garantie",
+            "content_1": "<p>Wenn du unzufrieden bist, erhältst du bis zu <strong>60 Tage lang dein Geld von uns zurück</strong>. Folgendes ist zu beachten:</p><ol><li>Du musst die Retoure bei uns anmelden. Mehr Infos <a href=\"/policies/refund-policy\" title=\"Refund Policy\">hier</a>.</li><li>Alle Produkte die zurückerstattet werden sollen, müssen an uns zurückgesendet werden.</li><li>Die Kosten der Rücksendung müssen selbst getragen werden. Ausgenommen sind Produkte mit Mängeln.</li></ol><p></p>",
+            "icon_2": "picto-secure-payment",
+            "title_2": "Zahle in 30 Tagen mit Pay Later by Klarna",
+            "content_2": "",
+            "icon_3": "picto-secure-payment",
+            "title_3": "",
+            "content_3": ""
+          }
+        },
+        "bundle_atc_H4GYGR": {
+          "type": "bundle_atc",
+          "settings": {}
+        },
+        "0d0a5849-05ff-4be4-9622-4f7c3f06ed86": {
+          "type": "complementary_products",
+          "settings": {
+            "title": "Empfohlene Produkte"
+          }
+        },
+        "complete_the_look_gWeRUi": {
+          "type": "complete_the_look",
+          "settings": {
+            "title": "Lege 4 Produkte in den Warenkorb und bekomme eins geschenkt 🎁:",
+            "ctl_heading_color": "#1a1a1a",
+            "ctl_bg_color": "",
+            "ctl_products": []
+          }
+        },
+        "244be36c-36e1-4348-aa9f-0f5c48a1dab5": {
+          "type": "description_accordion",
+          "settings": {
+            "open_by_default": true,
+            "heading_1": "",
+            "description_1": "",
+            "heading_2": "",
+            "description_2": "",
+            "heading_3": "",
+            "description_3": "",
+            "heading_4": "",
+            "description_4": "",
+            "heading_5": "",
+            "description_5": "",
+            "heading_6": "",
+            "description_6": ""
+          }
+        },
+        "5d99506a-360d-4c5f-aa4b-422abcc9c271": {
+          "type": "content_accordion",
+          "settings": {
+            "open_by_default": false,
+            "title": "{{ product.metafields.descriptors.content_2_title.value }}",
+            "content": "<p>{{ product.metafields.descriptors.content_2_body | metafield_tag }}</p>",
+            "page": ""
+          }
+        },
+        "0c6c32fe-0356-4aeb-943d-7c7543e9bfa3": {
+          "type": "content_accordion",
+          "settings": {
+            "open_by_default": false,
+            "title": "{{ product.metafields.descriptors.content_3_title.value }}",
+            "content": "<p>{{ product.metafields.descriptors.content_3_body | metafield_tag }}</p>",
+            "page": ""
+          }
+        },
+        "6c2c03e5-473f-4aff-a17e-9f4de44cb2d5": {
+          "type": "content_accordion",
+          "settings": {
+            "open_by_default": false,
+            "title": "{{ product.metafields.descriptors.content_4_title.value }}",
+            "content": "<p>{{ product.metafields.descriptors.content_4_body | metafield_tag }}</p>",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "682d2cf6-67b4-4aa4-b235-29503816505a",
+        "variant_picker",
+        "f0d2cc62-543d-4ad8-bdd7-18c3d04a52c1",
+        "yotpo_loyalty_rewards_product_points_module_app_block_pdBzmq",
+        "02190bcc-9ff0-4f94-8898-2b2cb44da8ea",
+        "quantity_selector",
+        "buy_buttons",
+        "a5ac472c-f2be-447e-bdc1-42de5d4d5016",
+        "bundle_atc_H4GYGR",
+        "0d0a5849-05ff-4be4-9622-4f7c3f06ed86",
+        "complete_the_look_gWeRUi",
+        "244be36c-36e1-4348-aa9f-0f5c48a1dab5",
+        "5d99506a-360d-4c5f-aa4b-422abcc9c271",
+        "0c6c32fe-0356-4aeb-943d-7c7543e9bfa3",
+        "6c2c03e5-473f-4aff-a17e-9f4de44cb2d5"
+      ],
+      "settings": {
+        "show_vendor": false,
+        "show_sku": false,
+        "show_taxes_included": true,
+        "show_product_rating": true,
+        "show_sticky_add_to_cart": true,
+        "show_share_buttons": false,
+        "show_buy_button_next_to_quantity": true,
+        "show_product_style": true,
+        "help_page": "",
+        "enable_video_autoplay": true,
+        "enable_video_looping": true,
+        "enable_image_zoom": true,
+        "show_thumbnails_on_mobile": false,
+        "desktop_thumbnails_position": "bottom",
+        "transition_effect": "slide"
+      }
+    },
+    "product-recommendations": {
+      "type": "product-recommendations",
+      "settings": {
+        "subheading": "",
+        "title": "Dir könnte auch gefallen",
+        "recommendations_count": 10,
+        "background": "rgba(0,0,0,0)",
+        "text_color": "rgba(0,0,0,0)"
+      }
+    },
+    "1666179092243d9cde": {
+      "type": "apps",
+      "blocks": {
+        "e0862bb4-1e1a-44c5-a83d-aaed3f12395d": {
+          "type": "shopify://apps/reviews-io/blocks/reviewsio-polaris/92a082e5-b297-4e88-b428-ac96cbc505f9",
+          "settings": {
+            "star": "#f58e9e",
+            "review_type": "product_review,questions",
+            "per_page": 4,
+            "primary_btn_bg_color": "#ff3f46",
+            "primary_btn_border_color": "#ff3f46",
+            "primary_btn_text_color": "#ffffff",
+            "secondary_btn_border_color": "#f7aea6",
+            "secondary_btn_text_color": "#56112a",
+            "border_color": "#ffbfbf",
+            "heading_text_color": "#1a1a1a",
+            "heading_font": "sans-serif",
+            "body_text_color": "#000000",
+            "badge_icon_color": "#000000",
+            "badge_text_color": "#000000",
+            "enable_rich_snippets": true,
+            "show_location": true,
+            "show_tab_selector": false,
+            "show_dates": true,
+            "show_avatar": true,
+            "enable_sentiment_analysis": false,
+            "enable_replies": true,
+            "widget_spacing": 0,
+            "capitalise_headers_and_buttons": false,
+            "show_review_title": true,
+            "default_sort": "helpful_desc"
+          }
+        }
+      },
+      "block_order": [
+        "e0862bb4-1e1a-44c5-a83d-aaed3f12395d"
+      ],
+      "settings": {
+        "include_horizontal_margins": true,
+        "include_vertical_margins": false
+      }
+    },
+    "pagefly_section_AEjanC": {
+      "type": "pagefly-section",
+      "settings": {
+        "section_id": "pf-fd3245bf"
+      }
+    },
+    "gallery_7cEgRr": {
+      "type": "gallery",
+      "blocks": {
+        "image_FUKVet": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/379676075_268351932705815_3687373383448136868_n.jpg",
+            "caption": "<p>@marakey.png</p>"
+          }
+        },
+        "image_ephGdJ": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/358628873_18372263512039234_8490362232659477402_n.jpg",
+            "caption": "<p>@ameliecheriee</p>"
+          }
+        }
+      },
+      "block_order": [
+        "image_FUKVet",
+        "image_ephGdJ"
+      ],
+      "settings": {
+        "show_arrows": true,
+        "subheading": "Aus der Community",
+        "title": "Nice bun, hun!",
+        "section_header_short_description": "",
+        "section_header_heading_size": "h3",
+        "section_header_highest_hierarchy": false,
+        "section_header_short_description_font_size": "medium",
+        "section_container_width": "fluid",
+        "section_text_alignment": "left",
+        "background": "#ffe6e6",
+        "text_color": "rgba(0,0,0,0)",
+        "section_heading_color": "rgba(0,0,0,0)",
+        "section_subheading_color": "rgba(0,0,0,0)",
+        "section_heading_font_family": "default",
+        "section_spacing_top": 48,
+        "section_spacing_bottom": 48,
+        "section_spacing_different_mobile": false,
+        "section_spacing_top_mobile": 0,
+        "section_spacing_bottom_mobile": 0
+      }
+    },
+    "172527939963e9ee10": {
+      "type": "apps",
+      "blocks": {
+        "reviews_io_reviewsio_rating_bar_mcdBRR": {
+          "type": "shopify://apps/reviews-io/blocks/reviewsio-rating-bar/92a082e5-b297-4e88-b428-ac96cbc505f9",
+          "disabled": true,
+          "settings": {
+            "widget_id": "WzwJIZk4v5mPVFUO"
+          }
+        }
+      },
+      "block_order": [
+        "reviews_io_reviewsio_rating_bar_mcdBRR"
+      ],
+      "disabled": true,
+      "settings": {
+        "include_horizontal_margins": true,
+        "include_vertical_margins": true
+      }
+    }
+  },
+  "order": [
+    "main",
+    "product-recommendations",
+    "1666179092243d9cde",
+    "pagefly_section_AEjanC",
+    "gallery_7cEgRr",
+    "172527939963e9ee10"
+  ]
+}

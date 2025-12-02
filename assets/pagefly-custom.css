@@ -1,0 +1,17 @@
+body .__pf {
+  --pf-primary-font: var(--font-circular);
+  --pf-secondary-font: var(--font-publico);
+}
+  
+.__pf .pf-gs-button-1,
+.__pf .pf-gs-button-2,
+.__pf .pf-gs-button-3,
+.__pf .pf-gs-button-4,
+.__pf .pf-gs-button-5,
+.__pf .pf-gs-button-6 {
+  transition: color var(--button-transition), background-color var(--button-transition);
+}
+
+.__pf [style*="--cw"] {
+  padding: 0 var(--container-gutter)!important;
+}

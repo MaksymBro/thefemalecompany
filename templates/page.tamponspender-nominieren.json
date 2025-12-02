@@ -1,0 +1,195 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "show_title": true,
+        "show_breadcrumbs": true,
+        "page_width": "medium"
+      }
+    },
+    "70e6bc02-4f89-45be-92ef-cb66f47fe10f": {
+      "type": "newsletter-on-image",
+      "disabled": true,
+      "settings": {
+        "klaviyo_list_id": "UKbDf4",
+        "reveal_on_scroll": true,
+        "image": "shopify://shop_images/Group_1032.png",
+        "subheading": "Muschipedia",
+        "heading": "Was du noch nicht über deine Vulva wusstest",
+        "content": "<p>Um Tabus zu brechen, gibt es nur einen Weg: Aufklärung. Deswegen haben wir uns mit Expertinnen der besonderen Art, sowie Frauen-ärzt*innen, Hebammen & weiteren Profis zusammengetan. Wir haben euch Guides zu diversen Themen zusammengestellt: Frauengesundheit, Anatomie, Sex, Periode ... Und hoffen, die bringen euch mehr als der gute alte Dr. Sommer.</p>",
+        "text_position": "right",
+        "text_alignment": "left",
+        "text_background": "rgba(0,0,0,0)",
+        "text_color": "rgba(0,0,0,0)",
+        "button_background": "rgba(0,0,0,0)",
+        "button_text_color": "rgba(0,0,0,0)"
+      }
+    },
+    "b6ae2ff1-4e40-4f2f-a910-1bcc78733c97": {
+      "type": "newsletter-on-image",
+      "disabled": true,
+      "settings": {
+        "klaviyo_list_id": "Ru6wy8",
+        "reveal_on_scroll": true,
+        "image": "shopify://shop_images/Group_1033.png",
+        "subheading": "Zyklus",
+        "heading": "Dein Zyklusplaner",
+        "content": "<p>Wir lassen die Hosen runter und sagen das, was wir alle sowieso denken: Die Periode kann schon echt nerven. Worüber jedoch niemand spricht, ist die Magie des weiblichen Zyklus. Denn was da jeden Monat in uns passiert, ist ein Wunder von Mutter Natur #itsmagic. Wir betreiben in diesem E-Book also ein wenig Imageoptimierung des Zyklus.</p>",
+        "text_position": "right",
+        "text_alignment": "left",
+        "text_background": "rgba(0,0,0,0)",
+        "text_color": "rgba(0,0,0,0)",
+        "button_background": "#f58e9e",
+        "button_text_color": "rgba(0,0,0,0)"
+      }
+    },
+    "65aabf5c-09e5-4c37-bd73-d4f2c79e136e": {
+      "type": "newsletter-on-image",
+      "disabled": true,
+      "settings": {
+        "klaviyo_list_id": "RqdpiM",
+        "reveal_on_scroll": true,
+        "image": "shopify://shop_images/Group_775_1f448ab5-2c17-4b0d-86d3-09abca844103.png",
+        "subheading": "Verhütung",
+        "heading": "Alternative Verhütung und NFP",
+        "content": "<p>WTF is NFP? Verhütung mit einem Thermometer und Körpersignalen only? Ganz ohne Pille, Spirale und Co. Yes, das geht! Sag Ciao zur täglichen Dosis Hormone und zum kleinen Downer, wenn beim Vorspiel nach dem Kondom gekramt werden muss. Hello NFP.</p>",
+        "text_position": "right",
+        "text_alignment": "left",
+        "text_background": "rgba(0,0,0,0)",
+        "text_color": "rgba(0,0,0,0)",
+        "button_background": "#942a3b",
+        "button_text_color": "rgba(0,0,0,0)"
+      }
+    },
+    "842be01d-d9b6-4ed6-a3d9-893fea8871f6": {
+      "type": "newsletter-on-image",
+      "disabled": true,
+      "settings": {
+        "klaviyo_list_id": "RgnnLF",
+        "reveal_on_scroll": true,
+        "image": "shopify://shop_images/Group_1030_92090729-db2b-486c-b7af-bd54fadf5af3.png",
+        "subheading": "Ausfluss",
+        "heading": "Die Ausfluss Bibel",
+        "content": "<p>Läuft bei dir - auch ganz ohne Periode? So viele von euch erzählen von Kälte & Nässegefühl bei starkem Ausfluss, doch verlässliche Zahlen dazu haben wir nicht gefunden.<br/>Deshalb haben wir euch nach euren Erfahrungen gefragt - und mehr als 8.000 haben geantwortet. Doch nicht nur das: mehr als 1.000 von euch haben uns Bilder von ihren echten Unterhosen mitgeschickt. Zeit für mehr Schlüpper-Realness und weniger Ausfluss-Scham!</p>",
+        "text_position": "right",
+        "text_alignment": "left",
+        "text_background": "rgba(0,0,0,0)",
+        "text_color": "rgba(0,0,0,0)",
+        "button_background": "#8055b1",
+        "button_text_color": "rgba(0,0,0,0)"
+      }
+    },
+    "9a30e508-01d2-41dc-b59b-96c06d50c332": {
+      "type": "newsletter-on-image",
+      "disabled": true,
+      "settings": {
+        "klaviyo_list_id": "Tn9huY",
+        "reveal_on_scroll": true,
+        "image": "shopify://shop_images/Group_773_943395cc-9bb8-4528-b08e-8a0607133036.png",
+        "subheading": "Menstruation",
+        "heading": "4 Tipps wie du deine Periode verkürzt",
+        "content": "<p>Periode verkürzen, geht das? Die Antwort darauf ist: ja!<br/>Und das ganz ohne Anti-Baby-Pille. Wir haben ein paar natürliche Hacks für dich, mit denen du deine Periode früher loswirst. Denn let’s be real: sie kann manchmal echt nerven.</p>",
+        "text_position": "right",
+        "text_alignment": "left",
+        "text_background": "rgba(0,0,0,0)",
+        "text_color": "rgba(0,0,0,0)",
+        "button_background": "#de2a2a",
+        "button_text_color": "rgba(0,0,0,0)"
+      }
+    },
+    "1424c419-6c8e-45c0-abe2-c25a709b2574": {
+      "type": "newsletter-on-image",
+      "disabled": true,
+      "settings": {
+        "klaviyo_list_id": "TVg7Fb",
+        "reveal_on_scroll": true,
+        "image": "shopify://shop_images/Group_1029_e541f817-edc9-4d55-99ea-d6b402a4f489.png",
+        "subheading": "Motherhood",
+        "heading": "Der Survival Guide für's Wochenbett",
+        "content": "<p>Das Wochenbett beginnt nach der Geburt und endet – auch abhängig von Kaiserschnitt oder vaginaler Geburt – sechs bis acht Wochen danach. Während dieser Zeit brauchst du vor allem eines: Ruhe.</p>",
+        "text_position": "right",
+        "text_alignment": "left",
+        "text_background": "rgba(0,0,0,0)",
+        "text_color": "rgba(0,0,0,0)",
+        "button_background": "#e375ef",
+        "button_text_color": "rgba(0,0,0,0)"
+      }
+    },
+    "234ae8da-a8f3-4520-97ed-d0a5f9aa7e28": {
+      "type": "newsletter-on-image",
+      "disabled": true,
+      "settings": {
+        "klaviyo_list_id": "SepsJJ",
+        "reveal_on_scroll": true,
+        "image": "shopify://shop_images/Group_1031_0f73c5db-0887-45a1-a86c-0a93a66cff1e.png",
+        "subheading": "Motherhood",
+        "heading": "The Vulva Gallery",
+        "content": "<p>Nach der Geburt ist alles ausgeleiert? Als ob. Denn obwohl sich die Vagina auf das bis zu Zehnfache vergrößern können, bildet sich oft alles schnell wieder zurück. Hier siehst du den Beweis schwarz auf weiß (bzw. rosa). Danke an alle Super-Mammas, die uns Selfies ihrer After-Birth-Vulva geschickt haben. Wir feiern euch – nicht nur am Muttertag. In diesem Sinne: let the After Birth Healing Process begin!</p>",
+        "text_position": "right",
+        "text_alignment": "left",
+        "text_background": "rgba(0,0,0,0)",
+        "text_color": "rgba(0,0,0,0)",
+        "button_background": "#302c6d",
+        "button_text_color": "rgba(0,0,0,0)"
+      }
+    },
+    "image_with_text_overlay_DJeC4Y": {
+      "type": "image-with-text-overlay",
+      "settings": {
+        "reveal_on_scroll": true,
+        "section_height": "medium",
+        "image": "shopify://shop_images/2023-07-20-TFC-TAMPONSPENDER3427_1_2.jpg",
+        "subheading": "Mach deinen Arbeitsplatz #periodpositive",
+        "title": "Dein Unternehmen nominieren",
+        "content": "<p>Dein Arbeitgeber, deine Schule oder Uni bietet noch keine kostenlosen Periodenprodukte an? Let's change that!</p>",
+        "button_text": "",
+        "button_link": "",
+        "link_style": "link",
+        "background_type": "full_width",
+        "text_width": "medium",
+        "text_position": "middle_center",
+        "text_color": "#ffffff",
+        "button_background": "#ffffff",
+        "button_text_color": "#000000",
+        "overlay_color": "#000000",
+        "overlay_opacity": 30
+      }
+    },
+    "custom_html_KqXPFr": {
+      "type": "custom-html",
+      "settings": {
+        "subheading": "",
+        "title": "",
+        "html": "<div class=\"klaviyo-form-V4eqFF\"></div>",
+        "add_vertical_spacing": true,
+        "disable_inside_spacing": false,
+        "background_type": "boxed",
+        "background": "rgba(0,0,0,0)",
+        "text_color": "rgba(0,0,0,0)"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "70e6bc02-4f89-45be-92ef-cb66f47fe10f",
+    "b6ae2ff1-4e40-4f2f-a910-1bcc78733c97",
+    "65aabf5c-09e5-4c37-bd73-d4f2c79e136e",
+    "842be01d-d9b6-4ed6-a3d9-893fea8871f6",
+    "9a30e508-01d2-41dc-b59b-96c06d50c332",
+    "1424c419-6c8e-45c0-abe2-c25a709b2574",
+    "234ae8da-a8f3-4520-97ed-d0a5f9aa7e28",
+    "image_with_text_overlay_DJeC4Y",
+    "custom_html_KqXPFr"
+  ]
+}

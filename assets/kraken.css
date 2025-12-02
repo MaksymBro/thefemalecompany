@@ -1,0 +1,39 @@
+#login-form-container #messageWrapper {
+  background: var(--tfc-color-flamingo-pink);
+  padding: 1rem;
+  margin-bottom: 2rem;
+  font-size: small;
+  color: white;
+}
+
+#login-form-container #messageWrapper:empty {
+  display: none;
+}
+
+#login-form-container .form__submit {
+  transition: opacity 0.2s ease-in-out;
+}
+
+#login-form-container .form__submit.loading {
+  opacity: 0.7;
+  pointer-events: none;
+}
+
+#login-form-container .form__submit .loader-button__text {
+  transition: opacity 0.2s ease-in-out;
+}
+
+#login-form-container .form__submit.loading .loader-button__text {
+  opacity: 0;
+}
+
+#login-form-container .form__submit .loader-button__loader {
+  transition: opacity 0.2s ease-in-out;
+}
+
+#login-form-container .form__submit.loading .loader-button__loader[hidden] {
+  display: block;
+  opacity: 1;
+  transform: translate(-50%, -50%);
+}
+

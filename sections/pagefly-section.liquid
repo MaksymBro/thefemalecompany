@@ -1,0 +1,262 @@
+
+{% if section.settings.section_id.size > 0 %}
+  <!-- PageFlyGlobalSection -->
+  {% render 'pagefly-main-js' %}
+  {% render 'pagefly-main-css' %}
+  {% include section.settings.section_id %}
+{% else %}
+  
+    {% if request.design_mode %}
+      <style>.pf-ph{font-size:14px!important;background:#fafafa;padding:20px;text-align:center;border:1px solid #f0f0f0;border-radius:4px;margin:15px}.pf-ph span{display:block;background:#e6f7ff;padding:8px 15px;border:1px solid #91d5ff}</style>
+      <div class="pf-ph">
+        <h3>PageFly Section</h3>
+        <span>No section selected. Please select your section from the list</span>
+      </div>
+    {% endif %}
+  
+{% endif %}
+
+{% schema %}
+{
+  "name": "PageFly Section",
+  "settings": [
+    {
+      "id": "section_id",
+      "type": "select",
+      "label": "Sections",
+      "options": [
+        {
+          "label": "Select section",
+          "value": ""
+        },
+        {
+          "label": "ClitClub: Join CTA large",
+          "value": "pf-7820ae83"
+        },
+        {
+          "label": "Comparison_Google",
+          "value": "pf-3ca5d713"
+        },
+        {
+          "label": "Bekannt aus dem TV",
+          "value": "pf-b48705cc"
+        },
+        {
+          "label": "Badge_Produktzertifizierung - PMS",
+          "value": "pf-ec4563ed"
+        },
+        {
+          "label": "Unwomen_Collectionpage",
+          "value": "pf-43e5af48"
+        },
+        {
+          "label": "international WOmen's Day - Bottom 3",
+          "value": "pf-679d5251"
+        },
+        {
+          "label": "International Women's Day - Bottom 2",
+          "value": "pf-3852e12c"
+        },
+        {
+          "label": "Badge_Produktzertifizierung",
+          "value": "pf-6385c830"
+        },
+        {
+          "label": "International Women's Day - Bottom 1",
+          "value": "pf-c030242d"
+        },
+        {
+          "label": "Valentines Launch_Bottom",
+          "value": "pf-c351652b"
+        },
+        {
+          "label": "Tamponspender_Q&A",
+          "value": "pf-fd3245bf"
+        },
+        {
+          "label": "Vision",
+          "value": "pf-cbb028bd"
+        },
+        {
+          "label": "About",
+          "value": "pf-75f1b56d"
+        },
+        {
+          "label": "Teens Videos",
+          "value": "pf-f7f96560"
+        },
+        {
+          "label": "Period Panty: Customer video reviews [DO NOT EDIT]",
+          "value": "pf-914450bf"
+        },
+        {
+          "label": "tinder-consent-guide",
+          "value": "pf-72a8c725"
+        },
+        {
+          "label": "Daysics: Layers & Technology",
+          "value": "pf-e3fee6ed"
+        },
+        {
+          "label": "Countdown Timer",
+          "value": "pf-ae2cc7f9"
+        },
+        {
+          "label": "Panty USPs with Icons #2",
+          "value": "pf-ac3aee2e"
+        },
+        {
+          "label": "Presse",
+          "value": "pf-b955c29f"
+        },
+        {
+          "label": "Period Panty: Money back warranty",
+          "value": "pf-defb6b9c"
+        },
+        {
+          "label": "Period Panty: Volume discount inline block [DO NOT",
+          "value": "pf-b58a9263"
+        },
+        {
+          "label": "Product Deals Section",
+          "value": "pf-a2c42d35"
+        },
+        {
+          "label": "ClitClub: Join CTA Medium",
+          "value": "pf-7dfe1e03"
+        },
+        {
+          "label": "Period Panty: Video proof of functionality [DO NOT",
+          "value": "pf-eaab072e"
+        },
+        {
+          "label": "Period Panty: Volume discount inline block [DO NOT",
+          "value": "pf-ed3ebd85"
+        },
+        {
+          "label": "Periodenunterwäsche FAQ",
+          "value": "pf-119217c7"
+        },
+        {
+          "label": "Period Panty: How it works",
+          "value": "pf-58262094"
+        },
+        {
+          "label": "Period Panty: Comfy / Stay Dry USPs",
+          "value": "pf-5035fcb1"
+        },
+        {
+          "label": "Daysics: FAQ",
+          "value": "pf-2a5ca1f0"
+        },
+        {
+          "label": "Daysics: Halogenorganische Rückstände",
+          "value": "pf-3fbe0e3b"
+        },
+        {
+          "label": "Daysics: Header",
+          "value": "pf-fb38147a"
+        },
+        {
+          "label": "Daysics: Swap service",
+          "value": "pf-7e67f8c7"
+        },
+        {
+          "label": "Daysics: USP #1",
+          "value": "pf-f628790f"
+        },
+        {
+          "label": "Period Panty: Money back guarantee",
+          "value": "pf-06a0577c"
+        },
+        {
+          "label": "Proof: Trustpilot (all products)",
+          "value": "pf-b609231e"
+        },
+        {
+          "label": "Period Panty: UGC from Influencers",
+          "value": "pf-b1e36950"
+        },
+        {
+          "label": "Period Panty: Reviews (Custom)",
+          "value": "pf-974ce024"
+        },
+        {
+          "label": "Sets",
+          "value": "pf-338ded1a"
+        },
+        {
+          "label": "Aus der Community",
+          "value": "pf-57835419"
+        },
+        {
+          "label": "LP Product Section",
+          "value": "pf-7dcb7ced"
+        },
+        {
+          "label": "Video Reviews Section",
+          "value": "pf-04a5bea1"
+        },
+        {
+          "label": "Red Content Section",
+          "value": "pf-7aaa45bb"
+        },
+        {
+          "label": "How Section",
+          "value": "pf-88c28e5e"
+        },
+        {
+          "label": "Hero",
+          "value": "pf-2b629b30"
+        },
+        {
+          "label": "Red Week Banner",
+          "value": "pf-6b4b7f88"
+        },
+        {
+          "label": "Trustpilot bewertungen",
+          "value": "pf-89cd8275"
+        },
+        {
+          "label": "Contact customer love",
+          "value": "pf-d9a93e79"
+        },
+        {
+          "label": "Product list (Data source: Manual selection)",
+          "value": "pf-b3575626"
+        },
+        {
+          "label": "Product slider (Data source: Collection)",
+          "value": "pf-384570e1"
+        },
+        {
+          "label": "Panty USPs with Icons #3",
+          "value": "pf-40cc57f5"
+        },
+        {
+          "label": "Panty USPs with Icons #1",
+          "value": "pf-004a0ef1"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": "Find and edit your section on the [section listing](https://thefemalecompany.myshopify.com/admin/apps/pagefly/sections)"
+    },
+    {
+      "type": "paragraph",
+      "content": "To add block to a section, please use the App Block element on PageFly section editor."
+    }
+  ],
+  "blocks": [
+    {
+      "type": "@app"
+    }
+  ],
+  "presets": [
+    {
+      "name": "PageFly Section"
+    }
+  ]
+}
+{% endschema %}

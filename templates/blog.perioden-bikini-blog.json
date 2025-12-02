@@ -1,0 +1,49 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "1361646d-7537-4612-b61a-4527dbe22eda": {
+      "type": "image-with-text-overlay",
+      "settings": {
+        "reveal_on_scroll": true,
+        "section_height": "small",
+        "image": "shopify://shop_images/Header-Web-Swim-Beach.jpg",
+        "subheading": "99 Problems but the Beach ain't one",
+        "title": "Perioden Bikinis",
+        "content": "<p>Erfahre alles über Periodenunterwäsche zum Schwimmen.</p>",
+        "button_text": "Zu den Produkten",
+        "button_link": "shopify://collections/perioden-bademode",
+        "link_style": "button",
+        "background_type": "full_width",
+        "text_width": "medium",
+        "text_position": "middle_center",
+        "text_color": "#ffffff",
+        "button_background": "#ff3f46",
+        "button_text_color": "#ffffff",
+        "overlay_color": "#000000",
+        "overlay_opacity": 30
+      }
+    },
+    "main": {
+      "type": "main-blog",
+      "settings": {
+        "show_blog_title": true,
+        "show_tags": false,
+        "show_category": true,
+        "show_excerpt": true,
+        "articles_per_page": 9
+      }
+    }
+  },
+  "order": [
+    "1361646d-7537-4612-b61a-4527dbe22eda",
+    "main"
+  ]
+}

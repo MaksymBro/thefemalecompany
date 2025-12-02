@@ -1,0 +1,446 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "type": "header",
+  "name": "Header group",
+  "sections": {
+    "announcement-bar": {
+      "type": "announcement-bar",
+      "blocks": {
+        "discount_dNY6aV": {
+          "type": "discount",
+          "settings": {
+            "discount_code": "Blackweek40",
+            "discount_text": "40% auf ALLES",
+            "button_text_copy": "Copy",
+            "url_matchers": "collections/favourites,collections/influencer,collections/paid-social-landingpage,pages/lp-period-panty,pages/p-period-panty_ab_menu,pages/crm_landingpage_25,collections/crm_landingpage_2-2,collections"
+          }
+        },
+        "message_jai9HA": {
+          "type": "message",
+          "disabled": true,
+          "settings": {
+            "text": "<p>❤️‍🔥 über <strong>2 Millionen</strong> mal verkauft ❤️‍🔥</p>",
+            "text_html": "",
+            "learn_more_text": "Learn more",
+            "annoucement_link": "",
+            "title": "",
+            "content": "",
+            "button_text": "",
+            "button_link": ""
+          }
+        },
+        "message_XYRLUB": {
+          "type": "message",
+          "disabled": true,
+          "settings": {
+            "text": "<p><strong>Kostenloser Versand ab 65€</strong></p>",
+            "text_html": "",
+            "learn_more_text": "Learn more",
+            "annoucement_link": "",
+            "title": "",
+            "content": "",
+            "button_text": "",
+            "button_link": ""
+          }
+        },
+        "message-1": {
+          "type": "message",
+          "disabled": true,
+          "settings": {
+            "text": "",
+            "text_html": "{%- assign free_shipping_thresholds = settings.cart_free_shipping_threshold | remove: ' ' | split: ',' -%}\n\n        {%- for threshold in free_shipping_thresholds -%}\n          {%- assign threshold_parts = threshold | split: ':' -%}\n          {%- assign country_code = threshold_parts | first | upcase -%}\n\n          {%- if country_code == localization.country.iso_code -%}\n            {%- assign matched_free_shipping_threshold = threshold_parts | last | times: 100 -%}\n            {%- break -%}\n          {%- endif -%}\n\n  {%- if country_code == \"OTHER\" -%}\n      {%- assign fallback_threshold = threshold_parts | last | times: 100 -%}\n    {%- endif -%}\n  {%- endfor -%}\n\n  {%- if matched_free_shipping_threshold == blank and fallback_threshold != blank -%}\n  {%- assign matched_free_shipping_threshold = fallback_threshold -%}\n{%- endif -%}\n\n{% if request.locale.iso_code == 'en' %}\n<strong>Free shipping</strong> from {{ matched_free_shipping_threshold | money_without_trailing_zeros }} 🚚\n{% elsif request.locale.iso_code == 'nl' %}\n<strong>Gratis verzending</strong> vanaf {{ matched_free_shipping_threshold | money_without_trailing_zeros }} 🚚\n{% else %}\n<strong>Kostenloser Versand</strong> ab {{ matched_free_shipping_threshold | money_without_trailing_zeros }} 🚚 \n{% endif %}",
+            "learn_more_text": "",
+            "annoucement_link": "",
+            "title": "",
+            "content": "",
+            "button_text": "",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "discount_dNY6aV",
+        "message_jai9HA",
+        "message_XYRLUB",
+        "message-1"
+      ],
+      "settings": {
+        "start_year": 2025,
+        "start_month": 10,
+        "start_day": 19,
+        "start_time": "10:00",
+        "end_year": 2034,
+        "end_month": 11,
+        "end_day": 21,
+        "end_time": "18:00",
+        "announcement_bar_position": "sticky",
+        "announcement_text_size": "normal",
+        "autoplay": true,
+        "cycle_speed": 7,
+        "background": "#cc0807",
+        "text_color": "#ffffff",
+        "button_background": "#ffffff",
+        "button_text_color": "#cc0807"
+      }
+    },
+    "announcement_bar_MUjQJa": {
+      "type": "announcement-bar",
+      "blocks": {
+        "message_L8VwCQ": {
+          "type": "message",
+          "settings": {
+            "text": "<p><strong>Gratis Wetbag 🎁</strong> <br/>Füge 90€ zu deinem Warenkorb hinzu, um einen gratis Wetbag zu erhalten.</p>",
+            "text_html": "",
+            "learn_more_text": "Learn more",
+            "annoucement_link": "",
+            "title": "",
+            "content": "",
+            "button_text": "",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "message_L8VwCQ"
+      ],
+      "disabled": true,
+      "settings": {
+        "start_year": 2025,
+        "start_month": 10,
+        "start_day": 19,
+        "start_time": "10:00",
+        "end_year": 2034,
+        "end_month": 11,
+        "end_day": 21,
+        "end_time": "18:00",
+        "announcement_bar_position": "sticky",
+        "announcement_text_size": "normal",
+        "autoplay": true,
+        "cycle_speed": 7,
+        "background": "#cc0807",
+        "text_color": "#ffffff",
+        "button_background": "#ffffff",
+        "button_text_color": "#cc0807"
+      }
+    },
+    "countdown_timer_7HKfbz": {
+      "type": "countdown-timer",
+      "blocks": {
+        "text_mYmHQV": {
+          "type": "text",
+          "settings": {
+            "text": "<p><strong>GRATIS WETBAG</strong> 🔥 Ab 65€ Bestellwert!</p>",
+            "offset_top_desktop": 20,
+            "offset_bottom_desktop": 20,
+            "offset_top_mobile": 10,
+            "offset_bottom_mobile": 10
+          }
+        },
+        "stock_countdown_bABExC": {
+          "type": "stock_countdown",
+          "settings": {
+            "start_stock": 328,
+            "end_stock": 2,
+            "stock_text": "<p><strong>Sei schnell! Nur noch $$stock$$ Stück übrig.</strong></p>",
+            "text_font_size_mobile": 1,
+            "text_font_size_desktop": 1,
+            "stock_start_date": "",
+            "stock_start_time_hour": "00",
+            "stock_start_time_minute": "00",
+            "stock_end_date": "",
+            "stock_end_time_hour": "23",
+            "stock_end_time_minute": "59",
+            "offset_top_desktop": 0,
+            "offset_bottom_desktop": 0,
+            "offset_top_mobile": 0,
+            "offset_bottom_mobile": 0
+          }
+        },
+        "countdown_timer_zj7GRB": {
+          "type": "countdown_timer",
+          "settings": {
+            "show_countdown_words": true,
+            "countdown_start_date": "2025-11-27",
+            "countdown_start_time_hour": "18",
+            "countdown_start_time_minute": "00",
+            "countdown_date": "2025-11-28",
+            "countdown_time_hour": "00",
+            "countdown_time_minute": "01",
+            "timer_link": "",
+            "timer_font_size_mobile": 1.3,
+            "text_font_size_mobile": 0.8,
+            "timer_font_size_desktop": 4.5,
+            "text_font_size_desktop": 0.9,
+            "offset_top_desktop": 20,
+            "offset_bottom_desktop": 20,
+            "offset_top_mobile": 10,
+            "offset_bottom_mobile": 10
+          }
+        }
+      },
+      "block_order": [
+        "text_mYmHQV",
+        "stock_countdown_bABExC",
+        "countdown_timer_zj7GRB"
+      ],
+      "name": "Countdown timer",
+      "settings": {
+        "countdown_text_color": "#ffffff",
+        "background_color": "#1a1a1a",
+        "text_color": "#ffffff"
+      }
+    },
+    "countdown_timer_Y3rjBd": {
+      "type": "countdown-timer",
+      "blocks": {
+        "text_HXqzHh": {
+          "type": "text",
+          "settings": {
+            "text": "<p><strong>5% EXTRA auf alle Produkte </strong></p>",
+            "offset_top_desktop": 20,
+            "offset_bottom_desktop": 20,
+            "offset_top_mobile": 10,
+            "offset_bottom_mobile": 10
+          }
+        },
+        "countdown_timer_WwMiPY": {
+          "type": "countdown_timer",
+          "settings": {
+            "show_countdown_words": true,
+            "countdown_start_date": "2025-12-01",
+            "countdown_start_time_hour": "18",
+            "countdown_start_time_minute": "00",
+            "countdown_date": "2025-12-01",
+            "countdown_time_hour": "23",
+            "countdown_time_minute": "59",
+            "timer_link": "",
+            "timer_font_size_mobile": 1.1,
+            "text_font_size_mobile": 0.6,
+            "timer_font_size_desktop": 0.9,
+            "text_font_size_desktop": 0.6,
+            "offset_top_desktop": 0,
+            "offset_bottom_desktop": 8,
+            "offset_top_mobile": 0,
+            "offset_bottom_mobile": 7
+          }
+        }
+      },
+      "block_order": [
+        "text_HXqzHh",
+        "countdown_timer_WwMiPY"
+      ],
+      "name": "Countdown timer",
+      "settings": {
+        "countdown_text_color": "#ffffff",
+        "background_color": "#1a1a1a",
+        "text_color": "#ffffff"
+      }
+    },
+    "header": {
+      "type": "header",
+      "blocks": {
+        "84c2f550-9c59-46e7-8a8d-68c953cf4c3f": {
+          "type": "mega_menu",
+          "settings": {
+            "menu_item": "Periodenunterwäsche",
+            "images_position": "right",
+            "image_1_heading": "",
+            "image_1_text": "",
+            "image_1_link": "",
+            "image_2_heading": "",
+            "image_2_text": "",
+            "image_2_link": "",
+            "image_3_heading": "",
+            "image_3_text": "",
+            "image_3_link": "",
+            "image_4_heading": "",
+            "image_4_text": "",
+            "image_4_link": "",
+            "image_5_heading": "",
+            "image_5_text": "",
+            "image_5_link": "",
+            "image_6_heading": "Build your Set",
+            "image_6_text": "Spare bis zu 15% beim Kauf von mehreren Panty Styles.",
+            "image_6_link": "shopify://collections/periodenunterwaesche-online-kaufen"
+          }
+        },
+        "6cdaf7bd-6fd4-4ddc-85bc-4200fa43d988": {
+          "type": "mega_menu",
+          "settings": {
+            "menu_item": "Periode",
+            "images_position": "right",
+            "image_1": "shopify://shop_images/periodenabo_regelmaessige_lieferung.jpg",
+            "image_1_heading": "Dein Lieferservice",
+            "image_1_text": "Aktiviere die automatische Lieferung und spare bis zu 25%.",
+            "image_1_link": "shopify://collections/periode-periodenprodukte",
+            "image_2_heading": "",
+            "image_2_text": "",
+            "image_2_link": "",
+            "image_3_heading": "",
+            "image_3_text": "",
+            "image_3_link": "",
+            "image_4_heading": "",
+            "image_4_text": "",
+            "image_4_link": "",
+            "image_5_heading": "",
+            "image_5_text": "",
+            "image_5_link": "",
+            "image_6_heading": "",
+            "image_6_text": "",
+            "image_6_link": ""
+          }
+        },
+        "41673415-4dbb-49bc-b7cd-adae96138c21": {
+          "type": "mega_menu",
+          "settings": {
+            "menu_item": "Schwangerschaft",
+            "images_position": "right",
+            "image_1": "shopify://shop_images/Mamma_Schwangerschaft_Wochenbett_a3240780-b557-45a1-8be9-1e0cf7cdab39.jpg",
+            "image_1_heading": "Periodenunterwäsche nach dem Entbinden",
+            "image_1_text": "",
+            "image_1_link": "shopify://blogs/periodenunterwaesche-ratgeber/periodenunterwasche-nutzen-nach-dem-entbinden",
+            "image_2": "shopify://shop_images/1_wochenbett_binden_1.jpg",
+            "image_2_heading": "Mammabox: Survival-Kit fürs Wochenbett",
+            "image_2_text": "",
+            "image_2_link": "shopify://products/mammabox-survival-kit-furs-wochenbett",
+            "image_3_heading": "",
+            "image_3_text": "",
+            "image_3_link": "",
+            "image_4_heading": "",
+            "image_4_text": "",
+            "image_4_link": "",
+            "image_5_heading": "",
+            "image_5_text": "",
+            "image_5_link": "",
+            "image_6_heading": "",
+            "image_6_text": "",
+            "image_6_link": ""
+          }
+        },
+        "bdf77548-8217-4457-a6f0-ee0de4837a77": {
+          "type": "mega_menu",
+          "settings": {
+            "menu_item": "Über uns",
+            "images_position": "right",
+            "image_1": "shopify://shop_images/Periodenunterwasche_Menu.jpg",
+            "image_1_heading": "Wie funktioniert Periodenunterwäsche?",
+            "image_1_text": "",
+            "image_1_link": "shopify://blogs/periodenunterwaesche-ratgeber/was-ist-periodenunterwasche",
+            "image_2": "shopify://shop_images/periodenblut_67567fe6-9a15-4e57-9c15-f5cdabe3485d.jpg",
+            "image_2_heading": "Das verrät die Farbe deines Periodenblutes!",
+            "image_2_text": "",
+            "image_2_link": "shopify://blogs/perioden-ratgeber/periode-in-allen-farben-erklart",
+            "image_3_heading": "",
+            "image_3_text": "",
+            "image_3_link": "",
+            "image_4_heading": "",
+            "image_4_text": "",
+            "image_4_link": "",
+            "image_5_heading": "",
+            "image_5_text": "",
+            "image_5_link": "",
+            "image_6_heading": "",
+            "image_6_text": "",
+            "image_6_link": ""
+          }
+        },
+        "5b065054-cb65-46d3-b3ce-09fa43be8e43": {
+          "type": "mega_menu",
+          "settings": {
+            "menu_item": "Intimpflege",
+            "images_position": "right",
+            "image_1": "shopify://shop_images/01_Rasierhobel_guenstig.jpg",
+            "image_1_heading": "Neu: Rasierhobel",
+            "image_1_text": "Dein letzter Rasierer – Zero Waste und gegen Rasierpickel.",
+            "image_1_link": "shopify://collections/rasierhobel",
+            "image_2_heading": "",
+            "image_2_text": "",
+            "image_2_link": "",
+            "image_3_heading": "",
+            "image_3_text": "",
+            "image_3_link": "",
+            "image_4_heading": "",
+            "image_4_text": "",
+            "image_4_link": "",
+            "image_5_heading": "",
+            "image_5_text": "",
+            "image_5_link": "",
+            "image_6_heading": "",
+            "image_6_text": "",
+            "image_6_link": ""
+          }
+        },
+        "36d2aa97-ef87-40cf-933a-42969764729a": {
+          "type": "mega_menu",
+          "settings": {
+            "menu_item": "Ausfluss",
+            "images_position": "right",
+            "image_1": "shopify://shop_images/daysics_ausflussunterwaesche.jpg",
+            "image_1_heading": "Daysics®",
+            "image_1_text": "Die nachhaltigere Alternative zu Slipeinlagen.",
+            "image_1_link": "shopify://collections/daysics",
+            "image_2_heading": "",
+            "image_2_text": "",
+            "image_2_link": "",
+            "image_3_heading": "",
+            "image_3_text": "",
+            "image_3_link": "",
+            "image_4_heading": "",
+            "image_4_text": "",
+            "image_4_link": "",
+            "image_5_heading": "",
+            "image_5_text": "",
+            "image_5_link": "",
+            "image_6_heading": "",
+            "image_6_text": "",
+            "image_6_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "84c2f550-9c59-46e7-8a8d-68c953cf4c3f",
+        "6cdaf7bd-6fd4-4ddc-85bc-4200fa43d988",
+        "41673415-4dbb-49bc-b7cd-adae96138c21",
+        "bdf77548-8217-4457-a6f0-ee0de4837a77",
+        "5b065054-cb65-46d3-b3ce-09fa43be8e43",
+        "36d2aa97-ef87-40cf-933a-42969764729a"
+      ],
+      "custom_css": [
+        ".lp-period-panty .header__linklist {display: none !important;}",
+        ".lp-period-panty .header__icon-wrapper .icon--header-hamburger {color: white;}"
+      ],
+      "settings": {
+        "enable_sticky_header": true,
+        "logo": "{{ shop.brand.logo }}",
+        "logo_max_width": 250,
+        "mobile_logo_max_width": 170,
+        "navigation_menu": "navbar",
+        "sidebar_navigation_menu": "main-menu-mobile",
+        "header_layout": "logo_left_navigation_inline",
+        "show_icons": true,
+        "reduce_desktop_padding": true,
+        "show_locale_selector": true,
+        "show_flag": true,
+        "show_country_selector": false,
+        "enable_transparent_header": false,
+        "transparent_header_text_color": "#ffffff",
+        "search_menu": "main-menu-mobile"
+      }
+    }
+  },
+  "order": [
+    "announcement-bar",
+    "announcement_bar_MUjQJa",
+    "countdown_timer_7HKfbz",
+    "countdown_timer_Y3rjBd",
+    "header"
+  ]
+}

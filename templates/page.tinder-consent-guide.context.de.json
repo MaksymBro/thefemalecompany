@@ -1,0 +1,22 @@
+/* ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "parent": "page.tinder-consent-guide.json",
+  "context": {
+    "market": "de"
+  },
+  "sections": {
+    "9a515ded-5105-4e2f-ab37-726d4e7fe87c": {
+      "settings": {
+        "mobile_image": "shopify://shop_images/Header_Mobile_ConsentGuide_Tinder_neu.jpg"
+      },
+      "blocks": {}
+    }
+  }
+}

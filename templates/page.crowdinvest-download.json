@@ -1,0 +1,39 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "show_title": true,
+        "show_breadcrumbs": true,
+        "page_width": "medium"
+      }
+    },
+    "custom_html_VFCB9w": {
+      "type": "custom-html",
+      "settings": {
+        "subheading": "Download",
+        "title": "Crowdinvest",
+        "html": "<p style=\"text-align: center\"></p>\n<div>\n    <h2>Download Images</h2>\n    \n    <!-- Image 1 - Instagram -->\n    <a href=\"#\" onclick=\"downloadImage('https://cdn.shopify.com/s/files/1/0613/9261/7710/files/Instagram.jpg?v=1731517028', 'Instagram.jpg')\">\n        <img src=\"https://cdn.shopify.com/s/files/1/0613/9261/7710/files/Instagram.jpg?v=1731517028\" alt=\"Instagram Image\" style=\"max-width:20%; height: auto;\">\n    </a>\n    <p><a href=\"#\" onclick=\"downloadImage('https://cdn.shopify.com/s/files/1/0613/9261/7710/files/Instagram.jpg?v=1731517028', 'Instagram.jpg')\">Click to download Image 1 (Instagram)</a></p>\n    \n    <!-- Image 2 - Linkedin -->\n    <a href=\"#\" onclick=\"downloadImage('https://cdn.shopify.com/s/files/1/0613/9261/7710/files/Linkedin.png?v=1731517025', 'Linkedin.png')\">\n        <img src=\"https://cdn.shopify.com/s/files/1/0613/9261/7710/files/Linkedin.png?v=1731517025\" alt=\"Linkedin Image\" style=\"max-width: 20%; height: auto;\">\n    </a>\n    <p><a href=\"#\" onclick=\"downloadImage('https://cdn.shopify.com/s/files/1/0613/9261/7710/files/Linkedin.png?v=1731517025', 'Linkedin.png')\">Click to download Image 2 (Linkedin)</a></p>\n</div>\n<p></p>\n\n<script>\nfunction downloadImage(url, filename) {\n    fetch(url)\n        .then(response => response.blob())\n        .then(blob => {\n            const url = window.URL.createObjectURL(blob);\n            const a = document.createElement('a');\n            a.style.display = 'none';\n            a.href = url;\n            a.download = filename;\n            document.body.appendChild(a);\n            a.click();\n            window.URL.revokeObjectURL(url);\n        })\n        .catch(() => console.error('Download failed.'));\n}\n</script>",
+        "add_vertical_spacing": true,
+        "disable_inside_spacing": false,
+        "background_type": "full_width",
+        "background": "#f7aea6",
+        "text_color": "rgba(0,0,0,0)"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "custom_html_VFCB9w"
+  ]
+}

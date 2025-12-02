@@ -1,0 +1,211 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "collection-banner": {
+      "type": "collection-banner",
+      "disabled": true,
+      "settings": {
+        "show_collection_image": true,
+        "show_collection_title": true,
+        "show_collection_description": false,
+        "section_height": "small",
+        "text_width": "medium",
+        "heading_font_family": "circular",
+        "image_heading_color": "#ffffff",
+        "image_text_color": "#cc0807",
+        "image_overlay_color": "#000000",
+        "image_overlay_opacity": 25,
+        "quick_links": ""
+      }
+    },
+    "video_6cFQxM": {
+      "type": "video",
+      "name": "Video",
+      "settings": {
+        "subheading": "",
+        "title": "",
+        "video": "shopify://files/videos/Header_Collection_Motherhood_Schrift_90e68ede-4078-44d3-9f95-541528a63b84.mp4",
+        "video_url": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
+        "background_type": "full_width",
+        "video_size": "medium",
+        "autoplay": true,
+        "show_video_controls": false,
+        "background": "rgba(0,0,0,0)",
+        "text_color": "rgba(0,0,0,0)"
+      }
+    },
+    "slideshow_6WVcHK": {
+      "type": "slideshow",
+      "blocks": {
+        "image_DJnYq8": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Header_Web__13.jpg",
+            "text_position": "middle_center",
+            "subheading": "",
+            "title": "",
+            "subtitle": "",
+            "subtitle_html": "",
+            "button_1_text": "",
+            "button_1_link": "",
+            "button_2_text": "",
+            "button_2_link": "",
+            "heading_font_family": "circular",
+            "heading_color": "#ffffff",
+            "text_color": "#ffffff",
+            "button_background": "#ffffff",
+            "button_text_color": "#000000",
+            "overlay_color": "#000000",
+            "overlay_opacity": 7,
+            "schedule_publishing": false,
+            "publish_date": "01.01.2019 00:00",
+            "schedule_unpublishing": false,
+            "unpublish_date": "01.01.2019 00:00"
+          }
+        }
+      },
+      "block_order": [
+        "image_DJnYq8"
+      ],
+      "disabled": true,
+      "name": "Slideshow",
+      "settings": {
+        "section_height": "medium",
+        "transition_type": "sweep",
+        "autoplay": true,
+        "cycle_speed": 5,
+        "background": "rgba(0,0,0,0)",
+        "show_banner_usps": false,
+        "banner_usps_link": "",
+        "show_hide_button": false,
+        "banner_usps_bg_color": "#ffffff",
+        "banner_usps_text_color": "#2abb53",
+        "banner_usps_heading": "",
+        "banner_usps_heading_1": "",
+        "banner_usps_heading_2": "",
+        "banner_usps_heading_3": "",
+        "banner_usps_heading_4": ""
+      }
+    },
+    "bubble_section_EWCmJY": {
+      "type": "bubble-section",
+      "blocks": {
+        "bubble_3aAkxN": {
+          "type": "bubble",
+          "settings": {
+            "logo": "shopify://shop_images/Mask_group_1_fd5cf553-6534-4741-9e4a-44d683d95979.png",
+            "text": "FemGrow Panty",
+            "link": "/collections/schwangerschaft-muetter-wochenbett?sort_by=manual&filter.p.product_type=FemGrow&filter.v.price.gte=&filter.v.price.lte=&filter.v.availability=1"
+          }
+        },
+        "bubble_jeK6RE": {
+          "type": "bubble",
+          "settings": {
+            "logo": "shopify://shop_images/Mask_group_9.png",
+            "text": "Still BHs",
+            "link": "https://buy.thefemalecompany.com/collections/schwangerschaft-muetter-wochenbett?sort_by=manual&filter.p.product_type=MammaBra%C2%AE"
+          }
+        },
+        "bubble_cpqgYE": {
+          "type": "bubble",
+          "settings": {
+            "logo": "shopify://shop_images/Mask_group-3.png",
+            "text": "MammaBox",
+            "link": "/collections/schwangerschaft-muetter-wochenbett?sort_by=manual&filter.p.product_type=MammaBox"
+          }
+        },
+        "bubble_jyQLAB": {
+          "type": "bubble",
+          "settings": {
+            "logo": "shopify://shop_images/Mask_group_11.png",
+            "text": "Wochenbett Panty",
+            "link": "https://buy.thefemalecompany.com/collections/schwangerschaft-muetter-wochenbett?sort_by=manual&filter.v.availability=1&filter.p.product_type=Wochenbettunterw%C3%A4sche&filter.v.price.gte=&filter.v.price.lte="
+          }
+        },
+        "bubble_axgaAB": {
+          "type": "bubble",
+          "settings": {
+            "logo": "shopify://shop_images/Mask_group_12.png",
+            "text": "Stilleinlage",
+            "link": "https://buy.thefemalecompany.com/collections/schwangerschaft-muetter-wochenbett?sort_by=manual&filter.v.availability=1&filter.p.product_type=Stilleinlagen&filter.v.price.gte=&filter.v.price.lte="
+          }
+        }
+      },
+      "block_order": [
+        "bubble_3aAkxN",
+        "bubble_jeK6RE",
+        "bubble_cpqgYE",
+        "bubble_jyQLAB",
+        "bubble_axgaAB"
+      ],
+      "settings": {
+        "reveal_on_scroll": true,
+        "max_logos_mobile": 4,
+        "max_width_logo_desktop": 200,
+        "max_width_logo_mobile": 140,
+        "logo_background": "rgba(0,0,0,0)",
+        "text_font_size_desktop": 20,
+        "text_font_size_mobile": 20,
+        "section_container_width": "md",
+        "section_background_color": "rgba(0,0,0,0)",
+        "section_spacing_top": 32,
+        "section_spacing_bottom": 32,
+        "section_spacing_different_mobile": false,
+        "section_spacing_top_mobile": 0,
+        "section_spacing_bottom_mobile": 0
+      }
+    },
+    "main": {
+      "type": "main-collection",
+      "settings": {
+        "products_per_page": 50,
+        "mobile_products_per_row": "2",
+        "desktop_products_per_row": 4,
+        "show_all_colors": true,
+        "hide_from_product_title_start": "",
+        "show_sort_by": true,
+        "show_filters": true,
+        "show_filter_group_name": true,
+        "show_color_swatch": true,
+        "open_first_filter_group": false,
+        "filter_position": "drawer",
+        "promotion_position": "top",
+        "promotion_height": "small"
+      }
+    },
+    "blog_posts_7zba34": {
+      "type": "blog-posts",
+      "settings": {
+        "blog": "mama-ratgeber",
+        "subheading": "Mehr zum Thema",
+        "title": "Mama Ratgeber",
+        "articles_count": 3,
+        "stack_mobile": false,
+        "show_category": true,
+        "show_excerpt": false,
+        "button_text": "",
+        "button_url": "",
+        "background": "#ffbfbf",
+        "text_color": "rgba(0,0,0,0)",
+        "button_background": "rgba(0,0,0,0)",
+        "button_text_color": "rgba(0,0,0,0)"
+      }
+    }
+  },
+  "order": [
+    "collection-banner",
+    "video_6cFQxM",
+    "slideshow_6WVcHK",
+    "bubble_section_EWCmJY",
+    "main",
+    "blog_posts_7zba34"
+  ]
+}

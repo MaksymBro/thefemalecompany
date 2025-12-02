@@ -1,0 +1,340 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "settings": {
+        "show_title": false,
+        "show_breadcrumbs": false,
+        "page_width": "medium"
+      }
+    },
+    "image_with_text_overlay_TUHG8N": {
+      "type": "image-with-text-overlay",
+      "settings": {
+        "reveal_on_scroll": true,
+        "section_height": "small",
+        "image": "shopify://shop_images/Header_Start_Sale_Asset_6.jpg",
+        "subheading": "",
+        "title": "48h Early Access + 20% Extra Rabatt",
+        "content": "<p>Melde dich jetzt noch für den 48h Early Access mit  -20% Extra Rabatt </p>",
+        "button_text": "",
+        "button_link": "",
+        "link_style": "link",
+        "background_type": "full_width",
+        "text_width": "medium",
+        "text_position": "middle_center",
+        "text_color": "#ff00ff",
+        "button_background": "#ffffff",
+        "button_text_color": "#000000",
+        "overlay_color": "#000000",
+        "overlay_opacity": 33
+      }
+    },
+    "newsletter_on_image_nNCbr7": {
+      "type": "newsletter-on-image",
+      "disabled": true,
+      "settings": {
+        "klaviyo_list_id": "XvaNbq",
+        "reveal_on_scroll": true,
+        "image": "shopify://shop_images/Header_Signup_Asset_2.jpg",
+        "subheading": "ANMELDEN UND PROFITIEREN",
+        "heading": "20% Rabatt und Early Access 🤩",
+        "content": "<p>Montag startet unser offizieller Sale:<strong><br/>Melde dich jetzt zum 48h Early Access mit -20% Extra-Rabatt an<br/></strong></p>",
+        "text_position": "center",
+        "text_alignment": "center",
+        "text_background": "rgba(0,0,0,0)",
+        "text_color": "#ff00ff",
+        "button_background": "#ff00ff",
+        "button_text_color": "rgba(0,0,0,0)"
+      }
+    },
+    "countdown_timer_RhXYUj": {
+      "type": "countdown-timer",
+      "blocks": {
+        "text_jTjJyb": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Bald geht unser großer Sale los:<br/>melde dich hier an und sei 48h früher dabei 💓</p>",
+            "offset_top_desktop": 20,
+            "offset_bottom_desktop": 20,
+            "offset_top_mobile": 10,
+            "offset_bottom_mobile": 10
+          }
+        },
+        "countdown_timer_FPGNPK": {
+          "type": "countdown_timer",
+          "settings": {
+            "show_countdown_words": true,
+            "countdown_start_date": "2025-03-11",
+            "countdown_start_time_hour": "00",
+            "countdown_start_time_minute": "01",
+            "countdown_date": "2025-03-21",
+            "countdown_time_hour": "23",
+            "countdown_time_minute": "59",
+            "timer_link": "",
+            "timer_font_size_mobile": 2.5,
+            "text_font_size_mobile": 0.8,
+            "timer_font_size_desktop": 4.5,
+            "text_font_size_desktop": 1.5,
+            "offset_top_desktop": 20,
+            "offset_bottom_desktop": 20,
+            "offset_top_mobile": 10,
+            "offset_bottom_mobile": 10
+          }
+        }
+      },
+      "block_order": [
+        "text_jTjJyb",
+        "countdown_timer_FPGNPK"
+      ],
+      "settings": {
+        "countdown_text_color": "#ff00ff",
+        "background_color": "#fff0f0",
+        "text_color": "#ff00ff"
+      }
+    },
+    "custom_html_TVQ8yB": {
+      "type": "custom-html",
+      "settings": {
+        "subheading": "",
+        "title": "",
+        "html": "<div class=\"klaviyo-form-XgsQbM\"></div>",
+        "add_vertical_spacing": true,
+        "disable_inside_spacing": false,
+        "background_type": "full_width",
+        "background": "rgba(0,0,0,0)",
+        "text_color": "rgba(0,0,0,0)"
+      }
+    },
+    "rich_text_cRtKr9": {
+      "type": "rich-text",
+      "disabled": true,
+      "settings": {
+        "subheading": "",
+        "title": "Teilnahmebedingungen",
+        "content": "<p><strong>Welche Voraussetzungen zur Teilnahme gibt es?</strong></p><ol><li>Mindestalter: 18 Jahre</li><li>Dieses Gewinnspiel steht in keiner Verbindung zu Instagram<br/></li></ol><p><strong>Wann startet das Gewinnspiel<br/></strong>Das Gewinnspiel startet am 25. September 2024 und endet am 20. Oktober 2024.</p><p></p><p><strong>Was kann man gewinnen?</strong><br/>Verlost werden insgesamt 3x je 2 Tickets für unser großes Influencer*innen Event am 31. Oktober 2024 in Berlin. </p><p><br/><strong>Welche Voraussetzung zur Teilnahme gibt es?</strong><br/>Voraussetzung zur Teilnahme ist die Anmeldung zu unserem Newsletter über die folgende Seite <a href=\"https://buy.thefemalecompany.com/pages/red-month-early-access\"><span style=\"text-decoration:underline\">https://buy.thefemalecompany.com/pages/red-month-early-access</span></a> und ein Mindestalter von 18 Jahren.</p><p><strong>Wann wird der Preis verlost?</strong><br/>Teilnahmeschluss ist der 20. Oktober 2024 um 12 Uhr (MEZ). Wir verlosen die Tickets nach Ende des Gewinnspiels und informieren die Gewinner*innen bis zum 29. Oktober 2024 per E-Mail. Der Rechtsweg ist ausgeschlossen.</p><p><strong>Nach welchem Prinzip wird der Gewinnende gelost?</strong><br/>Wir losen nach dem Zufallsprinzip unter allen Newsletter-Anmeldungen aus.</p><p><strong>Wie erfahre ich, ob ich gewonnen habe?</strong><br/>Wir informieren die Person, die gewonnen hat, per E-Mail. </p><p>Mehr Informationen zu unserem Datenschutz findest du hier: <a href=\"https://buy.thefemalecompany.com/policies/privacy-policy\"><span style=\"text-decoration:underline\">https://buy.thefemalecompany.com/policies/privacy-policy</span></a><span style=\"text-decoration:underline\">.</span></p>",
+        "button_text": "",
+        "button_link": "",
+        "background_type": "full_width",
+        "text_width": "medium",
+        "text_position": "center",
+        "text_alignment": "center",
+        "background": "rgba(0,0,0,0)",
+        "text_color": "rgba(0,0,0,0)",
+        "button_background": "rgba(0,0,0,0)",
+        "button_text_color": "rgba(0,0,0,0)"
+      }
+    },
+    "text_with_icons_XiPWeA": {
+      "type": "text-with-icons",
+      "blocks": {
+        "item_AwiTcW": {
+          "type": "item",
+          "settings": {
+            "icon": "picto-box",
+            "custom_icon": "shopify://shop_images/icon__plant.svg",
+            "custom_icon_width": 60,
+            "title": "SCHADSTOFFFREI",
+            "content": ""
+          }
+        },
+        "item_HN9TVE": {
+          "type": "item",
+          "settings": {
+            "icon": "picto-phone",
+            "custom_icon": "shopify://shop_images/Icon_Wearing_Period.svg",
+            "custom_icon_width": 55,
+            "title": "BIS ZU 12H AUSLAUFSICHER",
+            "content": ""
+          }
+        },
+        "item_UwzWME": {
+          "type": "item",
+          "settings": {
+            "icon": "picto-lock",
+            "custom_icon": "shopify://shop_images/Icon_Hygiene.svg",
+            "custom_icon_width": 80,
+            "title": "EINFACH ZU REINIGEN",
+            "content": ""
+          }
+        }
+      },
+      "block_order": [
+        "item_AwiTcW",
+        "item_HN9TVE",
+        "item_UwzWME"
+      ],
+      "settings": {
+        "background": "rgba(0,0,0,0)",
+        "text_color": "#ff3f46",
+        "no_slideshow": false
+      }
+    },
+    "spacer_arRddg": {
+      "type": "spacer",
+      "settings": {
+        "height": 56,
+        "different_mobile_height": true,
+        "mobile_height": 24,
+        "background_color": "rgba(0,0,0,0)"
+      }
+    },
+    "featured_collections_PTyiwb": {
+      "type": "featured-collections",
+      "blocks": {
+        "collection_XzNfkV": {
+          "type": "collection",
+          "settings": {
+            "collection": "periodenunterwaesche-online-kaufen",
+            "label": "",
+            "button_text": "Zu den Pantys",
+            "button_url": "",
+            "hide_from_product_title_start": "",
+            "filterable_options": ""
+          }
+        }
+      },
+      "block_order": [
+        "collection_XzNfkV"
+      ],
+      "settings": {
+        "start_year": 2025,
+        "start_month": 1,
+        "start_day": 1,
+        "start_time": "10:00",
+        "end_year": 2050,
+        "end_month": 12,
+        "end_day": 31,
+        "end_time": "10:00",
+        "products_count": 8,
+        "products_per_row": 4,
+        "stack_products": false,
+        "show_cta": false,
+        "filter_toggle_button_background": "rgba(0,0,0,0)",
+        "filter_toggle_active_button_background": "rgba(0,0,0,0)",
+        "filter_toggle_button_color": "rgba(0,0,0,0)",
+        "button_background": "rgba(0,0,0,0)",
+        "button_text_color": "rgba(0,0,0,0)",
+        "subheading": "",
+        "title": "",
+        "content": "",
+        "section_header_heading_size": "h4",
+        "section_header_highest_hierarchy": false,
+        "section_header_short_description_font_size": "medium",
+        "section_container_width": "md",
+        "background": "rgba(0,0,0,0)",
+        "text_color": "rgba(0,0,0,0)",
+        "heading_color": "rgba(0,0,0,0)",
+        "section_subheading_color": "rgba(0,0,0,0)",
+        "section_heading_font_family": "default",
+        "section_spacing_top": 0,
+        "section_spacing_bottom": 68,
+        "section_spacing_different_mobile": true,
+        "section_spacing_top_mobile": 0,
+        "section_spacing_bottom_mobile": 48
+      }
+    },
+    "gallery_zc3NAr": {
+      "type": "gallery",
+      "blocks": {
+        "image_YAk7Dr": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Cherry_Brazilian-2_e81eeb5a-61eb-4f92-a9a4-ee5f764723d6.jpg",
+            "caption": "<h4><strong>Dein Preis: 26,70 €</strong></h4><p>Regulärer Preis: 34,90 €</p>"
+          }
+        },
+        "image_jbfb9U": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Slip_Black_Strong_4.jpg",
+            "caption": "<h4><strong>Dein Preis: 22,87 €</strong></h4><p>Regulärer Preis: 29,90 €</p>"
+          }
+        },
+        "image_VbipBV": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/LaceSlip_new_Periodenunterwaesche-3_1_44a104dc-c119-42cc-b985-f12cdffca741.jpg",
+            "caption": "<h4><strong>Dein Preis: 34,35 €</strong></h4><p>Regulärer Preis: 44,90 €</p>"
+          }
+        },
+        "image_YQ7QBx": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/VCut_Brazilian-1_0268ce95-739c-4efe-98fc-1dd608939115.jpg",
+            "caption": "<h4><strong>Dein Preis: 25,56 €</strong></h4><p>Regulärer Preis: 29,90 €</p>"
+          }
+        }
+      },
+      "block_order": [
+        "image_YAk7Dr",
+        "image_jbfb9U",
+        "image_VbipBV",
+        "image_YQ7QBx"
+      ],
+      "disabled": true,
+      "settings": {
+        "show_arrows": true,
+        "subheading": "",
+        "title": "",
+        "section_header_short_description": "",
+        "section_header_heading_size": "h3",
+        "section_header_highest_hierarchy": false,
+        "section_header_short_description_font_size": "medium",
+        "section_container_width": "xxs",
+        "section_text_alignment": "left",
+        "background": "rgba(0,0,0,0)",
+        "text_color": "rgba(0,0,0,0)",
+        "section_heading_color": "rgba(0,0,0,0)",
+        "section_subheading_color": "rgba(0,0,0,0)",
+        "section_heading_font_family": "default",
+        "section_spacing_top": 48,
+        "section_spacing_bottom": 48,
+        "section_spacing_different_mobile": false,
+        "section_spacing_top_mobile": 0,
+        "section_spacing_bottom_mobile": 0
+      }
+    },
+    "rich_text_qTVhyV": {
+      "type": "rich-text",
+      "disabled": true,
+      "settings": {
+        "subheading": "",
+        "title": "Teilnahmebedingung",
+        "content": "",
+        "button_text": "",
+        "button_link": "",
+        "background_type": "full_width",
+        "text_width": "medium",
+        "text_position": "center",
+        "text_alignment": "center",
+        "background": "rgba(0,0,0,0)",
+        "text_color": "rgba(0,0,0,0)",
+        "button_background": "rgba(0,0,0,0)",
+        "button_text_color": "rgba(0,0,0,0)"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "image_with_text_overlay_TUHG8N",
+    "newsletter_on_image_nNCbr7",
+    "countdown_timer_RhXYUj",
+    "custom_html_TVQ8yB",
+    "rich_text_cRtKr9",
+    "text_with_icons_XiPWeA",
+    "spacer_arRddg",
+    "featured_collections_PTyiwb",
+    "gallery_zc3NAr",
+    "rich_text_qTVhyV"
+  ]
+}

@@ -1,0 +1,477 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "collection-banner": {
+      "type": "collection-banner",
+      "disabled": true,
+      "settings": {
+        "show_collection_image": false,
+        "show_collection_title": false,
+        "show_collection_description": false,
+        "section_height": "small",
+        "text_width": "medium",
+        "heading_font_family": "circular",
+        "image_heading_color": "#1a1a1a",
+        "image_text_color": "#ffffff",
+        "image_overlay_color": "#000000",
+        "image_overlay_opacity": 8,
+        "quick_links": ""
+      }
+    },
+    "slideshow_LVpLCi": {
+      "type": "slideshow",
+      "blocks": {
+        "image_amMaBM": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Header_Start_Sale_Asset_6.jpg",
+            "mobile_image": "shopify://shop_images/Header_mobile_Asset.jpg",
+            "text_position": "middle_center",
+            "subheading": "Unser PMS Pre-sale startet bald:",
+            "title": "Melde dich jetzt zum 48h Early Access mit -20% Extra-Rabatt an!",
+            "subtitle": "",
+            "subtitle_html": "",
+            "button_1_text": "Jetzt anmelden",
+            "button_1_link": "shopify://pages/clitclub-sale",
+            "button_2_text": "",
+            "button_2_link": "",
+            "heading_font_family": "circular",
+            "heading_color": "#ff00ff",
+            "text_color": "#ffffff",
+            "button_background": "#ff00ff",
+            "button_text_color": "#ffffff",
+            "overlay_color": "#000000",
+            "overlay_opacity": 0,
+            "schedule_publishing": false,
+            "publish_date": "01.01.2019 00:00",
+            "schedule_unpublishing": true,
+            "unpublish_date": "25.04.2025 23:59"
+          }
+        },
+        "image_YrB8rP": {
+          "type": "image",
+          "disabled": true,
+          "settings": {
+            "image": "shopify://shop_images/Header_Web__16_59711cf0-f500-4a9b-b7b4-fc07fe0a0ca3.jpg",
+            "mobile_image": "shopify://shop_images/Header_mobile_17_788005aa-845b-4ee2-aabd-9a36141891e4.jpg",
+            "text_position": "middle_center",
+            "subheading": "",
+            "title": "Bis zu 15% Rabatt",
+            "subtitle": "<p>Erhalte bis zu <strong>15% Mengenrabatt </strong>beim Kauf von <strong>drei oder mehr </strong>Period Pantys oder Daysics® </p>",
+            "subtitle_html": "",
+            "button_1_text": "",
+            "button_1_link": "",
+            "button_2_text": "",
+            "button_2_link": "",
+            "heading_font_family": "circular",
+            "heading_color": "#ffffff",
+            "text_color": "#ffffff",
+            "button_background": "#ffffff",
+            "button_text_color": "#000000",
+            "overlay_color": "#000000",
+            "overlay_opacity": 30,
+            "schedule_publishing": false,
+            "publish_date": "14.12.2024 00:01",
+            "schedule_unpublishing": false,
+            "unpublish_date": "26.12.2024 23:59"
+          }
+        }
+      },
+      "block_order": [
+        "image_amMaBM",
+        "image_YrB8rP"
+      ],
+      "disabled": true,
+      "settings": {
+        "section_height": "small",
+        "transition_type": "sweep",
+        "autoplay": true,
+        "cycle_speed": 5,
+        "background": "rgba(0,0,0,0)",
+        "show_banner_usps": false,
+        "banner_usps_link": "",
+        "show_hide_button": false,
+        "banner_usps_bg_color": "#ffffff",
+        "banner_usps_text_color": "#2abb53",
+        "banner_usps_heading": "",
+        "banner_usps_heading_1": "",
+        "banner_usps_heading_2": "",
+        "banner_usps_heading_3": "",
+        "banner_usps_heading_4": ""
+      }
+    },
+    "countdown_timer_VYXpjp": {
+      "type": "countdown-timer",
+      "blocks": {
+        "text_9bhtRt": {
+          "type": "text",
+          "settings": {
+            "text": "<p>2+1 Deal: Lege zwei Pantys und ein Bralette in deinen Warenkorb und erhalte das Bralette kostenlos (automatisch im Warenkorb).</p>",
+            "offset_top_desktop": 20,
+            "offset_bottom_desktop": 20,
+            "offset_top_mobile": 10,
+            "offset_bottom_mobile": 10
+          }
+        },
+        "countdown_timer_qMAADT": {
+          "type": "countdown_timer",
+          "settings": {
+            "show_countdown_words": true,
+            "countdown_start_date": "2025-01-26",
+            "countdown_start_time_hour": "00",
+            "countdown_start_time_minute": "01",
+            "countdown_date": "2025-01-30",
+            "countdown_time_hour": "23",
+            "countdown_time_minute": "59",
+            "timer_link": "",
+            "timer_font_size_mobile": 2.5,
+            "text_font_size_mobile": 0.8,
+            "timer_font_size_desktop": 4.5,
+            "text_font_size_desktop": 1.5,
+            "offset_top_desktop": 20,
+            "offset_bottom_desktop": 20,
+            "offset_top_mobile": 10,
+            "offset_bottom_mobile": 10
+          }
+        }
+      },
+      "block_order": [
+        "text_9bhtRt",
+        "countdown_timer_qMAADT"
+      ],
+      "settings": {
+        "countdown_text_color": "#1a1a1a",
+        "background_color": "#fff0f0",
+        "text_color": "#1a1a1a"
+      }
+    },
+    "da60766d-b49b-4d1d-9120-0aa79837efca": {
+      "type": "section-header",
+      "settings": {
+        "start_year": 2025,
+        "start_month": 1,
+        "start_day": 1,
+        "start_time": "10:00",
+        "end_year": 2050,
+        "end_month": 12,
+        "end_day": 31,
+        "end_time": "10:00",
+        "section_subheading": "",
+        "section_heading": "Zertifizierte Produktsicherheit.",
+        "allow_heading_override": false,
+        "section_short_description": "<p>Keine Biozide. Keine PFAS. Kein Silberchlorid. Getestet auf Arsen, Blei & über 1000 Schadstoffe. </p>",
+        "heading_size": "h3",
+        "highest_hierarchy": false,
+        "section_heading_font_family": "default",
+        "short_description_font_size": "medium",
+        "section_text_color": "rgba(0,0,0,0)",
+        "section_heading_color": "rgba(0,0,0,0)",
+        "section_subheading_color": "rgba(0,0,0,0)",
+        "section_container_width": "sm",
+        "section_background_color": "rgba(0,0,0,0)",
+        "section_spacing_top": 32,
+        "section_spacing_bottom": 8,
+        "section_spacing_different_mobile": false,
+        "section_spacing_top_mobile": 0,
+        "section_spacing_bottom_mobile": 0
+      }
+    },
+    "c5dfe7d7-23ff-4436-b583-50ac54e6c289": {
+      "type": "discount-code-showcase",
+      "disabled": true,
+      "settings": {
+        "fixed_discount_code": "NONE",
+        "fixed_discount_amount": "10%",
+        "inner_section_background": "#ffd9d9",
+        "discount_badge_background": "#ea697d",
+        "discount_badge_text_color": "#ffffff",
+        "section_container_width": "xxs",
+        "section_background_color": "rgba(0,0,0,0)",
+        "section_text_color": "rgba(0,0,0,0)",
+        "section_heading_color": "rgba(0,0,0,0)",
+        "section_spacing_top": 24,
+        "section_spacing_bottom": 24,
+        "section_spacing_different_mobile": false,
+        "section_spacing_top_mobile": 0,
+        "section_spacing_bottom_mobile": 0
+      }
+    },
+    "1707150520d692f27d": {
+      "type": "apps",
+      "blocks": {
+        "reviews_io_reviewsio_rating_bar_WfLgwD": {
+          "type": "shopify://apps/reviews-io/blocks/reviewsio-rating-bar/92a082e5-b297-4e88-b428-ac96cbc505f9",
+          "settings": {
+            "widget_id": "WzwJIZk4v5mPVFUO"
+          }
+        }
+      },
+      "block_order": [
+        "reviews_io_reviewsio_rating_bar_WfLgwD"
+      ],
+      "disabled": true,
+      "settings": {
+        "include_horizontal_margins": true,
+        "include_vertical_margins": false
+      }
+    },
+    "main": {
+      "type": "main-collection",
+      "blocks": {
+        "0871d722-ba82-412b-bc83-ae0948e295a2": {
+          "type": "image",
+          "disabled": true,
+          "settings": {
+            "image": "shopify://shop_images/periodenunterwaesche_thefemalecompany_darkened.jpg",
+            "subheading": "Bis zu -25% Rabatt",
+            "title": "Periodenunterwäsche",
+            "content": "<p>Limitierter Warenbestand: Shop now or cry later!</p>",
+            "link_text": "Zu den Produkten",
+            "link_url": "shopify://collections/periodenunterwaesche-online-kaufen",
+            "link_style": "link",
+            "text_position": "middle_left",
+            "background": "#f58e9e",
+            "subheading_color": "rgba(0,0,0,0)",
+            "heading_color": "rgba(0,0,0,0)",
+            "text_color": "#ff3f46",
+            "button_background": "#ffffff",
+            "button_text_color": "rgba(0,0,0,0)",
+            "image_overlay_color": "#000000",
+            "image_overlay_opacity": 5
+          }
+        },
+        "7a73c70e-cdc0-45db-a432-88af50c6d7f5": {
+          "type": "image",
+          "disabled": true,
+          "settings": {
+            "image": "shopify://shop_images/daysics_bg_placeholder_darkened.jpg",
+            "subheading": "Bis zu -20% Rabatt",
+            "title": "Daysics® Ausfluss-Unterwäsche",
+            "content": "<p>Die Alternative zu Slipeinlagen. Jetzt ausprobieren!</p>",
+            "link_text": "Zu den Produkten",
+            "link_url": "shopify://collections/daysics",
+            "link_style": "link",
+            "text_position": "middle_left",
+            "background": "#f7f8fd",
+            "subheading_color": "rgba(0,0,0,0)",
+            "heading_color": "rgba(0,0,0,0)",
+            "text_color": "#d6fd4a",
+            "button_background": "#ffffff",
+            "button_text_color": "rgba(0,0,0,0)",
+            "image_overlay_color": "#000000",
+            "image_overlay_opacity": 7
+          }
+        }
+      },
+      "block_order": [
+        "0871d722-ba82-412b-bc83-ae0948e295a2",
+        "7a73c70e-cdc0-45db-a432-88af50c6d7f5"
+      ],
+      "settings": {
+        "products_per_page": 48,
+        "mobile_products_per_row": "2",
+        "desktop_products_per_row": 4,
+        "show_all_colors": true,
+        "hide_from_product_title_start": "Period Panty –",
+        "show_sort_by": true,
+        "show_filters": true,
+        "show_filter_group_name": true,
+        "show_color_swatch": true,
+        "open_first_filter_group": true,
+        "filter_position": "always_visible",
+        "promotion_position": "top",
+        "promotion_height": "small"
+      }
+    },
+    "145c76f3-2d80-4fdf-b1b5-a18fdef55119": {
+      "type": "newsletter-on-image",
+      "disabled": true,
+      "settings": {
+        "klaviyo_list_id": "R8jKYv",
+        "reveal_on_scroll": true,
+        "image": "shopify://shop_images/Header_Web.png",
+        "subheading": "",
+        "heading": "More deals are coming!",
+        "content": "<p>Melde dich hier bei unserem Newsletter an und erfahre als Erste*r von unseren <strong>Daily Deals</strong> und <strong>Produktlaunches</strong>.</p>",
+        "text_position": "left",
+        "text_alignment": "left",
+        "text_background": "rgba(0,0,0,0)",
+        "text_color": "rgba(0,0,0,0)",
+        "button_background": "rgba(0,0,0,0)",
+        "button_text_color": "rgba(0,0,0,0)"
+      }
+    },
+    "942f2d70-7d4f-4043-9b6a-be1fed0511d8": {
+      "type": "multi-column",
+      "blocks": {
+        "template--18053050466570__942f2d70-7d4f-4043-9b6a-be1fed0511d8-item-1": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/panty_layer_closeup_layer1.jpg",
+            "image_width": 100,
+            "image_border": "rgba(0,0,0,0)",
+            "title": "Layer 1: Stay Dry Layer™",
+            "content": "<p><strong>Saugt Flüssigkeit</strong> blitzschnell auf und trocknet innerhalb weniger <strong>Sekunden</strong>.</p>",
+            "link_text": "",
+            "link_url": "",
+            "link_style": "link",
+            "text_alignment": "left",
+            "vertical_alignment": "start"
+          }
+        },
+        "template--18053050466570__942f2d70-7d4f-4043-9b6a-be1fed0511d8-item-2": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/panty_layer_closeup_layer2_alt.jpg",
+            "image_width": 100,
+            "image_border": "rgba(0,0,0,0)",
+            "title": "Layer 2: Ultra-absorbierende Schicht",
+            "content": "<p><strong>Speichert</strong> bis zu <strong>6 Tampons</strong> an Flüssigkeit und schließt sie sicher ein.</p>",
+            "link_text": "",
+            "link_url": "",
+            "link_style": "link",
+            "text_alignment": "left",
+            "vertical_alignment": "start"
+          }
+        },
+        "template--18053050466570__942f2d70-7d4f-4043-9b6a-be1fed0511d8-item-3": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/panty_layer_closeup_layer3.jpg",
+            "image_width": 100,
+            "image_border": "rgba(0,0,0,0)",
+            "title": "Layer 3: Wasserdichte Membran",
+            "content": "<p>Sorgt für <strong>zero Auslaufgefahr</strong>, auch bei längerer Tragedauer.</p>",
+            "link_text": "",
+            "link_url": "",
+            "link_style": "link",
+            "text_alignment": "left",
+            "vertical_alignment": "start"
+          }
+        },
+        "template--18053050466570__942f2d70-7d4f-4043-9b6a-be1fed0511d8-item-4": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/panty_layer_closeup_layer4_070ad79d-1f21-4c24-8941-cc2cf0159468.jpg",
+            "image_width": 100,
+            "image_border": "rgba(0,0,0,0)",
+            "title": "Layer 4: Weiche Bio-Baumwolle",
+            "content": "<p>Super weiche Bio-Baumwolle für extra <strong>comfy</strong> <strong>Tragegefühl</strong>.</p>",
+            "link_text": "",
+            "link_url": "",
+            "link_style": "link",
+            "text_alignment": "left",
+            "vertical_alignment": "start"
+          }
+        }
+      },
+      "block_order": [
+        "template--18053050466570__942f2d70-7d4f-4043-9b6a-be1fed0511d8-item-1",
+        "template--18053050466570__942f2d70-7d4f-4043-9b6a-be1fed0511d8-item-2",
+        "template--18053050466570__942f2d70-7d4f-4043-9b6a-be1fed0511d8-item-3",
+        "template--18053050466570__942f2d70-7d4f-4043-9b6a-be1fed0511d8-item-4"
+      ],
+      "settings": {
+        "reveal_on_scroll": true,
+        "stack_items": false,
+        "subheading": "Default mode: dry pantys",
+        "title": "Stay Dry Layer Technologie™",
+        "content": "<p>Entwickelt mit Textiltechniker*innen und Gynäkolog*innen: nur <strong>1mm</strong> dicker als normale Unterwäsche und saugt bis zu <strong>6 Tampons</strong> an Flüssigkeit.</p>",
+        "column_alignment": "center",
+        "mobile_item_size": "medium",
+        "desktop_item_size": "medium",
+        "spacing": "tight",
+        "background": "rgba(0,0,0,0)",
+        "text_color": "rgba(0,0,0,0)"
+      }
+    },
+    "37956905-00f0-42ac-8fff-8850ea52f575": {
+      "type": "video",
+      "settings": {
+        "subheading": "",
+        "title": "",
+        "video": "shopify://files/videos/leakproof_layer_compliation_480noaudio1mbit.mp4",
+        "video_url": "",
+        "background_type": "boxed",
+        "video_size": "small",
+        "autoplay": true,
+        "show_video_controls": true,
+        "background": "rgba(0,0,0,0)",
+        "text_color": "rgba(0,0,0,0)"
+      }
+    },
+    "409795de-d846-4135-a5eb-60e85507714a": {
+      "type": "pagefly-section",
+      "settings": {
+        "section_id": "pf-914450bf"
+      }
+    },
+    "17db7e04-b78c-45de-ab94-5259acb868d7": {
+      "type": "faq",
+      "blocks": {
+        "8e6cb269-c97c-4ce7-b24d-f077db46785a": {
+          "type": "faq_collection",
+          "settings": {
+            "metaobject_handle": "faq-collection-periodpanty-purchase-assistance",
+            "show_title": true
+          }
+        },
+        "372bdd6a-1298-43dd-a001-1570ba32f940": {
+          "type": "faq_collection",
+          "settings": {
+            "metaobject_handle": "faq-collection-periodpanty-usage",
+            "show_title": true
+          }
+        }
+      },
+      "block_order": [
+        "8e6cb269-c97c-4ce7-b24d-f077db46785a",
+        "372bdd6a-1298-43dd-a001-1570ba32f940"
+      ],
+      "settings": {
+        "show_navigation": true,
+        "enable_schema": true,
+        "section_header_subheading": "Ihr fragt, wir antworten",
+        "section_header_heading": "Häufig gestellte Fragen",
+        "section_header_short_description": "",
+        "section_header_heading_size": "h3",
+        "section_header_highest_hierarchy": false,
+        "section_header_short_description_font_size": "medium",
+        "section_container_width": "md",
+        "section_text_alignment": "left",
+        "section_background_color": "#dc5268",
+        "section_text_color": "#ffffff",
+        "section_heading_color": "#ffffff",
+        "section_subheading_color": "rgba(0,0,0,0)",
+        "section_heading_font_family": "default",
+        "section_spacing_top": 44,
+        "section_spacing_bottom": 28,
+        "section_spacing_different_mobile": true,
+        "section_spacing_top_mobile": 32,
+        "section_spacing_bottom_mobile": 32
+      }
+    }
+  },
+  "order": [
+    "collection-banner",
+    "slideshow_LVpLCi",
+    "countdown_timer_VYXpjp",
+    "da60766d-b49b-4d1d-9120-0aa79837efca",
+    "c5dfe7d7-23ff-4436-b583-50ac54e6c289",
+    "1707150520d692f27d",
+    "main",
+    "145c76f3-2d80-4fdf-b1b5-a18fdef55119",
+    "942f2d70-7d4f-4043-9b6a-be1fed0511d8",
+    "37956905-00f0-42ac-8fff-8850ea52f575",
+    "409795de-d846-4135-a5eb-60e85507714a",
+    "17db7e04-b78c-45de-ab94-5259acb868d7"
+  ]
+}

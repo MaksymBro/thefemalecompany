@@ -1,0 +1,43 @@
+{% layout none %}
+
+{%- capture automatic_discounts -%}
+    {% for automatic_discounts in metaobjects.automatic_discounts_rebuild.values %} 
+        {
+            "Name": "{{ automatic_discounts.system.handle }}",
+            "purchase_these": 
+            [
+                {% for purchase_product in automatic_discounts.purchase_these.value %}
+                    {
+                        "Id": "{{ purchase_product.id }}",
+                        "Title": "{{ purchase_product.title }}",
+                        "Handle": "{{ purchase_product.handle }}"
+                    }
+                    {%- unless forloop.last -%},{%- endunless -%}
+                {% endfor %}
+            ],       
+            "get_discount_on_these":
+            [
+                {% for discount_product in automatic_discounts.get_discount_on_these.value %}
+                    {
+                        "Id": "{{ discount_product.id }}",
+                        "Title": "{{ discount_product.title }}",
+                        "Handle": "{{ discount_product.handle }}",
+                        {% if discount_product.price_min < discount_product.compare_at_price_min %}
+                            "Original_CompareAtPrice": {{ discount_product.compare_at_price_min }},
+                        {% endif %}
+                        "Original_Price": {{ discount_product.price_min }},
+                        "Price_Varies": {{ discount_product.price_varies }}
+                    }
+                    {%- unless forloop.last -%},{%- endunless -%}
+                {% endfor %}
+            ],
+            "discount_amount": {{ automatic_discounts.discount_amount.value | replace: ",", "." | times: 100 }}
+        }
+        {%- unless forloop.last -%},{%- endunless -%}
+    {% endfor %}
+{% endcapture %}
+
+{
+    "automatic_discounts": [{{ automatic_discounts }}]
+}
+

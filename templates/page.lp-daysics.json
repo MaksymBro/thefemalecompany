@@ -1,0 +1,89 @@
+/* ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "9ee811aa-e1fc-4256-9544-7e2dcb9831af": {
+      "type": "pagefly-section",
+      "settings": {
+        "section_id": "pf-fb38147a"
+      }
+    },
+    "7d4072fc-8b3f-4915-a081-bc8d2c88574b": {
+      "type": "featured-collections",
+      "blocks": {
+        "template--17126084804874__7d4072fc-8b3f-4915-a081-bc8d2c88574b-16740505228860a039-0": {
+          "type": "collection",
+          "settings": {
+            "collection": "daysics",
+            "label": "",
+            "button_text": "Mehr Produkte",
+            "button_url": "shopify://collections/daysics"
+          }
+        }
+      },
+      "block_order": [
+        "template--17126084804874__7d4072fc-8b3f-4915-a081-bc8d2c88574b-16740505228860a039-0"
+      ],
+      "settings": {
+        "subheading": "Die Alternative zu Slipeinlagen",
+        "title": "Was sind Daysics®?",
+        "content": "<p>35% aller deutschen Frauen benutzen jeden Tag Slipeinlagen. Gemeinsam mit Gynäkologinnen haben wir uns gefragt: Wie müssten Produkte <strong>für jeden Tag</strong> sein, wenn Frauen sie entwickelt hätten? Die Antwort:<strong> Daysics®</strong>.</p>",
+        "products_count": 8,
+        "products_per_row": 4,
+        "stack_products": false,
+        "show_cta": false,
+        "background": "#f2d1fc",
+        "text_color": "#6b359d",
+        "button_background": "#6b359d",
+        "button_text_color": "rgba(0,0,0,0)"
+      }
+    },
+    "8172356e-dad1-4c04-a396-2a9f228b06b9": {
+      "type": "pagefly-section",
+      "settings": {
+        "section_id": "pf-f628790f"
+      }
+    },
+    "5ad3cd93-3fa8-49cc-8425-19484e37b536": {
+      "type": "pagefly-section",
+      "settings": {
+        "section_id": "pf-e3fee6ed"
+      }
+    },
+    "c3cd4e2f-7d7b-43b2-a7f8-f4cf3235f436": {
+      "type": "pagefly-section",
+      "settings": {
+        "section_id": "pf-3fbe0e3b"
+      }
+    },
+    "8f134861-53c5-4598-970a-e4c2108480af": {
+      "type": "pagefly-section",
+      "settings": {
+        "section_id": "pf-7e67f8c7"
+      }
+    },
+    "main": {
+      "type": "main-page",
+      "settings": {
+        "show_title": false,
+        "show_breadcrumbs": false,
+        "page_width": "medium"
+      }
+    }
+  },
+  "order": [
+    "9ee811aa-e1fc-4256-9544-7e2dcb9831af",
+    "7d4072fc-8b3f-4915-a081-bc8d2c88574b",
+    "8172356e-dad1-4c04-a396-2a9f228b06b9",
+    "5ad3cd93-3fa8-49cc-8425-19484e37b536",
+    "c3cd4e2f-7d7b-43b2-a7f8-f4cf3235f436",
+    "8f134861-53c5-4598-970a-e4c2108480af",
+    "main"
+  ]
+}

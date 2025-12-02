@@ -1,0 +1,112 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "collection-banner": {
+      "type": "collection-banner",
+      "settings": {
+        "show_collection_image": true,
+        "show_collection_title": true,
+        "show_collection_description": true,
+        "section_height": "small",
+        "text_width": "large",
+        "heading_font_family": "circular",
+        "image_heading_color": "#ffffff",
+        "image_text_color": "#ffffff",
+        "image_overlay_color": "#000000",
+        "image_overlay_opacity": 11,
+        "quick_links": ""
+      }
+    },
+    "slideshow_c7pBRP": {
+      "type": "slideshow",
+      "blocks": {
+        "image_ippQrM": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Header_Web_Modal_8e087b2f-c6a7-4cc6-8a1a-95c6adb0a1ff.jpg",
+            "mobile_image": "shopify://shop_images/Header_mobile_Modal_63d72d37-55af-4143-8dea-878e2ae8f370.jpg",
+            "text_position": "middle_center",
+            "subheading": "",
+            "title": "Modal: Periodenunterwäsche",
+            "subtitle": "<p>Mit der neuen, superweichen Modal Kollektion kommt du sicher durch die kalte Jahreszeit. Non-toxic. Auf über 1000 Schadstoffe getestet.</p>",
+            "subtitle_html": "",
+            "button_1_text": "",
+            "button_1_link": "",
+            "button_2_text": "",
+            "button_2_link": "",
+            "heading_font_family": "circular",
+            "heading_color": "#ffffff",
+            "text_color": "#ffffff",
+            "button_background": "#ffffff",
+            "button_text_color": "#000000",
+            "overlay_color": "#000000",
+            "overlay_opacity": 30,
+            "schedule_publishing": false,
+            "publish_date": "01.01.2019 00:00",
+            "schedule_unpublishing": false,
+            "unpublish_date": "01.01.2019 00:00"
+          }
+        }
+      },
+      "block_order": [
+        "image_ippQrM"
+      ],
+      "disabled": true,
+      "settings": {
+        "section_height": "auto",
+        "transition_type": "sweep",
+        "autoplay": true,
+        "cycle_speed": 5,
+        "background": "rgba(0,0,0,0)",
+        "show_banner_usps": false,
+        "banner_usps_link": "",
+        "show_hide_button": false,
+        "banner_usps_bg_color": "#ffffff",
+        "banner_usps_text_color": "#2abb53",
+        "banner_usps_heading": "",
+        "banner_usps_heading_1": "",
+        "banner_usps_heading_2": "",
+        "banner_usps_heading_3": "",
+        "banner_usps_heading_4": ""
+      }
+    },
+    "pagefly_section_PhX6rm": {
+      "type": "pagefly-section",
+      "settings": {
+        "section_id": "pf-43e5af48"
+      }
+    },
+    "main": {
+      "type": "main-collection",
+      "settings": {
+        "products_per_page": 50,
+        "mobile_products_per_row": "2",
+        "desktop_products_per_row": 4,
+        "show_all_colors": true,
+        "hide_from_product_title_start": "",
+        "show_sort_by": true,
+        "show_filters": true,
+        "show_filter_group_name": true,
+        "show_color_swatch": true,
+        "open_first_filter_group": false,
+        "filter_position": "drawer",
+        "promotion_position": "top",
+        "promotion_height": "small"
+      }
+    }
+  },
+  "order": [
+    "collection-banner",
+    "slideshow_c7pBRP",
+    "pagefly_section_PhX6rm",
+    "main"
+  ]
+}

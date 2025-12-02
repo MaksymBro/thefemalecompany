@@ -1,0 +1,181 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "collection-banner": {
+      "type": "collection-banner",
+      "settings": {
+        "show_collection_image": true,
+        "show_collection_title": false,
+        "show_collection_description": false,
+        "section_height": "small",
+        "text_width": "medium",
+        "heading_font_family": "circular",
+        "image_heading_color": "#ffffff",
+        "image_text_color": "#cc0807",
+        "image_overlay_color": "#000000",
+        "image_overlay_opacity": 0,
+        "quick_links": ""
+      }
+    },
+    "section_header_DwRctk": {
+      "type": "section-header",
+      "disabled": true,
+      "custom_css": [],
+      "name": "Section header",
+      "settings": {
+        "start_year": 2025,
+        "start_month": 1,
+        "start_day": 1,
+        "start_time": "10:00",
+        "end_year": 2050,
+        "end_month": 12,
+        "end_day": 31,
+        "end_time": "10:00",
+        "section_subheading": "",
+        "section_heading": "SUMMERSALE",
+        "allow_heading_override": false,
+        "section_short_description": "",
+        "heading_size": "h3",
+        "highest_hierarchy": false,
+        "section_heading_font_family": "default",
+        "short_description_font_size": "medium",
+        "section_text_color": "rgba(0,0,0,0)",
+        "section_heading_color": "rgba(0,0,0,0)",
+        "section_subheading_color": "rgba(0,0,0,0)",
+        "section_container_width": "sm",
+        "section_background_color": "rgba(0,0,0,0)",
+        "section_spacing_top": 16,
+        "section_spacing_bottom": 16,
+        "section_spacing_different_mobile": false,
+        "section_spacing_top_mobile": 0,
+        "section_spacing_bottom_mobile": 0
+      }
+    },
+    "rich_text_aakhLY": {
+      "type": "rich-text",
+      "name": "Rich text",
+      "settings": {
+        "subheading": "",
+        "title": "Spare jetzt bis zu 70% im größten Sale des Jahres",
+        "content": "",
+        "button_text": "",
+        "button_link": "",
+        "background_type": "full_width",
+        "text_width": "medium",
+        "text_position": "center",
+        "text_alignment": "center",
+        "background": "#ffffff",
+        "text_color": "#cc0807",
+        "button_background": "rgba(0,0,0,0)",
+        "button_text_color": "rgba(0,0,0,0)"
+      }
+    },
+    "5012c18a-1b12-44a4-82f7-f570a35cc02e": {
+      "type": "logo-list",
+      "blocks": {
+        "template--17777087021322__5012c18a-1b12-44a4-82f7-f570a35cc02e-logo-1": {
+          "type": "logo",
+          "settings": {
+            "logo": "shopify://shop_images/Category_Bestseller_2.png",
+            "link": "https://buy.thefemalecompany.com/collections/all?sort_by=manual&filter.p.m.filters.collection=Animal&filter.v.price.gte=&filter.v.price.lte=&filter.v.availability=1"
+          }
+        },
+        "logo_KKhXYL": {
+          "type": "logo",
+          "settings": {
+            "logo": "shopify://shop_images/Category_Bestseller_3.png",
+            "link": "https://buy.thefemalecompany.com/collections/all?sort_by=manual&filter.v.option.farbe=Schwarz&filter.v.availability=1&filter.v.price.gte=&filter.v.price.lte="
+          }
+        },
+        "template--17777087021322__5012c18a-1b12-44a4-82f7-f570a35cc02e-logo-3": {
+          "type": "logo",
+          "disabled": true,
+          "settings": {
+            "logo": "shopify://shop_images/Frame_96_60f61dda-a578-4f50-a6aa-3e57ccb64eec.png",
+            "link": "https://buy.thefemalecompany.com/collections/all?sort_by=manual&filter.v.availability=1&filter.p.product_type=Swim&filter.v.price.gte=&filter.v.price.lte="
+          }
+        }
+      },
+      "block_order": [
+        "template--17777087021322__5012c18a-1b12-44a4-82f7-f570a35cc02e-logo-1",
+        "logo_KKhXYL",
+        "template--17777087021322__5012c18a-1b12-44a4-82f7-f570a35cc02e-logo-3"
+      ],
+      "disabled": true,
+      "settings": {
+        "reveal_on_scroll": true,
+        "layout": "carousel",
+        "max_logos_mobile": 10,
+        "max_width_logo_desktop": 145,
+        "max_width_logo_mobile": 100,
+        "logo_background": "rgba(0,0,0,0)",
+        "section_container_width": "md",
+        "section_background_color": "#ffffff",
+        "section_spacing_top": 0,
+        "section_spacing_bottom": 0,
+        "section_spacing_different_mobile": true,
+        "section_spacing_top_mobile": 0,
+        "section_spacing_bottom_mobile": 0
+      }
+    },
+    "main": {
+      "type": "main-collection",
+      "blocks": {
+        "image_gnDqQa": {
+          "type": "image",
+          "disabled": true,
+          "settings": {
+            "subheading": "",
+            "title": "Bestseller ♥️️",
+            "content": "<p>Sichere dir 20 % + 5% on top auf unsere beliebtesten styles </p>",
+            "link_text": "",
+            "link_url": "",
+            "link_style": "link",
+            "text_position": "middle_left",
+            "background": "#ffb8b7",
+            "subheading_color": "rgba(0,0,0,0)",
+            "heading_color": "rgba(0,0,0,0)",
+            "text_color": "#1a1a1a",
+            "button_background": "#ffffff",
+            "button_text_color": "rgba(0,0,0,0)",
+            "image_overlay_color": "#000000",
+            "image_overlay_opacity": 0
+          }
+        }
+      },
+      "block_order": [
+        "image_gnDqQa"
+      ],
+      "settings": {
+        "products_per_page": 48,
+        "mobile_products_per_row": "2",
+        "desktop_products_per_row": 4,
+        "show_all_colors": true,
+        "hide_from_product_title_start": "",
+        "show_sort_by": true,
+        "show_filters": true,
+        "show_filter_group_name": true,
+        "show_color_swatch": true,
+        "open_first_filter_group": false,
+        "filter_position": "always_visible",
+        "promotion_position": "top",
+        "promotion_height": "small"
+      }
+    }
+  },
+  "order": [
+    "collection-banner",
+    "section_header_DwRctk",
+    "rich_text_aakhLY",
+    "5012c18a-1b12-44a4-82f7-f570a35cc02e",
+    "main"
+  ]
+}

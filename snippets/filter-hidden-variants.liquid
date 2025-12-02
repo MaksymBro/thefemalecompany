@@ -1,0 +1,230 @@
+{% comment %}
+  Filter Hidden Variants Snippet
+  
+  This snippet filters out variants with metafield 'custom.hide_on_storefront' set to true.
+  
+  Usage:
+  {% render 'filter-hidden-variants', product: product %}
+{% endcomment %}
+
+{% assign visible_variants = '' %}
+{% assign hidden_variants = '' %}
+{% assign visible_variant_values = '' %}
+
+{% for variant in product.variants %}
+  {% assign should_hide = false %}
+  
+  {% if variant.metafields.custom.hide_on_storefront == true %}
+    {% assign should_hide = true %}
+  {% endif %}
+  
+  {% if variant.metafields.custom.hide_on_storefront != blank and variant.metafields.custom.hide_on_storefront != false and variant.metafields.custom.hide_on_storefront != "false" %}
+    {% assign should_hide = true %}
+  {% endif %}
+  
+  {% if should_hide %}
+    {% assign hidden_variants = hidden_variants | append: variant.id | append: ',' %}
+  {% else %}
+    {% assign visible_variants = visible_variants | append: variant.id | append: ',' %}
+    
+    {% for option in product.options_with_values %}
+      {% assign option_index = forloop.index0 %}
+      {% assign option_position = forloop.index %}
+      {% assign option_value = variant.options[option_index] %}
+      
+      {% assign visible_variant_values = visible_variant_values | append: option_position | append: ':' | append: option_value | append: ',' %}
+    {% endfor %}
+  {% endif %}
+{% endfor %}
+
+{% assign visible_variants = visible_variants | split: ',' %}
+{% assign visible_variant_values = visible_variant_values | split: ',' | uniq %}
+{% assign hidden_variants = hidden_variants | split: ',' %}
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    var hiddenVariantIds = [{% for id in hidden_variants %}{% if id != '' %}{{ id }}{% if forloop.last != true %},{% endif %}{% endif %}{% endfor %}];
+    var visibleVariantIds = [{% for id in visible_variants %}{% if id != '' %}{{ id }}{% if forloop.last != true %},{% endif %}{% endif %}{% endfor %}];
+    
+    var hiddenVariantTitles = [
+      {% for variant in product.variants %}
+        {% if variant.metafields.custom.hide_on_storefront != blank and variant.metafields.custom.hide_on_storefront != false and variant.metafields.custom.hide_on_storefront != "false" %}
+          "{{ variant.title | escape }}"{% unless forloop.last %},{% endunless %}
+        {% endif %}
+      {% endfor %}
+    ];
+    
+    function hideVariants() {
+      // 1. Hide options in the master selector
+      var masterSelectors = document.querySelectorAll('select[name="id"]');
+      
+      masterSelectors.forEach(function(select) {
+        Array.from(select.options).forEach(function(option) {
+          var variantId = parseInt(option.value, 10);
+          if (hiddenVariantIds.includes(variantId)) {
+            option.disabled = true;
+            option.hidden = true;
+            option.style.display = 'none';
+          }
+        });
+      });
+      
+      // 2. Hide options in the product-variants custom element
+      var productVariants = document.querySelectorAll('product-variants');
+      if (productVariants.length > 0) {
+        productVariants.forEach(function(element) {
+          if (element.product && element.product.variants) {
+            element.product.variants = element.product.variants.filter(function(variant) {
+              return !hiddenVariantIds.includes(variant.id);
+            });
+          }
+        });
+      }
+      
+      // 3. Hide options in dropdown selectors
+      var dropdownItems = document.querySelectorAll('.combo-box__option-item');
+      
+      dropdownItems.forEach(function(item) {
+        var optionText = item.textContent.trim();
+        var shouldHide = false;
+        
+        for (var i = 0; i < hiddenVariantTitles.length; i++) {
+          if (optionText === hiddenVariantTitles[i]) {
+            shouldHide = true;
+            break;
+          }
+        }
+        
+        {% for variant in product.variants %}
+          {% if variant.metafields.custom.hide_on_storefront != blank and variant.metafields.custom.hide_on_storefront != false and variant.metafields.custom.hide_on_storefront != "false" %}
+            if (optionText === "{{ variant.option1 | escape }}" || 
+                {% if variant.option2 %}optionText === "{{ variant.option2 | escape }}" || {% endif %}
+                {% if variant.option3 %}optionText === "{{ variant.option3 | escape }}" || {% endif %}
+                false) {
+              shouldHide = true;
+            }
+          {% endif %}
+        {% endfor %}
+        
+        if (shouldHide) {
+          item.style.display = 'none';
+          item.setAttribute('hidden', 'hidden');
+          item.setAttribute('aria-disabled', 'true');
+          item.classList.add('is-disabled');
+        }
+      });
+      
+      // 4. Hide block swatches
+      var blockSwatches = document.querySelectorAll('.block-swatch');
+      
+      blockSwatches.forEach(function(swatch) {
+        var label = swatch.querySelector('label');
+        if (label) {
+          var labelText = label.textContent.trim();
+          var shouldHide = false;
+          
+          {% for variant in product.variants %}
+            {% if variant.metafields.custom.hide_on_storefront != blank and variant.metafields.custom.hide_on_storefront != false and variant.metafields.custom.hide_on_storefront != "false" %}
+              if (labelText === "{{ variant.option1 | escape }}" || 
+                  {% if variant.option2 %}labelText === "{{ variant.option2 | escape }}" || {% endif %}
+                  {% if variant.option3 %}labelText === "{{ variant.option3 | escape }}" || {% endif %}
+                  false) {
+                shouldHide = true;
+              }
+            {% endif %}
+          {% endfor %}
+          
+          if (shouldHide) {
+            swatch.style.display = 'none';
+            swatch.setAttribute('hidden', 'hidden');
+          }
+        }
+      });
+      
+      // 5. Hide color swatches
+      var colorSwatches = document.querySelectorAll('.color-swatch');
+      
+      colorSwatches.forEach(function(swatch) {
+        var input = swatch.querySelector('input');
+        if (input) {
+          var optionValue = input.value;
+          var shouldHide = false;
+          
+          {% for variant in product.variants %}
+            {% if variant.metafields.custom.hide_on_storefront != blank and variant.metafields.custom.hide_on_storefront != false and variant.metafields.custom.hide_on_storefront != "false" %}
+              if (optionValue === "{{ variant.option1 | escape }}" || 
+                  {% if variant.option2 %}optionValue === "{{ variant.option2 | escape }}" || {% endif %}
+                  {% if variant.option3 %}optionValue === "{{ variant.option3 | escape }}" || {% endif %}
+                  false) {
+                shouldHide = true;
+              }
+            {% endif %}
+          {% endfor %}
+          
+          if (shouldHide) {
+            swatch.style.display = 'none';
+            swatch.setAttribute('hidden', 'hidden');
+          }
+        }
+      });
+      
+      // 6. Handle variant selection to prevent selecting hidden variants
+      document.addEventListener('change', function(event) {
+        if (event.target.matches('select[name="id"]')) {
+          var variantId = parseInt(event.target.value, 10);
+          
+          if (hiddenVariantIds.includes(variantId)) {
+            var options = Array.from(event.target.options);
+            for (var i = 0; i < options.length; i++) {
+              var optionId = parseInt(options[i].value, 10);
+              if (!hiddenVariantIds.includes(optionId) && !options[i].disabled) {
+                event.target.value = optionId;
+                event.target.dispatchEvent(new Event('change', { bubbles: true }));
+                break;
+              }
+            }
+          }
+        }
+      });
+    }
+    
+    // Run once when DOM is ready
+    hideVariants();
+    
+    // Run once more when the page is fully loaded
+    window.addEventListener('load', function() {
+      hideVariants();
+    });
+    
+    // Use a debounced observer for DOM changes to prevent lag
+    var observerTimeout;
+    var observer = new MutationObserver(function(mutations) {
+      // Clear any existing timeout
+      if (observerTimeout) {
+        clearTimeout(observerTimeout);
+      }
+      
+      // Set a new timeout to run hideVariants only once after mutations stop
+      observerTimeout = setTimeout(function() {
+        hideVariants();
+      }, 300);
+    });
+    
+    // Observe only the product form area to reduce overhead
+    var productForm = document.querySelector('.product-form');
+    if (productForm) {
+      observer.observe(productForm, { 
+        childList: true, 
+        subtree: true 
+      });
+    } else {
+      // Fallback to a more targeted observation if product form not found
+      observer.observe(document.body, { 
+        childList: true, 
+        subtree: true,
+        attributes: false,
+        characterData: false
+      });
+    }
+  });
+</script>

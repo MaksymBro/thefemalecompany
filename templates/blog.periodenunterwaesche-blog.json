@@ -1,0 +1,49 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "1361646d-7537-4612-b61a-4527dbe22eda": {
+      "type": "image-with-text-overlay",
+      "settings": {
+        "reveal_on_scroll": true,
+        "section_height": "small",
+        "image": "shopify://shop_images/Header_Web_Cherry_291bff7f-6e50-407e-9c2d-4c31cad960c7.jpg",
+        "subheading": "Läuft bei dir?",
+        "title": "Periodenunterwäsche",
+        "content": "<p><strong>Sau(g)stark</strong> und nur<strong> 1mm </strong>dicker als normale Unterwäsche.</p>",
+        "button_text": "Zu den Produkten",
+        "button_link": "shopify://collections/periodenunterwaesche-online-kaufen",
+        "link_style": "button",
+        "background_type": "full_width",
+        "text_width": "medium",
+        "text_position": "middle_center",
+        "text_color": "#ffffff",
+        "button_background": "#ff3f46",
+        "button_text_color": "#ffffff",
+        "overlay_color": "#000000",
+        "overlay_opacity": 30
+      }
+    },
+    "main": {
+      "type": "main-blog",
+      "settings": {
+        "show_blog_title": true,
+        "show_tags": true,
+        "show_category": true,
+        "show_excerpt": true,
+        "articles_per_page": 9
+      }
+    }
+  },
+  "order": [
+    "1361646d-7537-4612-b61a-4527dbe22eda",
+    "main"
+  ]
+}

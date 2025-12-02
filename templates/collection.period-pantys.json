@@ -1,0 +1,961 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "countdown_timer_H3tGxT": {
+      "type": "countdown-timer",
+      "blocks": {
+        "text_Q9E8Py": {
+          "type": "text",
+          "settings": {
+            "text": "<p><strong>Bis zu 30% Rabatt mit unserem geheimen Code</strong> 🔥 Finde es im Checkout heraus !!</p>",
+            "offset_top_desktop": 20,
+            "offset_bottom_desktop": 20,
+            "offset_top_mobile": 10,
+            "offset_bottom_mobile": 10
+          }
+        },
+        "countdown_timer_BiNPCW": {
+          "type": "countdown_timer",
+          "settings": {
+            "show_countdown_words": true,
+            "countdown_start_date": "2025-11-09",
+            "countdown_start_time_hour": "18",
+            "countdown_start_time_minute": "00",
+            "countdown_date": "2025-11-09",
+            "countdown_time_hour": "23",
+            "countdown_time_minute": "59",
+            "timer_link": "",
+            "timer_font_size_mobile": 1.2,
+            "text_font_size_mobile": 0.6,
+            "timer_font_size_desktop": 4.5,
+            "text_font_size_desktop": 1.5,
+            "offset_top_desktop": 20,
+            "offset_bottom_desktop": 20,
+            "offset_top_mobile": 10,
+            "offset_bottom_mobile": 10
+          }
+        }
+      },
+      "block_order": [
+        "text_Q9E8Py",
+        "countdown_timer_BiNPCW"
+      ],
+      "name": "Countdown timer",
+      "settings": {
+        "countdown_text_color": "#1a1a1a",
+        "background_color": "#FFF0F0",
+        "text_color": "#1a1a1a"
+      }
+    },
+    "collection-banner": {
+      "type": "collection-banner",
+      "settings": {
+        "show_collection_image": true,
+        "show_collection_title": true,
+        "show_collection_description": true,
+        "section_height": "small",
+        "text_width": "medium",
+        "heading_font_family": "circular",
+        "image_heading_color": "#ffe6e6",
+        "image_text_color": "#ffe6e6",
+        "image_overlay_color": "#1a1a1a",
+        "image_overlay_opacity": 25,
+        "quick_links": ""
+      }
+    },
+    "pagefly_section_d4a4qz": {
+      "type": "pagefly-section",
+      "disabled": true,
+      "settings": {
+        "section_id": "pf-43e5af48"
+      }
+    },
+    "4882da3e-a7b7-48ff-992c-fd877cc635e9": {
+      "type": "logo-list",
+      "blocks": {
+        "logo_zxHgeJ": {
+          "type": "logo",
+          "disabled": true,
+          "settings": {
+            "link": "shopify://collections/bestseller"
+          }
+        },
+        "template--17669741314314__4882da3e-a7b7-48ff-992c-fd877cc635e9-logo-1": {
+          "type": "logo",
+          "settings": {
+            "logo": "shopify://shop_images/Seamless_Bubble_3.png",
+            "link": "shopify://collections/seamless-nahtlose-periodenunterwaesche"
+          }
+        },
+        "template--17669741314314__4882da3e-a7b7-48ff-992c-fd877cc635e9-logo-2": {
+          "type": "logo",
+          "settings": {
+            "logo": "shopify://shop_images/Organic_Cotton_1.png",
+            "link": "shopify://collections/bio-baumwolle-periodenunterwaesche"
+          }
+        },
+        "logo_WtJVYh": {
+          "type": "logo",
+          "settings": {
+            "logo": "shopify://shop_images/Frame_1_92fa4174-2881-493a-83f1-ef54ef4c6788.png",
+            "link": "/collections/periodenunterwaesche-online-kaufen?sort_by=manual&filter.p.m.filters.collection=Tape"
+          }
+        },
+        "template--17669741314314__4882da3e-a7b7-48ff-992c-fd877cc635e9-logo-5": {
+          "type": "logo",
+          "settings": {
+            "logo": "shopify://shop_images/Lace_Bubble_1.png",
+            "link": "shopify://collections/lace-spitze-periodenunterwaesche"
+          }
+        },
+        "template--17669741314314__4882da3e-a7b7-48ff-992c-fd877cc635e9-logo-3": {
+          "type": "logo",
+          "settings": {
+            "logo": "shopify://shop_images/Mesh_Bubble.png",
+            "link": "shopify://collections/mesh-periodenunterwaesche"
+          }
+        },
+        "template--17669741314314__4882da3e-a7b7-48ff-992c-fd877cc635e9-logo-4": {
+          "type": "logo",
+          "disabled": true,
+          "settings": {
+            "logo": "shopify://shop_images/Animal_Bubble.png",
+            "link": "shopify://collections/animal-leo-periodenunterwaesche"
+          }
+        },
+        "template--17669741314314__4882da3e-a7b7-48ff-992c-fd877cc635e9-logo-6": {
+          "type": "logo",
+          "settings": {
+            "logo": "shopify://shop_images/v-cut_Bubble_1.png",
+            "link": "shopify://collections/v-cut-periodenunterwaesche"
+          }
+        },
+        "logo_4KrbAG": {
+          "type": "logo",
+          "settings": {
+            "logo": "shopify://shop_images/Bubble-Curve_da247c1e-3ca1-48db-9458-eea74d4a7203.png",
+            "link": "shopify://collections/seamless-curve-collection"
+          }
+        },
+        "1a595d10-1a26-4a67-a847-2130549ea881": {
+          "type": "logo",
+          "settings": {
+            "logo": "shopify://shop_images/Gutschein_Bubble_big.png",
+            "link": "shopify://products/geschenkgutschein"
+          }
+        }
+      },
+      "block_order": [
+        "logo_zxHgeJ",
+        "template--17669741314314__4882da3e-a7b7-48ff-992c-fd877cc635e9-logo-1",
+        "template--17669741314314__4882da3e-a7b7-48ff-992c-fd877cc635e9-logo-2",
+        "logo_WtJVYh",
+        "template--17669741314314__4882da3e-a7b7-48ff-992c-fd877cc635e9-logo-5",
+        "template--17669741314314__4882da3e-a7b7-48ff-992c-fd877cc635e9-logo-3",
+        "template--17669741314314__4882da3e-a7b7-48ff-992c-fd877cc635e9-logo-4",
+        "template--17669741314314__4882da3e-a7b7-48ff-992c-fd877cc635e9-logo-6",
+        "logo_4KrbAG",
+        "1a595d10-1a26-4a67-a847-2130549ea881"
+      ],
+      "settings": {
+        "reveal_on_scroll": false,
+        "layout": "carousel",
+        "max_logos_mobile": 10,
+        "max_width_logo_desktop": 150,
+        "max_width_logo_mobile": 100,
+        "logo_background": "rgba(0,0,0,0)",
+        "section_container_width": "md",
+        "section_background_color": "rgba(0,0,0,0)",
+        "section_spacing_top": 32,
+        "section_spacing_bottom": 32,
+        "section_spacing_different_mobile": true,
+        "section_spacing_top_mobile": 0,
+        "section_spacing_bottom_mobile": 0
+      }
+    },
+    "countdown_timer_TEEbYj": {
+      "type": "countdown-timer",
+      "blocks": {
+        "text_XgbL9b": {
+          "type": "text",
+          "settings": {
+            "text": "<p><strong>Neuer Color Drop:</strong> Schon morgen launchen wir weitere Lace Produkte in der Farbe Magenta 🍇</p>",
+            "offset_top_desktop": 20,
+            "offset_bottom_desktop": 20,
+            "offset_top_mobile": 10,
+            "offset_bottom_mobile": 10
+          }
+        },
+        "countdown_timer_CHCYqN": {
+          "type": "countdown_timer",
+          "settings": {
+            "show_countdown_words": true,
+            "countdown_start_date": "2024-11-04",
+            "countdown_start_time_hour": "14",
+            "countdown_start_time_minute": "00",
+            "countdown_date": "2024-11-04",
+            "countdown_time_hour": "23",
+            "countdown_time_minute": "59",
+            "timer_link": "shopify://collections/periodenunterwaesche-online-kaufen",
+            "timer_font_size_mobile": 2.5,
+            "text_font_size_mobile": 0.8,
+            "timer_font_size_desktop": 4.5,
+            "text_font_size_desktop": 1.5,
+            "offset_top_desktop": 20,
+            "offset_bottom_desktop": 20,
+            "offset_top_mobile": 10,
+            "offset_bottom_mobile": 10
+          }
+        }
+      },
+      "block_order": [
+        "text_XgbL9b",
+        "countdown_timer_CHCYqN"
+      ],
+      "settings": {
+        "countdown_text_color": "#cc0807",
+        "background_color": "#fff0f0",
+        "text_color": "#de2a2a"
+      }
+    },
+    "main": {
+      "type": "main-collection",
+      "blocks": {
+        "0871d722-ba82-412b-bc83-ae0948e295a2": {
+          "type": "image",
+          "disabled": true,
+          "settings": {
+            "subheading": "",
+            "title": "Bis zu 20% Rabatt!",
+            "content": "<p>Erhalte bis zu 20% Mengenrabatt ab dem Kauf von <strong>3+ Period Pantys oder Daysics®</strong>. Du kannst beliebige Styles mischen.</p>",
+            "link_text": "",
+            "link_url": "",
+            "link_style": "link",
+            "text_position": "middle_left",
+            "background": "#ffd4d6",
+            "subheading_color": "#942a3b",
+            "heading_color": "#942a3b",
+            "text_color": "#942a3b",
+            "button_background": "#ffffff",
+            "button_text_color": "#1e316a",
+            "image_overlay_color": "#000000",
+            "image_overlay_opacity": 0
+          }
+        },
+        "f86bb837-4a49-49c6-9951-80f42b6a1b93": {
+          "type": "image",
+          "settings": {
+            "subheading": "Stay Dry® Technologie",
+            "title": "",
+            "content": "<p>Saugstarke Membran, nur <strong>1 mm dicker</strong> als normale Unterwäsche und trotzdem <strong>auslaufsicher</strong>. </p>",
+            "link_text": "erfahre mehr",
+            "link_url": "#stay-dry",
+            "link_style": "link",
+            "text_position": "middle_left",
+            "background": "#ffe6e6",
+            "subheading_color": "rgba(0,0,0,0)",
+            "heading_color": "rgba(0,0,0,0)",
+            "text_color": "#942a3b",
+            "button_background": "#ffffff",
+            "button_text_color": "rgba(0,0,0,0)",
+            "image_overlay_color": "#000000",
+            "image_overlay_opacity": 0
+          }
+        }
+      },
+      "block_order": [
+        "0871d722-ba82-412b-bc83-ae0948e295a2",
+        "f86bb837-4a49-49c6-9951-80f42b6a1b93"
+      ],
+      "settings": {
+        "products_per_page": 48,
+        "mobile_products_per_row": "2",
+        "desktop_products_per_row": 4,
+        "show_all_colors": true,
+        "hide_from_product_title_start": "Period Panty –",
+        "show_sort_by": true,
+        "show_filters": true,
+        "show_filter_group_name": true,
+        "show_color_swatch": true,
+        "open_first_filter_group": false,
+        "filter_position": "drawer",
+        "promotion_position": "top",
+        "promotion_height": "small"
+      }
+    },
+    "custom_html_i7aHeA": {
+      "type": "custom-html",
+      "name": "Custom HTML_new",
+      "settings": {
+        "subheading": "AUSLAUFSICHER DURCH DEN TAG",
+        "title": "Stay Dry® Technologie",
+        "html": "",
+        "add_vertical_spacing": false,
+        "disable_inside_spacing": false,
+        "background_type": "full_width",
+        "background": "#ffe6e6",
+        "text_color": "rgba(0,0,0,0)"
+      }
+    },
+    "feda577e-11fc-46a6-b585-7c78638f36a1": {
+      "type": "multi-column",
+      "blocks": {
+        "template--17669741314314__feda577e-11fc-46a6-b585-7c78638f36a1-item-1": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/panty_layer_closeup_layer1.jpg",
+            "image_width": 100,
+            "image_border": "rgba(0,0,0,0)",
+            "title": "1. Schicht: Stay Dry® Membran",
+            "content": "<p>Saugt Flüssigkeit innerhalb weniger Sekunden auf. Für <strong>trockenes Tragegefühl</strong>.</p>",
+            "link_text": "",
+            "link_url": "",
+            "link_style": "link",
+            "text_alignment": "left",
+            "vertical_alignment": "start"
+          }
+        },
+        "template--17669741314314__feda577e-11fc-46a6-b585-7c78638f36a1-item-2": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/panty_layer_closeup_layer2_alt.jpg",
+            "image_width": 100,
+            "image_border": "rgba(0,0,0,0)",
+            "title": "2. Schicht: Ultra absorbierende Faser",
+            "content": "<p><strong>Speichert</strong> die Flüssigkeit und schließt sie sicher ein.</p>",
+            "link_text": "",
+            "link_url": "",
+            "link_style": "link",
+            "text_alignment": "left",
+            "vertical_alignment": "start"
+          }
+        },
+        "template--17669741314314__feda577e-11fc-46a6-b585-7c78638f36a1-item-3": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/Wasserabweisende-Membran.png",
+            "image_width": 100,
+            "image_border": "rgba(0,0,0,0)",
+            "title": "3. Schicht: Wasserdichtes Gewebe",
+            "content": "<p>Lässt keine Flüssigkeit durch, <strong>keine Auslaufgefahr</strong>.</p>",
+            "link_text": "",
+            "link_url": "",
+            "link_style": "link",
+            "text_alignment": "left",
+            "vertical_alignment": "start"
+          }
+        },
+        "template--17669741314314__feda577e-11fc-46a6-b585-7c78638f36a1-item-4": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/panty_layer_closeup_layer4_070ad79d-1f21-4c24-8941-cc2cf0159468.jpg",
+            "image_width": 100,
+            "image_border": "rgba(0,0,0,0)",
+            "title": "4. Schicht: Hautfreundliche Außenschicht",
+            "content": "<p>Hautfreundlicher Oberstoff für <strong>komfortables Tragegefühl</strong>.</p>",
+            "link_text": "",
+            "link_url": "",
+            "link_style": "link",
+            "text_alignment": "left",
+            "vertical_alignment": "start"
+          }
+        }
+      },
+      "block_order": [
+        "template--17669741314314__feda577e-11fc-46a6-b585-7c78638f36a1-item-1",
+        "template--17669741314314__feda577e-11fc-46a6-b585-7c78638f36a1-item-2",
+        "template--17669741314314__feda577e-11fc-46a6-b585-7c78638f36a1-item-3",
+        "template--17669741314314__feda577e-11fc-46a6-b585-7c78638f36a1-item-4"
+      ],
+      "name": "Multi-column_reoptimized",
+      "settings": {
+        "reveal_on_scroll": true,
+        "stack_items": false,
+        "subheading": "",
+        "title": "",
+        "content": "<p>Saugstarke Einlage, nur <strong>1 mm dicker</strong> als normale Unterwäsche und trotzdem <strong>auslaufsicher</strong>. Ohne Biozide & PFAs. So hält sie dicht:</p>",
+        "column_alignment": "center",
+        "mobile_item_size": "medium",
+        "desktop_item_size": "medium",
+        "spacing": "tight",
+        "background": "#ffe6e6",
+        "text_color": "rgba(0,0,0,0)"
+      }
+    },
+    "6df6aa54-d7ca-4d51-8172-71d083a6ae85": {
+      "type": "video",
+      "settings": {
+        "subheading": "",
+        "title": "",
+        "video": "shopify://files/videos/leakproof_layer_compliation_480noaudio1mbit.mp4",
+        "video_url": "",
+        "background_type": "boxed",
+        "video_size": "small",
+        "autoplay": true,
+        "show_video_controls": false,
+        "background": "#ffe6e6",
+        "text_color": "rgba(0,0,0,0)"
+      }
+    },
+    "7cc3d404-c5c7-4cfc-8124-8c91cd082923": {
+      "type": "button",
+      "settings": {
+        "start_year": 2025,
+        "start_month": 1,
+        "start_day": 1,
+        "start_time": "10:00",
+        "end_year": 2050,
+        "end_month": 12,
+        "end_day": 31,
+        "end_time": "10:00",
+        "button_text": "Zurück nach oben",
+        "button_link": "#top",
+        "button_link_new_window": false,
+        "button_details": "",
+        "button_style": "primary",
+        "button_outline": false,
+        "button_shadow": false,
+        "button_size": "md",
+        "button_fit": "inline",
+        "section_container_width": "md",
+        "section_text_alignment": "center",
+        "section_background_color": "#ffe6e6",
+        "section_spacing_top": 0,
+        "section_spacing_bottom": 32,
+        "section_spacing_different_mobile": false,
+        "section_spacing_top_mobile": 0,
+        "section_spacing_bottom_mobile": 0
+      }
+    },
+    "c8301c43-1254-4976-8f39-0d3af5d27dae": {
+      "type": "pagefly-section",
+      "settings": {
+        "section_id": "pf-914450bf"
+      }
+    },
+    "6a453231-19fd-480f-bd79-5a5ad1c669a9": {
+      "type": "section-header",
+      "settings": {
+        "start_year": 2025,
+        "start_month": 1,
+        "start_day": 1,
+        "start_time": "10:00",
+        "end_year": 2050,
+        "end_month": 12,
+        "end_day": 31,
+        "end_time": "10:00",
+        "section_subheading": "Mehr Reviews auf Reviews.io",
+        "section_heading": "",
+        "allow_heading_override": false,
+        "section_short_description": "",
+        "heading_size": "h3",
+        "highest_hierarchy": false,
+        "section_heading_font_family": "default",
+        "short_description_font_size": "medium",
+        "section_text_color": "rgba(0,0,0,0)",
+        "section_heading_color": "rgba(0,0,0,0)",
+        "section_subheading_color": "rgba(0,0,0,0)",
+        "section_container_width": "sm",
+        "section_background_color": "rgba(0,0,0,0)",
+        "section_spacing_top": 32,
+        "section_spacing_bottom": 16,
+        "section_spacing_different_mobile": true,
+        "section_spacing_top_mobile": 24,
+        "section_spacing_bottom_mobile": 8
+      }
+    },
+    "17067007329ffdb02d": {
+      "type": "apps",
+      "blocks": {
+        "reviews_io_reviewsio_rating_bar_KDxczQ": {
+          "type": "shopify://apps/reviews-io/blocks/reviewsio-rating-bar/92a082e5-b297-4e88-b428-ac96cbc505f9",
+          "settings": {
+            "widget_id": "WzwJIZk4v5mPVFUO"
+          }
+        }
+      },
+      "block_order": [
+        "reviews_io_reviewsio_rating_bar_KDxczQ"
+      ],
+      "settings": {
+        "include_horizontal_margins": true,
+        "include_vertical_margins": false
+      }
+    },
+    "spacer_Pmr4Xx": {
+      "type": "spacer",
+      "settings": {
+        "height": 16,
+        "different_mobile_height": false,
+        "mobile_height": 0,
+        "background_color": "rgba(0,0,0,0)"
+      }
+    },
+    "609b6ac0-94db-46fb-942f-37e93ec6659c": {
+      "type": "image-with-text",
+      "blocks": {
+        "template--17669741314314__609b6ac0-94db-46fb-942f-37e93ec6659c-item-1": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/03_Periodenunterwaesche-hoch-geschnitten-769675_8885b332-bbfa-429a-a90f-0cd3b66671c3.jpg",
+            "tab_label": "",
+            "subheading": "Feuchtgebiete? Gibt's woanders.",
+            "title": "Stay Dry Layer Technologie™",
+            "content": "<p>Unsere <strong>Stay Dry Layer Technologie™</strong> saugt Flüssigkeit blitzschnell auf, sodass du auf dem Trockenen bleibst. Die von Expert*innen entwickelte Stay Dry Layer Technology™ in der Menstruationsunterwäsche bietet <strong>mit 4 Schichten</strong> die optimale Saugkraft und bleibt dabei <strong>atmungsaktiv</strong>.</p><p>Die Supersaugpower von Periodenunterwäsche funktioniert dank innovativer Technologie. In den Schritt der Period Panty ist eine smarte, absorbierende Schicht eingearbeitet. Zwei Schichten sorgen dafür, dass Flüssigkeit zum einen schnell aufgesaugt und zum anderen fest eingeschlossen wird. Sie ist so flach in die Panty eingearbeitet, dass sie kaum auffällt. Super comfy Tragegefühl garantiert, von Windelgefühl keine Spur.</p>",
+            "button_text": "",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--17669741314314__609b6ac0-94db-46fb-942f-37e93ec6659c-item-1"
+      ],
+      "settings": {
+        "reveal_on_scroll": true,
+        "background_type": "full_width",
+        "background_overlap": "image",
+        "image_position": "left",
+        "text_alignment": "center",
+        "cycle_speed": 8,
+        "accent_background": "rgba(0,0,0,0)",
+        "text_color": "rgba(0,0,0,0)",
+        "button_background": "rgba(0,0,0,0)",
+        "button_text_color": "rgba(0,0,0,0)"
+      }
+    },
+    "5234b890-eacd-4bc7-a285-91de319f80ad": {
+      "type": "image-with-text",
+      "blocks": {
+        "template--17669741314314__5234b890-eacd-4bc7-a285-91de319f80ad-item-1": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/2023-06-01-AT-HOME-IN-YOUR-SKIN-8515.jpg",
+            "tab_label": "",
+            "subheading": "Period Pantys – auslaufsicher, bequem & wie deine Lieblingsunterwäsche",
+            "title": "Vorteile von Periodenunterwäsche: Kein Windelgefühl, nur Komfort",
+            "content": "<p>Unsere Periodenpantys sind saugfähig, weich und geben dir in jeder Situation ein sicheres Gefühl. </p><p>Weiche Stoffe schmiegen sich an deinen Körper, ohne zu verrutschen. <strong>Ob Slip, Hipster oder String</strong> – du hast eine große Auswahl an Modellen, die sich deiner Figur anpassen. </p><p>Viele Kund*innen berichten, dass sie sich damit den ganzen Tag rundum wohl und auslaufsicher fühlen. So verbinden unsere Periodenpantys Funktion, Komfort und Sicherheit auf natürliche Weise.</p>",
+            "button_text": "",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--17669741314314__5234b890-eacd-4bc7-a285-91de319f80ad-item-1"
+      ],
+      "settings": {
+        "reveal_on_scroll": true,
+        "background_type": "full_width",
+        "background_overlap": "image",
+        "image_position": "right",
+        "text_alignment": "center",
+        "cycle_speed": 8,
+        "accent_background": "rgba(0,0,0,0)",
+        "text_color": "rgba(0,0,0,0)",
+        "button_background": "rgba(0,0,0,0)",
+        "button_text_color": "rgba(0,0,0,0)"
+      }
+    },
+    "6eaa494e-eafe-4a2b-83f7-a759ad31cb51": {
+      "type": "image-with-text",
+      "blocks": {
+        "template--17669741314314__6eaa494e-eafe-4a2b-83f7-a759ad31cb51-item-1": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/01_Periodenslip-530002.jpg",
+            "tab_label": "",
+            "subheading": "Auf Schadstoffe getestet & hautfreundliche Materialien",
+            "title": "Materialien für gute Periodenunterwäsche",
+            "content": "<p>Unsere Periodenpantys bestehen aus hautfreundlichen Materialien, die auf Schadstoffe getestet sind. </p><p>Die Periodenunterwäsche ist frei von Silberchlorid und enthält keine Biozide. Dadurch ist sie besonders sanft zur Haut und kann bedenkenlos getragen werden. Für die Pflege spülst du die Pantys nach dem Tragen zunächst mit kaltem Wasser aus, damit sich das Blut löst. </p><p>Anschließend kannst du sie bei <strong>40 oder 60</strong> <strong>Grad waschen</strong>, je nach Materialangabe. Danach einfach an der Luft trocknen lassen. So bleibt die Periodenunterwäsche hygienisch sauber und lange angenehm zu tragen.</p>",
+            "button_text": "",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--17669741314314__6eaa494e-eafe-4a2b-83f7-a759ad31cb51-item-1"
+      ],
+      "settings": {
+        "reveal_on_scroll": true,
+        "background_type": "full_width",
+        "background_overlap": "image",
+        "image_position": "left",
+        "text_alignment": "center",
+        "cycle_speed": 8,
+        "accent_background": "rgba(0,0,0,0)",
+        "text_color": "rgba(0,0,0,0)",
+        "button_background": "rgba(0,0,0,0)",
+        "button_text_color": "rgba(0,0,0,0)"
+      }
+    },
+    "6cb43d1a-8f6d-4cf7-813f-67ffae9a140d": {
+      "type": "image-with-text",
+      "blocks": {
+        "template--17669741314314__6cb43d1a-8f6d-4cf7-813f-67ffae9a140d-item-1": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/2021-06-19-FEMALE-COMPANY-PERIOD-PANTY-5586_ret_1_1.png",
+            "tab_label": "",
+            "subheading": "Mehr kaufen, mehr sparen – Periodenslips im Sale",
+            "title": "Teuer? Den Preis wert – smarte Wahl bei Periodenprodukten",
+            "content": "<p>Periodenunterwäsche kaufen lohnt sich: Vor allem auf lange Sicht kannst du Kosten sparen, weil die Pantys wiederverwendbar sind. </p><p>Mit unseren Mengenrabatten kannst du dir eine individuelle Auswahl für deine gesamte Periode zusammenstellen. Im Periodenunterwäsche Sale findest du außerdem regelmäßig günstige Bundles. </p><p>So wird nachhaltige Monatshygiene zur smarten Wahl.</p>",
+            "button_text": "",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--17669741314314__6cb43d1a-8f6d-4cf7-813f-67ffae9a140d-item-1"
+      ],
+      "name": "Image with text",
+      "settings": {
+        "reveal_on_scroll": true,
+        "background_type": "full_width",
+        "background_overlap": "image",
+        "image_position": "right",
+        "text_alignment": "center",
+        "cycle_speed": 8,
+        "accent_background": "rgba(0,0,0,0)",
+        "text_color": "rgba(0,0,0,0)",
+        "button_background": "rgba(0,0,0,0)",
+        "button_text_color": "rgba(0,0,0,0)"
+      }
+    },
+    "custom_html_Gd78VT": {
+      "type": "custom-html",
+      "name": "NEW custom HTML",
+      "settings": {
+        "subheading": "",
+        "title": "",
+        "html": "<div style=\"color:#333;padding:40px 20px;line-height:1.6;font-size:16px;background:none;\">\n  <h2 style=\"text-align:center;margin-top:40px;font-size:24px;color:#000;\">Periodenunterwäsche – nachhaltiger Schutz während der Periode</h2>\n  <p>Periodenunterwäsche ist spezielle Funktionsunterwäsche, die optisch kaum von normaler Unterwäsche zu unterscheiden ist. Sie ersetzt Tampons oder Binden vollständig und bietet zuverlässigen Schutz, selbst an starken Tagen. Dank der innovativen <strong>Stay Dry Layer Technologie™</strong> nehmen die Pantys Flüssigkeit schnell auf, speichern sie sicher und bleiben dabei angenehm trocken. Modelle in <strong>Extra</strong> und <strong>Ultra Strong</strong> wurden speziell für starke Blutungen entwickelt und bieten dir rundum Sicherheit – im Alltag, beim Sport oder in der Nacht.</p>\n  <p>Durch ihre atmungsaktiven und auslaufsicheren Eigenschaften gilt Periodenunterwäsche als hygienisch, komfortabel und besonders nachhaltig. Sie ist eine moderne Alternative zu Einwegprodukten und in verschiedenen Kollektionen für deine individuellen Bedürfnisse erhältlich.</p>\n</div>",
+        "add_vertical_spacing": true,
+        "disable_inside_spacing": false,
+        "background_type": "full_width",
+        "background": "rgba(0,0,0,0)",
+        "text_color": "rgba(0,0,0,0)"
+      }
+    },
+    "gallery_UNjCQt": {
+      "type": "gallery",
+      "blocks": {
+        "image_qRUmwb": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/2023-06-01-AT-HOME-IN-YOUR-SKIN-7782.jpg",
+            "caption": ""
+          }
+        },
+        "image_aFhEPz": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/02_Periodenunterwaesche_online_Bestellen_bb63a441-9709-4e17-897e-69c0879cc4d1-117743.jpg",
+            "caption": ""
+          }
+        },
+        "image_tiPDwc": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Header_Collection_Period_Panty.jpg",
+            "caption": ""
+          }
+        },
+        "image_aaaLWH": {
+          "type": "image",
+          "disabled": true,
+          "settings": {
+            "image": "shopify://shop_images/2023-11-28-FEMALE-COMPANY-XMAS19181.jpg",
+            "caption": ""
+          }
+        },
+        "image_LEqUhU": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/01_Periodenunterwaesche_viel_Blut_1300x_cb4661aa-0461-47ae-b88b-45e8b7b562d0.jpg",
+            "caption": ""
+          }
+        }
+      },
+      "block_order": [
+        "image_qRUmwb",
+        "image_aFhEPz",
+        "image_tiPDwc",
+        "image_aaaLWH",
+        "image_LEqUhU"
+      ],
+      "name": "NEW gallery",
+      "settings": {
+        "show_arrows": false,
+        "subheading": "",
+        "title": "",
+        "section_header_short_description": "<p>Your short description.</p>",
+        "section_header_heading_size": "h3",
+        "section_header_highest_hierarchy": false,
+        "section_header_short_description_font_size": "medium",
+        "section_container_width": "fluid",
+        "section_text_alignment": "center",
+        "background": "rgba(0,0,0,0)",
+        "text_color": "rgba(0,0,0,0)",
+        "section_heading_color": "rgba(0,0,0,0)",
+        "section_subheading_color": "rgba(0,0,0,0)",
+        "section_heading_font_family": "default",
+        "section_spacing_top": 48,
+        "section_spacing_bottom": 48,
+        "section_spacing_different_mobile": false,
+        "section_spacing_top_mobile": 0,
+        "section_spacing_bottom_mobile": 0
+      }
+    },
+    "custom_html_PaCNEF": {
+      "type": "custom-html",
+      "name": "NEW custom HTML 1",
+      "settings": {
+        "subheading": "",
+        "title": "",
+        "html": "<div style=\"color:#333;padding:40px 20px;line-height:1.6;font-size:16px;background:none;\">\n  <h3 style=\"text-align:center;margin-top:40px;font-size:24px;color:#000;\">Was ist Periodenunterwäsche?</h3>\n  <p>Periodenunterwäsche ist eine wiederverwendbare Alternative zu Tampons oder Binden und kombiniert Funktionalität mit Tragekomfort. Sie sieht aus wie normale Unterwäsche, bietet aber durch ihr innovatives Mehrschicht-System einen zuverlässigen Schutz, selbst an starken Tagen. Besonders beliebt sind Modelle aus \n  <a href=\"https://buy.thefemalecompany.com/collections/bio-baumwolle-periodenunterwaesche\" style=\"color:#d83a56;text-decoration:none;font-weight:500;\">Bio-Baumwolle</a> \n  für sensible Haut oder aus \n  <a href=\"https://buy.thefemalecompany.com/collections/modal-kollektion\" style=\"color:#d83a56;text-decoration:none;font-weight:500;\">weichen Modal-Fasern</a> \n  für ein besonders angenehmes Tragegefühl.</p>\n\n  <div style=\"background-color:#fff;border-radius:0;padding:25px;margin:25px 0;border:1px solid #e8b6b6;\">\n    <h4 style=\"color:#d83a56;margin-bottom:10px;\">Das 4-Schichten-System:</h4>\n    <ul style=\"list-style:none;padding-left:0;margin:0;\">\n      <li style=\"margin-bottom:10px;\">\n<strong>1. Trockenes Tragegefühl:</strong> Die körpernahe Schicht saugt Flüssigkeit blitzschnell auf und trocknet innerhalb weniger Sekunden.</li>\n      <li style=\"margin-bottom:10px;\">\n<strong>2. Schnelle Absorption:</strong> Die nächste Schicht speichert die Flüssigkeit innerhalb kürzester Zeit und schließt sie sicher ein.</li>\n      <li style=\"margin-bottom:10px;\">\n<strong>3. Auslaufsichere Membran:</strong> Sorgt für sicheren Auslaufschutz, auch bei längerer Tragedauer.</li>\n      <li>\n<strong>4. Hautfreundliche Materialien:</strong> Für die äußere Lage nutzen wir geprüfte Materialien wie Bio-Baumwolle oder Modal für ein besonders weiches und atmungsaktives Tragegefühl.</li>\n    </ul>\n  </div>\n\n  <p>Diese Technologie macht Periodenunterwäsche zu einer hygienischen, komfortablen und nachhaltigen Alternative zu klassischen Einwegprodukten wie Tampons oder Binden.</p>\n\n  <h3 style=\"text-align:center;margin-top:40px;font-size:24px;color:#000;\">Wie funktioniert Periodenunterwäsche?</h3>\n  <p>Periodenunterwäsche kombiniert bequeme Materialien mit innovativer Textiltechnologie. Durch die <strong>Stay Dry Layer Technologie™</strong> wird Flüssigkeit schnell aufgenommen und zuverlässig eingeschlossen. Gleichzeitig bleibt das Material atmungsaktiv und sorgt für ein trockenes, angenehmes Tragegefühl – ganz ohne Einwegprodukte oder Kompromisse beim Komfort.</p>\n\n  <h3 style=\"text-align:center;margin-top:40px;font-size:24px;color:#000;\">Vergleich: Periodenunterwäsche im Überblick</h3>\n\n <div style=\"overflow-x:auto;margin-top:25px;\">\n    <table style=\"width:100%;border-collapse:collapse;font-size:15px;background-color:#fff;border-radius:0;overflow:hidden;\">\n      <thead style=\"background-color:#f8b8c2;color:#fff;\">\n        <tr>\n          <th style=\"padding:12px;text-align:left;\">Produkt</th>\n          <th style=\"padding:12px;text-align:left;\">Funktionsweise</th>\n          <th style=\"padding:12px;text-align:left;\">Tragekomfort</th>\n          <th style=\"padding:12px;text-align:left;\">Nachhaltigkeit</th>\n          <th style=\"padding:12px;text-align:left;\">Pflegeaufwand</th>\n          <th style=\"padding:12px;text-align:left;\">Geeignet für starke Tage</th>\n        </tr>\n      </thead>\n      <tbody>\n        <tr style=\"border-bottom:1px solid #f2f2f2;\">\n          <td style=\"padding:12px;\"><strong>Periodenunterwäsche</strong></td>\n          <td style=\"padding:12px;\">Mehrschicht-System mit auslaufsicherer Saugschicht</td>\n          <td style=\"padding:12px;\">Sehr hoch, fühlt sich wie normale Unterwäsche an</td>\n          <td style=\"padding:12px;\">Wiederverwendbar, reduziert Müll</td>\n          <td style=\"padding:12px;\">Nach Gebrauch waschen, 2–5 Jahre nutzbar</td>\n          <td style=\"padding:12px;\">Auch für starke Tage geeignet (Modelle in Extra und Ultra Strong verfügbar)</td>\n        </tr>\n        <tr style=\"border-bottom:1px solid #f2f2f2;\">\n          <td style=\"padding:12px;\"><strong>Tampon</strong></td>\n          <td style=\"padding:12px;\">Saugkörper wird in die Vagina eingeführt</td>\n          <td style=\"padding:12px;\">Mittel, Risiko von Trockenheit</td>\n          <td style=\"padding:12px;\">Einwegprodukt, hoher Abfall</td>\n          <td style=\"padding:12px;\">Nach jeder Nutzung entsorgen</td>\n          <td style=\"padding:12px;\">Auch bei starker Blutung</td>\n        </tr>\n        <tr style=\"border-bottom:1px solid #f2f2f2;\">\n          <td style=\"padding:12px;\"><strong>Binde</strong></td>\n          <td style=\"padding:12px;\">Wird in die Unterwäsche geklebt</td>\n          <td style=\"padding:12px;\">Mittel, spürbar beim Tragen</td>\n          <td style=\"padding:12px;\">Einwegprodukt, hoher Abfall</td>\n          <td style=\"padding:12px;\">Nach jeder Nutzung entsorgen</td>\n          <td style=\"padding:12px;\">Kann verrutschen</td>\n        </tr>\n        <tr>\n          <td style=\"padding:12px;\"><strong>Menstruationstasse</strong></td>\n          <td style=\"padding:12px;\">Silikonbecher sammelt Blut in der Vagina</td>\n          <td style=\"padding:12px;\">Anfangs gewöhnungsbedürftig</td>\n          <td style=\"padding:12px;\">Mehrfach nutzbar (bis 10 Jahre)</td>\n          <td style=\"padding:12px;\">Auskochen &amp; reinigen</td>\n          <td style=\"padding:12px;\">Sehr geeignet</td>\n        </tr>\n      </tbody>\n    </table>\n  </div>\n</div>\n<div style=\"color:#333;padding:40px 20px;line-height:1.6;font-size:16px;background:none;\">\n\n  <h2 style=\"text-align:center;font-size:28px;color:#000;margin-bottom:20px;\">Periodenunterwäsche im Vergleich: die Vorteile auf einen Blick</h2>\n  <p>Im Vergleich zu Tampons, Binden und Menstruationstassen bietet Periodenunterwäsche gleich mehrere Vorteile: Sie ist komfortabel, hygienisch und wiederverwendbar. Da sie sich wie normale Unterwäsche trägt und gleichzeitig nachhaltigen Schutz bietet, gilt sie für viele als die beste Periodenunterwäsche im Alltag.</p>\n<h3 style=\"margin-top:40px;font-size:24px;color:#000;text-align:center;\">Vorteile von Periodenunterwäsche</h3>\n<p style=\"max-width:700px;margin:10px auto 40px;\">Periodenunterwäsche überzeugt mit vielen Vorteilen und ist längst mehr als nur eine Alternative zu Tampons oder Binden. Sie steht für Komfort, Nachhaltigkeit und Sicherheit – Tag und Nacht.</p>\n\n<div style=\"display:flex;flex-wrap:wrap;gap:20px;justify-content:center;margin-bottom:40px;\">\n\n  <div style=\"flex:1 1 280px;min-width:260px;background-color:#fff;border:1px solid #f4b9c0;border-radius:0;padding:25px;text-align:center;\">\n    <div style=\"font-size:28px;\">🌱</div>\n    <h4 style=\"margin:10px 0;color:#d83a56;font-size:18px;\">Nachhaltigkeit</h4>\n    <p style=\"font-size:15px;line-height:1.6;\">Ein Slip ersetzt über Jahre hinweg hunderte Einwegprodukte wie Tampons oder Binden – weniger Abfall, mehr Umweltbewusstsein.</p>\n  </div>\n\n  <div style=\"flex:1 1 280px;min-width:260px;background-color:#fff;border:1px solid #f4b9c0;border-radius:0;padding:25px;text-align:center;\">\n    <div style=\"font-size:28px;\">💸</div>\n    <h4 style=\"margin:10px 0;color:#d83a56;font-size:18px;\">Kostenersparnis</h4>\n    <p style=\"font-size:15px;line-height:1.6;\">Einmal investieren, jahrelang sparen – durch Wiederverwendbarkeit amortisiert sich die Anschaffung schnell.</p>\n  </div>\n\n  <div style=\"flex:1 1 280px;min-width:260px;background-color:#fff;border:1px solid #f4b9c0;border-radius:0;padding:25px;text-align:center;\">\n    <div style=\"font-size:28px;\">🩲</div>\n    <h4 style=\"margin:10px 0;color:#d83a56;font-size:18px;\">Hoher Tragekomfort</h4>\n    <p style=\"font-size:15px;line-height:1.6;\">Dünn, atmungsaktiv und flexibel – fühlt sich wie normale Unterwäsche an. Besonders beliebt sind <a href=\"https://buy.thefemalecompany.com/collections/active\" style=\"color:#d83a56;text-decoration:none;font-weight:500;\">sportliche Modelle</a>.</p>\n  </div>\n\n  <div style=\"flex:1 1 280px;min-width:260px;background-color:#fff;border:1px solid #f4b9c0;border-radius:0;padding:25px;text-align:center;\">\n    <div style=\"font-size:28px;\">✨</div>\n    <h4 style=\"margin:10px 0;color:#d83a56;font-size:18px;\">Einfache Anwendung</h4>\n    <p style=\"font-size:15px;line-height:1.6;\">Kein Einführen wie bei Tampons oder Cups – einfach anziehen, wohlfühlen und den Tag genießen.</p>\n  </div>\n\n  <div style=\"flex:1 1 280px;min-width:260px;background-color:#fff;border:1px solid #f4b9c0;border-radius:0;padding:25px;text-align:center;\">\n    <div style=\"font-size:28px;\">🛡️</div>\n    <h4 style=\"margin:10px 0;color:#d83a56;font-size:18px;\">Diskret &amp; sicher</h4>\n    <p style=\"font-size:15px;line-height:1.6;\">Das Mehrschicht-System verhindert Auslaufen – auch bei Bewegung oder im Schlaf.</p>\n  </div>\n\n  <div style=\"flex:1 1 280px;min-width:260px;background-color:#fff;border:1px solid #f4b9c0;border-radius:0;padding:25px;text-align:center;\">\n    <div style=\"font-size:28px;\">🧼</div>\n    <h4 style=\"margin:10px 0;color:#d83a56;font-size:18px;\">Hygienisch</h4>\n    <p style=\"font-size:15px;line-height:1.6;\">Antibakterielle Schichten verhindern unangenehme Gerüche – frisch und sauber den ganzen Tag.</p>\n  </div>\n\n  <div style=\"flex:1 1 280px;min-width:260px;background-color:#fff;border:1px solid #f4b9c0;border-radius:0;padding:25px;text-align:center;\">\n    <div style=\"font-size:28px;\">👙</div>\n    <h4 style=\"margin:10px 0;color:#d83a56;font-size:18px;\">Vielseitig</h4>\n    <p style=\"font-size:15px;line-height:1.6;\">In vielen Schnitten &amp; Saugstärken erhältlich – von Slip bis High Waist. Perfekt, wenn sie unter Kleidung <a href=\"https://buy.thefemalecompany.com/collections/seamless-nahtlose-periodenunterwaesche\" style=\"color:#d83a56;text-decoration:none;font-weight:500;\">unsichtbar bleiben</a> soll.</p>\n  </div>\n\n</div>\n\n<p style=\"max-width:100%;margin:20px auto;\">Genau diese Vorteile werden in unabhängigen Tests hervorgehoben. Wer nach der besten Periodenunterwäsche sucht, sollte neben Komfort und Nachhaltigkeit auch die passende Saugstärke und den Schnitt für den eigenen Alltag berücksichtigen.</p>\n\n  <h3 style=\"text-align:center;margin-top:40px;font-size:24px;color:#000;\">Periodenunterwäsche – wie funktioniert das?</h3>\n  <p>Periodenunterwäsche funktioniert durch ein spezielles Mehrschicht-System, das Flüssigkeit aufnimmt, speichert und gleichzeitig ein trockenes Tragegefühl gewährleistet. Sie ersetzt Tampons oder Binden an leichten bis mittleren Tagen und kann bei starker Blutung als zusätzlicher Schutz dienen. Damit ist sie eine hygienische, nachhaltige und komfortable Lösung für die Menstruation.</p>\n\n  <h3 style=\"text-align:center;margin-top:40px;font-size:24px;color:#000;\">Stay Dry Layer Technologie™ – der Aufbau im Detail</h3>\n  <p>Unsere Periodenunterwäsche wurde gemeinsam mit Textiltechnikerinnen und Gynäkologinnen entwickelt. Sie ist nur etwa 1 mm dicker als normale Unterwäsche, bietet aber durch ihr innovatives Schichtsystem eine außergewöhnliche Saugkraft.</p>\n\n  <div style=\"background-color:#fff;border-radius:0;padding:25px;margin:25px 0;border:1px solid #e8b6b6;\">\n    <ul style=\"list-style:none;padding-left:0;margin:0;\">\n      <li style=\"margin-bottom:10px;\">\n<strong>Layer 1: Stay Dry Layer™</strong> – leitet Flüssigkeit blitzschnell von der Haut weg und sorgt innerhalb weniger Sekunden für ein trockenes Gefühl.</li>\n      <li style=\"margin-bottom:10px;\">\n<strong>Layer 2: Ultra-absorbierende Schicht</strong> – speichert Menstruationsflüssigkeit sicher und bindet sie.</li>\n      <li style=\"margin-bottom:10px;\">\n<strong>Layer 3: Wasserdichte Membran</strong> – bildet eine auslaufsichere Barriere, auch bei längerer Tragedauer.</li>\n      <li>\n<strong>Layer 4: Weiche Bio-Baumwolle</strong> – hautfreundlich, angenehm und super komfortabel.</li>\n    </ul>\n  </div>\n\n  <h3 style=\"text-align:center;margin-top:40px;font-size:24px;color:#000;\">Wie lange kann man Periodenunterwäsche tragen?</h3>\n  <p>Die Tragedauer von Periodenunterwäsche hängt von der individuellen Blutungsstärke und der Saugfähigkeit des Modells ab. An leichten Tagen kann sie bis zu zwölf Stunden getragen werden, an normalen Tagen etwa sechs bis acht Stunden. Bei starker Blutung sollte man die Unterwäsche nach vier bis sechs Stunden wechseln oder zusätzlich Tampons oder eine Menstruationstasse verwenden. Als Orientierung gilt: Ein Slip ersetzt je nach Modell die Flüssigkeitsaufnahme von ein bis drei Tampons.</p>\n\n  <h3 style=\"text-align:center;margin-top:40px;font-size:24px;color:#000;\">Wie oft sollte man Periodenunterwäsche wechseln?</h3>\n  <p>Im Alltag bedeutet das: Ein bis zwei Wechsel pro Tag sind in der Regel ausreichend. Bei stärkerer Blutung kann ein zusätzlicher Wechsel am Nachmittag oder Abend sinnvoll sein. Spätestens wenn sich die Unterwäsche feucht anfühlt, sollte man sie austauschen, um Hygiene und Tragekomfort zu gewährleisten.</p>\n\n  <h3 style=\"text-align:center;margin-top:40px;font-size:24px;color:#000;\">Lebensdauer und Haltbarkeit von Periodenunterwäsche</h3>\n  <p>Periodenunterwäsche ist für eine langfristige Nutzung konzipiert. Bei richtiger Pflege kann sie in der Regel zwei bis fünf Jahre getragen werden. Gerade für Einsteigerinnen, etwa mit den ersten Zyklen, sind <a href=\"https://buy.thefemalecompany.com/collections/period-pantys-bikinis-fur-teenager\" style=\"color:#d83a56;text-decoration:none;font-weight:500;\">Menstruationsslips für Teens</a> eine praktische und nachhaltige Lösung. Die Haltbarkeit hängt dabei von mehreren Faktoren ab: von der Häufigkeit des Tragens, der Waschtemperatur und den verwendeten Waschmitteln. Mit der Zeit können die antibakteriellen Eigenschaften nachlassen oder die Materialien durch Abnutzung ihre volle Funktion verlieren. Dennoch lässt sich die Unterwäsche auch danach weiterhin als normale Slip verwenden. Wer die Lebensdauer maximieren möchte, sollte die Pflegehinweise des Herstellers beachten und auf Trockner, Weichspüler und aggressive Reiniger verzichten.</p>\n</div>\n<div style=\"background-color:#DC5368;padding:60px 30px;border-radius:0;\">\n\n  <h3 style=\"font-size:26px;color:#fff;text-align:center;margin-bottom:10px;\">Pflege &amp; Waschhinweise für Periodenunterwäsche</h3>\n  <p style=\"text-align:center;color:#fff;max-width:700px;margin:0 auto 40px;line-height:1.6;\">Damit deine Periodenunterwäsche lange hygienisch, saugstark und angenehm bleibt, kommt es auf die richtige Pflege an. So bleibt sie jahrelang wie neu:</p>\n\n  <div style=\"display:flex;flex-wrap:wrap;gap:20px;justify-content:center;margin-bottom:40px;\">\n\n    <div style=\"flex:1 1 260px;min-width:240px;background-color:#fff;border:none;border-radius:0;padding:25px;text-align:center;box-shadow:0 3px 8px rgba(0,0,0,0.1);\">\n      <div style=\"font-size:30px;\">💧</div>\n      <h4 style=\"margin:10px 0;color:#DC5268;font-size:18px;\">Ausspülen</h4>\n      <p style=\"font-size:15px;line-height:1.6;color:#333;\">Nach dem Tragen sofort mit kaltem Wasser ausspülen, bis das Wasser klar bleibt. So werden Rückstände entfernt, bevor sie eintrocknen.</p>\n    </div>\n\n    <div style=\"flex:1 1 260px;min-width:240px;background-color:#fff;border:none;border-radius:0;padding:25px;text-align:center;box-shadow:0 3px 8px rgba(0,0,0,0.1);\">\n      <div style=\"font-size:30px;\">🧺</div>\n      <h4 style=\"margin:10px 0;color:#DC5268;font-size:18px;\">Waschen</h4>\n      <p style=\"font-size:15px;line-height:1.6;color:#333;\">In der Maschine bei 30–40 °C mit mildem Waschmittel reinigen. Einige Modelle sind bis 60 °C waschbar – bitte Herstellerangaben beachten.</p>\n    </div>\n\n    <div style=\"flex:1 1 260px;min-width:240px;background-color:#fff;border:none;border-radius:0;padding:25px;text-align:center;box-shadow:0 3px 8px rgba(0,0,0,0.1);\">\n      <div style=\"font-size:30px;\">🚫</div>\n      <h4 style=\"margin:10px 0;color:#DC5268;font-size:18px;\">Schonend behandeln</h4>\n      <p style=\"font-size:15px;line-height:1.6;color:#333;\">Keinen Weichspüler, kein Bleichmittel und keine aggressiven Reiniger verwenden – sie können die schützende Membran beschädigen.</p>\n    </div>\n\n    <div style=\"flex:1 1 260px;min-width:240px;background-color:#fff;border:none;border-radius:0;padding:25px;text-align:center;box-shadow:0 3px 8px rgba(0,0,0,0.1);\">\n      <div style=\"font-size:30px;\">🌬️</div>\n      <h4 style=\"margin:10px 0;color:#DC5268;font-size:18px;\">Trocknen</h4>\n      <p style=\"font-size:15px;line-height:1.6;color:#333;\">Am besten an der Luft trocknen lassen. Vermeide den Trockner – Hitze kann die Saugschichten und das Gewebe beeinträchtigen.</p>\n    </div>\n\n    <div style=\"flex:1 1 260px;min-width:240px;background-color:#fff;border:none;border-radius:0;padding:25px;text-align:center;box-shadow:0 3px 8px rgba(0,0,0,0.1);\">\n      <div style=\"font-size:30px;\">🧦</div>\n      <h4 style=\"margin:10px 0;color:#DC5268;font-size:18px;\">Aufbewahrung</h4>\n      <p style=\"font-size:15px;line-height:1.6;color:#333;\">Nach dem vollständigen Trocknen wie normale Unterwäsche im Schrank lagern – sauber, trocken und gut belüftet.</p>\n    </div>\n\n  </div>\n\n  <p style=\"text-align:center;color:#fff;max-width:700px;margin:0 auto;line-height:1.6;\">Mit dieser Pflege bleibt deine Periodenunterwäsche bis zu fünf Jahre hygienisch, saugstark und angenehm zu tragen.</p>\n\n</div>\n<div style=\"padding:40px 20px;line-height:1.6\">\n\n  <h3 style=\"text-align:center;font-size:24px;color:#000;margin-bottom:15px;\">Was tun, wenn Periodenunterwäsche stinkt?</h3>\n  <p>Normalerweise sollte bei richtiger Pflege kein Geruch entstehen. Falls doch, hilft es, die Slips einige Stunden in kaltem Wasser mit etwas Essig oder Natron einzuweichen. Danach wie gewohnt bei 30–40 °C waschen und vollständig trocknen lassen. So bleibt die Unterwäsche frisch und hygienisch.</p>\n\n  <h3 style=\"text-align:center;margin-top:40px;font-size:24px;color:#000;\">Wie viele Slips braucht man?</h3>\n  <p>Die ideale Anzahl an Periodenslips hängt vom individuellen Alltag ab. Wer täglich waschen kann, kommt oft schon mit drei bis vier Slips aus. Praktischer sind jedoch etwa fünf bis sieben Modelle, sodass immer ein frisches Paar verfügbar ist, während andere gewaschen oder getrocknet werden. Für Frauen mit stärkerer Blutung oder längeren Zyklen kann ein größerer Vorrat sinnvoll sein – so bleibt man flexibel und entspannt während der Periode.</p>\n\n  <h3 style=\"text-align:center;margin-top:40px;font-size:24px;color:#000;\">Beste Periodenunterwäsche finden</h3>\n  <p>Nachdem klar ist, wie viele Slips im Alltag sinnvoll sind, stellt sich die nächste Frage: Welche ist die beste Periodenunterwäsche für mich? Die Antwort hängt von deinen persönlichen Bedürfnissen ab. Bei der Auswahl sollte man auf mehrere Kriterien achten:</p>\n\n  <ul style=\"list-style:none;padding-left:0;margin:25px 0;\">\n    <li style=\"margin-bottom:15px;padding-left:20px;position:relative;\">\n      <span style=\"position:absolute;left:0;top:6px;width:8px;height:8px;background-color:#d83a56;border-radius:50%;\"></span>\n      <strong>Saugstärke:</strong> Modelle für leichte, mittlere oder starke Tage wählen – so bleibt der Schutz zuverlässig. Praktische Optionen sind unsere \n      <a href=\"https://buy.thefemalecompany.com/collections/period-panty-sets\" style=\"color:#d83a56;text-decoration:none;font-weight:500;\">Spar-Sets</a>, wenn man mehrere Saugstärken kombinieren möchte.\n    </li>\n\n    <li style=\"margin-bottom:15px;padding-left:20px;position:relative;\">\n      <span style=\"position:absolute;left:0;top:6px;width:8px;height:8px;background-color:#d83a56;border-radius:50%;\"></span>\n      <strong>Schnitt &amp; Passform:</strong> Slip, Hipster oder High Waist – entscheidend ist, dass man sich wohlfühlt.\n    </li>\n\n    <li style=\"margin-bottom:15px;padding-left:20px;position:relative;\">\n      <span style=\"position:absolute;left:0;top:6px;width:8px;height:8px;background-color:#d83a56;border-radius:50%;\"></span>\n      <strong>Materialien:</strong> Viele Hersteller bieten Varianten aus Bio-Baumwolle oder veganer Produktion an.\n    </li>\n\n    <li style=\"margin-bottom:15px;padding-left:20px;position:relative;\">\n      <span style=\"position:absolute;left:0;top:6px;width:8px;height:8px;background-color:#d83a56;border-radius:50%;\"></span>\n      <strong>Nachhaltigkeit:</strong> Langlebige Stoffe und die Vermeidung von Bioziden sind wichtige Pluspunkte.\n    </li>\n\n    <li style=\"margin-bottom:15px;padding-left:20px;position:relative;\">\n      <span style=\"position:absolute;left:0;top:6px;width:8px;height:8px;background-color:#d83a56;border-radius:50%;\"></span>\n      <strong>Alltagstauglichkeit:</strong> Es gibt auch spezielle Slips für Sport, Nacht oder sogar Perioden-Badeanzüge.\n    </li>\n  </ul>\n\n  <p>Wer sich unsicher ist, findet in unabhängigen Periodenunterwäsche Tests hilfreiche Vergleiche. So lässt sich leicht herausfinden, welche Marke oder welches Modell für die eigenen Bedürfnisse die beste Wahl ist.</p>\n\n</div>",
+        "add_vertical_spacing": true,
+        "disable_inside_spacing": false,
+        "background_type": "full_width",
+        "background": "#ffe6e6",
+        "text_color": "rgba(0,0,0,0)"
+      }
+    },
+    "39d569d6-89ee-4c4c-af84-8d5ad5312425": {
+      "type": "faq",
+      "blocks": {
+        "9839cb17-4191-4e51-8bfd-81e28f54db5c": {
+          "type": "faq_collection",
+          "settings": {
+            "metaobject_handle": "faq-collection-periodpanty-purchase-assistance",
+            "show_title": true
+          }
+        },
+        "35517a97-9151-4545-819c-d874291d2438": {
+          "type": "faq_collection",
+          "settings": {
+            "metaobject_handle": "faq-collection-periodpanty-usage",
+            "show_title": true
+          }
+        }
+      },
+      "block_order": [
+        "9839cb17-4191-4e51-8bfd-81e28f54db5c",
+        "35517a97-9151-4545-819c-d874291d2438"
+      ],
+      "disabled": true,
+      "settings": {
+        "show_navigation": true,
+        "enable_schema": true,
+        "section_header_subheading": "Ihr fragt, wir antworten",
+        "section_header_heading": "Häufig gestellte Fragen",
+        "section_header_short_description": "",
+        "section_header_heading_size": "h3",
+        "section_header_highest_hierarchy": false,
+        "section_header_short_description_font_size": "medium",
+        "section_container_width": "md",
+        "section_text_alignment": "left",
+        "section_background_color": "#dc5268",
+        "section_text_color": "#ffffff",
+        "section_heading_color": "#ffffff",
+        "section_subheading_color": "rgba(0,0,0,0)",
+        "section_heading_font_family": "default",
+        "section_spacing_top": 44,
+        "section_spacing_bottom": 28,
+        "section_spacing_different_mobile": true,
+        "section_spacing_top_mobile": 32,
+        "section_spacing_bottom_mobile": 32
+      }
+    },
+    "faq_KeGmUr": {
+      "type": "faq",
+      "blocks": {
+        "question_JejxeR": {
+          "type": "question",
+          "settings": {
+            "title": "Wie funktioniert Periodenunterwäsche?",
+            "answer": "<p>Periodenunterwäsche, auch Menstruationsunterwäsche genannt, ist eine wiederverwendbare Unterhose, die speziell für die Menstruation entwickelt wurde. Sie besteht aus mehreren Schichten, die Flüssigkeit aufnehmen, speichern und durch eine wasserdichte Membran zurückhalten. Die Funktionsweise sorgt dafür, dass Menstruationsblut sicher eingeschlossen bleibt und du dich den ganzen Tag wohlfühlen kannst. Im Vergleich zu Binden und Tampons sind sie eine nachhaltige Alternative, die Komfort und zuverlässigen Schutz verbindet.</p>"
+          }
+        },
+        "question_QPBcYX": {
+          "type": "question",
+          "settings": {
+            "title": "Welche Periodenunterwäsche ist die beste für mich?",
+            "answer": "<p>Welche Periodenunterwäsche die beste ist, hängt von deinen Bedürfnissen ab. Für leichte Tage eignet sich ein Modell mit geringer Saugfähigkeit, für starke Periode oder starke Blutung empfiehlt sich Periodenunterwäsche extra stark oder ein Testsieger aus dem Periodenunterwäsche Vergleich. Viele Kundinnen nutzen die Pantys auch als Ergänzung zu Tampons oder Menstruationstassen. Die beste Periodenunterwäsche kombiniert Komfort, zuverlässigen Auslaufschutz und eine große Auswahl an Styles, damit du dich in jeder Situation sicher fühlst. </p>"
+          }
+        },
+        "question_RgR6Cm": {
+          "type": "question",
+          "settings": {
+            "title": "Wie lange kann man Periodenunterwäsche tragen?",
+            "answer": "<p>Wie lange du Periodenunterwäsche tragen kannst, hängt von der Saugfähigkeit und der Stärke deiner Periode ab. Viele Modelle halten mehrere Stunden, ohne dass du sie wechseln musst. Bei starker Blutung empfehlen wir, die Unterhose nach 8 bis 12 Stunden zu wechseln. Erfahrungen zeigen, dass sie im Alltag und auch über Nacht getragen werden kann, solange die Saugstärke zu deinem Zyklustag passt.</p>"
+          }
+        },
+        "question_QcbhfU": {
+          "type": "question",
+          "settings": {
+            "title": "Wie lange halten periodenunterwäsche?",
+            "answer": "<p>Periodenunterwäsche ist besonders langlebig und bietet über viele Zyklen hinweg zuverlässigen Schutz. Dank hochwertiger Materialien und moderner Verarbeitung bleibt die Funktion auch nach regelmäßigem Tragen erhalten. Entscheidend ist eine schonende Pflege, damit die Pantys ihre Form, den Tragekomfort und die saugfähigen Eigenschaften langfristig bewahren.</p>"
+          }
+        },
+        "question_ifVqhA": {
+          "type": "question",
+          "settings": {
+            "title": "Wie oft muss man Periodenunterwäsche wechseln?",
+            "answer": "<p>Im Vergleich zu herkömmlichen Menstruationsprodukten musst du Periodenunterwäsche weniger häufig wechseln. Je nach Saugstärke reicht es, die Panty einmal am Tag zu wechseln, bei sehr starker Periode oder langen Tagen kann ein zusätzliches Paar sinnvoll sein. Viele Kundinnen berichten, dass sie sich dadurch sicher fühlen und flexibler sind als mit Binden und Tampons. Mit einer kleinen Rotation von mehreren Slips hast du jederzeit die passende Periodenunterwäsche griffbereit.</p>"
+          }
+        },
+        "question_Mtabbg": {
+          "type": "question",
+          "settings": {
+            "title": "Wie wäscht man Periodenunterwäsche richtig?",
+            "answer": "<p>Periodenunterwäsche waschen ist einfach. Du kannst die Slips kurz kalt ausspülen und danach bei 40 Grad oder bei 60 Grad waschbar, je nach Modell, in die Maschine geben. Manche Kundinnen haben Erfahrungen gemacht, dass Modelle ohne Bioziden besonders langlebig sind. Danach an der Luft trocknen lassen, am besten nicht in den Trockner. So bleibt die Funktionsweise erhalten und die Unterhose schützt dich über viele Zyklen hinweg zuverlässig.</p>"
+          }
+        },
+        "question_3dRCyH": {
+          "type": "question",
+          "settings": {
+            "title": "Wie benutzt man Periodenunterwäsche?",
+            "answer": "<p>Du kannst Periodenunterwäsche genauso anziehen wie jede andere Unterhose. Sie ersetzt Tampons oder Binden vollständig oder kann als zusätzliche Sicherheit bei starker Periode getragen werden. Durch die spezielle Konstruktion mit Membransystem wird Menstruationsblut aufgenommen und sicher eingeschlossen. Viele Kundinnen nutzen die Pantys tagsüber oder nachts, weil sie sich so sicher fühlen und weniger Gedanken ums ständige Wechseln machen müssen. So wird die Perioden-Panty zu einem festen Bestandteil deiner Monatshygiene.</p>"
+          }
+        },
+        "question_kgzCnY": {
+          "type": "question",
+          "settings": {
+            "title": "Riecht oder stinkt Periodenunterwäsche nach dem Tragen?",
+            "answer": "<p>Gute Periodenunterwäsche ist so entwickelt, dass Gerüche zuverlässig reduziert werden. Die Schichten schließen das Menstruationsblut ein, sodass sich kein unangenehmer Geruch entwickelt. Wichtig ist, dass du die Periodenslips regelmäßig wechselst und nach dem Tragen beim Waschen die Pflegehinweise beachtest. Periodenunterwäsche Erfahrungen zeigen, dass die Pantys bei richtiger Reinigung geruchsfrei bleiben. Wenn du sie nach jeder Nutzung ausspülst und danach wäscht, bleibt die Unterhose hygienisch und frisch für viele Anwendungen.</p>"
+          }
+        },
+        "question_9rtVfJ": {
+          "type": "question",
+          "settings": {
+            "title": "Wie viel Periodenunterwäsche braucht man für einen Zyklus?",
+            "answer": "<p>Wie viele Slips du brauchst, hängt davon ab, wie stark deine Periode ist und wie oft du die Pantys wechseln möchtest. Für einen kompletten Zyklus empfehlen viele Kundinnen zwischen 4 und 6 Stück, also im Schnitt etwa einen Slip pro Tag deiner Periode. So kannst du sie regelmäßig tragen, waschen und danach an der Luft trocknen lassen. Mit einer kleinen Auswahl bist du flexibel für leichte und starke Tage. Die beste Periodenunterwäsche ist dabei wiederverwendbar, saugfähig und passt sich deinem Zyklus perfekt an.</p>"
+          }
+        },
+        "faq_collection_dMnD7x": {
+          "type": "faq_collection",
+          "settings": {
+            "metaobject_handle": "{{ collection.metafields.custom.seo_microschema.value }}",
+            "show_title": true
+          }
+        }
+      },
+      "block_order": [
+        "question_JejxeR",
+        "question_QPBcYX",
+        "question_RgR6Cm",
+        "question_QcbhfU",
+        "question_ifVqhA",
+        "question_Mtabbg",
+        "question_3dRCyH",
+        "question_kgzCnY",
+        "question_9rtVfJ",
+        "faq_collection_dMnD7x"
+      ],
+      "name": "NEW FAQs",
+      "settings": {
+        "show_navigation": true,
+        "enable_schema": true,
+        "section_header_subheading": "Ihr fragt, wir antworten",
+        "section_header_heading": "Häufig gestellte Fragen",
+        "section_header_short_description": "",
+        "section_header_heading_size": "h2",
+        "section_header_highest_hierarchy": false,
+        "section_header_short_description_font_size": "medium",
+        "section_container_width": "md",
+        "section_text_alignment": "left",
+        "section_background_color": "#dc5268",
+        "section_text_color": "#ffffff",
+        "section_heading_color": "#ffffff",
+        "section_subheading_color": "rgba(0,0,0,0)",
+        "section_heading_font_family": "default",
+        "section_spacing_top": 44,
+        "section_spacing_bottom": 28,
+        "section_spacing_different_mobile": true,
+        "section_spacing_top_mobile": 32,
+        "section_spacing_bottom_mobile": 32
+      }
+    },
+    "4f19f758-87c3-4595-ac6d-67ef58cb4b7b": {
+      "type": "button",
+      "settings": {
+        "start_year": 2025,
+        "start_month": 1,
+        "start_day": 1,
+        "start_time": "10:00",
+        "end_year": 2050,
+        "end_month": 12,
+        "end_day": 31,
+        "end_time": "10:00",
+        "button_text": "Zum Hilfe-Center",
+        "button_link": "https://help.thefemalecompany.com/",
+        "button_link_new_window": true,
+        "button_details": "",
+        "button_style": "white",
+        "button_outline": true,
+        "button_shadow": false,
+        "button_size": "md",
+        "button_fit": "inline",
+        "section_container_width": "md",
+        "section_text_alignment": "center",
+        "section_background_color": "#dc5268",
+        "section_spacing_top": 16,
+        "section_spacing_bottom": 44,
+        "section_spacing_different_mobile": true,
+        "section_spacing_top_mobile": 0,
+        "section_spacing_bottom_mobile": 32
+      }
+    },
+    "528ac3ca-ddd2-4007-b700-fbd0a4e2a6ec": {
+      "type": "blog-posts",
+      "settings": {
+        "blog": "periodenunterwaesche-ratgeber",
+        "subheading": "Mehr zum Thema",
+        "title": "Periodenunterwäsche-Ratgeber",
+        "articles_count": 3,
+        "stack_mobile": false,
+        "show_category": true,
+        "show_excerpt": true,
+        "button_text": "Zum Ratgeber",
+        "button_url": "shopify://blogs/periodenunterwaesche-ratgeber",
+        "background": "#fdd1d8",
+        "text_color": "rgba(0,0,0,0)",
+        "button_background": "rgba(0,0,0,0)",
+        "button_text_color": "rgba(0,0,0,0)"
+      }
+    }
+  },
+  "order": [
+    "countdown_timer_H3tGxT",
+    "collection-banner",
+    "pagefly_section_d4a4qz",
+    "4882da3e-a7b7-48ff-992c-fd877cc635e9",
+    "countdown_timer_TEEbYj",
+    "main",
+    "custom_html_i7aHeA",
+    "feda577e-11fc-46a6-b585-7c78638f36a1",
+    "6df6aa54-d7ca-4d51-8172-71d083a6ae85",
+    "7cc3d404-c5c7-4cfc-8124-8c91cd082923",
+    "c8301c43-1254-4976-8f39-0d3af5d27dae",
+    "6a453231-19fd-480f-bd79-5a5ad1c669a9",
+    "17067007329ffdb02d",
+    "spacer_Pmr4Xx",
+    "609b6ac0-94db-46fb-942f-37e93ec6659c",
+    "5234b890-eacd-4bc7-a285-91de319f80ad",
+    "6eaa494e-eafe-4a2b-83f7-a759ad31cb51",
+    "6cb43d1a-8f6d-4cf7-813f-67ffae9a140d",
+    "custom_html_Gd78VT",
+    "gallery_UNjCQt",
+    "custom_html_PaCNEF",
+    "39d569d6-89ee-4c4c-af84-8d5ad5312425",
+    "faq_KeGmUr",
+    "4f19f758-87c3-4595-ac6d-67ef58cb4b7b",
+    "528ac3ca-ddd2-4007-b700-fbd0a4e2a6ec"
+  ]
+}

@@ -1,0 +1,53 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "settings": {
+        "show_title": true,
+        "show_breadcrumbs": true,
+        "page_width": "medium"
+      }
+    },
+    "custom_liquid_Cm8rRf": {
+      "type": "custom-liquid",
+      "disabled": true,
+      "settings": {
+        "subheading": "Find us here",
+        "title": "Store Locator",
+        "liquid": "<p style=\"text-align: center\"><div id=\"progus-store-locator\"></div><script>(function(p,r,o,g,u,s){var a=p.createElement(r);var b=\"?shop=thefemalecompany.myshopify.com&lang=\" +(typeof Shopify!==`undefined`?Shopify.locale:``) +\"&tags=\"+g+\"&city=\"+u+\"&groups=\"+s;a.src=o+b;a.allowfullscreen=!0;a.allow=\"geolocation\";a.frameborder=0;a.setAttribute(\"frameBorder\",\"0\");a.setAttribute(\"allowfullscreen\",\"\");a.width=\"100%\";a.height=\"500px\";p.querySelector(\"#progus-store-locator\").appendChild(a);window.addEventListener(\"message\",(e)=>{if(e.data.pslheight){a.style.height=e.data.pslheight}})})(document,\"iframe\",\"https://sl-widget.proguscommerce.com/main\")</script></p>",
+        "add_vertical_spacing": true,
+        "background_type": "full_width",
+        "background": "rgba(0,0,0,0)",
+        "text_color": "rgba(0,0,0,0)"
+      }
+    },
+    "custom_html_FtDXQR": {
+      "type": "custom-html",
+      "disabled": true,
+      "settings": {
+        "subheading": "Werde Teil von The Female Company",
+        "title": "",
+        "html": "<p style=\"text-align: center\"><iframe src=\"https://drive.google.com/file/d/19PXHMzX-iSEl_DpXHPS2OVOmT6oBalD5/preview\" width=\"330\" height=\"480\" p=\"\">\n</iframe></p>",
+        "add_vertical_spacing": false,
+        "disable_inside_spacing": false,
+        "background_type": "full_width",
+        "background": "rgba(0,0,0,0)",
+        "text_color": "rgba(0,0,0,0)"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "custom_liquid_Cm8rRf",
+    "custom_html_FtDXQR"
+  ]
+}

@@ -1,0 +1,76 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "settings": {
+        "show_title": true,
+        "show_breadcrumbs": true,
+        "page_width": "medium"
+      }
+    },
+    "faq": {
+      "type": "faq",
+      "blocks": {
+        "65750be0-e6e2-470f-a851-c693ed74b8f6": {
+          "type": "question",
+          "settings": {
+            "title": "What is the return policy?",
+            "answer": "<p>Most unopened items in new condition and returned within <strong>90 days</strong> will receive a refund or exchange. Some items have a modified return policy noted on the receipt or packing slip. Items that are opened or damaged or do not have a receipt may be denied a refund or exchange. Items purchased online or in-store may be returned to any store.</p><p>Online purchases may be returned via a major parcel carrier.  <a href=\"https://example.com/returns\" title=\"https://example.com/returns\">Click here</a> to initiate a return.</p>"
+          }
+        },
+        "5e018d58-7cb0-4b0f-a749-3fbc3fcd8582": {
+          "type": "question",
+          "settings": {
+            "title": "How long does it take to process a refund?",
+            "answer": "<p>We will reimburse you for returned items in the same way you paid for them. For example, any amounts deducted from a gift card will be credited back to a gift card. For returns by mail, once we receive your return, we will process it within 4–5 business days. It may take up to 7 days after we process the return to reflect in your account, depending on your financial institution's processing time.</p>"
+          }
+        },
+        "e82944bf-ac2e-4f8b-ab39-b7113a946ab3": {
+          "type": "question",
+          "settings": {
+            "title": "What is the policy for late/non-delivery of items ordered online?",
+            "answer": "<p>Our local teams work diligently to make sure that your order arrives on time, within our normaldelivery hours of 9AM to 8PM in the recipient's time zone. During  busy holiday periods like Christmas, Valentine's and Mother's Day, we may extend our delivery hours before 9AM and after 8PM to ensure that all gifts are delivered on time. If for any reason your gift does not arrive on time, our dedicated Customer Service agents will do everything they can to help successfully resolve your issue.</p><p><a href=\"https://example.com/orders/\" title=\"https://example.com/orders/\">Click here</a> to complete the form with your order-related question(s).</p>"
+          }
+        },
+        "1c2f8eb0-1da4-4b41-8c76-8c6eb7988deb": {
+          "type": "question",
+          "settings": {
+            "title": "When will my credit card be charged?",
+            "answer": "<p>We'll attempt to securely charge your credit card at the point of purchase online. If there's a problem, you'll be notified on the spot and prompted to use another card. Once we receive verification of sufficient funds, your payment will be completed and transferred securely to us. Your account will be charged in 24 to 48 hours.</p>"
+          }
+        },
+        "6d1ee353-0352-4127-b4eb-34c3452ccc5d": {
+          "type": "question",
+          "settings": {
+            "title": "Will I be charged sales tax for online orders?",
+            "answer": "<p>Local and State sales tax will be collected if your recipient's mailing address is in: </p><ul><li>Arizona</li><li>California</li><li>Colorado</li></ul>"
+          }
+        }
+      },
+      "block_order": [
+        "65750be0-e6e2-470f-a851-c693ed74b8f6",
+        "5e018d58-7cb0-4b0f-a749-3fbc3fcd8582",
+        "e82944bf-ac2e-4f8b-ab39-b7113a946ab3",
+        "1c2f8eb0-1da4-4b41-8c76-8c6eb7988deb",
+        "6d1ee353-0352-4127-b4eb-34c3452ccc5d"
+      ],
+      "settings": {
+        "show_navigation": true,
+        "enable_schema": true
+      }
+    }
+  },
+  "order": [
+    "main",
+    "faq"
+  ]
+}

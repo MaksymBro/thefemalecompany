@@ -1,0 +1,391 @@
+{%- assign current_locale = request.locale.iso_code -%}
+
+{%- assign absorbancy_original = 'Light,Medium,Extra+Strong,Ultra+Strong' | split: ',' -%}
+{%- assign absorbancy_en = 'Light,Medium,Extra+Strong,Ultra+Strong' | split: ',' -%}
+{%- assign absorbancy_nl = 'Light,Medium,Extra+Strong,Ultra+Strong' | split: ',' -%}
+{%- assign absorbancy_de = 'Light,Medium,Extra+Strong,Ultra+Strong' | split: ',' -%}
+
+{%- assign style_original = 'Slip,Brief,Tanga,Brazilian,High+Waist,Hipster' | split: ',' -%}
+{%- assign style_en = 'Slip,Brief,Thong,Brazilian,High+Waist,Hipster' | split: ',' -%}
+{%- assign style_nl = 'Slip,Brief,Tanga,Brazilian,Hoge+taille,Hipster' | split: ',' -%}
+{%- assign style_de = 'Slip,Brief,Tanga,Brazilian,Hoch+tailliert,Hipster' | split: ',' -%}
+
+<desktop-navigation>
+  <ul
+    class="header__linklist list--unstyled {% unless bottom_navigation %}hidden-pocket hidden-lap{% endunless %}"
+    role="list"
+  >
+    {%- for link in menu.links -%}
+      {%- assign link_icon_handle = '' -%}
+      {%- assign link_badge_content = '' -%}
+      {%- assign link_title = link.title -%}
+
+      {%- if link.title contains '%%' -%}
+        {%- assign link_icon_handle = link.title | split: '%%' | first | strip -%}
+        {%- assign link_title = link.title | split: '%%' | last -%}
+      {%- endif -%}
+
+      {%- if link_title contains '$$' -%}
+        {%- assign link_badge_content = link_title | split: '$$' | first | strip -%}
+        {%- assign link_title = link_title | split: '$$' | last -%}
+      {%- endif -%}
+
+      {%- assign link_title_downcase = link_title | strip | downcase -%}
+      {%- assign mega_menu_block = '' -%}
+      {%- assign mega_menu_images = '' -%}
+
+      {%- for block in section.blocks -%}
+        {%- assign menu_item_downcase = block.settings.menu_item | strip | downcase -%}
+
+        {%- if menu_item_downcase == link_title_downcase -%}
+          {%- assign mega_menu_block = block -%}
+          {%- break -%}
+        {%- endif -%}
+      {%- endfor -%}
+
+      <li
+        class="header__linklist-item text--small {% if link.links.size > 0 or mega_menu_block != '' %}has-dropdown{% endif %}"
+        data-item-title="{{ link_title | escape }}"
+      >
+        <a
+          class="header__linklist-link link--animated {% if link_icon_handle != blank %}link--with-icon{% endif %} header-link"
+          href="{{ link.url }}"
+          {% if link.links.size > 0 or mega_menu_block != '' %}
+            aria-controls="desktop-menu-{{ forloop.index }}"
+            aria-expanded="false"
+          {% endif %}
+        >
+          {%- if link_icon_handle != blank -%}
+            {%- render 'icon', icon: link_icon_handle -%}
+          {%- endif -%}
+
+          <span class="desktop-nav__link-text">
+            {{- link_title -}}
+          </span>
+          {% if link_badge_content != blank %}
+            <span class="desktop-nav__link-badge">
+            {{ link_badge_content }}
+          </span>
+
+          {% endif %}
+        </a>
+
+        {%- if mega_menu_block != '' -%}
+          {%- assign images_count = 0 -%}
+
+          {%- capture mega_menu_images -%}
+            {%- for i in (1..6) -%}
+              {%- capture image_setting -%}image_{{ i }}{%- endcapture -%}
+
+              {%- if mega_menu_block.settings[image_setting] != blank -%}
+                {%- assign images_count = images_count | plus: 1 -%}
+
+                {%- capture image_heading_setting -%}image_{{ i }}_heading{%- endcapture -%}
+                {%- capture image_text_setting -%}image_{{ i }}_text{%- endcapture -%}
+                {%- capture image_link_setting -%}image_{{ i }}_link{%- endcapture -%}
+
+                {%- capture image_push -%}
+                  <div class="mega-menu__image-wrapper">
+                    {%- assign menu_image = mega_menu_block.settings[image_setting] -%}
+                    {{ menu_image | image_url: width: menu_image.width | image_tag: loading: 'lazy', sizes: '240px', sizes: '240,480,720', class: 'mega-menu__image' }}
+                  </div>
+
+                  {%- if mega_menu_block.settings[image_heading_setting] != '' -%}
+                    <p class="mega-menu__heading heading heading--small">{{ mega_menu_block.settings[image_heading_setting] }}</p>
+                  {%- endif -%}
+
+                  {%- if mega_menu_block.settings[image_text_setting] != '' -%}
+                    <span class="mega-menu__text">{{ mega_menu_block.settings[image_text_setting] }}</span>
+                  {%- endif -%}
+                {%- endcapture -%}
+
+                {%- if mega_menu_block.settings[image_link_setting] != blank -%}
+                  <a href="{{ mega_menu_block.settings[image_link_setting] }}" class="mega-menu__image-push image-zoom">
+                    {{- image_push -}}
+                  </a>
+                {%- else -%}
+                  <div class="mega-menu__image-push image-zoom">
+                    {{- image_push -}}
+                  </div>
+                {%- endif -%}
+              {%- endif -%}
+            {%- endfor -%}
+          {%- endcapture -%}
+
+          {%- if link.links.size > 0 or mega_menu_images != blank -%}
+            <div
+              hidden
+              id="desktop-menu-{{ forloop.index }}"
+              class="mega-menu"
+              {{ mega_menu_block.shopify_attributes }}
+            >
+              <div class="container">
+                <div class="mega-menu__inner">
+                  {%- if mega_menu_block.settings.images_position == 'left' and mega_menu_images != blank -%}
+                    <div class="mega-menu__images-wrapper {% if images_count >= 3 %}mega-menu__images-wrapper--tight{% endif %}">
+                      {{- mega_menu_images -}}
+                    </div>
+                  {%- endif -%}
+
+                  {%- if link.links.size > 0 -%}
+                    <div class="mega-menu__columns-wrapper">
+                      {%- for sub_link in link.links -%}
+                        <div class="mega-menu__column">
+                          {%- assign sub_link_icon_handle = '' -%}
+                          {%- assign sub_link_title = sub_link.title -%}
+
+                          {%- if sub_link.title contains '%%' -%}
+                            {%- assign sub_link_icon_handle = sub_link.title | split: '%%' | first | strip -%}
+                            {%- assign sub_link_title = sub_link.title | split: '%%' | last -%}
+                          {%- endif -%}
+
+                          {%- if sub_link.url == '#' -%}
+                            <span class="mega-menu__title heading heading--small {% if sub_link_icon_handle != blank %}link--with-icon{% endif %}">
+                              {%- if sub_link_icon_handle != blank -%}
+                                {%- render 'icon', icon: sub_link_icon_handle -%}
+                              {%- endif -%}
+
+                              <span class="desktop-nav__link-text">
+                                {{ sub_link_title }}
+                              </span>
+                            </span>
+                          {%- else -%}
+                            <a
+                              href="{{ sub_link.url }}"
+                              class="mega-menu__title heading heading--small {% if sub_link_icon_handle != blank %}link--with-icon{% endif %} header-link"
+                            >
+                              {%- if sub_link_icon_handle != blank -%}
+                                {%- render 'icon', icon: sub_link_icon_handle -%}
+                              {%- endif -%}
+
+                              <span class="desktop-nav__link-text">
+                                {{ sub_link_title }}
+                              </span>
+                            </a>
+                          {%- endif -%}
+
+                          {%- if sub_link.links.size > 0 -%}
+                            <ul class="linklist list--unstyled" role="list">
+                              {%- for sub_sub_link in sub_link.links -%}
+                                <li class="linklist__item">
+                                  {%- assign sub_sub_link_icon_handle = '' -%}
+                                  {%- assign sub_sub_link_title = sub_sub_link.title -%}
+
+                                  {%- if sub_link.title contains '%%' -%}
+                                    {%- assign sub_sub_link_icon_handle = sub_sub_link.title
+                                      | split: '%%'
+                                      | first
+                                      | strip
+                                    -%}
+                                    {%- assign sub_sub_link_title = sub_sub_link.title | split: '%%' | last -%}
+                                  {%- endif -%}
+
+                                  <a
+                                    href="{% if sub_sub_link.url contains 'collection' %}{%- assign menu_url = sub_sub_link.url -%}
+                                            
+                                            {%- if menu_url contains 'filter.p.m.filters.absorbancy=' -%}
+                                              {%- assign parts = menu_url | split: 'filter.p.m.filters.absorbancy=' -%}
+                                              {%- assign after_filter = parts[1] | split: '&' | first -%}
+                                              {%- assign translated_value = '' -%}
+                                              
+                                              {%- for original in absorbancy_original -%}
+                                                {%- if original == after_filter -%}
+                                                  {%- assign index = forloop.index0 -%}
+                                                  {%- case current_locale -%}
+                                                    {%- when 'en' -%}
+                                                      {%- assign translated_value = absorbancy_en[index] -%}
+                                                    {%- when 'nl' -%}
+                                                      {%- assign translated_value = absorbancy_nl[index] -%}
+                                                    {%- when 'de' -%}
+                                                      {%- assign translated_value = absorbancy_de[index] -%}
+                                                  {%- endcase -%}
+                                                  
+                                                  {%- if translated_value != '' -%}
+                                                    {%- assign menu_url = menu_url | replace: after_filter, translated_value | replace: ' ', '+' -%}
+                                                  {%- endif -%}
+                                                {%- endif -%}
+                                              {%- endfor -%}
+                                            {%- endif -%}
+
+                                            {%- if menu_url contains 'filter.p.m.filters.style=' -%}
+                                              {%- assign parts = menu_url | split: 'filter.p.m.filters.style=' -%}
+                                              {%- assign after_filter = parts[1] | split: '&' | first -%}
+                                              {%- assign translated_value = '' -%}
+                                              
+                                              {%- for original in style_original -%}
+                                                {%- if original == after_filter -%}
+                                                  {%- assign index = forloop.index0 -%}
+                                                  {%- case current_locale -%}
+                                                    {%- when 'en' -%}
+                                                      {%- assign translated_value = style_en[index] -%}
+                                                    {%- when 'nl' -%}
+                                                      {%- assign translated_value = style_nl[index] -%}
+                                                    {%- when 'de' -%}
+                                                      {%- assign translated_value = style_de[index] -%}
+                                                  {%- endcase -%}
+                                                  
+                                                  {%- if translated_value != '' -%}
+                                                    {%- assign menu_url = menu_url | replace: after_filter, translated_value | replace: ' ', '+' -%}
+                                                  {%- endif -%}
+                                                {%- endif -%}
+                                              {%- endfor -%}
+                                            {%- endif -%}
+                                            https://{{ shop.domain }}{{ menu_url | split: shop.domain | last }}{% else %}{{ sub_sub_link.url }}{% endif %}"
+                                    class="link--faded {% if sub_sub_link_icon_handle != blank %}link--with-icon{% endif %} header-link"
+                                  >
+                                    {%- if sub_sub_link_icon_handle != blank -%}
+                                      {%- render 'icon', icon: sub_sub_link_icon_handle -%}
+                                    {%- endif -%}
+
+                                    <span class="desktop-nav__link-text">
+                                      {{ sub_sub_link_title }}
+                                    </span>
+                                  </a>
+                                </li>
+                              {%- endfor -%}
+                            </ul>
+                          {%- endif -%}
+                        </div>
+                      {%- endfor -%}
+                    </div>
+                  {%- endif -%}
+
+                  {%- if mega_menu_block.settings.images_position == 'right' and mega_menu_images != blank -%}
+                    <div class="mega-menu__images-wrapper {% if images_count >= 3 %}mega-menu__images-wrapper--tight{% endif %}">
+                      {{- mega_menu_images -}}
+                    </div>
+                  {%- endif -%}
+                </div>
+              </div>
+            </div>
+          {%- endif -%}
+        {%- elsif link.links.size > 0 -%}
+          <ul
+            hidden
+            id="desktop-menu-{{ forloop.index }}"
+            class="nav-dropdown {% if link.levels == 1 %}nav-dropdown--restrict{% endif %} list--unstyled"
+            role="list"
+          >
+            {%- for sub_link in link.links -%}
+              <li class="nav-dropdown__item {% if sub_link.links.size > 0 %}has-dropdown{% endif %}">
+                {%- assign sub_link_icon_handle = '' -%}
+                {%- assign sub_link_title = sub_link.title -%}
+
+                {%- if sub_link.title contains '%%' -%}
+                  {%- assign sub_link_icon_handle = sub_link.title | split: '%%' | first | strip -%}
+                  {%- assign sub_link_title = sub_link.title | split: '%%' | last -%}
+                {%- endif -%}
+
+                <a
+                  class="header-link nav-dropdown__link link--faded {% if sub_link_icon_handle != blank %}link--with-icon{% endif %}"
+                  href="{{ sub_link.url }}"
+                  {% if sub_link.links.size > 0 %}
+                    aria-controls="desktop-menu-{{ forloop.parentloop.index }}-{{ forloop.index }}"
+                    aria-expanded="false"
+                  {% endif %}
+                >
+                  {%- if sub_link_icon_handle != blank -%}
+                    {%- render 'icon', icon: sub_link_icon_handle -%}
+                  {%- endif -%}
+
+                  <span class="desktop-nav__link-text">
+                    {{- sub_link_title -}}
+                  </span>
+
+                  {%- if sub_link.links.size > 0 -%}
+                    {% render 'icon' with 'dropdown-arrow-right', direction_aware: true %}
+                  {%- endif -%}
+                </a>
+
+                {%- if sub_link.links.size > 0 -%}
+                  <ul
+                    hidden
+                    id="desktop-menu-{{ forloop.parentloop.index }}-{{ forloop.index }}"
+                    class="nav-dropdown list--unstyled"
+                    role="list"
+                  >
+                    {%- for sub_sub_link in sub_link.links -%}
+                      <li class="nav-dropdown__item">
+                        {%- assign sub_sub_link_icon_handle = '' -%}
+                        {%- assign sub_sub_link_title = sub_sub_link.title -%}
+
+                        {%- if sub_link.title contains '%%' -%}
+                          {%- assign sub_sub_link_icon_handle = sub_sub_link.title | split: '%%' | first | strip -%}
+                          {%- assign sub_sub_link_title = sub_sub_link.title | split: '%%' | last -%}
+                        {%- endif -%}
+
+                        <a
+                          href="{% if sub_sub_link.url contains 'collection' %}{%- assign menu_url = sub_sub_link.url -%}
+                                  
+                                  {%- if menu_url contains 'filter.p.m.filters.absorbancy=' -%}
+                                    {%- assign parts = menu_url | split: 'filter.p.m.filters.absorbancy=' -%}
+                                    {%- assign after_filter = parts[1] | split: '&' | first -%}
+                                    {%- assign translated_value = '' -%}
+                                    
+                                    {%- for original in absorbancy_original -%}
+                                      {%- if original == after_filter -%}
+                                        {%- assign index = forloop.index0 -%}
+                                        {%- case current_locale -%}
+                                          {%- when 'en' -%}
+                                            {%- assign translated_value = absorbancy_en[index] -%}
+                                          {%- when 'nl' -%}
+                                            {%- assign translated_value = absorbancy_nl[index] -%}
+                                          {%- when 'de' -%}
+                                            {%- assign translated_value = absorbancy_de[index] -%}
+                                          {%- when 'ar' -%}
+                                            {%- assign translated_value = absorbancy_ar[index] -%}
+                                        {%- endcase -%}
+                                        
+                                        {%- if translated_value != '' -%}
+                                          {%- assign menu_url = menu_url | replace: after_filter, translated_value | replace: ' ', '+' -%}
+                                        {%- endif -%}
+                                      {%- endif -%}
+                                    {%- endfor -%}
+                                  {%- endif -%}
+
+                                  {%- if menu_url contains 'filter.p.m.filters.style=' -%}
+                                    {%- assign parts = menu_url | split: 'filter.p.m.filters.style=' -%}
+                                    {%- assign after_filter = parts[1] | split: '&' | first -%}
+                                    {%- assign translated_value = '' -%}
+                                    
+                                    {%- for original in style_original -%}
+                                      {%- if original == after_filter -%}
+                                        {%- assign index = forloop.index0 -%}
+                                        {%- case current_locale -%}
+                                          {%- when 'en' -%}
+                                            {%- assign translated_value = style_en[index] -%}
+                                          {%- when 'nl' -%}
+                                            {%- assign translated_value = style_nl[index] -%}
+                                          {%- when 'de' -%}
+                                            {%- assign translated_value = style_de[index] -%}
+                                        {%- endcase -%}
+                                        
+                                        {%- if translated_value != '' -%}
+                                          {%- assign menu_url = menu_url | replace: after_filter, translated_value | replace: ' ', '+' -%}
+                                        {%- endif -%}
+                                      {%- endif -%}
+                                    {%- endfor -%}
+                                  {%- endif -%}
+                                  https://{{ shop.domain }}{{ menu_url | split: shop.domain | last }}{% else %}{{ sub_sub_link.url }}{% endif %}"
+                          class="nav-dropdown__link link--faded {% if sub_sub_link_icon_handle != blank %}link--with-icon{% endif %}"
+                        >
+                          {%- if sub_sub_link_icon_handle != blank -%}
+                            {%- render 'icon', icon: sub_sub_link_icon_handle -%}
+                          {%- endif -%}
+
+                          <span class="desktop-nav__link-text">
+                            {{ sub_sub_link_title }}
+                          </span>
+                        </a>
+                      </li>
+                    {%- endfor -%}
+                  </ul>
+                {%- endif -%}
+              </li>
+            {%- endfor -%}
+          </ul>
+        {%- endif -%}
+      </li>
+    {%- endfor -%}
+  </ul>
+</desktop-navigation>

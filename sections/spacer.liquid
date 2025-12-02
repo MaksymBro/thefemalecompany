@@ -1,0 +1,60 @@
+<div class="spacer" style="--spacer-height: {{ section.settings.height }}px;{% if section.settings.different_mobile_height %}--spacer-mobile-height: {{ section.settings.mobile_height }}px;{% endif %}{% if section.settings.background_color != 'rgba(0,0,0,0)' %} background-color: {{ section.settings.background_color }};{% endif %}"></div>
+
+{% stylesheet %}
+.spacer {
+  display: block;
+  width: 100%;
+  height: var(--spacer-height);
+}
+
+@media screen and (max-width: 741px) {
+  .spacer {
+    height: var(--spacer-mobile-height, var(--spacer-height));
+  }
+}
+{% endstylesheet %}
+
+{% schema %}
+{
+  "name": "Spacer",
+  "tag": "section",
+  "class": "spacer",
+  "settings": [
+    {
+      "type": "range",
+      "id": "height",
+      "label": "Height",
+      "min": 0,
+      "max": 200,
+      "step": 4,
+      "default": 16
+    },
+    {
+      "type": "checkbox",
+      "id": "different_mobile_height",
+      "label": "Use different height on mobile",
+      "default": false
+    },
+    {
+      "type": "range",
+      "id": "mobile_height",
+      "label": "Mobile height",
+      "min": 0,
+      "max": 200,
+      "step": 4,
+      "default": 0
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background color",
+      "default": "rgba(0,0,0,0)"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Spacer"
+    }
+  ]
+}
+{% endschema %}

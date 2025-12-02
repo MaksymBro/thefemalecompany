@@ -1,0 +1,29 @@
+{% capture callout_box_content %}
+    <div class="callout-box-content">
+        <a href="{{ collection.metafields.custom.callout_box_link }}">
+            <img class="callout-box-img"
+            src="{{ collection.metafields.custom.callout_box_image | image_url: width: 605 }}" 
+            width="605" height="auto"
+            loading="lazy">
+        </a>
+    </div>
+{% endcapture %}
+
+<div class="product-item callout-box">
+    {{ callout_box_content }}
+
+    <style type="text/css">
+        .product-item.callout-box{
+            grid-area: {{ callout_box_row }} / {{ callout_box_column }} / {{  callout_box_row }} / {{ callout_box_column | plus: 2}};
+        }
+        @media screen and (max-width: 1399px){
+        .product-item.callout-box{
+            grid-area: {{ callout_box_row_mobile }} / {{ callout_box_column_mobile }} / {{  callout_box_row_mobile }} / {{ callout_box_column_mobile | plus: 2}};
+            }
+        }
+        .product-item.callout-box img{
+            width: 100%;
+            height: auto;
+        }
+    </style>
+</div>

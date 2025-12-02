@@ -1,0 +1,646 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-product",
+      "blocks": {
+        "22970e8f-ea75-46ec-9255-8ceeb78511f8": {
+          "type": "back_in_stock_signup",
+          "settings": {
+            "klaviyo_list_id": "V6RJtz"
+          }
+        },
+        "variant_picker": {
+          "type": "variant_picker",
+          "settings": {
+            "hide_sold_out_variants": false,
+            "selector_mode": "dropdown",
+            "color_mode": "color",
+            "size_chart_page": "{{ product.metafields.descriptors.size_guide.value }}",
+            "absorbancy_chart_page": ""
+          }
+        },
+        "f0d2cc62-543d-4ad8-bdd7-18c3d04a52c1": {
+          "type": "fulfillment_time_info",
+          "disabled": true,
+          "settings": {}
+        },
+        "yotpo_loyalty_rewards_product_points_module_app_block_HT6aTR": {
+          "type": "shopify://apps/yotpo-loyalty-rewards/blocks/product-points-module-app-block/2f9660df-5018-4e02-9868-ee1fb88d6ccd",
+          "settings": {}
+        },
+        "02190bcc-9ff0-4f94-8898-2b2cb44da8ea": {
+          "type": "low_on_stock_info",
+          "settings": {}
+        },
+        "quantity_selector": {
+          "type": "quantity_selector",
+          "settings": {}
+        },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_payment_button": false,
+            "show_gift_card_recipient": false,
+            "atc_button_background": "rgba(0,0,0,0)",
+            "atc_button_text_color": "rgba(0,0,0,0)",
+            "buy_now_button_background": "rgba(0,0,0,0)",
+            "buy_now_button_text_color": "rgba(0,0,0,0)"
+          }
+        },
+        "a5ac472c-f2be-447e-bdc1-42de5d4d5016": {
+          "type": "trust",
+          "settings": {
+            "icon_1": "picto-warranty",
+            "title_1": "60 Tage Geld-zurück-Garantie",
+            "content_1": "<p>Wenn du unzufrieden bist, erhältst du bis zu <strong>60 Tage lang dein Geld von uns zurück</strong>. Folgendes ist zu beachten:</p><ol><li>Du musst die Retoure bei uns anmelden. Mehr Infos <a href=\"/policies/refund-policy\" title=\"Refund Policy\">hier</a>.</li><li>Alle Produkte die zurückerstattet werden sollen, müssen an uns zurückgesendet werden.</li><li>Die Kosten der Rücksendung müssen selbst getragen werden. Ausgenommen sind Produkte mit Mängeln.</li></ol><p></p>",
+            "nl_only_1": false,
+            "icon_2": "picto-secure-payment",
+            "title_2": "Zahle in 30 Tagen mit Pay Later by Klarna",
+            "content_2": "",
+            "nl_only_2": false,
+            "icon_3": "picto-secure-payment",
+            "title_3": "",
+            "content_3": "",
+            "nl_only_3": false
+          }
+        },
+        "0d0a5849-05ff-4be4-9622-4f7c3f06ed86": {
+          "type": "complementary_products",
+          "settings": {
+            "title": ""
+          }
+        },
+        "244be36c-36e1-4348-aa9f-0f5c48a1dab5": {
+          "type": "description_accordion",
+          "settings": {
+            "open_by_default": true,
+            "use_metafields_for_usp": false,
+            "image_1": "shopify://shop_images/Icon_Nahtlos.svg",
+            "heading_1": "<strong>Bügellos</strong>",
+            "description_1": "Ciao Boobs-Prison! Ohne Bügel für maximalen Komfort.",
+            "heading_2": "",
+            "description_2": "",
+            "image_3": "shopify://shop_images/Icon_Certified_1.svg",
+            "heading_3": "<strong>Zertifiziert</strong>",
+            "description_3": "Unsere Bralettes sind OEKO TEX 100 zertifiziert.",
+            "heading_4": "",
+            "description_4": "",
+            "image_5": "shopify://shop_images/Icon_MediumSupport.svg",
+            "heading_5": "<strong>Medium Support</strong>",
+            "description_5": "Für kleine und mittelgroße Brüste stützt unser extra weiches Unterbrustband. Für alle größeren Cups: something's cooking! Tragt euch <a href=\"/pages/new-bra-sizes\" target=\"_blank\" title=\"New bra sizes\"><span style=\"text-decoration:underline\">HIER</span> </a>in die Warteliste ein.",
+            "image_6": "shopify://shop_images/Icon_Save_Cash_2.svg",
+            "heading_6": "<strong>Spare insgesamt 10€ beim Kauf im Set</strong>",
+            "description_6": "Kombinierbar mit unseren Seamless Pantys. Lege Bralette und Panty in den Warenkorb und der Rabatt wird automatisch abgezogen."
+          }
+        },
+        "5d99506a-360d-4c5f-aa4b-422abcc9c271": {
+          "type": "content_accordion",
+          "settings": {
+            "open_by_default": false,
+            "title": "{{ product.metafields.descriptors.content_2_title.value }}",
+            "content": "<p>{{ product.metafields.descriptors.content_2_body | metafield_tag }}</p>",
+            "page": ""
+          }
+        },
+        "0c6c32fe-0356-4aeb-943d-7c7543e9bfa3": {
+          "type": "content_accordion",
+          "settings": {
+            "open_by_default": false,
+            "title": "{{ product.metafields.descriptors.content_3_title.value }}",
+            "content": "<p>{{ product.metafields.descriptors.content_3_body | metafield_tag }}</p>",
+            "page": ""
+          }
+        },
+        "6c2c03e5-473f-4aff-a17e-9f4de44cb2d5": {
+          "type": "content_accordion",
+          "settings": {
+            "open_by_default": false,
+            "title": "{{ product.metafields.descriptors.content_4_title.value }}",
+            "content": "<p>{{ product.metafields.descriptors.content_4_body | metafield_tag }}</p>",
+            "page": ""
+          }
+        },
+        "e74495d7-7c70-4a98-9704-d222be2d4134": {
+          "type": "testimonial",
+          "settings": {
+            "customer_image": "shopify://shop_images/panty_testimonial.jpg",
+            "customer_name": "<strong>Jana, Sophia</strong>",
+            "customer_text": "und 1000+ weiteren gefällt das"
+          }
+        },
+        "17531d0d-1372-48ea-8634-c791c6398a11": {
+          "type": "product_variant_links",
+          "settings": {
+            "products": "{{ product.metafields.relationships.other_absorbancy.value }}",
+            "hide_unavailable": false,
+            "always_show_selector": true,
+            "option_name": "Saugstärke",
+            "selector_type": "block",
+            "option_value_metafield_namespace": "filters",
+            "option_value_metafield_key": "absorbancy"
+          }
+        },
+        "574a5bd3-6d04-40f4-8d73-29d78e57ec2e": {
+          "type": "product_variant_links",
+          "settings": {
+            "products": "{{ product.metafields.relationships.other_color.value }}",
+            "hide_unavailable": false,
+            "always_show_selector": false,
+            "option_name": "Farbe",
+            "selector_type": "color",
+            "option_value_metafield_namespace": "",
+            "option_value_metafield_key": ""
+          }
+        },
+        "complete_the_look_EFdUKH": {
+          "type": "complete_the_look",
+          "settings": {
+            "title": "{{ product.metafields.promotion.complete_the_look_heading.value }}",
+            "ctl_heading_color": "#1a1a1a",
+            "ctl_bg_color": "",
+            "ctl_products": "{{ product.metafields.promotion.complete_the_look.value }}"
+          }
+        }
+      },
+      "block_order": [
+        "22970e8f-ea75-46ec-9255-8ceeb78511f8",
+        "variant_picker",
+        "f0d2cc62-543d-4ad8-bdd7-18c3d04a52c1",
+        "yotpo_loyalty_rewards_product_points_module_app_block_HT6aTR",
+        "02190bcc-9ff0-4f94-8898-2b2cb44da8ea",
+        "quantity_selector",
+        "buy_buttons",
+        "a5ac472c-f2be-447e-bdc1-42de5d4d5016",
+        "0d0a5849-05ff-4be4-9622-4f7c3f06ed86",
+        "244be36c-36e1-4348-aa9f-0f5c48a1dab5",
+        "5d99506a-360d-4c5f-aa4b-422abcc9c271",
+        "0c6c32fe-0356-4aeb-943d-7c7543e9bfa3",
+        "6c2c03e5-473f-4aff-a17e-9f4de44cb2d5",
+        "e74495d7-7c70-4a98-9704-d222be2d4134",
+        "17531d0d-1372-48ea-8634-c791c6398a11",
+        "574a5bd3-6d04-40f4-8d73-29d78e57ec2e",
+        "complete_the_look_EFdUKH"
+      ],
+      "settings": {
+        "show_vendor": false,
+        "show_sku": false,
+        "show_taxes_included": true,
+        "show_product_rating": true,
+        "show_sticky_add_to_cart": true,
+        "show_share_buttons": false,
+        "show_buy_button_next_to_quantity": true,
+        "show_product_style": true,
+        "help_page": "",
+        "enable_video_autoplay": true,
+        "enable_video_looping": true,
+        "enable_image_zoom": true,
+        "show_thumbnails_on_mobile": false,
+        "desktop_thumbnails_position": "bottom",
+        "transition_effect": "slide"
+      }
+    },
+    "product-recommendations": {
+      "type": "product-recommendations",
+      "settings": {
+        "subheading": "",
+        "title": "Dir könnte auch gefallen",
+        "recommendations_count": 10,
+        "background": "#fff0f0",
+        "text_color": "#1a1a1a"
+      }
+    },
+    "1666179092243d9cde": {
+      "type": "apps",
+      "blocks": {
+        "e0862bb4-1e1a-44c5-a83d-aaed3f12395d": {
+          "type": "shopify://apps/reviews-io/blocks/reviewsio-polaris/92a082e5-b297-4e88-b428-ac96cbc505f9",
+          "settings": {
+            "star": "#f58e9e",
+            "review_type": "product_review,questions",
+            "per_page": 3,
+            "primary_btn_bg_color": "#f58e9e",
+            "primary_btn_border_color": "rgba(0,0,0,0)",
+            "primary_btn_text_color": "#ffffff",
+            "secondary_btn_border_color": "#f7aea6",
+            "secondary_btn_text_color": "#56112a",
+            "border_color": "#ffbfbf",
+            "heading_text_color": "#1a1a1a",
+            "heading_font": "system_ui_n4",
+            "body_text_color": "#000000",
+            "badge_icon_color": "#000000",
+            "badge_text_color": "#000000",
+            "enable_rich_snippets": true,
+            "show_location": true,
+            "show_tab_selector": false,
+            "show_dates": true,
+            "show_avatar": false,
+            "enable_sentiment_analysis": false,
+            "enable_replies": true,
+            "widget_spacing": 0,
+            "capitalise_headers_and_buttons": false,
+            "show_review_title": true,
+            "default_sort": "helpful_desc"
+          }
+        }
+      },
+      "block_order": [
+        "e0862bb4-1e1a-44c5-a83d-aaed3f12395d"
+      ],
+      "settings": {
+        "include_horizontal_margins": true,
+        "include_vertical_margins": false
+      }
+    },
+    "24c7014a-811d-42e3-8af5-4fd73d682d7f": {
+      "type": "multi-column",
+      "blocks": {
+        "template--16104690712842__24c7014a-811d-42e3-8af5-4fd73d682d7f-item-4": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/Nipples-Collection-Banner.jpg",
+            "image_width": 100,
+            "image_border": "rgba(0,0,0,0)",
+            "title": "Bügellos",
+            "content": "<p>Ciao Boobs-Prison! Ohne Bügel für maximalen Komfort.</p>",
+            "link_text": "",
+            "link_url": "",
+            "link_style": "link",
+            "text_alignment": "left",
+            "vertical_alignment": "start"
+          }
+        },
+        "template--16104690712842__24c7014a-811d-42e3-8af5-4fd73d682d7f-item-2": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/Banner-Nipples-3.jpg",
+            "image_width": 100,
+            "image_border": "rgba(0,0,0,0)",
+            "title": "Recycelt",
+            "content": "<p>Aus weichem, recyceltem Polyester.</p>",
+            "link_text": "",
+            "link_url": "",
+            "link_style": "link",
+            "text_alignment": "left",
+            "vertical_alignment": "start"
+          }
+        },
+        "template--16104690712842__24c7014a-811d-42e3-8af5-4fd73d682d7f-item-3": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/Banner-Nipples.jpg",
+            "image_width": 100,
+            "image_border": "rgba(0,0,0,0)",
+            "title": "Zertifiziert",
+            "content": "<p>OEKO TEX 100 Zertifiziert</p>",
+            "link_text": "",
+            "link_url": "",
+            "link_style": "link",
+            "text_alignment": "left",
+            "vertical_alignment": "start"
+          }
+        },
+        "item_CCkHnm": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/Banner-Nipples-9.jpg",
+            "image_width": 100,
+            "image_border": "rgba(0,0,0,0)",
+            "title": "Medium Support",
+            "content": "<p>Für kleine und mittelgroße Brüste stützt unser extra weiches Unterbrustband.</p>",
+            "link_text": "",
+            "link_url": "",
+            "link_style": "link",
+            "text_alignment": "left",
+            "vertical_alignment": "start"
+          }
+        },
+        "item_MgQb3V": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/Banner-Nipples-6.jpg",
+            "image_width": 100,
+            "image_border": "rgba(0,0,0,0)",
+            "title": "Spare 10€ beim Kauf eines Sets",
+            "content": "<p>Kombinierbar mit unseren <a href=\"/collections/seamless-nahtlose-periodenunterwaesche\" title=\"SEAMLESS Periodenunterwäsche\">Seamless Period Pantys</a> und <a href=\"https://buy.thefemalecompany.com/collections/daysics?sort_by=manual&filter.p.m.filters.collection=Seamless\" title=\"https://buy.thefemalecompany.com/collections/daysics?sort_by=manual&filter.p.m.filters.collection=Seamless\">Seamless Daysics</a>.</p>",
+            "link_text": "",
+            "link_url": "",
+            "link_style": "link",
+            "text_alignment": "left",
+            "vertical_alignment": "start"
+          }
+        }
+      },
+      "block_order": [
+        "template--16104690712842__24c7014a-811d-42e3-8af5-4fd73d682d7f-item-4",
+        "template--16104690712842__24c7014a-811d-42e3-8af5-4fd73d682d7f-item-2",
+        "template--16104690712842__24c7014a-811d-42e3-8af5-4fd73d682d7f-item-3",
+        "item_CCkHnm",
+        "item_MgQb3V"
+      ],
+      "settings": {
+        "reveal_on_scroll": true,
+        "stack_items": false,
+        "subheading": "Free the Nïpple",
+        "title": "BRALETTES",
+        "content": "<p>Ihr habt es euch gewünscht: <strong>passende Bralettes zu Period Pantys und Daysics®! </strong>Hier kommen sie: die weichsten <strong>#nïpplefreeing </strong>Bralettes ever.<br/>Denn wir sagen ciao zur #Nïpplezensur!<br/> Let's hang out!</p>",
+        "column_alignment": "center",
+        "mobile_item_size": "large",
+        "desktop_item_size": "medium",
+        "spacing": "tight",
+        "background": "#e3bcbd",
+        "text_color": "#ffffff"
+      }
+    },
+    "announcement_bar_Nrrrwg": {
+      "type": "announcement-bar",
+      "blocks": {
+        "message_Wzr3zF": {
+          "type": "message",
+          "settings": {
+            "text": "",
+            "text_html": "<p>Spare <b>10€</b> beim Kauf von Bralette & Panty* <br><small>Der Rabatt wird automatisch im Warenkorb hinzugefügt</small></p>",
+            "learn_more_text": "Learn more",
+            "annoucement_link": "",
+            "title": "",
+            "content": "",
+            "button_text": "",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "message_Wzr3zF"
+      ],
+      "disabled": true,
+      "settings": {
+        "start_year": 2025,
+        "start_month": 1,
+        "start_day": 1,
+        "start_time": "10:00",
+        "end_year": 2050,
+        "end_month": 12,
+        "end_day": 31,
+        "end_time": "10:00",
+        "announcement_bar_position": "non_sticky",
+        "announcement_text_size": "normal",
+        "autoplay": true,
+        "cycle_speed": 7,
+        "background": "#e3bcbd",
+        "text_color": "#1a1a1a",
+        "button_background": "#ffffff",
+        "button_text_color": "#f58e9e"
+      }
+    },
+    "6f6cf67f-5dad-4a4c-9819-b6efd781a6ce": {
+      "type": "video",
+      "disabled": true,
+      "settings": {
+        "subheading": "",
+        "title": "",
+        "video": "shopify://files/videos/leakproof_layer_compliation_480noaudio1mbit.mp4",
+        "video_url": "",
+        "background_type": "boxed",
+        "video_size": "large",
+        "autoplay": true,
+        "show_video_controls": false,
+        "background": "rgba(0,0,0,0)",
+        "text_color": "rgba(0,0,0,0)"
+      }
+    },
+    "rich_text_Hjcp9i": {
+      "type": "rich-text",
+      "disabled": true,
+      "settings": {
+        "subheading": "",
+        "title": "",
+        "content": "",
+        "button_text": "",
+        "button_link": "",
+        "background_type": "full_width",
+        "text_width": "medium",
+        "text_position": "center",
+        "text_alignment": "center",
+        "background": "rgba(0,0,0,0)",
+        "text_color": "rgba(0,0,0,0)",
+        "button_background": "rgba(0,0,0,0)",
+        "button_text_color": "rgba(0,0,0,0)"
+      }
+    },
+    "7d25a2f8-cf92-4663-84e9-3091847f0729": {
+      "type": "gallery",
+      "blocks": {
+        "template--16104690712842__7d25a2f8-cf92-4663-84e9-3091847f0729-image-3": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Lace_1.jpg",
+            "caption": "<p>@ricardafernanda</p>"
+          }
+        },
+        "template--16104690712842__7d25a2f8-cf92-4663-84e9-3091847f0729-image-1": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/339151840_907323797254565_4621754093371587148_n.jpg",
+            "caption": "<p>@iam.raffaela</p>"
+          }
+        },
+        "template--16104690712842__7d25a2f8-cf92-4663-84e9-3091847f0729-image-2": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/408836217_900146498300045_3523146305152253096_n.jpg",
+            "caption": "<p>@evakellner_</p>"
+          }
+        },
+        "cd20ab1f-ae4b-4a20-bc17-69403cc41cd3": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/398138031_1467016127415736_9206775769996384043_n.jpg",
+            "caption": "<p>@lauradiehm</p>"
+          }
+        },
+        "ccba89b8-4f3d-495c-ac2b-851c057b2159": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/391499084_3412970938966218_8965977868426487541_n.jpg",
+            "caption": "<p>@yavi_moves</p>"
+          }
+        }
+      },
+      "block_order": [
+        "template--16104690712842__7d25a2f8-cf92-4663-84e9-3091847f0729-image-3",
+        "template--16104690712842__7d25a2f8-cf92-4663-84e9-3091847f0729-image-1",
+        "template--16104690712842__7d25a2f8-cf92-4663-84e9-3091847f0729-image-2",
+        "cd20ab1f-ae4b-4a20-bc17-69403cc41cd3",
+        "ccba89b8-4f3d-495c-ac2b-851c057b2159"
+      ],
+      "disabled": true,
+      "settings": {
+        "show_arrows": true,
+        "subheading": "Aus der Community",
+        "title": "Nice bun, hun!",
+        "section_header_short_description": "",
+        "section_header_heading_size": "h2",
+        "section_header_highest_hierarchy": false,
+        "section_header_short_description_font_size": "medium",
+        "section_container_width": "fluid",
+        "section_text_alignment": "left",
+        "background": "#ffe6e6",
+        "text_color": "rgba(0,0,0,0)",
+        "section_heading_color": "rgba(0,0,0,0)",
+        "section_subheading_color": "rgba(0,0,0,0)",
+        "section_heading_font_family": "default",
+        "section_spacing_top": 48,
+        "section_spacing_bottom": 48,
+        "section_spacing_different_mobile": false,
+        "section_spacing_top_mobile": 0,
+        "section_spacing_bottom_mobile": 0
+      }
+    },
+    "promotion_blocks_TNfkNm": {
+      "type": "promotion-blocks",
+      "blocks": {
+        "image_N98keV": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Banner-Nipples-3.jpg",
+            "highlight": false,
+            "subheading": "Mix & Match",
+            "title": "Bralettes",
+            "link_text": "Zu den Bralettes",
+            "link_url": "",
+            "link_style": "link",
+            "text_position": "bottom_center",
+            "background": "#f7f8fd",
+            "text_color": "#ffffff",
+            "button_background": "#ffffff",
+            "button_text_color": "#1e316a"
+          }
+        },
+        "image_HBybQY": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Hipster_Black_Seamless_016cb12e-18c2-4b2d-8aa3-370810c50523.jpg",
+            "highlight": false,
+            "subheading": "Mix & Match",
+            "title": "Period Pantys",
+            "link_text": "Zu den Period Panties",
+            "link_url": "shopify://collections/seamless-nahtlose-periodenunterwaesche",
+            "link_style": "link",
+            "text_position": "bottom_center",
+            "background": "#f7f8fd",
+            "text_color": "#ffffff",
+            "button_background": "#ffffff",
+            "button_text_color": "#1e316a"
+          }
+        },
+        "image_xpwwrM": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Daysics_Tanga_Strong_Sand.jpg",
+            "highlight": false,
+            "subheading": "Mix & Match",
+            "title": "Daysics®",
+            "link_text": "Zu den Daysic® Pantys",
+            "link_url": "shopify://collections/daysics",
+            "link_style": "link",
+            "text_position": "bottom_center",
+            "background": "#f7f8fd",
+            "text_color": "#ffffff",
+            "button_background": "#ffffff",
+            "button_text_color": "#1e316a"
+          }
+        }
+      },
+      "block_order": [
+        "image_N98keV",
+        "image_HBybQY",
+        "image_xpwwrM"
+      ],
+      "settings": {
+        "subheading": "Mix & Match",
+        "title": "Spare 10€ im Set*",
+        "section_size": "medium",
+        "stack_on_mobile": true,
+        "background": "#e3bcbd",
+        "text_color": "#ffffff"
+      }
+    },
+    "rich_text_AURKmA": {
+      "type": "rich-text",
+      "settings": {
+        "subheading": "",
+        "title": "",
+        "content": "<p>* Rabatt wird automatisch im Warenkorb abgezogen, wenn Bralette und Panty im Warenkorb liegen</p>",
+        "button_text": "",
+        "button_link": "",
+        "background_type": "full_width",
+        "text_width": "fill",
+        "text_position": "center",
+        "text_alignment": "left",
+        "background": "#e3bcbd",
+        "text_color": "#ffffff",
+        "button_background": "rgba(0,0,0,0)",
+        "button_text_color": "rgba(0,0,0,0)"
+      }
+    },
+    "rich_text_XFzqjU": {
+      "type": "rich-text",
+      "disabled": true,
+      "settings": {
+        "subheading": "",
+        "title": "",
+        "content": "",
+        "button_text": "",
+        "button_link": "",
+        "background_type": "full_width",
+        "text_width": "medium",
+        "text_position": "center",
+        "text_alignment": "center",
+        "background": "rgba(0,0,0,0)",
+        "text_color": "rgba(0,0,0,0)",
+        "button_background": "rgba(0,0,0,0)",
+        "button_text_color": "rgba(0,0,0,0)"
+      }
+    },
+    "blog_posts_LPDJiM": {
+      "type": "blog-posts",
+      "settings": {
+        "blog": "nipples-ratgeber",
+        "subheading": "Stay up-to-date",
+        "title": "Blog posts",
+        "articles_count": 3,
+        "stack_mobile": false,
+        "show_category": true,
+        "show_excerpt": false,
+        "button_text": "",
+        "button_url": "",
+        "background": "#e3bcbd",
+        "text_color": "#fff0f0",
+        "button_background": "rgba(0,0,0,0)",
+        "button_text_color": "rgba(0,0,0,0)"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "product-recommendations",
+    "1666179092243d9cde",
+    "24c7014a-811d-42e3-8af5-4fd73d682d7f",
+    "announcement_bar_Nrrrwg",
+    "6f6cf67f-5dad-4a4c-9819-b6efd781a6ce",
+    "rich_text_Hjcp9i",
+    "7d25a2f8-cf92-4663-84e9-3091847f0729",
+    "promotion_blocks_TNfkNm",
+    "rich_text_AURKmA",
+    "rich_text_XFzqjU",
+    "blog_posts_LPDJiM"
+  ]
+}

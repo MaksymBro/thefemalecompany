@@ -1,0 +1,439 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "show_title": true,
+        "show_breadcrumbs": true,
+        "page_width": "medium"
+      }
+    },
+    "slideshow_4w3hHJ": {
+      "type": "slideshow",
+      "blocks": {
+        "image_YyYawL": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/2023-07-20-TFC-TAMPONSPENDER3427_1_2.jpg",
+            "mobile_image": "shopify://shop_images/1_Tamponspender-1_1.jpg",
+            "text_position": "middle_center",
+            "subheading": "Top 10",
+            "title": "Top 10",
+            "subtitle": "<p>Top 10</p>",
+            "subtitle_html": "",
+            "button_1_text": "",
+            "button_1_link": "",
+            "button_2_text": "",
+            "button_2_link": "",
+            "heading_font_family": "circular",
+            "heading_color": "#ffffff",
+            "text_color": "#ffffff",
+            "button_background": "#ff3f46",
+            "button_text_color": "#ffffff",
+            "overlay_color": "#000000",
+            "overlay_opacity": 30,
+            "schedule_publishing": false,
+            "publish_date": "01.01.2019 00:00",
+            "schedule_unpublishing": false,
+            "unpublish_date": "01.01.2019 00:00"
+          }
+        }
+      },
+      "block_order": [
+        "image_YyYawL"
+      ],
+      "settings": {
+        "section_height": "small",
+        "transition_type": "sweep",
+        "autoplay": true,
+        "cycle_speed": 5,
+        "background": "rgba(0,0,0,0)"
+      }
+    },
+    "multi_column_RfM7AF": {
+      "type": "multi-column",
+      "blocks": {
+        "item_87MrUr": {
+          "type": "item",
+          "settings": {
+            "image_width": 100,
+            "image_border": "rgba(0,0,0,0)",
+            "title": "",
+            "content": "<p>Nominiere hier deinen Arbeitgeber, deine Schule oder Uni und wir nehmen den Kontakt auf!</p>",
+            "link_text": "Unternehmen nominieren",
+            "link_url": "shopify://pages/tamponspender-unternehmen-nominieren",
+            "link_style": "button",
+            "text_alignment": "center",
+            "vertical_alignment": "start"
+          }
+        },
+        "item_iiHy6N": {
+          "type": "item",
+          "settings": {
+            "image_width": 100,
+            "image_border": "rgba(0,0,0,0)",
+            "title": "",
+            "content": "<p>Du bist an kostenlosen Periodenprodukten interessiert? Frage hier direkt ein unverbindliches Angebot an:</p>",
+            "link_text": "Jetzt Angebot anfragen",
+            "link_url": "shopify://pages/tamponspender-angebot-anfragen",
+            "link_style": "button",
+            "text_alignment": "center",
+            "vertical_alignment": "start"
+          }
+        }
+      },
+      "block_order": [
+        "item_87MrUr",
+        "item_iiHy6N"
+      ],
+      "custom_css": [],
+      "settings": {
+        "reveal_on_scroll": true,
+        "stack_items": true,
+        "subheading": "",
+        "title": "",
+        "content": "<p><strong>81 % der Frauen berichten, schon einmal ihre Periode in der Öffentlichkeit bekommen zu haben ohne Zugang zu Periodenprodukten. Das wollen wir ändern!</strong></p>",
+        "column_alignment": "center",
+        "mobile_item_size": "large",
+        "desktop_item_size": "large",
+        "spacing": "loose",
+        "background": "#f58e9e",
+        "text_color": "#ffffff"
+      }
+    },
+    "section_header_DxeKga": {
+      "type": "section-header",
+      "settings": {
+        "section_subheading": "",
+        "section_heading": "Diese Unternehmen, Schulen & Unis vertrauen uns bereits:",
+        "section_short_description": "",
+        "heading_size": "h5",
+        "highest_hierarchy": false,
+        "section_heading_font_family": "default",
+        "short_description_font_size": "medium",
+        "section_text_color": "rgba(0,0,0,0)",
+        "section_heading_color": "rgba(0,0,0,0)",
+        "section_subheading_color": "rgba(0,0,0,0)",
+        "section_container_width": "sm",
+        "section_background_color": "rgba(0,0,0,0)",
+        "section_spacing_top": 32,
+        "section_spacing_bottom": 32,
+        "section_spacing_different_mobile": false,
+        "section_spacing_top_mobile": 0,
+        "section_spacing_bottom_mobile": 0
+      }
+    },
+    "logo_list_arJkBQ": {
+      "type": "logo-list",
+      "blocks": {
+        "logo_kyQky8": {
+          "type": "logo",
+          "settings": {
+            "logo": "shopify://shop_images/logo_aboutyou.webp",
+            "link": ""
+          }
+        },
+        "logo_Q6xYt3": {
+          "type": "logo",
+          "settings": {
+            "logo": "shopify://shop_images/Zalando_logo_svg.png",
+            "link": ""
+          }
+        },
+        "logo_Vebgxh": {
+          "type": "logo",
+          "settings": {
+            "logo": "shopify://shop_images/1600px-RIMOWA_Logo_svg.png",
+            "link": ""
+          }
+        },
+        "logo_CNyhdU": {
+          "type": "logo",
+          "settings": {
+            "logo": "shopify://shop_images/Sony_logo_svg.png",
+            "link": ""
+          }
+        },
+        "logo_xyeyMe": {
+          "type": "logo",
+          "settings": {
+            "logo": "shopify://shop_images/Hochschule_Koblenz_svg.png",
+            "link": ""
+          }
+        },
+        "logo_4pJgG3": {
+          "type": "logo",
+          "settings": {
+            "logo": "shopify://shop_images/Marabu_svg.png",
+            "link": ""
+          }
+        },
+        "logo_XLmx6J": {
+          "type": "logo",
+          "settings": {
+            "logo": "shopify://shop_images/o_2327.png",
+            "link": ""
+          }
+        },
+        "logo_twr3dg": {
+          "type": "logo",
+          "settings": {
+            "logo": "shopify://shop_images/20150501_HSD_Logo_rot_transparent.png",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "logo_kyQky8",
+        "logo_Q6xYt3",
+        "logo_Vebgxh",
+        "logo_CNyhdU",
+        "logo_xyeyMe",
+        "logo_4pJgG3",
+        "logo_XLmx6J",
+        "logo_twr3dg"
+      ],
+      "settings": {
+        "reveal_on_scroll": false,
+        "layout": "carousel",
+        "max_logos_mobile": 10,
+        "max_width_logo_desktop": 100,
+        "max_width_logo_mobile": 100,
+        "logo_background": "rgba(0,0,0,0)",
+        "section_container_width": "md",
+        "section_background_color": "rgba(0,0,0,0)",
+        "section_spacing_top": 32,
+        "section_spacing_bottom": 32,
+        "section_spacing_different_mobile": false,
+        "section_spacing_top_mobile": 0,
+        "section_spacing_bottom_mobile": 0
+      }
+    },
+    "multi_column_PxxNtq": {
+      "type": "multi-column",
+      "blocks": {
+        "item_WknkAq": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/1_Tamponspender-1_1.jpg",
+            "image_width": 100,
+            "image_border": "rgba(0,0,0,0)",
+            "title": "Tampon- und Bindenspender aus Edelstahl",
+            "content": "<p>Tampon- und Bindenspender mit zwei Öffnungen für Tampons & Binden. Maße: 30 x 21 x 10 cm. Ready-to-install inkl. Befestigungsmaterial für Wandmontage.</p>",
+            "link_text": "Mehr zum Produkt",
+            "link_url": "shopify://pages/tampon-und-bindenspender",
+            "link_style": "button",
+            "text_alignment": "center",
+            "vertical_alignment": "start"
+          }
+        },
+        "item_JeDtjL": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/TheFemaleCompany_Binde_BioBaumwolle_d52483fb-4dad-455d-8cad-d1e8a3b3bb60.jpg",
+            "image_width": 100,
+            "image_border": "rgba(0,0,0,0)",
+            "title": "Nachhaltigere Periodenprodukte",
+            "content": "<p>Hergestellt in Österreich aus zertifizierter Bio-Baumwolle, frei von Chemikalien, Parfüm oder Pestiziden. CO2-neutrale Tamponproduktion. Tampons verpackt in kompostierbarer Folie, statt in Plastik! OEKO-TEST 100.</p>",
+            "link_text": "Mehr erfahren",
+            "link_url": "shopify://pages/sustainability",
+            "link_style": "button",
+            "text_alignment": "center",
+            "vertical_alignment": "start"
+          }
+        },
+        "item_ibyxnw": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/Tamponspender-3_0aa1b872-aa21-448a-82e5-57fceb359e79.jpg",
+            "image_width": 100,
+            "image_border": "rgba(0,0,0,0)",
+            "title": "Automatisiertes Liefersystem",
+            "content": "<p>Pro Quartal mit flexibler Menge an Tampons und Binden.  Du musst dich um nichts mehr kümmern.</p>",
+            "link_text": "",
+            "link_url": "",
+            "link_style": "link",
+            "text_alignment": "center",
+            "vertical_alignment": "start"
+          }
+        },
+        "item_BVff6G": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/Tamponspender_1f92f370-fe10-4bfa-a8c8-4f67ad28c986.jpg",
+            "image_width": 100,
+            "image_border": "rgba(0,0,0,0)",
+            "title": "Einfach zu bedienen & zu montieren",
+            "content": "<p>Platziere den Spender auf den Toiletten in deinem Unternehmen, deiner Schule oder Universität.</p>",
+            "link_text": "",
+            "link_url": "",
+            "link_style": "link",
+            "text_alignment": "center",
+            "vertical_alignment": "start"
+          }
+        }
+      },
+      "block_order": [
+        "item_WknkAq",
+        "item_JeDtjL",
+        "item_ibyxnw",
+        "item_BVff6G"
+      ],
+      "settings": {
+        "reveal_on_scroll": true,
+        "stack_items": true,
+        "subheading": "Läuft bei dir!",
+        "title": "Dank Tampon- und Bindenspendern.",
+        "content": "",
+        "column_alignment": "center",
+        "mobile_item_size": "large",
+        "desktop_item_size": "medium",
+        "spacing": "normal",
+        "background": "rgba(0,0,0,0)",
+        "text_color": "rgba(0,0,0,0)"
+      }
+    },
+    "gallery_aG8mgn": {
+      "type": "gallery",
+      "blocks": {
+        "image_akmDpc": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Poster.jpg",
+            "caption": ""
+          }
+        },
+        "image_bCkwPL": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Shitstormpotenzial_Sticker_50x50mm_Lay01_1.jpg",
+            "caption": ""
+          }
+        },
+        "image_6KkXqx": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Shitstormpotenzial_Sticker_50x50mm_Lay012_1.jpg",
+            "caption": ""
+          }
+        }
+      },
+      "block_order": [
+        "image_akmDpc",
+        "image_bCkwPL",
+        "image_6KkXqx"
+      ],
+      "settings": {
+        "show_arrows": true,
+        "subheading": "",
+        "title": "Kommunikationsmittel mit Tabubruch",
+        "section_header_short_description": "<p>Kund*innen der Tamponspender erhalten zusätzlich lehrreiche Kommunikationsmittel, wie Postkarten, Flyer und Sticker für Mitarbeitende, Studierende oder Schüler*innen.</p>",
+        "section_header_heading_size": "h3",
+        "section_header_highest_hierarchy": false,
+        "section_header_short_description_font_size": "medium",
+        "section_container_width": "fluid",
+        "section_text_alignment": "left",
+        "background": "#ffe6e6",
+        "text_color": "rgba(0,0,0,0)",
+        "section_heading_color": "rgba(0,0,0,0)",
+        "section_subheading_color": "rgba(0,0,0,0)",
+        "section_heading_font_family": "default",
+        "section_spacing_top": 48,
+        "section_spacing_bottom": 48,
+        "section_spacing_different_mobile": false,
+        "section_spacing_top_mobile": 0,
+        "section_spacing_bottom_mobile": 0
+      }
+    },
+    "faq_DcxYkA": {
+      "type": "faq",
+      "blocks": {
+        "faq_collection_igafgN": {
+          "type": "faq_collection",
+          "settings": {
+            "metaobject_handle": "Tamponspender",
+            "show_title": true
+          }
+        }
+      },
+      "block_order": [
+        "faq_collection_igafgN"
+      ],
+      "settings": {
+        "show_navigation": false,
+        "enable_schema": false,
+        "section_header_subheading": "",
+        "section_header_heading": "FAQ",
+        "section_header_short_description": "",
+        "section_header_heading_size": "h3",
+        "section_header_highest_hierarchy": false,
+        "section_header_short_description_font_size": "medium",
+        "section_container_width": "md",
+        "section_text_alignment": "left",
+        "section_background_color": "rgba(0,0,0,0)",
+        "section_text_color": "rgba(0,0,0,0)",
+        "section_heading_color": "rgba(0,0,0,0)",
+        "section_subheading_color": "rgba(0,0,0,0)",
+        "section_heading_font_family": "default",
+        "section_spacing_top": 32,
+        "section_spacing_bottom": 32,
+        "section_spacing_different_mobile": false,
+        "section_spacing_top_mobile": 0,
+        "section_spacing_bottom_mobile": 0
+      }
+    },
+    "image_with_text_LdJpyE": {
+      "type": "image-with-text",
+      "blocks": {
+        "item_Fx7JFr": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/unnamed.png",
+            "tab_label": "",
+            "subheading": "",
+            "title": "Flowt noch nicht ganz? Du hast noch Fragen? Kontaktiere uns!",
+            "content": "<p><strong>Email:</strong> business@thefemalecompany.com</p><p><strong>Tel.:</strong> +49 152 04605313</p>",
+            "button_text": "",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "item_Fx7JFr"
+      ],
+      "settings": {
+        "reveal_on_scroll": true,
+        "background_type": "full_width",
+        "background_overlap": "image",
+        "image_position": "left",
+        "text_alignment": "left",
+        "cycle_speed": 8,
+        "accent_background": "rgba(0,0,0,0)",
+        "text_color": "rgba(0,0,0,0)",
+        "button_background": "rgba(0,0,0,0)",
+        "button_text_color": "rgba(0,0,0,0)"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "slideshow_4w3hHJ",
+    "multi_column_RfM7AF",
+    "section_header_DxeKga",
+    "logo_list_arJkBQ",
+    "multi_column_PxxNtq",
+    "gallery_aG8mgn",
+    "faq_DcxYkA",
+    "image_with_text_LdJpyE"
+  ]
+}

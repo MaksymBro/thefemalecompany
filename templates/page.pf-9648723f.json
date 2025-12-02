@@ -1,0 +1,159 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "slideshow_97KND3": {
+      "type": "slideshow",
+      "blocks": {
+        "image_JV46nz": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Header_Crowdinvest.png",
+            "mobile_image": "shopify://shop_images/2023-06-01-AT-HOME-IN-YOUR-SKIN-8463.jpg",
+            "text_position": "middle_center",
+            "subheading": "CROWDINVEST",
+            "title": "Werde Teil von The Female Company",
+            "subtitle": "<p>Werde Inverstor*in, untertütze unser Wachstum & profitiere davon. Join the FemCare Revolution!</p>",
+            "subtitle_html": "",
+            "button_1_text": "COMING SOON",
+            "button_1_link": "#Ziel:Anmelden",
+            "button_2_text": "",
+            "button_2_link": "",
+            "heading_font_family": "circular",
+            "heading_color": "#ffffff",
+            "text_color": "#ffffff",
+            "button_background": "#ff3f46",
+            "button_text_color": "#ffffff",
+            "overlay_color": "#000000",
+            "overlay_opacity": 30,
+            "schedule_publishing": false,
+            "publish_date": "01.01.2019 00:00",
+            "schedule_unpublishing": false,
+            "unpublish_date": "01.01.2019 00:00"
+          }
+        },
+        "image_MLDyce": {
+          "type": "image",
+          "disabled": true,
+          "settings": {
+            "image": "shopify://shop_images/Header_Crowdinvest.png",
+            "mobile_image": "shopify://shop_images/2023-06-01-AT-HOME-IN-YOUR-SKIN-8463.jpg",
+            "text_position": "middle_center",
+            "subheading": "",
+            "title": "Investiere in Deutschlands bekannteste FemCare Marke",
+            "subtitle": "<p>Und profitiere: du erhälst 8,1 % jährlich auf dein Investment in The Female Company. </p>",
+            "subtitle_html": "",
+            "button_1_text": "ERFAHRE MEHR",
+            "button_1_link": "",
+            "button_2_text": "",
+            "button_2_link": "",
+            "heading_font_family": "circular",
+            "heading_color": "#ffffff",
+            "text_color": "#ffffff",
+            "button_background": "#ff3f46",
+            "button_text_color": "#ffffff",
+            "overlay_color": "#000000",
+            "overlay_opacity": 30,
+            "schedule_publishing": false,
+            "publish_date": "01.01.2019 00:00",
+            "schedule_unpublishing": false,
+            "unpublish_date": "01.01.2019 00:00"
+          }
+        },
+        "image_YqheJH": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Header_Crowdinvest.png",
+            "mobile_image": "shopify://shop_images/2023-06-01-AT-HOME-IN-YOUR-SKIN-8463.jpg",
+            "text_position": "middle_center",
+            "subheading": "",
+            "title": "Investiere in Deutschlands bekannteste FemCare Marke",
+            "subtitle": "<p>Sichere dir den EARLY BIRD BONUS für die ersten 72 Stunden und erhalte zusätzlich + 0,5 % Zinsen</p>",
+            "subtitle_html": "",
+            "button_1_text": "BONUS SICHERN",
+            "button_1_link": "",
+            "button_2_text": "",
+            "button_2_link": "",
+            "heading_font_family": "circular",
+            "heading_color": "#ffffff",
+            "text_color": "#ffffff",
+            "button_background": "#ff3f46",
+            "button_text_color": "#ffffff",
+            "overlay_color": "#000000",
+            "overlay_opacity": 30,
+            "schedule_publishing": true,
+            "publish_date": "05.11.2024 00:01",
+            "schedule_unpublishing": true,
+            "unpublish_date": "07.11.2024 23:59"
+          }
+        },
+        "image_JbQy3A": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Header_Crowdinvest.png",
+            "mobile_image": "shopify://shop_images/2023-06-01-AT-HOME-IN-YOUR-SKIN-8463.jpg",
+            "text_position": "middle_center",
+            "subheading": "",
+            "title": "Investiere in Deutschlands bekannteste FemCare Marke",
+            "subtitle": "<p>Und profitiere: du erhälst 8,1 % jährlich auf dein Investment in The Female Company. </p>",
+            "subtitle_html": "",
+            "button_1_text": "JETZT INVESTIEREN",
+            "button_1_link": "",
+            "button_2_text": "",
+            "button_2_link": "",
+            "heading_font_family": "circular",
+            "heading_color": "#ffffff",
+            "text_color": "#ffffff",
+            "button_background": "#ff3f46",
+            "button_text_color": "#ffffff",
+            "overlay_color": "#000000",
+            "overlay_opacity": 30,
+            "schedule_publishing": true,
+            "publish_date": "07.11.2024 23:59",
+            "schedule_unpublishing": false,
+            "unpublish_date": "01.01.2019 00:00"
+          }
+        }
+      },
+      "block_order": [
+        "image_JV46nz",
+        "image_MLDyce",
+        "image_YqheJH",
+        "image_JbQy3A"
+      ],
+      "disabled": true,
+      "settings": {
+        "section_height": "auto",
+        "transition_type": "sweep",
+        "autoplay": true,
+        "cycle_speed": 5,
+        "background": "rgba(0,0,0,0)",
+        "show_banner_usps": false,
+        "banner_usps_link": "",
+        "show_hide_button": false,
+        "banner_usps_bg_color": "#ffffff",
+        "banner_usps_text_color": "#2abb53",
+        "banner_usps_heading": "",
+        "banner_usps_heading_1": "",
+        "banner_usps_heading_2": "",
+        "banner_usps_heading_3": "",
+        "banner_usps_heading_4": ""
+      }
+    },
+    "pf-9648723f": {
+      "type": "pf-9648723f",
+      "settings": {}
+    }
+  },
+  "order": [
+    "slideshow_97KND3",
+    "pf-9648723f"
+  ]
+}
