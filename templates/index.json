@@ -620,7 +620,7 @@
         "allow_heading_override": false,
         "section_short_description": "<p>Auslaufsicher für bis zu 12 Stunden.<br/>Hautfreundliches Material – OEKO-TEX® 100 zertifiziert & ohne Biozide.</p>",
         "heading_size": "h2",
-        "highest_hierarchy": true,
+        "highest_hierarchy": false,
         "section_heading_font_family": "default",
         "short_description_font_size": "medium",
         "section_text_color": "#000000",
