@@ -1,23 +1,42 @@
-{% assign base_url = canonical_url | split:"?" | first %}
-{% assign protocol_and_domain = base_url | split:"/" | slice:0,3 | join:"/" %}
-{% assign full_path = base_url | remove: protocol_and_domain %}
-{% assign raw_parts = full_path | split:"/" %}
-{% assign path_parts = "" | split:"" %}
+{% assign base_url = canonical_url | split:'?' | first %}
 
-{% for p in raw_parts %}
-    {% unless p == "" %}
-        {% assign path_parts = path_parts | push: p %}
-    {% endunless %}
-{% endfor %}
+{%- assign locale_part = base_url | split: '/' | slice: 3, 1 | first -%}
 
-{% if path_parts.size > 0 %}
-    {% assign first = path_parts[0] %}
-    {% if first.size == 2 or first contains "-" %}
-        {% assign path_parts = path_parts | slice: 1, path_parts.size %}
-    {% endif %}
+{%- assign short_locale = locale_part | split:'-' | first -%}
+
+{%- comment -%}
+Replace locale in URL IF it exists in the path
+Examples:
+ /de-fr/... → /de/...
+ /en-be/... → /en/...
+ /fr-ch/... → /fr/...
+Also supports simple locales: /de/, /fr/, /en/
+{%- endcomment -%}
+
+{%- if locale_part contains '-' %}
+    {%- assign old = '/' | append: locale_part | append: '/' -%}
+    {%- assign new = '/' | append: short_locale | append: '/' -%}
+    {%- assign base_url = base_url | replace: old, new -%}
+{%- elsif locale_part == 'de'
+or locale_part == 'en'
+or locale_part == 'fr'
+or locale_part == 'nl'
+or locale_part == 'it'
+or locale_part == 'es'
+or locale_part == 'pt'
+or locale_part == 'pl'
+or locale_part == 'sv'
+or locale_part == 'da'
+or locale_part == 'fi'
+or locale_part == 'cs'
+or locale_part == 'sk'
+or locale_part == 'no'
+or locale_part == 'hu'
+or locale_part == 'ro'
+or locale_part == 'bg'
+or locale_part == 'el'
+%}
+    {%- comment -%} Already short locale, do nothing {%- endcomment -%}
 {% endif %}
 
-{% assign cleaned_path = path_parts | join:"/" %}
-{% assign final_url = protocol_and_domain | append:"/" | append: cleaned_path %}
-
-<link rel="canonical" href="{{ final_url }}">
+<link rel="canonical" href="{{ base_url }}">
