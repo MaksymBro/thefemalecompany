@@ -12,10 +12,5 @@
   "context": {
     "market": "de"
   },
-  "sections": {
-    "slideshow": {
-      "settings": {},
-      "blocks": {}
-    }
-  }
+  "sections": {}
 }

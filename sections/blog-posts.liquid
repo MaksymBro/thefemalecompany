@@ -52,11 +52,11 @@
         {%- if section.settings.subheading != blank or section.settings.title != blank -%}
           <header class="section__header text-container">
             {%- if section.settings.subheading != blank -%}
-              <h3 class="heading heading--small">{{ section.settings.subheading | escape }}</h2>
+              <p class="heading heading--small">{{ section.settings.subheading | escape }}</p>
             {%- endif -%}
 
             {%- if section.settings.title != blank -%}
-              <h2 class="heading h3">{{ section.settings.title | escape }}</h3>
+              <h2 class="heading h3">{{ section.settings.title | escape }}</h2>
             {%- endif -%}
           </header>
         {%- endif -%}
@@ -85,7 +85,7 @@
                       <p class="article-item__category heading heading--xsmall">{{ 'general.onboarding.blog_post_category' | t }}</p>
                     {%- endif -%}
 
-                    <h3 class="article-item__title heading h5">{{ 'general.onboarding.blog_post_title' | t }}</h3>
+                    <p class="article-item__title heading h5">{{ 'general.onboarding.blog_post_title' | t }}</p>
                   </div>
                 </div>
               {%- endfor -%}

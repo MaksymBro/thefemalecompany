@@ -46,9 +46,18 @@
   {%- if recommendations.performed and recommendations.products.size > 0 -%}
     <div class="section__color-wrapper">
       <div class="container {% unless blends_with_background %}vertical-breather{% endunless %}">
-        {%- if section.settings.title != blank or section.settings.subheading != blank -%}
+        {%- if section.settings.title != blank or section.settings.subheading != blank or section.settings.text_subheading != blank or section.settings.text_heading != blank -%}
           <header class="section__header">
             <div class="text-container">
+
+              {% if section.settings.text_subheading != blank %}
+                <p class="heading heading--small">{{ section.settings.text_subheading }}</p>
+              {% endif %}
+
+              {%- if section.settings.text_heading != blank -%}
+                <p class="heading h3">{{ section.settings.text_heading }}</p>
+              {%- endif -%}
+
               {%- if section.settings.subheading != blank -%}
                 <h2 class="heading heading--small">{{ section.settings.subheading }}</h2>
               {%- endif -%}
@@ -106,6 +115,14 @@
     {
       "type": "paragraph",
       "content": "Dynamic recommendations change and improve with time. Create manual product recommendations using the Shopify Search & Discovery app. [Learn more](https://help.shopify.com/en/manual/online-store/search-and-discovery/product-recommendations)."
+    },{
+      "type": "text",
+      "id": "text_subheading",
+      "label": "Text subheading"
+    },{
+      "type": "text",
+      "id": "text_heading",
+      "label": "Text heading"
     },
     {
       "type": "text",

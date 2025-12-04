@@ -220,8 +220,10 @@
     "product-recommendations": {
       "type": "product-recommendations",
       "settings": {
+        "text_subheading": "",
+        "text_heading": "Dir könnte auch gefallen",
         "subheading": "",
-        "title": "Dir könnte auch gefallen",
+        "title": "",
         "recommendations_count": 10,
         "background": "rgba(0,0,0,0)",
         "text_color": "rgba(0,0,0,0)"
@@ -526,8 +528,10 @@
       ],
       "settings": {
         "show_arrows": true,
-        "subheading": "Aus der Community",
-        "title": "Nice bun, hun!",
+        "text_subheading": "Aus der Community",
+        "text_heading": "Nice bun, hun!",
+        "subheading": "",
+        "title": "",
         "section_header_short_description": "",
         "section_header_heading_size": "h2",
         "section_header_highest_hierarchy": false,
