@@ -63,7 +63,11 @@
             {%- endif -%}
 
             {%- if section.settings.title != blank -%}
+            {% if section.settings.all_heads_p == true %}
+              <p class="heading h2">{{ section.settings.title }}</p>
+              {% else %}
               <h2 class="heading h2">{{ section.settings.title }}</h2>
+            {% endif %}
             {%- endif -%}
 
             {%- if section.settings.content != blank -%}
@@ -348,6 +352,11 @@
       "id": "title",
       "label": "Heading",
       "default": "Multi-column"
+    },{
+      "type": "checkbox",
+      "id": "all_heads_p",
+      "label": "Headings in tag p",
+      "default": false
     },
     {
       "type": "richtext",

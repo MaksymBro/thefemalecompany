@@ -43,7 +43,7 @@
             {%- endif -%}
           </header>
         {%- endif -%}
-        
+
         {%- if section.settings.articles_count == 4 and section.blocks.size == 0 or section.blocks.size >= 4 or section.blocks.size == 0 -%}
           {%- assign use_featured_layout = true -%}
         {%- else -%}
@@ -56,7 +56,7 @@
               <script>
                 console.log(`article: {{ article.settings.title }}`);
               </script>
-              {%- render 'manual-article-item', article: article, heading_size: 'h4' -%}           
+              {%- render 'manual-article-item', article: article, heading_size: 'h4' -%}
             {%- endfor -%}
           </article-list>
 
@@ -179,7 +179,7 @@
         {
           "type": "image_picker",
           "id": "image",
-          "label": "Blog post image"      
+          "label": "Blog post image"
         },
         {
           "type": "url",
