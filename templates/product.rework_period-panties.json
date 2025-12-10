@@ -220,10 +220,9 @@
     "product-recommendations": {
       "type": "product-recommendations",
       "settings": {
-        "text_subheading": "",
-        "text_heading": "Dir könnte auch gefallen",
         "subheading": "",
         "title": "",
+        "all_heads_p": false,
         "recommendations_count": 10,
         "background": "rgba(0,0,0,0)",
         "text_color": "rgba(0,0,0,0)"
@@ -235,6 +234,7 @@
       "settings": {
         "subheading": "",
         "title": "Zuletzt angesehen",
+        "all_heads_p": true,
         "products_count": 4,
         "background": "rgba(0,0,0,0)",
         "text_color": "rgba(0,0,0,0)"
@@ -315,6 +315,7 @@
         "stack_items": false,
         "subheading": "AUSLAUFSICHER DURCH DEN TAG",
         "title": "Stay Dry® Technologie",
+        "all_heads_p": false,
         "content": "<p>Saugstarke Einlage, nur<strong> 1 mm dicker</strong> als normale Unterwäsche und trotzdem <strong>auslaufsicher</strong>. Ohne Biozide & PFAs. So hält sie dicht:</p>",
         "column_alignment": "center",
         "mobile_item_size": "medium",
