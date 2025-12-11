@@ -54,11 +54,11 @@
       {%- if section.settings.subheading != blank or section.settings.title != blank -%}
         <header class="section__header container text-container">
           {%- if section.settings.subheading != blank -%}
-            <h2 class="heading heading--small">{{ section.settings.subheading | escape }}</h2>
+            <p class="heading heading--small">{{ section.settings.subheading | escape }}</p>
           {%- endif -%}
 
           {%- if section.settings.title != blank -%}
-            <h3 class="heading h2">{{ section.settings.title | escape }}</h3>
+            <h2 class="heading h2">{{ section.settings.title | escape }}</h2>
           {%- endif -%}
         </header>
       {%- endif -%}

@@ -36,7 +36,7 @@
 
     --heading-color: {{ heading_color.red }}, {{ heading_color.green }}, {{ heading_color.blue }};
     --text-color: {{ text_color.red }}, {{ text_color.green }}, {{ text_color.blue }};
-    
+
     --primary-button-background: {{ button_background.red }}, {{ button_background.green }}, {{ button_background.blue }};
     --primary-button-text-color: {{ button_text_color.red }}, {{ button_text_color.green }}, {{ button_text_color.blue }};
 
@@ -52,11 +52,15 @@
         {%- if section.settings.subheading != blank or section.settings.title != blank -%}
           <header class="section__header text-container">
             {%- if section.settings.subheading != blank -%}
-              <h3 class="heading heading--small">{{ section.settings.subheading | escape }}</h2>
+              <p class="heading heading--small">{{ section.settings.subheading | escape }}</p>
             {%- endif -%}
 
             {%- if section.settings.title != blank -%}
-              <h2 class="heading h3">{{ section.settings.title | escape }}</h3>
+              {% if section.settings.all_heads_p == true %}
+                <p class="heading h3">{{ section.settings.title | escape }}</p>
+              {% else %}
+                <h2 class="heading h3">{{ section.settings.title | escape }}</h2>
+              {% endif %}
             {%- endif -%}
           </header>
         {%- endif -%}
@@ -85,7 +89,7 @@
                       <p class="article-item__category heading heading--xsmall">{{ 'general.onboarding.blog_post_category' | t }}</p>
                     {%- endif -%}
 
-                    <h3 class="article-item__title heading h5">{{ 'general.onboarding.blog_post_title' | t }}</h3>
+                    <p class="article-item__title heading h5">{{ 'general.onboarding.blog_post_title' | t }}</p>
                   </div>
                 </div>
               {%- endfor -%}
@@ -193,6 +197,11 @@
       "id": "title",
       "label": "Heading",
       "default": "Blog posts"
+    },{
+      "type": "checkbox",
+      "id": "all_heads_p",
+      "label": "Headings in tag p",
+      "default": false
     },
     {
       "type": "range",

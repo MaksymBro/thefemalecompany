@@ -420,6 +420,7 @@
       "settings": {
         "enable_sticky_header": true,
         "logo": "{{ shop.brand.logo }}",
+        "h1_text": "The Female Company",
         "logo_max_width": 250,
         "mobile_logo_max_width": 170,
         "navigation_menu": "navbar",

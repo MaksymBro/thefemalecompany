@@ -124,9 +124,9 @@
               {%- for block in section.blocks -%}
                 <image-with-text-item {% if block.settings.image != blank and image_count > 1 %}attached-image="block-{{ block.id }}-{{ block.settings.image.id }}"{% endif %} {% unless forloop.first %}hidden{% endunless %} class="image-with-text__content text-container text--{{ section.settings.text_alignment }}" {{ block.shopify_attributes }}>
                   {%- if block.settings.subheading != blank -%}
-                    <h2 class="heading heading--small">
+                    <p class="heading heading--small">
                       <split-lines {% if section.settings.reveal_on_scroll or forloop.first != true %}reveal{% endif %}>{{ block.settings.subheading | escape }}</split-lines>
-                    </h2>
+                    </p>
                   {%- endif -%}
 
                   {%- if block.settings.title != blank -%}
