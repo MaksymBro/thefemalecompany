@@ -18,6 +18,59 @@
         "page_width": "medium"
       }
     },
+    "slideshow_LbtpmF": {
+      "type": "slideshow",
+      "blocks": {
+        "image_766VJK": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Header_Web_f81b6e88-ac24-4a64-992d-e83a88679a2f.png",
+            "text_position": "middle_center",
+            "subheading": "Gewinnspiel",
+            "title": "Jetzt anmelden und X-Mas Box im Wert von 200€ gewinnen",
+            "subtitle": "",
+            "subtitle_html": "",
+            "button_1_text": "",
+            "button_1_link": "",
+            "button_2_text": "",
+            "button_2_link": "",
+            "heading_font_family": "circular",
+            "heading_color": "#ffffff",
+            "text_color": "#ffffff",
+            "button_background": "#ffffff",
+            "button_text_color": "#000000",
+            "overlay_color": "#000000",
+            "overlay_opacity": 30,
+            "schedule_publishing": false,
+            "publish_date": "01.01.2019 00:00",
+            "schedule_unpublishing": false,
+            "unpublish_date": "01.01.2019 00:00"
+          }
+        }
+      },
+      "block_order": [
+        "image_766VJK"
+      ],
+      "disabled": true,
+      "name": "Slideshow",
+      "settings": {
+        "section_height": "auto",
+        "transition_type": "sweep",
+        "autoplay": true,
+        "cycle_speed": 5,
+        "background": "rgba(0,0,0,0)",
+        "show_banner_usps": false,
+        "banner_usps_link": "",
+        "show_hide_button": false,
+        "banner_usps_bg_color": "#FFFFFF",
+        "banner_usps_text_color": "#2ABB53",
+        "banner_usps_heading": "",
+        "banner_usps_heading_1": "",
+        "banner_usps_heading_2": "",
+        "banner_usps_heading_3": "",
+        "banner_usps_heading_4": ""
+      }
+    },
     "image_with_text_overlay_CihxBN": {
       "type": "image-with-text-overlay",
       "settings": {
@@ -96,7 +149,7 @@
       "settings": {
         "subheading": "",
         "title": "Teilnahmebedingungen",
-        "content": "<p><strong>Wer stellt den Gewinn?</strong><br/>Den Gewinn verlost The Female Company GmbH.<br/></p><p><strong>Welche Voraussetzungen zur Teilnahme gibt es?</strong></p><ol><li>Mindestalter: 18 Jahre</li><li>Dieses Gewinnspiel steht in keiner Verbindung zu Instagram</li></ol><p></p><p><strong>Wann startet das Gewinnspiel?</strong><br/>Das Gewinnspiel startet am 01.12.2025 und endet am 24.12.2025<br/></p><p><strong>Was kann man gewinnen?</strong><br/>Verlost wird ein Wand Massagestab \"Kiss\", Toycleaner, Gleitgel und Massagekerze von Amorelie, ein Period Panty Set deiner Wahl oder einer Sleepwear aus unserem Sortiment und ein Fall of the Patriarchy T-Shirt.<br/></p><p><strong>Welche Voraussetzung zur Teilnahme gibt es?</strong><br/>Voraussetzung für die Teilnahme ist die Anmeldung zu unserem Newsletter – diese kannst du ganz einfach im Abschnitt \"Gewinnspielanmeldung\" auf dieser Seite vornehmen.<br/></p><p><strong>Wann wird der Preis verlost?</strong><br/><strong>Teilnahmeschluss: 24.12.2025</strong><br/>Wir verlosen den Gewinn nach Ende des Gewinnspiels und informieren die Teilnehmenden bis spätestens Anfang Januar.<br/></p><p><strong>Nach welchem Prinzip wird der Gewinnende gelost?</strong><br/>Wir verlosen nach dem Zufallsprinzip.<br/></p><p><strong>Wie erfahre ich, ob ich gewonnen habe?</strong><br/>Wir informieren die Person, die gewonnen hat per E-Mail. Mehr Informationen zu unserem Datenschutz findest du hier<br/><a href=\"https://buy.thefemalecompany.com/policies/privacy-policy\">https://buy.thefemalecompany.com/policies/privacy-policy</a></p>",
+        "content": "<p><strong>Wer stellt den Gewinn?</strong><br/>Den Gewinn verlost The Female Company GmbH.<br/></p><p><strong>Welche Voraussetzungen zur Teilnahme gibt es?</strong></p><ol><li>Mindestalter: 18 Jahre</li><li>Dieses Gewinnspiel steht in keiner Verbindung zu Instagram</li></ol><p></p><p><strong>Wann startet das Gewinnspiel?</strong><br/>Das Gewinnspiel startet am 01.12.2025 und endet am 24.12.2025<br/></p><p><strong>Was kann man gewinnen?</strong><br/>Verlost wird ein Wand Massagestab \"Kiss\", Toycleaner, Gleitgel und Massagekerze von Amorelie, ein Period Panty Set deiner Wahl aus unserem Sortiment und ein Fall of the Patriarchy T-Shirt.<br/></p><p><strong>Welche Voraussetzung zur Teilnahme gibt es?</strong><br/>Voraussetzung für die Teilnahme ist die Anmeldung zu unserem Newsletter – diese kannst du ganz einfach im Abschnitt \"Gewinnspielanmeldung\" auf dieser Seite vornehmen.<br/></p><p><strong>Wann wird der Preis verlost?</strong><br/><strong>Teilnahmeschluss: 24.12.2025</strong><br/>Wir verlosen den Gewinn nach Ende des Gewinnspiels und informieren die Teilnehmenden bis spätestens Anfang Januar.<br/></p><p><strong>Nach welchem Prinzip wird der Gewinnende gelost?</strong><br/>Wir verlosen nach dem Zufallsprinzip.<br/></p><p><strong>Wie erfahre ich, ob ich gewonnen habe?</strong><br/>Wir informieren die Person, die gewonnen hat per E-Mail. Mehr Informationen zu unserem Datenschutz findest du hier<br/><a href=\"https://buy.thefemalecompany.com/policies/privacy-policy\">https://buy.thefemalecompany.com/policies/privacy-policy</a></p>",
         "button_text": "",
         "button_link": "",
         "background_type": "full_width",
@@ -131,6 +184,7 @@
   },
   "order": [
     "main",
+    "slideshow_LbtpmF",
     "image_with_text_overlay_CihxBN",
     "custom_html_inVJQ8",
     "rich_text_dWzwmX",

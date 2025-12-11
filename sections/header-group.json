@@ -17,8 +17,8 @@
         "discount_dNY6aV": {
           "type": "discount",
           "settings": {
-            "discount_code": "Blackweek40",
-            "discount_text": "40% auf ALLES",
+            "discount_code": "XMAS20",
+            "discount_text": "20% auf ALLES",
             "button_text_copy": "Copy",
             "url_matchers": "collections/favourites,collections/influencer,collections/paid-social-landingpage,pages/lp-period-panty,pages/p-period-panty_ab_menu,pages/crm_landingpage_25,collections/crm_landingpage_2-2,collections"
           }

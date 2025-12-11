@@ -481,14 +481,14 @@
         "info": "Also effects the discount label on the product page!"
       },
       {
-        "type": "range",
-        "id": "discount_percentage_threshold",
-        "label": "Show percentage discount starting at:",
-        "min": 0,
-        "max": 100,
-        "step": 1,
-        "default": 0
-      },
+      "type": "range",
+      "id": "discount_percentage_threshold",
+      "label": "Show percentage discount starting at:",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "default": 0
+    },
       {
         "type": "select",
         "id": "product_color_display",

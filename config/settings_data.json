@@ -63,7 +63,7 @@
     "cart_type": "drawer",
     "cart_icon": "shopping_bag",
     "cart_free_shipping_threshold": "DE:65,AT:65,NL:65,CH:100,OTHER:150",
-    "cart_free_gift_threshold": "",
+    "cart_free_gift_threshold": "DE:9980073771274:80",
     "social_instagram": "https://www.instagram.com/thefemalecompany/",
     "social_tiktok": "https://www.tiktok.com/@thefemalecompany",
     "social_linkedin": "https://www.linkedin.com/company/the-female-company/",
@@ -87,8 +87,8 @@
     "upsell_discount_value2": 15,
     "a_b_test_products": [],
     "discount_showcase_enabled": true,
-    "fallback_discount_code": "Blackweek40",
-    "fallback_discount_percentage": 40,
+    "fallback_discount_code": "XMAS20",
+    "fallback_discount_percentage": 20,
     "show_second_savings_badge_pdp": true,
     "checkout_logo_image": "shopify://shop_images/TheFemaleCompany_Logo_Tomato_04b8553b-b2a9-41dd-ae06-bb33e0ed2df8.png",
     "checkout_logo_size": "small",
@@ -708,6 +708,21 @@
       },
       "16216491870256628967": {
         "type": "shopify://apps/ta-labels-badges/blocks/bss-pl-config-data/91bfe765-b604-49a1-805e-3599fa600b24",
+        "disabled": false,
+        "settings": {}
+      },
+      "10967200920248657493": {
+        "type": "shopify://apps/widebundle/blocks/app-embed/392bb313-2491-436e-a58e-9bb68ebd8f47",
+        "disabled": true,
+        "settings": {}
+      },
+      "10508887350528622030": {
+        "type": "shopify://apps/appstle-bundles/blocks/appstle-bundle/8909921b-2d24-4d68-9b12-9d045d3dcb0a",
+        "disabled": true,
+        "settings": {}
+      },
+      "8605505498557855500": {
+        "type": "shopify://apps/bogos-io-free-gift/blocks/app-embed/0432bba6-720a-4e95-be5a-b868386f7aa6",
         "disabled": false,
         "settings": {}
       }

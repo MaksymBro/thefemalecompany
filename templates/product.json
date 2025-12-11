@@ -61,12 +61,15 @@
             "icon_1": "picto-warranty",
             "title_1": "60 Tage Geld-zurück-Garantie",
             "content_1": "<p>Wenn du unzufrieden bist, erhältst du bis zu <strong>60 Tage lang dein Geld von uns zurück</strong>. Folgendes ist zu beachten:</p><ol><li>Du musst die Retoure bei uns anmelden. Mehr Infos <a href=\"/policies/refund-policy\" title=\"Refund Policy\">hier</a>.</li><li>Alle Produkte die zurückerstattet werden sollen, müssen an uns zurückgesendet werden.</li><li>Die Kosten der Rücksendung müssen selbst getragen werden. Ausgenommen sind Produkte mit Mängeln.</li></ol><p></p>",
+            "nl_only_1": false,
             "icon_2": "picto-secure-payment",
             "title_2": "Zahle in 30 Tagen mit Pay Later by Klarna",
             "content_2": "",
+            "nl_only_2": false,
             "icon_3": "picto-secure-payment",
             "title_3": "",
-            "content_3": ""
+            "content_3": "",
+            "nl_only_3": false
           }
         },
         "bundle_atc_H4GYGR": {
@@ -92,6 +95,7 @@
           "type": "description_accordion",
           "settings": {
             "open_by_default": true,
+            "use_metafields_for_usp": false,
             "heading_1": "",
             "description_1": "",
             "heading_2": "",
@@ -132,6 +136,11 @@
             "content": "<p>{{ product.metafields.descriptors.content_4_body | metafield_tag }}</p>",
             "page": ""
           }
+        },
+        "appstle_bundles_appstle_volume_discount_bundle_4btCaL": {
+          "type": "shopify://apps/appstle-bundles/blocks/appstle-volume-discount-bundle/8909921b-2d24-4d68-9b12-9d045d3dcb0a",
+          "disabled": true,
+          "settings": {}
         }
       },
       "block_order": [
@@ -149,7 +158,8 @@
         "244be36c-36e1-4348-aa9f-0f5c48a1dab5",
         "5d99506a-360d-4c5f-aa4b-422abcc9c271",
         "0c6c32fe-0356-4aeb-943d-7c7543e9bfa3",
-        "6c2c03e5-473f-4aff-a17e-9f4de44cb2d5"
+        "6c2c03e5-473f-4aff-a17e-9f4de44cb2d5",
+        "appstle_bundles_appstle_volume_discount_bundle_4btCaL"
       ],
       "settings": {
         "show_vendor": false,
@@ -195,7 +205,7 @@
             "secondary_btn_text_color": "#56112a",
             "border_color": "#ffbfbf",
             "heading_text_color": "#1a1a1a",
-            "heading_font": "sans-serif",
+            "heading_font": "system_ui_n4",
             "body_text_color": "#000000",
             "badge_icon_color": "#000000",
             "badge_text_color": "#000000",

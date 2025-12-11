@@ -35,8 +35,7 @@
 {%- if page_description -%}
   <meta name="description" content="{{ page_description | escape }}">
 {%- endif -%}
-
-{% render 'canonical-url' %}
+<link rel="canonical" href="{{ canonical_url }}">
 {% render 'social-meta-tags' %}
 {% render 'microdata-schema' %}
 

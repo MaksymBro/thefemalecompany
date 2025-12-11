@@ -643,6 +643,7 @@
     },
     "custom_html_Gd78VT": {
       "type": "custom-html",
+      "disabled": true,
       "name": "NEW custom HTML",
       "settings": {
         "subheading": "",
@@ -693,6 +694,7 @@
         "image_aFhEPz",
         "image_qRUmwb"
       ],
+      "disabled": true,
       "name": "NEW gallery",
       "settings": {
         "show_arrows": false,
@@ -718,6 +720,7 @@
     },
     "custom_html_PaCNEF": {
       "type": "custom-html",
+      "disabled": true,
       "name": "NEW custom HTML 1",
       "settings": {
         "subheading": "",
@@ -752,7 +755,6 @@
         "9839cb17-4191-4e51-8bfd-81e28f54db5c",
         "35517a97-9151-4545-819c-d874291d2438"
       ],
-      "disabled": true,
       "settings": {
         "show_navigation": true,
         "enable_schema": true,
@@ -862,6 +864,7 @@
         "question_9rtVfJ",
         "faq_collection_dMnD7x"
       ],
+      "disabled": true,
       "name": "NEW FAQs",
       "settings": {
         "show_navigation": true,

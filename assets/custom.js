@@ -337,3 +337,87 @@ document.addEventListener("DOMContentLoaded", () => {
 
   window.addEventListener("scroll", checkIfInView);
 });
+
+
+// Intelligems custom tracking of product card click events for specific products.
+window.igEvents = window.igEvents || [];
+document.addEventListener("DOMContentLoaded", () => {
+  document.addEventListener("click", function (e) {
+    const item = e.target.closest("product-item");
+    if (!item) return;
+
+    const allowedIds = [
+      "8291888922890",
+      "9847956013322",
+      "9769898869002"
+    ];
+
+    const id = item.getAttribute("data-id");
+
+    if (allowedIds.includes(id)) {
+      window.igEvents.push({"event": "productcard_newnameclicked"});
+      console.log("Gültiges Produkt geklickt:", id);
+    }
+  });
+});
+
+// GTAG custom tracking for product-item visibility
+const productItems = document.querySelectorAll('product-item[data-id]');
+const trackedItems = new Set(); // product IDs, that have already been tracked; prevents double-tracking
+
+const observerOptions = {
+  root: null,              // viewport
+  threshold: 1.0           // 1.0 = fully visible
+};
+
+// tracking shortly paused during AJAX pagination to avoid tracking invisible items
+let trackingPaused = false;
+let trackingResumeTimeout = null;
+let trackingIgnoreUntil = 0; // timestamp until which observer entries are ignored
+
+function handleProductInView(entries, observer) {
+  if (trackingPaused) return;
+  if (Date.now() < trackingIgnoreUntil) return;
+  entries.forEach(entry => {
+    if (entry.isIntersecting && entry.intersectionRatio === 1) {
+      const item = entry.target;
+      const id = item.getAttribute('data-id');
+
+      if (!trackedItems.has(id)) {
+        window.tfcanalytics.trackEvent("view_productitem", {
+          productId: id
+        });
+        trackedItems.add(id);
+      }
+
+      observer.unobserve(item);
+    }
+  });
+}
+
+const observer = new IntersectionObserver(handleProductInView, observerOptions);
+
+// watch all product-item elements
+productItems.forEach(item => observer.observe(item));
+
+// NOTE: we rely only on `theme:loading:end` to re-init observation after AJAX pagination.
+document.addEventListener('theme:loading:end', () => {
+  trackingPaused = true;
+  if (trackingResumeTimeout) clearTimeout(trackingResumeTimeout);
+  try { observer.disconnect(); } catch (e) { /* ignore */ }
+  const newItems = document.querySelectorAll('product-item[data-id]');
+  newItems.forEach(item => {
+    const id = item.getAttribute('data-id');
+    if (!id) return;
+    if (trackedItems.has(id)) return;
+    observer.observe(item);
+  });
+  // Ignore observer entries for a short window to avoid tracking during automatic scroll.
+  const IGNORE_MS = 700;
+  trackingIgnoreUntil = Date.now() + IGNORE_MS;
+  // Ensure we eventually re-enable tracking
+  trackingResumeTimeout = setTimeout(() => {
+    trackingPaused = false;
+    trackingIgnoreUntil = 0;
+  }, IGNORE_MS + 50);
+});

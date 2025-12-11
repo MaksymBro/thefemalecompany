@@ -1,9 +1,9 @@
-{%- liquid
+{%- liquid 
   assign section_background = background_color | default: section.settings.section_background_color
   if section_background == 'rgba(0,0,0,0)' or section_background == blank
     assign section_background = settings.background
   endif
-
+   
   assign text_color = text_color | default: section.settings.section_text_color
   if text_color == 'rgba(0,0,0,0)' or text_color == blank
     assign text_color = settings.text_color
@@ -79,7 +79,7 @@
           {%- when 'question' -%}
             <div class="faq__item">
               <button is="toggle-button" class="collapsible-toggle text--strong" aria-controls="block-{{ section.id }}-{{ block.id }}" aria-expanded="false">
-                <h3 style="margin:0">{{- block.settings.title -}}</h3>
+                {{- block.settings.title -}}
                 <span class="animated-plus"></span>
               </button>
 
@@ -100,7 +100,7 @@
                     {{- faq_collection.title.value |  escape -}}
                   </h2>
                 {%- endif -%}
-
+      
                 {%- for faq in faq_collection.faqs.value -%}
 
                   {%- if faq.question.value == blank or faq.response.value == blank -%}

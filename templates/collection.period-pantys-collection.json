@@ -314,6 +314,103 @@
         "section_spacing_bottom_mobile": 0
       }
     },
+    "custom_html_mVBJrb": {
+      "type": "custom-html",
+      "name": "Custom HTML NEW",
+      "settings": {
+        "subheading": "",
+        "title": "",
+        "html": "<div style=\"color:#333;padding:40px 20px;line-height:1.6;font-size:16px;background:none;\">\n\n  <h3 style=\"text-align:center;margin-top:40px;font-size:24px;color:#000;\">\n    Nachhaltige Periode – Periodenprodukte ohne Schadstoffe, auslaufsicher durch den Tag\n  </h3>\n\n  <p>\n    Produkte rund um die Periode haben sich weiterentwickelt. Unsere Periodenprodukte von The Female Company bündeln Komfort, Hygiene und Verantwortung in einer Kollektion, die zu deinem Alltag passt. Ob du Periodenprodukte für die Schule, das Büro oder die Nacht suchst – hier findest du Menstruationsprodukte, die verlässlich schützen und sich gut anfühlen. Viele Artikel bestehen aus zertifizierter Bio-Baumwolle, sind vegan, plastikfrei verpackt und hautfreundlich. So triffst du eine bewusste Wahl für dich und für die Umwelt.\n  </p>\n\n  <h3 style=\"text-align:center;margin-top:40px;font-size:24px;color:#000;\">\n    Innovative Technologie für nahtlosen Komfort\n  </h3>\n\n  <p>\n    Die Periodenunterwäsche Seamless von The Female Company ist so funktional wie bequem. Jede Panty enthält eine intelligente Schutzlage aus vier aufeinander abgestimmten Schichten:\n  </p>\n\n  <div style=\"background-color:#fff;border-radius:0;padding:25px;margin:25px 0;border:1px solid #e8b6b6;\">\n    <h4 style=\"color:#d83a56;margin-bottom:10px;\">Die 4-Schichten-Seamless-Technologie:</h4>\n    <ul style=\"list-style:none;padding-left:0;margin:0;\">\n      <li style=\"margin-bottom:10px;\">\n        <strong>1. Stay Dry Layer:</strong> saugt Flüssigkeit blitzschnell auf und hält dich trocken.\n      </li>\n      <li style=\"margin-bottom:10px;\">\n        <strong>2. Ultra-absorbierende Schicht:</strong> speichert die Flüssigkeit und schließt sie sicher ein.\n      </li>\n      <li style=\"margin-bottom:10px;\">\n        <strong>3. Wasserdichte Membran:</strong> sorgt für zuverlässigen, auslaufsicheren Schutz – auch bei längerer Tragedauer.\n      </li>\n      <li>\n        <strong>4. Weicher Oberstoff:</strong> liegt angenehm auf der Haut und sorgt für ein weiches Gefühl während deiner Periode.\n      </li>\n    </ul>\n  </div>\n\n  <p>\n    Alle Lagen sind so fein verarbeitet, dass die Panty nur 1 mm dicker ist als normale Unterwäsche. Dadurch bleibt sie unsichtbar unter jeder Kleidung und bewegt sich gleichzeitig flexibel mit dir. Die nahtlose Periodenunterwäsche ist besonders leicht, anschmiegsam und für alle Lebensphasen perfekt geeignet – von den ersten Zyklen bis zur Zeit nach der Menopause.\n  </p>\n  <p>\n    Die Seamless Periodenunterwäsche absorbiert je nach Modell zwischen 3 und 24 ml Flüssigkeit, das entspricht ½ bis 5 Tampons. Damit ist sie perfekt deinem Körper und deiner individuellen Blutungsstärke angepasst. Sie eignet sich auch bei Ausfluss oder im Wochenbett.\n  </p>\n\n  <h3 style=\"text-align:center;margin-top:40px;font-size:24px;color:#000;\">\n    Seamless Periodenunterwäsche – unsichtbare Begleitung für deinen Alltag\n  </h3>\n\n  <p>\n    Die nahtlose Periodenunterwäsche von The Female Company begleitet dich durch jede Phase deines Zyklus. Sie ist ideal für Tage, an denen du dich frei bewegen und dich dabei sicher fühlen möchtest. Ob zu einem engen Outfit im Büro, bei Yoga oder beim Entspannen zu Hause: Die Unterwäsche bleibt unsichtbar unter deiner Kleidung und fühlt sich wie eine zweite Haut an.\n  </p>\n  <p>\n    Dank der elastischen Materialien passen sich die Slips sanft an deinen Körper an, ohne zu verrutschen oder einzuschneiden. Das sorgt für maximale Bewegungsfreiheit und ein dauerhaft angenehmes Gefühl. Die Seamless Periodenunterwäsche ist in verschiedenen Styles erhältlich, damit du dich in jeder Situation wohlfühlst.\n  </p>\n</div>",
+        "add_vertical_spacing": true,
+        "disable_inside_spacing": false,
+        "background_type": "full_width",
+        "background": "#ffe6e6",
+        "text_color": "rgba(0,0,0,0)"
+      }
+    },
+    "gallery_LiBBGJ": {
+      "type": "gallery",
+      "blocks": {
+        "image_9pkK8J": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Seamless_Sienna_Medium_2.jpg",
+            "caption": ""
+          }
+        },
+        "image_cFgALz": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Seamless_Lace_IcyMorn_PeriodPanty_Thong.jpg",
+            "caption": ""
+          }
+        },
+        "image_H6Xmbc": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Seamless_Tanga_IcyMorn_Light-1_2a9bfc57-080e-41f6-957c-1a2e969a9496.jpg",
+            "caption": ""
+          }
+        },
+        "image_BfizR6": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Seamless_Hipster_SiennaUS.jpg",
+            "caption": ""
+          }
+        },
+        "image_UPa8YL": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Seamless_Tanga_EstateBlue.jpg",
+            "caption": ""
+          }
+        }
+      },
+      "block_order": [
+        "image_9pkK8J",
+        "image_cFgALz",
+        "image_H6Xmbc",
+        "image_BfizR6",
+        "image_UPa8YL"
+      ],
+      "name": "Gallery",
+      "settings": {
+        "show_arrows": true,
+        "subheading": "",
+        "title": "",
+        "section_header_short_description": "",
+        "section_header_heading_size": "h3",
+        "section_header_highest_hierarchy": false,
+        "section_header_short_description_font_size": "medium",
+        "section_container_width": "fluid",
+        "section_text_alignment": "left",
+        "background": "rgba(0,0,0,0)",
+        "text_color": "rgba(0,0,0,0)",
+        "section_heading_color": "rgba(0,0,0,0)",
+        "section_subheading_color": "rgba(0,0,0,0)",
+        "section_heading_font_family": "default",
+        "section_spacing_top": 48,
+        "section_spacing_bottom": 48,
+        "section_spacing_different_mobile": false,
+        "section_spacing_top_mobile": 0,
+        "section_spacing_bottom_mobile": 0
+      }
+    },
+    "custom_html_BLFQNE": {
+      "type": "custom-html",
+      "name": "Custom HTML",
+      "settings": {
+        "subheading": "",
+        "title": "",
+        "html": "<div style=\"color:#333;padding:40px 20px;line-height:1.6;font-size:16px;background:none;\">\n<p>\n    Slip, High Waist, Hipster, Brazilian oder Tanga: Jedes Modell wurde entwickelt, um dir das Gefühl von Sicherheit und Leichtigkeit zu geben. Der Slip ist der klassische Allrounder für den Alltag, die High-Waist-Variante bietet ein wohliges Gefühl im Bauchbereich, der Hipster sorgt für volle Bedeckung und Bewegungsfreiheit, während Brazilian und Tanga mit femininer Passform und weichem Stoff punkten. So findest du immer eine Begleitung, die zu deinem Stil, deinem Körper und deinem Tag passt.\n  </p>\n  <p>\n    Die Periodenunterwäsche Seamless ist wiederverwendbar und pflegeleicht. Nach dem Tragen spülst du sie mit kaltem Wasser aus und gibst sie anschließend bei 40 Grad zu ähnlichen Farben in die Waschmaschine. Feinwaschmittel schützt die Fasern und erhält das weiche Tragegefühl. Zum Trocknen legst du die Unterwäsche einfach an die Luft. So bleibt sie hygienisch, formstabil und lange schön.\n  </p>\n  <p>\n    Durch ihre hohe Qualität und die sorgfältige Verarbeitung kannst du die nahtlose Periodenunterwäsche über viele Zyklen hinweg tragen. Jede Panty steht für nachhaltigen Komfort, der Ressourcen spart und Müll vermeidet. Jeder Slip steht für eine bewusste Entscheidung, die Stil, Funktionalität und Verantwortung miteinander verbindet.\n  </p>\n</div>",
+        "add_vertical_spacing": true,
+        "disable_inside_spacing": false,
+        "background_type": "full_width",
+        "background": "#ffe6e6",
+        "text_color": "rgba(0,0,0,0)"
+      }
+    },
     "c8301c43-1254-4976-8f39-0d3af5d27dae": {
       "type": "pagefly-section",
       "settings": {
@@ -367,108 +464,6 @@
       "settings": {
         "include_horizontal_margins": true,
         "include_vertical_margins": false
-      }
-    },
-    "spacer_Pmr4Xx": {
-      "type": "spacer",
-      "settings": {
-        "height": 16,
-        "different_mobile_height": false,
-        "mobile_height": 0,
-        "background_color": "rgba(0,0,0,0)"
-      }
-    },
-    "39d569d6-89ee-4c4c-af84-8d5ad5312425": {
-      "type": "faq",
-      "blocks": {
-        "9839cb17-4191-4e51-8bfd-81e28f54db5c": {
-          "type": "faq_collection",
-          "settings": {
-            "metaobject_handle": "faq-collection-periodpanty-purchase-assistance",
-            "show_title": true
-          }
-        },
-        "35517a97-9151-4545-819c-d874291d2438": {
-          "type": "faq_collection",
-          "settings": {
-            "metaobject_handle": "faq-collection-periodpanty-usage",
-            "show_title": true
-          }
-        }
-      },
-      "block_order": [
-        "9839cb17-4191-4e51-8bfd-81e28f54db5c",
-        "35517a97-9151-4545-819c-d874291d2438"
-      ],
-      "settings": {
-        "show_navigation": true,
-        "enable_schema": true,
-        "section_header_subheading": "Ihr fragt, wir antworten",
-        "section_header_heading": "Häufig gestellte Fragen",
-        "section_header_short_description": "",
-        "section_header_heading_size": "h3",
-        "section_header_highest_hierarchy": false,
-        "section_header_short_description_font_size": "medium",
-        "section_container_width": "md",
-        "section_text_alignment": "left",
-        "section_background_color": "#dc5268",
-        "section_text_color": "#ffffff",
-        "section_heading_color": "#ffffff",
-        "section_subheading_color": "rgba(0,0,0,0)",
-        "section_heading_font_family": "default",
-        "section_spacing_top": 44,
-        "section_spacing_bottom": 28,
-        "section_spacing_different_mobile": true,
-        "section_spacing_top_mobile": 32,
-        "section_spacing_bottom_mobile": 32
-      }
-    },
-    "4f19f758-87c3-4595-ac6d-67ef58cb4b7b": {
-      "type": "button",
-      "settings": {
-        "start_year": 2025,
-        "start_month": 1,
-        "start_day": 1,
-        "start_time": "10:00",
-        "end_year": 2050,
-        "end_month": 12,
-        "end_day": 31,
-        "end_time": "10:00",
-        "button_text": "Zum Hilfe-Center",
-        "button_link": "https://help.thefemalecompany.com/",
-        "button_link_new_window": true,
-        "button_details": "",
-        "button_style": "white",
-        "button_outline": true,
-        "button_shadow": false,
-        "button_size": "md",
-        "button_fit": "inline",
-        "section_container_width": "md",
-        "section_text_alignment": "center",
-        "section_background_color": "#dc5268",
-        "section_spacing_top": 16,
-        "section_spacing_bottom": 44,
-        "section_spacing_different_mobile": true,
-        "section_spacing_top_mobile": 0,
-        "section_spacing_bottom_mobile": 32
-      }
-    },
-    "528ac3ca-ddd2-4007-b700-fbd0a4e2a6ec": {
-      "type": "blog-posts",
-      "settings": {
-        "blog": "periodenunterwaesche-ratgeber",
-        "subheading": "Mehr zum Thema",
-        "title": "Periodenunterwäsche-Ratgeber",
-        "articles_count": 3,
-        "stack_mobile": false,
-        "show_category": true,
-        "show_excerpt": true,
-        "button_text": "Zum Ratgeber",
-        "button_url": "shopify://blogs/periodenunterwaesche-ratgeber",
-        "background": "#fdd1d8",
-        "text_color": "rgba(0,0,0,0)",
-        "button_background": "rgba(0,0,0,0)",
-        "button_text_color": "rgba(0,0,0,0)"
       }
     },
     "609b6ac0-94db-46fb-942f-37e93ec6659c": {
@@ -598,6 +593,179 @@
         "button_background": "rgba(0,0,0,0)",
         "button_text_color": "rgba(0,0,0,0)"
       }
+    },
+    "spacer_Pmr4Xx": {
+      "type": "spacer",
+      "settings": {
+        "height": 16,
+        "different_mobile_height": false,
+        "mobile_height": 0,
+        "background_color": "rgba(0,0,0,0)"
+      }
+    },
+    "39d569d6-89ee-4c4c-af84-8d5ad5312425": {
+      "type": "faq",
+      "blocks": {
+        "9839cb17-4191-4e51-8bfd-81e28f54db5c": {
+          "type": "faq_collection",
+          "settings": {
+            "metaobject_handle": "faq-collection-periodpanty-purchase-assistance",
+            "show_title": true
+          }
+        },
+        "35517a97-9151-4545-819c-d874291d2438": {
+          "type": "faq_collection",
+          "settings": {
+            "metaobject_handle": "faq-collection-periodpanty-usage",
+            "show_title": true
+          }
+        }
+      },
+      "block_order": [
+        "9839cb17-4191-4e51-8bfd-81e28f54db5c",
+        "35517a97-9151-4545-819c-d874291d2438"
+      ],
+      "disabled": true,
+      "settings": {
+        "show_navigation": true,
+        "enable_schema": true,
+        "section_header_subheading": "Ihr fragt, wir antworten",
+        "section_header_heading": "Häufig gestellte Fragen",
+        "section_header_short_description": "",
+        "section_header_heading_size": "h3",
+        "section_header_highest_hierarchy": false,
+        "section_header_short_description_font_size": "medium",
+        "section_container_width": "md",
+        "section_text_alignment": "left",
+        "section_background_color": "#dc5268",
+        "section_text_color": "#ffffff",
+        "section_heading_color": "#ffffff",
+        "section_subheading_color": "rgba(0,0,0,0)",
+        "section_heading_font_family": "default",
+        "section_spacing_top": 44,
+        "section_spacing_bottom": 28,
+        "section_spacing_different_mobile": true,
+        "section_spacing_top_mobile": 32,
+        "section_spacing_bottom_mobile": 32
+      }
+    },
+    "faq_ri6nmc": {
+      "type": "faq",
+      "blocks": {
+        "question_njPECC": {
+          "type": "question",
+          "settings": {
+            "title": "Ist die Periodenunterwäsche nahtlos angenehm zu tragen?",
+            "answer": "<p>Ja, die Periodenunterwäsche nahtlos wurde so entwickelt, dass sie weich, elastisch und atmungsaktiv ist. Sie passt sich deiner Körperform an und sitzt wie eine zweite Haut. Viele Frauen beschreiben das Tragegefühl als besonders angenehm, gerade im Vergleich zu Tampons eine komfortable Alternative!</p>"
+          }
+        },
+        "question_WfcW6K": {
+          "type": "question",
+          "settings": {
+            "title": "Wie hoch ist der Schutz der Seamless Slips?",
+            "answer": "<p>Je nach Modell reicht die Saugstärke von Light bis Ultra Strong. Eine Panty kann bis zu 24 ml Flüssigkeit aufnehmen, was etwa 5 Tampons entspricht. Damit ist die Unterwäsche auch für stärkere Blutungen gut geeignet. Die nahtlose Periodenunterwäsche bleibt selbst bei Bewegung, Sitzen oder Sport sicher. So wird ein Auslaufen zuverlässig verhindert und du fühlst dich den ganzen Tag geschützt.</p>"
+          }
+        },
+        "question_gWEazN": {
+          "type": "question",
+          "settings": {
+            "title": "Wie kann ich die Seamless Periodenunterwäsche pflegen?",
+            "answer": "<p>Nach dem Tragen spülst du die Unterwäsche mit kaltem Wasser aus und wäschst sie anschließend bei 40 Grad in der Maschine. Sie trocknet am besten an der Luft. Auf Weichspüler, Bleichmittel und den Trockner solltest du verzichten. So bleibt das Material elastisch, hygienisch und angenehm weich.</p>"
+          }
+        },
+        "question_pgxHKj": {
+          "type": "question",
+          "settings": {
+            "title": "Lässt sich die nahtlose Periodenunterwäsche unter enger Kleidung tragen?",
+            "answer": "<p>Ja, die Seamless Periodenunterwäsche ist so verarbeitet, dass keine sichtbaren Linien entstehen. Durch das feine Material und die flache Verarbeitung ohne störende Nähte bleibt sie selbst unter Leggings, Röcken oder figurbetonter Kleidung unsichtbar.</p>"
+          }
+        },
+        "question_pxjPW3": {
+          "type": "question",
+          "settings": {
+            "title": "Kann die nahtlose Periodenunterwäsche auslaufen?",
+            "answer": "<p>Die mehrlagige Schutztechnologie mit wasserdichter Membran sorgt dafür, dass die Slips auslaufsicher bleiben.  Selbst bei Bewegung oder längerem Tragen schützt sie zuverlässig. Wichtig ist nur, die passende Saugstärke für deinen Zyklustag zu wählen, damit du dich jederzeit sicher fühlst. Außerdem ist sie mit Flexi Technology ausgestattet – damit passt sich die Sauglauge flexibel deinem Körper an, auch wenn du dich bewegst.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "question_njPECC",
+        "question_WfcW6K",
+        "question_gWEazN",
+        "question_pgxHKj",
+        "question_pxjPW3"
+      ],
+      "name": "FAQ NEW",
+      "settings": {
+        "show_navigation": false,
+        "enable_schema": false,
+        "section_header_subheading": "",
+        "section_header_heading": "Seamless Periodenunterwäsche FAQ",
+        "section_header_short_description": "",
+        "section_header_heading_size": "h3",
+        "section_header_highest_hierarchy": false,
+        "section_header_short_description_font_size": "medium",
+        "section_container_width": "md",
+        "section_text_alignment": "left",
+        "section_background_color": "#dc5268",
+        "section_text_color": "#ffffff",
+        "section_heading_color": "#ffffff",
+        "section_subheading_color": "rgba(0,0,0,0)",
+        "section_heading_font_family": "default",
+        "section_spacing_top": 32,
+        "section_spacing_bottom": 32,
+        "section_spacing_different_mobile": false,
+        "section_spacing_top_mobile": 0,
+        "section_spacing_bottom_mobile": 0
+      }
+    },
+    "4f19f758-87c3-4595-ac6d-67ef58cb4b7b": {
+      "type": "button",
+      "settings": {
+        "start_year": 2025,
+        "start_month": 1,
+        "start_day": 1,
+        "start_time": "10:00",
+        "end_year": 2050,
+        "end_month": 12,
+        "end_day": 31,
+        "end_time": "10:00",
+        "button_text": "Zum Hilfe-Center",
+        "button_link": "https://help.thefemalecompany.com/",
+        "button_link_new_window": true,
+        "button_details": "",
+        "button_style": "white",
+        "button_outline": true,
+        "button_shadow": false,
+        "button_size": "md",
+        "button_fit": "inline",
+        "section_container_width": "md",
+        "section_text_alignment": "center",
+        "section_background_color": "#dc5268",
+        "section_spacing_top": 16,
+        "section_spacing_bottom": 44,
+        "section_spacing_different_mobile": true,
+        "section_spacing_top_mobile": 0,
+        "section_spacing_bottom_mobile": 32
+      }
+    },
+    "528ac3ca-ddd2-4007-b700-fbd0a4e2a6ec": {
+      "type": "blog-posts",
+      "settings": {
+        "blog": "periodenunterwaesche-ratgeber",
+        "subheading": "Mehr zum Thema",
+        "title": "Periodenunterwäsche-Ratgeber",
+        "articles_count": 3,
+        "stack_mobile": false,
+        "show_category": true,
+        "show_excerpt": true,
+        "button_text": "Zum Ratgeber",
+        "button_url": "shopify://blogs/periodenunterwaesche-ratgeber",
+        "background": "#fdd1d8",
+        "text_color": "rgba(0,0,0,0)",
+        "button_background": "rgba(0,0,0,0)",
+        "button_text_color": "rgba(0,0,0,0)"
+      }
     }
   },
   "order": [
@@ -610,16 +778,20 @@
     "feda577e-11fc-46a6-b585-7c78638f36a1",
     "6df6aa54-d7ca-4d51-8172-71d083a6ae85",
     "7cc3d404-c5c7-4cfc-8124-8c91cd082923",
+    "custom_html_mVBJrb",
+    "gallery_LiBBGJ",
+    "custom_html_BLFQNE",
     "c8301c43-1254-4976-8f39-0d3af5d27dae",
     "6a453231-19fd-480f-bd79-5a5ad1c669a9",
     "17067007329ffdb02d",
-    "spacer_Pmr4Xx",
-    "39d569d6-89ee-4c4c-af84-8d5ad5312425",
-    "4f19f758-87c3-4595-ac6d-67ef58cb4b7b",
-    "528ac3ca-ddd2-4007-b700-fbd0a4e2a6ec",
     "609b6ac0-94db-46fb-942f-37e93ec6659c",
     "5234b890-eacd-4bc7-a285-91de319f80ad",
     "6eaa494e-eafe-4a2b-83f7-a759ad31cb51",
-    "6cb43d1a-8f6d-4cf7-813f-67ffae9a140d"
+    "6cb43d1a-8f6d-4cf7-813f-67ffae9a140d",
+    "spacer_Pmr4Xx",
+    "39d569d6-89ee-4c4c-af84-8d5ad5312425",
+    "faq_ri6nmc",
+    "4f19f758-87c3-4595-ac6d-67ef58cb4b7b",
+    "528ac3ca-ddd2-4007-b700-fbd0a4e2a6ec"
   ]
 }
