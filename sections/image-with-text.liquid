@@ -130,9 +130,9 @@
                   {%- endif -%}
 
                   {%- if block.settings.title != blank -%}
-                    <h3 class="heading h3">
+                    <h2 class="heading h3">
                       <split-lines {% if section.settings.reveal_on_scroll or forloop.first != true %}reveal{% endif %}>{{ block.settings.title | escape }}</split-lines>
-                    </h3>
+                    </h2>
                   {%- endif -%}
 
                   <div class="image-with-text__text-wrapper" {% if section.settings.reveal_on_scroll or forloop.first != true %}reveal{% endif %}>

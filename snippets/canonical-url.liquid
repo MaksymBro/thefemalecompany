@@ -1,49 +1,25 @@
 {% assign base_url = canonical_url | split:'?' | first %}
-{% assign locale_part = base_url | split: '/' | slice: 3, 1 | first %}
-{% assign short_locale = locale_part | split:'-' | first %}
+{% assign parts = base_url | split:'/' %}
+{% assign locale_part = parts[3] %}
+
+{%- if locale_part contains '-' -%}
+    {% assign lang = locale_part | split:'-' | first %}
+{%- else -%}
+    {% assign lang = locale_part %}
+{%- endif -%}
 
 {%- comment -%}
-If German is the main language, canonical must NOT contain /de or /de-ch etc.
-So we remove the locale path entirely.
+If main language (de) → canonical without locale
 {%- endcomment -%}
 
-{%- if locale_part == 'de' or locale_part startswith 'de-' %}
-    {%- comment -%} Remove /de or /de-ch/... from the URL {%- endcomment -%}
-    {%- assign base_url_parts = base_url | split: '/' -%}
-    {%- assign cleaned_parts = '' -%}
-
-    {%- for part in base_url_parts %}
-        {%- if forloop.index0 != 2 %}
-            {%- assign cleaned_parts = cleaned_parts | append: '/' | append: part -%}
-        {%- endif %}
-    {%- endfor %}
-
-    {%- assign base_url = cleaned_parts | replace: '//', '/' -%}
-
-{%- elsif locale_part contains '-' %}
-    {%- assign old = '/' | append: locale_part | append: '/' -%}
-    {%- assign new = '/' | append: short_locale | append: '/' -%}
-    {%- assign base_url = base_url | replace: old, new -%}
-
-{%- elsif locale_part == 'en'
-or locale_part == 'fr'
-or locale_part == 'nl'
-or locale_part == 'it'
-or locale_part == 'es'
-or locale_part == 'pt'
-or locale_part == 'pl'
-or locale_part == 'sv'
-or locale_part == 'da'
-or locale_part == 'fi'
-or locale_part == 'cs'
-or locale_part == 'sk'
-or locale_part == 'no'
-or locale_part == 'hu'
-or locale_part == 'ro'
-or locale_part == 'bg'
-or locale_part == 'el'
-%}
-    {%- comment -%} Short locale, do nothing {%- endcomment -%}
+{% if lang == 'de' %}
+    {% assign canonical = parts[0] | append: '//' | append: parts[2] %}
+{% else %}
+    {% assign canonical = parts[0] | append: '//' | append: parts[2] | append: '/' | append: lang %}
 {% endif %}
 
-<link rel="canonical" href="{{ base_url }}">
+{% for part in parts offset:4 %}
+    {% assign canonical = canonical | append: '/' | append: part %}
+{% endfor %}
+
+<link rel="canonical" href="{{ canonical }}">
