@@ -213,7 +213,6 @@
       "settings": {
         "subheading": "",
         "title": "Dir könnte auch gefallen",
-        "all_heads_p": true,
         "recommendations_count": 10,
         "background": "#fff0f0",
         "text_color": "#1a1a1a"
@@ -352,7 +351,6 @@
         "stack_items": false,
         "subheading": "Free the Nïpple",
         "title": "BRALETTES",
-        "all_heads_p": true,
         "content": "<p>Ihr habt es euch gewünscht: <strong>passende Bralettes zu Period Pantys und Daysics®! </strong>Hier kommen sie: die weichsten <strong>#nïpplefreeing </strong>Bralettes ever.<br/>Denn wir sagen ciao zur #Nïpplezensur!<br/> Let's hang out!</p>",
         "column_alignment": "center",
         "mobile_item_size": "large",
@@ -486,8 +484,6 @@
       "disabled": true,
       "settings": {
         "show_arrows": true,
-        "text_subheading": "",
-        "text_heading": "",
         "subheading": "Aus der Community",
         "title": "Nice bun, hun!",
         "section_header_short_description": "",
@@ -571,7 +567,6 @@
       "settings": {
         "subheading": "Mix & Match",
         "title": "Spare 10€ im Set*",
-        "all_heads_p": true,
         "section_size": "medium",
         "stack_on_mobile": true,
         "background": "#e3bcbd",
@@ -621,7 +616,6 @@
         "blog": "nipples-ratgeber",
         "subheading": "Stay up-to-date",
         "title": "Blog posts",
-        "all_heads_p": true,
         "articles_count": 3,
         "stack_mobile": false,
         "show_category": true,

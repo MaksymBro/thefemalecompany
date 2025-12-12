@@ -38,19 +38,13 @@
     endif
   endif
 
-  assign subheading_tag = subheading_tag | default: 'p'
+  assign subheading_tag = subheading_tag | default: 'h3'
   assign heading_tag = heading_tag | default: 'h2'
 -%}
 
-{%- if heading != blank or subheading != blank or text_heading != blank or text_subheading != blank -%}
+{%- if heading != blank or subheading != blank -%}
   <header class="section__header">
     <div class="text-container">
-    {%- if text_subheading != blank -%}
-        <p class="heading heading--small">{{ text_subheading }}</p>
-    {%- endif -%}
-    {%- if text_heading != blank -%}
-        <p class="heading js-section-header-heading h2">{{ text_heading }}</p>
-    {%- endif -%}
       {%- if subheading != blank -%}
         <{{ subheading_tag }} class="heading heading--small">{{ subheading | newline_to_br }}</{{ subheading_tag }}>
       {%- endif -%}

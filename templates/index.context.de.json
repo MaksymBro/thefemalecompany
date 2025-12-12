@@ -12,5 +12,10 @@
   "context": {
     "market": "de"
   },
-  "sections": {}
+  "sections": {
+    "slideshow": {
+      "settings": {},
+      "blocks": {}
+    }
+  }
 }

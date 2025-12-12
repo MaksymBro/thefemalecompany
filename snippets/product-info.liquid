@@ -554,7 +554,7 @@
           {%- if title != blank and content != blank -%}
             <div id="block-{{ section.id }}-{{ block.id }}-{{ product.id }}" class="product-tabs__tab-item-wrapper" {{ block.shopify_attributes }}>
               <button type="button" is="toggle-button" class="collapsible-toggle heading heading--small" aria-expanded="{% if open_by_default == true %}true{% else %}false{% endif %}" aria-controls="block-{{ section.id }}-{{ block.id }}-{{ product.id }}-content">
-                <h2 class="p" style="margin: 0; font-weight: inherit; font-size: inherit;">{{- title -}}</h2>
+                {{- title -}}
                 {%- render 'icon' with 'chevron' -%}
               </button>
 

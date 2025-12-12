@@ -109,14 +109,14 @@
               {%- endif -%}
 
               {% if link_badge_content == blank %}
-                <p class="mobile-nav__link-text">
+                <span class="mobile-nav__link-text">
                   {{ link_title }}
-                </p>
+                </span>
               {%  else %}
-                <p class="mobile-nav__link-text">
+                <span class="mobile-nav__link-text">
                   {{ link_title }}
                   <span class="mobile-nav__link-badge">{{ link_badge_content }}</span>
-                </p>
+                </span>
               {% endif %}
 
               <span class="animated-plus"></span>
@@ -240,9 +240,9 @@
                             {%- render 'icon', icon: sub_link_icon_handle -%}
                           {%- endif -%}
 
-                          <p class="mobile-nav__link-text">
+                          <span class="mobile-nav__link-text">
                             {{- sub_link_title -}}
-                          </p>
+                          </span>
                         </a>
                       {%- endif -%}
                     </li>

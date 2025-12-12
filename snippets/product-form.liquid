@@ -1195,7 +1195,45 @@
   IMPLEMENTATION NOTE: if during the iteration of the options we have found an option matching a size chart, we add it here
 {%- endcomment -%}
 
+{%- if found_size_option and size_chart_page != blank -%}
+  {%- comment -%}Drawer is for tablet and desktop{%- endcomment -%}
+  <drawer-content id="product-{{ section.id }}-{{ product.id }}-size-chart-drawer" class="drawer drawer--large hidden-phone">
+    <span class="drawer__overlay"></span>
 
+    <header class="drawer__header">
+      <p class="drawer__title heading h6">{{ size_chart_page.title }}</p>
+
+      <button type="button" class="drawer__close-button tap-area" data-action="close" title="{{ 'general.accessibility.close' | t | escape }}">
+        {%- render 'icon' with 'close' -%}
+      </button>
+    </header>
+
+    <div class="drawer__content drawer__content--padded-start">
+      <div class="rte">
+        {{- size_chart_page.content -}}
+      </div>
+    </div>
+  </drawer-content>
+
+  {%- comment -%}Popover is for mobile{%- endcomment -%}
+  <popover-content id="product-{{ section.id }}-{{ product.id }}-size-chart-popover" class="popover hidden-lap-and-up">
+    <span class="popover__overlay"></span>
+
+    <header class="popover__header">
+      <p class="popover__title heading h6">{{ size_chart_page.title }}</p>
+
+      <button type="button" class="popover__close-button tap-area tap-area--large" data-action="close" title="{{ 'general.accessibility.close' | t | escape }}">
+        {%- render 'icon' with 'close' -%}
+      </button>
+    </header>
+
+    <div class="popover__content">
+      <div class="rte">
+        {{- size_chart_page.content -}}
+      </div>
+    </div>
+  </popover-content>
+{%- endif -%}
 
 {%- if found_size_option and absorbancy_chart_page != blank -%}
   {%- comment -%}Drawer is for tablet and desktop{%- endcomment -%}
@@ -1232,46 +1270,6 @@
     <div class="popover__content">
       <div class="rte">
         {{- absorbancy_chart_page.content -}}
-      </div>
-    </div>
-  </popover-content>
-{%- endif -%}
-
-{%- if found_size_option and size_chart_page != blank -%}
-  {%- comment -%}Drawer is for tablet and desktop{%- endcomment -%}
-  <drawer-content id="product-{{ section.id }}-{{ product.id }}-size-chart-drawer" class="drawer drawer--large hidden-phone">
-    <span class="drawer__overlay"></span>
-
-    <header class="drawer__header">
-      <p class="drawer__title heading h6">{{ size_chart_page.title }}</p>
-
-      <button type="button" class="drawer__close-button tap-area" data-action="close" title="{{ 'general.accessibility.close' | t | escape }}">
-        {%- render 'icon' with 'close' -%}
-      </button>
-    </header>
-
-    <div class="drawer__content drawer__content--padded-start">
-      <div class="rte">
-        {{- size_chart_page.content -}}
-      </div>
-    </div>
-  </drawer-content>
-
-  {%- comment -%}Popover is for mobile{%- endcomment -%}
-  <popover-content id="product-{{ section.id }}-{{ product.id }}-size-chart-popover" class="popover hidden-lap-and-up">
-    <span class="popover__overlay"></span>
-
-    <header class="popover__header">
-      <p class="popover__title heading h6">{{ size_chart_page.title }}</p>
-
-      <button type="button" class="popover__close-button tap-area tap-area--large" data-action="close" title="{{ 'general.accessibility.close' | t | escape }}">
-        {%- render 'icon' with 'close' -%}
-      </button>
-    </header>
-
-    <div class="popover__content">
-      <div class="rte">
-        {{- size_chart_page.content -}}
       </div>
     </div>
   </popover-content>

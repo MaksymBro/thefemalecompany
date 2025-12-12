@@ -213,12 +213,13 @@
         },
         "countdown_timer_WwMiPY": {
           "type": "countdown_timer",
+          "disabled": true,
           "settings": {
             "show_countdown_words": true,
-            "countdown_start_date": "2025-12-01",
-            "countdown_start_time_hour": "18",
+            "countdown_start_date": "2025-12-11",
+            "countdown_start_time_hour": "09",
             "countdown_start_time_minute": "00",
-            "countdown_date": "2025-12-01",
+            "countdown_date": "2025-12-12",
             "countdown_time_hour": "23",
             "countdown_time_minute": "59",
             "timer_link": "",
@@ -420,7 +421,6 @@
       "settings": {
         "enable_sticky_header": true,
         "logo": "{{ shop.brand.logo }}",
-        "h1_text": "The Female Company",
         "logo_max_width": 250,
         "mobile_logo_max_width": 170,
         "navigation_menu": "navbar",

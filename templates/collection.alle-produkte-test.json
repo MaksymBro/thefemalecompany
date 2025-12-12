@@ -61,6 +61,7 @@
     },
     "rich_text_aakhLY": {
       "type": "rich-text",
+      "disabled": true,
       "name": "Rich text",
       "settings": {
         "subheading": "",
@@ -97,6 +98,7 @@
         },
         "template--17777087021322__5012c18a-1b12-44a4-82f7-f570a35cc02e-logo-3": {
           "type": "logo",
+          "disabled": true,
           "settings": {
             "logo": "shopify://shop_images/Category_Bestseller_769249a0-1465-42a1-a396-ee82ae5b3669.png",
             "link": "https://buy.thefemalecompany.com/collections/all-2?sort_by=manual&filter.p.m.filters.collection=Sleep&filter.v.price.gte=&filter.v.price.lte=&filter.v.availability=1"

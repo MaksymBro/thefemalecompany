@@ -74,15 +74,11 @@
       {%- if section.settings.subheading != blank or section.settings.title != blank -%}
         <header class="section__header text-container">
           {%- if section.settings.subheading != blank -%}
-            <p class="heading heading--small">{{ section.settings.subheading | escape }}</p>
+            <h2 class="heading heading--small">{{ section.settings.subheading | escape }}</h2>
           {%- endif -%}
 
           {%- if section.settings.title != blank -%}
-          {% if section.settings.all_heads_p == true %}
-            <p class="heading h2">{{ section.settings.title | escape }}</p>
-          {% else %}
-            <h2 class="heading h2">{{ section.settings.title | escape }}</h2>
-            {% endif %}
+            <h3 class="heading h2">{{ section.settings.title | escape }}</h3>
           {%- endif -%}
         </header>
       {%- endif -%}
@@ -311,11 +307,6 @@
       "id": "title",
       "label": "Heading",
       "default": "Promotion blocks"
-    },{
-      "type": "checkbox",
-      "id": "all_heads_p",
-      "label": "Headings in tag p",
-      "default": false
     },
     {
       "type": "select",

@@ -26,9 +26,9 @@
     {%- if section.settings.show_category -%}
       <p class="article-item__category heading heading--xsmall">{{ article.settings.category }}</p>
     {%- endif -%}
-    <p class="article-item__title heading {{ heading_size }}">
-      <a href="{{ article.settings.url }}" style="text-decoration: none">{{ article.settings.title }}</a>
-    </p>
+    <h3 class="article-item__title heading {{ heading_size }}">
+      <a href="{{ article.settings.url }}">{{ article.settings.title }}</a>
+    </h3>
 
   </div>
 </div>

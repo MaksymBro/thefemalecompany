@@ -145,9 +145,9 @@
                                 {%- render 'icon', icon: sub_link_icon_handle -%}
                               {%- endif -%}
 
-                              <p class="desktop-nav__link-text">
+                              <span class="desktop-nav__link-text">
                                 {{ sub_link_title }}
-                              </p>
+                              </span>
                             </span>
                           {%- else -%}
                             <a
@@ -158,9 +158,9 @@
                                 {%- render 'icon', icon: sub_link_icon_handle -%}
                               {%- endif -%}
 
-                              <p class="desktop-nav__link-text">
+                              <span class="desktop-nav__link-text">
                                 {{ sub_link_title }}
-                              </p>
+                              </span>
                             </a>
                           {%- endif -%}
 
@@ -237,9 +237,9 @@
                                       {%- render 'icon', icon: sub_sub_link_icon_handle -%}
                                     {%- endif -%}
 
-                                    <p class="desktop-nav__link-text">
+                                    <span class="desktop-nav__link-text">
                                       {{ sub_sub_link_title }}
-                                    </p>
+                                    </span>
                                   </a>
                                 </li>
                               {%- endfor -%}
@@ -288,9 +288,9 @@
                     {%- render 'icon', icon: sub_link_icon_handle -%}
                   {%- endif -%}
 
-                  <p class="desktop-nav__link-text">
+                  <span class="desktop-nav__link-text">
                     {{- sub_link_title -}}
-                  </p>
+                  </span>
 
                   {%- if sub_link.links.size > 0 -%}
                     {% render 'icon' with 'dropdown-arrow-right', direction_aware: true %}
@@ -373,9 +373,9 @@
                             {%- render 'icon', icon: sub_sub_link_icon_handle -%}
                           {%- endif -%}
 
-                          <p class="desktop-nav__link-text">
+                          <span class="desktop-nav__link-text">
                             {{ sub_sub_link_title }}
-                          </p>
+                          </span>
                         </a>
                       </li>
                     {%- endfor -%}
