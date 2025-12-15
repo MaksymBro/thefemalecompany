@@ -209,15 +209,9 @@
             {%- endif -%}
 
             {%- if block.settings.title != blank -%}
-              {% if block.settings.title_h1 == true %}
-                <h1 class="heading heading--large js-slideshow-heading">
-                  <split-lines {% if section.settings.transition_type != 'fade' %}reveal{% endif %}>{{ block.settings.title | escape }}</split-lines>
-                </h1>
-              {% else %}
-                <h3 class="heading heading--large js-slideshow-heading">
-                  <split-lines {% if section.settings.transition_type != 'fade' %}reveal{% endif %}>{{ block.settings.title | escape }}</split-lines>
-                </h3>
-              {% endif %}
+              <h3 class="heading heading--large js-slideshow-heading">
+                <split-lines {% if section.settings.transition_type != 'fade' %}reveal{% endif %}>{{ block.settings.title | escape }}</split-lines>
+              </h3>
             {%- endif -%}
 
             {%- if block.settings.subtitle != blank or block.settings.subtitle_html != blank -%}
@@ -582,11 +576,6 @@
           "id": "title",
           "label": "Heading",
           "default": "Slide title"
-        },{
-          "type": "checkbox",
-          "id": "title_h1",
-          "label": "Heading is H1",
-          "default": false
         },
         {
           "type": "richtext",

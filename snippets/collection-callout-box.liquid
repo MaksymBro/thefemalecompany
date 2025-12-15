@@ -1,11 +1,15 @@
 {% capture callout_box_content %}
     <div class="callout-box-content">
+        {% if collection.metafields.custom.callout_box_link != blank %}
         <a href="{{ collection.metafields.custom.callout_box_link }}">
+        {% endif %}
             <img class="callout-box-img"
             src="{{ collection.metafields.custom.callout_box_image | image_url: width: 605 }}" 
             width="605" height="auto"
             loading="lazy">
+        {% if collection.metafields.custom.callout_box_link != blank %}
         </a>
+        {% endif %}
     </div>
 {% endcapture %}
 
