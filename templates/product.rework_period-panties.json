@@ -41,6 +41,12 @@
           "type": "low_on_stock_info",
           "settings": {}
         },
+        "rapi_rapi_bundle_GCLk9B": {
+          "type": "shopify://apps/rapi/blocks/rapi-bundle/99617c17-a32b-4e70-a883-7a155610d032",
+          "settings": {
+            "product": "{{product}}"
+          }
+        },
         "quantity_selector": {
           "type": "quantity_selector",
           "settings": {}
@@ -185,6 +191,7 @@
         "f0d2cc62-543d-4ad8-bdd7-18c3d04a52c1",
         "yotpo_loyalty_rewards_product_points_module_app_block_QiNBrb",
         "02190bcc-9ff0-4f94-8898-2b2cb44da8ea",
+        "rapi_rapi_bundle_GCLk9B",
         "quantity_selector",
         "buy_buttons",
         "a5ac472c-f2be-447e-bdc1-42de5d4d5016",

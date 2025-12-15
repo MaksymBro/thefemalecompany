@@ -136,11 +136,6 @@
             "content": "<p>{{ product.metafields.descriptors.content_4_body | metafield_tag }}</p>",
             "page": ""
           }
-        },
-        "appstle_bundles_appstle_volume_discount_bundle_4btCaL": {
-          "type": "shopify://apps/appstle-bundles/blocks/appstle-volume-discount-bundle/8909921b-2d24-4d68-9b12-9d045d3dcb0a",
-          "disabled": true,
-          "settings": {}
         }
       },
       "block_order": [
@@ -158,8 +153,7 @@
         "244be36c-36e1-4348-aa9f-0f5c48a1dab5",
         "5d99506a-360d-4c5f-aa4b-422abcc9c271",
         "0c6c32fe-0356-4aeb-943d-7c7543e9bfa3",
-        "6c2c03e5-473f-4aff-a17e-9f4de44cb2d5",
-        "appstle_bundles_appstle_volume_discount_bundle_4btCaL"
+        "6c2c03e5-473f-4aff-a17e-9f4de44cb2d5"
       ],
       "settings": {
         "show_vendor": false,

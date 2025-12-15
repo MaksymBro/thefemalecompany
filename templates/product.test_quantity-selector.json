@@ -33,11 +33,6 @@
           "disabled": true,
           "settings": {}
         },
-        "appstle_bundles_appstle_bundle_product_page_build_a_box_Qc3Tzq": {
-          "type": "shopify://apps/appstle-bundles/blocks/appstle-bundle-product-page-build-a-box/8909921b-2d24-4d68-9b12-9d045d3dcb0a",
-          "disabled": true,
-          "settings": {}
-        },
         "bogos_io_free_gift_mix_match_view_ccctwH": {
           "type": "shopify://apps/bogos-io-free-gift/blocks/mix-match-view/0432bba6-720a-4e95-be5a-b868386f7aa6",
           "settings": {
@@ -194,7 +189,6 @@
         "22970e8f-ea75-46ec-9255-8ceeb78511f8",
         "variant_picker",
         "f0d2cc62-543d-4ad8-bdd7-18c3d04a52c1",
-        "appstle_bundles_appstle_bundle_product_page_build_a_box_Qc3Tzq",
         "bogos_io_free_gift_mix_match_view_ccctwH",
         "yotpo_loyalty_rewards_product_points_module_app_block_QiNBrb",
         "02190bcc-9ff0-4f94-8898-2b2cb44da8ea",
