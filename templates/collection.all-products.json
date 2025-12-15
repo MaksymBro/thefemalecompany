@@ -107,7 +107,6 @@
     },
     "rich_text_aakhLY": {
       "type": "rich-text",
-      "disabled": true,
       "name": "Rich text",
       "settings": {
         "subheading": "",

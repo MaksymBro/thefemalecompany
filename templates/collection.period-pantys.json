@@ -692,6 +692,8 @@
       "name": "NEW gallery",
       "settings": {
         "show_arrows": false,
+        "text_subheading": "",
+        "text_heading": "",
         "subheading": "",
         "title": "",
         "section_header_short_description": "<p>Your short description.</p>",
@@ -918,6 +920,7 @@
         "blog": "periodenunterwaesche-ratgeber",
         "subheading": "Mehr zum Thema",
         "title": "Periodenunterwäsche-Ratgeber",
+        "all_heads_p": true,
         "articles_count": 3,
         "stack_mobile": false,
         "show_category": true,

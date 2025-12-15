@@ -50,11 +50,15 @@
           <header class="section__header">
             <div class="text-container">
               {%- if section.settings.subheading != blank -%}
-                <h2 class="heading heading--small">{{ section.settings.subheading }}</h2>
+                <p class="heading heading--small">{{ section.settings.subheading }}</p>
               {%- endif -%}
 
               {%- if section.settings.title != blank -%}
-                <h3 class="heading h3">{{ section.settings.title }}</h3>
+              {% if section.settings.all_heads_p == true %}
+                <p class="heading h3">{{ section.settings.title }}</p>
+              {% else %}
+                <h2 class="heading h3">{{ section.settings.title }}</h2>
+              {% endif %}
               {%- endif -%}
             </div>
           </header>
@@ -117,6 +121,11 @@
       "id": "title",
       "label": "Heading",
       "default": "You may also like"
+    },{
+      "type": "checkbox",
+      "id": "all_heads_p",
+      "label": "Headings in tag p",
+      "default": false
     },
     {
       "type": "range",

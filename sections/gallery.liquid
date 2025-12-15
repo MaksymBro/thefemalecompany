@@ -6,7 +6,7 @@
 </style>
 
 {%- render 'section', background_color: section.settings.background, text_color: section.settings.text_color, container_width: 'none' -%}
-  {%- render 'section-header', heading: section.settings.title, subheading: section.settings.subheading, short_description: section.settings.content -%}
+{%- render 'section-header', heading: section.settings.title, subheading: section.settings.subheading, short_description: section.settings.content, text_subheading: section.settings.text_subheading, text_heading: section.settings.text_heading -%}
 
   {%- comment -%}
   If we have more than 3 blocks we assume that by default the content may be scrollable. This may not be the case and
@@ -103,6 +103,14 @@
     {
       "type": "header",
       "content": "Section header"
+    },{
+      "type": "text",
+      "id": "text_subheading",
+      "label": "Text subheading"
+    },{
+      "type": "text",
+      "id": "text_heading",
+      "label": "Text heading"
     },
     {
       "type": "textarea",

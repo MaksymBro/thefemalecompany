@@ -84,9 +84,9 @@
             {%- endif -%}
 
             {%- if section.settings.title != blank -%}
-              <h3 class="heading h2">
+              <h2 class="heading h2">
                 <split-lines {% if section.settings.reveal_on_scroll %}reveal{% endif %}>{{ section.settings.title | escape }}</split-lines>
-              </h3>
+              </h2>
             {%- endif -%}
 
             {%- if section.settings.content != blank or section.settings.button_text != blank -%}
