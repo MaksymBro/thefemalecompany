@@ -7,50 +7,50 @@
   }
 
   {%- for block in section.blocks -%}
-    {%- liquid 
-      assign now = "now" | date: "%s"
+  {%- liquid
+    assign now = "now" | date: "%s"
 
-      if block.settings.schedule_publishing
-        assign publish_date = block.settings.publish_date | date: "%s"
+    if block.settings.schedule_publishing
+      assign publish_date = block.settings.publish_date | date: "%s"
 
-        if publish_date != blank and now < publish_date
-          continue
-        endif
+      if publish_date != blank and now < publish_date
+        continue
       endif
+    endif
 
-      if block.settings.schedule_unpublishing
-        assign unpublish_date = block.settings.unpublish_date | date: "%s"
+    if block.settings.schedule_unpublishing
+      assign unpublish_date = block.settings.unpublish_date | date: "%s"
 
-        if unpublish_date != blank and now > unpublish_date
-          continue
-        endif
+      if unpublish_date != blank and now > unpublish_date
+        continue
       endif
-    -%}
+    endif
+  -%}
 
-    {%- assign text_position = block.settings.text_position | split: '_' | first -%}
+  {%- assign text_position = block.settings.text_position | split: '_' | first -%}
 
-    {%- case text_position -%}
-      {%- when 'top' -%}
-        {%- assign section_items_alignment = 'flex-start' -%}
-      {%- when 'middle' -%}
-        {%- assign section_items_alignment = 'center' -%}
-      {%- when 'bottom' -%}
-        {%- assign section_items_alignment = 'flex-end' -%}
-    {%- endcase -%}
+  {%- case text_position -%}
+  {%- when 'top' -%}
+  {%- assign section_items_alignment = 'flex-start' -%}
+  {%- when 'middle' -%}
+  {%- assign section_items_alignment = 'center' -%}
+  {%- when 'bottom' -%}
+  {%- assign section_items_alignment = 'flex-end' -%}
+  {%- endcase -%}
 
-    #block-{{ section.id }}-{{ block.id }} {
-      --heading-font-family: var(--font-{{ block.settings.heading_font_family | default: "circular" }});
-      --heading-color: {{ block.settings.heading_color.red }}, {{ block.settings.heading_color.green }}, {{ block.settings.heading_color.blue }};
-      --text-color: {{ block.settings.text_color.red }}, {{ block.settings.text_color.green }}, {{ block.settings.text_color.blue }};
-      --primary-button-background: {{ block.settings.button_background.red }}, {{ block.settings.button_background.green }}, {{ block.settings.button_background.blue }};
-      --primary-button-text-color: {{ block.settings.button_text_color.red }}, {{ block.settings.button_text_color.green }}, {{ block.settings.button_text_color.blue }};
+  #block-{{ section.id }}-{{ block.id }} {
+    --heading-font-family: var(--font-{{ block.settings.heading_font_family | default: "circular" }});
+    --heading-color: {{ block.settings.heading_color.red }}, {{ block.settings.heading_color.green }}, {{ block.settings.heading_color.blue }};
+    --text-color: {{ block.settings.text_color.red }}, {{ block.settings.text_color.green }}, {{ block.settings.text_color.blue }};
+    --primary-button-background: {{ block.settings.button_background.red }}, {{ block.settings.button_background.green }}, {{ block.settings.button_background.blue }};
+    --primary-button-text-color: {{ block.settings.button_text_color.red }}, {{ block.settings.button_text_color.green }}, {{ block.settings.button_text_color.blue }};
 
-      --section-blocks-alignment: {{ section_items_alignment }};
-      --section-blocks-overlay-color: {{ block.settings.overlay_color.red }}, {{ block.settings.overlay_color.green }}, {{ block.settings.overlay_color.blue }};
-      --section-blocks-overlay-opacity: {{ block.settings.overlay_opacity | divided_by: 100.0 }};
+    --section-blocks-alignment: {{ section_items_alignment }};
+    --section-blocks-overlay-color: {{ block.settings.overlay_color.red }}, {{ block.settings.overlay_color.green }}, {{ block.settings.overlay_color.blue }};
+    --section-blocks-overlay-opacity: {{ block.settings.overlay_opacity | divided_by: 100.0 }};
 
-      color: rgb(var(--text-color));
-    }
+    color: rgb(var(--text-color));
+  }
   {%- endfor -%}
 </style>
 
@@ -74,9 +74,9 @@
 
         <div class="banner-usps__col">
           <img
-            class="banner-usps__col-image"
-            src="{{- banner_usps_svg | img_url -}}"
-            alt="{{- banner_usps_svg.alt -}}"
+                  class="banner-usps__col-image"
+                  src="{{- banner_usps_svg | img_url -}}"
+                  alt="{{- banner_usps_svg.alt -}}"
           />
 
           <h3 class="banner-usps__col-heading">
@@ -89,10 +89,10 @@
 
   {%- if banner_usps_cols != blank and show_banner_usps == true -%}
     <div
-      class="banner-usps show js-banner-usps"
-      style="
-        --banner-usps-bg-color: {{ section.settings.banner_usps_bg_color }};
-        --banner-usps-text-color: {{ section.settings.banner_usps_text_color }};"
+            class="banner-usps show js-banner-usps"
+            style="
+                    --banner-usps-bg-color: {{ section.settings.banner_usps_bg_color }};
+                    --banner-usps-text-color: {{ section.settings.banner_usps_text_color }};"
     >
       {%- if banner_usps_heading != blank -%}
         <h2 class="banner-usps__heading {% if show_hide_button == true %}banner-usps__heading--with-margin{% endif %}">
@@ -112,7 +112,7 @@
 
       {%- if banner_usps_link -%}
         <a
-          href="{{- banner_usps_link -}}" class="banner-usps__link"></a>
+                href="{{- banner_usps_link -}}" class="banner-usps__link"></a>
       {%- endif -%}
     </div>
   {%- endif -%}
@@ -120,9 +120,9 @@
   <slide-show reveal-on-scroll {% if section.settings.autoplay %}auto-play{% endif %} transition-type="{{ section.settings.transition_type | escape }}" class="slideshow slideshow--{{ section.settings.section_height }}">
     <div class="slideshow__slide-list">
       {%- assign slide_counter = 0 -%}
-      
+
       {%- for block in section.blocks -%}
-        {%- liquid 
+        {%- liquid
           assign now = "now" | date: "%s"
 
           if block.settings.schedule_publishing
@@ -209,9 +209,15 @@
             {%- endif -%}
 
             {%- if block.settings.title != blank -%}
-              <h3 class="heading heading--large js-slideshow-heading">
-                <split-lines {% if section.settings.transition_type != 'fade' %}reveal{% endif %}>{{ block.settings.title | escape }}</split-lines>
-              </h3>
+              {% if block.settings.title_h1 == true %}
+                <h1 class="heading heading--large js-slideshow-heading">
+                  <split-lines {% if section.settings.transition_type != 'fade' %}reveal{% endif %}>{{ block.settings.title | escape }}</split-lines>
+                </h1>
+              {% else %}
+                <h3 class="heading heading--large js-slideshow-heading">
+                  <split-lines {% if section.settings.transition_type != 'fade' %}reveal{% endif %}>{{ block.settings.title | escape }}</split-lines>
+                </h3>
+              {% endif %}
             {%- endif -%}
 
             {%- if block.settings.subtitle != blank or block.settings.subtitle_html != blank -%}
@@ -287,20 +293,20 @@
       <page-dots {% if section.settings.autoplay %}animation-timer{% endif %} class="slideshow__nav container">
         {%- assign slide_counter = 0 -%}
         {%- for block in section.blocks -%}
-          {%- liquid 
+          {%- liquid
             assign now = "now" | date: "%s"
-  
+
             if block.settings.schedule_publishing
               assign publish_date = block.settings.publish_date | date: "%s"
-  
+
               if publish_date != blank and now < publish_date
                 continue
               endif
             endif
-  
+
             if block.settings.schedule_unpublishing
               assign unpublish_date = block.settings.unpublish_date | date: "%s"
-  
+
               if unpublish_date != blank and now > unpublish_date
                 continue
               endif
@@ -576,6 +582,11 @@
           "id": "title",
           "label": "Heading",
           "default": "Slide title"
+        },{
+          "type": "checkbox",
+          "id": "title_h1",
+          "label": "Heading is H1",
+          "default": false
         },
         {
           "type": "richtext",

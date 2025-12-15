@@ -1,9 +1,9 @@
-{%- liquid 
+{%- liquid
   assign section_background = background_color | default: section.settings.section_background_color
   if section_background == 'rgba(0,0,0,0)' or section_background == blank
     assign section_background = settings.background
   endif
-   
+
   assign text_color = text_color | default: section.settings.section_text_color
   if text_color == 'rgba(0,0,0,0)' or text_color == blank
     assign text_color = settings.text_color
@@ -12,11 +12,11 @@
 
 <style>
   #shopify-section-{{ section.id }} {
-    {%- if section_background == settings.background -%}
-      {%- assign secondary_background = settings.secondary_background -%}
-    {%- else -%}
-      {%- assign secondary_background = section_background | color_mix: text_color, 85 -%}
-    {%- endif -%}
+  {%- if section_background == settings.background -%}
+  {%- assign secondary_background = settings.secondary_background -%}
+  {%- else -%}
+  {%- assign secondary_background = section_background | color_mix: text_color, 85 -%}
+  {%- endif -%}
 
     --secondary-background: {{ secondary_background.red }}, {{ secondary_background.green }}, {{ secondary_background.blue }};
   }
@@ -50,135 +50,135 @@
 {%- assign category_ids = category_ids | remove_last: '###' | split: '###' -%}
 
 {%- render 'section' -%}
-  {%- render 'section-header' -%}
+{%- render 'section-header' -%}
 
-  <div class="faq">
-    {%- if section.settings.show_navigation and category_titles.size > 0 -%}
-      <div class="faq-navigation hidden-pocket">
-        <scroll-spy class="scroll-spy">
-          <ul class="scroll-spy__list list--unstyled">
-            {%- for category_title in category_titles -%}
-              {%- assign category_id = category_ids[forloop.index0] -%}
-              <li class="scroll-spy__item">
-                <a class="scroll-spy__anchor heading heading--small" href="#category-{{ section.id }}-{{ category_id }}" data-smooth-scroll>{{ category_title | escape }}</a>
-              </li>
-            {%- endfor -%}
-          </ul>
-        </scroll-spy>
-      </div>
-    {%- endif -%}
-
-    <div class="faq__wrapper">
-      {%- for block in section.blocks -%}
-        {%- case block.type -%}
-          {%- when 'category' -%}
-            <h2 id="category-{{ section.id }}-{{ block.id }}" class="faq__category heading h6 anchor" {{ block.shopify_attributes }}>
-              {{- block.settings.title |  escape -}}
-            </h2>
-
-          {%- when 'question' -%}
-            <div class="faq__item">
-              <button is="toggle-button" class="collapsible-toggle text--strong" aria-controls="block-{{ section.id }}-{{ block.id }}" aria-expanded="false">
-                {{- block.settings.title -}}
-                <span class="animated-plus"></span>
-              </button>
-
-              <collapsible-content id="block-{{ section.id }}-{{ block.id }}" class="collapsible anchor" {{ block.shopify_attributes }}>
-                <div class="collapsible__content text-container">
-                  {{ block.settings.answer }}
-                </div>
-              </collapsible-content>
-            </div>
-
-          {%- when 'faq_collection' -%}
-            {%- if block.settings.metaobject_handle != blank -%}
-              {%- assign faq_collection = shop.metaobjects["faq_collection"][block.settings.metaobject_handle] -%}
-
-              {%- if faq_collection != blank -%}
-                {%- if block.settings.show_title and faq_collection.title.value != blank -%}
-                  <h2 id="category-{{ section.id }}-{{ block.id }}" class="faq__category heading h6 anchor">
-                    {{- faq_collection.title.value |  escape -}}
-                  </h2>
-                {%- endif -%}
-      
-                {%- for faq in faq_collection.faqs.value -%}
-
-                  {%- if faq.question.value == blank or faq.response.value == blank -%}
-                    {%- continue -%}
-                  {%- endif -%}
-
-                  <div class="faq__item">
-                    <button is="toggle-button" class="collapsible-toggle text--strong" aria-controls="block-{{ section.id }}-{{ block.id }}-{{ faq.system.handle }}" aria-expanded="false">
-                      {{- faq.question.value -}}
-                      <span class="animated-plus"></span>
-                    </button>
-
-                    <collapsible-content id="block-{{ section.id }}-{{ block.id }}-{{ faq.system.handle }}" class="collapsible anchor">
-                      <div class="collapsible__content text-container">
-                        {{- faq.response | metafield_tag -}}
-                      </div>
-                    </collapsible-content>
-                  </div>
-                {%- endfor -%}
-              {%- endif -%}
-            {%- endif -%}
-        {%- endcase -%}
-      {%- endfor -%}
+<div class="faq">
+  {%- if section.settings.show_navigation and category_titles.size > 0 -%}
+    <div class="faq-navigation hidden-pocket">
+      <scroll-spy class="scroll-spy">
+        <ul class="scroll-spy__list list--unstyled">
+          {%- for category_title in category_titles -%}
+            {%- assign category_id = category_ids[forloop.index0] -%}
+            <li class="scroll-spy__item">
+              <a class="scroll-spy__anchor heading heading--small" href="#category-{{ section.id }}-{{ category_id }}" data-smooth-scroll>{{ category_title | escape }}</a>
+            </li>
+          {%- endfor -%}
+        </ul>
+      </scroll-spy>
     </div>
-  </div>
-
-  {%- if section.settings.enable_schema -%}
-    {%- capture questions_schema -%}
-      {%- for block in section.blocks -%}
-        {%- case block.type -%}
-
-          {%- when 'question' -%}
-            {
-              "@type": "Question",
-              "name": {{ block.settings.title | strip_html | replace: '"', "'" | json }},
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": {{ block.settings.answer | strip_html | replace: '"', "'" | json }}
-              }
-            },
-
-          {%- when 'faq_collection' -%}
-            {%- if block.settings.metaobject_handle != blank -%}
-              {%- assign faq_collection = shop.metaobjects["faq_collection"][block.settings.metaobject_handle] -%}
-
-              {%- if faq_collection != blank -%}
-                {%- for faq in faq_collection.faqs.value -%}
-
-                  {%- if faq.question.value == blank or faq.response.value == blank -%}
-                    {%- continue -%}
-                  {%- endif -%}
-
-                  {
-                    "@type": "Question",
-                    "name": {{ faq.question.value | strip_html | replace: '"', "'" | json }},
-                    "acceptedAnswer": {
-                      "@type": "Answer",
-                      "text": {{ faq.response | metafield_tag | strip_html | replace: '"', "'" | json  }}
-                    }
-                  },
-                {%- endfor -%}
-              {%- endif -%}
-            {%- endif -%}
-
-        {%- endcase -%}
-      {%- endfor -%}
-    {%- endcapture -%}
-
-    <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@type": "FAQPage",
-        "mainEntity": [
-          {{ questions_schema | remove_last: ","}}
-        ]
-      }
-    </script>
   {%- endif -%}
+
+  <div class="faq__wrapper">
+    {%- for block in section.blocks -%}
+      {%- case block.type -%}
+        {%- when 'category' -%}
+          <h2 id="category-{{ section.id }}-{{ block.id }}" class="faq__category heading h6 anchor" {{ block.shopify_attributes }}>
+            {{- block.settings.title |  escape -}}
+          </h2>
+
+        {%- when 'question' -%}
+          <div class="faq__item">
+            <button is="toggle-button" class="collapsible-toggle text--strong" aria-controls="block-{{ section.id }}-{{ block.id }}" aria-expanded="false">
+              <h3 style="margin:0">{{- block.settings.title -}}</h3>
+              <span class="animated-plus"></span>
+            </button>
+
+            <collapsible-content id="block-{{ section.id }}-{{ block.id }}" class="collapsible anchor" {{ block.shopify_attributes }}>
+              <div class="collapsible__content text-container">
+                {{ block.settings.answer }}
+              </div>
+            </collapsible-content>
+          </div>
+
+        {%- when 'faq_collection' -%}
+          {%- if block.settings.metaobject_handle != blank -%}
+            {%- assign faq_collection = shop.metaobjects["faq_collection"][block.settings.metaobject_handle] -%}
+
+            {%- if faq_collection != blank -%}
+              {%- if block.settings.show_title and faq_collection.title.value != blank -%}
+                <h2 id="category-{{ section.id }}-{{ block.id }}" class="faq__category heading h6 anchor">
+                  {{- faq_collection.title.value |  escape -}}
+                </h2>
+              {%- endif -%}
+
+              {%- for faq in faq_collection.faqs.value -%}
+
+                {%- if faq.question.value == blank or faq.response.value == blank -%}
+                  {%- continue -%}
+                {%- endif -%}
+
+                <div class="faq__item">
+                  <button is="toggle-button" class="collapsible-toggle text--strong" aria-controls="block-{{ section.id }}-{{ block.id }}-{{ faq.system.handle }}" aria-expanded="false">
+                    {{- faq.question.value -}}
+                    <span class="animated-plus"></span>
+                  </button>
+
+                  <collapsible-content id="block-{{ section.id }}-{{ block.id }}-{{ faq.system.handle }}" class="collapsible anchor">
+                    <div class="collapsible__content text-container">
+                      {{- faq.response | metafield_tag -}}
+                    </div>
+                  </collapsible-content>
+                </div>
+              {%- endfor -%}
+            {%- endif -%}
+          {%- endif -%}
+      {%- endcase -%}
+    {%- endfor -%}
+  </div>
+</div>
+
+{%- if section.settings.enable_schema -%}
+  {%- capture questions_schema -%}
+    {%- for block in section.blocks -%}
+      {%- case block.type -%}
+
+        {%- when 'question' -%}
+          {
+          "@type": "Question",
+          "name": {{ block.settings.title | strip_html | replace: '"', "'" | json }},
+          "acceptedAnswer": {
+          "@type": "Answer",
+          "text": {{ block.settings.answer | strip_html | replace: '"', "'" | json }}
+          }
+          },
+
+        {%- when 'faq_collection' -%}
+          {%- if block.settings.metaobject_handle != blank -%}
+            {%- assign faq_collection = shop.metaobjects["faq_collection"][block.settings.metaobject_handle] -%}
+
+            {%- if faq_collection != blank -%}
+              {%- for faq in faq_collection.faqs.value -%}
+
+                {%- if faq.question.value == blank or faq.response.value == blank -%}
+                  {%- continue -%}
+                {%- endif -%}
+
+                {
+                "@type": "Question",
+                "name": {{ faq.question.value | strip_html | replace: '"', "'" | json }},
+                "acceptedAnswer": {
+                "@type": "Answer",
+                "text": {{ faq.response | metafield_tag | strip_html | replace: '"', "'" | json  }}
+                }
+                },
+              {%- endfor -%}
+            {%- endif -%}
+          {%- endif -%}
+
+      {%- endcase -%}
+    {%- endfor -%}
+  {%- endcapture -%}
+
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+    {{ questions_schema | remove_last: ","}}
+    ]
+  }
+  </script>
+{%- endif -%}
 {%- render 'section-end' -%}
 
 {% schema %}

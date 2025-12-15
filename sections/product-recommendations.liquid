@@ -6,19 +6,19 @@
 
 <style>
   #shopify-section-{{ section.id }} {
-    {%- if section.settings.background == 'rgba(0,0,0,0)' -%}
-      {%- assign section_background = settings.background -%}
-    {%- else -%}
-      {%- assign section_background = section.settings.background -%}
-    {%- endif -%}
+  {%- if section.settings.background == 'rgba(0,0,0,0)' -%}
+  {%- assign section_background = settings.background -%}
+  {%- else -%}
+  {%- assign section_background = section.settings.background -%}
+  {%- endif -%}
 
-    {%- if section.settings.text_color == 'rgba(0,0,0,0)' -%}
-      {%- assign heading_color = settings.heading_color -%}
-      {%- assign text_color = settings.text_color -%}
-    {%- else -%}
-      {%- assign heading_color = section.settings.text_color -%}
-      {%- assign text_color = section.settings.text_color -%}
-    {%- endif -%}
+  {%- if section.settings.text_color == 'rgba(0,0,0,0)' -%}
+  {%- assign heading_color = settings.heading_color -%}
+  {%- assign text_color = settings.text_color -%}
+  {%- else -%}
+  {%- assign heading_color = section.settings.text_color -%}
+  {%- assign text_color = section.settings.text_color -%}
+  {%- endif -%}
 
     --heading-color: {{ heading_color.red }}, {{ heading_color.green }}, {{ heading_color.blue }};
     --text-color: {{ text_color.red }}, {{ text_color.green }}, {{ text_color.blue }};
@@ -54,11 +54,11 @@
               {%- endif -%}
 
               {%- if section.settings.title != blank -%}
-              {% if section.settings.all_heads_p == true %}
-                <p class="heading h3">{{ section.settings.title }}</p>
-              {% else %}
-                <h2 class="heading h3">{{ section.settings.title }}</h2>
-              {% endif %}
+                {% if section.settings.all_heads_p == true %}
+                  <p class="heading h3">{{ section.settings.title }}</p>
+                {% else %}
+                  <h2 class="heading h3">{{ section.settings.title }}</h2>
+                {% endif %}
               {%- endif -%}
             </div>
           </header>

@@ -6,19 +6,19 @@
 
 <style>
   #shopify-section-{{ section.id }} {
-    {%- if section.settings.background == 'rgba(0,0,0,0)' -%}
-      {%- assign section_background = settings.background -%}
-    {%- else -%}
-      {%- assign section_background = section.settings.background -%}
-    {%- endif -%}
+  {%- if section.settings.background == 'rgba(0,0,0,0)' -%}
+  {%- assign section_background = settings.background -%}
+  {%- else -%}
+  {%- assign section_background = section.settings.background -%}
+  {%- endif -%}
 
-    {%- if section.settings.text_color == 'rgba(0,0,0,0)' -%}
-      {%- assign heading_color = settings.heading_color -%}
-      {%- assign text_color = settings.text_color -%}
-    {%- else -%}
-      {%- assign heading_color = section.settings.text_color -%}
-      {%- assign text_color = section.settings.text_color -%}
-    {%- endif -%}
+  {%- if section.settings.text_color == 'rgba(0,0,0,0)' -%}
+  {%- assign heading_color = settings.heading_color -%}
+  {%- assign text_color = settings.text_color -%}
+  {%- else -%}
+  {%- assign heading_color = section.settings.text_color -%}
+  {%- assign text_color = section.settings.text_color -%}
+  {%- endif -%}
 
     --heading-color: {{ heading_color.red }}, {{ heading_color.green }}, {{ heading_color.blue }};
     --text-color: {{ text_color.red }}, {{ text_color.green }}, {{ text_color.blue }};
@@ -29,26 +29,26 @@
   }
 
   {%- if section.settings.title == blank and section.settings.subheading == blank and section.settings.content == blank -%}
-    #shopify-section-{{ section.id }} {
-      --vertical-breather: 40px; /* Only on multi-column section, due to its specific usage we reduce spacing when no content */
-    }
+  #shopify-section-{{ section.id }} {
+    --vertical-breather: 40px; /* Only on multi-column section, due to its specific usage we reduce spacing when no content */
+  }
 
-    {%- if blends_with_background or section.settings.mobile_item_size == 'small' -%}
-      /* Reduce the margin on small devices to create a slightly better layout */
-      @media screen and (max-width: 999px) {
-        #shopify-section-{{ section.id }} {
-          --vertical-breather: var(--container-gutter);
-        }
-      }
-    {%- endif -%}
+  {%- if blends_with_background or section.settings.mobile_item_size == 'small' -%}
+  /* Reduce the margin on small devices to create a slightly better layout */
+  @media screen and (max-width: 999px) {
+    #shopify-section-{{ section.id }} {
+      --vertical-breather: var(--container-gutter);
+    }
+  }
+  {%- endif -%}
   {%- endif -%}
 
   {%- for block in section.blocks -%}
-    {%- if block.settings.image_border != 'rgba(0,0,0,0)' -%}
-      #block-{{ section.id }}-{{ block.id }} .multi-column__image-wrapper {
-        border: 1px solid {{ block.settings.image_border }};
-      }
-    {%- endif -%}
+  {%- if block.settings.image_border != 'rgba(0,0,0,0)' -%}
+  #block-{{ section.id }}-{{ block.id }} .multi-column__image-wrapper {
+    border: 1px solid {{ block.settings.image_border }};
+  }
+  {%- endif -%}
   {%- endfor -%}
 </style>
 
@@ -63,11 +63,11 @@
             {%- endif -%}
 
             {%- if section.settings.title != blank -%}
-            {% if section.settings.all_heads_p == true %}
-              <p class="heading h2">{{ section.settings.title }}</p>
+              {% if section.settings.all_heads_p == true %}
+                <p class="heading h2">{{ section.settings.title }}</p>
               {% else %}
-              <h2 class="heading h2">{{ section.settings.title }}</h2>
-            {% endif %}
+                <h2 class="heading h2">{{ section.settings.title }}</h2>
+              {% endif %}
             {%- endif -%}
 
             {%- if section.settings.content != blank -%}

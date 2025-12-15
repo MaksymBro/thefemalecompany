@@ -6,19 +6,19 @@
 
 <style>
   #shopify-section-{{ section.id }} {
-    {%- if section.settings.background == 'rgba(0,0,0,0)' -%}
-      {%- assign section_background = settings.background -%}
-    {%- else -%}
-      {%- assign section_background = section.settings.background -%}
-    {%- endif -%}
+  {%- if section.settings.background == 'rgba(0,0,0,0)' -%}
+  {%- assign section_background = settings.background -%}
+  {%- else -%}
+  {%- assign section_background = section.settings.background -%}
+  {%- endif -%}
 
-    {%- if section.settings.text_color == 'rgba(0,0,0,0)' -%}
-      {%- assign heading_color = settings.heading_color -%}
-      {%- assign text_color = settings.text_color -%}
-    {%- else -%}
-      {%- assign heading_color = section.settings.text_color -%}
-      {%- assign text_color = section.settings.text_color -%}
-    {%- endif -%}
+  {%- if section.settings.text_color == 'rgba(0,0,0,0)' -%}
+  {%- assign heading_color = settings.heading_color -%}
+  {%- assign text_color = settings.text_color -%}
+  {%- else -%}
+  {%- assign heading_color = section.settings.text_color -%}
+  {%- assign text_color = section.settings.text_color -%}
+  {%- endif -%}
 
     --heading-color: {{ heading_color.red }}, {{ heading_color.green }}, {{ heading_color.blue }};
     --text-color: {{ text_color.red }}, {{ text_color.green }}, {{ text_color.blue }};
@@ -27,44 +27,44 @@
   }
 
   {%- for block in section.blocks -%}
-    #block-{{ section.id }}-{{ block.id }} {
-      {%- unless block.type == 'video' -%}
-        {%- if block.settings.text_color == 'rgba(0,0,0,0)' -%}
-          {%- assign heading_color = settings.heading_color -%}
-          {%- assign text_color = settings.text_color -%}
-        {%- else -%}
-          {%- assign heading_color = block.settings.text_color -%}
-          {%- assign text_color = block.settings.text_color -%}
-        {%- endif -%}
+  #block-{{ section.id }}-{{ block.id }} {
+  {%- unless block.type == 'video' -%}
+  {%- if block.settings.text_color == 'rgba(0,0,0,0)' -%}
+  {%- assign heading_color = settings.heading_color -%}
+  {%- assign text_color = settings.text_color -%}
+  {%- else -%}
+  {%- assign heading_color = block.settings.text_color -%}
+  {%- assign text_color = block.settings.text_color -%}
+  {%- endif -%}
 
-        --heading-color: {{ heading_color.red }}, {{ heading_color.green }}, {{ heading_color.blue }};
-        --text-color: {{ text_color.red }}, {{ text_color.green }}, {{ text_color.blue }};
-        --section-block-background: {{ block.settings.background.red }}, {{ block.settings.background.green }}, {{ block.settings.background.blue }};
+    --heading-color: {{ heading_color.red }}, {{ heading_color.green }}, {{ heading_color.blue }};
+    --text-color: {{ text_color.red }}, {{ text_color.green }}, {{ text_color.blue }};
+    --section-block-background: {{ block.settings.background.red }}, {{ block.settings.background.green }}, {{ block.settings.background.blue }};
 
-        {%- if block.type == 'image' or block.type == 'newsletter' -%}
-          --primary-button-background: {{ block.settings.button_background.red }}, {{ block.settings.button_background.green }}, {{ block.settings.button_background.blue }};
-          --primary-button-text-color: {{ block.settings.button_text_color.red }}, {{ block.settings.button_text_color.green }}, {{ block.settings.button_text_color.blue }};
+  {%- if block.type == 'image' or block.type == 'newsletter' -%}
+    --primary-button-background: {{ block.settings.button_background.red }}, {{ block.settings.button_background.green }}, {{ block.settings.button_background.blue }};
+    --primary-button-text-color: {{ block.settings.button_text_color.red }}, {{ block.settings.button_text_color.green }}, {{ block.settings.button_text_color.blue }};
 
-          {%- assign text_position = block.settings.text_position | split: '_' | first -%}
+  {%- assign text_position = block.settings.text_position | split: '_' | first -%}
 
-          {%- case text_position -%}
-            {%- when 'top' -%}
-              {%- assign section_items_alignment = 'flex-start' -%}
-            {%- when 'middle' -%}
-              {%- assign section_items_alignment = 'center' -%}
-            {%- when 'bottom' -%}
-              {%- assign section_items_alignment = 'flex-end' -%}
-          {%- endcase -%}
+  {%- case text_position -%}
+  {%- when 'top' -%}
+  {%- assign section_items_alignment = 'flex-start' -%}
+  {%- when 'middle' -%}
+  {%- assign section_items_alignment = 'center' -%}
+  {%- when 'bottom' -%}
+  {%- assign section_items_alignment = 'flex-end' -%}
+  {%- endcase -%}
 
-          --section-blocks-alignment: {{ section_items_alignment }};
-        {%- endif -%}
+    --section-blocks-alignment: {{ section_items_alignment }};
+  {%- endif -%}
 
-        {%- if block.type == 'featured_products' -%}
-          --prev-next-button-background: var(--section-block-background);
-          --prev-next-button-color: var(--text-color);
-        {%- endif -%}
-      {%- endunless -%}
-    }
+  {%- if block.type == 'featured_products' -%}
+    --prev-next-button-background: var(--section-block-background);
+    --prev-next-button-color: var(--text-color);
+  {%- endif -%}
+  {%- endunless -%}
+  }
   {%- endfor -%}
 </style>
 
@@ -78,10 +78,10 @@
           {%- endif -%}
 
           {%- if section.settings.title != blank -%}
-          {% if section.settings.all_heads_p == true %}
-            <p class="heading h2">{{ section.settings.title | escape }}</p>
-          {% else %}
-            <h2 class="heading h2">{{ section.settings.title | escape }}</h2>
+            {% if section.settings.all_heads_p == true %}
+              <p class="heading h2">{{ section.settings.title | escape }}</p>
+            {% else %}
+              <h2 class="heading h2">{{ section.settings.title | escape }}</h2>
             {% endif %}
           {%- endif -%}
         </header>
