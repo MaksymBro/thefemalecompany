@@ -32,12 +32,12 @@
         "image_hq3Cbp": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/Header_Web__1_86b6ef82-92b9-414d-913b-d06bfe62c426.jpg",
-            "mobile_image": "shopify://shop_images/Header_mobile_6a3d0413-8a45-4087-8aa4-32cd8b5e987b.jpg",
-            "text_position": "middle_center",
+            "image": "shopify://shop_images/Header_Web_d3d69a82-0963-4cf1-9f29-58621ff25878.jpg",
+            "mobile_image": "shopify://shop_images/Header_mobile_dab26e3d-bf6b-48ef-8f55-c05b1362b772.jpg",
+            "text_position": "middle_left",
             "subheading": "",
-            "title": "Unterwäsche ohne Saugeinlage aus 100% Bio-Baumwolle",
-            "subtitle": "<p>Unser OEKO-TEX® zertifiziertes Unterwäsche Doppelpack überzeugt durch ein federleichtes Tragegefühl - ohne klassisches Waistband. Für jeden Tag.</p>",
+            "title": "Maximaler Perioden-Komfort",
+            "subtitle": "<p>Period Panty aus ultra-softem Ripp-Strick Modal aus nachhaltigem Buchenholz. Passt sich deinem Körper flexibel an.</p>",
             "subtitle_html": "",
             "button_1_text": "",
             "button_1_link": "",

@@ -91,9 +91,9 @@
     <div class="product-meta__price-list-container" role="region" aria-live="polite">
       <div class="product-meta__prices-wrapper">
         <div class="price-list" data-product-price-list data-product-id="{{ product.id }}" {% if price_override_active %} data-override-shown-price="{{ product_price }}"{% endif %}>
-          
+
           {%- if product_compare_at_price > product_price -%}
-            
+
             <span class="price price--highlight price--large" data-product-id="{{ product.id }}" data-product-price>
               <span class="visually-hidden">{{ 'product.general.sale_price' | t }}</span>
 
@@ -113,9 +113,9 @@
                 {{- product_compare_at_price | money -}}
               {%- endif -%}
             </span>
-            
+
           {%- else -%}
-            
+
             <span class="price price--large" data-product-id="{{ product.id }}" data-product-price>
               <span class="visually-hidden">{{ 'product.general.sale_price' | t }}</span>
               {%- if settings.currency_code_enabled -%}
@@ -124,7 +124,7 @@
                 {{- product_price | money -}}
               {%- endif -%}
             </span>
-          
+
           {%- endif -%}
 
           {%- if product.selected_or_first_available_variant.unit_price_measurement -%}
@@ -418,12 +418,12 @@
                     {% else %}
                       <div class="product-tabs__description-image" style="width: 40px; height: 40px;"></div>
                     {% endif %}
-            
+
                     <div class="product-tabs__description-content">
                       <div class="product-tabs__description-heading">
                         {{ usp_entry.heading | metafield_tag }}
                       </div>
-                      
+
                       {% if usp_entry.description != blank %}
                         <div class="product-tabs__description-text text--small">
                           {{ usp_entry.description | metafield_tag }}
@@ -435,19 +435,19 @@
               {%- endfor -%}
 
 
-            {%- else -%}    
+            {%- else -%}
               {%- for index in (1..6) -%}
                 {%- assign image_setting       = 'image_' | append: index -%}
                 {%- assign heading_setting     = 'heading_' | append: index -%}
                 {%- assign description_setting = 'description_' | append: index -%}
-  
+
                 {%- assign image       = block.settings[image_setting] -%}
                 {%- assign heading     = block.settings[heading_setting] -%}
                 {%- assign description = block.settings[description_setting] -%}
-  
+
                 {%- if heading != blank -%}
                   <div class="product-tabs__description">
-                    
+
                     {% if image != blank %}
                     <img
                       class="product-tabs__description-image"
@@ -461,12 +461,12 @@
                     {% else %}
                       <div class="product-tabs__description-image" style="width: 40px; height: 40px;"></div>
                     {% endif %}
-  
+
                     <div class="product-tabs__description-content">
                       <p class="product-tabs__description-heading">
                         {{- heading -}}
                       </p>
-  
+
                       {%- if description != blank -%}
                         <p class="product-tabs__description-text text--small">
                           {{- description -}}
@@ -477,7 +477,7 @@
                 {%- endif -%}
               {%- endfor -%}
             {%- endif -%}
-            
+
             {%- if product.description != blank -%}
               {{- product.description -}}
             {%- endif -%}
@@ -703,7 +703,7 @@
 </div>
 
 {% assign cart_product_has_discount = false %}
-{% for automatic_discounts in metaobjects.automatic_discounts_rebuild.values %} 
+{% for automatic_discounts in metaobjects.automatic_discounts_rebuild.values %}
   {% for purchase_product in automatic_discounts.purchase_these.value %}
     {% for cart_product in cart.items %}
       {% if cart_product.product.id == purchase_product.id %}

@@ -44,28 +44,28 @@
 
 {%- if heading != blank or subheading != blank or text_heading != blank or text_subheading != blank -%}
   <header class="section__header">
-  <div class="text-container">
+    <div class="text-container">
   {%- if text_subheading != blank -%}
     <p class="heading heading--small">{{ text_subheading }}</p>
   {%- endif -%}
   {%- if text_heading != blank -%}
     <p class="heading js-section-header-heading h2">{{ text_heading }}</p>
   {%- endif -%}
-{%- if subheading != blank -%}
-  <{{ subheading_tag }} class="heading heading--small">{{ subheading | newline_to_br }}</{{ subheading_tag }}>
-{%- endif -%}
+      {%- if subheading != blank -%}
+        <{{ subheading_tag }} class="heading heading--small">{{ subheading | newline_to_br }}</{{ subheading_tag }}>
+      {%- endif -%}
 
-  {%- if heading != blank -%}
-    <{{ heading_tag }} class="heading js-section-header-heading {{ heading_size }}">
-    {{- heading | newline_to_br -}}
-    </{{ heading_tag }}>
-  {%- endif -%}
+      {%- if heading != blank -%}
+        <{{ heading_tag }} class="heading js-section-header-heading {{ heading_size }}">
+          {{- heading | newline_to_br -}}
+        </{{ heading_tag }}>
+      {%- endif -%}
 
-  {%- if short_description != blank -%}
-    <div class="section__header-short-description text--{{ short_description_font_size }}">
-      {{- short_description -}}
+      {%- if short_description != blank -%}
+        <div class="section__header-short-description text--{{ short_description_font_size }}">
+          {{- short_description -}}
+        </div>
+      {%- endif -%}
     </div>
-  {%- endif -%}
-  </div>
   </header>
 {%- endif -%}

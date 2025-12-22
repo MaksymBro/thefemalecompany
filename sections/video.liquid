@@ -98,7 +98,7 @@
         {%- else -%}
           <native-video class="video-wrapper video-wrapper--native" style="--aspect-ratio: {{ section.settings.video.aspect_ratio }}">
             {{- video_poster -}}
-  
+
             <template>
               {{- section.settings.video | video_tag: controls: section.settings.show_video_controls -}}
             </template>

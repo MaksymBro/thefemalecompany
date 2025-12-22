@@ -172,7 +172,7 @@
                                     {%- assign parts = menu_url | split: 'filter.p.m.filters.absorbancy=' -%}
                                     {%- assign after_filter = parts[1] | split: '&' | first -%}
                                     {%- assign translated_value = '' -%}
-                                    
+
                                     {%- for original in absorbancy_original -%}
                                       {%- if original == after_filter -%}
                                         {%- assign index = forloop.index0 -%}
@@ -186,7 +186,7 @@
                                           {%- when 'ar' -%}
                                             {%- assign translated_value = absorbancy_ar[index] -%}
                                         {%- endcase -%}
-                                        
+
                                         {%- if translated_value != '' -%}
                                           {%- assign menu_url = menu_url | replace: after_filter, translated_value | replace: ' ', '+' -%}
                                         {%- endif -%}
@@ -198,7 +198,7 @@
                                     {%- assign parts = menu_url | split: 'filter.p.m.filters.style=' -%}
                                     {%- assign after_filter = parts[1] | split: '&' | first -%}
                                     {%- assign translated_value = '' -%}
-                                    
+
                                     {%- for original in style_original -%}
                                       {%- if original == after_filter -%}
                                         {%- assign index = forloop.index0 -%}
@@ -210,14 +210,14 @@
                                           {%- when 'de' -%}
                                             {%- assign translated_value = style_de[index] -%}
                                         {%- endcase -%}
-                                        
+
                                         {%- if translated_value != '' -%}
                                           {%- assign menu_url = menu_url | replace: after_filter, translated_value | replace: ' ', '+' -%}
                                         {%- endif -%}
                                       {%- endif -%}
                                     {%- endfor -%}
                                   {%- endif -%}
-                                  
+
                                   <a href="https://{{ shop.domain }}{{ locale_prefix }}{{ menu_url | split: shop.domain | last }}" class="mobile-nav__link {% if sub_sub_link_icon_handle != blank %}link--with-icon{% endif %}">
                                 {%- else -%}
                                   <a href="{{ sub_sub_link.url }}" class="mobile-nav__link {% if sub_sub_link_icon_handle != blank %}link--with-icon{% endif %}">

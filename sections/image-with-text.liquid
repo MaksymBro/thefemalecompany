@@ -6,25 +6,25 @@
 
 <style>
   #shopify-section-{{ section.id }} {
-  {%- if section.settings.text_color == 'rgba(0,0,0,0)' -%}
-  {%- assign heading_color = settings.heading_color -%}
-  {%- assign text_color = settings.text_color -%}
-  {%- else -%}
-  {%- assign heading_color = section.settings.text_color -%}
-  {%- assign text_color = section.settings.text_color -%}
-  {%- endif -%}
+    {%- if section.settings.text_color == 'rgba(0,0,0,0)' -%}
+      {%- assign heading_color = settings.heading_color -%}
+      {%- assign text_color = settings.text_color -%}
+    {%- else -%}
+      {%- assign heading_color = section.settings.text_color -%}
+      {%- assign text_color = section.settings.text_color -%}
+    {%- endif -%}
 
-  {%- if section.settings.button_background == 'rgba(0,0,0,0)' -%}
-  {%- assign button_background = settings.primary_button_background -%}
-  {%- else -%}
-  {%- assign button_background = section.settings.button_background -%}
-  {%- endif -%}
+    {%- if section.settings.button_background == 'rgba(0,0,0,0)' -%}
+      {%- assign button_background = settings.primary_button_background -%}
+    {%- else -%}
+      {%- assign button_background = section.settings.button_background -%}
+    {%- endif -%}
 
-  {%- if section.settings.button_text_color == 'rgba(0,0,0,0)' -%}
-  {%- assign button_text_color = settings.primary_button_text_color -%}
-  {%- else -%}
-  {%- assign button_text_color = section.settings.button_text_color -%}
-  {%- endif -%}
+    {%- if section.settings.button_text_color == 'rgba(0,0,0,0)' -%}
+      {%- assign button_text_color = settings.primary_button_text_color -%}
+    {%- else -%}
+      {%- assign button_text_color = section.settings.button_text_color -%}
+    {%- endif -%}
 
     --heading-color: {{ heading_color.red }}, {{ heading_color.green }}, {{ heading_color.blue }};
     --text-color: {{ text_color.red }}, {{ text_color.green }}, {{ text_color.blue }};
@@ -37,38 +37,38 @@
   }
 
   {%- if section.settings.background_overlap != 'both' -%}
-  /* We have to remove some extra spacing adding in non-overlap mode */
-  @media screen and (max-width: 999px) {
-  {%- if section.settings.background_overlap == 'image' -%}
-  {%- unless is_boxed -%}
-    #shopify-section-{{ section.id }} .section {
-      margin-top: 0;
-    }
+    /* We have to remove some extra spacing adding in non-overlap mode */
+    @media screen and (max-width: 999px) {
+      {%- if section.settings.background_overlap == 'image' -%}
+        {%- unless is_boxed -%}
+          #shopify-section-{{ section.id }} .section {
+            margin-top: 0;
+          }
 
-    #shopify-section-{{ section.id }} .image-with-text {
-      margin-bottom: calc(-1 * var(--vertical-breather)) !important;
-    }
-  {%- else -%}
-    #shopify-section-{{ section.id }} .image-with-text {
-      margin-bottom: calc(-1 * var(--container-gutter)) !important;
-    }
-  {%- endunless -%}
-  {%- elsif section.settings.background_overlap == 'text' -%}
-  {%- unless is_boxed -%}
-    #shopify-section-{{ section.id }} .section {
-      margin-bottom: 0;
-    }
+          #shopify-section-{{ section.id }} .image-with-text {
+            margin-bottom: calc(-1 * var(--vertical-breather)) !important;
+          }
+        {%- else -%}
+          #shopify-section-{{ section.id }} .image-with-text {
+            margin-bottom: calc(-1 * var(--container-gutter)) !important;
+          }
+        {%- endunless -%}
+      {%- elsif section.settings.background_overlap == 'text' -%}
+        {%- unless is_boxed -%}
+          #shopify-section-{{ section.id }} .section {
+            margin-bottom: 0;
+          }
 
-    #shopify-section-{{ section.id }} .image-with-text {
-      margin-top: calc(-1 * var(--vertical-breather)) !important;
+          #shopify-section-{{ section.id }} .image-with-text {
+            margin-top: calc(-1 * var(--vertical-breather)) !important;
+          }
+        {%- else -%}
+          #shopify-section-{{ section.id }} .image-with-text {
+            margin-top: calc(-1 * var(--container-gutter)) !important;
+          }
+        {%- endunless -%}
+      {%- endif -%}
     }
-  {%- else -%}
-    #shopify-section-{{ section.id }} .image-with-text {
-      margin-top: calc(-1 * var(--container-gutter)) !important;
-    }
-  {%- endunless -%}
-  {%- endif -%}
-  }
   {%- endif -%}
 </style>
 

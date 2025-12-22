@@ -103,7 +103,7 @@
     "discount_code_showcase_P9ULWr": {
       "type": "discount-code-showcase",
       "settings": {
-        "fixed_discount_code": "NL_XMAS25",
+        "fixed_discount_code": "NL_NEWYEAR",
         "fixed_discount_amount": "",
         "inner_section_background": "#ffffff",
         "discount_badge_background": "#1a1a1a",
