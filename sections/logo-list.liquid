@@ -35,13 +35,23 @@
       {%- for block in section.blocks -%}
         {%- capture logo_content -%}
           {%- if block.settings.logo != blank -%}
-            {%- assign max_logo_width = section.settings.max_width_logo_desktop | at_least: section.settings.max_width_logo_mobile %}
-            {%- assign logo_max_size_mobile = block.settings.logo.width | divided_by: 2 | at_most: section.settings.max_width_logo_mobile -%}
-            {%- assign logo_max_size_desktop = block.settings.logo.width | divided_by: 2 | at_most: section.settings.max_width_logo_desktop -%}
-            {%- capture logo_widths -%}{{ logo_max_size_mobile }},{{ logo_max_size_mobile | times: 2 }},{{ logo_max_size_desktop }},{{ logo_max_size_desktop | times: 2 }}{%- endcapture -%}
-            {%- capture logo_sizes -%}(max-width: 740px) {{ logo_max_size_mobile }}px, {{ logo_max_size_desktop }}px{%- endcapture -%}
+            {%- assign logo_widths = '84,100,134,200,268' -%}
 
-            {{ block.settings.logo | image_url: width: block.settings.logo.width | image_tag: loading: 'lazy', sizes: logo_sizes, widths: logo_widths, class: 'logo-list__image' }}
+              {%- capture logo_sizes -%}
+                  (min-width: 1380px) 134px,
+                  (min-width: 1000px) calc(12.78vw - 40px),
+                  (min-width: 760px) 84px,
+                  84px
+              {%- endcapture -%}
+
+            {{ block.settings.logo
+            | image_url: width: 268
+            | image_tag:
+            loading: 'lazy',
+            sizes: logo_sizes,
+            widths: logo_widths,
+            class: 'logo-list__image'
+            }}
           {%- else -%}
             {{- 'image' | placeholder_svg_tag: 'logo-list__image logo-list__image--placeholder' -}}
           {%- endif -%}

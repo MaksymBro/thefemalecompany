@@ -117,7 +117,12 @@
     </div>
   {%- endif -%}
 
-  <slide-show reveal-on-scroll {% if section.settings.autoplay %}auto-play{% endif %} transition-type="{{ section.settings.transition_type | escape }}" class="slideshow slideshow--{{ section.settings.section_height }}">
+  <slide-show
+          reveal-on-scroll
+          {% if section.settings.autoplay %}auto-play{% endif %}
+          transition-type="{{ section.settings.transition_type | escape }}"
+          class="slideshow slideshow--{{ section.settings.section_height }}"
+  >
     <div class="slideshow__slide-list">
       {%- assign slide_counter = 0 -%}
 
@@ -127,7 +132,6 @@
 
           if block.settings.schedule_publishing
             assign publish_date = block.settings.publish_date | date: "%s"
-
             if publish_date != blank and now < publish_date
               continue
             endif
@@ -135,7 +139,6 @@
 
           if block.settings.schedule_unpublishing
             assign unpublish_date = block.settings.unpublish_date | date: "%s"
-
             if unpublish_date != blank and now > unpublish_date
               continue
             endif
@@ -144,22 +147,11 @@
 
         {%- assign slide_counter = slide_counter | plus: 1 -%}
 
-        {%- comment -%}
-        ------------------------------------------------------------------------------------------------------------------
-        IMAGE PART
-        ------------------------------------------------------------------------------------------------------------------
-        {%- endcomment -%}
-
         {%- assign image = block.settings.image -%}
         {%- assign split_image = block.settings.split_image -%}
         {%- assign mobile_image = block.settings.mobile_image -%}
 
         {%- assign image_aspect_ratio = image.aspect_ratio | default: 2.63 -%}
-
-        {%- comment -%}
-        If the image is split and that we want to preserve the ratio, we have to multiply the ratio by 2 (as each image
-        only account for half the screen size)
-        {%- endcomment -%}
 
         {%- if image != blank and split_image != blank and section.settings.section_height == 'auto' -%}
           {%- assign image_aspect_ratio = image_aspect_ratio | times: 2.0 -%}
@@ -172,156 +164,119 @@
         {%- endif -%}
 
         {%- capture slide_content -%}
-          <div class="slideshow__image-wrapper {% if mobile_image != blank %}hidden-pocket{% endif %}" {% if section.settings.transition_type == 'reveal' %}reveal-visibility{% endif %}>
+
+          <!-- DESKTOP IMAGE -->
+          <div class="slideshow__image-wrapper {% if mobile_image != blank %}hidden-pocket{% endif %}">
             {%- if image != blank -%}
-              {%- capture sizes_attributes -%}{% if split_image != blank %}(min-width: 1000px) 50vw{% else %}100vw{% endif %}{%- endcapture -%}
-              {{- image | image_url: width: 3000 | image_tag: loading: loading_attribute_value, draggable: false, class: 'slideshow__image', sizes: sizes_attributes, widths: '600,700,800,1000,1200,1400,1600,1800,2000,2200,2400,2600,2800,3000' -}}
+
+              {%- capture sizes_desktop -%}
+                (min-width: 1200px) 100vw, 119.44vw
+              {%- endcapture -%}
+
+              {%- assign img_url = image | image_url: width: image.width -%}
+
+              {{ image
+              | image_url: width: 2490
+              | image_tag:
+              loading: loading_attribute_value,
+              draggable: false,
+              class: 'slideshow__image',
+              sizes: sizes_desktop,
+              widths: '600,800,1000,1200,1400,1600,1800,2000,2400,2490'
+              }}
+
             {%- else -%}
               {% capture image_name %}lifestyle-{% cycle '1', '2' %}{%- endcapture -%}
-              {{- image_name | placeholder_svg_tag: 'slideshow__image slideshow__image--placeholder' -}}
+              {{ image_name | placeholder_svg_tag: 'slideshow__image slideshow__image--placeholder' }}
             {%- endif -%}
           </div>
 
-          {%- comment -%}If a second image (split image) is uploaded, we use it. Note that we use the same ratio as the first image (to have equal column height){% endcomment %}
+          <!-- SPLIT IMAGE -->
           {%- if image != blank and split_image != blank -%}
-            <div class="slideshow__image-wrapper slideshow__image-wrapper--secondary hidden-pocket" {% if section.settings.transition_type == 'reveal' %}reveal-visibility{% endif %}>
-              {{- split_image | image_url: width: 3000 | image_tag: loading: loading_attribute_value, draggable: false, class: 'slideshow__image', sizes: '50vw', widths: '600,700,800,1000,1200,1400,1600,1800,2000,2200,2400,2600,2800,3000' -}}
+            <div class="slideshow__image-wrapper slideshow__image-wrapper--secondary hidden-pocket">
+              {%- assign split_url = split_image | image_url: width: split_image.width -%}
+              {{ split_url | image_tag:
+              loading: loading_attribute_value,
+              draggable: false,
+              class: 'slideshow__image',
+              sizes: '(min-width: 1000px) 50vw, 100vw',
+              widths: '600,800,1000,1200,1400,1600,1800,2000,2400'
+              }}
             </div>
           {%- endif -%}
 
+          <!-- MOBILE IMAGE -->
           {%- if mobile_image != blank -%}
-            <div class="slideshow__image-wrapper hidden-lap-and-up" {% if section.settings.transition_type == 'reveal' %}reveal-visibility{% endif %}>
-              {{- mobile_image | image_url: width: 3000 | image_tag: loading: loading_attribute_value, draggable: false, class: 'slideshow__image', sizes: '100vw', widths: '600,700,800,1000,1200,1400,1600,1800,2000,2200,2400,2600,2800,3000' -}}
+            <div class="slideshow__image-wrapper hidden-lap-and-up">
+              {%- assign mobile_url = mobile_image | image_url: width: mobile_image.width -%}
+              {{ mobile_url | image_tag:
+              loading: loading_attribute_value,
+              draggable: false,
+              class: 'slideshow__image',
+              sizes: '100vw',
+              widths: '360,480,600,750,900,1200'
+              }}
             </div>
           {%- endif -%}
 
-          {%- comment -%}
-          ----------------------------------------------------------------------------------------------------------------
-          CONTENT PART
-          ----------------------------------------------------------------------------------------------------------------
-          {%- endcomment -%}
-
+          <!-- CONTENT -->
           {%- capture section_content -%}
+
             {%- if block.settings.subheading != blank -%}
-              <h2 class="heading heading--small js-slideshow-subheading">
-                <split-lines {% if section.settings.transition_type != 'fade' %}reveal{% endif %}>{{ block.settings.subheading | escape }}</split-lines>
+              <h2 class="heading heading--small">
+                <split-lines>{{ block.settings.subheading | escape }}</split-lines>
               </h2>
             {%- endif -%}
 
             {%- if block.settings.title != blank -%}
-              {% if block.settings.title_h1 == true %}
-                <h1 class="heading heading--large js-slideshow-heading">
-                  <split-lines {% if section.settings.transition_type != 'fade' %}reveal{% endif %}>{{ block.settings.title | escape }}</split-lines>
+              {% if block.settings.title_h1 %}
+                <h1 class="heading heading--large">
+                  <split-lines>{{ block.settings.title | escape }}</split-lines>
                 </h1>
               {% else %}
-                <h3 class="heading heading--large js-slideshow-heading">
-                  <split-lines {% if section.settings.transition_type != 'fade' %}reveal{% endif %}>{{ block.settings.title | escape }}</split-lines>
+                <h3 class="heading heading--large">
+                  <split-lines>{{ block.settings.title | escape }}</split-lines>
                 </h3>
               {% endif %}
             {%- endif -%}
 
             {%- if block.settings.subtitle != blank or block.settings.subtitle_html != blank -%}
-              <div class="slideshow-slide__subtitle js-slideshow-subtitle">
-                {{- block.settings.subtitle | default: block.settings.subtitle_html -}}
+              <div class="slideshow-slide__subtitle">
+                {{ block.settings.subtitle | default: block.settings.subtitle_html }}
               </div>
             {%- endif -%}
 
-            {%- capture buttons -%}
-              {%- if block.settings.button_1_text != blank -%}
-                <a href="{{ block.settings.button_1_link }}" class="button button--primary">{{ block.settings.button_1_text | escape }}</a>
-              {%- endif -%}
-
-              {%- if block.settings.button_2_text != blank -%}
-                <a href="{{ block.settings.button_2_link }}" class="button button--primary">{{ block.settings.button_2_text | escape }}</a>
-              {%- endif -%}
-            {%- endcapture -%}
-
-            {%- if block.settings.button_1_text != blank and block.settings.button_2_text != blank -%}
-              <div class="button-group" {% if section.settings.transition_type != 'fade' %}reveal{% endif %}>
-                <div class="button-group__wrapper">
-                  {{- buttons -}}
-                </div>
-              </div>
-            {%- elsif buttons != blank -%}
-              <div class="button-wrapper" {% if section.settings.transition_type != 'fade' %}reveal{% endif %}>
-                {{- buttons -}}
-              </div>
-            {%- endif -%}
           {%- endcapture -%}
 
           {%- if section_content != blank -%}
             <div class="container">
-              {%- assign text_alignment = block.settings.text_position | split: '_' | first -%}
-              {%- assign text_position = block.settings.text_position | split: '_' | last -%}
-
-              <div class="slideshow__text-wrapper slideshow__text-wrapper--{{ text_alignment }} vertical-breather">
-                <div class="content-box content-box--medium content-box--text-{{ text_position }} content-box--{{ text_position }} text-container">
-                  {{- section_content -}}
+              <div class="slideshow__text-wrapper">
+                <div class="content-box content-box--medium text-container">
+                  {{ section_content }}
                 </div>
               </div>
             </div>
           {%- endif -%}
+
         {%- endcapture -%}
 
-        {%- comment -%}If only the button 1 link is filled, then we make the whole slide clickable{%- endcomment -%}
-
-        {%- capture slide_attributes -%}
-          {{ block.shopify_attributes }}
-          id="block-{{ section.id }}-{{ block.id }}"
-          class="slideshow__slide {% if split_image != blank %}slideshow__slide--split{% endif %} {% if section.settings.transition_type == 'sweep' %}slideshow__slide--sweep{% endif %}"
-          {% unless slide_counter == 1 %}hidden{% endunless %}
-          {% if section.settings.section_height == 'auto' %}
-            style="--image-aspect-ratio: {{ image_aspect_ratio }}; --mobile-image-aspect-ratio: {{ mobile_image.aspect_ratio | default: image_aspect_ratio | default: 1 }};"
-          {% endif %}
-        {%- endcapture -%}
-
-        <slide-show-item {% if slide_counter == 1 and section.settings.transition_type == "fade" %}style="visibility: visible; opacity: 1;"{% endif %} {% if section.settings.transition_type != 'reveal' %}reveal-visibility{% endif %} {{ slide_attributes }}>
-          {%- if block.settings.button_1_link != blank and block.settings.button_1_text == blank and block.settings.button_2_text == blank -%}
-            <a class="slideshow__slide-inner" href="{{ block.settings.button_1_link }}">
-              {{- slide_content -}}
-            </a>
-          {%- else -%}
-            <div class="slideshow__slide-inner">
-              {{- slide_content -}}
-            </div>
-          {%- endif -%}
+        <slide-show-item
+                id="block-{{ section.id }}-{{ block.id }}"
+                class="slideshow__slide {% if split_image != blank %}slideshow__slide--split{% endif %}"
+                {% unless slide_counter == 1 %}hidden{% endunless %}
+                {% if section.settings.section_height == 'auto' %}
+                  style="--image-aspect-ratio: {{ image_aspect_ratio }};"
+                {% endif %}
+        >
+          <div class="slideshow__slide-inner">
+            {{ slide_content }}
+          </div>
         </slide-show-item>
+
       {%- endfor -%}
     </div>
-
-    {%- if section.blocks.size > 1 -%}
-      <page-dots {% if section.settings.autoplay %}animation-timer{% endif %} class="slideshow__nav container">
-        {%- assign slide_counter = 0 -%}
-        {%- for block in section.blocks -%}
-          {%- liquid
-            assign now = "now" | date: "%s"
-
-            if block.settings.schedule_publishing
-              assign publish_date = block.settings.publish_date | date: "%s"
-
-              if publish_date != blank and now < publish_date
-                continue
-              endif
-            endif
-
-            if block.settings.schedule_unpublishing
-              assign unpublish_date = block.settings.unpublish_date | date: "%s"
-
-              if unpublish_date != blank and now > unpublish_date
-                continue
-              endif
-            endif
-          -%}
-
-          {%- assign slide_counter = slide_counter | plus: 1 -%}
-
-          <button class="slideshow__progress-bar" aria-controls="block-{{ section.id }}-{{ block.id }}" {% if slide_counter == 1 %}aria-current="true"{% endif%}>
-            <span class="visually-hidden">{{ 'general.accessibility.go_to_slide' | t: num: slide_counter }}</span>
-          </button>
-        {%- endfor -%}
-      </page-dots>
-    {%- endif -%}
   </slide-show>
+
 </section>
 
 {% schema %}

@@ -142,7 +142,11 @@
                       {%- capture image_sizes -%}(max-width: 740px) calc(100vw - 48px), (max-width: 999px) calc(50vw - 60px), 480px{%- endcapture -%}
 
                     {%- when 'carousel' -%}
-                      {%- capture image_sizes -%}(max-width: 740px) 80vw, (max-width: 999px) 60vw, 425px{%- endcapture -%}
+                      {%- capture image_sizes -%}
+                        (min-width: 1000px) 23vw,
+                        (min-width: 760px) 40vw,
+                        60vw
+                      {%- endcapture -%}
 
                     {%- when 'collage' -%}
                       {%- capture image_sizes -%}(max-width: 740px) calc(100vw - 24px * 2), 660px{%- endcapture -%}

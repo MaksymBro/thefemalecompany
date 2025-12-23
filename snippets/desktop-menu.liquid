@@ -87,7 +87,12 @@
                 {%- capture image_push -%}
                   <div class="mega-menu__image-wrapper">
                     {%- assign menu_image = mega_menu_block.settings[image_setting] -%}
-                    {{ menu_image | image_url: width: menu_image.width | image_tag: loading: 'lazy', sizes: '240px', sizes: '240,480,720', class: 'mega-menu__image' }}
+                      {{ menu_image | image_tag:
+                      loading: 'lazy',
+                      widths: '200,280,352,480',
+                      sizes: '(min-width: 1400px) 280px, 200px',
+                      class: 'mega-menu__image'
+                      }}
                   </div>
 
                   {%- if mega_menu_block.settings[image_heading_setting] != '' -%}

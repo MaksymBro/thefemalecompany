@@ -68,6 +68,12 @@
 >
   <div
     class="product-item__image-wrapper {% if settings.show_secondary_image and product.media.size > 1 and hide_secondary_image != true %}product-item__image-wrapper--multiple{% endif %}">
+      {%- capture sizes_attribute -%}
+          (min-width: 1700px) 391px,
+          (min-width: 1000px) 23.82vw,
+          (min-width: 760px) 37.73vw,
+          56.14vw
+      {%- endcapture -%}
     <a
       href="{{ product.url }}"
       data-instant

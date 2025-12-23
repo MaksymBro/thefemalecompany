@@ -111,7 +111,12 @@
         {{- product_labels -}}
       </div>
     {%- endif -%}
-
+      {%- capture sizes_attribute -%}
+          (min-width: 1700px) 362px,
+          (min-width: 1000px) 22.06vw,
+          (min-width: 760px) 35.45vw,
+          52.05vw
+      {%- endcapture -%}
     <a
       href="{%- if is_variant -%}{{ current_variant.url }}{%- else -%}{{ product.url }}{%- endif -%}"
       data-instant
