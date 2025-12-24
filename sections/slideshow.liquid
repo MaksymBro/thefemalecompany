@@ -157,10 +157,12 @@
           {%- assign image_aspect_ratio = image_aspect_ratio | times: 2.0 -%}
         {%- endif -%}
 
-        {%- if slide_counter > 2 -%}
-          {%- assign loading_attribute_value = 'lazy' -%}
-        {%- else -%}
+        {%- if slide_counter == 1 -%}
           {%- assign loading_attribute_value = 'eager' -%}
+          {%- assign fetchpriority_value = 'high' -%}
+        {%- else -%}
+          {%- assign loading_attribute_value = 'lazy' -%}
+          {%- assign fetchpriority_value = nil -%}
         {%- endif -%}
 
         {%- capture slide_content -%}
@@ -170,7 +172,7 @@
             {%- if image != blank -%}
 
               {%- capture sizes_desktop -%}
-                (min-width: 1200px) 100vw, 119.44vw
+                100vw
               {%- endcapture -%}
 
               {%- assign img_url = image | image_url: width: image.width -%}
@@ -179,6 +181,8 @@
               | image_url: width: 2490
               | image_tag:
               loading: loading_attribute_value,
+              fetchpriority: fetchpriority_value,
+              decoding: 'async',
               draggable: false,
               class: 'slideshow__image',
               sizes: sizes_desktop,
@@ -211,6 +215,8 @@
               {%- assign mobile_url = mobile_image | image_url: width: mobile_image.width -%}
               {{ mobile_url | image_tag:
               loading: loading_attribute_value,
+              fetchpriority: fetchpriority_value,
+              decoding: 'async',
               draggable: false,
               class: 'slideshow__image',
               sizes: '100vw',
