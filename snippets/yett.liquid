@@ -1,0 +1,143 @@
+<script>
+    /* =========================
+       YETT – bootstrap
+    ========================= */
+    (function (w, d) {
+        var n = d.documentElement;
+        w.yett = { _q: [], _l: [] };
+        yett.block = function () { yett._q.push(arguments); };
+        yett.allow = function () { yett._l.push(arguments); };
+
+        var s = d.createElement("script");
+        s.src = "https://unpkg.com/yett@1.1.2/dist/yett.min.js";
+        s.async = true;
+        n.appendChild(s);
+    })(window, document);
+
+    /* =========================
+       1. BLOCK EVERYTHING
+    ========================= */
+    yett.block(/./);
+
+    /* =========================
+       2. SHOPIFY CORE (ALLOW IMMEDIATELY)
+    ========================= */
+    yett.allow(
+        /shopifycloud\.com/,
+        /cdn\.shopify\.com/,
+        /\/cart\.js/,
+        /trekkie\.storefront/,
+        /web-pixels/,
+        /checkout-web/,
+        /storefront/,
+        /shop-events/,
+        /consent-tracking-api/
+    );
+
+    /* =========================
+       3. CONSENT (Usercentrics)
+    ========================= */
+    yett.allow(
+        /usercentrics\.eu/,
+        /privacy-proxy\.usercentrics\.eu/
+    );
+
+    /* =========================
+       4. ANALYTICS (after load)
+    ========================= */
+    window.addEventListener("load", function () {
+        setTimeout(function () {
+            yett.allow(
+                /googletagmanager\.com/,
+                /google-analytics\.com/,
+                /gtag\/js/,
+                /connect\.facebook\.net/,
+                /clarity\.ms/,
+                /snap\.licdn\.com/
+            );
+        }, 2000);
+    });
+
+    /* =========================
+       5. TRUSTPILOT (interaction)
+    ========================= */
+    function allowTrustpilot() {
+        if (window.__trustpilot_loaded) return;
+        window.__trustpilot_loaded = true;
+
+        yett.allow(
+            /trustpilot\.com/,
+            /trustboxsettings\.trustpilot\.com/,
+            /invitejs\.trustpilot\.com/
+        );
+    }
+    ["scroll", "mousemove", "touchstart"].forEach(function (e) {
+        window.addEventListener(e, allowTrustpilot, { once: true });
+    });
+
+    /* =========================
+       6. KLAVIYO (after load)
+    ========================= */
+    window.addEventListener("load", function () {
+        setTimeout(function () {
+            yett.allow(
+                /klaviyo\.com/,
+                /static-tracking\.klaviyo\.com/
+            );
+        }, 3000);
+    });
+
+    /* =========================
+       7. REVIEWS (YOTPO / reviews.io)
+    ========================= */
+    function allowReviews() {
+        yett.allow(
+            /yotpo\.com/,
+            /reviews\.io/
+        );
+    }
+    ["scroll", "mousemove", "touchstart"].forEach(function (e) {
+        window.addEventListener(e, allowReviews, { once: true });
+    });
+
+    /* =========================
+       8. AFFILIATES / PARTNERS
+    ========================= */
+    window.addEventListener("load", function () {
+        setTimeout(function () {
+            yett.allow(
+                /goaffpro\.com/,
+                /awin/,
+                /linkster/,
+                /lantern\.roeyecdn\.com/
+            );
+        }, 4000);
+    });
+
+    /* =========================
+       9. OTHER HEAVY / NON-CRITICAL
+    ========================= */
+    window.addEventListener("load", function () {
+        setTimeout(function () {
+            yett.allow(
+                /ablyft/,
+                /intelligems/,
+                /sentry/,
+                /506\.io/,
+                /cart-bot/,
+                /rechargecdn/,
+                /seapixel/,
+                /kraken/
+            );
+        }, 5000);
+    });
+
+    /* =========================
+       10. tracify
+    ========================= */
+    window.addEventListener('load', () => {
+        setTimeout(() => {
+            yett.allow(/tracify\.ai/);
+        }, 4000);
+    });
+</script>
