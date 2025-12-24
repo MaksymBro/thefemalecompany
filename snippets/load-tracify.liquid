@@ -1,1 +1,18 @@
-<script async src="https://scripting.tracify.ai/tracifyv2.js?csid=2a1c10da-0579-4f5e-a908-57d624a0cf2e"></script>
+{% comment %}
+<script>
+    onUsercentricsReady(() => {
+        const services = UC_UI.getServicesBaseInfo();
+
+        const hasConsent = services.some(
+            s => s.id === 'TRACIFY' && s.consent.status === true
+        );
+
+        if (!hasConsent) return;
+
+        const s = document.createElement('script');
+        s.src = 'https://scripting.tracify.ai/tracifyv2.js?csid=2a1c10da-0579-4f5e-a908-57d624a0cf2e';
+        s.defer = true;
+        document.body.appendChild(s);
+    });
+</script>
+{% endcomment %}

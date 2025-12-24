@@ -209,36 +209,90 @@ SHOPIFY CONSENT SYNC
 ===================== {% endcomment %}
 
 <script>
+  /**
+   * Usercentrics safe-ready helper
+   */
+  function onUsercentricsReady(callback) {
+    if (window.UC_UI && UC_UI.isInitialized()) {
+      callback();
+      return;
+    }
+
+    window.addEventListener(
+            'UC_UI_INITIALIZED',
+            () => {
+              if (window.UC_UI) callback();
+            },
+            { once: true }
+    );
+  }
+
+  /**
+   * Shopify + Third-party consent sync
+   */
   document.addEventListener('DOMContentLoaded', () => {
-    Shopify.loadFeatures([{ name: 'consent-tracking-api', version: '0.1' }], () => {
+    Shopify.loadFeatures(
+            [{ name: 'consent-tracking-api', version: '0.1' }],
+            () => {
 
-      function syncConsent() {
-        if (!window.UC_UI) return;
+              function syncShopifyConsent() {
+                if (!window.UC_UI || !UC_UI.isInitialized()) return;
 
-        if (!window.UC_UI || !UC_UI.isInitialized()) return;
+                const services = UC_UI.getServicesBaseInfo();
 
-        window.addEventListener('UC_UI_INITIALIZED', () => {
-          const services = UC_UI.getServicesBaseInfo();
-          const analytics = services.filter(s => s.categorySlug === 'functional').every(s => s.consent.status);
-          const marketing = services.filter(s => s.categorySlug === 'marketing').every(s => s.consent.status);
+                const analytics = services
+                        .filter(s => s.categorySlug === 'functional')
+                        .every(s => s.consent.status === true);
 
-          Shopify.customerPrivacy.setTrackingConsent({
-            preferences: true,
-            analytics,
-            marketing
-          });
-        })
-      }
+                const marketing = services
+                        .filter(s => s.categorySlug === 'marketing')
+                        .every(s => s.consent.status === true);
 
-      if (!UC_UI.isInitialized()) {
-        window.addEventListener('UC_UI_INITIALIZED', syncConsent);
-      } else {
-        syncConsent();
-      }
+                Shopify.customerPrivacy.setTrackingConsent({
+                  preferences: true,
+                  analytics,
+                  marketing
+                });
+              }
 
-      window.addEventListener('ucEvent', e => {
-        if (e.detail?.event === 'consent_status') syncConsent();
-      });
-    });
+              function loadTracifyIfAllowed() {
+                if (!window.UC_UI || !UC_UI.isInitialized()) return;
+
+                const services = UC_UI.getServicesBaseInfo();
+
+                const hasConsent = services.some(
+                        s => s.id === 'TRACIFY' && s.consent.status === true
+                );
+
+                if (!hasConsent) return;
+
+                if (window.__tracifyLoaded) return;
+                window.__tracifyLoaded = true;
+
+                const s = document.createElement('script');
+                s.src =
+                        'https://scripting.tracify.ai/tracifyv2.js?csid=2a1c10da-0579-4f5e-a908-57d624a0cf2e';
+                s.defer = true;
+                document.body.appendChild(s);
+              }
+
+              // Initial run
+              onUsercentricsReady(() => {
+                syncShopifyConsent();
+                loadTracifyIfAllowed();
+              });
+
+              // React on consent changes
+              window.addEventListener('ucEvent', e => {
+                if (e.detail?.event === 'consent_status') {
+                  onUsercentricsReady(() => {
+                    syncShopifyConsent();
+                    loadTracifyIfAllowed();
+                  });
+                }
+              });
+            }
+    );
   });
 </script>
+
