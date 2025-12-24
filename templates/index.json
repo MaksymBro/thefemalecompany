@@ -9,20 +9,6 @@
  */
 {
   "sections": {
-    "marquee_fyi6zy": {
-      "type": "marquee",
-      "disabled": true,
-      "settings": {
-        "content": "<p><strong>EQUAL PAY DAY DEAL   </strong>· <strong>NUR HEUTE </strong></p>",
-        "separator": "",
-        "section_link": "",
-        "repeat": 10,
-        "min_gap": 87,
-        "animation_speed": 70,
-        "text_color": "#ffffff",
-        "background": "#cc0807"
-      }
-    },
     "countdown_timer_GHVfQE": {
       "type": "countdown-timer",
       "blocks": {
@@ -80,6 +66,7 @@
             "text_position": "bottom_left",
             "subheading": "",
             "title": "Ohne Auslaufen durch den Tag - wild & elegant",
+            "title_h1": false,
             "subtitle": "<p>Neues Premium-Update: Leo-Design trifft auf softes Mesh mit maximalem Schutz durch Fluid Protection® und Super Dry®. Jetzt auch als Everyday Underwear ohne Sauglage.</p>",
             "subtitle_html": "",
             "button_1_text": "Zu der Kollektion",
@@ -108,6 +95,7 @@
             "text_position": "bottom_left",
             "subheading": "",
             "title": "",
+            "title_h1": false,
             "subtitle": "",
             "subtitle_html": "",
             "button_1_text": "Zum SALE",
@@ -136,6 +124,7 @@
             "text_position": "bottom_left",
             "subheading": "",
             "title": "",
+            "title_h1": false,
             "subtitle": "",
             "subtitle_html": "",
             "button_1_text": "BLACK FRIDAY ANGEBOTE",
@@ -164,6 +153,7 @@
             "text_position": "bottom_left",
             "subheading": "",
             "title": "",
+            "title_h1": false,
             "subtitle": "",
             "subtitle_html": "",
             "button_1_text": "Zum Sale",
@@ -210,183 +200,6 @@
         "banner_usps_heading_3": "OHNE BIOZIDE & OHNE PFAS",
         "banner_usps_svg_4": "shopify://shop_images/Icon_Certified_e82c9913-74fc-4dc5-afee-decc7f31dd88.svg",
         "banner_usps_heading_4": "OEKO-TEX100 STANDARD"
-      }
-    },
-    "slideshow_NWyTdV": {
-      "type": "slideshow",
-      "blocks": {
-        "image_R9B3De": {
-          "type": "image",
-          "disabled": true,
-          "settings": {
-            "image": "shopify://shop_images/Header_mobile_Asset_1_23ddca9f-e213-496c-a75e-cfdd782b7c65.jpg",
-            "mobile_image": "shopify://shop_images/Header_Web_Preview_4.png",
-            "text_position": "bottom_left",
-            "subheading": "",
-            "title": "",
-            "subtitle": "",
-            "subtitle_html": "",
-            "button_1_text": "Zum SALE",
-            "button_1_link": "shopify://collections/all-2",
-            "button_2_text": "",
-            "button_2_link": "",
-            "heading_font_family": "circular",
-            "heading_color": "#cc0807",
-            "text_color": "#ffffff",
-            "button_background": "#cc0807",
-            "button_text_color": "#ffffff",
-            "overlay_color": "#000000",
-            "overlay_opacity": 0,
-            "schedule_publishing": false,
-            "publish_date": "06.03.2025 00:01",
-            "schedule_unpublishing": false,
-            "unpublish_date": "23.11.2025 23:59"
-          }
-        },
-        "image_EKQUPT": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/Header_Web_Preview_2.png",
-            "mobile_image": "shopify://shop_images/Header_mobile_Preview_2_a6667c4b-5da4-4e33-be2b-bcb0eb0aa7d4.jpg",
-            "text_position": "bottom_left",
-            "subheading": "",
-            "title": "",
-            "subtitle": "",
-            "subtitle_html": "",
-            "button_1_text": "Zum Sale",
-            "button_1_link": "shopify://collections/all-2",
-            "button_2_text": "",
-            "button_2_link": "",
-            "heading_font_family": "circular",
-            "heading_color": "#cc0807",
-            "text_color": "#cc0807",
-            "button_background": "#cc0807",
-            "button_text_color": "#ffffff",
-            "overlay_color": "#1a1a1a",
-            "overlay_opacity": 12,
-            "schedule_publishing": true,
-            "publish_date": "14.07.2025 00:01",
-            "schedule_unpublishing": true,
-            "unpublish_date": "23.11.2025 23:59"
-          }
-        },
-        "image_GkKjCR": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/Header_Web_Preview_4.png",
-            "mobile_image": "shopify://shop_images/Header_mobile_Asset_2cce4018-bb7a-49fc-9971-5d5d4f3bca5c.jpg",
-            "text_position": "bottom_left",
-            "subheading": "",
-            "title": "",
-            "subtitle": "",
-            "subtitle_html": "",
-            "button_1_text": "Zum Sale",
-            "button_1_link": "shopify://collections/all-2",
-            "button_2_text": "",
-            "button_2_link": "",
-            "heading_font_family": "circular",
-            "heading_color": "#ffffff",
-            "text_color": "#ffffff",
-            "button_background": "#cc0807",
-            "button_text_color": "#ffffff",
-            "overlay_color": "#000000",
-            "overlay_opacity": 8,
-            "schedule_publishing": true,
-            "publish_date": "06.11.2025 00:01",
-            "schedule_unpublishing": false,
-            "unpublish_date": "23.11.2025 23:59"
-          }
-        },
-        "image_Dyi7Lr": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/Header_Web_Preview_3.jpg",
-            "mobile_image": "shopify://shop_images/Header_mobile_24a5b5fe-5762-40a6-92f4-006708495db0.jpg",
-            "text_position": "bottom_left",
-            "subheading": "",
-            "title": "Newsletter Only Deals",
-            "subtitle": "<p>Unter allen Anmeldungen verlosen wir einen <br/>Rimowa Koffer und ein Unterwäsche Set.</p>",
-            "subtitle_html": "",
-            "button_1_text": "Jetzt Anmelden",
-            "button_1_link": "shopify://pages/gewinnspiel-rimowa",
-            "button_2_text": "",
-            "button_2_link": "",
-            "heading_font_family": "circular",
-            "heading_color": "#cc0807",
-            "text_color": "#cc0807",
-            "button_background": "#cc0807",
-            "button_text_color": "#ffffff",
-            "overlay_color": "#000000",
-            "overlay_opacity": 0,
-            "schedule_publishing": true,
-            "publish_date": "07.10.2025 00:01",
-            "schedule_unpublishing": true,
-            "unpublish_date": "23.11.2025 23:59"
-          }
-        },
-        "image_FHKyTt": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/Header_Web__1_f15607c8-b4d9-4b7b-a63f-0a2814575728.jpg",
-            "mobile_image": "shopify://shop_images/Header_mobile_704e0c07-9cc0-4aea-b11f-9706d5dbe5ea.jpg",
-            "text_position": "bottom_left",
-            "subheading": "",
-            "title": "Auslaufsicher durch die Nacht",
-            "subtitle": "<p>NEU: Endlich durchschlafen mit trockenem Tragegefühl. Die Shorts mit Night Protect® Technologie – extra lange Saugeinlage.</p>",
-            "subtitle_html": "",
-            "button_1_text": "Zur Kollektion",
-            "button_1_link": "shopify://collections/sleep",
-            "button_2_text": "",
-            "button_2_link": "",
-            "heading_font_family": "circular",
-            "heading_color": "#ffffff",
-            "text_color": "#ffffff",
-            "button_background": "#5f65c3",
-            "button_text_color": "#ffffff",
-            "overlay_color": "#000000",
-            "overlay_opacity": 16,
-            "schedule_publishing": true,
-            "publish_date": "20.10.2025 00:01",
-            "schedule_unpublishing": true,
-            "unpublish_date": "23.11.2025 23:59"
-          }
-        }
-      },
-      "block_order": [
-        "image_R9B3De",
-        "image_EKQUPT",
-        "image_GkKjCR",
-        "image_Dyi7Lr",
-        "image_FHKyTt"
-      ],
-      "disabled": true,
-      "settings": {
-        "section_height": "medium",
-        "transition_type": "fade",
-        "autoplay": true,
-        "cycle_speed": 6,
-        "background": "#ffe6e6",
-        "show_banner_usps": false,
-        "banner_usps_link": "https://buy.thefemalecompany.com/blogs/perioden-ratgeber/giftige-schwermetalle-in-tampons",
-        "show_hide_button": false,
-        "banner_usps_bg_color": "#ffffff",
-        "banner_usps_text_color": "#2abb53",
-        "banner_usps_heading": "🤝ZERTIFIZIERTE PRODUKTSICHERHEIT 🤝",
-        "banner_usps_svg_1": "shopify://shop_images/Icon_Certified_e82c9913-74fc-4dc5-afee-decc7f31dd88.svg",
-        "banner_usps_heading_1": "GEPRÜFT AUF ÜBER 1000 SCHADSTOFFE",
-        "banner_usps_svg_2": "shopify://shop_images/Icon_Certified_e82c9913-74fc-4dc5-afee-decc7f31dd88.svg",
-        "banner_usps_heading_2": "LABORTEST JULY24: FREI VON ARSEN & BLEI",
-        "banner_usps_svg_3": "shopify://shop_images/Icon_Certified_e82c9913-74fc-4dc5-afee-decc7f31dd88.svg",
-        "banner_usps_heading_3": "OHNE BIOZIDE & OHNE PFAS",
-        "banner_usps_svg_4": "shopify://shop_images/Icon_Certified_e82c9913-74fc-4dc5-afee-decc7f31dd88.svg",
-        "banner_usps_heading_4": "OEKO-TEX100 STANDARD"
-      }
-    },
-    "pagefly_section_GqP4q7": {
-      "type": "pagefly-section",
-      "disabled": true,
-      "settings": {
-        "section_id": "pf-6385c830"
       }
     },
     "expandable_slides_pyxR7e": {
@@ -466,14 +279,6 @@
         "banner_usps_heading_3": "OHNE BIOZIDE & OHNE PFAS",
         "banner_usps_svg_4": "shopify://shop_images/Icon_Certified_7695bf59-0bf3-4c16-aba1-b8594f0a0f5d.svg",
         "banner_usps_heading_4": "OEKO-TEX100 STANDARD"
-      }
-    },
-    "pagefly_section_3W3yCx": {
-      "type": "pagefly-section",
-      "disabled": true,
-      "name": "PageFly Section",
-      "settings": {
-        "section_id": "pf-b48705cc"
       }
     },
     "b66cd4b6-3bfe-4536-9245-9a832c26dd53": {
@@ -612,22 +417,6 @@
         "section_background_color": "#ffffff",
         "section_spacing_top": 32,
         "section_spacing_bottom": 32,
-        "section_spacing_different_mobile": false,
-        "section_spacing_top_mobile": 0,
-        "section_spacing_bottom_mobile": 0
-      }
-    },
-    "trustpilot_jPhAbM": {
-      "type": "trustpilot",
-      "disabled": true,
-      "settings": {
-        "widget": "horizontal_condensed",
-        "widget_color_scheme": "light",
-        "section_background_color": "#f7aea6",
-        "trustpilot_current_rating": 4,
-        "trustpilot_review_count": "2000+",
-        "section_spacing_top": 16,
-        "section_spacing_bottom": 16,
         "section_spacing_different_mobile": false,
         "section_spacing_top_mobile": 0,
         "section_spacing_bottom_mobile": 0
@@ -787,77 +576,6 @@
         "section_spacing_bottom_mobile": 32
       }
     },
-    "section_header_JywTXG": {
-      "type": "section-header",
-      "disabled": true,
-      "settings": {
-        "start_year": 2025,
-        "start_month": 1,
-        "start_day": 1,
-        "start_time": "10:00",
-        "end_year": 2050,
-        "end_month": 12,
-        "end_day": 31,
-        "end_time": "10:00",
-        "section_subheading": "Empowering Womanhood",
-        "section_heading": "Über 2 Millionen mal verkauft.",
-        "allow_heading_override": false,
-        "section_short_description": "",
-        "heading_size": "h2",
-        "highest_hierarchy": false,
-        "section_heading_font_family": "default",
-        "short_description_font_size": "medium",
-        "section_text_color": "rgba(0,0,0,0)",
-        "section_heading_color": "rgba(0,0,0,0)",
-        "section_subheading_color": "rgba(0,0,0,0)",
-        "section_container_width": "sm",
-        "section_background_color": "rgba(0,0,0,0)",
-        "section_spacing_top": 56,
-        "section_spacing_bottom": 0,
-        "section_spacing_different_mobile": true,
-        "section_spacing_top_mobile": 32,
-        "section_spacing_bottom_mobile": 0
-      }
-    },
-    "170722167165180778": {
-      "type": "apps",
-      "blocks": {
-        "reviews_io_reviewsio_card_carousel_UjRz4w": {
-          "type": "shopify://apps/reviews-io/blocks/reviewsio-card-carousel/92a082e5-b297-4e88-b428-ac96cbc505f9",
-          "settings": {
-            "star": "#10b0a6",
-            "review_type": "company, product",
-            "reviews_shown": 10,
-            "header_bg_colour": "#10b0a6",
-            "header_colour": "#ffffff",
-            "header_star_colour": "#ffffff",
-            "heading_text_colour": "#1a1a1a",
-            "heading_font": "sans_serif_n4",
-            "body_text_colour": "#1a1a1a",
-            "badge_icon_colour": "#1a1a1a",
-            "badge_text_colour": "#1a1a1a",
-            "bg_start_colour": "#ffffff",
-            "bg_end_colour": "#ffffff",
-            "item_border_width": "0px",
-            "item_border_colour": "#000000",
-            "item_border_radius": "0px",
-            "item_shadow_size": "10px",
-            "item_shadow_colour": "rgba(0,0,0,0)",
-            "enable_rich_snippets": false,
-            "disable_same_customer": false,
-            "logo_colour": "var(--logo-inverted)"
-          }
-        }
-      },
-      "block_order": [
-        "reviews_io_reviewsio_card_carousel_UjRz4w"
-      ],
-      "disabled": true,
-      "settings": {
-        "include_horizontal_margins": false,
-        "include_vertical_margins": true
-      }
-    },
     "section_header_n3KcgW": {
       "type": "section-header",
       "settings": {
@@ -975,62 +693,6 @@
         "button_text_color": "rgba(0,0,0,0)"
       }
     },
-    "featured_collections_LbTHbP": {
-      "type": "featured-collections",
-      "blocks": {
-        "collection_6rNUWi": {
-          "type": "collection",
-          "settings": {
-            "collection": "perioden-bademode",
-            "label": "",
-            "button_text": "Mehr Swimwear",
-            "button_url": "shopify://collections/perioden-bademode",
-            "hide_from_product_title_start": "Period",
-            "filterable_options": ""
-          }
-        }
-      },
-      "block_order": [
-        "collection_6rNUWi"
-      ],
-      "disabled": true,
-      "settings": {
-        "start_year": 2025,
-        "start_month": 1,
-        "start_day": 1,
-        "start_time": "10:00",
-        "end_year": 2050,
-        "end_month": 12,
-        "end_day": 31,
-        "end_time": "10:00",
-        "products_count": 8,
-        "products_per_row": 4,
-        "stack_products": false,
-        "show_cta": false,
-        "filter_toggle_button_background": "rgba(0,0,0,0)",
-        "filter_toggle_active_button_background": "rgba(0,0,0,0)",
-        "filter_toggle_button_color": "rgba(0,0,0,0)",
-        "button_background": "#ff3f46",
-        "button_text_color": "#fff0f0",
-        "subheading": "Get wet, stay dry.",
-        "title": "Period Swimwear",
-        "content": "",
-        "section_header_heading_size": "h3",
-        "section_header_highest_hierarchy": false,
-        "section_header_short_description_font_size": "medium",
-        "section_container_width": "md",
-        "background": "#ffe6e6",
-        "text_color": "#1a1a1a",
-        "heading_color": "#1a1a1a",
-        "section_subheading_color": "#1a1a1a",
-        "section_heading_font_family": "default",
-        "section_spacing_top": 68,
-        "section_spacing_bottom": 68,
-        "section_spacing_different_mobile": true,
-        "section_spacing_top_mobile": 48,
-        "section_spacing_bottom_mobile": 48
-      }
-    },
     "featured_collections_zHdDiU": {
       "type": "featured-collections",
       "blocks": {
@@ -1075,62 +737,6 @@
         "section_header_short_description_font_size": "medium",
         "section_container_width": "md",
         "background": "#ffffff",
-        "text_color": "#1a1a1a",
-        "heading_color": "#1a1a1a",
-        "section_subheading_color": "#1a1a1a",
-        "section_heading_font_family": "default",
-        "section_spacing_top": 48,
-        "section_spacing_bottom": 48,
-        "section_spacing_different_mobile": false,
-        "section_spacing_top_mobile": 32,
-        "section_spacing_bottom_mobile": 32
-      }
-    },
-    "featured_collections_BT7iep": {
-      "type": "featured-collections",
-      "blocks": {
-        "collection_GgTVDN": {
-          "type": "collection",
-          "settings": {
-            "collection": "periode-periodenprodukte",
-            "label": "",
-            "button_text": "Mehr Periodenprodukte",
-            "button_url": "shopify://collections/periode-periodenprodukte",
-            "hide_from_product_title_start": "",
-            "filterable_options": ""
-          }
-        }
-      },
-      "block_order": [
-        "collection_GgTVDN"
-      ],
-      "disabled": true,
-      "settings": {
-        "start_year": 2025,
-        "start_month": 1,
-        "start_day": 1,
-        "start_time": "10:00",
-        "end_year": 2050,
-        "end_month": 12,
-        "end_day": 31,
-        "end_time": "10:00",
-        "products_count": 20,
-        "products_per_row": 4,
-        "stack_products": false,
-        "show_cta": false,
-        "filter_toggle_button_background": "rgba(0,0,0,0)",
-        "filter_toggle_active_button_background": "rgba(0,0,0,0)",
-        "filter_toggle_button_color": "rgba(0,0,0,0)",
-        "button_background": "#ff3f46",
-        "button_text_color": "rgba(0,0,0,0)",
-        "subheading": "OHNE SCHADSTOFFE",
-        "title": "Bio-Periodenprodukte",
-        "content": "<p>Periodenprodukte ohne Schadstoffe, direkt nach Hause bestellen oder bequemim Abo liefern lassen.</p>",
-        "section_header_heading_size": "h2",
-        "section_header_highest_hierarchy": false,
-        "section_header_short_description_font_size": "medium",
-        "section_container_width": "md",
-        "background": "#ffe6e6",
         "text_color": "#1a1a1a",
         "heading_color": "#1a1a1a",
         "section_subheading_color": "#1a1a1a",
@@ -1247,29 +853,6 @@
         "text_color": "#1a1a1a"
       }
     },
-    "image_with_text_overlay_DfjkWC": {
-      "type": "image-with-text-overlay",
-      "disabled": true,
-      "settings": {
-        "reveal_on_scroll": true,
-        "section_height": "small",
-        "image": "shopify://shop_images/Header_Web_LP_Seamless_2.jpg",
-        "subheading": "Mix & Match",
-        "title": "Bis zu -15% Rabatt",
-        "content": "<p>Beim Kauf von <strong>min. 3</strong> <strong>Period Pantys </strong>oder <strong>Daysics®</strong>.</p>",
-        "button_text": "Jetzt shoppen",
-        "button_link": "shopify://collections/periodenunterwaesche-online-kaufen",
-        "link_style": "button",
-        "background_type": "full_width",
-        "text_width": "small",
-        "text_position": "middle_center",
-        "text_color": "#ffffff",
-        "button_background": "#ff3f46",
-        "button_text_color": "#ffffff",
-        "overlay_color": "#000000",
-        "overlay_opacity": 10
-      }
-    },
     "16437981148797b20d": {
       "type": "manual-blog-posts",
       "blocks": {
@@ -1349,28 +932,18 @@
     }
   },
   "order": [
-    "marquee_fyi6zy",
     "countdown_timer_GHVfQE",
     "slideshow",
-    "slideshow_NWyTdV",
-    "pagefly_section_GqP4q7",
     "expandable_slides_pyxR7e",
-    "pagefly_section_3W3yCx",
     "b66cd4b6-3bfe-4536-9245-9a832c26dd53",
-    "trustpilot_jPhAbM",
     "section_header_7B8RTm",
     "featured-collections",
     "featured_collections_ckPfxX",
-    "section_header_JywTXG",
-    "170722167165180778",
     "section_header_n3KcgW",
     "1643021395d0418d16",
     "image-with-text",
-    "featured_collections_LbTHbP",
     "featured_collections_zHdDiU",
-    "featured_collections_BT7iep",
     "collection_list_UMPBBj",
-    "image_with_text_overlay_DfjkWC",
     "16437981148797b20d",
     "54f1addf-3e2e-4265-bf77-7c4760e46a34"
   ]

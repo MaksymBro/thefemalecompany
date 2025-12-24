@@ -14,7 +14,8 @@ NOTE TO DEVELOPERS: welcome to Focal theme! We hope that you will enjoy editing 
     {%- assign direction = 'rtl' -%}
 {%- endcase -%}
 <html class="no-js" lang="{{ request.locale.iso_code }}" dir="{% comment %}ly_dir_replace_for_[{{ direction }}]_begin{% endcomment %}{%- assign language_code = '_' | append: request.locale.iso_code -%}{%- if '_ar_ha_he_fa_ks_ku_ps_ur_yi' contains language_code -%}{%- assign dir = 'rtl' -%}{%- else -%}{%- capture dir -%}{{ direction }}{%- endcapture -%}{%- endif -%}{{- dir -}}{% comment %}ly_dir_replace_end{% endcomment %}">
-  <head>{% render "load-tracify" %}    
+  <head>
+    {% render "load-tracify" %}
     {% capture modified_content_for_header %}
       {{ content_for_header }}
     {% endcapture %}

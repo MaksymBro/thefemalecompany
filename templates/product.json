@@ -178,6 +178,7 @@
       "settings": {
         "subheading": "",
         "title": "Dir könnte auch gefallen",
+        "all_heads_p": false,
         "recommendations_count": 10,
         "background": "rgba(0,0,0,0)",
         "text_color": "rgba(0,0,0,0)"
@@ -255,6 +256,8 @@
       ],
       "settings": {
         "show_arrows": true,
+        "text_subheading": "",
+        "text_heading": "",
         "subheading": "Aus der Community",
         "title": "Nice bun, hun!",
         "section_header_short_description": "",

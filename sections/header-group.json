@@ -91,46 +91,6 @@
         "button_text_color": "#cc0807"
       }
     },
-    "announcement_bar_MUjQJa": {
-      "type": "announcement-bar",
-      "blocks": {
-        "message_L8VwCQ": {
-          "type": "message",
-          "settings": {
-            "text": "<p><strong>Gratis Wetbag 🎁</strong> <br/>Füge 90€ zu deinem Warenkorb hinzu, um einen gratis Wetbag zu erhalten.</p>",
-            "text_html": "",
-            "learn_more_text": "Learn more",
-            "annoucement_link": "",
-            "title": "",
-            "content": "",
-            "button_text": "",
-            "button_link": ""
-          }
-        }
-      },
-      "block_order": [
-        "message_L8VwCQ"
-      ],
-      "disabled": true,
-      "settings": {
-        "start_year": 2025,
-        "start_month": 10,
-        "start_day": 19,
-        "start_time": "10:00",
-        "end_year": 2034,
-        "end_month": 11,
-        "end_day": 21,
-        "end_time": "18:00",
-        "announcement_bar_position": "sticky",
-        "announcement_text_size": "normal",
-        "autoplay": true,
-        "cycle_speed": 7,
-        "background": "#cc0807",
-        "text_color": "#ffffff",
-        "button_background": "#ffffff",
-        "button_text_color": "#cc0807"
-      }
-    },
     "countdown_timer_7HKfbz": {
       "type": "countdown-timer",
       "blocks": {
@@ -440,7 +400,6 @@
   },
   "order": [
     "announcement-bar",
-    "announcement_bar_MUjQJa",
     "countdown_timer_7HKfbz",
     "countdown_timer_Y3rjBd",
     "header"
