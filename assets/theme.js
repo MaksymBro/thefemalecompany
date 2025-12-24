@@ -411,8 +411,8 @@
     observer.observe(targetElement);
   }
 
-  if (window._template.name === "product")  {
-   addViewPdpBlwCtaRecoAnalyticEvent();
+  if (window._template?.name === "product") {
+    addViewPdpBlwCtaRecoAnalyticEvent();
   }
 
   function addClickPdpBlwCraRecoAnalyticEvent() {
@@ -1133,11 +1133,11 @@
   var ShopifyData = class {
     /**
      * Build the URL from the configuration.
-     * 
+     *
      * @private
      * @param {string} url The URL.
      * @param {{ params: Object.<string, string|number> }} config The request configuration.
-     * 
+     *
      * @returns {string} The URL.
      */
     static buildUrl(url, config) {
@@ -1146,11 +1146,11 @@
 
     /**
      * Fetch data and throw an error if the response is not ok.
-     * 
-     * @param {RequestInfo|URL} input 
-     * @param {RequestInit|undefined} init 
-     * 
-     * @returns 
+     *
+     * @param {RequestInfo|URL} input
+     * @param {RequestInit|undefined} init
+     *
+     * @returns
      */
     static async fetchWithHTTPErrors(input, init = undefined) {
       const response = await fetch(input, init);
@@ -1158,13 +1158,13 @@
       if (!response.ok) {
         throw new Error(`HTTP Error: ${response.status} ${response.statusText} on request URL ${response.url}`);
       }
-      
+
       return response;
     }
 
     /**
      * Get cart data from the Shopify cart endpoint.
-     * 
+     *
      * @param {boolean} displayError Whether to display an error message if the cart cannot be fetched.
      * @param {{ params: Object.<string, string|number> }} config The request configuration.
      *
@@ -1187,7 +1187,7 @@
 
     /**
      * Get collection data from the Shopify collection endpoint.
-     * 
+     *
      * @param {string} handle The collection handle.
      * @param {boolean} displayError Whether to display an error message if the collection cannot be fetched.
      * @param {{ params: Object.<string, string|number> }} config The request configuration.
@@ -1210,11 +1210,11 @@
 
     /**
      * Get product data for a certain collection from the Shopify product endpoint.
-     * 
+     *
      * @param {*} handle The collection handle.
      * @param {boolean} displayError Whether to display an error message if the collection cannot be fetched.
      * @param {{ params: Object.<string, string|number> }} config The request configuration.
-     * 
+     *
      * @returns {Promise<{id: string, title: string, handle: string, body_html: string, published_at: string, created_at: string, updated_at: string, vendor: string, product_type: string, tags: string[], images: {id: number, created_at: string, position: number, updated_at: string, product_id: number, variant_ids: number[], src: string, width: number, height: number}[], variants: {id: string, title: string, option1: string|null option2: string|null option3: string|null sku: string, requires_shipping: boolean, taxable: boolean, featured_image: unknown, available: boolean, price: string, grams: number, compare_at_price: string|null, position: number, product_id: number, created_at: string, updated_at: string}[], options: {name: string, position: number, values: string[]}[]}[]>}
      */
     static async getCollectionProducts(handle, displayError = false, config = { params: { limit: 100 } }) {
@@ -1234,11 +1234,11 @@
 
     /**
      * Get product data from the Shopify product endpoint.
-     * 
+     *
      * @param {string} handle The product handle.
      * @param {boolean} displayError Whether to display an error message if the product cannot be fetched.
      * @param {{ params: Object.<string, string|number> }} config The request configuration.
-     * 
+     *
      * @returns {Promise<{id: number, title: string, handle: string, description: string, published_at: string, created_at: string, vendor: string, type: string, tags: string[], price: number, price_min: number, price_max: number, available: boolean, price_varies: boolean, compare_at_price: number|null, compare_at_price_min: number, compare_at_price_max: number, compare_at_price_varies: boolean, featured_image: string, url: string, requires_selling_plan: boolean, selling_plan_groups: unknown, variants: {id: number, title: string, option1: string|null option2: string|null, option3: string|null, sku: string, requires_shipping: boolean, taxable: boolean, featured_image: string|null, available: boolean, name: string, public_title: string, options: string[], price: number, weight: number, compare_at_price: number|null, inventory_management: string, barcode: string, requires_selling_plan: boolean, selling_plan_allocations: unknown[]}[], images: string[], options: {name: string, position: number, values: string[]}[], media: {alt: string|null, id: number, position: number, preview_image: {aspect_ratio: number, height: number, width: number, src: string}, aspect_ratio: number, height: number, media_type: string, src: string, width: number}[]}>}
      */
     static async getProduct(handle, displayError = false, config = { params: {} }) {
@@ -2825,13 +2825,13 @@
     const endStock = parseInt(this.dataset.endStock);
     const textTemplate = this.dataset.textTemplate;
     const stockTextElement = this.querySelector("[data-stock-text]");
-    
+
     const startDateStr = this.dataset.debugStart;
     const endDateStr = this.dataset.debugEnd;
-    
+
     const startDate = new Date(startDateStr).getTime();
     const endDate = new Date(endDateStr).getTime();
-    
+
     console.log('Stock Countdown Debug:', {
       startDateStr,
       endDateStr,
@@ -2844,9 +2844,9 @@
 
     const updateStock = () => {
       const now = Date.now();
-      
+
       let currentStock;
-      
+
       if (now >= endDate) {
         currentStock = endStock;
         clearInterval(timer);
@@ -2857,20 +2857,20 @@
         const totalDuration = endDate - startDate;
         const elapsed = now - startDate;
         const progress = Math.min(Math.max(elapsed / totalDuration, 0), 1);
-        
+
         const stockRange = startStock - endStock;
         currentStock = Math.max(
           Math.round(startStock - (stockRange * progress)),
           endStock
         );
       }
-      
+
       const displayText = textTemplate.replace(/\$\$stock\$\$/g, currentStock);
       stockTextElement.innerHTML = displayText;
     };
 
     updateStock();
-    
+
     const timer = setInterval(updateStock, 1000);
   }
 };
@@ -3262,7 +3262,7 @@ window.customElements.define("stock-countdown", StockCountdown);
         this.firstElementChild.addEventListener("pause", () => {
           this.dispatchEvent(new CustomEvent("video:paused", { bubbles: true }));
         });
-        
+
         this.hasLoaded = true;
       } else {
         this.addEventListener("click", this.play.bind(this), { once: true });
@@ -4812,7 +4812,7 @@ window.customElements.define("stock-countdown", StockCountdown);
           }
       }
     }
-    
+
     async _staggerProductsApparition() {
       this.productItems.forEach((item) => item.style.opacity = 0);
       await this.untilVisible({ threshold: this.clientHeight > 0 ? Math.min(50 / this.clientHeight, 1) : 0 });
@@ -4821,7 +4821,7 @@ window.customElements.define("stock-countdown", StockCountdown);
 
     /**
      * Filter the products.
-     * 
+     *
      * @param {*} filters The filter object.
      */
     async filterProducts(filters) {
@@ -4839,7 +4839,7 @@ window.customElements.define("stock-countdown", StockCountdown);
       const optionFilters = cleanedFilters?.options;
       Object.entries(optionFilters).forEach(([optionName, values]) => {
         const valuesStrings = values.map((value) => value.toString());
-      
+
         this.productItems.forEach((productItem) => {
           const option = productItem.product.options.find((option) => option.name === optionName);
 
@@ -4847,7 +4847,7 @@ window.customElements.define("stock-countdown", StockCountdown);
             if (this.hideMissingOption) {
               productItem.setFiltered(true);
             }
-            
+
             return;
           }
 
@@ -4860,18 +4860,18 @@ window.customElements.define("stock-countdown", StockCountdown);
           }
         });
       });
-      
+
       this.updateFilterControls();
     }
 
     /**
      * Get the filter configuration from the DOM.
-     * 
+     *
      * @returns The filter configuration.
      */
     getFilterConfiguration() {
       const filters = JSON.parse(JSON.stringify(this.baseFilters));
-      
+
       this.filterContainer.querySelectorAll(".product-list__filter-option-list").forEach((option) => {
         const optionName = option.dataset.optionName;
         const values = Array.from(option.querySelectorAll(".product-list__filter-option-list-item-checkbox")).filter((checkbox) => checkbox.checked).map((checkbox) => checkbox.dataset.optionValue);
@@ -4888,7 +4888,7 @@ window.customElements.define("stock-countdown", StockCountdown);
       await this.mountProductData();
 
       this.productItems.forEach((productItem) => {
-        this.filterableOptions.forEach((optionName) => {          
+        this.filterableOptions.forEach((optionName) => {
           const option = productItem.product.options.find((option) => option.name === optionName);
 
           if(!option) {
@@ -5050,7 +5050,7 @@ window.customElements.define("stock-countdown", StockCountdown);
 
       this.productItems.forEach((productItem) => {
         productItem.product = this.collectionProducts.find((product) => product.id.toString() === productItem.productId.toString());
-        
+
         if(!productItem.product) {
           throw new Error(`Product with ID ${productItem.productId} not found in collection ${this.collectionHandle}.`);
         }
@@ -5934,7 +5934,7 @@ window.customElements.define("stock-countdown", StockCountdown);
   };
   if (!window.customElements.get("gift-card-recipient")) {
     window.customElements.define("gift-card-recipient", GiftCardRecipient);
-  }  
+  }
 
   // js/custom-element/section/product/image-zoom.js
   var PhotoSwipeUi = class {
@@ -6522,9 +6522,9 @@ window.customElements.define("stock-countdown", StockCountdown);
       if (!productLabelList) {
         return;
       }
-    
+
       const hideSavingsLabel = productLabelList.dataset.hideSavingsLabel === "true";
-    
+
       if (!variant) {
         productLabelList.innerHTML = "";
       } else {
@@ -7415,8 +7415,8 @@ window.customElements.define("stock-countdown", StockCountdown);
 
     /**
      * Set the sold out state of the product item. Usually greys out the product.
-     * 
-     * @param {boolean} soldOut 
+     *
+     * @param {boolean} soldOut
      */
     setSoldOut(soldOut) {
       this.isSoldOut = soldOut;
@@ -7425,8 +7425,8 @@ window.customElements.define("stock-countdown", StockCountdown);
 
     /**
      * Set the filtered state of the product item. Usually hides the product.
-     * 
-     * @param {boolean} filtered 
+     *
+     * @param {boolean} filtered
      */
     setFiltered(filtered) {
       this.isFiltered = filtered;
@@ -7710,7 +7710,7 @@ window.customElements.define("stock-countdown", StockCountdown);
                 }
               });
             }
-            
+
             this.querySelector(".drawer__content").scrollTop = 0;
             if (!MediaFeatures.prefersReducedMotion()) {
               const lineItems = Array.from(this.querySelectorAll(".line-item")), recommendationsInner = this.querySelector(".mini-cart__recommendations-inner"), bottomBar = this.querySelector(".drawer__footer"), effects = [];
@@ -8064,7 +8064,7 @@ window.customElements.define("stock-countdown", StockCountdown);
         this.loadDiscountPrefixes(),
         this.getCachedCart()
       ]);
-      
+
       document.documentElement.addEventListener("cart:refresh", this.updateAllShowcases.bind(this));
       document.documentElement.addEventListener("cart:updated", () => {
         this.cartCache = null;
@@ -8075,7 +8075,7 @@ window.customElements.define("stock-countdown", StockCountdown);
           this.updateAllShowcases();
         });
       });
-      
+
       // Use requestAnimationFrame for smoother rendering
       requestAnimationFrame(() => {
         this.updateAllShowcases();
@@ -8086,7 +8086,7 @@ window.customElements.define("stock-countdown", StockCountdown);
       if (this.cartCache) {
         return this.cartCache;
       }
-      
+
       if (!this.cartFetchPromise) {
         this.cartFetchPromise = ShopifyData.getCart(false).then(cart => {
           this.cartCache = cart;
@@ -8094,7 +8094,7 @@ window.customElements.define("stock-countdown", StockCountdown);
           return cart;
         });
       }
-      
+
       return this.cartFetchPromise;
     }
 
@@ -8102,7 +8102,7 @@ window.customElements.define("stock-countdown", StockCountdown);
       try {
         if (window.themeVariables?.discountPrefixes) {
           this.discountPrefixes = window.themeVariables.discountPrefixes;
-          
+
           const prefixesCopy = { ...this.discountPrefixes };
           Object.keys(prefixesCopy).forEach(prefix => {
             const prefixWithoutUnderscore = prefix.replace('_', '');
@@ -8110,10 +8110,10 @@ window.customElements.define("stock-countdown", StockCountdown);
               this.discountPrefixes[prefixWithoutUnderscore] = prefixesCopy[prefix];
             }
           });
-          
+
           return;
         }
-        
+
         const discountsData = document.querySelector('[data-discount-prefixes]');
         if (discountsData) {
           this.discountPrefixes = JSON.parse(discountsData.getAttribute('data-discount-prefixes'));
@@ -8134,12 +8134,12 @@ window.customElements.define("stock-countdown", StockCountdown);
       try {
         const cart = await this.getCachedCart();
         const discountCode = this.getDiscountCodeFromCart(cart);
-        
+
         // Batch updates using requestAnimationFrame for better performance
-        const updates = Array.from(showcases).map(showcase => 
+        const updates = Array.from(showcases).map(showcase =>
           this.updateShowcase(showcase, discountCode, cart)
         );
-        
+
         await Promise.all(updates);
       } catch (e) {
         console.warn('[DiscountShowcase] Could not update showcases:', e);
@@ -8170,12 +8170,12 @@ window.customElements.define("stock-countdown", StockCountdown);
       if (discountCode) {
         const prefix = this.extractPrefix(discountCode);
         discountPercentage = await this.getDiscountPercentageForPrefix(prefix);
-        
+
         if (discountPercentage > 0) {
           activeCode = discountCode;
         }
       }
-      
+
       if (!activeCode && fallbackCode && fallbackCode.trim() !== '' && fallbackPercentage > 0) {
         activeCode = fallbackCode;
         discountPercentage = fallbackPercentage;
@@ -8205,16 +8205,16 @@ window.customElements.define("stock-countdown", StockCountdown);
         const mobilePriceElement = showcaseElement.querySelector('[data-discount-price-mobile]');
         const mobilePrefixElement = showcaseElement.querySelector('[data-discount-text-prefix-mobile]');
         const mobileCodeElement = showcaseElement.querySelector('[data-discount-code-mobile]');
-        
+
         if (mobilePriceElement) {
           mobilePriceElement.textContent = formattedPrice;
         }
-        
+
         if (mobilePrefixElement) {
           const withCodeText = window.themeVariables?.strings?.discountWithCode || 'with your code';
           mobilePrefixElement.textContent = withCodeText;
         }
-        
+
         if (mobileCodeElement) {
           mobileCodeElement.textContent = activeCode;
         }
@@ -8227,15 +8227,15 @@ window.customElements.define("stock-countdown", StockCountdown);
         const codeButton = showcaseElement.querySelector('[data-discount-code-button]');
         const copyIcon = showcaseElement.querySelector('[data-discount-copy-icon]');
         const appliedIcon = showcaseElement.querySelector('[data-discount-applied-icon]');
-        
+
         if (textPrefixElement && codeElement) {
           textPrefixElement.textContent = `${withCodeText} `;
           codeElement.textContent = activeCode;
-          
+
           if (isPDP && codeButton) {
-            const isCodeApplied = discountCode && activeCode && 
+            const isCodeApplied = discountCode && activeCode &&
                                   activeCode.toUpperCase() === discountCode.toUpperCase();
-            
+
             if (isCodeApplied) {
               codeButton.classList.add('is-applied');
               if (copyIcon) copyIcon.style.display = 'none';
@@ -8248,10 +8248,10 @@ window.customElements.define("stock-countdown", StockCountdown);
               if (appliedIcon) appliedIcon.style.display = 'none';
               codeButton.style.cursor = 'pointer';
               codeButton.setAttribute('aria-label', 'Copy discount code');
-              
+
               const newButton = codeButton.cloneNode(true);
               codeButton.parentNode.replaceChild(newButton, codeButton);
-              
+
               newButton.addEventListener('click', (e) => {
                 e.preventDefault();
                 e.stopPropagation();
@@ -8329,7 +8329,7 @@ window.customElements.define("stock-countdown", StockCountdown);
 
     copyCodeToClipboard(code) {
       if (!code) return;
-      
+
       if (navigator.clipboard && navigator.clipboard.writeText) {
         navigator.clipboard.writeText(code).then(() => {
           if (window.toastr) {
@@ -8354,7 +8354,7 @@ window.customElements.define("stock-countdown", StockCountdown);
       document.body.appendChild(textArea);
       textArea.focus();
       textArea.select();
-      
+
       try {
         const successful = document.execCommand('copy');
         if (successful && window.toastr) {
@@ -8363,7 +8363,7 @@ window.customElements.define("stock-countdown", StockCountdown);
       } catch (err) {
         console.error('Please copy manually:', err);
       }
-      
+
       document.body.removeChild(textArea);
     }
 
@@ -8376,7 +8376,7 @@ window.customElements.define("stock-countdown", StockCountdown);
   } else {
     window.discountShowcaseInstance = new DiscountShowcase();
   }
-  
+
   // Helper function to check loaded prefixes
   window.checkDiscountPrefixes = function() {
     if (window.discountShowcaseInstance) {
