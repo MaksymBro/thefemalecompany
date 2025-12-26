@@ -363,3 +363,8 @@ ig-shipping-progress-container .ig-dp-container {
   top: -0.6em;
   right: 0.2em;
 }
+
+[data-added-button-more]~.button[data-show-more-btn]{
+  margin: 2em;
+  float: right;
+}
