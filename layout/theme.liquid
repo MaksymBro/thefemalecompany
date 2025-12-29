@@ -149,6 +149,10 @@ NOTE TO DEVELOPERS: welcome to Focal theme! We hope that you will enjoy editing 
             window._klOnsite.push(['openForm', '{{- settings.pdp_coming_soon_signup_id -}}']);
           });
         })
+        window.translation = {
+          showLess: '{{ 'collection.general.show_less' | t }}',
+          showMore: '{{ 'collection.general.show_more' | t }}'
+        }
       </script>
 
       {%- if settings.show_upsell_popup -%}

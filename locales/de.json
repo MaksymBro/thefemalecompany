@@ -186,6 +186,8 @@
   },
   "collection": {
     "general": {
+      "show_less": "See less",
+      "show_more": "See more",
       "filters": "Filter",
       "show_filters": "Filter anzeigen",
       "all_products": "Alle Produkte",
