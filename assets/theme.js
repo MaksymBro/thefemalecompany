@@ -2820,62 +2820,61 @@
   window.customElements.define("countdown-timer", CountdownTimer);
 
   var StockCountdown = class extends CustomHTMLElement {
-  connectedCallback() {
-    const startStock = parseInt(this.dataset.startStock);
-    const endStock = parseInt(this.dataset.endStock);
-    const textTemplate = this.dataset.textTemplate;
-    const stockTextElement = this.querySelector("[data-stock-text]");
-    
-    const startDateStr = this.dataset.debugStart;
-    const endDateStr = this.dataset.debugEnd;
-    
-    const startDate = new Date(startDateStr).getTime();
-    const endDate = new Date(endDateStr).getTime();
-    
-    console.log('Stock Countdown Debug:', {
-      startDateStr,
-      endDateStr,
-      startDate: new Date(startDate),
-      endDate: new Date(endDate),
-      now: new Date(),
-      startStock,
-      endStock
-    });
+    connectedCallback() {
+      const startStock = parseInt(this.dataset.startStock);
+      const endStock = parseInt(this.dataset.endStock);
+      const textTemplate = this.dataset.textTemplate;
+      const stockTextElement = this.querySelector("[data-stock-text]");
+      
+      const startDateStr = this.dataset.debugStart;
+      const endDateStr = this.dataset.debugEnd;
+      
+      const startDate = new Date(startDateStr).getTime();
+      const endDate = new Date(endDateStr).getTime();
+      
+      console.log('Stock Countdown Debug:', {
+        startDateStr,
+        endDateStr,
+        startDate: new Date(startDate),
+        endDate: new Date(endDate),
+        now: new Date(),
+        startStock,
+        endStock
+      });
 
-    const updateStock = () => {
-      const now = Date.now();
-      
-      let currentStock;
-      
-      if (now >= endDate) {
-        currentStock = endStock;
-        clearInterval(timer);
-        console.log('Stock countdown ended - showing end stock:', endStock);
-      } else if (now < startDate) {
-        currentStock = startStock;
-      } else {
-        const totalDuration = endDate - startDate;
-        const elapsed = now - startDate;
-        const progress = Math.min(Math.max(elapsed / totalDuration, 0), 1);
+      const updateStock = () => {
+        const now = Date.now();
         
-        const stockRange = startStock - endStock;
-        currentStock = Math.max(
-          Math.round(startStock - (stockRange * progress)),
-          endStock
-        );
-      }
+        let currentStock;
+        
+        if (now >= endDate) {
+          currentStock = endStock;
+          clearInterval(timer);
+          console.log('Stock countdown ended - showing end stock:', endStock);
+        } else if (now < startDate) {
+          currentStock = startStock;
+        } else {
+          const totalDuration = endDate - startDate;
+          const elapsed = now - startDate;
+          const progress = Math.min(Math.max(elapsed / totalDuration, 0), 1);
+          
+          const stockRange = startStock - endStock;
+          currentStock = Math.max(
+            Math.round(startStock - (stockRange * progress)),
+            endStock
+          );
+        }
+        
+        const displayText = textTemplate.replace(/\$\$stock\$\$/g, currentStock);
+        stockTextElement.innerHTML = displayText;
+      };
+
+      updateStock();
       
-      const displayText = textTemplate.replace(/\$\$stock\$\$/g, currentStock);
-      stockTextElement.innerHTML = displayText;
-    };
-
-    updateStock();
-    
-    const timer = setInterval(updateStock, 1000);
-  }
-};
-window.customElements.define("stock-countdown", StockCountdown);
-
+      const timer = setInterval(updateStock, 1000);
+    }
+  };
+  window.customElements.define("stock-countdown", StockCountdown);
 
   // js/custom-element/ui/price-range.js
   var PriceRange = class extends HTMLElement {
@@ -8053,6 +8052,7 @@ window.customElements.define("stock-countdown", StockCountdown);
   var DiscountShowcase = class {
     constructor() {
       this.discountPrefixes = null;
+      this.discountRules = null;
       this.cartCache = null;
       this.cartFetchPromise = null;
       this.init();
@@ -8100,9 +8100,20 @@ window.customElements.define("stock-countdown", StockCountdown);
 
     async loadDiscountPrefixes() {
       try {
-        if (window.themeVariables?.discountPrefixes) {
-          this.discountPrefixes = window.themeVariables.discountPrefixes;
-          
+        // Prefer the structured rules if available, but keep legacy prefixes for backwards compatibility
+        if (window.themeVariables?.discountRules || window.themeVariables?.discountPrefixes) {
+          this.discountRules = window.themeVariables.discountRules || {};
+          this.discountPrefixes = window.themeVariables.discountPrefixes || {};
+
+          // Ensure prefixes includes entries from rules (percentage value)
+          Object.keys(this.discountRules || {}).forEach((prefix) => {
+            const rule = this.discountRules[prefix];
+            if (rule && typeof rule.percentage !== 'undefined' && !this.discountPrefixes[prefix]) {
+              this.discountPrefixes[prefix] = rule.percentage;
+            }
+          });
+
+          // Also add fallback without underscore
           const prefixesCopy = { ...this.discountPrefixes };
           Object.keys(prefixesCopy).forEach(prefix => {
             const prefixWithoutUnderscore = prefix.replace('_', '');
@@ -8110,7 +8121,7 @@ window.customElements.define("stock-countdown", StockCountdown);
               this.discountPrefixes[prefixWithoutUnderscore] = prefixesCopy[prefix];
             }
           });
-          
+
           return;
         }
         
@@ -8121,10 +8132,29 @@ window.customElements.define("stock-countdown", StockCountdown);
         }
 
         this.discountPrefixes = {};
+        this.discountRules = {};
       } catch (e) {
         console.warn('[DiscountShowcase] Could not load discount prefixes:', e);
         this.discountPrefixes = {};
+        this.discountRules = {};
       }
+    }
+
+    async getRuleForPrefix(prefix) {
+      if (!this.discountRules) {
+        await this.loadDiscountPrefixes();
+      }
+
+      if (this.discountRules && this.discountRules[prefix]) {
+        return this.discountRules[prefix];
+      }
+
+      const prefixWithoutUnderscore = prefix.replace('_', '');
+      if (this.discountRules && this.discountRules[prefixWithoutUnderscore]) {
+        return this.discountRules[prefixWithoutUnderscore];
+      }
+
+      return null;
     }
 
     async updateAllShowcases() {
@@ -8169,16 +8199,65 @@ window.customElements.define("stock-countdown", StockCountdown);
 
       if (discountCode) {
         const prefix = this.extractPrefix(discountCode);
-        discountPercentage = await this.getDiscountPercentageForPrefix(prefix);
-        
+
+        // Prefer structured rule (collection-based info) when present
+        const rule = await this.getRuleForPrefix(prefix);
+        if (rule) {
+          // If rule is collection-based, ensure product is part of the target collection
+          if (rule.collection_based) {
+            const prodCollectionsAttr = showcaseElement.getAttribute('data-product-collections');
+            let productCollections = [];
+            try {
+              productCollections = prodCollectionsAttr ? JSON.parse(prodCollectionsAttr) : [];
+            } catch (err) {
+              productCollections = [];
+            }
+
+            const targetHandle = rule.discounted_collection_handle;
+            if (targetHandle && Array.isArray(productCollections) && productCollections.indexOf(targetHandle) === -1) {
+              discountPercentage = 0; // not applicable for this product
+            } else {
+              discountPercentage = rule.percentage || 0;
+            }
+          } else {
+            discountPercentage = rule.percentage || 0;
+          }
+        } else {
+          // Fallback to numeric prefixes mapping
+          discountPercentage = await this.getDiscountPercentageForPrefix(prefix);
+        }
+
         if (discountPercentage > 0) {
           activeCode = discountCode;
         }
       }
       
       if (!activeCode && fallbackCode && fallbackCode.trim() !== '' && fallbackPercentage > 0) {
-        activeCode = fallbackCode;
-        discountPercentage = fallbackPercentage;
+        // Respect optional fallback collection set in theme settings
+        const fallbackCollectionHandle = window.themeVariables?.settings?.fallbackDiscountCollectionHandle || null;
+
+        if (!fallbackCollectionHandle) {
+          // No restriction, apply fallback globally
+          activeCode = fallbackCode;
+          discountPercentage = fallbackPercentage;
+        } else {
+          // Check if product belongs to the configured fallback collection
+          const prodCollectionsAttr = showcaseElement.getAttribute('data-product-collections');
+          let productCollections = [];
+          try {
+            productCollections = prodCollectionsAttr ? JSON.parse(prodCollectionsAttr) : [];
+          } catch (err) {
+            productCollections = [];
+          }
+
+          if (Array.isArray(productCollections) && productCollections.indexOf(fallbackCollectionHandle) !== -1) {
+            activeCode = fallbackCode;
+            discountPercentage = fallbackPercentage;
+          } else {
+            // Fallback not applicable for this product
+            discountPercentage = 0;
+          }
+        }
       }
 
       if (!activeCode || discountPercentage === 0) {

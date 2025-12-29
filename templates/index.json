@@ -72,6 +72,34 @@
     "slideshow": {
       "type": "slideshow",
       "blocks": {
+        "image_ccGbEF": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Frame_1707480195_9.png",
+            "mobile_image": "shopify://shop_images/Frame_73_1.png",
+            "text_position": "bottom_left",
+            "subheading": "",
+            "title": "",
+            "title_h1": false,
+            "subtitle": "",
+            "subtitle_html": "",
+            "button_1_text": "zum Wintersale",
+            "button_1_link": "shopify://collections/all-2",
+            "button_2_text": "",
+            "button_2_link": "",
+            "heading_font_family": "circular",
+            "heading_color": "#ffffff",
+            "text_color": "#ffffff",
+            "button_background": "#ffffff",
+            "button_text_color": "#cc0807",
+            "overlay_color": "#000000",
+            "overlay_opacity": 0,
+            "schedule_publishing": true,
+            "publish_date": "26.12.2025 00:01",
+            "schedule_unpublishing": true,
+            "unpublish_date": "31.12.2025 23:59"
+          }
+        },
         "image_RzLQqU": {
           "type": "image",
           "settings": {
@@ -156,35 +184,6 @@
             "unpublish_date": "01.01.2019 00:00"
           }
         },
-        "image_RUcer8": {
-          "type": "image",
-          "disabled": true,
-          "settings": {
-            "image": "shopify://shop_images/Header_Web__1_4fb3c79f-2726-44ba-a231-34a0a31c3174.jpg",
-            "mobile_image": "shopify://shop_images/Header_mobile_1_93062fc1-aa52-4e10-9d8c-a70cf280ec2a.jpg",
-            "text_position": "bottom_left",
-            "subheading": "",
-            "title": "Ohne Auslaufen durch den Tag - wild & elegant",
-            "title_h1": false,
-            "subtitle": "<p>Neues Premium-Update: Leo-Design trifft auf softes Mesh mit maximalem Schutz durch Fluid Protection® und Super Dry®. Jetzt auch als Everyday Underwear ohne Sauglage.</p>",
-            "subtitle_html": "",
-            "button_1_text": "Zu der Kollektion",
-            "button_1_link": "https://buy.thefemalecompany.com/collections/launch-kollektion",
-            "button_2_text": "",
-            "button_2_link": "",
-            "heading_font_family": "circular",
-            "heading_color": "#ffffff",
-            "text_color": "#ffffff",
-            "button_background": "#cc0807",
-            "button_text_color": "#ffffff",
-            "overlay_color": "#000000",
-            "overlay_opacity": 11,
-            "schedule_publishing": false,
-            "publish_date": "01.01.2019 00:00",
-            "schedule_unpublishing": false,
-            "unpublish_date": "01.01.2019 00:00"
-          }
-        },
         "image_qtVQKR": {
           "type": "image",
           "disabled": true,
@@ -216,10 +215,10 @@
         }
       },
       "block_order": [
+        "image_ccGbEF",
         "image_RzLQqU",
         "image_tbjbBK",
         "image_gaDgj7",
-        "image_RUcer8",
         "image_qtVQKR"
       ],
       "settings": {

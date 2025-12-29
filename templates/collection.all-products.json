@@ -107,11 +107,10 @@
     },
     "rich_text_aakhLY": {
       "type": "rich-text",
-      "disabled": true,
       "name": "Rich text",
       "settings": {
-        "subheading": "",
-        "title": "20% Rabatt auf ALLES!",
+        "subheading": "Unser Wintersale mit",
+        "title": "25% EXTRA Rabatt",
         "content": "",
         "button_text": "",
         "button_link": "",
@@ -120,7 +119,7 @@
         "text_position": "center",
         "text_alignment": "center",
         "background": "#ffffff",
-        "text_color": "#1a1a1a",
+        "text_color": "#cc0807",
         "button_background": "rgba(0,0,0,0)",
         "button_text_color": "rgba(0,0,0,0)"
       }

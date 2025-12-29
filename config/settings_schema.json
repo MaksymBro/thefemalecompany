@@ -902,6 +902,12 @@
         "info": "Discount percentage for the fallback code (e.g., 15 for 15%)."
       },
       {
+        "type": "collection",
+        "id": "fallback_discount_collection",
+        "label": "Fallback discount collection",
+        "info": "Optional: only show the fallback discount for products in this collection. Leave empty to apply the fallback globally."
+      },
+      {
         "type": "header",
         "content": "Product Page (PDP) Settings"
       },

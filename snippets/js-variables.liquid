@@ -20,6 +20,8 @@
       mobileZoomFactor: 2.5,
       colorSwatchConfig: {{ settings.color_swatch_config | newline_to_br | split: '<br />' | json }},
       showUpsellPopup: {{ settings.show_upsell_popup | json }}
+      ,
+      fallbackDiscountCollectionHandle: {% if settings.fallback_discount_collection != blank %}{{ settings.fallback_discount_collection.handle | json }}{% else %}null{% endif %}
     },
 
     routes: {
@@ -87,6 +89,7 @@
       discountWithCode: {{ 'collection.product.discount.with_code' | t | json }},
       discountExtraSave: {{ 'collection.product.discount.extra_save' | t: percentage: '@percentage@' | json }}
     },
+
     discountPrefixes: {
       {%- assign discount_count = 0 -%}
       {%- for discount in metaobjects.discounts.values -%}
@@ -94,6 +97,22 @@
           {%- if discount_count > 0 -%},{%- endif -%}
           "{{ discount.prefix.value }}": {{ discount.discount_percentage.value }}
           {%- assign discount_count = discount_count | plus: 1 -%}
+        {%- endif -%}
+      {%- endfor -%}
+    },
+
+    // Structured rules for discounts (keeps collection-based configuration)
+    discountRules: {
+      {%- assign rule_count = 0 -%}
+      {%- for discount in metaobjects.discounts.values -%}
+        {%- if discount.prefix.value != blank and discount.discount_percentage.value != blank -%}
+          {%- if rule_count > 0 -%},{%- endif -%}
+          "{{ discount.prefix.value }}": {
+            "percentage": {{ discount.discount_percentage.value }},
+            "collection_based": {{ discount.collection_based.value | default: false | json }},
+            "discounted_collection_handle": {% if discount.discounted_collection.value != blank %}{{ discount.discounted_collection.value.handle | json }}{% else %}null{% endif %}
+          }
+          {%- assign rule_count = rule_count | plus: 1 -%}
         {%- endif -%}
       {%- endfor -%}
     },

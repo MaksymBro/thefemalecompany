@@ -19,6 +19,7 @@
     class="discount-showcase discount-showcase--{{ context | default: 'collection' }} discount-showcase--loading"
     data-discount-showcase
     data-product-id="{{ product.id }}"
+    data-product-collections='{{ product.collections | map: "handle" | json }}'
     data-product-price="{{ product_base_price }}"
     data-fallback-code="{{ settings.fallback_discount_code | escape }}"
     data-fallback-percentage="{{ settings.fallback_discount_percentage }}"
