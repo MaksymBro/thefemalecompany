@@ -37,6 +37,7 @@
             "text_position": "middle_center",
             "subheading": "",
             "title": "New: Lace Mesh",
+            "title_h1": false,
             "subtitle": "<p>Sexy, bequem & sicher – unsere Lace Mesh Period Collection ist too hot to hide!</p>",
             "subtitle_html": "",
             "button_1_text": "",
@@ -91,6 +92,7 @@
             "text_position": "middle_center",
             "subheading": "Unser Pre-sale hat gestartet!!",
             "title": "Melde dich jetzt noch zum Early Access mit -20% Extra-Rabatt an!",
+            "title_h1": false,
             "subtitle": "",
             "subtitle_html": "",
             "button_1_text": "",
@@ -118,6 +120,7 @@
             "text_position": "middle_center",
             "subheading": "Treat yourself, pmsister",
             "title": "3+1 Deal",
+            "title_h1": false,
             "subtitle": "<p><strong>So einfach geht’s:</strong><br/>Lege <strong>vier Produkte</strong> in den Warenkorb – das <strong>günstigste gibt’s automatisch gratis</strong>! <strong>Kein Code, kein Aufwand – einfach sparen!</strong></p>",
             "subtitle_html": "",
             "button_1_text": "",
@@ -145,6 +148,7 @@
             "text_position": "middle_center",
             "subheading": "get wet, stay dry",
             "title": "FREE WETBAG",
+            "title_h1": false,
             "subtitle": "<p><strong>So einfach geht’s:</strong> <br/>Sobald dein Warenwert <strong>99 € erreicht</strong>, legen wir <strong>automatisch eine kostenlose Wetbag</strong> in dein Paket – <strong>kein Code nötig</strong></p>",
             "subtitle_html": "",
             "button_1_text": "",
@@ -172,6 +176,7 @@
             "text_position": "middle_center",
             "subheading": "worth the hype",
             "title": "2+1 Deal",
+            "title_h1": false,
             "subtitle": "<p><strong>So einfach geht’s:</strong><br/>Lege <strong>drei Produkte</strong> in den Warenkorb – das <strong>günstigste gibt’s automatisch gratis</strong>! <strong>Kein Code  – einfach sparen!</strong></p>",
             "subtitle_html": "",
             "button_1_text": "",
@@ -199,6 +204,7 @@
             "text_position": "middle_center",
             "subheading": "PMS: It's treat-myself-phase",
             "title": "-15% Rabatt",
+            "title_h1": false,
             "subtitle": "<p>Wir haben die angesagtesten Styles für euch kombiniert – und ihr spart nur jetzt 15 % auf vier exklusive Sets!</p>",
             "subtitle_html": "",
             "button_1_text": "",
@@ -295,6 +301,19 @@
         "countdown_text_color": "#ff00ff",
         "background_color": "#fff0f0",
         "text_color": "#ff00ff"
+      }
+    },
+    "custom_liquid_mXCFUH": {
+      "type": "custom-liquid",
+      "name": "Custom Liquid",
+      "settings": {
+        "subheading": "",
+        "title": "",
+        "liquid": "{{ collection.metafields.custom.html_block.value }}",
+        "add_vertical_spacing": true,
+        "background_type": "full_width",
+        "background": "rgba(0,0,0,0)",
+        "text_color": "rgba(0,0,0,0)"
       }
     },
     "countdown_timer_hUrdtD": {
@@ -528,6 +547,7 @@
     "countdown_timer_YWmtY9",
     "countdown_timer_fYmAQk",
     "rich_text_Xyg3Wq",
-    "main"
+    "main",
+    "custom_liquid_mXCFUH"
   ]
 }
