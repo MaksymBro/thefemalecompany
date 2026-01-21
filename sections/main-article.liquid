@@ -145,59 +145,6 @@
       </div>
     </div>
   </div>
-
-  <script>
-    const faqContainers = document.querySelectorAll('.bggle_faq .faq--container');
-    const scriptTag = document.createElement('script');
-
-    scriptTag.setAttribute('type', 'application/ld+json');
-
-    let schema = '';
-    let schemaContent = '';
-
-    if (faqContainers) {
-      faqContainers.forEach((faqContainer, index) => {
-        let question = faqContainer.querySelector('.bggle--question-title').innerText;
-        let answer = faqContainer.querySelector('.reponse').innerText;
-
-        if (question && answer) {
-          if (index < faqContainers.length - 1) {
-            schemaContent = schemaContent + `{
-            "@type": "Question",
-            "name": "${question.replaceAll('"', "'")}",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "${answer.replaceAll('"', "'")}"
-            }
-          },`;
-          } else {
-            schemaContent = schemaContent + `{
-            "@type": "Question",
-            "name": "${question.replaceAll('"', "'")}",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "${answer.replaceAll('"', "'")}"
-            }
-          }`;
-          }
-        }
-      });
-    }
-
-    if (schemaContent !== '') {
-      schema = `{
-        "@context": "https://schema.org",
-        "@type": "FAQPage",
-        "mainEntity": [
-          ${schemaContent}
-        ]
-      }`;
-
-      scriptTag.innerHTML = schema;
-
-      document.head.appendChild(scriptTag);
-    }
-  </script>
 </section>
 
 {% schema %}

@@ -1,0 +1,239 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "collection-banner": {
+      "type": "collection-banner",
+      "disabled": true,
+      "settings": {
+        "show_collection_image": false,
+        "show_collection_title": false,
+        "show_collection_description": false,
+        "section_height": "small",
+        "text_width": "medium",
+        "heading_font_family": "circular",
+        "image_heading_color": "#ffffff",
+        "image_text_color": "#cc0807",
+        "image_overlay_color": "#000000",
+        "image_overlay_opacity": 0,
+        "quick_links": ""
+      }
+    },
+    "slideshow_QqGfz7": {
+      "type": "slideshow",
+      "blocks": {
+        "image_Qh4Y8b": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Header_Start_Sale_Asset_6.jpg",
+            "mobile_image": "shopify://shop_images/Header_mobile_Asset.jpg",
+            "text_position": "middle_center",
+            "subheading": "Let's get this period Party started",
+            "title": "-20% Extra Rabatt",
+            "subtitle": "<p>Nur für 48 Stunden: <br/>Sichere dir zusätzliche <strong>20 % Rabatt</strong> auf unsere bereits <strong>reduzierten</strong> Produkte mit bis zu <strong>50 % Ersparnis</strong>! 🎉✨</p>",
+            "subtitle_html": "",
+            "button_1_text": "",
+            "button_1_link": "",
+            "button_2_text": "",
+            "button_2_link": "",
+            "heading_font_family": "circular",
+            "heading_color": "#ff00ff",
+            "text_color": "#ff00ff",
+            "button_background": "#ff00ff",
+            "button_text_color": "#1a1a1a",
+            "overlay_color": "#1a1a1a",
+            "overlay_opacity": 24,
+            "schedule_publishing": false,
+            "publish_date": "01.01.2019 00:00",
+            "schedule_unpublishing": false,
+            "unpublish_date": "01.01.2019 00:00"
+          }
+        }
+      },
+      "block_order": [
+        "image_Qh4Y8b"
+      ],
+      "settings": {
+        "section_height": "small",
+        "transition_type": "sweep",
+        "autoplay": true,
+        "cycle_speed": 5,
+        "background": "rgba(0,0,0,0)",
+        "show_banner_usps": false,
+        "banner_usps_link": "",
+        "show_hide_button": false,
+        "banner_usps_bg_color": "#ffffff",
+        "banner_usps_text_color": "#2abb53",
+        "banner_usps_heading": "",
+        "banner_usps_heading_1": "",
+        "banner_usps_heading_2": "",
+        "banner_usps_heading_3": "",
+        "banner_usps_heading_4": ""
+      }
+    },
+    "countdown_timer_FBR6jz": {
+      "type": "countdown-timer",
+      "blocks": {
+        "text_wH6VAt": {
+          "type": "text",
+          "settings": {
+            "text": "<p><strong>Spare zusätzlich 20 %</strong> auf unsere bereits <strong>bis zu 50 % reduzierte Produkte</strong> – aber nur bis Sonntag Abend!</p>",
+            "offset_top_desktop": 20,
+            "offset_bottom_desktop": 20,
+            "offset_top_mobile": 10,
+            "offset_bottom_mobile": 10
+          }
+        },
+        "countdown_timer_8HEpBW": {
+          "type": "countdown_timer",
+          "settings": {
+            "show_countdown_words": true,
+            "countdown_start_date": "2025-03-18",
+            "countdown_start_time_hour": "02",
+            "countdown_start_time_minute": "00",
+            "countdown_date": "2025-03-23",
+            "countdown_time_hour": "23",
+            "countdown_time_minute": "59",
+            "timer_link": "",
+            "timer_font_size_mobile": 2.5,
+            "text_font_size_mobile": 0.8,
+            "timer_font_size_desktop": 4.5,
+            "text_font_size_desktop": 1.5,
+            "offset_top_desktop": 20,
+            "offset_bottom_desktop": 20,
+            "offset_top_mobile": 10,
+            "offset_bottom_mobile": 10
+          }
+        }
+      },
+      "block_order": [
+        "text_wH6VAt",
+        "countdown_timer_8HEpBW"
+      ],
+      "settings": {
+        "countdown_text_color": "#ff00ff",
+        "background_color": "#fff0f0",
+        "text_color": "#ff00ff"
+      }
+    },
+    "main": {
+      "type": "main-collection",
+      "disabled": true,
+      "settings": {
+        "products_per_page": 50,
+        "mobile_products_per_row": "2",
+        "desktop_products_per_row": 4,
+        "show_all_colors": true,
+        "hide_from_product_title_start": "",
+        "show_sort_by": true,
+        "show_filters": true,
+        "show_filter_group_name": true,
+        "show_color_swatch": true,
+        "open_first_filter_group": false,
+        "filter_position": "drawer",
+        "promotion_position": "top",
+        "promotion_height": "small"
+      }
+    },
+    "featured_collections_d3FmqN": {
+      "type": "featured-collections",
+      "blocks": {
+        "collection_rXjhnU": {
+          "type": "collection",
+          "settings": {
+            "collection": "pms-sale-2025",
+            "label": "",
+            "button_text": "",
+            "button_url": "",
+            "hide_from_product_title_start": "",
+            "filterable_options": ""
+          }
+        }
+      },
+      "block_order": [
+        "collection_rXjhnU"
+      ],
+      "settings": {
+        "start_year": 2025,
+        "start_month": 1,
+        "start_day": 1,
+        "start_time": "10:00",
+        "end_year": 2050,
+        "end_month": 12,
+        "end_day": 31,
+        "end_time": "10:00",
+        "products_count": 50,
+        "products_per_row": 4,
+        "stack_products": true,
+        "show_cta": false,
+        "filter_toggle_button_background": "rgba(0,0,0,0)",
+        "filter_toggle_active_button_background": "rgba(0,0,0,0)",
+        "filter_toggle_button_color": "rgba(0,0,0,0)",
+        "button_background": "rgba(0,0,0,0)",
+        "button_text_color": "rgba(0,0,0,0)",
+        "subheading": "",
+        "title": "",
+        "content": "",
+        "section_header_heading_size": "h3",
+        "section_header_highest_hierarchy": false,
+        "section_header_short_description_font_size": "medium",
+        "section_container_width": "md",
+        "background": "rgba(0,0,0,0)",
+        "text_color": "rgba(0,0,0,0)",
+        "heading_color": "rgba(0,0,0,0)",
+        "section_subheading_color": "rgba(0,0,0,0)",
+        "section_heading_font_family": "default",
+        "section_spacing_top": 68,
+        "section_spacing_bottom": 68,
+        "section_spacing_different_mobile": true,
+        "section_spacing_top_mobile": 48,
+        "section_spacing_bottom_mobile": 48
+      }
+    },
+    "15f51ab6-32fd-4420-b478-524270828662": {
+      "type": "button",
+      "settings": {
+        "start_year": 2025,
+        "start_month": 1,
+        "start_day": 1,
+        "start_time": "10:00",
+        "end_year": 2050,
+        "end_month": 12,
+        "end_day": 31,
+        "end_time": "10:00",
+        "button_text": "Mehr Periodenunterwäsche",
+        "button_link": "shopify://collections/periodenunterwaesche-online-kaufen",
+        "button_link_new_window": false,
+        "button_details": "",
+        "button_style": "primary",
+        "button_outline": false,
+        "button_shadow": false,
+        "button_size": "md",
+        "button_fit": "inline",
+        "section_container_width": "md",
+        "section_text_alignment": "center",
+        "section_background_color": "rgba(0,0,0,0)",
+        "section_spacing_top": 0,
+        "section_spacing_bottom": 32,
+        "section_spacing_different_mobile": false,
+        "section_spacing_top_mobile": 0,
+        "section_spacing_bottom_mobile": 0
+      }
+    }
+  },
+  "order": [
+    "collection-banner",
+    "slideshow_QqGfz7",
+    "countdown_timer_FBR6jz",
+    "main",
+    "featured_collections_d3FmqN",
+    "15f51ab6-32fd-4420-b478-524270828662"
+  ]
+}

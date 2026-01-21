@@ -1,0 +1,473 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-product",
+      "blocks": {
+        "22970e8f-ea75-46ec-9255-8ceeb78511f8": {
+          "type": "back_in_stock_signup",
+          "settings": {
+            "klaviyo_list_id": "V6RJtz"
+          }
+        },
+        "tolstoy_shoppable_video_quiz_stories_block_NaBnQj": {
+          "type": "shopify://apps/tolstoy-shoppable-video-quiz/blocks/stories-block/06fa8282-42ff-403e-b67c-1936776aed11",
+          "settings": {
+            "publishId": "6rxclpoto801f"
+          }
+        },
+        "variant_picker": {
+          "type": "variant_picker",
+          "settings": {
+            "hide_sold_out_variants": false,
+            "selector_mode": "dropdown",
+            "color_mode": "color",
+            "size_chart_page": "{{ product.metafields.descriptors.size_guide.value }}",
+            "absorbancy_chart_page": ""
+          }
+        },
+        "f0d2cc62-543d-4ad8-bdd7-18c3d04a52c1": {
+          "type": "fulfillment_time_info",
+          "settings": {}
+        },
+        "yotpo_loyalty_rewards_product_points_module_app_block_WzPHQ6": {
+          "type": "shopify://apps/yotpo-loyalty-rewards/blocks/product-points-module-app-block/2f9660df-5018-4e02-9868-ee1fb88d6ccd",
+          "settings": {}
+        },
+        "02190bcc-9ff0-4f94-8898-2b2cb44da8ea": {
+          "type": "low_on_stock_info",
+          "settings": {}
+        },
+        "quantity_selector": {
+          "type": "quantity_selector",
+          "settings": {}
+        },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_payment_button": false,
+            "show_gift_card_recipient": false,
+            "atc_button_background": "rgba(0,0,0,0)",
+            "atc_button_text_color": "rgba(0,0,0,0)",
+            "buy_now_button_background": "rgba(0,0,0,0)",
+            "buy_now_button_text_color": "rgba(0,0,0,0)"
+          }
+        },
+        "a5ac472c-f2be-447e-bdc1-42de5d4d5016": {
+          "type": "trust",
+          "settings": {
+            "icon_1": "picto-warranty",
+            "title_1": "60 Tage Geld-zurück-Garantie",
+            "content_1": "<p>Wenn du unzufrieden bist, erhältst du bis zu <strong>60 Tage lang dein Geld von uns zurück</strong>. Folgendes ist zu beachten:</p><ol><li>Du musst die Retoure bei uns anmelden. Mehr Infos <a href=\"/policies/refund-policy\" title=\"Refund Policy\">hier</a>.</li><li>Alle Produkte die zurückerstattet werden sollen, müssen an uns zurückgesendet werden.</li><li>Die Kosten der Rücksendung müssen selbst getragen werden. Ausgenommen sind Produkte mit Mängeln.</li></ol><p></p>",
+            "nl_only_1": false,
+            "icon_2": "picto-secure-payment",
+            "title_2": "Zahle in 30 Tagen mit Pay Later by Klarna",
+            "content_2": "",
+            "nl_only_2": false,
+            "icon_3": "picto-secure-payment",
+            "title_3": "iDeal Payment",
+            "content_3": "",
+            "nl_only_3": true
+          }
+        },
+        "0d0a5849-05ff-4be4-9622-4f7c3f06ed86": {
+          "type": "complementary_products",
+          "disabled": true,
+          "settings": {
+            "title": "Empfohlene Produkte"
+          }
+        },
+        "complete_the_look_HRJVxn": {
+          "type": "complete_the_look",
+          "settings": {
+            "title": "Passend dazu:",
+            "ctl_heading_color": "#942a3b",
+            "ctl_bg_color": "#ffd4d6",
+            "ctl_products": "{{ product.metafields.promotion.complete_the_look.value }}"
+          }
+        },
+        "244be36c-36e1-4348-aa9f-0f5c48a1dab5": {
+          "type": "description_accordion",
+          "settings": {
+            "open_by_default": true,
+            "use_metafields_for_usp": true,
+            "image_1": "shopify://shop_images/Icon_Saugstark_99f4981c-44d7-49c7-b468-b6a6c2f0cfd1.svg",
+            "heading_1": "<strong>Sau(g)stark:</strong>",
+            "description_1": "Bei Aufenthalten am Wasser und kurzes Baden bei leichter bis mittelstarker Periode.",
+            "image_2": "shopify://shop_images/Icon_Thin_Layer_2.svg",
+            "heading_2": "<strong>Unsichtbares Design</strong>",
+            "description_2": "Versteckte integrierte Saugeinlage – sodass niemand erkennt, dass es sich um eine Period Panty handelt.",
+            "image_3": "shopify://shop_images/Icon_FluidProtection_1.svg",
+            "heading_3": "<strong>Fluid Protection</strong>",
+            "description_3": "gegen seitliches Auslaufen.",
+            "image_4": "shopify://shop_images/Icon_FloatingTechnology_1.svg",
+            "heading_4": "<strong>Flexi Technology</strong>",
+            "description_4": "passt sich deinem Körper flexibel an.",
+            "image_5": "shopify://shop_images/Icon_Stay_Dry_7d894b3f-a201-4d59-86ed-c530b675585d.svg",
+            "heading_5": "<strong>Reusable</strong>",
+            "description_5": "Schnelltrocknend. Nach Nutzung in die Waschmaschine. Leicht zu reinigen und zu pflegen.",
+            "image_6": "shopify://shop_images/icon__plant_3.svg",
+            "heading_6": "<strong>Non Toxic</strong>",
+            "description_6": "Garantiert & getestet. <a href=\"https://www.oeko-tex.com/de/unsere-standards/oeko-tex-standard-100\"><span style=\"text-decoration:underline\"><strong>OEKO-TEX® STANDARD 100</strong></span></a> zertifiziert."
+          }
+        },
+        "5d99506a-360d-4c5f-aa4b-422abcc9c271": {
+          "type": "content_accordion",
+          "settings": {
+            "open_by_default": false,
+            "title": "{{ product.metafields.descriptors.content_2_title.value }}",
+            "content": "<p>{{ product.metafields.descriptors.content_2_body | metafield_tag }}</p>",
+            "page": ""
+          }
+        },
+        "0c6c32fe-0356-4aeb-943d-7c7543e9bfa3": {
+          "type": "content_accordion",
+          "settings": {
+            "open_by_default": false,
+            "title": "{{ product.metafields.descriptors.content_3_title.value }}",
+            "content": "<p>{{ product.metafields.descriptors.content_3_body | metafield_tag }}</p>",
+            "page": ""
+          }
+        },
+        "6c2c03e5-473f-4aff-a17e-9f4de44cb2d5": {
+          "type": "content_accordion",
+          "settings": {
+            "open_by_default": false,
+            "title": "{{ product.metafields.descriptors.content_4_title.value }}",
+            "content": "<p>{{ product.metafields.descriptors.content_4_body | metafield_tag }}</p>",
+            "page": ""
+          }
+        },
+        "e74495d7-7c70-4a98-9704-d222be2d4134": {
+          "type": "testimonial",
+          "settings": {
+            "customer_image": "shopify://shop_images/panty_testimonial.jpg",
+            "customer_name": "<strong>Jana, Sophia</strong>",
+            "customer_text": "und 1000+ weiteren gefällt das"
+          }
+        },
+        "17531d0d-1372-48ea-8634-c791c6398a11": {
+          "type": "product_variant_links",
+          "settings": {
+            "products": "{{ product.metafields.relationships.other_absorbancy.value }}",
+            "hide_unavailable": false,
+            "option_name": "Saugstärke",
+            "selector_type": "block",
+            "option_value_metafield_namespace": "filters",
+            "option_value_metafield_key": "absorbancy"
+          }
+        },
+        "574a5bd3-6d04-40f4-8d73-29d78e57ec2e": {
+          "type": "product_variant_links",
+          "settings": {
+            "products": "{{ product.metafields.relationships.other_color.value }}",
+            "hide_unavailable": false,
+            "option_name": "Farbe",
+            "selector_type": "color",
+            "option_value_metafield_namespace": "",
+            "option_value_metafield_key": ""
+          }
+        }
+      },
+      "block_order": [
+        "22970e8f-ea75-46ec-9255-8ceeb78511f8",
+        "tolstoy_shoppable_video_quiz_stories_block_NaBnQj",
+        "variant_picker",
+        "f0d2cc62-543d-4ad8-bdd7-18c3d04a52c1",
+        "yotpo_loyalty_rewards_product_points_module_app_block_WzPHQ6",
+        "02190bcc-9ff0-4f94-8898-2b2cb44da8ea",
+        "quantity_selector",
+        "buy_buttons",
+        "a5ac472c-f2be-447e-bdc1-42de5d4d5016",
+        "0d0a5849-05ff-4be4-9622-4f7c3f06ed86",
+        "complete_the_look_HRJVxn",
+        "244be36c-36e1-4348-aa9f-0f5c48a1dab5",
+        "5d99506a-360d-4c5f-aa4b-422abcc9c271",
+        "0c6c32fe-0356-4aeb-943d-7c7543e9bfa3",
+        "6c2c03e5-473f-4aff-a17e-9f4de44cb2d5",
+        "e74495d7-7c70-4a98-9704-d222be2d4134",
+        "17531d0d-1372-48ea-8634-c791c6398a11",
+        "574a5bd3-6d04-40f4-8d73-29d78e57ec2e"
+      ],
+      "settings": {
+        "show_vendor": false,
+        "show_sku": false,
+        "show_taxes_included": true,
+        "show_product_rating": true,
+        "show_sticky_add_to_cart": true,
+        "show_share_buttons": false,
+        "show_buy_button_next_to_quantity": true,
+        "show_product_style": true,
+        "help_page": "",
+        "enable_video_autoplay": true,
+        "enable_video_looping": true,
+        "enable_image_zoom": true,
+        "show_thumbnails_on_mobile": false,
+        "desktop_thumbnails_position": "bottom",
+        "transition_effect": "slide"
+      }
+    },
+    "1749639696c1e643f2": {
+      "type": "apps",
+      "blocks": {
+        "tolstoy_shoppable_video_quiz_stories_block_7YjzkA": {
+          "type": "shopify://apps/tolstoy-shoppable-video-quiz/blocks/stories-block/06fa8282-42ff-403e-b67c-1936776aed11",
+          "disabled": true,
+          "settings": {
+            "publishId": "6rxclpoto801f"
+          }
+        }
+      },
+      "block_order": [
+        "tolstoy_shoppable_video_quiz_stories_block_7YjzkA"
+      ],
+      "settings": {
+        "include_horizontal_margins": true,
+        "include_vertical_margins": true
+      }
+    },
+    "product-recommendations": {
+      "type": "product-recommendations",
+      "settings": {
+        "subheading": "",
+        "title": "Dir könnte auch gefallen",
+        "recommendations_count": 10,
+        "background": "rgba(0,0,0,0)",
+        "text_color": "rgba(0,0,0,0)"
+      }
+    },
+    "recently_viewed_products_PMDFKe": {
+      "type": "recently-viewed-products",
+      "settings": {
+        "subheading": "",
+        "title": "Zuletzt angesehen",
+        "products_count": 8,
+        "background": "rgba(0,0,0,0)",
+        "text_color": "rgba(0,0,0,0)"
+      }
+    },
+    "video_4LUmgr": {
+      "type": "video",
+      "disabled": true,
+      "settings": {
+        "subheading": "Welche Panty ist die richtige für mich?",
+        "title": "Swim- & Beachwear erklärt",
+        "video": "shopify://files/videos/swim vs beach reel.mp4",
+        "video_url": "",
+        "image": "shopify://shop_images/beach_vs_swim_thumb_a91e7790-51be-43ed-9477-589d36ff3a4f.jpg",
+        "background_type": "boxed",
+        "video_size": "small",
+        "autoplay": false,
+        "show_video_controls": true,
+        "background": "#ff659c",
+        "text_color": "#ffffff"
+      }
+    },
+    "multi_column_FYiB7J": {
+      "type": "multi-column",
+      "blocks": {
+        "item_ewzFRn": {
+          "type": "item",
+          "repeater": "{{ product.metafields.descriptors.multi_column.value.columns.value }}",
+          "settings": {
+            "image": "{{ block.repeater.image.value }}",
+            "image_width": 100,
+            "image_border": "rgba(0,0,0,0)",
+            "title": "{{ block.repeater.heading.value }}",
+            "content": "{{ block.repeater.content | metafield_tag }}",
+            "link_text": "",
+            "link_url": "",
+            "link_style": "link",
+            "text_alignment": "center",
+            "vertical_alignment": "start"
+          }
+        },
+        "item_jiJj66": {
+          "type": "item",
+          "settings": {
+            "image_width": 100,
+            "image_border": "rgba(0,0,0,0)",
+            "title": "",
+            "content": "",
+            "link_text": "",
+            "link_url": "",
+            "link_style": "link",
+            "text_alignment": "left",
+            "vertical_alignment": "start"
+          }
+        },
+        "item_GFfHyD": {
+          "type": "item",
+          "settings": {
+            "image_width": 100,
+            "image_border": "rgba(0,0,0,0)",
+            "title": "",
+            "content": "",
+            "link_text": "",
+            "link_url": "",
+            "link_style": "link",
+            "text_alignment": "center",
+            "vertical_alignment": "start"
+          }
+        },
+        "item_3jE3kk": {
+          "type": "item",
+          "settings": {
+            "image_width": 100,
+            "image_border": "rgba(0,0,0,0)",
+            "title": "",
+            "content": "",
+            "link_text": "",
+            "link_url": "",
+            "link_style": "link",
+            "text_alignment": "left",
+            "vertical_alignment": "start"
+          }
+        }
+      },
+      "block_order": [
+        "item_ewzFRn",
+        "item_jiJj66",
+        "item_GFfHyD",
+        "item_3jE3kk"
+      ],
+      "settings": {
+        "reveal_on_scroll": true,
+        "stack_items": false,
+        "subheading": "{{ product.metafields.descriptors.multi_column.value.subheading.value }}",
+        "title": "{{ product.metafields.descriptors.multi_column.value.heading.value }}",
+        "content": "{{ product.metafields.descriptors.multi_column.value.content | metafield_tag }}",
+        "column_alignment": "center",
+        "mobile_item_size": "large",
+        "desktop_item_size": "medium",
+        "spacing": "tight",
+        "background": "{{ product.metafields.descriptors.multi_column.value.section_background_color.value }}",
+        "text_color": "#ffffff"
+      }
+    },
+    "faq_giGELX": {
+      "type": "faq",
+      "blocks": {
+        "faq_collection_e4j4Lp": {
+          "type": "faq_collection",
+          "settings": {
+            "metaobject_handle": "faq-collection-swim",
+            "show_title": true
+          }
+        },
+        "faq_collection_AfYL6r": {
+          "type": "faq_collection",
+          "settings": {
+            "metaobject_handle": "faq-collection-beach",
+            "show_title": true
+          }
+        }
+      },
+      "block_order": [
+        "faq_collection_e4j4Lp",
+        "faq_collection_AfYL6r"
+      ],
+      "settings": {
+        "show_navigation": false,
+        "enable_schema": false,
+        "section_header_subheading": "IHR FRAGT, WIR ANTWORTEN",
+        "section_header_heading": "Häufig gestellte Fragen",
+        "section_header_short_description": "",
+        "section_header_heading_size": "h3",
+        "section_header_highest_hierarchy": false,
+        "section_header_short_description_font_size": "medium",
+        "section_container_width": "md",
+        "section_text_alignment": "left",
+        "section_background_color": "#ea516c",
+        "section_text_color": "#ffffff",
+        "section_heading_color": "#ffffff",
+        "section_subheading_color": "#ffffff",
+        "section_heading_font_family": "default",
+        "section_spacing_top": 32,
+        "section_spacing_bottom": 32,
+        "section_spacing_different_mobile": false,
+        "section_spacing_top_mobile": 0,
+        "section_spacing_bottom_mobile": 0
+      }
+    },
+    "rich_text_nrzp7a": {
+      "type": "rich-text",
+      "settings": {
+        "subheading": "",
+        "title": "",
+        "content": "",
+        "button_text": "",
+        "button_link": "",
+        "background_type": "full_width",
+        "text_width": "medium",
+        "text_position": "center",
+        "text_alignment": "center",
+        "background": "rgba(0,0,0,0)",
+        "text_color": "rgba(0,0,0,0)",
+        "button_background": "rgba(0,0,0,0)",
+        "button_text_color": "rgba(0,0,0,0)"
+      }
+    },
+    "1666179092243d9cde": {
+      "type": "apps",
+      "blocks": {
+        "e0862bb4-1e1a-44c5-a83d-aaed3f12395d": {
+          "type": "shopify://apps/reviews-io/blocks/reviewsio-polaris/92a082e5-b297-4e88-b428-ac96cbc505f9",
+          "settings": {
+            "star": "#f58e9e",
+            "review_type": "product_review,questions",
+            "per_page": 3,
+            "primary_btn_bg_color": "#f58e9e",
+            "primary_btn_border_color": "rgba(0,0,0,0)",
+            "primary_btn_text_color": "#ffffff",
+            "secondary_btn_border_color": "#f7aea6",
+            "secondary_btn_text_color": "#56112a",
+            "border_color": "#ffbfbf",
+            "heading_text_color": "#1a1a1a",
+            "heading_font": "system_ui_n4",
+            "body_text_color": "#000000",
+            "badge_icon_color": "#000000",
+            "badge_text_color": "#000000",
+            "enable_rich_snippets": true,
+            "show_location": true,
+            "show_tab_selector": false,
+            "show_dates": true,
+            "show_avatar": false,
+            "enable_sentiment_analysis": false,
+            "enable_replies": true,
+            "widget_spacing": 0,
+            "capitalise_headers_and_buttons": false,
+            "show_review_title": true,
+            "default_sort": "helpful_desc"
+          }
+        }
+      },
+      "block_order": [
+        "e0862bb4-1e1a-44c5-a83d-aaed3f12395d"
+      ],
+      "settings": {
+        "include_horizontal_margins": true,
+        "include_vertical_margins": false
+      }
+    }
+  },
+  "order": [
+    "main",
+    "1749639696c1e643f2",
+    "product-recommendations",
+    "recently_viewed_products_PMDFKe",
+    "video_4LUmgr",
+    "multi_column_FYiB7J",
+    "faq_giGELX",
+    "rich_text_nrzp7a",
+    "1666179092243d9cde"
+  ]
+}

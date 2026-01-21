@@ -1,0 +1,741 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "show_title": false,
+        "show_breadcrumbs": false,
+        "page_width": "medium"
+      }
+    },
+    "61e17178-afdb-46ac-9fdb-cd9347b23974": {
+      "type": "section-header",
+      "settings": {
+        "section_subheading": "",
+        "section_heading": "Influencers' Favorites",
+        "section_short_description": "<p>Die Innovation des Jahres: Die <strong>saugstärkste </strong>& <strong>am schnellsten trocknende </strong>Seamless Period Panty <strong>am Markt</strong>. Trockenes Gefühl innerhalb von<strong> Sekunden</strong>.</p>",
+        "heading_size": "h3",
+        "highest_hierarchy": true,
+        "section_heading_font_family": "default",
+        "short_description_font_size": "small",
+        "section_text_color": "#1a1a1a",
+        "section_heading_color": "#1a1a1a",
+        "section_subheading_color": "rgba(0,0,0,0)",
+        "section_container_width": "sm",
+        "section_background_color": "#ffe6e6",
+        "section_spacing_top": 28,
+        "section_spacing_bottom": 28,
+        "section_spacing_different_mobile": true,
+        "section_spacing_top_mobile": 16,
+        "section_spacing_bottom_mobile": 28
+      }
+    },
+    "7fb64368-dfdf-4a28-abb3-011ecf95186d": {
+      "type": "discount-code-showcase",
+      "settings": {
+        "inner_section_background": "#ffd9d9",
+        "discount_badge_background": "#ea697d",
+        "discount_badge_text_color": "#ffffff",
+        "section_container_width": "xxs",
+        "section_background_color": "#ffe6e6",
+        "section_text_color": "rgba(0,0,0,0)",
+        "section_heading_color": "rgba(0,0,0,0)",
+        "section_spacing_top": 0,
+        "section_spacing_bottom": 0,
+        "section_spacing_different_mobile": false,
+        "section_spacing_top_mobile": 0,
+        "section_spacing_bottom_mobile": 0
+      }
+    },
+    "button_t3fFra": {
+      "type": "button",
+      "settings": {
+        "button_text": "Zu den Produkten",
+        "button_link": "shopify://collections/influencer",
+        "button_link_new_window": false,
+        "button_details": "",
+        "button_style": "primary",
+        "button_outline": false,
+        "button_shadow": true,
+        "button_size": "lg",
+        "button_fit": "responsive",
+        "section_container_width": "md",
+        "section_text_alignment": "center",
+        "section_background_color": "#ffe6e6",
+        "section_spacing_top": 32,
+        "section_spacing_bottom": 32,
+        "section_spacing_different_mobile": false,
+        "section_spacing_top_mobile": 0,
+        "section_spacing_bottom_mobile": 0
+      }
+    },
+    "0cc90731-aa68-4263-b107-7cbc05891d82": {
+      "type": "featured-collections",
+      "blocks": {
+        "e7adf44a-9639-4d7c-9596-8006a381acc8": {
+          "type": "collection",
+          "settings": {
+            "collection": "influencer",
+            "label": "Für dich",
+            "button_text": "Zu den Produkten",
+            "button_url": "shopify://collections/influencer",
+            "hide_from_product_title_start": "",
+            "filterable_options": ""
+          }
+        }
+      },
+      "block_order": [
+        "e7adf44a-9639-4d7c-9596-8006a381acc8"
+      ],
+      "settings": {
+        "products_count": 24,
+        "products_per_row": 4,
+        "stack_products": false,
+        "show_cta": false,
+        "filter_toggle_button_background": "rgba(0,0,0,0)",
+        "filter_toggle_active_button_background": "rgba(0,0,0,0)",
+        "filter_toggle_button_color": "rgba(0,0,0,0)",
+        "button_background": "rgba(0,0,0,0)",
+        "button_text_color": "rgba(0,0,0,0)",
+        "subheading": "NEU: verbesserte Saugstärke",
+        "title": "Ultra Strong – Just like you",
+        "content": "",
+        "section_header_heading_size": "h4",
+        "section_header_highest_hierarchy": false,
+        "section_header_short_description_font_size": "medium",
+        "section_container_width": "md",
+        "background": "rgba(0,0,0,0)",
+        "text_color": "rgba(0,0,0,0)",
+        "heading_color": "rgba(0,0,0,0)",
+        "section_subheading_color": "rgba(0,0,0,0)",
+        "section_heading_font_family": "default",
+        "section_spacing_top": 32,
+        "section_spacing_bottom": 32,
+        "section_spacing_different_mobile": false,
+        "section_spacing_top_mobile": 24,
+        "section_spacing_bottom_mobile": 44
+      }
+    },
+    "featured_product_RgRf4V": {
+      "type": "featured-product",
+      "blocks": {
+        "variant_picker_bDfhDn": {
+          "type": "variant_picker",
+          "settings": {
+            "hide_sold_out_variants": false,
+            "selector_mode": "block",
+            "color_mode": "color",
+            "size_chart_page": ""
+          }
+        },
+        "quantity_selector_CYmH3a": {
+          "type": "quantity_selector",
+          "settings": {}
+        },
+        "buy_buttons_B8jURt": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_payment_button": false,
+            "show_gift_card_recipient": false,
+            "atc_button_background": "rgba(0,0,0,0)",
+            "atc_button_text_color": "rgba(0,0,0,0)",
+            "buy_now_button_background": "rgba(0,0,0,0)",
+            "buy_now_button_text_color": "rgba(0,0,0,0)"
+          }
+        }
+      },
+      "block_order": [
+        "variant_picker_bDfhDn",
+        "quantity_selector_CYmH3a",
+        "buy_buttons_B8jURt"
+      ],
+      "settings": {
+        "product": "iron-lady-vegan-complex-eisen-gummibaerchen",
+        "subheading": "Complete your cart",
+        "title": "Dein Eisen-Booster",
+        "show_vendor": false,
+        "show_sku": false,
+        "show_taxes_included": false,
+        "show_product_rating": false,
+        "show_share_buttons": false,
+        "help_page": "",
+        "enable_video_autoplay": true,
+        "enable_video_looping": false,
+        "enable_image_zoom": true,
+        "show_thumbnails_on_mobile": false,
+        "desktop_thumbnails_position": "bottom",
+        "transition_effect": "slide",
+        "background": "#ffe6e6",
+        "text_color": "rgba(0,0,0,0)"
+      }
+    },
+    "featured_collections_R9WGBe": {
+      "type": "featured-collections",
+      "blocks": {
+        "collection_wNyhBt": {
+          "type": "collection",
+          "settings": {
+            "collection": "rep_collection_seamless",
+            "label": "Für dich",
+            "button_text": "Mehr Seamless Pantys",
+            "button_url": "/collections/periodenunterwaesche-online-kaufen?sort_by=manual&filter.p.m.filters.collection=Seamless",
+            "hide_from_product_title_start": "",
+            "filterable_options": ""
+          }
+        }
+      },
+      "block_order": [
+        "collection_wNyhBt"
+      ],
+      "settings": {
+        "products_count": 24,
+        "products_per_row": 4,
+        "stack_products": false,
+        "show_cta": false,
+        "filter_toggle_button_background": "rgba(0,0,0,0)",
+        "filter_toggle_active_button_background": "rgba(0,0,0,0)",
+        "filter_toggle_button_color": "rgba(0,0,0,0)",
+        "button_background": "rgba(0,0,0,0)",
+        "button_text_color": "rgba(0,0,0,0)",
+        "subheading": "",
+        "title": "SEAMLESS Kollektion",
+        "content": "",
+        "section_header_heading_size": "h4",
+        "section_header_highest_hierarchy": false,
+        "section_header_short_description_font_size": "medium",
+        "section_container_width": "md",
+        "background": "rgba(0,0,0,0)",
+        "text_color": "rgba(0,0,0,0)",
+        "heading_color": "rgba(0,0,0,0)",
+        "section_subheading_color": "rgba(0,0,0,0)",
+        "section_heading_font_family": "default",
+        "section_spacing_top": 32,
+        "section_spacing_bottom": 32,
+        "section_spacing_different_mobile": false,
+        "section_spacing_top_mobile": 24,
+        "section_spacing_bottom_mobile": 44
+      }
+    },
+    "featured_collections_KbbT8q": {
+      "type": "featured-collections",
+      "blocks": {
+        "collection_ntYqNk": {
+          "type": "collection",
+          "settings": {
+            "collection": "rep_collection_cotton-basics",
+            "label": "Für dich",
+            "button_text": "Mehr Cotton Pantys",
+            "button_url": "/collections/periodenunterwaesche-online-kaufen?sort_by=manual&filter.p.m.filters.collection=Basics",
+            "hide_from_product_title_start": "",
+            "filterable_options": ""
+          }
+        }
+      },
+      "block_order": [
+        "collection_ntYqNk"
+      ],
+      "settings": {
+        "products_count": 24,
+        "products_per_row": 4,
+        "stack_products": false,
+        "show_cta": false,
+        "filter_toggle_button_background": "rgba(0,0,0,0)",
+        "filter_toggle_active_button_background": "rgba(0,0,0,0)",
+        "filter_toggle_button_color": "rgba(0,0,0,0)",
+        "button_background": "rgba(0,0,0,0)",
+        "button_text_color": "rgba(0,0,0,0)",
+        "subheading": "",
+        "title": "Organic Cotton Basics",
+        "content": "",
+        "section_header_heading_size": "h4",
+        "section_header_highest_hierarchy": false,
+        "section_header_short_description_font_size": "medium",
+        "section_container_width": "md",
+        "background": "rgba(0,0,0,0)",
+        "text_color": "rgba(0,0,0,0)",
+        "heading_color": "rgba(0,0,0,0)",
+        "section_subheading_color": "rgba(0,0,0,0)",
+        "section_heading_font_family": "default",
+        "section_spacing_top": 32,
+        "section_spacing_bottom": 32,
+        "section_spacing_different_mobile": false,
+        "section_spacing_top_mobile": 24,
+        "section_spacing_bottom_mobile": 44
+      }
+    },
+    "featured_collections_MrJjXn": {
+      "type": "featured-collections",
+      "blocks": {
+        "collection_jFacYd": {
+          "type": "collection",
+          "settings": {
+            "collection": "rep_collection_lace",
+            "label": "Für dich",
+            "button_text": "Mehr Lace Pantys",
+            "button_url": "/collections/periodenunterwaesche-online-kaufen?sort_by=manual&filter.p.m.filters.collection=Lace",
+            "hide_from_product_title_start": "",
+            "filterable_options": ""
+          }
+        }
+      },
+      "block_order": [
+        "collection_jFacYd"
+      ],
+      "settings": {
+        "products_count": 24,
+        "products_per_row": 4,
+        "stack_products": false,
+        "show_cta": false,
+        "filter_toggle_button_background": "rgba(0,0,0,0)",
+        "filter_toggle_active_button_background": "rgba(0,0,0,0)",
+        "filter_toggle_button_color": "rgba(0,0,0,0)",
+        "button_background": "rgba(0,0,0,0)",
+        "button_text_color": "rgba(0,0,0,0)",
+        "subheading": "",
+        "title": "LACE Kollektion",
+        "content": "",
+        "section_header_heading_size": "h4",
+        "section_header_highest_hierarchy": false,
+        "section_header_short_description_font_size": "medium",
+        "section_container_width": "md",
+        "background": "rgba(0,0,0,0)",
+        "text_color": "rgba(0,0,0,0)",
+        "heading_color": "rgba(0,0,0,0)",
+        "section_subheading_color": "rgba(0,0,0,0)",
+        "section_heading_font_family": "default",
+        "section_spacing_top": 32,
+        "section_spacing_bottom": 32,
+        "section_spacing_different_mobile": false,
+        "section_spacing_top_mobile": 24,
+        "section_spacing_bottom_mobile": 44
+      }
+    },
+    "spacer_a6hqnH": {
+      "type": "spacer",
+      "settings": {
+        "height": 16,
+        "different_mobile_height": false,
+        "mobile_height": 16,
+        "background_color": "#fff0f0"
+      }
+    },
+    "1710171577e2bb90cd": {
+      "type": "apps",
+      "blocks": {
+        "reviews_io_reviewsio_rating_bar_MqtgJW": {
+          "type": "shopify://apps/reviews-io/blocks/reviewsio-rating-bar/92a082e5-b297-4e88-b428-ac96cbc505f9",
+          "settings": {
+            "widget_id": "WzwJIZk4v5mPVFUO"
+          }
+        }
+      },
+      "block_order": [
+        "reviews_io_reviewsio_rating_bar_MqtgJW"
+      ],
+      "settings": {
+        "include_horizontal_margins": true,
+        "include_vertical_margins": false
+      }
+    },
+    "spacer_4ch9Tm": {
+      "type": "spacer",
+      "settings": {
+        "height": 16,
+        "different_mobile_height": false,
+        "mobile_height": 16,
+        "background_color": "#fff0f0"
+      }
+    },
+    "image_with_text_pHxLfj": {
+      "type": "image-with-text",
+      "blocks": {
+        "item_hMVp4a": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/Seamless_FlexyTech_846d9bea-ddea-4114-90b8-894494c3883a.jpg",
+            "tab_label": "Flexi Technology",
+            "subheading": "",
+            "title": "Flexi Technology",
+            "content": "<p>Die <strong>erste europäische Panty </strong>mit <strong>schwebender Saugeinlage</strong>. Passt sich <strong>deinem Körper </strong>an und nimmt das Blut dort auf, wo es <strong>gerade fließt</strong>.</p>",
+            "button_text": "",
+            "button_link": ""
+          }
+        },
+        "item_UMgnRi": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/Seamless_FluidProtect_8198a1c2-7993-4e28-b532-93c980c44bbe.jpg",
+            "tab_label": "Fluid Protection",
+            "subheading": "",
+            "title": "Fluid Protection",
+            "content": "<p><strong>Verhindert seitliches Auslaufen </strong>durch innovative Fluid Protection <strong>Nahtverarbeitung</strong>. So auslaufsicher wie nie zuvor.</p>",
+            "button_text": "",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "item_hMVp4a",
+        "item_UMgnRi"
+      ],
+      "settings": {
+        "reveal_on_scroll": true,
+        "background_type": "full_width",
+        "background_overlap": "both",
+        "image_position": "left",
+        "text_alignment": "center",
+        "cycle_speed": 8,
+        "accent_background": "#ffe6e6",
+        "text_color": "rgba(0,0,0,0)",
+        "button_background": "rgba(0,0,0,0)",
+        "button_text_color": "rgba(0,0,0,0)"
+      }
+    },
+    "c810aea1-8ebe-4ba9-87dc-227eacae264b": {
+      "type": "multi-column",
+      "blocks": {
+        "template--18021850906890__c810aea1-8ebe-4ba9-87dc-227eacae264b-item-1": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/panty_layer_closeup_layer1.jpg",
+            "image_width": 100,
+            "image_border": "rgba(0,0,0,0)",
+            "title": "Layer 1: Stay Dry Layer™",
+            "content": "<p><strong>Saugt Flüssigkeit</strong> blitzschnell auf und trocknet innerhalb weniger <strong>Sekunden</strong>.</p>",
+            "link_text": "",
+            "link_url": "",
+            "link_style": "link",
+            "text_alignment": "left",
+            "vertical_alignment": "start"
+          }
+        },
+        "template--18021850906890__c810aea1-8ebe-4ba9-87dc-227eacae264b-item-2": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/panty_layer_closeup_layer2_alt.jpg",
+            "image_width": 100,
+            "image_border": "rgba(0,0,0,0)",
+            "title": "Layer 2: Ultra-absorbierende Schicht",
+            "content": "<p><strong>Speichert </strong>die Flüssigkeit und schließt sie sicher ein.</p>",
+            "link_text": "",
+            "link_url": "",
+            "link_style": "link",
+            "text_alignment": "left",
+            "vertical_alignment": "start"
+          }
+        },
+        "template--18021850906890__c810aea1-8ebe-4ba9-87dc-227eacae264b-item-3": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/panty_layer_closeup_layer3.jpg",
+            "image_width": 100,
+            "image_border": "rgba(0,0,0,0)",
+            "title": "Layer 3: Wasserdichte Membran",
+            "content": "<p>Sorgt für <strong>zero Auslaufgefahr</strong>, auch bei längerer Tragedauer.</p>",
+            "link_text": "",
+            "link_url": "",
+            "link_style": "link",
+            "text_alignment": "left",
+            "vertical_alignment": "start"
+          }
+        },
+        "template--18021850906890__c810aea1-8ebe-4ba9-87dc-227eacae264b-item-4": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/panty_layer_closeup_layer4_070ad79d-1f21-4c24-8941-cc2cf0159468.jpg",
+            "image_width": 100,
+            "image_border": "rgba(0,0,0,0)",
+            "title": "Layer 4: Ultra Soft",
+            "content": "<p>Super weicher Oberstoff für extra <strong>comfy Tragegefühl</strong>.</p>",
+            "link_text": "",
+            "link_url": "",
+            "link_style": "link",
+            "text_alignment": "left",
+            "vertical_alignment": "start"
+          }
+        }
+      },
+      "block_order": [
+        "template--18021850906890__c810aea1-8ebe-4ba9-87dc-227eacae264b-item-1",
+        "template--18021850906890__c810aea1-8ebe-4ba9-87dc-227eacae264b-item-2",
+        "template--18021850906890__c810aea1-8ebe-4ba9-87dc-227eacae264b-item-3",
+        "template--18021850906890__c810aea1-8ebe-4ba9-87dc-227eacae264b-item-4"
+      ],
+      "settings": {
+        "reveal_on_scroll": true,
+        "stack_items": false,
+        "subheading": "Default mode: dry pantys",
+        "title": "Stay Dry Layer Technologie™",
+        "content": "<p>Entwickelt mit Textiltechniker*innen und Gynäkolog*innen: nur <strong>1 mm </strong>dicker als normale Unterwäsche und die <strong>leistungsstärkste Seamless Period Panty am Markt</strong>.</p>",
+        "column_alignment": "center",
+        "mobile_item_size": "medium",
+        "desktop_item_size": "medium",
+        "spacing": "tight",
+        "background": "#ffe6e6",
+        "text_color": "rgba(0,0,0,0)"
+      }
+    },
+    "section_header_ciUixP": {
+      "type": "section-header",
+      "settings": {
+        "section_subheading": "Bekannt aus:",
+        "section_heading": "",
+        "section_short_description": "",
+        "heading_size": "h2",
+        "highest_hierarchy": false,
+        "section_heading_font_family": "default",
+        "short_description_font_size": "large",
+        "section_text_color": "#1a1a1a",
+        "section_heading_color": "#1a1a1a",
+        "section_subheading_color": "#1a1a1a",
+        "section_container_width": "sm",
+        "section_background_color": "rgba(0,0,0,0)",
+        "section_spacing_top": 32,
+        "section_spacing_bottom": 8,
+        "section_spacing_different_mobile": false,
+        "section_spacing_top_mobile": 0,
+        "section_spacing_bottom_mobile": 0
+      }
+    },
+    "logo_list_tjF4q6": {
+      "type": "logo-list",
+      "blocks": {
+        "logo_AmDm3f": {
+          "type": "logo",
+          "settings": {
+            "logo": "shopify://shop_images/ELLE_Magazine_Logo.png",
+            "link": ""
+          }
+        },
+        "logo_TYm8pj": {
+          "type": "logo",
+          "settings": {
+            "logo": "shopify://shop_images/Logo_freundin.png",
+            "link": ""
+          }
+        },
+        "logo_dd9zVN": {
+          "type": "logo",
+          "settings": {
+            "logo": "shopify://shop_images/InStyle.png",
+            "link": ""
+          }
+        },
+        "logo_mzCfY7": {
+          "type": "logo",
+          "settings": {
+            "logo": "shopify://shop_images/Harper_s_Bazaar_Logo.png",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "logo_AmDm3f",
+        "logo_TYm8pj",
+        "logo_dd9zVN",
+        "logo_mzCfY7"
+      ],
+      "settings": {
+        "reveal_on_scroll": false,
+        "layout": "single_row",
+        "max_logos_mobile": 5,
+        "max_width_logo_desktop": 80,
+        "max_width_logo_mobile": 70,
+        "logo_background": "rgba(0,0,0,0)",
+        "section_container_width": "md",
+        "section_background_color": "rgba(0,0,0,0)",
+        "section_spacing_top": 0,
+        "section_spacing_bottom": 24,
+        "section_spacing_different_mobile": false,
+        "section_spacing_top_mobile": 0,
+        "section_spacing_bottom_mobile": 0
+      }
+    },
+    "button_VfErKN": {
+      "type": "button",
+      "settings": {
+        "button_text": "Überzeug dich selbst",
+        "button_link": "shopify://collections/periodenunterwaesche-online-kaufen",
+        "button_link_new_window": false,
+        "button_details": "",
+        "button_style": "primary",
+        "button_outline": false,
+        "button_shadow": false,
+        "button_size": "md",
+        "button_fit": "inline",
+        "section_container_width": "md",
+        "section_text_alignment": "center",
+        "section_background_color": "rgba(0,0,0,0)",
+        "section_spacing_top": 0,
+        "section_spacing_bottom": 32,
+        "section_spacing_different_mobile": false,
+        "section_spacing_top_mobile": 0,
+        "section_spacing_bottom_mobile": 0
+      }
+    },
+    "97013c53-8d2e-4f12-a346-9f50b101e833": {
+      "type": "image-with-text-block",
+      "settings": {
+        "reveal_on_scroll": true,
+        "image": "shopify://shop_images/Anni_Sinja_Gruenderinnen_TheFemaleCompany_1.jpg",
+        "subheading": "Unsere Vision",
+        "title": "Eine Welt ohne Tabus um den weiblichen Körper",
+        "content": "<p>Wir sind Anni & Sinja, Gründerinnen von The Female Company. Wir haben keine Lust mehr auf Tabus – oder schädliche Stoffe in unseren Produkten. Du auch nicht?</p>",
+        "button_text": "Erfahre Mehr",
+        "button_link": "shopify://pages/about",
+        "background_type": "full_width",
+        "text_position": "right",
+        "text_alignment": "center",
+        "text_background": "rgba(0,0,0,0)",
+        "text_color": "#1a1a1a",
+        "button_background": "#ff3f46",
+        "button_text_color": "#ffffff"
+      }
+    },
+    "3838a1f1-c5e5-4584-b146-8dbc963a049e": {
+      "type": "faq",
+      "blocks": {
+        "45f0113e-2572-4f47-b486-033da1bb6073": {
+          "type": "faq_collection",
+          "settings": {
+            "metaobject_handle": "faq-collection-periodpanty-purchase-assistance",
+            "show_title": true
+          }
+        },
+        "6c0b0067-a165-401d-96a7-5b9a60def1a6": {
+          "type": "faq_collection",
+          "settings": {
+            "metaobject_handle": "faq-collection-periodpanty-usage",
+            "show_title": true
+          }
+        }
+      },
+      "block_order": [
+        "45f0113e-2572-4f47-b486-033da1bb6073",
+        "6c0b0067-a165-401d-96a7-5b9a60def1a6"
+      ],
+      "settings": {
+        "show_navigation": true,
+        "enable_schema": false,
+        "section_header_subheading": "Ihr fragt, wir antworten",
+        "section_header_heading": "Häufig gestellte Fragen",
+        "section_header_short_description": "",
+        "section_header_heading_size": "h3",
+        "section_header_highest_hierarchy": false,
+        "section_header_short_description_font_size": "medium",
+        "section_container_width": "md",
+        "section_text_alignment": "left",
+        "section_background_color": "#ffe6e6",
+        "section_text_color": "#1a1a1a",
+        "section_heading_color": "#1a1a1a",
+        "section_subheading_color": "#1a1a1a",
+        "section_heading_font_family": "default",
+        "section_spacing_top": 60,
+        "section_spacing_bottom": 0,
+        "section_spacing_different_mobile": true,
+        "section_spacing_top_mobile": 48,
+        "section_spacing_bottom_mobile": 0
+      }
+    },
+    "24619cd4-2f88-41b6-b126-674f15081a6f": {
+      "type": "button",
+      "settings": {
+        "button_text": "Zum Hilfe-Center",
+        "button_link": "https://help.thefemalecompany.com/",
+        "button_link_new_window": true,
+        "button_details": "",
+        "button_style": "white",
+        "button_outline": false,
+        "button_shadow": false,
+        "button_size": "md",
+        "button_fit": "inline",
+        "section_container_width": "md",
+        "section_text_alignment": "center",
+        "section_background_color": "#ffe6e6",
+        "section_spacing_top": 16,
+        "section_spacing_bottom": 16,
+        "section_spacing_different_mobile": false,
+        "section_spacing_top_mobile": 16,
+        "section_spacing_bottom_mobile": 44
+      }
+    },
+    "7bdc631d-9a8d-4071-a419-40ad233a114b": {
+      "type": "section-header",
+      "settings": {
+        "section_subheading": "Dir fehlen noch Infos?",
+        "section_heading": "",
+        "section_short_description": "",
+        "heading_size": "h3",
+        "highest_hierarchy": false,
+        "section_heading_font_family": "default",
+        "short_description_font_size": "medium",
+        "section_text_color": "#1a1a1a",
+        "section_heading_color": "rgba(0,0,0,0)",
+        "section_subheading_color": "#1a1a1a",
+        "section_container_width": "sm",
+        "section_background_color": "#ffe6e6",
+        "section_spacing_top": 32,
+        "section_spacing_bottom": 8,
+        "section_spacing_different_mobile": false,
+        "section_spacing_top_mobile": 0,
+        "section_spacing_bottom_mobile": 0
+      }
+    },
+    "17e56877-68b6-4ed3-aaaa-1b7725bfa72b": {
+      "type": "button",
+      "settings": {
+        "button_text": "Gib uns Feedback",
+        "button_link": "https://the-femalecompany.typeform.com/to/fM58I5wx",
+        "button_link_new_window": true,
+        "button_details": "",
+        "button_style": "white",
+        "button_outline": false,
+        "button_shadow": false,
+        "button_size": "md",
+        "button_fit": "inline",
+        "section_container_width": "md",
+        "section_text_alignment": "center",
+        "section_background_color": "#ffe6e6",
+        "section_spacing_top": 8,
+        "section_spacing_bottom": 32,
+        "section_spacing_different_mobile": false,
+        "section_spacing_top_mobile": 0,
+        "section_spacing_bottom_mobile": 0
+      }
+    }
+  },
+  "order": [
+    "main",
+    "61e17178-afdb-46ac-9fdb-cd9347b23974",
+    "7fb64368-dfdf-4a28-abb3-011ecf95186d",
+    "button_t3fFra",
+    "0cc90731-aa68-4263-b107-7cbc05891d82",
+    "featured_product_RgRf4V",
+    "featured_collections_R9WGBe",
+    "featured_collections_KbbT8q",
+    "featured_collections_MrJjXn",
+    "spacer_a6hqnH",
+    "1710171577e2bb90cd",
+    "spacer_4ch9Tm",
+    "image_with_text_pHxLfj",
+    "c810aea1-8ebe-4ba9-87dc-227eacae264b",
+    "section_header_ciUixP",
+    "logo_list_tjF4q6",
+    "button_VfErKN",
+    "97013c53-8d2e-4f12-a346-9f50b101e833",
+    "3838a1f1-c5e5-4584-b146-8dbc963a049e",
+    "24619cd4-2f88-41b6-b126-674f15081a6f",
+    "7bdc631d-9a8d-4071-a419-40ad233a114b",
+    "17e56877-68b6-4ed3-aaaa-1b7725bfa72b"
+  ]
+}
