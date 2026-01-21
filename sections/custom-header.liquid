@@ -1,0 +1,195 @@
+{%- liquid
+  assign heading = section.settings.heading
+  assign heading_size = section.settings.heading_size | default: 'h3'
+-%}
+
+{%- if heading != blank -%}
+  {%- render 'section' -%}
+  <header class="custom-header">
+    <div class="text-container">
+
+      {%- if heading != blank -%}
+        <h2 class="heading js-section-header-heading text--left {{ heading_size }}">
+          {{- heading | newline_to_br -}}
+        </h2>
+      {%- endif -%}
+
+    </div>
+  </header>
+  {%- render 'section-end' -%}
+{%- endif -%}
+
+<script>
+  (function () {
+
+    const sectionId = '#shopify-section-{{ section.id }}';
+    const section = document.querySelector(sectionId);
+    const customHeader = section.querySelector('.custom-header');
+
+    const urlParams = new URLSearchParams(window.location.search);
+    const influencerName =
+      urlParams.get('inf_full_name')?.replaceAll("_", " ") ||
+      urlParams.get('inf_name') ||
+      "";
+    const headline_text = urlParams.get('headline_text')?.replaceAll("_", " ");
+
+    if (headline_text) {
+      customHeader.querySelector('h2').innerText = (influencerName + " " + headline_text).trim();
+    }
+
+  })();
+</script>
+
+{% schema %}
+{
+  "name": "Custom Header",
+  "class": "shopify-section--custom-header",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Headline"
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Headline (Fallback text)",
+      "info": "Default headline text",
+      "default": "Unsere Favoriten"
+    },
+    {
+      "type": "select",
+      "id": "heading_size",
+      "label": "Heading size",
+      "options": [
+        {
+          "value": "h1",
+          "label": "Heading 1"
+        },
+        {
+          "value": "h2",
+          "label": "Heading 2"
+        },
+        {
+          "value": "h3",
+          "label": "Heading 3"
+        },
+        {
+          "value": "h4",
+          "label": "Heading 4"
+        },
+        {
+          "value": "h5",
+          "label": "Heading 5"
+        },
+        {
+          "value": "h6",
+          "label": "Heading 6"
+        }
+      ],
+      "default": "h3"
+    },
+    {
+      "type": "header",
+      "content": "Content"
+    },
+    {
+      "type": "paragraph",
+      "content": "This section takes the following URL parameters to fill up its content: headline_text, inf_full_name (default: inf_name)."
+    },
+    {
+      "type": "header",
+      "content": "Section settings"
+    },
+    {
+      "type": "select",
+      "id": "section_container_width",
+      "label": "Maximum width",
+      "options": [
+        {
+          "value": "xxs",
+          "label": "Extra extra Small"
+        },
+        {
+          "value": "xs",
+          "label": "Extra Small"
+        },
+        {
+          "value": "sm",
+          "label": "Small"
+        },
+        {
+          "value": "md",
+          "label": "Medium"
+        },
+        {
+          "value": "fluid",
+          "label": "Full width"
+        }
+      ],
+      "default": "sm"
+    },
+    {
+      "type": "color",
+      "id": "section_background_color",
+      "label": "Background color",
+      "default": "rgba(0,0,0,0)"
+    },
+    {
+      "type": "header",
+      "content": "Section settings"
+    },
+    {
+      "type": "range",
+      "id": "section_spacing_top",
+      "label": "Top spacing",
+      "unit": "px",
+      "min": 0,
+      "max": 200,
+      "step": 4,
+      "default": 32
+    },
+    {
+      "type": "range",
+      "id": "section_spacing_bottom",
+      "label": "Bottom spacing",
+      "unit": "px",
+      "min": 0,
+      "max": 200,
+      "step": 4,
+      "default": 32
+    },
+    {
+      "type": "checkbox",
+      "id": "section_spacing_different_mobile",
+      "label": "Use different height on mobile",
+      "default": false
+    },
+    {
+      "type": "range",
+      "id": "section_spacing_top_mobile",
+      "label": "Top spacing (mobile)",
+      "unit": "px",
+      "min": 0,
+      "max": 200,
+      "step": 4,
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "section_spacing_bottom_mobile",
+      "label": "Bottom spacing (mobile)",
+      "unit": "px",
+      "min": 0,
+      "max": 200,
+      "step": 4,
+      "default": 0
+    }
+  ],
+  "presets": [
+    {
+      "name": "Custom Header",
+      "category": "Custom"
+    }
+  ]
+}
+{% endschema %}

@@ -58,7 +58,7 @@
         {%- endif -%}
 
         {%- if section.settings.title != blank -%}
-          <h2 class="heading h2">{{ section.settings.title | escape }}</h2>
+          <h3 class="heading h2">{{ section.settings.title | escape }}</h3>
         {%- endif -%}
       </header>
     {%- endif -%}
@@ -98,7 +98,7 @@
         {%- else -%}
           <native-video class="video-wrapper video-wrapper--native" style="--aspect-ratio: {{ section.settings.video.aspect_ratio }}">
             {{- video_poster -}}
-
+  
             <template>
               {{- section.settings.video | video_tag: controls: section.settings.show_video_controls -}}
             </template>

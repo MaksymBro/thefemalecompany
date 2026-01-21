@@ -398,6 +398,7 @@
       "already_have_account": "Already have an account?",
       "login": "Login",
       "newsletter_opt_in_html": "<span>We will inform you about promotions, offers and surveys in our newsletter. You can revoke your consent at any time, e.g. by clicking on the unsubscribe link in the newsletter. You can find more information <a href=\"https://buy.thefemalecompany.com/en/policies/privacy-policy\" target=\"_blank\" rel=\"noopener noreferrer\">here</a> and in the <a href=\"https://buy.thefemalecompany.com/en/policies/privacy-policy\" target=\"_blank\" rel=\"noopener noreferrer\">privacy policy</a>.</span>"
+
     },
     "orders": {
       "title": "Orders",

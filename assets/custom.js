@@ -1,427 +1,409 @@
 /**
- * ==========================================================
- * THEME CUSTOM TRACKING & UI EXTENSIONS
- * ==========================================================
- * 1. Helpers
- * 2. TF Analytics click tracking
- * 3. PDP recommendation visibility + clicks tracking
- * 4. Intelligems tracking (product card click for allowed IDs)
- * 5. Product card visibility (IntersectionObserver)
- * 6. Show more (data-added-button-more)  ✅ updated logic
- * ==========================================================
+ * DEVELOPER DOCUMENTATION
+ *
+ * Include your custom JavaScript here.
+ *
+ * The theme Focal has been developed to be easily extensible through the usage of a lot of different JavaScript
+ * events, as well as the usage of custom elements (https://developers.google.com/web/fundamentals/web-components/customelements)
+ * to easily extend the theme and re-use the theme infrastructure for your own code.
+ *
+ * The technical documentation is summarized here.
+ *
+ * ------------------------------------------------------------------------------------------------------------
+ * BEING NOTIFIED WHEN A VARIANT HAS CHANGED
+ * ------------------------------------------------------------------------------------------------------------
+ *
+ * This event is fired whenever a the user has changed the variant in a selector. The target get you the form
+ * that triggered this event.
+ *
+ * Example:
+ *
+ * document.addEventListener('variant:changed', function(event) {
+ *   let variant = event.detail.variant; // Gives you access to the whole variant details
+ *   let form = event.target;
+ * });
+ *
+ * ------------------------------------------------------------------------------------------------------------
+ * MANUALLY CHANGE A VARIANT
+ * ------------------------------------------------------------------------------------------------------------
+ *
+ * You may want to manually change the variant, and let the theme automatically adjust all the selectors. To do
+ * that, you can get the DOM element of type "<product-variants>", and call the selectVariant method on it with
+ * the variant ID.
+ *
+ * Example:
+ *
+ * const productVariantElement = document.querySelector('product-variants');
+ * productVariantElement.selectVariant(12345);
+ *
+ * ------------------------------------------------------------------------------------------------------------
+ * BEING NOTIFIED WHEN A NEW VARIANT IS ADDED TO THE CART
+ * ------------------------------------------------------------------------------------------------------------
+ *
+ * This event is fired whenever a variant is added to the cart through a form selector (product page, quick
+ * view...). This event DOES NOT include any change done through the cart on an existing variant. For that,
+ * please refer to the "cart:updated" event.
+ *
+ * Example:
+ *
+ * document.addEventListener('variant:added', function(event) {
+ *   var variant = event.detail.variant; // Get the variant that was added
+ * });
+ *
+ * ------------------------------------------------------------------------------------------------------------
+ * BEING NOTIFIED WHEN THE CART CONTENT HAS CHANGED
+ * ------------------------------------------------------------------------------------------------------------
+ *
+ * This event is fired whenever the cart content has changed (if the quantity of a variant has changed, if a variant
+ * has been removed, if the note has changed...). This event will also be emitted when a new variant has been
+ * added (so you will receive both "variant:added" and "cart:updated"). Contrary to the variant:added event,
+ * this event will give you the complete details of the cart.
+ *
+ * Example:
+ *
+ * document.addEventListener('cart:updated', function(event) {
+ *   var cart = event.detail.cart; // Get the updated content of the cart
+ * });
+ *
+ * ------------------------------------------------------------------------------------------------------------
+ * REFRESH THE CART/MINI-CART
+ * ------------------------------------------------------------------------------------------------------------
+ *
+ * If you are adding variants to the cart and would like to instruct the theme to re-render the cart, you cart
+ * send the cart:refresh event, as shown below:
+ *
+ * document.documentElement.dispatchEvent(new CustomEvent('cart:refresh', {
+ *   bubbles: true
+ * }));
+ *
+ * ------------------------------------------------------------------------------------------------------------
+ * USAGE OF CUSTOM ELEMENTS
+ * ------------------------------------------------------------------------------------------------------------
+ *
+ * Our theme makes extensive use of HTML custom elements. Custom elements are an awesome way to extend HTML
+ * by creating new elements that carry their own JavaScript for adding new behavior. The theme uses a large
+ * number of custom elements, but the two most useful are drawer and popover. Each of those components add
+ * a "open" attribute that you can toggle on and off. For instance, let's say you would like to open the cart
+ * drawer, whose id is "mini-cart", you simply need to retrieve it and set its "open" attribute to true (or
+ * false to close it):
+ *
+ * document.getElementById('mini-cart').open = true;
+ *
+ * Thanks to the power of custom elements, the theme will take care automagically of trapping focus, maintaining
+ * proper accessibility attributes...
+ *
+ * If you would like to create your own drawer, you can re-use the <drawer-content> content. Here is a simple
+ * example:
+ *
+ * // Make sure you add "aria-controls", "aria-expanded" and "is" HTML attributes to your button:
+ * <button type="button" is="toggle-button" aria-controls="id-of-drawer" aria-expanded="false">Open drawer</button>
+ *
+ * <drawer-content id="id-of-drawer">
+ *   Your content
+ * </drawer-content>
+ *
+ * The nice thing with custom elements is that you do not actually need to instantiate JavaScript yourself: this
+ * is done automatically as soon as the element is inserted to the DOM.
+ *
+ * ------------------------------------------------------------------------------------------------------------
+ * THEME DEPENDENCIES
+ * ------------------------------------------------------------------------------------------------------------
+ *
+ * While the theme tries to keep outside dependencies as small as possible, the theme still uses third-party code
+ * to power some of its features. Here is the list of all dependencies:
+ *
+ * "vendor.js":
+ *
+ * The vendor.js contains required dependencies. This file is loaded in parallel of the theme file.
+ *
+ * - custom-elements polyfill (used for built-in elements on Safari - v1.0.0): https://github.com/ungap/custom-elements
+ * - web-animations-polyfill (used for polyfilling WebAnimations on Safari 12, this polyfill will be removed in 1 year - v2.3.2): https://github.com/web-animations/web-animations-js
+ * - instant-page (v5.1.0): https://github.com/instantpage/instant.page
+ * - tocca (v2.0.9); https://github.com/GianlucaGuarini/Tocca.js/
+ * - seamless-scroll-polyfill (v2.0.0): https://github.com/magic-akari/seamless-scroll-polyfill
+ *
+ * "flickity.js": v2.2.0 (with the "fade" package). Flickity is only loaded on demand if there is a product image
+ * carousel on the page. Otherwise it is not loaded.
+ *
+ * "photoswipe": v4.1.3. PhotoSwipe is only loaded on demand to power the zoom feature on product page. If the zoom
+ * feature is disabled, then this script is never loaded.
  */
 
+/*
+ * ------------------------------------------------------------------------------------------------------------
+ * Custom GTAG tracking events
+ * ------------------------------------------------------------------------------------------------------------
+ */
+
+// GTAG custom tracking for various user interactions
 document.addEventListener("DOMContentLoaded", () => {
-  Helpers.init();
-
-  TFAnalytics.init();
-  PDPRecommendations.init();
-  IntelligemsTracking.init();
-  ProductVisibilityTracking.init();
-  ShowMore.init();
-});
-
-const Helpers = {
-  init() {},
-
-  // Safe tracking wrapper (prevents errors if tfcanalytics is not ready)
-  track(eventName, payload = {}) {
-    try {
-      if (window.tfcanalytics && typeof window.tfcanalytics.trackEvent === "function") {
-        window.tfcanalytics.trackEvent(eventName, payload);
-      }
-    } catch (e) {
-      // silent
-    }
-  },
-
-  isInViewport(el) {
-    if (!el) return false;
-    const rect = el.getBoundingClientRect();
-    return rect.top < window.innerHeight;
-  },
-
-  createButton(label = window.translation.showMore) {
-    const btn = document.createElement("a");
-    btn.href = "#";
-    btn.className = "button button--primary button--small";
-    btn.textContent = label;
-    btn.setAttribute("data-show-more-btn", "true");
-    return btn;
-  }
-};
-
-const TFAnalytics = {
-  selectors: {
+  const selectors = {
     sortingContainerDesktop: ".product-facet__meta-bar-item.product-facet__meta-bar-item--sort",
     sortingContainerMobile: "#mobile-facet-toolbar",
     toggleButton: "button[is='toggle-button']",
-
     sortContent: "#sort-by-popover",
     sortContentItem: ".popover__choice-item",
     sortContentItemLabel: ".popover__choice-label",
-
     filterContent: "#facet-filters-form",
     filterContentItemCheckbox: ".checkbox-container",
     filterContentItemBlock: ".block-swatch",
     filterContentItemColorSwatch: ".color-swatch__item",
     filterContentItemLabel: "label",
     filterContentItemColorSwatchLabel: "label span",
-
     productRecommendationsContainer: ".shopify-section--product-recommendations",
     productRecommendationsItem: ".product-item",
     quickBuyDrawer: "quick-buy-drawer",
-
     mainProductContainer: ".shopify-section--main-product",
     mainProductZoomButton: ".product__zoom-button",
     sizeGuideButton: ".product-form__option-link",
     productTabs: ".product-tabs",
     productTabItem: ".collapsible-toggle",
-
     headerNavigation: ".header__inline-navigation",
     burgerMenuCloseButton: ".drawer__close-button",
     mobileMenuDrawer: "#mobile-menu-drawer",
     mobileMenuDrawerLink: ".mobile-nav__link",
     headerLink: ".header-link",
     languageSwitch: ".language-switch span"
-  },
+  };
 
-  init() {
-    document.addEventListener("click", this.handleClick.bind(this));
-  },
-
-  handleClick(event) {
+  document.addEventListener("click", (event) => {
     const target = event.target;
-    const s = this.selectors;
 
-    // Header navigation click
-    if (target.closest(s.headerLink)) {
-      Helpers.track("navigation_click", {
-        label: target.closest(s.headerLink).innerText
+    if (target.closest(selectors.headerLink)) {
+      window.tfcanalytics.trackEvent("navigation_click", {
+        label: target.closest(selectors.headerLink).innerText
       });
     }
 
-    // Desktop sorting open
-    if (target.closest(s.sortingContainerDesktop)) {
-      if (target.closest(s.toggleButton)) {
-        Helpers.track("open_sorting");
+    if (target.closest(selectors.sortingContainerDesktop)) {
+      if (target.closest(selectors.toggleButton)) {
+        window.tfcanalytics.trackEvent("open_sorting");
       }
     }
 
-    // Mobile toolbar: sorting / filters open
-    if (target.closest(s.sortingContainerMobile)) {
-      const btn = target.closest(s.toggleButton);
-      if (btn && btn.classList.contains("mobile-toolbar__item--sort")) {
-        Helpers.track("open_sorting");
-      } else if (btn && btn.classList.contains("mobile-toolbar__item--filters")) {
-        Helpers.track("open_filter");
+    if (target.closest(selectors.sortingContainerMobile)) {
+      if (target.closest(selectors.toggleButton).classList.contains("mobile-toolbar__item--sort")) {
+        window.tfcanalytics.trackEvent("open_sorting");
+      } else if (target.closest(selectors.toggleButton).classList.contains("mobile-toolbar__item--filters")) {
+        window.tfcanalytics.trackEvent("open_filter");
       }
     }
 
-    // Select sorting option
-    if (target.closest(s.sortContent)) {
-      const item = target.closest(s.sortContentItem);
-      if (item && !item.hasAttribute("data-handled")) {
-        const labelEl = item.querySelector(s.sortContentItemLabel);
-        Helpers.track("select_sorting", { sort_by: labelEl ? labelEl.innerText : "" });
-        item.setAttribute("data-handled", "true");
+    if (target.closest(selectors.sortContent)) {
+      if (target.closest(selectors.sortContentItem) && !target.closest(selectors.sortContentItem).hasAttribute('data-handled')) {
+        const item = target.closest(selectors.sortContentItem);
+
+        if (!item) return null;
+
+        const value = item.querySelector(selectors.sortContentItemLabel);
+
+        window.tfcanalytics.trackEvent("select_sorting", {
+          sort_by: value.innerText
+        });
+        item.setAttribute('data-handled', 'true');
       }
     }
 
-    // Select filter option (checkbox / block / color)
-    if (target.closest(s.filterContent)) {
-      // checkbox
-      const checkbox = target.closest(s.filterContentItemCheckbox);
-      if (checkbox && !checkbox.hasAttribute("data-handled")) {
-        const labelEl = checkbox.querySelector(s.filterContentItemLabel);
-        Helpers.track("select_filter", { filter_by: labelEl ? labelEl.innerText : checkbox.innerText });
-        checkbox.setAttribute("data-handled", "true");
-        return;
-      }
+    if (target.closest(selectors.filterContent)) {
+      if (target.closest(selectors.filterContentItemCheckbox) && !target.closest(selectors.filterContentItemCheckbox).hasAttribute('data-handled')) {
+        const item = target.closest(selectors.filterContentItemCheckbox);
 
-      // block swatch
-      const block = target.closest(s.filterContentItemBlock);
-      if (block && !block.hasAttribute("data-handled")) {
-        const labelEl = block.querySelector(s.filterContentItemLabel);
-        Helpers.track("select_filter", { filter_by: labelEl ? labelEl.innerText : block.innerText });
-        block.setAttribute("data-handled", "true");
-        return;
-      }
+        if (!item) return null;
 
-      // color swatch
-      const color = target.closest(s.filterContentItemColorSwatch);
-      if (color && !color.hasAttribute("data-handled")) {
-        const labelEl = color.querySelector(s.filterContentItemColorSwatchLabel);
-        Helpers.track("select_filter", { filter_by: labelEl ? labelEl.innerText : color.innerText });
-        color.setAttribute("data-handled", "true");
-        return;
+        const value = item.querySelector(selectors.filterContentItemLabel);
+
+        window.tfcanalytics.trackEvent("select_filter", {
+          filter_by: value.innerText
+        });
+        item.setAttribute('data-handled', 'true');
+      } else if (target.closest(selectors.filterContentItemBlock) && !target.closest(selectors.filterContentItemBlock).hasAttribute('data-handled')) {
+        const item = target.closest(selectors.filterContentItemBlock);
+
+        if (!item) return null;
+
+        const value = item.querySelector(selectors.filterContentItemLabel);
+
+        window.tfcanalytics.trackEvent("select_filter", {
+          filter_by: value.innerText
+        });
+        item.setAttribute('data-handled', 'true');
+      } else if (target.closest(selectors.filterContentItemColorSwatch) && !target.closest(selectors.filterContentItemColorSwatch).hasAttribute('data-handled')) {
+        const item = target.closest(selectors.filterContentItemColorSwatch);
+
+        if (!item) return null;
+
+        const value = item.querySelector(selectors.filterContentItemColorSwatchLabel);
+
+        window.tfcanalytics.trackEvent("select_filter", {
+          filter_by: value.innerText
+        });
+        item.setAttribute('data-handled', 'true');
       }
     }
 
-    // PDP recommendations click tracking
-    if (target.closest(s.productRecommendationsContainer)) {
-      const recoItem = target.closest(s.productRecommendationsItem);
-      const quickViewBtn = target.closest(s.toggleButton);
-      const quickBuy = target.closest(s.quickBuyDrawer);
+    if (target.closest(selectors.productRecommendationsContainer)) {
+      const recommendationsItem = target.closest(selectors.productRecommendationsItem);
+      const quickViewButton = target.closest(selectors.toggleButton);
+      const quickBuyDrawer = target.closest(selectors.quickBuyDrawer);
 
-      if (recoItem && !quickViewBtn && !quickBuy) {
-        Helpers.track("click_pdp_reco", { productId: recoItem.dataset.id });
+      if (recommendationsItem && !quickViewButton && !quickBuyDrawer) {
+        const productId = recommendationsItem.dataset.id;
+
+        window.tfcanalytics.trackEvent("click_pdp_reco", {
+          productId: productId
+        });
       }
 
-      if (quickViewBtn) {
+      if (quickViewButton) {
         event.stopPropagation();
         event.stopImmediatePropagation();
+        const productId = quickViewButton.closest(selectors.productRecommendationsItem).dataset.id;
 
-        const parentItem = quickViewBtn.closest(s.productRecommendationsItem);
-        if (parentItem) {
-          Helpers.track("click_pdp_reco_quickview", { productId: parentItem.dataset.id });
-        }
-      }
-    }
-
-    // Main product interactions
-    if (target.closest(s.mainProductContainer)) {
-      if (target.closest(s.mainProductZoomButton)) {
-        Helpers.track("view_zoom");
-      }
-
-      if (target.closest(s.sizeGuideButton)) {
-        Helpers.track("view_sizeguide");
-      }
-
-      if (target.closest(s.productTabs)) {
-        const tab = target.closest(s.productTabItem);
-        if (tab) {
-          const expanded = tab.getAttribute("aria-expanded") === "true";
-          if (expanded) {
-            Helpers.track("accordeon_interaction", { label: tab.innerText });
-          }
-        }
-      }
-    }
-
-    // Language switch
-    if (target.closest(s.languageSwitch)) {
-      Helpers.track("language_switch", { to: target.closest(s.languageSwitch).innerText });
-    }
-
-    // Burger click in header
-    if (target.closest(s.headerNavigation)) {
-      const btn = target.closest(s.toggleButton);
-      if (btn && btn.getAttribute("aria-controls") === "mobile-menu-drawer") {
-        Helpers.track("burger_click");
-      }
-    }
-
-    // Mobile menu close + navigation clicks
-    if (target.closest(s.mobileMenuDrawer)) {
-      if (target.closest(s.burgerMenuCloseButton)) {
-        Helpers.track("burger_close");
-      }
-
-      if (target.closest(s.mobileMenuDrawerLink)) {
-        Helpers.track("navigation_click", {
-          label: target.closest(s.mobileMenuDrawerLink).innerText
+        window.tfcanalytics.trackEvent("click_pdp_reco_quickview", {
+          productId: productId
         });
       }
     }
-  }
-};
 
-const PDPRecommendations = {
-  containerSelector: ".shopify-section--product-recommendations",
-  seen: false,
-  container: null,
-
-  init() {
-    this.container = document.querySelector(this.containerSelector);
-    if (!this.container) return;
-
-    // fire once when scrolled into view
-    this.boundCheck = this.check.bind(this);
-    window.addEventListener("scroll", this.boundCheck);
-    // also check on load (in case already visible)
-    this.check();
-  },
-
-  check() {
-    if (!this.seen && Helpers.isInViewport(this.container)) {
-      this.seen = true;
-      Helpers.track("view_pdp_reco");
-      window.removeEventListener("scroll", this.boundCheck);
-    }
-  }
-};
-
-const IntelligemsTracking = {
-  allowedIds: ["8291888922890", "9847956013322", "9769898869002"],
-
-  init() {
-    window.igEvents = window.igEvents || [];
-
-    document.addEventListener("click", (e) => {
-      const item = e.target.closest("product-item");
-      if (!item) return;
-
-      const id = item.getAttribute("data-id");
-      if (!id) return;
-
-      if (this.allowedIds.includes(id)) {
-        window.igEvents.push({ event: "productcard_newnameclicked" });
-        // console.log("Gültiges Produkt geklickt:", id);
+    if (target.closest(selectors.mainProductContainer)) {
+      if (target.closest(selectors.mainProductZoomButton)) {
+        window.tfcanalytics.trackEvent("view_zoom");
       }
-    });
-  }
-};
 
-const ProductVisibilityTracking = {
-  observer: null,
-  tracked: new Set(),
-  paused: false,
-  ignoreUntil: 0,
-  resumeTimeout: null,
+      if (target.closest(selectors.sizeGuideButton)) {
+        window.tfcanalytics.trackEvent("view_sizeguide");
+      }
 
-  init() {
-    this.observeItems();
-    document.addEventListener("theme:loading:end", this.reInit.bind(this));
-  },
+      if (target.closest(selectors.productTabs)) {
+        const productTabItem = target.closest(selectors.productTabItem);
 
-  observeItems() {
-    const items = document.querySelectorAll("product-item[data-id]");
-    this.observer = new IntersectionObserver(this.handle.bind(this), {
-      root: null,
-      threshold: 1.0 // fully visible
-    });
+        if (!productTabItem) return null;
 
-    items.forEach((i) => this.observer.observe(i));
-  },
+        const check = productTabItem.getAttribute("aria-expanded") === "true";
 
-  handle(entries) {
-    if (this.paused) return;
-    if (Date.now() < this.ignoreUntil) return;
-
-    entries.forEach((entry) => {
-      if (entry.isIntersecting && entry.intersectionRatio === 1) {
-        const id = entry.target.getAttribute("data-id");
-        if (!id) return;
-
-        if (!this.tracked.has(id)) {
-          Helpers.track("view_productitem", { productId: id });
-          this.tracked.add(id);
+        if (productTabItem && check) {
+          window.tfcanalytics.trackEvent("accordeon_interaction", {
+            label: productTabItem.innerText
+          });
         }
-
-        this.observer.unobserve(entry.target);
       }
-    });
-  },
-
-  reInit() {
-    this.paused = true;
-
-    if (this.resumeTimeout) clearTimeout(this.resumeTimeout);
-
-    try {
-      this.observer.disconnect();
-    } catch (e) {
-      // ignore
     }
 
-    // observe fresh items only
-    const newItems = document.querySelectorAll("product-item[data-id]");
-    newItems.forEach((item) => {
-      const id = item.getAttribute("data-id");
-      if (!id) return;
-      if (this.tracked.has(id)) return;
-      this.observer.observe(item);
-    });
+    if (target.closest(selectors.languageSwitch)) {
+      window.tfcanalytics.trackEvent("language_switch", {
+        to: target.closest(selectors.languageSwitch).innerText
+      });
+    }
 
-    // ignore for a short window to avoid tracking during automatic scroll
-    const IGNORE_MS = 700;
-    this.ignoreUntil = Date.now() + IGNORE_MS;
+    if (target.closest(selectors.headerNavigation)) {
+      const toggleButton = target.closest(selectors.toggleButton);
 
-    this.resumeTimeout = setTimeout(() => {
-      this.paused = false;
-      this.ignoreUntil = 0;
-    }, IGNORE_MS + 50);
-  }
-};
+      if (!toggleButton) return null;
 
-/**
- * ==========================================================
- * Show more (data-added-button-more)
- *
- * NEW RULES (your last message):
- * - We find element with data-added-button-more="p" (or other tag).
- * - Button is inserted AFTER that element (outside, as next sibling).
- * - Collapsed height is applied to the SAME element [data-added-button-more]
- * - Collapsed height equals the height up to the FIRST matched tag inside it (e.g. first <p>)
- * ==========================================================
- */
-const ShowMore = {
-  init() {
-    const containers = document.querySelectorAll("[data-added-button-more]");
-    if (!containers.length) return;
+      const toggleButtonAriaControls = toggleButton.getAttribute("aria-controls") === "mobile-menu-drawer";
 
-    containers.forEach((container) => this.setup(container));
-  },
-
-  setup(container) {
-    // prevent double init
-    if (container.dataset.showMoreInited === "true") return;
-    container.dataset.showMoreInited = "true";
-
-    const tag = (container.getAttribute("data-added-button-more") || "").trim();
-    if (!tag) return;
-
-    // find FIRST element by tag inside container
-    const firstEl = container.querySelector(tag);
-    if (!firstEl) return;
-
-    // calculate collapsed height as "container top -> firstEl bottom"
-    const containerRect = container.getBoundingClientRect();
-    const firstRect = firstEl.getBoundingClientRect();
-
-    // height in pixels that should remain visible in collapsed state
-    let collapsedHeight = Math.round(firstRect.bottom - containerRect.top);
-
-    // Safety: if container is currently display:none etc.
-    if (!Number.isFinite(collapsedHeight) || collapsedHeight <= 0) return;
-
-    // Ensure collapsed height is not larger than full scrollHeight
-    const fullHeight = container.scrollHeight;
-    collapsedHeight = Math.min(collapsedHeight, fullHeight);
-
-    // If there is nothing to collapse, no button
-    if (fullHeight <= collapsedHeight + 5) return;
-
-    // apply collapsed styles to the SAME container
-    container.style.overflow = "hidden";
-    container.style.maxHeight = collapsedHeight + "px";
-    container.style.transition = "max-height 0.3s ease";
-
-    // insert button AFTER container (not inside)
-    const btn = Helpers.createButton(window.translation.showMore);
-    let expanded = false;
-
-    btn.addEventListener("click", (e) => {
-      e.preventDefault();
-      expanded = !expanded;
-
-      if (expanded) {
-        // expand
-        container.style.maxHeight = container.scrollHeight + "px";
-        btn.textContent = window.translation.showLess;
-      } else {
-        // collapse
-        container.style.maxHeight = collapsedHeight + "px";
-        btn.textContent = window.translation.showMore;
-
-        // scroll back to start of container (optional but matches your old logic)
-        container.scrollIntoView({ behavior: "smooth", block: "start" });
+      if (toggleButton && toggleButtonAriaControls) {
+        window.tfcanalytics.trackEvent("burger_click");
       }
-    });
+    }
 
-    // Insert after container
-    container.insertAdjacentElement("afterend", btn);
+    if (target.closest(selectors.mobileMenuDrawer)) {
+      if (target.closest(selectors.burgerMenuCloseButton)) {
+        window.tfcanalytics.trackEvent("burger_close");
+      }
+
+      if (target.closest(selectors.mobileMenuDrawerLink)) {
+        window.tfcanalytics.trackEvent("navigation_click", {
+          label: target.closest(selectors.mobileMenuDrawerLink).innerText
+        });
+      }
+    }
+  });
+
+  let check = false;
+
+  function isElementInView(element) {
+    if (!element) return null;
+
+    const bounding = element.getBoundingClientRect();
+
+    return (
+      bounding.top < window.innerHeight
+    );
   }
+
+  const recommendedProducts = document.querySelector(selectors.productRecommendationsContainer);
+  function checkIfInView() {
+    if (isElementInView(recommendedProducts) && !check) {
+      check = true;
+      window.tfcanalytics.trackEvent("view_pdp_reco");
+      window.removeEventListener("scroll", checkIfInView);
+    }
+  }
+
+  window.addEventListener("scroll", checkIfInView);
+
+});
+
+
+// GTAG custom tracking for product-item visibility
+const productItems = document.querySelectorAll('product-item[data-id]');
+const trackedItems = new Set(); // product IDs, that have already been tracked; prevents double-tracking
+
+const observerOptions = {
+  root: null,              // viewport
+  threshold: 1.0           // 1.0 = fully visible
 };
+
+// tracking shortly paused during AJAX pagination to avoid tracking invisible items
+let trackingPaused = false;
+let trackingResumeTimeout = null;
+let trackingIgnoreUntil = 0; // timestamp until which observer entries are ignored
+
+function handleProductInView(entries, observer) {
+  if (trackingPaused) return;
+  if (Date.now() < trackingIgnoreUntil) return;
+  entries.forEach(entry => {
+    if (entry.isIntersecting && entry.intersectionRatio === 1) {
+      const item = entry.target;
+      const id = item.getAttribute('data-id');
+
+      if (!trackedItems.has(id)) {
+        window.tfcanalytics.trackEvent("view_productitem", {
+          productId: id
+        });
+        trackedItems.add(id);
+      }
+
+      observer.unobserve(item);
+    }
+  });
+}
+
+const observer = new IntersectionObserver(handleProductInView, observerOptions);
+
+// watch all product-item elements
+productItems.forEach(item => observer.observe(item));
+
+// NOTE: we rely only on `theme:loading:end` to re-init observation after AJAX pagination.
+document.addEventListener('theme:loading:end', () => {
+  trackingPaused = true;
+  if (trackingResumeTimeout) clearTimeout(trackingResumeTimeout);
+  try { observer.disconnect(); } catch (e) { /* ignore */ }
+  const newItems = document.querySelectorAll('product-item[data-id]');
+  newItems.forEach(item => {
+    const id = item.getAttribute('data-id');
+    if (!id) return;
+    if (trackedItems.has(id)) return;
+    observer.observe(item);
+  });
+  // Ignore observer entries for a short window to avoid tracking during automatic scroll.
+  const IGNORE_MS = 700;
+  trackingIgnoreUntil = Date.now() + IGNORE_MS;
+  // Ensure we eventually re-enable tracking
+  trackingResumeTimeout = setTimeout(() => {
+    trackingPaused = false;
+    trackingIgnoreUntil = 0;
+  }, IGNORE_MS + 50);
+});
+

@@ -517,178 +517,17 @@
       "settings": {
         "subheading": "",
         "title": "",
-        "content": "<p>Unsere <strong>Period Swimwear</strong> hält dich am Strand und bei kurzen Aufenthalten im Wasser bei <strong>leichter bis mittelstarker Periode</strong> <strong>trocken</strong> – dank saugstarker Einlage in unsichtbarem Design. <br/><br/>Für längere Aufenthalte im Wasser und für's Schwimmen haben wir die <strong>PERFORMANCE® Period Swimwear</strong> Linie entwickelt. Mit 3 <strong>einzigartigen Technologien</strong>, ist diese darauf ausgelegt, dass auch beim Baden möglichst wenig Wasser in die Panty ein- und kein Blut aus der Panty ausdringt: Das <strong>Panty-in-Panty-System®</strong>, das <strong>WaterStop Silikon®</strong> und das <strong>wasserabweisende Material</strong>.  NEU: Mit optimiertem Fit!<br/><br/>**91% der Testerinnen bestätigen: Die Period Swimwear Panty kann bei leichter Periode beim Schwimmen getragen werden.</p><h2>Period Swimwear – Perioden Bademode für Damen für selbstbewusste Tage</h2><p>Die Period Swimwear von The Female Company vereint Funktion und Stil in einer Bademode, die wirklich hält, was sie verspricht. Unsere Perioden Bademode bietet dir zuverlässigen Schutz und höchsten Komfort im Wasser, am Strand oder beim Sonnenbaden. Die spezielle Perioden Bikini Hose mit integrierter Schutzlage sorgt dafür, dass du dich bei deiner Periode rundum sicher fühlst, während unsere Badeanzüge zugleich feminin und sexy wirken. Jedes Modell überzeugt durch eine perfekte Passform und angenehmes Tragegefühl. Auch Mädchen finden hier spezielle Perioden Bademode für Teenager Perioden Bademode, die Halt bietet, bequem sitzt und Bewegungsfreiheit ermöglicht.</p><p>Jetzt Perioden Bademode kaufen und den Sommer unbeschwert genießen.</p><h2>Was ist Perioden Bademode und wie funktioniert sie?</h2><p><br/>Die Period Swimwear Panty von The Female Company gibt dir Sicherheit am Strand, im Pool und beim Baden. Jede Perioden Bikini Hose und jeder Perioden Badeanzug arbeitet mit einer mehrschichtigen Einlage, die Flüssigkeit schnell aufnimmt und innen bindet. Die Fluid Protection Technologie hält seitlich dicht, während die Flexi Technology sich deiner Bewegung anpasst und beim Schwimmen angenehm weich bleibt.</p><p>Vegane und auf Schadstoffe getestete Materialien sorgen für einen hautfreundlichen Tragekomfort. Die nachhaltige Bademode für Damen ist pflegeleicht, atmungsaktiv und langlebig.</p>",
+        "content": "<p>Unsere <strong>Period Swimwear</strong> hält dich am Strand und bei kurzen Aufenthalten im Wasser bei <strong>leichter bis mittelstarker Periode</strong> <strong>trocken</strong> – dank saugstarker Einlage in unsichtbarem Design. <br/><br/>Für längere Aufenthalte im Wasser und für's Schwimmen haben wir die <strong>PERFORMANCE® Period Swimwear</strong> Linie entwickelt. Mit 3 <strong>einzigartigen Technologien</strong>, ist diese darauf ausgelegt, dass auch beim Baden möglichst wenig Wasser in die Panty ein- und kein Blut aus der Panty ausdringt: Das <strong>Panty-in-Panty-System®</strong>, das <strong>WaterStop Silikon®</strong> und das <strong>wasserabweisende Material</strong>.  NEU: Mit optimiertem Fit!<br/><br/>**91% der Testerinnen bestätigen: Die Period Swimwear Panty kann bei leichter Periode beim Schwimmen getragen werden.</p>",
         "button_text": "",
         "button_link": "",
         "background_type": "full_width",
         "text_width": "fill",
-        "text_position": "center",
+        "text_position": "left",
         "text_alignment": "left",
         "background": "#ff659c",
         "text_color": "#ffffff",
         "button_background": "rgba(0,0,0,0)",
         "button_text_color": "rgba(0,0,0,0)"
-      }
-    },
-    "gallery_U8CT4Q": {
-      "type": "gallery",
-      "blocks": {
-        "image_MWyNpY": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/Bikini-Top-Black-4.jpg",
-            "caption": ""
-          }
-        },
-        "image_MMzmUF": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/Perioden_Badeanzug_2.png",
-            "caption": ""
-          }
-        },
-        "image_c7khnr": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/PeriodenBikini_Leo_Set-3.jpg",
-            "caption": ""
-          }
-        },
-        "image_Mh7AhP": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/Bandeau_Bikini_Top-597878.jpg",
-            "caption": ""
-          }
-        }
-      },
-      "block_order": [
-        "image_MWyNpY",
-        "image_MMzmUF",
-        "image_c7khnr",
-        "image_Mh7AhP"
-      ],
-      "name": "Gallery",
-      "settings": {
-        "show_arrows": true,
-        "subheading": "",
-        "title": "",
-        "section_header_short_description": "<p>Your short description.</p>",
-        "section_header_heading_size": "h3",
-        "section_header_highest_hierarchy": false,
-        "section_header_short_description_font_size": "medium",
-        "section_container_width": "fluid",
-        "section_text_alignment": "left",
-        "background": "rgba(0,0,0,0)",
-        "text_color": "rgba(0,0,0,0)",
-        "section_heading_color": "rgba(0,0,0,0)",
-        "section_subheading_color": "rgba(0,0,0,0)",
-        "section_heading_font_family": "default",
-        "section_spacing_top": 48,
-        "section_spacing_bottom": 48,
-        "section_spacing_different_mobile": false,
-        "section_spacing_top_mobile": 0,
-        "section_spacing_bottom_mobile": 0
-      }
-    },
-    "custom_html_3knapq": {
-      "type": "custom-html",
-      "name": "Custom HTML",
-      "settings": {
-        "subheading": "",
-        "title": "",
-        "html": "<div style=\"color:#333;padding:40px 20px;line-height:1.6;font-size:16px;background:none;\">\n\n  <h3 style=\"text-align:center;margin-top:20px;font-size:24px;color:#000;\">\n    PERFORMANCE® Period Swimwear im Detail\n  </h3>\n\n  <p>\n    Für längere Aufenthalte im Wasser wurde die PERFORMANCE® Linie entwickelt. Hier greifen drei markeneigene Lösungen ineinander, \n    damit möglichst wenig Wasser in die Einlage gelangt und beim Bewegen nichts herausgedrückt wird.\n  </p>\n\n  <div style=\"background-color:#fff;border-radius:0;padding:25px;margin:25px 0;border:1px solid #e8b6b6;\">\n    <ul style=\"list-style:none;padding-left:0;margin:0;\">\n      <li style=\"margin-bottom:10px;\">\n        <strong>Panty-in-Panty-System®:</strong> eine innenliegende Passform, die die Einlage präzise am Körper hält.\n      </li>\n      <li style=\"margin-bottom:10px;\">\n        <strong>WaterStop Silikon®:</strong> ein weicher Abschlussrand, der zusätzliche Sicherheit an Bein und Taille bietet.\n      </li>\n      <li>\n        <strong>Wasserabweisendes Außenmaterial:</strong> schnelltrocknend, formstabil und ideal für Schwimmen und Wassersport.\n      </li>\n    </ul>\n  </div>\n\n  <p>\n    Die Einlage selbst ist schlank konstruiert und besteht aus vier funktionalen Schichten: \n    eine Stay Dry Layer Technologie®, die in Sekunden trocknet, eine hochabsorbierende Lage, \n    eine auslaufsichere Membran und eine weiche, atmungsaktive Textilinnenseite.\n  </p>\n\n  <p>\n    Das Ergebnis ist eine diskrete, auslaufsichere Lösung mit verifizierten Produkteigenschaften wie \n    einem leak-proof lining aus atmungsaktivem, schnell trocknendem Material.\n  </p>\n\n  <p>\n    Modelle gibt es in Light bis Extra Strong, damit du je nach Tag und Aktivität genau die passende \n    Saugstärke wählst. Jede Period Swimwear kombiniert Technologie, Stil und Komfort für selbstbewusste \n    Tage im Wasser mit maximalem Schutz.\n  </p>\n\n</div>\n<div style=\"color:#333;padding:40px 20px;line-height:1.6;font-size:16px;background:none;\">\n\n  <h3 style=\"text-align:center;margin-top:20px;font-size:24px;color:#000;\">\n    Perioden Bikini zum Schwimmen – sicher und komfortabel im Wasser\n  </h3>\n\n  <p>\n    Mit dem Perioden Bikini zum Schwimmen von The Female Company kannst du dich im Wasser frei und sicher bewegen. \n    Die innovative Perioden-Bademode wurde entwickelt, um beim Baden und Schwimmen zuverlässigen Schutz zu bieten. \n    Dank der integrierten Schutzschichten bleibt die Flüssigkeit dort, wo sie hingehört, während das wasserabweisende \n    Material verhindert, dass sich die Perioden-Bademode von außen vollsaugt. Die Kombination aus Funktion und Komfort \n    macht sie zu einer der besten Lösungen für aktive Tage im Wasser.\n  </p>\n\n  <h4 style=\"color:#d83a56;margin-top:30px;margin-bottom:10px;\">Zuverlässiger Schutz beim Schwimmen und Baden</h4>\n  <p>\n    Die Bademode sorgt dafür, dass du dich im Wasser bewegt kannst, ohne dir Sorgen um Auslaufen zu machen. \n    Die durchdachten Materialien unterstützen dich sowohl beim Planschen als auch beim sportlichen Schwimmen.\n  </p>\n\n  <h4 style=\"color:#d83a56;margin-top:30px;margin-bottom:10px;\">Vielfältige Designs für jeden Figurtyp</h4>\n  <p>\n    Alle Modelle bieten bequemen Halt und hohen Tragekomfort – ob als Perioden Bikini Hose, \n    Bikinitop Triangle oder sportliche Performance Short. Auch für Mädchen und Teens gibt es passende Varianten: \n    Die Perioden Bikini Mädchen Kollektionen überzeugen mit Sicherheit, Bewegungsfreiheit und Stil. \n    Viele Kundinnen berichten in ihren Erfahrungen, dass sie sich beim Schwimmen rundum geschützt fühlen.\n  </p>\n\n  <h4 style=\"color:#d83a56;margin-top:30px;margin-bottom:10px;\">Materialien und hoher Tragekomfort</h4>\n  <p>\n    Die veganen Materialien sind sanft zur Haut und halten häufiges Schwimmen im Pool oder Meer problemlos aus. \n    Modelle wie die Perioden Bikini Teenager oder Perioden Bikini Hose Mädchen sind besonders weich und anschmiegsam – ideal für \n    empfindliche Haut oder die ersten Zyklen. Je nach Tag können sie Tampons oder Binden komplett ersetzen.\n  </p>\n\n  <h4 style=\"color:#d83a56;margin-top:30px;margin-bottom:10px;\">Große Auswahl an stilvoller Bademode</h4>\n  <p>\n    Mit modernen Farben, femininen Schnitten und funktionalen Details bietet die Kollektion eine große Vielfalt \n    an Perioden-Bademode – von schlichten Bikinis bis zu eleganten Badeanzügen. Ob Strandurlaub, See oder Schwimmbad: \n    Diese Perioden-Bademode begleitet dich sicher durch jeden Moment. Für stärkere Tage stehen Varianten für \n    <em>Perioden Bikini starke Blutung</em> bereit, die zusätzlichen Schutz bieten.\n  </p>\n\n  <h4 style=\"color:#d83a56;margin-top:30px;margin-bottom:10px;\">Nachhaltige Bademode online kaufen</h4>\n  <p>\n    Wenn du Perioden-Bademode kaufen möchtest, findest du bei The Female Company eine nachhaltige Auswahl, \n    die Komfort, Funktion und Stil vereint. Jede Damen Perioden Bikini Hose, jedes Bikinitop und jeder Badeanzug \n    sorgt dafür, dass du dich in deiner Haut wohlfühlst. Auch Perioden Bikini Teens und Mädchen Perioden Bikini \n    Modelle stehen zur Auswahl – perfekt für den Einstieg in die Menstruation. So findest du die Bademode, \n    die zu deinem Körper, deinem Alltag und deinem Zyklus passt.\n  </p>\n  <h3 style=\"text-align:center;margin-top:20px;font-size:24px;color:#000;\">\n    Perioden Bademode für Damen: Welche Bademode passt zu dir?\n  </h3>\n\n  <p>\n    Die Passform entscheidet, wie wohl du dich in deiner Haut fühlst. \n    Bei The Female Company findest du Period Bademode für Frauen, die Halt bietet. \n    Jedes Design ist so entwickelt, dass sich die Bademode angenehm an deine Silhouette anschmiegt.\n  </p>\n\n  <div style=\"background-color:#fff;border-radius:0;padding:25px;margin:25px 0;border:1px solid #e8b6b6;\">\n    <ul style=\"list-style:none;padding-left:0;margin:0;\">\n      <li style=\"margin-bottom:12px;\">\n        <strong>Flexible Höschen und elastische Träger:</strong> garantieren einen bequemen Sitz für jede Bewegung.\n      </li>\n      <li style=\"margin-bottom:12px;\">\n        <strong>Schnitte für unterschiedliche Figurtypen:</strong> ermöglichen es, Bereiche wie Bauch und Hüfte stilvoll zu kaschieren – wenn du möchtest.\n      </li>\n      <li style=\"margin-bottom:12px;\">\n        <strong>Sanfter Beinausschnitt:</strong> sorgt für Bewegungsfreiheit und eine feminine Silhouette.\n      </li>\n      <li style=\"margin-bottom:12px;\">\n        <strong>Für Frauen mit kleiner Oberweite:</strong> eignen sich Modelle, die das Dekolleté schön zur Geltung bringen und angenehm sitzen.\n      </li>\n      <li>\n        <strong>Weniger Haut zeigen:</strong> Badeanzüge oder Tankinis lassen sich perfekt mit Strandkleidern oder einem Pareo kombinieren.\n      </li>\n    </ul>\n  </div>\n\n  <p>\n    Ob du dich für Ober- und Unterteile entscheidest oder lieber Badeshorts kombinierst, \n    alle Modelle bieten einen hohen Tragekomfort.\n  </p>\n\n</div>",
-        "add_vertical_spacing": true,
-        "disable_inside_spacing": false,
-        "background_type": "full_width",
-        "background": "rgba(0,0,0,0)",
-        "text_color": "rgba(0,0,0,0)"
-      }
-    },
-    "faq_TwBtYh": {
-      "type": "faq",
-      "blocks": {
-        "question_ayj6gn": {
-          "type": "question",
-          "settings": {
-            "title": "Wie funktioniert Perioden Bademode?",
-            "answer": "<p>Die Perioden Bademode von The Female Company nutzt mehrere Schutzschichten, die Flüssigkeit im Inneren binden und gleichzeitig wasserabweisend wirken. So bleibt der Körper beim Schwimmen trocken und sicher. Jede Perioden Bikini Hose ist mit einer atmungsaktiven Membran ausgestattet, die Gerüche verhindert und sich angenehm anfühlt. Die Materialien sind resistent gegendie Bademode auch bei häufigem Schwimmen formstabil bleibt. Dieses Prinzip funktioniert sowohl bei der klassischen Perioden Bademode als auch bei den Modellen für Mädchen und Teenager.</p>"
-          }
-        },
-        "question_kjydWn": {
-          "type": "question",
-          "settings": {
-            "title": "Kann man mit einem Perioden Bikini wirklich schwimmen gehen?",
-            "answer": "<p>Ja, der Perioden Bikini zum Schwimmen wurde speziell dafür entwickelt. Durch die Kombination aus wasserabweisendem Stoff und absorbierender Schicht bleibt alles zuverlässig an Ort und Stelle. Die PERFORMANCE® Linie bietet zusätzlichen Schutz bei längeren Aufenthalten im Wasser. So können Damen und Mädchen alle auch bei Periode unbeschwert schwimmen, egal ob im Meer, Pool oder See.</p>"
-          }
-        },
-        "question_H3x8K7": {
-          "type": "question",
-          "settings": {
-            "title": "Für wen ist die Perioden Badebekleidung geeignet?",
-            "answer": "<p>Die Bademode eignet sich für Damen, Mädchen und Teenager mit leichter bis mittelstarker Periode. Sie bietet Sicherheit beim Schwimmen, am Strand oder im Alltag. Auch junge Mädchen, die ihre erste Periode haben, finden bei The Female Company Perioden Bademode Mädchen Modelle, die angenehm sitzen und Bewegungsfreiheit geben.</p>"
-          }
-        },
-        "question_XU4RG6": {
-          "type": "question",
-          "settings": {
-            "title": "Welche Modelle gibt es - Bikini oder Badeanzug?",
-            "answer": "<p>Im Sortiment findest du viele Varianten, darunter den klassischen Damen Perioden Bikini, den Einteiler. Auch Perioden Bikini Slips und PERFORMANCE® Shorts gehören dazu. Die Kollektion ist so gestaltet, dass jede Figur eine Passform findet, bei der die Bademode passt und ein gutes Gefühl vermittelt.</p>"
-          }
-        },
-        "question_pnP3dq": {
-          "type": "question",
-          "settings": {
-            "title": "Wie pflege ich meinen Perioden Bikini richtig?",
-            "answer": "<p>Nach dem Tragen solltest du die Bademode mit kaltem Wasser ausspülen und anschließend bei 30 Grad im Schonwaschgang reinigen. Verwende ein mildes Waschmittel und lasse die Stücke an der Luft trocknen. So bleibt deine hochwertige Bademode für Damen lange schön, elastisch und funktional.</p>"
-          }
-        },
-        "question_776DQM": {
-          "type": "question",
-          "settings": {
-            "title": "Wie unterscheiden sich die Modelle für Teenager und Erwachsene?",
-            "answer": "<p>Die Perioden Bikini Teenager Kollektion wurde speziell für junge Körper entwickelt. Sie bietet eine bequeme Passform, weiche Materialien und sorgt dafür, dass Mädchen und Teens sich beim Schwimmen sicher fühlen. Alle Varianten sind aus veganen und passen sich der Bewegung perfekt an.</p>"
-          }
-        },
-        "question_yUFyLB": {
-          "type": "question",
-          "settings": {
-            "title": "Wo kann ich Perioden Bademode für Frauen kaufen?",
-            "answer": "<p>Bei The Female Company kannst du hochwertige Bademode für Damen online kaufen. Die Auswahl umfasst Badebekleidung für Damen, Teens und Mädchen. Ob du die beste Perioden Bademode für dich suchst oder einen nachhaltigen Perioden Bikini für deine Tochter - hier findest du Qualität, Komfort und Stil in einem.</p>"
-          }
-        }
-      },
-      "block_order": [
-        "question_ayj6gn",
-        "question_kjydWn",
-        "question_H3x8K7",
-        "question_XU4RG6",
-        "question_pnP3dq",
-        "question_776DQM",
-        "question_yUFyLB"
-      ],
-      "name": "FAQ",
-      "settings": {
-        "show_navigation": false,
-        "enable_schema": false,
-        "section_header_subheading": "",
-        "section_header_heading": "FAQ Perioden Damen Bademode",
-        "section_header_short_description": "",
-        "section_header_heading_size": "h3",
-        "section_header_highest_hierarchy": false,
-        "section_header_short_description_font_size": "medium",
-        "section_container_width": "md",
-        "section_text_alignment": "left",
-        "section_background_color": "#ea516c",
-        "section_text_color": "#ffffff",
-        "section_heading_color": "#ffffff",
-        "section_subheading_color": "rgba(0,0,0,0)",
-        "section_heading_font_family": "default",
-        "section_spacing_top": 32,
-        "section_spacing_bottom": 32,
-        "section_spacing_different_mobile": false,
-        "section_spacing_top_mobile": 0,
-        "section_spacing_bottom_mobile": 0
       }
     },
     "39d569d6-89ee-4c4c-af84-8d5ad5312425": {
@@ -713,7 +552,6 @@
         "9839cb17-4191-4e51-8bfd-81e28f54db5c",
         "35517a97-9151-4545-819c-d874291d2438"
       ],
-      "disabled": true,
       "settings": {
         "show_navigation": true,
         "enable_schema": true,
@@ -930,9 +768,6 @@
     "multi_column_DhLY8x",
     "7cc3d404-c5c7-4cfc-8124-8c91cd082923",
     "rich_text_97yP6y",
-    "gallery_U8CT4Q",
-    "custom_html_3knapq",
-    "faq_TwBtYh",
     "39d569d6-89ee-4c4c-af84-8d5ad5312425",
     "4f19f758-87c3-4595-ac6d-67ef58cb4b7b",
     "528ac3ca-ddd2-4007-b700-fbd0a4e2a6ec",

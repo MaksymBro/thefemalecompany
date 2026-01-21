@@ -36,11 +36,7 @@
               <ul class="linklist list--unstyled" role="list">
                 {%- for link in search_menu.links -%}
                   <li class="linklist__item">
-                    <a href="{{ link.url }}" class="link--faded">
-                        <p>
-                            {{ link.title }}
-                        </p>
-                    </a>
+                    <a href="{{ link.url }}" class="link--faded">{{ link.title }}</a>
                   </li>
                 {%- endfor -%}
               </ul>
@@ -57,9 +53,7 @@
                 <ul class="linklist list--unstyled" role="list">
                   {%- for sub_link in link.links -%}
                     <li class="linklist__item">
-                      <a href="{{ sub_link.url }}" class="link--faded">
-                          <p>{{ sub_link.title }}</p>
-                      </a>
+                      <a href="{{ sub_link.url }}" class="link--faded">{{ sub_link.title }}</a>
                     </li>
                   {%- endfor -%}
                 </ul>

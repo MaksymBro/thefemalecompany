@@ -36,17 +36,17 @@
     "product_custom_label_2_background": "#ffffff",
     "product_in_stock_text_color": "#2e9e7b",
     "product_low_stock_text_color": "#de2a2a",
-    "heading_font": "itc_caslon_no_224_n5",
+    "heading_font": "fraunces_n6",
     "heading_font_size": "small",
     "heading_text_transform": "normal",
-    "text_font": "avenir_next_n4",
+    "text_font": "figtree_n4",
     "text_font_size": 15,
     "currency_code_enabled": false,
     "stagger_products_apparition": false,
     "stagger_blog_posts_apparition": false,
     "reveal_product_media": false,
     "round_color_swatches": true,
-    "color_swatch_config": "Schwarz:#000000\nGrau:#969696\nRosa Rib:rosarib.png\nBotanical Garden: #2A5B4D\nBotanical Gardens: #2A5B4D\nBotanical Garden/ Caribbean Green: Botanical_Green_Caribbean_Green_552e35bf-e9a5-4fe2-8e12-48f19127174e.png\nViolett:#9537A1\nBurgundy Red:#942a3b\nDusky Pink:#e3bcbd\nSporty:sporty_color.png\nRot:#d62c34\nCardinal Red:#d62c34\nLeo:icon_leo.png\nLeo Sienna:icon_leo.png\nLila:#9270AD\nCherry:#A31023\nRose:#F9DBE9\nLilac:#B28EC3\nBerry:#5D1D3B\nGrapefruit:#FFBBB3\nSand:#decbc5\nSienna:#e2bca7\nDark Brown:#642C1D\nHot Coral:#F1514D\nTeal Blue:#98C0D9\nCaribbean Green:#50D3CB\nElectric Blue:#0281d5\nEstate Blue: #19478A\nTeal Blue & Rose:RB_Color.png\nLight Blue & Rose:RL_Color.png\nLight Lilac & Rose:LB_Color.png\nEdelstahl: #969696\nWeiß: #FFFFFF\nOffwhite: #FFFFFF\nLeo/ Raisin: https://cdn.shopify.com/s/files/1/0613/9261/7710/files/Colorswatches_Leo.png?v=1738042773\nLeo Sienna: https://cdn.shopify.com/s/files/1/0613/9261/7710/files/Colorswatches_Leo_Sienna.png?v=1738042774\nCheetah/ Maroon:CheM_Color.png\nMagenta Purple: #a50259\nMix: Farbenmix_Farbauswahl.png\nPeacock: #6381a0\nPurple: #6052ad\nBotanical Garden: #496d73\nDark Purple: #6E0346\nBaton Rouge: #bb3980\nFlambe:#d3507a\nPeach:#ec5800\nInsignia Blue:#303e55\nBeet red:#951A2F\nBright Violet:#5B4A93\nleo brown:#C3A07B\nrusty red:#772D27\nmidnight blue:#223265\niron:#766867\nSchwarz-Weiß: Colorswatch_black_white.png\nBurgundy:#551329\nKhaki:#82A17E\nIvy:#4C5F32\nLeo Sienna / Violet:Icon_Leo_purple.png\nSchwarz / LeoSienna:Icon_Leo_schwarz.png\nSchwarz/Leo Sienna:Icon_Leo_schwarz.png\nBlack / Leo Sienna:Icon_Leo_schwarz.png\nPattern Green: Icon_Muster_Gruen.png\nIcy Morn: #E4E5E0\nDark Sage: #556669\nAnthracite: #494E5A\nDuffelbag: #566953\nLavendula: #DABEDF\nLeo Wasabi: Leo_Wasabi.png\nWispy Clouds: #EAD7D0\nLeo/Lavendula: Leo_Lavendula.png\nSchwarz / Trooper: Schwarz_Trooper.png\nSpicy Cinnamon: #AC3925\nFig: #58263D\nOffwhite: #D5CDC1\nSchwarz/Weiß: Colorswatch_black_white.png",
+    "color_swatch_config": "Schwarz:#000000\nGrau:#969696\nRosa Rib:rosarib.png\nBotanical Garden: #2A5B4D\nBotanical Gardens: #2A5B4D\nBotanical Garden/ Caribbean Green: Botanical_Green_Caribbean_Green_552e35bf-e9a5-4fe2-8e12-48f19127174e.png\nViolett:#9537A1\nBurgundy Red:#942a3b\nDusky Pink:#e3bcbd\nSporty:sporty_color.png\nRot:#d62c34\nCardinal Red:#d62c34\nLeo:icon_leo.png\nLeo Sienna:icon_leo.png\nLila:#9270AD\nCherry:#A31023\nRose:#F9DBE9\nLilac:#B28EC3\nBerry:#5D1D3B\nGrapefruit:#FFBBB3\nSand:#decbc5\nSienna:#e2bca7\nDark Brown:#642C1D\nHot Coral:#F1514D\nTeal Blue:#98C0D9\nCaribbean Green:#50D3CB\nElectric Blue:#0281d5\nEstate Blue: #19478A\nTeal Blue & Rose:RB_Color.png\nLight Blue & Rose:RL_Color.png\nLight Lilac & Rose:LB_Color.png\nEdelstahl: #969696\nWeiß: #FFFFFF\nOffwhite: #FFFFFF\nLeo/ Raisin: https://cdn.shopify.com/s/files/1/0613/9261/7710/files/Colorswatches_Leo.png?v=1738042773\nLeo Sienna: https://cdn.shopify.com/s/files/1/0613/9261/7710/files/Colorswatches_Leo_Sienna.png?v=1738042774\nCheetah/ Maroon:CheM_Color.png\nMagenta Purple: #a50259\nMix: Farbenmix_Farbauswahl.png\nPeacock: #6381a0\nPurple: #6052ad\nBotanical Garden: #496d73\nDark Purple: #6E0346\nBaton Rouge: #bb3980\nFlambe:#d3507a\nPeach:#ec5800\nInsignia Blue:#303e55\nBeet red:#951A2F\nBright Violet:#5B4A93\nleo brown:#C3A07B\nrusty red:#772D27\nmidnight blue:#223265\niron:#766867\nSchwarz-Weiß: Colorswatch_black_white.png\nBurgundy:#551329\nKhaki:#82A17E\nIvy:#4C5F32\nLeo Sienna / Violet:Icon_Leo_purple.png\nSchwarz / LeoSienna:Icon_Leo_schwarz.png\nBlack / LeoSienna:Icon_Leo_schwarz.png\nPattern Green: Icon_Muster_Gruen.png\nIcy Morn: #E4E5E0\nDark Sage: #556669\nAnthracite: #494E5A\nDufflebag: #566953\nLavendula: #DABEDF\nLeo Wasabi: Leo_Wasabi.png\nWispy Clouds: #EAD7D0\nLeo/Lavendula: Leo_Lavendula.png\nSchwarz / Trooper: Schwarz_Trooper.png\nPicante: #AC3925\nSpicy Cinnamon: #AC3925\nFig: #58263D\nOffwhite: #D5CDC1\nSchwarz/Weiß: Colorswatch_black_white.png\ntest",
     "show_vendor": false,
     "show_secondary_image": true,
     "product_add_to_cart": true,
@@ -64,6 +64,19 @@
     "cart_icon": "shopping_bag",
     "cart_free_shipping_threshold": "DE:65,AT:65,NL:65,CH:100,OTHER:150",
     "cart_free_gift_threshold": "",
+    "fake_gift_enabled": false,
+    "fake_gift_cart_threshold": "80.00",
+    "fake_gift_image": "shopify://shop_images/Banner-Nipples.jpg",
+    "fake_gift_headline": "Gratis Bralette gesichert",
+    "fake_gift_headline_color": "#2e9e7b",
+    "fake_gift_general_color": "#cc0807",
+    "fake_gift_subheadline": "Wähle eine Bralette Deiner Wahl im Checkout",
+    "fake_gift_show_discount_flag": false,
+    "fake_gift_discount_flag_text": "GRATIS IM CHECKOUT",
+    "fake_gift_countries": "DE",
+    "fake_gift_position": "start",
+    "fake_gift_original_price": "39.90",
+    "fake_gift_hide_normal_free_gifts": true,
     "social_instagram": "https://www.instagram.com/thefemalecompany/",
     "social_tiktok": "https://www.tiktok.com/@thefemalecompany",
     "social_linkedin": "https://www.linkedin.com/company/the-female-company/",
@@ -86,10 +99,10 @@
     "upsell_discount_progress_goal2": 5,
     "upsell_discount_value2": 15,
     "a_b_test_products": [],
-    "discount_showcase_enabled": true,
-    "fallback_discount_code": "NEWYEAR25",
-    "fallback_discount_percentage": 25,
-    "fallback_discount_collection": "winterpromotion",
+    "discount_showcase_enabled": false,
+    "fallback_discount_code": "",
+    "fallback_discount_percentage": 15,
+    "fallback_discount_collection": "",
     "show_second_savings_badge_pdp": true,
     "checkout_logo_image": "shopify://shop_images/TheFemaleCompany_Logo_Tomato_04b8553b-b2a9-41dd-ae06-bb33e0ed2df8.png",
     "checkout_logo_size": "small",
@@ -702,19 +715,19 @@
         "disabled": false,
         "settings": {}
       },
-      "9696655121035291526": {
-        "type": "shopify://apps/rapi/blocks/app-embed/99617c17-a32b-4e70-a883-7a155610d032",
-        "disabled": false,
-        "settings": {}
-      },
       "4705145147225299685": {
         "type": "shopify://apps/tolstoy-shoppable-video-quiz/blocks/widget-block/06fa8282-42ff-403e-b67c-1936776aed11",
-        "disabled": true,
+        "disabled": false,
         "settings": {}
       },
       "16216491870256628967": {
         "type": "shopify://apps/ta-labels-badges/blocks/bss-pl-config-data/91bfe765-b604-49a1-805e-3599fa600b24",
-        "disabled": true,
+        "disabled": false,
+        "settings": {}
+      },
+      "9696655121035291526": {
+        "type": "shopify://apps/rapi-bundles/blocks/app-embed/99617c17-a32b-4e70-a883-7a155610d032",
+        "disabled": false,
         "settings": {}
       }
     }
@@ -1148,5 +1161,11 @@
         }
       }
     }
+  },
+  "platform_customizations": {
+    "custom_css": [
+      "quantity-settings:has(> form > .rapi-bundle-content-0) .quantity-selector {display: none;}",
+      "#block-template--26869862695178__main-5d99506a-360d-4c5f-aa4b-422abcc9c271-9764400824586 {display: none;}"
+    ]
   }
 }

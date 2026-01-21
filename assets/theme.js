@@ -1232,6 +1232,42 @@
       }
     }
 
+    static async getAllCollectionProducts(handle, displayError = false) {
+      let allProducts = [];
+      let page = 1;
+      let hasMore = true;
+
+      try {
+        while (hasMore) {
+          const url = this.buildUrl(
+            `${window.themeVariables.routes.collectionsUrl}/${handle}/products.json`,
+            { params: { page, limit: 100 } }
+          );
+
+          const resp = await this.fetchWithHTTPErrors(url);
+          const json = await resp.json();
+
+          if (!json.products || json.products.length === 0) {
+            hasMore = false; // no more products
+          } else {
+            allProducts = allProducts.concat(json.products);
+            page++;
+          }
+
+          // Optional: wait briefly so as not to overload Shopify.
+          await new Promise((r) => setTimeout(r, 300));
+        }
+
+        return allProducts;
+
+      } catch (e) {
+        if (displayError) {
+          toastr.error('There was an error fetching the products. Please try again later.', 'An error occurred');
+        }
+        throw e;
+      }
+    }
+
     /**
      * Get product data from the Shopify product endpoint.
      * 
@@ -4946,7 +4982,7 @@
                     ${this.availableOptionFilters[optionName].map((value, index) => `
                       <div class="block-swatch">
                         <input type="checkbox" id="${this.id}-${optionName}-${index}" class="visually-hidden block-swatch__radio product-list__filter-option-list-item-checkbox" data-option-name="${optionName}" data-option-value="${value}">
-                        <label for="${this.id}-${optionName}-${index}" class="block-swatch__item">${value}</label>
+                        <label for="${this.id}-${optionName}-${index}" class="block-swatch__item ${value.toLowerCase().replaceAll(" ", "_").replaceAll("ß", "ss").replaceAll("/", "").replaceAll("&", "")}">${value}</label>
                       </div>
                     `).join("")}
                   </div>
@@ -5044,7 +5080,7 @@
       }
 
       if(!this.collectionProducts) {
-        this.collectionProducts = await ShopifyData.getCollectionProducts(this.collectionHandle, true);
+        this.collectionProducts = await ShopifyData.getAllCollectionProducts(this.collectionHandle, true);
       }
 
       this.productItems.forEach((productItem) => {

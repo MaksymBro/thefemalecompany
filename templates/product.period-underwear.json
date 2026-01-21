@@ -30,7 +30,6 @@
         },
         "f0d2cc62-543d-4ad8-bdd7-18c3d04a52c1": {
           "type": "fulfillment_time_info",
-          "disabled": true,
           "settings": {}
         },
         "yotpo_loyalty_rewards_product_points_module_app_block_QiNBrb": {
@@ -40,12 +39,6 @@
         "02190bcc-9ff0-4f94-8898-2b2cb44da8ea": {
           "type": "low_on_stock_info",
           "settings": {}
-        },
-        "rapi_rapi_bundle_GCLk9B": {
-          "type": "shopify://apps/rapi/blocks/rapi-bundle/99617c17-a32b-4e70-a883-7a155610d032",
-          "settings": {
-            "product": "{{product}}"
-          }
         },
         "quantity_selector": {
           "type": "quantity_selector",
@@ -191,7 +184,6 @@
         "f0d2cc62-543d-4ad8-bdd7-18c3d04a52c1",
         "yotpo_loyalty_rewards_product_points_module_app_block_QiNBrb",
         "02190bcc-9ff0-4f94-8898-2b2cb44da8ea",
-        "rapi_rapi_bundle_GCLk9B",
         "quantity_selector",
         "buy_buttons",
         "a5ac472c-f2be-447e-bdc1-42de5d4d5016",
@@ -228,8 +220,7 @@
       "type": "product-recommendations",
       "settings": {
         "subheading": "",
-        "title": "",
-        "all_heads_p": false,
+        "title": "Dir könnte auch gefallen",
         "recommendations_count": 10,
         "background": "rgba(0,0,0,0)",
         "text_color": "rgba(0,0,0,0)"
@@ -241,7 +232,6 @@
       "settings": {
         "subheading": "",
         "title": "Zuletzt angesehen",
-        "all_heads_p": true,
         "products_count": 4,
         "background": "rgba(0,0,0,0)",
         "text_color": "rgba(0,0,0,0)"
@@ -256,8 +246,8 @@
             "image": "shopify://shop_images/panty_layer_closeup_layer1.jpg",
             "image_width": 100,
             "image_border": "rgba(0,0,0,0)",
-            "title": "1. Schicht: Stay Dry® Membran",
-            "content": "<p>Saugt Flüssigkeit innerhalb weniger Sekunden auf. Für <strong>trockenes Tragegefühl</strong>.</p>",
+            "title": "Layer 1: Stay Dry Layer™",
+            "content": "<p><strong>Saugt Flüssigkeit</strong> blitzschnell auf und trocknet innerhalb weniger <strong>Sekunden</strong>.</p>",
             "link_text": "",
             "link_url": "",
             "link_style": "link",
@@ -271,7 +261,7 @@
             "image": "shopify://shop_images/panty_layer_closeup_layer2_alt.jpg",
             "image_width": 100,
             "image_border": "rgba(0,0,0,0)",
-            "title": "2. Schicht: Ultra absorbierende Faser",
+            "title": "Layer 2: Ultra-absorbierende Schicht",
             "content": "<p><strong>Speichert</strong> die Flüssigkeit und schließt sie sicher ein.</p>",
             "link_text": "",
             "link_url": "",
@@ -283,11 +273,11 @@
         "template--16104690712842__24c7014a-811d-42e3-8af5-4fd73d682d7f-item-3": {
           "type": "item",
           "settings": {
-            "image": "shopify://shop_images/Wasserabweisende-Membran.png",
+            "image": "shopify://shop_images/panty_layer_closeup_layer3.jpg",
             "image_width": 100,
             "image_border": "rgba(0,0,0,0)",
-            "title": "3. Schicht: Wasserdichtes Gewebe",
-            "content": "<p>Lässt keine Flüssigkeit durch, <strong>keine Auslaufgefahr</strong>.</p>",
+            "title": "Layer 3: Wasserdichte Membran",
+            "content": "<p>Sorgt für <strong>zero Auslaufgefahr</strong>, auch bei längerer Tragedauer.</p>",
             "link_text": "",
             "link_url": "",
             "link_style": "link",
@@ -301,8 +291,8 @@
             "image": "shopify://shop_images/panty_layer_closeup_layer4_070ad79d-1f21-4c24-8941-cc2cf0159468.jpg",
             "image_width": 100,
             "image_border": "rgba(0,0,0,0)",
-            "title": "4. Schicht: Hautfreundliche Außenschicht",
-            "content": "<p>Hautfreundlicher Oberstoff für <strong>komfortables Tragegefühl</strong>.</p>",
+            "title": "Layer 4: Super Soft",
+            "content": "<p>Super weicher Oberstoff für extra <strong>comfy</strong> <strong>Tragegefühl</strong>.</p>",
             "link_text": "",
             "link_url": "",
             "link_style": "link",
@@ -320,10 +310,9 @@
       "settings": {
         "reveal_on_scroll": true,
         "stack_items": false,
-        "subheading": "AUSLAUFSICHER DURCH DEN TAG",
-        "title": "Stay Dry® Technologie",
-        "all_heads_p": false,
-        "content": "<p>Saugstarke Einlage, nur<strong> 1 mm dicker</strong> als normale Unterwäsche und trotzdem <strong>auslaufsicher</strong>. Ohne Biozide & PFAs. So hält sie dicht:</p>",
+        "subheading": "Default mode: dry pantys",
+        "title": "Stay Dry Layer Technologie™",
+        "content": "<p>Entwickelt mit Textiltechniker*innen und Gynäkolog*innen: nur <strong>1mm</strong> dicker als normale Unterwäsche und die <strong>leistungsstärkste Seamless Period Panty am Markt</strong>.</p>",
         "column_alignment": "center",
         "mobile_item_size": "medium",
         "desktop_item_size": "medium",
@@ -536,10 +525,8 @@
       ],
       "settings": {
         "show_arrows": true,
-        "text_subheading": "Aus der Community",
-        "text_heading": "Nice bun, hun!",
-        "subheading": "",
-        "title": "",
+        "subheading": "Aus der Community",
+        "title": "Nice bun, hun!",
         "section_header_short_description": "",
         "section_header_heading_size": "h2",
         "section_header_highest_hierarchy": false,

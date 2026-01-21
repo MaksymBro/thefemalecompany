@@ -1,0 +1,190 @@
+{%- comment -%}
+  Fake Gift Item Snippet
+  Displays a fake gift item in the cart drawer and cart page
+  This is not an actual product in the cart, just a visual representation
+{%- endcomment -%}
+
+{%- if settings.fake_gift_enabled -%}
+  {%- assign show_fake_gift = false -%}
+  {%- assign fake_gift_countries = settings.fake_gift_countries | default: 'DE' | remove: ' ' | split: ',' -%}
+
+  {%- for country_code in fake_gift_countries -%}
+    {%- if country_code == localization.country.iso_code -%}
+      {%- assign show_fake_gift = true -%}
+      {%- break -%}
+    {%- endif -%}
+  {%- endfor -%}
+
+  {%- assign fake_gift_threshold_reached = false -%}
+  {%- assign cart_threshold = settings.fake_gift_cart_threshold | replace: ',', '.' | times: 100 | round -%}
+  {%- if cart.total_price >= cart_threshold -%}
+    {%- assign fake_gift_threshold_reached = true -%}
+  {%- endif -%}
+
+  {%- if show_fake_gift and fake_gift_threshold_reached -%}
+    {%- if settings.fake_gift_original_price != blank -%}
+      {%- assign normalized_price = settings.fake_gift_original_price | replace: ',', '.' -%}
+      {%- assign original_price_cents = normalized_price | times: 100 -%}
+    {%- endif -%}
+
+    {%- if is_drawer -%}
+      {%- comment -%} Drawer version (mini-cart) {%- endcomment -%}
+      <line-item class="line-item line-item--fake-gift" data-cy-fake-gift-item>
+        <div class="line-item__content-wrapper">
+          <div class="line-item__image-wrapper">
+            {%- if settings.fake_gift_image != blank -%}
+              {{- settings.fake_gift_image | image_url: width: 276 | image_tag: loading: 'lazy', sizes: '(max-width: 740px) 80px, 92px', widths: '80,92,160,184,240,276', class: 'line-item__image' -}}
+            {%- else -%}
+              <div class="line-item__image" style="background: #f0f0f0; width: 92px; height: 92px;"></div>
+            {%- endif -%}
+          </div>
+
+          <div class="line-item__info">
+            <div class="product-item-meta">
+              {%- if settings.show_vendor -%}
+                <span class="product-item-meta__vendor heading heading--xxsmall" style="visibility: hidden;">x</span>
+              {%- endif -%}
+
+              <div class="product-item-meta__title text--small" style="{% if settings.fake_gift_headline_color != blank %}color: {{ settings.fake_gift_headline_color }};{% elsif settings.fake_gift_general_color != blank %}color: {{ settings.fake_gift_general_color }};{% endif %}">
+                {{ settings.fake_gift_headline | default: 'Gratis Bralette gesichert✓' }}
+              </div>
+
+              {%- if settings.fake_gift_subheadline != blank -%}
+                <div class="product-item-meta__property text--subdued text--xsmall" style="{% if settings.fake_gift_general_color != blank %}color: {{ settings.fake_gift_general_color }};{% endif %}">
+                  {{ settings.fake_gift_subheadline }}
+                </div>
+              {%- endif -%}
+
+              <div class="product-item-meta__price-list-container text--small">
+                <div class="price-list hidden-tablet-and-up">
+                  <span class="price price--highlight">
+                    <span class="visually-hidden">{{ 'product.general.sale_price' | t }}</span>
+                    {{ 'cart.general.free' | t }}
+                  </span>
+                  {%- if settings.fake_gift_original_price != blank -%}
+                    <span class="price price--compare">
+                      <span class="visually-hidden">{{ 'product.general.regular_price' | t }}</span>
+                      {{ original_price_cents | money }}
+                    </span>
+                  {%- endif -%}
+                </div>
+              </div>
+            </div>
+
+            {%- if settings.fake_gift_show_discount_flag and settings.fake_gift_discount_flag_text != blank -%}
+              <ul class="line-item__discount-list list--unstyled" role="list">
+                <li class="line-item__discount-badge discount-badge">
+                  {%- render 'icon' with 'discount-badge' -%}{{ settings.fake_gift_discount_flag_text }}
+                </li>
+              </ul>
+            {%- endif -%}
+          </div>
+
+          <div class="line-item__price-list-container text--small hidden-phone" data-cy-fake-gift-price-container>
+            {%- if settings.show_vendor -%}
+              <span class="product-item-meta__vendor heading heading--xxsmall" style="visibility: hidden">x</span>
+            {%- endif -%}
+
+            <div class="price-list price-list--stack">
+              <span class="price price--highlight">
+                <span class="visually-hidden">{{ 'product.general.sale_price' | t }}</span>
+                {{ 'cart.general.free' | t }}
+              </span>
+                  {%- if settings.fake_gift_original_price != blank -%}
+                    <span class="price price--compare">
+                      <span class="visually-hidden">{{ 'product.general.regular_price' | t }}</span>
+                      {{ original_price_cents | money }}
+                    </span>
+                  {%- endif -%}
+            </div>
+          </div>
+        </div>
+      </line-item>
+    {%- else -%}
+
+      {%- comment -%} Page version (main-cart) {%- endcomment -%}
+      <tr class="line-item line-item--fake-gift" data-cy-fake-gift-item>
+        <td class="line-item__product">
+          <div class="line-item__content-wrapper">
+            <div class="line-item__image-wrapper">
+              {%- if settings.fake_gift_image != blank -%}
+                {{- settings.fake_gift_image | image_url: width: 276 | image_tag: loading: 'lazy', sizes: '(max-width: 740px) 80px, 92px', widths: '80,92,160,184,240,276', class: 'line-item__image' -}}
+              {%- else -%}
+                <div class="line-item__image" style="background: #f0f0f0; width: 92px; height: 92px;"></div>
+              {%- endif -%}
+            </div>
+
+            <div class="line-item__info">
+              <div class="product-item-meta">
+                {%- if settings.show_vendor -%}
+                  <span class="product-item-meta__vendor heading heading--xxsmall" style="visibility: hidden;">x</span>
+                {%- endif -%}
+
+                <div class="product-item-meta__title text--small hidden-tablet-and-up" style="{% if settings.fake_gift_headline_color != blank %}color: {{ settings.fake_gift_headline_color }};{% elsif settings.fake_gift_general_color != blank %}color: {{ settings.fake_gift_general_color }};{% endif %}">
+                  {{ settings.fake_gift_headline | default: 'Gratis Bralette gesichert✓' }}
+                </div>
+                <div class="product-item-meta__title hidden-phone" style="{% if settings.fake_gift_headline_color != blank %}color: {{ settings.fake_gift_headline_color }};{% elsif settings.fake_gift_general_color != blank %}color: {{ settings.fake_gift_general_color }};{% endif %}">
+                  {{ settings.fake_gift_headline | default: 'Gratis Bralette gesichert✓' }}
+                </div>
+
+                {%- if settings.fake_gift_subheadline != blank -%}
+                  <div class="product-item-meta__property text--subdued text--xsmall" style="{% if settings.fake_gift_general_color != blank %}color: {{ settings.fake_gift_general_color }};{% endif %}">
+                    {{ settings.fake_gift_subheadline }}
+                  </div>
+                {%- endif -%}
+
+                <div class="product-item-meta__price-list-container">
+                  <div class="price-list text--small hidden-tablet-and-up">
+                    <span class="price price--highlight">
+                      <span class="visually-hidden">{{ 'product.general.sale_price' | t }}</span>
+                      {{ 'cart.general.free' | t }}
+                    </span>
+                  {%- if settings.fake_gift_original_price != blank -%}
+                    <span class="price price--compare">
+                      <span class="visually-hidden">{{ 'product.general.regular_price' | t }}</span>
+                      {{ original_price_cents | money }}
+                    </span>
+                  {%- endif -%}
+                  </div>
+                </div>
+              </div>
+
+              {%- if settings.fake_gift_show_discount_flag and settings.fake_gift_discount_flag_text != blank -%}
+                <ul class="line-item__discount-list list--unstyled" role="list">
+                  <li class="line-item__discount-badge discount-badge">
+                    {%- render 'icon' with 'discount-badge' -%}{{ settings.fake_gift_discount_flag_text }}
+                  </li>
+                </ul>
+              {%- endif -%}
+            </div>
+          </div>
+        </td>
+
+        <td class="line-item__quantity line-item__quantity--block text--center hidden-phone">
+          {%- if settings.show_vendor -%}
+            <span class="product-item-meta__vendor heading heading--xxsmall" style="visibility: hidden">x</span>
+          {%- endif -%}
+        </td>
+
+        <td class="line-item__price-list-container text--right hidden-phone">
+          {%- if settings.show_vendor -%}
+            <span class="product-item-meta__vendor heading heading--xxsmall" style="visibility: hidden">x</span>
+          {%- endif -%}
+
+          <div class="price-list price-list--stack">
+            <span class="price price--highlight">
+              <span class="visually-hidden">{{ 'product.general.sale_price' | t }}</span>
+              {{ 'cart.general.free' | t }}
+            </span>
+                  {%- if settings.fake_gift_original_price != blank -%}
+                    <span class="price price--compare">
+                      <span class="visually-hidden">{{ 'product.general.regular_price' | t }}</span>
+                      {{ original_price_cents | money }}
+                    </span>
+                  {%- endif -%}
+          </div>
+        </td>
+      </tr>
+    {%- endif -%}
+  {%- endif -%}
+{%- endif -%}

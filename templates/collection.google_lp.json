@@ -9,52 +9,6 @@
  */
 {
   "sections": {
-    "countdown_timer_Bpngc8": {
-      "type": "countdown-timer",
-      "blocks": {
-        "text_fErwgM": {
-          "type": "text",
-          "settings": {
-            "text": "<p><strong>NUR bis Mitternacht!</strong><br/>Erhalte jetzt noch dein <strong>gratis</strong> Produkt !!!</p>",
-            "offset_top_desktop": 20,
-            "offset_bottom_desktop": 20,
-            "offset_top_mobile": 10,
-            "offset_bottom_mobile": 10
-          }
-        },
-        "countdown_timer_4kmrTy": {
-          "type": "countdown_timer",
-          "settings": {
-            "show_countdown_words": true,
-            "countdown_start_date": "2025-11-23",
-            "countdown_start_time_hour": "18",
-            "countdown_start_time_minute": "00",
-            "countdown_date": "2025-11-23",
-            "countdown_time_hour": "23",
-            "countdown_time_minute": "59",
-            "timer_link": "",
-            "timer_font_size_mobile": 1.3,
-            "text_font_size_mobile": 0.6,
-            "timer_font_size_desktop": 1.4,
-            "text_font_size_desktop": 0.5,
-            "offset_top_desktop": 0,
-            "offset_bottom_desktop": 15,
-            "offset_top_mobile": 3,
-            "offset_bottom_mobile": 10
-          }
-        }
-      },
-      "block_order": [
-        "text_fErwgM",
-        "countdown_timer_4kmrTy"
-      ],
-      "name": "Countdown timer",
-      "settings": {
-        "countdown_text_color": "#cc0807",
-        "background_color": "#fff0f0",
-        "text_color": "#cc0807"
-      }
-    },
     "marquee_k98Ean": {
       "type": "marquee",
       "disabled": true,
@@ -93,10 +47,10 @@
         "start_month": 1,
         "start_day": 1,
         "start_time": "10:00",
-        "end_year": 2025,
+        "end_year": 2050,
         "end_month": 12,
-        "end_day": 25,
-        "end_time": "23:45",
+        "end_day": 31,
+        "end_time": "10:00",
         "section_subheading": "",
         "section_heading": "Geprüft auf über 1.000 Schadstoffe.",
         "allow_heading_override": false,
@@ -117,48 +71,16 @@
         "section_spacing_bottom_mobile": 0
       }
     },
-    "section_header_XJadCY": {
-      "type": "section-header",
-      "name": "Section header",
-      "settings": {
-        "start_year": 2025,
-        "start_month": 12,
-        "start_day": 26,
-        "start_time": "00:00",
-        "end_year": 2025,
-        "end_month": 12,
-        "end_day": 31,
-        "end_time": "23:45",
-        "section_subheading": "Deals zum Ende des Jahres",
-        "section_heading": "25% EXTRA Rabatt mit diesem Code:",
-        "allow_heading_override": false,
-        "section_short_description": "",
-        "heading_size": "h3",
-        "highest_hierarchy": false,
-        "section_heading_font_family": "default",
-        "short_description_font_size": "medium",
-        "section_text_color": "rgba(0,0,0,0)",
-        "section_heading_color": "#ffffff",
-        "section_subheading_color": "rgba(0,0,0,0)",
-        "section_container_width": "sm",
-        "section_background_color": "#cc0807",
-        "section_spacing_top": 8,
-        "section_spacing_bottom": 4,
-        "section_spacing_different_mobile": false,
-        "section_spacing_top_mobile": 0,
-        "section_spacing_bottom_mobile": 0
-      }
-    },
     "discount_code_showcase_P9ULWr": {
       "type": "discount-code-showcase",
       "settings": {
-        "fixed_discount_code": "NEWYEAR25",
-        "fixed_discount_amount": "25%",
-        "inner_section_background": "#ffffff",
+        "fixed_discount_code": "UTERUS_15",
+        "fixed_discount_amount": "15%",
+        "inner_section_background": "#f58e9e",
         "discount_badge_background": "#ea697d",
         "discount_badge_text_color": "#ffffff",
         "section_container_width": "xxs",
-        "section_background_color": "#cc0807",
+        "section_background_color": "#ffd4d6",
         "section_text_color": "rgba(0,0,0,0)",
         "section_heading_color": "rgba(0,0,0,0)",
         "section_spacing_top": 8,
@@ -241,7 +163,6 @@
             "text_position": "middle_center",
             "subheading": "Unser PMS Pre-sale startet bald:",
             "title": "Melde dich jetzt zum 48h Early Access mit -20% Extra-Rabatt an!",
-            "title_h1": false,
             "subtitle": "",
             "subtitle_html": "",
             "button_1_text": "Jetzt Anmelden",
@@ -270,7 +191,6 @@
             "text_position": "middle_center",
             "subheading": "",
             "title": "Bis zu 15% Rabatt",
-            "title_h1": false,
             "subtitle": "<p>Erhalte bis zu <strong>15% Mengenrabatt </strong>beim Kauf von <strong>drei oder mehr </strong>Period Pantys oder Daysics® </p>",
             "subtitle_html": "",
             "button_1_text": "",
@@ -298,7 +218,6 @@
             "text_position": "middle_center",
             "subheading": "",
             "title": "",
-            "title_h1": false,
             "subtitle": "<h1><strong>Sicher Dir 10% mit dem Code UTERUS10</strong></h1><h2><strong>Ziertifizierte Produktsicherheit. Geprüft ohne Schadstoffe</strong>, <strong>Biozide oder PFAs. </strong><br/></h2><p></p><p> </p>",
             "subtitle_html": "",
             "button_1_text": "",
@@ -471,11 +390,9 @@
     }
   },
   "order": [
-    "countdown_timer_Bpngc8",
     "marquee_k98Ean",
     "trustpilot_6wnrjc",
     "section_header_TpgfHq",
-    "section_header_XJadCY",
     "discount_code_showcase_P9ULWr",
     "daily_deal_showcase_hhAAce",
     "daily_deal_showcase_zQwbPf",

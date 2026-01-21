@@ -282,7 +282,15 @@
               </thead>
 
               <tbody class="line-item-table__list">
+                {%- if settings.fake_gift_position == 'start' -%}
+                  {%- render 'fake-gift-item', is_drawer: false -%}
+                {%- endif -%}
                 {%- for line_item in cart.items -%}
+
+                  {% if settings.fake_gift_hide_normal_free_gifts and line_item.final_price <= 0 %}
+                    {% continue %}
+                  {% endif %}
+
                   {%- for testproduct in settings.a_b_test_products -%}
                     {%- if testproduct.id == line_item.product.id -%}
                       {%- assign a_b_test_product_id = true -%}
@@ -496,6 +504,10 @@
                     </td>
                   </tr>
                 {%- endfor -%}
+
+                {%- if settings.fake_gift_position == 'end' -%}
+                  {%- render 'fake-gift-item', is_drawer: false -%}
+                {%- endif -%}
               </tbody>
             </table>
 

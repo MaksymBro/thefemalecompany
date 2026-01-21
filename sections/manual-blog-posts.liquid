@@ -35,15 +35,15 @@
         {%- if section.settings.subheading != blank or section.settings.title != blank -%}
           <header class="section__header text-container">
             {%- if section.settings.subheading != blank -%}
-              <p class="heading heading--small">{{ section.settings.subheading | escape }}</p>
+              <h2 class="heading heading--small">{{ section.settings.subheading | escape }}</h2>
             {%- endif -%}
 
             {%- if section.settings.title != blank -%}
-              <h2 class="heading h2">{{ section.settings.title | escape }}</h2>
+              <h3 class="heading h2">{{ section.settings.title | escape }}</h3>
             {%- endif -%}
           </header>
         {%- endif -%}
-
+        
         {%- if section.settings.articles_count == 4 and section.blocks.size == 0 or section.blocks.size >= 4 or section.blocks.size == 0 -%}
           {%- assign use_featured_layout = true -%}
         {%- else -%}
@@ -56,7 +56,7 @@
               <script>
                 console.log(`article: {{ article.settings.title }}`);
               </script>
-              {%- render 'manual-article-item', article: article, heading_size: 'h4' -%}
+              {%- render 'manual-article-item', article: article, heading_size: 'h4' -%}           
             {%- endfor -%}
           </article-list>
 
@@ -179,7 +179,7 @@
         {
           "type": "image_picker",
           "id": "image",
-          "label": "Blog post image"
+          "label": "Blog post image"      
         },
         {
           "type": "url",

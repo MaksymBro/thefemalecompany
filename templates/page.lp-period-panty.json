@@ -9,52 +9,6 @@
  */
 {
   "sections": {
-    "countdown_timer_y3wWk4": {
-      "type": "countdown-timer",
-      "blocks": {
-        "text_MpMRbE": {
-          "type": "text",
-          "settings": {
-            "text": "<p><strong>NUR bis Mitternacht!</strong><br/>Erhalte jetzt noch dein <strong>gratis</strong> Produkt !!!</p>",
-            "offset_top_desktop": 20,
-            "offset_bottom_desktop": 20,
-            "offset_top_mobile": 4,
-            "offset_bottom_mobile": 0
-          }
-        },
-        "countdown_timer_URXWy8": {
-          "type": "countdown_timer",
-          "settings": {
-            "show_countdown_words": true,
-            "countdown_start_date": "2025-11-23",
-            "countdown_start_time_hour": "18",
-            "countdown_start_time_minute": "00",
-            "countdown_date": "2025-11-23",
-            "countdown_time_hour": "23",
-            "countdown_time_minute": "59",
-            "timer_link": "",
-            "timer_font_size_mobile": 1.1,
-            "text_font_size_mobile": 0.7,
-            "timer_font_size_desktop": 4.5,
-            "text_font_size_desktop": 1.5,
-            "offset_top_desktop": 20,
-            "offset_bottom_desktop": 20,
-            "offset_top_mobile": 6,
-            "offset_bottom_mobile": 10
-          }
-        }
-      },
-      "block_order": [
-        "text_MpMRbE",
-        "countdown_timer_URXWy8"
-      ],
-      "name": "Countdown timer",
-      "settings": {
-        "countdown_text_color": "#cc0807",
-        "background_color": "#fff0f0",
-        "text_color": "#cc0807"
-      }
-    },
     "main": {
       "type": "main-page",
       "disabled": true,
@@ -88,10 +42,10 @@
         "start_month": 1,
         "start_day": 1,
         "start_time": "10:00",
-        "end_year": 2025,
+        "end_year": 2050,
         "end_month": 12,
-        "end_day": 25,
-        "end_time": "23:45",
+        "end_day": 31,
+        "end_time": "10:00",
         "section_subheading": "",
         "section_heading": "Geprüft auf über 1.000 Schadstoffe.",
         "allow_heading_override": true,
@@ -105,43 +59,11 @@
         "section_subheading_color": "rgba(0,0,0,0)",
         "section_container_width": "sm",
         "section_background_color": "#cc0807",
-        "section_spacing_top": 20,
+        "section_spacing_top": 56,
         "section_spacing_bottom": 28,
         "section_spacing_different_mobile": true,
-        "section_spacing_top_mobile": 12,
+        "section_spacing_top_mobile": 28,
         "section_spacing_bottom_mobile": 16
-      }
-    },
-    "section_header_cwbUbw": {
-      "type": "section-header",
-      "name": "Section header",
-      "settings": {
-        "start_year": 2025,
-        "start_month": 12,
-        "start_day": 26,
-        "start_time": "00:00",
-        "end_year": 2025,
-        "end_month": 12,
-        "end_day": 31,
-        "end_time": "23:45",
-        "section_subheading": "Deals zum Ende des Jahres",
-        "section_heading": "30% auf ALLES mit \ndiesem Code:",
-        "allow_heading_override": false,
-        "section_short_description": "",
-        "heading_size": "h3",
-        "highest_hierarchy": false,
-        "section_heading_font_family": "default",
-        "short_description_font_size": "medium",
-        "section_text_color": "rgba(0,0,0,0)",
-        "section_heading_color": "#ffffff",
-        "section_subheading_color": "rgba(0,0,0,0)",
-        "section_container_width": "sm",
-        "section_background_color": "#cc0807",
-        "section_spacing_top": 12,
-        "section_spacing_bottom": 20,
-        "section_spacing_different_mobile": false,
-        "section_spacing_top_mobile": 0,
-        "section_spacing_bottom_mobile": 0
       }
     },
     "7fb64368-dfdf-4a28-abb3-011ecf95186d": {
@@ -161,6 +83,37 @@
         "section_spacing_different_mobile": false,
         "section_spacing_top_mobile": 0,
         "section_spacing_bottom_mobile": 12
+      }
+    },
+    "f2350b70-0512-410f-9b0f-20d5b42c0b03": {
+      "type": "button",
+      "disabled": true,
+      "settings": {
+        "start_year": 2025,
+        "start_month": 1,
+        "start_day": 1,
+        "start_time": "10:00",
+        "end_year": 2050,
+        "end_month": 12,
+        "end_day": 31,
+        "end_time": "10:00",
+        "button_text": "Zu den Produkten",
+        "button_link": "shopify://collections/influencer",
+        "button_link_new_window": false,
+        "button_details": "",
+        "button_style": "secondary",
+        "button_outline": false,
+        "button_shadow": true,
+        "button_size": "lg",
+        "button_fit": "responsive",
+        "section_container_width": "md",
+        "section_text_alignment": "center",
+        "section_background_color": "#ffd4d6",
+        "section_spacing_top": 32,
+        "section_spacing_bottom": 12,
+        "section_spacing_different_mobile": true,
+        "section_spacing_top_mobile": 16,
+        "section_spacing_bottom_mobile": 16
       }
     },
     "featured_collections_WiY9p4": {
@@ -388,6 +341,22 @@
         "lazy": true
       }
     },
+    "custom_header_KwCaR4": {
+      "type": "custom-header",
+      "disabled": true,
+      "name": "Custom Header",
+      "settings": {
+        "heading": "Unsere Favoriten",
+        "heading_size": "h4",
+        "section_container_width": "md",
+        "section_background_color": "rgba(0,0,0,0)",
+        "section_spacing_top": 32,
+        "section_spacing_bottom": 32,
+        "section_spacing_different_mobile": true,
+        "section_spacing_top_mobile": 16,
+        "section_spacing_bottom_mobile": 16
+      }
+    },
     "featured_collections_4kzyNw": {
       "type": "featured-collections",
       "blocks": {
@@ -444,7 +413,7 @@
         "section_spacing_bottom_mobile": 48
       }
     },
-    "button_RJjXEw": {
+    "button_NYbP6V": {
       "type": "button",
       "name": "Button",
       "settings": {
@@ -768,7 +737,6 @@
         "stack_items": false,
         "subheading": "Default Mode: Dry Pantys",
         "title": "Stay Dry Layer Technologie™",
-        "all_heads_p": false,
         "content": "<p>Entwickelt mit Textiltechniker*innen und Gynäkolog*innen: nur <strong>1 mm </strong>dicker als normale Unterwäsche und die <strong>leistungsstärkste Seamless Period Panty am Markt</strong>.</p>",
         "column_alignment": "center",
         "mobile_item_size": "medium",
@@ -971,16 +939,16 @@
     }
   },
   "order": [
-    "countdown_timer_y3wWk4",
     "main",
     "trustpilot_VwQhK6",
     "61e17178-afdb-46ac-9fdb-cd9347b23974",
-    "section_header_cwbUbw",
     "7fb64368-dfdf-4a28-abb3-011ecf95186d",
+    "f2350b70-0512-410f-9b0f-20d5b42c0b03",
     "featured_collections_WiY9p4",
     "ss_collection_5_jfCnV4",
+    "custom_header_KwCaR4",
     "featured_collections_4kzyNw",
-    "button_RJjXEw",
+    "button_NYbP6V",
     "59fe3625-d3b6-4bf8-90b0-5c4fd7b7e4ee",
     "section_header_EMjxzq",
     "03cedae8-7ae6-4c92-be0d-77ff3e6d2205",

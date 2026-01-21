@@ -478,26 +478,6 @@
         "text_color": "#1a1a1a"
       }
     },
-    "rich_text_Xyg3Wq": {
-      "type": "rich-text",
-      "disabled": true,
-      "name": "Rich text",
-      "settings": {
-        "subheading": "",
-        "title": "Umstandsunterwäsche Set",
-        "content": "<p>Dein Body verändert sich – unsere Unterwäsche wächst mit.<br/>Bequeme Umstandsunterwäsche & Still-BHs für jede Phase der Mutterschaft.</p>",
-        "button_text": "",
-        "button_link": "",
-        "background_type": "full_width",
-        "text_width": "medium",
-        "text_position": "center",
-        "text_alignment": "center",
-        "background": "#fec9d8",
-        "text_color": "rgba(0,0,0,0)",
-        "button_background": "rgba(0,0,0,0)",
-        "button_text_color": "rgba(0,0,0,0)"
-      }
-    },
     "main": {
       "type": "main-collection",
       "settings": {
@@ -527,7 +507,6 @@
     "countdown_timer_DkzVB7",
     "countdown_timer_YWmtY9",
     "countdown_timer_fYmAQk",
-    "rich_text_Xyg3Wq",
     "main"
   ]
 }

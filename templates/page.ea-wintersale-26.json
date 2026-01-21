@@ -20,13 +20,14 @@
     },
     "image_with_text_overlay_CihxBN": {
       "type": "image-with-text-overlay",
+      "disabled": true,
       "settings": {
         "reveal_on_scroll": true,
         "section_height": "medium",
         "image": "shopify://shop_images/Gewinnspiel_LP_5.png",
-        "subheading": "Gewinnspiel",
-        "title": "HOL DIR DEINEN EARLY ACCESS ZUM RED MONTH SALE",
-        "content": "<p>Unter allen Anmeldungen verlosen wir einen knallroten Rimow Koffer und ein Panty & Bralette Set.</p>",
+        "subheading": "",
+        "title": "Jetzt anmelden für Early Access zum Wintersale und -5% Extra-Rabatt",
+        "content": "",
         "button_text": "",
         "button_link": "",
         "link_style": "link",
@@ -40,12 +41,65 @@
         "overlay_opacity": 30
       }
     },
+    "slideshow_9WYtmc": {
+      "type": "slideshow",
+      "blocks": {
+        "image_bmA3V6": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Header_Web_ws26.jpg",
+            "mobile_image": "shopify://shop_images/Header_mobile_ws26.jpg",
+            "text_position": "middle_center",
+            "subheading": "",
+            "title": "",
+            "subtitle": "",
+            "subtitle_html": "",
+            "button_1_text": "",
+            "button_1_link": "",
+            "button_2_text": "",
+            "button_2_link": "",
+            "heading_font_family": "circular",
+            "heading_color": "#ffe6e6",
+            "text_color": "#ffe6e6",
+            "button_background": "#ffffff",
+            "button_text_color": "#000000",
+            "overlay_color": "#000000",
+            "overlay_opacity": 9,
+            "schedule_publishing": false,
+            "publish_date": "",
+            "schedule_unpublishing": false,
+            "unpublish_date": ""
+          }
+        }
+      },
+      "block_order": [
+        "image_bmA3V6"
+      ],
+      "name": "Slideshow",
+      "settings": {
+        "section_height": "auto",
+        "transition_type": "sweep",
+        "autoplay": true,
+        "cycle_speed": 5,
+        "background": "rgba(0,0,0,0)",
+        "show_banner_usps": false,
+        "banner_usps_link": "",
+        "show_hide_button": false,
+        "banner_usps_bg_color": "#ffffff",
+        "banner_usps_text_color": "#2abb53",
+        "banner_usps_heading": "",
+        "banner_usps_heading_1": "",
+        "banner_usps_heading_2": "",
+        "banner_usps_heading_3": "",
+        "banner_usps_heading_4": ""
+      }
+    },
     "custom_html_inVJQ8": {
       "type": "custom-html",
       "settings": {
-        "subheading": "Mitmachen & gewinnen",
-        "title": "Gewinnspielanmeldung",
-        "html": "<div class=\"klaviyo-form-TWsDxm\"></div>",
+        "subheading": "",
+        "title": "Jetzt anmelden für -25% Extra-Rabatt im Wintersale",
+        "html": "<div class=\"klaviyo-form-UQDukG\"></div>",
         "add_vertical_spacing": true,
         "disable_inside_spacing": false,
         "background_type": "full_width",
@@ -92,6 +146,7 @@
     },
     "rich_text_qKKB6r": {
       "type": "rich-text",
+      "disabled": true,
       "name": "Rich text",
       "settings": {
         "subheading": "",
@@ -108,14 +163,72 @@
         "button_background": "rgba(0,0,0,0)",
         "button_text_color": "rgba(0,0,0,0)"
       }
+    },
+    "featured_collections_JxiLw8": {
+      "type": "featured-collections",
+      "blocks": {
+        "collection_jkHUxL": {
+          "type": "collection",
+          "settings": {
+            "collection": "bestseller",
+            "label": "",
+            "button_text": "Show more",
+            "button_url": "shopify://collections/periodenunterwaesche-online-kaufen",
+            "hide_from_product_title_start": "",
+            "filterable_options": ""
+          }
+        }
+      },
+      "block_order": [
+        "collection_jkHUxL"
+      ],
+      "name": "Featured collections",
+      "settings": {
+        "start_year": 2025,
+        "start_month": 1,
+        "start_day": 1,
+        "start_time": "10:00",
+        "end_year": 2050,
+        "end_month": 12,
+        "end_day": 31,
+        "end_time": "10:00",
+        "products_count": 8,
+        "products_per_row": 4,
+        "stack_products": true,
+        "show_cta": false,
+        "filter_toggle_button_background": "rgba(0,0,0,0)",
+        "filter_toggle_active_button_background": "rgba(0,0,0,0)",
+        "filter_toggle_button_color": "rgba(0,0,0,0)",
+        "button_background": "rgba(0,0,0,0)",
+        "button_text_color": "rgba(0,0,0,0)",
+        "subheading": "",
+        "title": "",
+        "content": "",
+        "section_header_heading_size": "h3",
+        "section_header_highest_hierarchy": false,
+        "section_header_short_description_font_size": "medium",
+        "section_container_width": "md",
+        "background": "rgba(0,0,0,0)",
+        "text_color": "rgba(0,0,0,0)",
+        "heading_color": "rgba(0,0,0,0)",
+        "section_subheading_color": "rgba(0,0,0,0)",
+        "section_heading_font_family": "default",
+        "section_spacing_top": 68,
+        "section_spacing_bottom": 68,
+        "section_spacing_different_mobile": true,
+        "section_spacing_top_mobile": 48,
+        "section_spacing_bottom_mobile": 48
+      }
     }
   },
   "order": [
     "main",
     "image_with_text_overlay_CihxBN",
+    "slideshow_9WYtmc",
     "custom_html_inVJQ8",
     "rich_text_dWzwmX",
     "17588693393e97ace2",
-    "rich_text_qKKB6r"
+    "rich_text_qKKB6r",
+    "featured_collections_JxiLw8"
   ]
 }

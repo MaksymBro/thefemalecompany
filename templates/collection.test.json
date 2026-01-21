@@ -35,18 +35,18 @@
         "end_day": 31,
         "end_time": "10:00",
         "section_subheading": "",
-        "section_heading": "Spare jetzt bis zu 50% im größten Sale des Jahres",
+        "section_heading": "Spare bis zu 50%",
         "allow_heading_override": false,
         "section_short_description": "",
         "heading_size": "h3",
         "highest_hierarchy": false,
         "section_heading_font_family": "default",
         "short_description_font_size": "medium",
-        "section_text_color": "#ffffff",
-        "section_heading_color": "#ffffff",
+        "section_text_color": "rgba(0,0,0,0)",
+        "section_heading_color": "rgba(0,0,0,0)",
         "section_subheading_color": "rgba(0,0,0,0)",
         "section_container_width": "sm",
-        "section_background_color": "#cc0807",
+        "section_background_color": "#f58e9e",
         "section_spacing_top": 32,
         "section_spacing_bottom": 8,
         "section_spacing_different_mobile": false,
@@ -57,13 +57,13 @@
     "discount_code_showcase_P9ULWr": {
       "type": "discount-code-showcase",
       "settings": {
-        "fixed_discount_code": "NL_REDSALE",
-        "fixed_discount_amount": "20%",
-        "inner_section_background": "#ffffff",
-        "discount_badge_background": "#cc0807",
+        "fixed_discount_code": "NL_SAVE12",
+        "fixed_discount_amount": "12%",
+        "inner_section_background": "#ffd9d9",
+        "discount_badge_background": "#ea697d",
         "discount_badge_text_color": "#ffffff",
         "section_container_width": "xxs",
-        "section_background_color": "#cc0807",
+        "section_background_color": "#f58e9e",
         "section_text_color": "rgba(0,0,0,0)",
         "section_heading_color": "rgba(0,0,0,0)",
         "section_spacing_top": 16,
@@ -81,8 +81,8 @@
           "settings": {
             "collection": "all",
             "label": "",
-            "button_text": "Mehr Produkte",
-            "button_url": "https://buy.thefemalecompany.com/collections/all?page=2",
+            "button_text": "Show more",
+            "button_url": "",
             "hide_from_product_title_start": "",
             "filterable_options": ""
           }
@@ -174,7 +174,6 @@
       "block_order": [
         "image_HzCLwi"
       ],
-      "disabled": true,
       "settings": {
         "products_per_page": 50,
         "mobile_products_per_row": "2",

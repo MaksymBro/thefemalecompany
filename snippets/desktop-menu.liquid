@@ -145,9 +145,9 @@
                                 {%- render 'icon', icon: sub_link_icon_handle -%}
                               {%- endif -%}
 
-                              <p class="desktop-nav__link-text">
+                              <span class="desktop-nav__link-text">
                                 {{ sub_link_title }}
-                              </p>
+                              </span>
                             </span>
                           {%- else -%}
                             <a
@@ -158,9 +158,9 @@
                                 {%- render 'icon', icon: sub_link_icon_handle -%}
                               {%- endif -%}
 
-                              <p class="desktop-nav__link-text">
+                              <span class="desktop-nav__link-text">
                                 {{ sub_link_title }}
-                              </p>
+                              </span>
                             </a>
                           {%- endif -%}
 
@@ -182,12 +182,12 @@
 
                                   <a
                                     href="{% if sub_sub_link.url contains 'collection' %}{%- assign menu_url = sub_sub_link.url -%}
-
+                                            
                                             {%- if menu_url contains 'filter.p.m.filters.absorbancy=' -%}
                                               {%- assign parts = menu_url | split: 'filter.p.m.filters.absorbancy=' -%}
                                               {%- assign after_filter = parts[1] | split: '&' | first -%}
                                               {%- assign translated_value = '' -%}
-
+                                              
                                               {%- for original in absorbancy_original -%}
                                                 {%- if original == after_filter -%}
                                                   {%- assign index = forloop.index0 -%}
@@ -199,7 +199,7 @@
                                                     {%- when 'de' -%}
                                                       {%- assign translated_value = absorbancy_de[index] -%}
                                                   {%- endcase -%}
-
+                                                  
                                                   {%- if translated_value != '' -%}
                                                     {%- assign menu_url = menu_url | replace: after_filter, translated_value | replace: ' ', '+' -%}
                                                   {%- endif -%}
@@ -211,7 +211,7 @@
                                               {%- assign parts = menu_url | split: 'filter.p.m.filters.style=' -%}
                                               {%- assign after_filter = parts[1] | split: '&' | first -%}
                                               {%- assign translated_value = '' -%}
-
+                                              
                                               {%- for original in style_original -%}
                                                 {%- if original == after_filter -%}
                                                   {%- assign index = forloop.index0 -%}
@@ -223,7 +223,7 @@
                                                     {%- when 'de' -%}
                                                       {%- assign translated_value = style_de[index] -%}
                                                   {%- endcase -%}
-
+                                                  
                                                   {%- if translated_value != '' -%}
                                                     {%- assign menu_url = menu_url | replace: after_filter, translated_value | replace: ' ', '+' -%}
                                                   {%- endif -%}
@@ -237,9 +237,9 @@
                                       {%- render 'icon', icon: sub_sub_link_icon_handle -%}
                                     {%- endif -%}
 
-                                    <p class="desktop-nav__link-text">
+                                    <span class="desktop-nav__link-text">
                                       {{ sub_sub_link_title }}
-                                    </p>
+                                    </span>
                                   </a>
                                 </li>
                               {%- endfor -%}
@@ -288,9 +288,9 @@
                     {%- render 'icon', icon: sub_link_icon_handle -%}
                   {%- endif -%}
 
-                  <p class="desktop-nav__link-text">
+                  <span class="desktop-nav__link-text">
                     {{- sub_link_title -}}
-                  </p>
+                  </span>
 
                   {%- if sub_link.links.size > 0 -%}
                     {% render 'icon' with 'dropdown-arrow-right', direction_aware: true %}
@@ -316,12 +316,12 @@
 
                         <a
                           href="{% if sub_sub_link.url contains 'collection' %}{%- assign menu_url = sub_sub_link.url -%}
-
+                                  
                                   {%- if menu_url contains 'filter.p.m.filters.absorbancy=' -%}
                                     {%- assign parts = menu_url | split: 'filter.p.m.filters.absorbancy=' -%}
                                     {%- assign after_filter = parts[1] | split: '&' | first -%}
                                     {%- assign translated_value = '' -%}
-
+                                    
                                     {%- for original in absorbancy_original -%}
                                       {%- if original == after_filter -%}
                                         {%- assign index = forloop.index0 -%}
@@ -335,7 +335,7 @@
                                           {%- when 'ar' -%}
                                             {%- assign translated_value = absorbancy_ar[index] -%}
                                         {%- endcase -%}
-
+                                        
                                         {%- if translated_value != '' -%}
                                           {%- assign menu_url = menu_url | replace: after_filter, translated_value | replace: ' ', '+' -%}
                                         {%- endif -%}
@@ -347,7 +347,7 @@
                                     {%- assign parts = menu_url | split: 'filter.p.m.filters.style=' -%}
                                     {%- assign after_filter = parts[1] | split: '&' | first -%}
                                     {%- assign translated_value = '' -%}
-
+                                    
                                     {%- for original in style_original -%}
                                       {%- if original == after_filter -%}
                                         {%- assign index = forloop.index0 -%}
@@ -359,7 +359,7 @@
                                           {%- when 'de' -%}
                                             {%- assign translated_value = style_de[index] -%}
                                         {%- endcase -%}
-
+                                        
                                         {%- if translated_value != '' -%}
                                           {%- assign menu_url = menu_url | replace: after_filter, translated_value | replace: ' ', '+' -%}
                                         {%- endif -%}
@@ -373,9 +373,9 @@
                             {%- render 'icon', icon: sub_sub_link_icon_handle -%}
                           {%- endif -%}
 
-                          <p class="desktop-nav__link-text">
+                          <span class="desktop-nav__link-text">
                             {{ sub_sub_link_title }}
-                          </p>
+                          </span>
                         </a>
                       </li>
                     {%- endfor -%}

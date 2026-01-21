@@ -2,7 +2,7 @@
   {
     "name": "theme_info",
     "theme_name": "Focal",
-    "theme_author": "Maestrooo", 
+    "theme_author": "Maestrooo",
     "theme_version": "10.1.3",
     "theme_documentation_url": "https:\/\/support.maestrooo.com\/",
     "theme_support_url": "https:\/\/support.maestrooo.com\/article\/203-contact-us"
@@ -613,6 +613,98 @@
         "id": "cart_free_gift_threshold",
         "label": "Free gifts",
         "info": "Enter COUNTRY:VARIANTID:THRESHOLD seperated by comma (e.g. DE:7961781895434:50,DE:7961781895434:80). Use OTHER as country to match everything that has no gift set, or use ALL to match all countries."
+      },
+      {
+        "type": "header",
+        "content": "Fake Gift"
+      },
+      {
+        "type": "checkbox",
+        "id": "fake_gift_enabled",
+        "label": "Enable fake gift",
+        "default": false
+      },
+      {
+        "type": "text",
+        "id": "fake_gift_cart_threshold",
+        "label": "Cart threshold",
+        "info": "Cart threshold that customers need to reach to see the fake gift (e.g. 85.00)€"
+      },
+      {
+        "type": "image_picker",
+        "id": "fake_gift_image",
+        "label": "Fake gift image"
+      },
+      {
+        "type": "text",
+        "id": "fake_gift_headline",
+        "label": "Main headline",
+        "default": "Gratis Bralette gesichert✓"
+      },
+      {
+        "type": "color",
+        "id": "fake_gift_headline_color",
+        "label": "Main headline color"
+      },
+      {
+        "type": "color",
+        "id": "fake_gift_general_color",
+        "label": "General color"
+      },
+      {
+        "type": "text",
+        "id": "fake_gift_subheadline",
+        "label": "Sub headline",
+        "default": "Wähle eine Bralette Deiner Wahl im Checkout."
+      },
+      {
+        "type": "checkbox",
+        "id": "fake_gift_show_discount_flag",
+        "label": "Show discount flag",
+        "default": true
+      },
+      {
+        "type": "text",
+        "id": "fake_gift_discount_flag_text",
+        "label": "Discount flag text",
+        "default": "GRATIS IM CHECKOUT"
+      },
+      {
+        "type": "text",
+        "id": "fake_gift_countries",
+        "label": "Countries",
+        "info": "Comma-separated country codes (e.g. DE,FR,NL). Default is DE",
+        "default": "DE"
+      },
+      {
+        "type": "select",
+        "id": "fake_gift_position",
+        "label": "Position",
+        "options": [
+          {
+            "value": "start",
+            "label": "Start of product list"
+          },
+          {
+            "value": "end",
+            "label": "End of product list"
+          }
+        ],
+        "default": "start"
+      },
+      {
+        "type": "text",
+        "id": "fake_gift_original_price",
+        "label": "Original product price",
+        "info": "Price to show as strikethrough (e.g. 39.90)",
+        "default": "39.90"
+      },
+      {
+        "type": "checkbox",
+        "id": "fake_gift_hide_normal_free_gifts",
+        "label": "Hide other free gifts in cart",
+        "info": "This will hide any other free product in the cart by checking the product prices and hiding those with 0.00 price.",
+        "default": true
       }
     ]
   },

@@ -171,9 +171,6 @@
         "06e0b4cc-cda3-45fb-a074-e1972dda0c73",
         "320092e8-e1e8-4a8b-99bc-f3feedfff598"
       ],
-      "custom_css": [
-        ".social-media__header {background: white; color: black;}"
-      ],
       "settings": {
         "show_section": true,
         "heading": "Let’s become real friends on <a href=\"https://www.instagram.com/thefemalecompany\">Instagram</a>"
@@ -188,7 +185,7 @@
         "content": "<p>Promotions, new products and sales. Directly to your inbox.</p>",
         "text_position": "right",
         "text_alignment": "left",
-        "text_background": "#ffffff",
+        "text_background": "rgba(0,0,0,0)",
         "text_color": "rgba(0,0,0,0)",
         "button_background": "rgba(0,0,0,0)",
         "button_text_color": "rgba(0,0,0,0)"

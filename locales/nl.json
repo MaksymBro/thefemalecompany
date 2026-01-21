@@ -1,12 +1,12 @@
 /*
- * ------------------------------------------------------------
- * IMPORTANT: The contents of this file are auto-generated.
- *
- * This file may be updated by the Shopify admin language editor
- * or related systems. Please exercise caution as any changes
- * made to this file may be overwritten.
- * ------------------------------------------------------------
- */
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin language editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
 {
   "404": {
     "general": {
@@ -236,6 +236,7 @@
       "already_have_account": "Heeft u al een account?",
       "login": "Log in",
       "newsletter_opt_in_html": "<span>In onze nieuwsbrief informeren we je over promoties, aanbiedingen en enquêtes. U kunt uw toestemming op elk gewenst moment intrekken, bijvoorbeeld door op de afmeldlink in de nieuwsbrief te klikken. Meer informatie vindt u <a href=\"https://buy.thefemalecompany.com/nl/policies/privacy-policy\" target=\"_blank\" rel=\"noopener noreferrer\">hier</a> en in het <a href=\"https://buy.thefemalecompany.com/nl/policies/privacy-policy\" target=\"_blank\" rel=\"noopener noreferrer\">privacybeleid</a>.</span>"
+
     }
   },
   "search": {

@@ -62,14 +62,6 @@
         "template--17863973339402__9498e6c4-0bd6-448c-b700-22a2388ae415-168620899315b112f2-0"
       ],
       "settings": {
-        "start_year": 2025,
-        "start_month": 1,
-        "start_day": 1,
-        "start_time": "10:00",
-        "end_year": 2050,
-        "end_month": 12,
-        "end_day": 31,
-        "end_time": "10:00",
         "products_count": 50,
         "products_per_row": 4,
         "stack_products": false,
@@ -194,114 +186,6 @@
         "button_text_color": "rgba(0,0,0,0)"
       }
     },
-    "custom_html_zHKDMA": {
-      "type": "custom-html",
-      "name": "Custom HTML",
-      "settings": {
-        "subheading": "",
-        "title": "",
-        "html": "<div style=\"color:#333;padding:40px 20px;line-height:1.6;font-size:16px;background:none;\">\n\n  <h2 style=\"text-align:center;font-size:28px;color:#000;margin-bottom:20px;\">\n    Nachhaltige Periode – Periodenprodukte ohne Schadstoffe für deine Menstruation\n  </h2>\n\n  <p>\n    Moderne Frauenprodukte rund um die Periode setzen heute auf Komfort, Hygiene und Nachhaltigkeit. \n    Die Periodenprodukte von The Female Company begleiten dich im Alltag – ob in der Schule, im Büro oder in der Nacht – \n    und bieten verlässlichen Schutz bei einem angenehmen Tragegefühl. Viele Artikel bestehen aus zertifizierter Bio-Baumwolle, \n    sind vegan, hautfreundlich und plastikfrei verpackt. Jede Panty spart Müll von bis zu 500 Tampons, ist bis zu 3 Jahre \n    wiederverwendbar und reduziert den Plastikabfall um rund 1,5 kg pro Panty. So triffst du eine bewusste Wahl – für dich und für die Umwelt.\n  </p>\n\n  <h3 style=\"text-align:center;margin-top:40px;font-size:24px;color:#000;\">\n    Welche Menstruationsprodukte gibt es?\n  </h3>\n  <p>\n    Die Auswahl an Menstruationsprodukten ist groß. Klassische Tampons, Binden und Slipeinlagen gehören ebenso dazu wie \n    Menstruationstassen, Menstruationsscheiben und Periodenunterwäsche. Jede Variante erfüllt einen anderen Zweck. \n    Tampons sind diskret, Binden unkompliziert, Tassen wiederverwendbar und Periodenunterwäsche bietet den höchsten Tragekomfort. \n    Viele Menstruierende kombinieren verschiedene Produkte, um beim Arbeiten, Sporttreiben und Menstruieren gut versorgt zu sein.\n  </p>\n\n  <h3 style=\"text-align:center;margin-top:40px;font-size:24px;color:#000;\">\n    Nachhaltige Periodenprodukte – Verantwortung mit Komfort\n  </h3>\n  <p>\n    Wer nachhaltige Periodenprodukte wählt, entscheidet sich für einen wirksamen Schutz, ohne die Umwelt zu belasten. \n    Unsere Bio-Periodenprodukte werden aus Bio-Baumwolle hergestellt, die ohne Pestizide, Schadstoffe und aggressive Chemie angebaut wird. \n    Die Fasern sind weich, atmungsaktiv und hautfreundlich. Alle Produkte sind vegan, plastikfrei verpackt und vielfach zertifiziert, \n    zum Beispiel mit Certified Organic Cotton oder OEKO-TEX.\n  </p>\n  <p>\n    Während herkömmliche Hygieneartikel im Leben einer Person bis zu 10.000 Mal verwendet und entsorgt werden, \n    können wiederverwendbare Periodenprodukte diesen Verbrauch deutlich reduzieren. Wiederverwendbare Produkte wie Tasse, Stoffbinden, \n    Schwämme oder Periodenunterwäsche sparen langfristig Müll, Geld und Ressourcen – ohne auf Sicherheit zu verzichten.\n  </p>\n\n  <h3 style=\"text-align:center;margin-top:40px;font-size:24px;color:#000;\">\n    Tampons, Stoffbinden, Slipeinlagen: Produkte für die erste Periode\n  </h3>\n  <p>\n    Die ersten Zyklen bringen viele Fragen mit sich. Unsere Produkte für die erste Periode sind leicht anzuwenden, weich auf der Haut \n    und geben Sicherheit in der Schule oder beim Sport. Dazu gehören erste Monatshygiene-Produkte wie Bio-Binden, Mini-Tampons, \n    Periodenunterwäsche und kleine Slipeinlagen. Auch Frauen und Mädchen mit empfindlicher Haut finden hier Periodenprodukte ohne Schadstoffe, \n    die sanft und atmungsaktiv sind.\n  </p>\n  <p>\n    Viele Mädchen und Frauen beginnen mit Unterwäsche oder Binden und wechseln später zu Tasse oder Tampon, sobald sie sich sicher fühlen. \n    Wir nehmen die Sorgen von jungen Mädchen ernst und ermutigen sie zum Sprechen über Menstruation und Menstruationsprodukte.\n  </p>\n\n  <h3 style=\"text-align:center;margin-top:40px;font-size:24px;color:#000;\">\n    Periodenprodukte Vergleich: Tampons, Binden, Periodenunterwäsche\n  </h3>\n  <p>\n    Tampons und Binden sind praktisch und sofort einsatzbereit. Sie bestehen oft aus Mischmaterialien, die sich nicht vollständig zersetzen. \n    Unsere Bio-Varianten verzichten auf Plastik, Duftstoffe und synthetische Zusätze. Wiederverwendbare Periodenprodukte wie Tassen, Stoffbinden \n    oder Periodenunterwäsche halten mehrere Jahre und sind waschbar. Sie bleiben hygienisch, wenn sie regelmäßig gereinigt werden.\n  </p>\n  <p>\n    Menstruationstassen und -scheiben bestehen aus medizinischem Silikon, das flexibel, weich und langlebig ist. \n    Diese nachhaltigen Monatshygiene-Produkte bieten Menstruierenden maximalen Komfort und reduzieren den Abfall deutlich.\n  </p>\n\n  <h3 style=\"text-align:center;margin-top:40px;font-size:24px;color:#000;\">\n    Periodenprodukte Vergleich: Einweg vs. wiederverwendbar\n  </h3>\n\n  <div style=\"overflow-x:auto;margin-top:25px;\">\n    <table style=\"width:100%;border-collapse:collapse;font-size:15px;background-color:#fff;border-radius:0;overflow:hidden;\">\n      <thead style=\"background-color:#f8b8c2;color:#fff;\">\n        <tr>\n          <th style=\"padding:12px;text-align:left;\">Kriterium</th>\n          <th style=\"padding:12px;text-align:left;\">Tampons/Binden (Einweg)</th>\n          <th style=\"padding:12px;text-align:left;\">Periodenunterwäsche (reusable)</th>\n        </tr>\n      </thead>\n      <tbody>\n        <tr style=\"border-bottom:1px solid #f2f2f2;\">\n          <td style=\"padding:12px;\"><strong>Anwendung</strong></td>\n          <td style=\"padding:12px;\">schnell, vertraut</td>\n          <td style=\"padding:12px;\">kurze Eingewöhnung</td>\n        </tr>\n        <tr style=\"border-bottom:1px solid #f2f2f2;\">\n          <td style=\"padding:12px;\"><strong>Abfall</strong></td>\n          <td style=\"padding:12px;\">hoch</td>\n          <td style=\"padding:12px;\">sehr gering</td>\n        </tr>\n        <tr style=\"border-bottom:1px solid #f2f2f2;\">\n          <td style=\"padding:12px;\"><strong>Kosten über Zeit</strong></td>\n          <td style=\"padding:12px;\">stetig</td>\n          <td style=\"padding:12px;\">amortisiert sich</td>\n        </tr>\n        <tr style=\"border-bottom:1px solid #f2f2f2;\">\n          <td style=\"padding:12px;\"><strong>Hautgefühl</strong></td>\n          <td style=\"padding:12px;\">abhängig von Materialien</td>\n          <td style=\"padding:12px;\">atmungsaktiv, weich</td>\n        </tr>\n        <tr>\n          <td style=\"padding:12px;\"><strong>Alltag</strong></td>\n          <td style=\"padding:12px;\">gut kombinierbar</td>\n          <td style=\"padding:12px;\">ideal für Sport, Nacht, Reisen</td>\n        </tr>\n      </tbody>\n    </table>\n  </div>\n\n  <h3 style=\"text-align:center;margin-top:40px;font-size:24px;color:#000;\">\n    Aufklärung, Sicherheit und Gesundheit zu Periodenprodukten\n  </h3>\n  <p>\n    Transparenz gehört zu unserem Anspruch. TSS wird oft mit Tampons in Verbindung gebracht. \n    Das sogenannte Schocksyndrom tritt jedoch äußerst selten auf. Wichtig sind saubere Hände, \n    regelmäßiger Wechsel und die richtige Größe. Eine gute Menstruationshygiene schützt die Schleimhäute \n    und beugt Infektionen vor.\n  </p>\n  <p>\n    Immer wieder werden Themen wie Schwermetalle wie Blei und Arsen in Tampons diskutiert. \n    Aktuelle Bewertungen zeigen, dass diese Werte unterhalb gesundheitlich relevanter Grenzwerte liegen. \n    Auch Reizungen durch Bakterien lassen sich vermeiden, wenn Tampons und Binden regelmäßig gewechselt werden. \n    So bleiben alle Menstruationsprodukte sicher in der Anwendung.\n  </p>\n\n  <h3 style=\"text-align:center;margin-top:40px;font-size:24px;color:#000;\">\n    The Female Company – Frauenprodukte mit Verantwortung aus Überzeugung\n  </h3>\n  <p>\n    Unsere Periodenprodukte und Bio-Periodenprodukte werden aus sorgfältig ausgewählten Materialien hergestellt. \n    Wir verzichten auf unnötige Zusätze, setzen auf Baumwolle aus kontrolliert biologischem Anbau und faire Lieferketten. \n    Viele Produkte sind vegan, plastic-free und dermatologisch getestet. Für Schulen und Unternehmen bieten wir Lösungen \n    mit Periodenprodukte-Spendern, damit Menstruierende jederzeit versorgt sind.\n  </p>\n  <p>\n    Unsere Periodenunterwäsche ist biozidfrei und frei von Silberionen, um die Haut zu schützen und den natürlichen pH-Wert \n    zu erhalten. Bei uns weißt du genau, was in deinen Menstruationsprodukten steckt – frei von Schadstoffen, Duftstoffen und \n    versteckter Chemie. Im Online-Shop kannst du deine bevorzugten Periode-Produkte online kaufen, einzeln oder im flexiblen Abo. \n    So hast du deine Periodenprodukte immer rechtzeitig zu Hause.\n  </p>\n\n</div>",
-        "add_vertical_spacing": true,
-        "disable_inside_spacing": false,
-        "background_type": "full_width",
-        "background": "#ffe6e6",
-        "text_color": "rgba(0,0,0,0)"
-      }
-    },
-    "faq_UzBCja": {
-      "type": "faq",
-      "blocks": {
-        "question_D6ETEQ": {
-          "type": "question",
-          "settings": {
-            "title": "Welche Periodenprodukte sind die besten für mich?",
-            "answer": "<p>Das hängt von deiner Blutungsstärke und deinem Alltag ab. Für unterwegs sind Tampons und Binden praktisch, für die Nacht oder den Sport eignet sich Periodenunterwäsche. Viele kombinieren verschiedene Lösungen, um sich sicher zu fühlen. Wichtig sind gute Materialien und geprüfte Qualität.</p>"
-          }
-        },
-        "question_j7tcEb": {
-          "type": "question",
-          "settings": {
-            "title": "Wie unterscheiden sich nachhaltige von herkömmlichen Produkten?",
-            "answer": "<p>Nachhaltige Periodenprodukte bestehen aus Bio-Baumwolle und kommen ohne Kunststoff, Parfum oder Farbstoffe aus. Sie sind kompostierbar oder wiederverwendbar und reduzieren Müll. Herkömmlich produzierte Artikel enthalten oft synthetische Fasern oder Zusätze, die die Haut reizen können.</p>"
-          }
-        },
-        "question_8wLBFi": {
-          "type": "question",
-          "settings": {
-            "title": "Sind Bio-Tampons sicher und angenehm?",
-            "answer": "<p>Ja, Bio-Tampons aus zertifizierter Baumwolle sind weich, saugfähig und frei von Duftstoffen. Sie sind ideal für empfindliche Haut. Regelmäßiger Wechsel und saubere Anwendung sorgen für Hygiene und Wohlbefinden.</p>"
-          }
-        },
-        "question_TRJtnh": {
-          "type": "question",
-          "settings": {
-            "title": "Was muss man über TSS wissen?",
-            "answer": "<p>Das toxische Schocksyndrom (TSS) ist sehr selten und kann bei der Nutzung von Tampons auftreten – unabhängig von Marke oder Saugstärke. Eine gute Hygiene, die passende Größe und ein regelmäßiger Wechsel minimieren das Risiko. Periodenunterwäsche ist hiervon nicht betroffen, da sie ohne inneres Einführen funktioniert und somit keine TSS-Gefahr birgt.</p>"
-          }
-        },
-        "question_zar33r": {
-          "type": "question",
-          "settings": {
-            "title": "Wie pflege ich wiederverwendbare Period Products richtig?",
-            "answer": "<p>Stoffbinden und Periodenunterwäsche werden nach dem Tragen kalt ausgespült, dann bei 40 Grad gewaschen und an der Luft getrocknet. Menstruationstassen sollten nach jedem Zyklus ausgekocht werden. So bleiben sie hygienisch und lange nutzbar.</p>"
-          }
-        },
-        "question_a7CCxW": {
-          "type": "question",
-          "settings": {
-            "title": "Welche Produkte eignen sich für die erste Periode?",
-            "answer": "<p>Weiche Binden, kleine Tampons oder Periodenunterwäsche geben Sicherheit für den Start. Eine Tasche mit Ersatz und ein kleiner Guide helfen, sich sicher zu fühlen. Die Produkte sind sanft zur Haut und passen sich gut an den Körper an.</p>"
-          }
-        },
-        "question_nKFqFz": {
-          "type": "question",
-          "settings": {
-            "title": "Kann ich alle Periodenprodukte online kaufen?",
-            "answer": "<p>Ja, im Shop von The Female Company findest du verschiedene Menstruationsprodukte wie Tampons, Binden, Tassen und Periodenunterwäsche aus nachhaltigen Materialien. Alle Produkte kannst du bequem online kaufen. Ein Abo ist ausschließlich für Tampons und Binden verfügbar, sodass du diese regelmäßig und ohne Aufwand nach Hause bekommst.</p>"
-          }
-        },
-        "question_hrdBLc": {
-          "type": "question",
-          "settings": {
-            "title": "Warum sind nachhaltige Produkte besser für Umwelt und Körper?",
-            "answer": "<p>Weniger Plastik, zertifizierte Baumwolle und langlebige Materialien schützen die Umwelt und die Haut. Jede Entscheidung für nachhaltige Alternativen hilft, Abfall zu vermeiden und Ressourcen zu schonen – für dich und die kommenden Generationen.</p>"
-          }
-        }
-      },
-      "block_order": [
-        "question_D6ETEQ",
-        "question_j7tcEb",
-        "question_8wLBFi",
-        "question_TRJtnh",
-        "question_zar33r",
-        "question_a7CCxW",
-        "question_nKFqFz",
-        "question_hrdBLc"
-      ],
-      "name": "FAQ",
-      "settings": {
-        "show_navigation": false,
-        "enable_schema": false,
-        "section_header_subheading": "",
-        "section_header_heading": "FAQ zu Perioden Produkte",
-        "section_header_short_description": "",
-        "section_header_heading_size": "h3",
-        "section_header_highest_hierarchy": false,
-        "section_header_short_description_font_size": "medium",
-        "section_container_width": "md",
-        "section_text_alignment": "left",
-        "section_background_color": "#dc5268",
-        "section_text_color": "#ffffff",
-        "section_heading_color": "#ffffff",
-        "section_subheading_color": "#ffffff",
-        "section_heading_font_family": "default",
-        "section_spacing_top": 32,
-        "section_spacing_bottom": 32,
-        "section_spacing_different_mobile": false,
-        "section_spacing_top_mobile": 0,
-        "section_spacing_bottom_mobile": 0
-      }
-    },
     "d71fb6b2-12e9-4284-ab2f-95c6cc87b4f2": {
       "type": "blog-posts",
       "settings": {
@@ -328,8 +212,6 @@
     "668bc750-39fb-49dc-8083-7e8a480d7201",
     "fb807a74-9c40-45cc-b3f2-c96c826e3c85",
     "33c63b5f-3f1d-48a5-aca2-6165bd184c36",
-    "custom_html_zHKDMA",
-    "faq_UzBCja",
     "d71fb6b2-12e9-4284-ab2f-95c6cc87b4f2"
   ]
 }

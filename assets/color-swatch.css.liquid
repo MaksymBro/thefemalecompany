@@ -1,0 +1,44 @@
+{%- assign color_swatch_config = settings.color_swatch_config | newline_to_br | split: '<br />' -%}
+
+.product-list__filter-options .block-swatch-list--small .block-swatch__item:before{
+  content: "";
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: transparent;
+  background-size: cover;
+  margin-right: 10px;
+}
+
+{%- for color_swatch_item in color_swatch_config -%}
+  
+  {%- assign color_swatch_parts = color_swatch_item | split: ':' -%}
+  {%- assign color_swatch_name = color_swatch_parts.first | strip | downcase | replace: "ß", "ss" | replace: " ", "_" | replace: "/", "" | replace: "&", "" -%}
+  {%- assign color_swatch_value = color_swatch_parts.last | strip -%}
+
+  {%- if color_swatch_value contains '#' -%}
+    .product-list__filter-options .block-swatch-list--small .block-swatch__item.{{ color_swatch_name }}:before{
+      background-color: {{ color_swatch_value }};
+    }
+  {%- else -%}
+    {%- assign color_swatch_image = color_swatch_value | split: '/' | last -%}
+    .product-list__filter-options .block-swatch-list--small .block-swatch__item.{{ color_swatch_name }}:before{
+      background: transparent url('//buy.thefemalecompany.com/cdn/shop/files/{{ color_swatch_image }}') repeat center center;
+    } 
+  {%- endif -%}
+
+{%- endfor -%}
+
+@media screen and (max-width: 999px){
+  .product-list__filter-options .product-list__filter-option-list{
+    padding: 1rem;
+  }
+  .product-list__filter-options .block-swatch-list--small .block-swatch__item{
+    min-height: 20px;
+    padding: 4px 10px;
+  }
+  .product-list__filter-options .block-swatch-list--small .block-swatch__item:before{
+    width: 12px;
+    height: 12px;
+    margin-right: 5px;
+}

@@ -35,7 +35,7 @@ NOTE TO DEVELOPERS: welcome to Focal theme! We hope that you will enjoy editing 
 
     {{ content_for_header }}
     
-      <meta name="google-site-verification" content="Ni670diFqYVeuz4gQWQ2vtiUzYkE8pXXWkyU-FuCOdc" />
+  
   {% include 'pagefly-app-header' %}</head>
   
   <body class="no-focus-outline {{ feature_classes }}" data-instant-allow-query-string>
@@ -149,10 +149,6 @@ NOTE TO DEVELOPERS: welcome to Focal theme! We hope that you will enjoy editing 
             window._klOnsite.push(['openForm', '{{- settings.pdp_coming_soon_signup_id -}}']);
           });
         })
-        window.translation = {
-          showLess: '{{ 'collection.general.show_less' | t }}',
-          showMore: '{{ 'collection.general.show_more' | t }}'
-        }
       </script>
 
       {%- if settings.show_upsell_popup -%}
@@ -183,5 +179,3 @@ NOTE TO DEVELOPERS: welcome to Focal theme! We hope that you will enjoy editing 
 
 </body>
 </html>
-
-{% if content_for_header contains "kimonix_void_script" %}<script async id="kimonix_elements_script" src="https://api.kimonix.com/kimonix_elements.js?shop=thefemalecompany.myshopify.com"></script>{% endif %}

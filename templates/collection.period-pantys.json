@@ -9,52 +9,6 @@
  */
 {
   "sections": {
-    "countdown_timer_H3tGxT": {
-      "type": "countdown-timer",
-      "blocks": {
-        "text_Q9E8Py": {
-          "type": "text",
-          "settings": {
-            "text": "<p><strong>Bis zu 30% Rabatt mit unserem geheimen Code</strong> 🔥 Finde es im Checkout heraus !!</p>",
-            "offset_top_desktop": 20,
-            "offset_bottom_desktop": 20,
-            "offset_top_mobile": 10,
-            "offset_bottom_mobile": 10
-          }
-        },
-        "countdown_timer_BiNPCW": {
-          "type": "countdown_timer",
-          "settings": {
-            "show_countdown_words": true,
-            "countdown_start_date": "2025-11-09",
-            "countdown_start_time_hour": "18",
-            "countdown_start_time_minute": "00",
-            "countdown_date": "2025-11-09",
-            "countdown_time_hour": "23",
-            "countdown_time_minute": "59",
-            "timer_link": "",
-            "timer_font_size_mobile": 1.2,
-            "text_font_size_mobile": 0.6,
-            "timer_font_size_desktop": 4.5,
-            "text_font_size_desktop": 1.5,
-            "offset_top_desktop": 20,
-            "offset_bottom_desktop": 20,
-            "offset_top_mobile": 10,
-            "offset_bottom_mobile": 10
-          }
-        }
-      },
-      "block_order": [
-        "text_Q9E8Py",
-        "countdown_timer_BiNPCW"
-      ],
-      "name": "Countdown timer",
-      "settings": {
-        "countdown_text_color": "#1a1a1a",
-        "background_color": "#fff0f0",
-        "text_color": "#1a1a1a"
-      }
-    },
     "collection-banner": {
       "type": "collection-banner",
       "settings": {
@@ -69,6 +23,23 @@
         "image_overlay_color": "#1a1a1a",
         "image_overlay_opacity": 25,
         "quick_links": ""
+      }
+    },
+    "trustpilot_3D46tL": {
+      "type": "trustpilot",
+      "disabled": true,
+      "name": "Trustpilot",
+      "settings": {
+        "widget": "horizontal_condensed",
+        "widget_color_scheme": "light",
+        "section_background_color": "rgba(0,0,0,0)",
+        "trustpilot_current_rating": 4,
+        "trustpilot_review_count": "2000+",
+        "section_spacing_top": 0,
+        "section_spacing_bottom": 12,
+        "section_spacing_different_mobile": false,
+        "section_spacing_top_mobile": 0,
+        "section_spacing_bottom_mobile": 0
       }
     },
     "pagefly_section_d4a4qz": {
@@ -253,10 +224,10 @@
         "f86bb837-4a49-49c6-9951-80f42b6a1b93": {
           "type": "image",
           "settings": {
-            "subheading": "Stay Dry® Technologie",
+            "subheading": "Stay Dry Layer Technologie™",
             "title": "",
-            "content": "<p>Saugstarke Membran, nur <strong>1 mm dicker</strong> als normale Unterwäsche und trotzdem <strong>auslaufsicher</strong>. </p>",
-            "link_text": "erfahre mehr",
+            "content": "<p>Entwickelt mit Textiltechniker*innen und Gynäkolog*innen: nur <strong>max. 1mm</strong> dicker als normale Unterwäsche und trotzdem super <strong>sau(g)stark</strong>.</p>",
+            "link_text": "mehr erfahren",
             "link_url": "#stay-dry",
             "link_style": "link",
             "text_position": "middle_left",
@@ -295,9 +266,9 @@
       "type": "custom-html",
       "name": "Custom HTML_new",
       "settings": {
-        "subheading": "AUSLAUFSICHER DURCH DEN TAG",
-        "title": "Stay Dry® Technologie",
-        "html": "",
+        "subheading": "Default Mode: Dry Pantys",
+        "title": "Stay Dry Layer Technologie™",
+        "html": "<center id=\"stay-dry\">Unsere Periodenslips bieten dir zuverlässigen Auslaufschutz, egal ob im Alltag, beim Sport oder in der Nacht. Dank der innovativen Stay Dry Layer™ Technologie besteht die Periodenunterwäsche aus einem vierlagigen Absorptionssystem, das gemeinsam mit Textiltechnikerinnen und Gynäkologinnen entwickelt wurde.  Entwickelt mit Textiltechniker*innen und Gynäkolog*innen: nur <strong>max. 1mm</strong> dicker als normale Unterwäsche und trotzdem super <strong>sau(g)stark</strong>.</center>",
         "add_vertical_spacing": false,
         "disable_inside_spacing": false,
         "background_type": "full_width",
@@ -314,8 +285,8 @@
             "image": "shopify://shop_images/panty_layer_closeup_layer1.jpg",
             "image_width": 100,
             "image_border": "rgba(0,0,0,0)",
-            "title": "1. Schicht: Stay Dry® Membran",
-            "content": "<p>Saugt Flüssigkeit innerhalb weniger Sekunden auf. Für <strong>trockenes Tragegefühl</strong>.</p>",
+            "title": "Layer 1: Stay Dry Layer™",
+            "content": "<p>Diese Schicht <strong>nimmt Flüssigkeit</strong> in Sekundenschnelle auf und hält dich dauerhaft trocken.</p>",
             "link_text": "",
             "link_url": "",
             "link_style": "link",
@@ -329,8 +300,8 @@
             "image": "shopify://shop_images/panty_layer_closeup_layer2_alt.jpg",
             "image_width": 100,
             "image_border": "rgba(0,0,0,0)",
-            "title": "2. Schicht: Ultra absorbierende Faser",
-            "content": "<p><strong>Speichert</strong> die Flüssigkeit und schließt sie sicher ein.</p>",
+            "title": "Layer 2: Ultra-absorbierende Schicht",
+            "content": "<p>Sie <strong>speichert</strong> die Flüssigkeit sicher und verhindert unangenehme Feuchtigkeit oder Gerüche.</p>",
             "link_text": "",
             "link_url": "",
             "link_style": "link",
@@ -341,11 +312,11 @@
         "template--17669741314314__feda577e-11fc-46a6-b585-7c78638f36a1-item-3": {
           "type": "item",
           "settings": {
-            "image": "shopify://shop_images/Wasserabweisende-Membran.png",
+            "image": "shopify://shop_images/panty_layer_closeup_layer3.jpg",
             "image_width": 100,
             "image_border": "rgba(0,0,0,0)",
-            "title": "3. Schicht: Wasserdichtes Gewebe",
-            "content": "<p>Lässt keine Flüssigkeit durch, <strong>keine Auslaufgefahr</strong>.</p>",
+            "title": "Layer 3: Wasserdichte Membran",
+            "content": "<p>Diese Barriere schützt dich <strong>zuverlässig vor Auslaufen</strong>, auch an starken Tagen oder bei längerer Tragedauer.</p>",
             "link_text": "",
             "link_url": "",
             "link_style": "link",
@@ -359,8 +330,8 @@
             "image": "shopify://shop_images/panty_layer_closeup_layer4_070ad79d-1f21-4c24-8941-cc2cf0159468.jpg",
             "image_width": 100,
             "image_border": "rgba(0,0,0,0)",
-            "title": "4. Schicht: Hautfreundliche Außenschicht",
-            "content": "<p>Hautfreundlicher Oberstoff für <strong>komfortables Tragegefühl</strong>.</p>",
+            "title": "Layer 4: Weiche Bio-Baumwolle",
+            "content": "<p>Die äußere Schicht besteht aus superweicher <strong>Bio-Baumwolle</strong> und sorgt für ein angenehmes, natürliches <strong>Tragegefühl</strong>.</p>",
             "link_text": "",
             "link_url": "",
             "link_style": "link",
@@ -381,7 +352,7 @@
         "stack_items": false,
         "subheading": "",
         "title": "",
-        "content": "<p>Saugstarke Einlage, nur <strong>1 mm dicker</strong> als normale Unterwäsche und trotzdem <strong>auslaufsicher</strong>. Ohne Biozide & PFAs. So hält sie dicht:</p>",
+        "content": "<p>Mit dieser Kombination genießt du maximale Bewegungsfreiheit, Trockenheit und Sicherheit, ohne zusätzliche Produkte wie Tampons oder Binden - oder in Kombination für doppelten Schutz.</p>",
         "column_alignment": "center",
         "mobile_item_size": "medium",
         "desktop_item_size": "medium",
@@ -932,8 +903,8 @@
     }
   },
   "order": [
-    "countdown_timer_H3tGxT",
     "collection-banner",
+    "trustpilot_3D46tL",
     "pagefly_section_d4a4qz",
     "4882da3e-a7b7-48ff-992c-fd877cc635e9",
     "countdown_timer_TEEbYj",

@@ -16,16 +16,30 @@
       "blocks": {
         "discount_dNY6aV": {
           "type": "discount",
+          "disabled": true,
           "settings": {
-            "discount_code": "XMAS20",
-            "discount_text": "20% auf ALLES",
+            "discount_code": "REDMONTH",
+            "discount_text": "Erhalte 15% mit dem Code:",
             "button_text_copy": "Copy",
-            "url_matchers": "collections/favourites,collections/influencer,collections/paid-social-landingpage,pages/lp-period-panty,pages/p-period-panty_ab_menu,pages/crm_landingpage_25,collections/crm_landingpage_2-2,collections"
+            "url_matchers": "collections/favourites,collections/influencer,collections/paid-social-landingpage,pages/lp-period-panty,pages/p-period-panty_ab_menu,pages"
+          }
+        },
+        "message_MJT9wp": {
+          "type": "message",
+          "disabled": true,
+          "settings": {
+            "text": "<p><a href=\"https://buy.thefemalecompany.com/pages/summersale-early-access-2025\" title=\"https://buy.thefemalecompany.com/pages/summersale-early-access-2025\">🔥 <strong>Early Access & - 25% on top. Hier anmelden</strong></a></p>",
+            "text_html": "",
+            "learn_more_text": "Learn more",
+            "annoucement_link": "shopify://pages/clitclub",
+            "title": "",
+            "content": "",
+            "button_text": "Werde Teil von The Female Company",
+            "button_link": "shopify://pages/crowdinvest"
           }
         },
         "message_jai9HA": {
           "type": "message",
-          "disabled": true,
           "settings": {
             "text": "<p>❤️‍🔥 über <strong>2 Millionen</strong> mal verkauft ❤️‍🔥</p>",
             "text_html": "",
@@ -37,23 +51,8 @@
             "button_link": ""
           }
         },
-        "message_XYRLUB": {
-          "type": "message",
-          "disabled": true,
-          "settings": {
-            "text": "<p><strong>Kostenloser Versand ab 65€</strong></p>",
-            "text_html": "",
-            "learn_more_text": "Learn more",
-            "annoucement_link": "",
-            "title": "",
-            "content": "",
-            "button_text": "",
-            "button_link": ""
-          }
-        },
         "message-1": {
           "type": "message",
-          "disabled": true,
           "settings": {
             "text": "",
             "text_html": "{%- assign free_shipping_thresholds = settings.cart_free_shipping_threshold | remove: ' ' | split: ',' -%}\n\n        {%- for threshold in free_shipping_thresholds -%}\n          {%- assign threshold_parts = threshold | split: ':' -%}\n          {%- assign country_code = threshold_parts | first | upcase -%}\n\n          {%- if country_code == localization.country.iso_code -%}\n            {%- assign matched_free_shipping_threshold = threshold_parts | last | times: 100 -%}\n            {%- break -%}\n          {%- endif -%}\n\n  {%- if country_code == \"OTHER\" -%}\n      {%- assign fallback_threshold = threshold_parts | last | times: 100 -%}\n    {%- endif -%}\n  {%- endfor -%}\n\n  {%- if matched_free_shipping_threshold == blank and fallback_threshold != blank -%}\n  {%- assign matched_free_shipping_threshold = fallback_threshold -%}\n{%- endif -%}\n\n{% if request.locale.iso_code == 'en' %}\n<strong>Free shipping</strong> from {{ matched_free_shipping_threshold | money_without_trailing_zeros }} 🚚\n{% elsif request.locale.iso_code == 'nl' %}\n<strong>Gratis verzending</strong> vanaf {{ matched_free_shipping_threshold | money_without_trailing_zeros }} 🚚\n{% else %}\n<strong>Kostenloser Versand</strong> ab {{ matched_free_shipping_threshold | money_without_trailing_zeros }} 🚚 \n{% endif %}",
@@ -68,69 +67,19 @@
       },
       "block_order": [
         "discount_dNY6aV",
+        "message_MJT9wp",
         "message_jai9HA",
-        "message_XYRLUB",
         "message-1"
       ],
       "settings": {
         "start_year": 2025,
-        "start_month": 10,
-        "start_day": 19,
+        "start_month": 1,
+        "start_day": 1,
         "start_time": "10:00",
-        "end_year": 2025,
-        "end_month": 12,
-        "end_day": 25,
-        "end_time": "23:45",
-        "announcement_bar_position": "sticky",
-        "announcement_text_size": "normal",
-        "autoplay": true,
-        "cycle_speed": 7,
-        "background": "#cc0807",
-        "text_color": "#ffffff",
-        "button_background": "#ffffff",
-        "button_text_color": "#cc0807"
-      }
-    },
-    "announcement_bar_MUjQJa": {
-      "type": "announcement-bar",
-      "blocks": {
-        "discount_aPLaYB": {
-          "type": "discount",
-          "settings": {
-            "discount_code": "NEWYEAR25",
-            "discount_text": "25% mit dem Code:",
-            "button_text_copy": "Copy",
-            "url_matchers": "collections/favourites,collections/influencer,collections/paid-social-landingpage,pages/lp-period-panty,pages/p-period-panty_ab_menu,pages/crm_landingpage_25,collections/crm_landingpage_2-2,collections"
-          }
-        },
-        "message_L8VwCQ": {
-          "type": "message",
-          "disabled": true,
-          "settings": {
-            "text": "<p><strong>Gratis Wetbag 🎁</strong> <br/>Füge 90€ zu deinem Warenkorb hinzu, um einen gratis Wetbag zu erhalten.</p>",
-            "text_html": "",
-            "learn_more_text": "Learn more",
-            "annoucement_link": "",
-            "title": "",
-            "content": "",
-            "button_text": "",
-            "button_link": ""
-          }
-        }
-      },
-      "block_order": [
-        "discount_aPLaYB",
-        "message_L8VwCQ"
-      ],
-      "settings": {
-        "start_year": 2025,
-        "start_month": 12,
-        "start_day": 26,
-        "start_time": "00:00",
-        "end_year": 2025,
+        "end_year": 2050,
         "end_month": 12,
         "end_day": 31,
-        "end_time": "23:45",
+        "end_time": "10:00",
         "announcement_bar_position": "sticky",
         "announcement_text_size": "normal",
         "autoplay": true,
@@ -139,120 +88,6 @@
         "text_color": "#ffffff",
         "button_background": "#ffffff",
         "button_text_color": "#cc0807"
-      }
-    },
-    "countdown_timer_7HKfbz": {
-      "type": "countdown-timer",
-      "blocks": {
-        "text_mYmHQV": {
-          "type": "text",
-          "settings": {
-            "text": "<p><strong>GRATIS WETBAG</strong> 🔥 Ab 65€ Bestellwert!</p>",
-            "offset_top_desktop": 20,
-            "offset_bottom_desktop": 20,
-            "offset_top_mobile": 10,
-            "offset_bottom_mobile": 10
-          }
-        },
-        "stock_countdown_bABExC": {
-          "type": "stock_countdown",
-          "settings": {
-            "start_stock": 328,
-            "end_stock": 2,
-            "stock_text": "<p><strong>Sei schnell! Nur noch $$stock$$ Stück übrig.</strong></p>",
-            "text_font_size_mobile": 1,
-            "text_font_size_desktop": 1,
-            "stock_start_date": "",
-            "stock_start_time_hour": "00",
-            "stock_start_time_minute": "00",
-            "stock_end_date": "",
-            "stock_end_time_hour": "23",
-            "stock_end_time_minute": "59",
-            "offset_top_desktop": 0,
-            "offset_bottom_desktop": 0,
-            "offset_top_mobile": 0,
-            "offset_bottom_mobile": 0
-          }
-        },
-        "countdown_timer_zj7GRB": {
-          "type": "countdown_timer",
-          "settings": {
-            "show_countdown_words": true,
-            "countdown_start_date": "2025-11-27",
-            "countdown_start_time_hour": "18",
-            "countdown_start_time_minute": "00",
-            "countdown_date": "2025-11-28",
-            "countdown_time_hour": "00",
-            "countdown_time_minute": "01",
-            "timer_link": "",
-            "timer_font_size_mobile": 1.3,
-            "text_font_size_mobile": 0.8,
-            "timer_font_size_desktop": 4.5,
-            "text_font_size_desktop": 0.9,
-            "offset_top_desktop": 20,
-            "offset_bottom_desktop": 20,
-            "offset_top_mobile": 10,
-            "offset_bottom_mobile": 10
-          }
-        }
-      },
-      "block_order": [
-        "text_mYmHQV",
-        "stock_countdown_bABExC",
-        "countdown_timer_zj7GRB"
-      ],
-      "name": "Countdown timer",
-      "settings": {
-        "countdown_text_color": "#ffffff",
-        "background_color": "#1a1a1a",
-        "text_color": "#ffffff"
-      }
-    },
-    "countdown_timer_Y3rjBd": {
-      "type": "countdown-timer",
-      "blocks": {
-        "text_HXqzHh": {
-          "type": "text",
-          "settings": {
-            "text": "<p><strong>5% EXTRA auf alle Produkte </strong></p>",
-            "offset_top_desktop": 20,
-            "offset_bottom_desktop": 20,
-            "offset_top_mobile": 10,
-            "offset_bottom_mobile": 10
-          }
-        },
-        "countdown_timer_WwMiPY": {
-          "type": "countdown_timer",
-          "disabled": true,
-          "settings": {
-            "show_countdown_words": true,
-            "countdown_start_date": "2025-12-11",
-            "countdown_start_time_hour": "09",
-            "countdown_start_time_minute": "00",
-            "countdown_date": "2025-12-12",
-            "countdown_time_hour": "23",
-            "countdown_time_minute": "59",
-            "timer_link": "",
-            "timer_font_size_mobile": 1.1,
-            "text_font_size_mobile": 0.6,
-            "timer_font_size_desktop": 0.9,
-            "text_font_size_desktop": 0.6,
-            "offset_top_desktop": 0,
-            "offset_bottom_desktop": 8,
-            "offset_top_mobile": 0,
-            "offset_bottom_mobile": 7
-          }
-        }
-      },
-      "block_order": [
-        "text_HXqzHh",
-        "countdown_timer_WwMiPY"
-      ],
-      "name": "Countdown timer",
-      "settings": {
-        "countdown_text_color": "#ffffff",
-        "background_color": "#1a1a1a",
-        "text_color": "#ffffff"
       }
     },
     "header": {
@@ -425,13 +260,12 @@
         "36d2aa97-ef87-40cf-933a-42969764729a"
       ],
       "custom_css": [
-        ".lp-period-panty .header__linklist {display: none !important;}",
-        ".lp-period-panty .header__icon-wrapper .icon--header-hamburger {color: white;}"
+        ".lp-period-panty_ab_menu .header__linklist {display: none !important;}",
+        ".lp-period-panty_ab_menu .header__icon-wrapper {display: none !important;}"
       ],
       "settings": {
         "enable_sticky_header": true,
         "logo": "{{ shop.brand.logo }}",
-        "h1_text": "The Female Company",
         "logo_max_width": 250,
         "mobile_logo_max_width": 170,
         "navigation_menu": "navbar",
@@ -450,9 +284,6 @@
   },
   "order": [
     "announcement-bar",
-    "announcement_bar_MUjQJa",
-    "countdown_timer_7HKfbz",
-    "countdown_timer_Y3rjBd",
     "header"
   ]
 }

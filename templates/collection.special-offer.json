@@ -120,11 +120,12 @@
     },
     "rich_text_nxaxJy": {
       "type": "rich-text",
+      "disabled": true,
       "name": "Rich text",
       "settings": {
         "subheading": "",
-        "title": "Bralettes - bis zu 70%",
-        "content": "<p>Zero Wires. Zero Pressure. 100% Softness.</p>",
+        "title": "Spare bis zu 50% Rabatt",
+        "content": "",
         "button_text": "",
         "button_link": "",
         "background_type": "full_width",
@@ -282,21 +283,21 @@
         "button_background": "rgba(0,0,0,0)",
         "button_text_color": "rgba(0,0,0,0)",
         "subheading": "",
-        "title": "Plastikfrei Rasieren - bis zu 50%",
-        "content": "<p>Zero Waste. Zero Cuts. 100% Smooth. Unsere Plastikfreien und natürlichen Rasur Essentials.</p>",
+        "title": "shaving products",
+        "content": "",
         "section_header_heading_size": "h3",
         "section_header_highest_hierarchy": false,
         "section_header_short_description_font_size": "medium",
         "section_container_width": "md",
         "background": "rgba(0,0,0,0)",
         "text_color": "rgba(0,0,0,0)",
-        "heading_color": "#cc0807",
+        "heading_color": "rgba(0,0,0,0)",
         "section_subheading_color": "rgba(0,0,0,0)",
         "section_heading_font_family": "default",
-        "section_spacing_top": 0,
-        "section_spacing_bottom": 0,
+        "section_spacing_top": 68,
+        "section_spacing_bottom": 68,
         "section_spacing_different_mobile": true,
-        "section_spacing_top_mobile": 20,
+        "section_spacing_top_mobile": 48,
         "section_spacing_bottom_mobile": 48
       }
     },
@@ -338,63 +339,7 @@
         "button_background": "rgba(0,0,0,0)",
         "button_text_color": "rgba(0,0,0,0)",
         "subheading": "",
-        "title": "Empowering Statement Pieces - bis zu 60%",
-        "content": "<p>Starke Messages für jeden Tag!</p>",
-        "section_header_heading_size": "h3",
-        "section_header_highest_hierarchy": false,
-        "section_header_short_description_font_size": "medium",
-        "section_container_width": "md",
-        "background": "rgba(0,0,0,0)",
-        "text_color": "rgba(0,0,0,0)",
-        "heading_color": "#cc0807",
-        "section_subheading_color": "rgba(0,0,0,0)",
-        "section_heading_font_family": "default",
-        "section_spacing_top": 48,
-        "section_spacing_bottom": 0,
-        "section_spacing_different_mobile": true,
-        "section_spacing_top_mobile": 20,
-        "section_spacing_bottom_mobile": 24
-      }
-    },
-    "featured_collections_6T9C3i": {
-      "type": "featured-collections",
-      "blocks": {
-        "collection_mgij3K": {
-          "type": "collection",
-          "settings": {
-            "collection": "schmuck",
-            "label": "",
-            "button_text": "",
-            "button_url": "",
-            "hide_from_product_title_start": "",
-            "filterable_options": ""
-          }
-        }
-      },
-      "block_order": [
-        "collection_mgij3K"
-      ],
-      "name": "Featured collections",
-      "settings": {
-        "start_year": 2025,
-        "start_month": 1,
-        "start_day": 1,
-        "start_time": "10:00",
-        "end_year": 2050,
-        "end_month": 12,
-        "end_day": 31,
-        "end_time": "10:00",
-        "products_count": 8,
-        "products_per_row": 4,
-        "stack_products": true,
-        "show_cta": false,
-        "filter_toggle_button_background": "rgba(0,0,0,0)",
-        "filter_toggle_active_button_background": "rgba(0,0,0,0)",
-        "filter_toggle_button_color": "rgba(0,0,0,0)",
-        "button_background": "rgba(0,0,0,0)",
-        "button_text_color": "rgba(0,0,0,0)",
-        "subheading": "",
-        "title": "",
+        "title": "Unsere Vulvaletten",
         "content": "",
         "section_header_heading_size": "h3",
         "section_header_highest_hierarchy": false,
@@ -405,132 +350,10 @@
         "heading_color": "rgba(0,0,0,0)",
         "section_subheading_color": "rgba(0,0,0,0)",
         "section_heading_font_family": "default",
-        "section_spacing_top": 88,
+        "section_spacing_top": 68,
         "section_spacing_bottom": 68,
         "section_spacing_different_mobile": true,
-        "section_spacing_top_mobile": 0,
-        "section_spacing_bottom_mobile": 36
-      }
-    },
-    "shop_the_look_KYaxde": {
-      "type": "shop-the-look",
-      "name": "Shop the look",
-      "settings": {
-        "reveal_on_scroll": true,
-        "label": "Shop the looks"
-      }
-    },
-    "featured_product_pPBXLY": {
-      "type": "featured-product",
-      "blocks": {
-        "variant_picker_Gyn9JA": {
-          "type": "variant_picker",
-          "disabled": true,
-          "settings": {
-            "hide_sold_out_variants": false,
-            "selector_mode": "block",
-            "color_mode": "color",
-            "size_chart_page": ""
-          }
-        },
-        "quantity_selector_XkBt8H": {
-          "type": "quantity_selector",
-          "disabled": true,
-          "settings": {}
-        },
-        "buy_buttons_kgM4Vi": {
-          "type": "buy_buttons",
-          "disabled": true,
-          "settings": {
-            "show_payment_button": true,
-            "show_gift_card_recipient": false,
-            "atc_button_background": "rgba(0,0,0,0)",
-            "atc_button_text_color": "rgba(0,0,0,0)",
-            "buy_now_button_background": "rgba(0,0,0,0)",
-            "buy_now_button_text_color": "rgba(0,0,0,0)"
-          }
-        }
-      },
-      "block_order": [
-        "variant_picker_Gyn9JA",
-        "quantity_selector_XkBt8H",
-        "buy_buttons_kgM4Vi"
-      ],
-      "disabled": true,
-      "name": "Featured product",
-      "settings": {
-        "product": "fallofthepatriarchy-shirt",
-        "subheading": "Subheading",
-        "title": "Featured product",
-        "show_vendor": false,
-        "show_sku": false,
-        "show_taxes_included": false,
-        "show_product_rating": false,
-        "show_share_buttons": false,
-        "help_page": "",
-        "enable_video_autoplay": true,
-        "enable_video_looping": false,
-        "enable_image_zoom": true,
-        "show_thumbnails_on_mobile": false,
-        "desktop_thumbnails_position": "bottom",
-        "transition_effect": "slide",
-        "background": "rgba(0,0,0,0)",
-        "text_color": "rgba(0,0,0,0)"
-      }
-    },
-    "featured_collections_LkjmxY": {
-      "type": "featured-collections",
-      "blocks": {
-        "collection_r4CABf": {
-          "type": "collection",
-          "settings": {
-            "collection": "essentials",
-            "label": "",
-            "button_text": "",
-            "button_url": "",
-            "hide_from_product_title_start": "",
-            "filterable_options": ""
-          }
-        }
-      },
-      "block_order": [
-        "collection_r4CABf"
-      ],
-      "name": "Featured collections",
-      "settings": {
-        "start_year": 2025,
-        "start_month": 1,
-        "start_day": 1,
-        "start_time": "10:00",
-        "end_year": 2050,
-        "end_month": 12,
-        "end_day": 31,
-        "end_time": "10:00",
-        "products_count": 8,
-        "products_per_row": 4,
-        "stack_products": true,
-        "show_cta": false,
-        "filter_toggle_button_background": "rgba(0,0,0,0)",
-        "filter_toggle_active_button_background": "rgba(0,0,0,0)",
-        "filter_toggle_button_color": "rgba(0,0,0,0)",
-        "button_background": "rgba(0,0,0,0)",
-        "button_text_color": "rgba(0,0,0,0)",
-        "subheading": "",
-        "title": "Spare bis zu 20% auf Perioden Produkte",
-        "content": "",
-        "section_header_heading_size": "h3",
-        "section_header_highest_hierarchy": false,
-        "section_header_short_description_font_size": "medium",
-        "section_container_width": "md",
-        "background": "rgba(0,0,0,0)",
-        "text_color": "rgba(0,0,0,0)",
-        "heading_color": "#cc0807",
-        "section_subheading_color": "rgba(0,0,0,0)",
-        "section_heading_font_family": "default",
-        "section_spacing_top": 20,
-        "section_spacing_bottom": 24,
-        "section_spacing_different_mobile": true,
-        "section_spacing_top_mobile": 12,
+        "section_spacing_top_mobile": 48,
         "section_spacing_bottom_mobile": 48
       }
     }
@@ -544,10 +367,6 @@
     "rich_text_3GDQkt",
     "main",
     "featured_collections_cUwcrT",
-    "featured_collections_MJLNgj",
-    "featured_collections_6T9C3i",
-    "shop_the_look_KYaxde",
-    "featured_product_pPBXLY",
-    "featured_collections_LkjmxY"
+    "featured_collections_MJLNgj"
   ]
 }

@@ -20,87 +20,41 @@
         "min_gap": 87,
         "animation_speed": 70,
         "text_color": "#ffffff",
-        "background": "#cc0807"
-      }
-    },
-    "countdown_timer_GHVfQE": {
-      "type": "countdown-timer",
-      "blocks": {
-        "text_DHpRXe": {
-          "type": "text",
-          "settings": {
-            "text": "<p><strong>Bis zu 30% Rabatt mit unserem geheimen Code</strong> 🔥 Finde es im Checkout heraus !!</p>",
-            "offset_top_desktop": 20,
-            "offset_bottom_desktop": 20,
-            "offset_top_mobile": 10,
-            "offset_bottom_mobile": 10
-          }
-        },
-        "countdown_timer_wcz7my": {
-          "type": "countdown_timer",
-          "settings": {
-            "show_countdown_words": true,
-            "countdown_start_date": "2025-11-09",
-            "countdown_start_time_hour": "17",
-            "countdown_start_time_minute": "45",
-            "countdown_date": "2025-11-09",
-            "countdown_time_hour": "23",
-            "countdown_time_minute": "59",
-            "timer_link": "",
-            "timer_font_size_mobile": 1.2,
-            "text_font_size_mobile": 0.8,
-            "timer_font_size_desktop": 4.5,
-            "text_font_size_desktop": 1.5,
-            "offset_top_desktop": 20,
-            "offset_bottom_desktop": 20,
-            "offset_top_mobile": 10,
-            "offset_bottom_mobile": 10
-          }
-        }
-      },
-      "block_order": [
-        "text_DHpRXe",
-        "countdown_timer_wcz7my"
-      ],
-      "name": "Countdown timer",
-      "settings": {
-        "countdown_text_color": "#1a1a1a",
-        "background_color": "#fff0f0",
-        "text_color": "#1a1a1a"
+        "background": "#ff3f46"
       }
     },
     "slideshow": {
       "type": "slideshow",
       "blocks": {
-        "image_ccGbEF": {
+        "image_R8xt4t": {
           "type": "image",
+          "disabled": true,
           "settings": {
-            "image": "shopify://shop_images/Frame_1707480195_9.png",
-            "mobile_image": "shopify://shop_images/Frame_73_1.png",
+            "image": "shopify://shop_images/Header_Web_Preview_2.png",
+            "mobile_image": "shopify://shop_images/Header_mobile_Preview_2_a6667c4b-5da4-4e33-be2b-bcb0eb0aa7d4.jpg",
             "text_position": "bottom_left",
             "subheading": "",
             "title": "",
-            "title_h1": false,
             "subtitle": "",
             "subtitle_html": "",
-            "button_1_text": "zum Wintersale",
-            "button_1_link": "shopify://collections/all-2",
+            "button_1_text": "Zum Sale",
+            "button_1_link": "shopify://collections/sale-1",
             "button_2_text": "",
             "button_2_link": "",
             "heading_font_family": "circular",
-            "heading_color": "#ffffff",
-            "text_color": "#ffffff",
-            "button_background": "#ffffff",
-            "button_text_color": "#cc0807",
-            "overlay_color": "#000000",
-            "overlay_opacity": 0,
+            "heading_color": "#cc0807",
+            "text_color": "#cc0807",
+            "button_background": "#cc0807",
+            "button_text_color": "#ffffff",
+            "overlay_color": "#1a1a1a",
+            "overlay_opacity": 12,
             "schedule_publishing": true,
-            "publish_date": "26.12.2025 00:01",
-            "schedule_unpublishing": true,
-            "unpublish_date": "31.12.2025 23:59"
+            "publish_date": "14.07.2025 00:01",
+            "schedule_unpublishing": false,
+            "unpublish_date": "01.01.2019 00:00"
           }
         },
-        "image_RzLQqU": {
+        "image_TFPrUN": {
           "type": "image",
           "settings": {
             "image": "shopify://shop_images/Header_Web_d3d69a82-0963-4cf1-9f29-58621ff25878.jpg",
@@ -108,7 +62,6 @@
             "text_position": "bottom_left",
             "subheading": "",
             "title": "Maximaler Perioden-Komfort",
-            "title_h1": false,
             "subtitle": "<p>Period Panty aus ultra-softem Ripp-Strick Modal aus nachhaltigem Buchenholz. Passt sich deinem Körper flexibel an.</p>",
             "subtitle_html": "",
             "button_1_text": "Modal Period Pantys",
@@ -122,21 +75,20 @@
             "button_text_color": "#ffffff",
             "overlay_color": "#000000",
             "overlay_opacity": 8,
-            "schedule_publishing": true,
-            "publish_date": "17.12.2025 00:01",
+            "schedule_publishing": false,
+            "publish_date": "07.10.2025 00:01",
             "schedule_unpublishing": false,
-            "unpublish_date": "02.12.2025 23:59"
+            "unpublish_date": "01.01.2019 00:00"
           }
         },
-        "image_tbjbBK": {
+        "image_TBa6w8": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/Header_Web_SLIDE1.jpg",
-            "mobile_image": "shopify://shop_images/Header_mobile_4659d45b-42ef-443c-9d24-924bf267c30c.jpg",
-            "text_position": "bottom_left",
+            "image": "shopify://shop_images/Header_Web__1_f15607c8-b4d9-4b7b-a63f-0a2814575728.jpg",
+            "mobile_image": "shopify://shop_images/Header_mobile_704e0c07-9cc0-4aea-b11f-9706d5dbe5ea.jpg",
+            "text_position": "middle_left",
             "subheading": "",
             "title": "Auslaufsicher durch die Nacht",
-            "title_h1": false,
             "subtitle": "<p>Endlich durchschlafen mit trockenem Tragegefühl.</p>",
             "subtitle_html": "",
             "button_1_text": "Zu den Produkten",
@@ -146,17 +98,17 @@
             "heading_font_family": "circular",
             "heading_color": "#ffffff",
             "text_color": "#ffffff",
-            "button_background": "#5e65c9",
+            "button_background": "#5f65c3",
             "button_text_color": "#ffffff",
             "overlay_color": "#000000",
             "overlay_opacity": 9,
             "schedule_publishing": false,
-            "publish_date": "01.01.2019 00:00",
+            "publish_date": "20.10.2025 00:01",
             "schedule_unpublishing": false,
             "unpublish_date": "01.01.2019 00:00"
           }
         },
-        "image_gaDgj7": {
+        "image_RzLQqU": {
           "type": "image",
           "settings": {
             "image": "shopify://shop_images/Header_Web_SLIDE1_826f86f7-4341-418d-863a-271e7ffebfb9.jpg",
@@ -164,7 +116,6 @@
             "text_position": "bottom_left",
             "subheading": "",
             "title": "Hautfreundlich für sensible Stellen",
-            "title_h1": false,
             "subtitle": "<p>0 % Schadstoffe. 0 % Biozide. <br/>100 % zertifizierter Komfort.</p>",
             "subtitle_html": "",
             "button_1_text": "Zur Kollektion",
@@ -175,227 +126,51 @@
             "heading_color": "#ffffff",
             "text_color": "#ffffff",
             "button_background": "#ffffff",
-            "button_text_color": "#000000",
+            "button_text_color": "#1a1a1a",
             "overlay_color": "#000000",
             "overlay_opacity": 0,
             "schedule_publishing": false,
-            "publish_date": "01.01.2019 00:00",
+            "publish_date": "15.09.2025 00:01",
             "schedule_unpublishing": false,
             "unpublish_date": "01.01.2019 00:00"
           }
         },
-        "image_qtVQKR": {
+        "image_U6FCMT": {
           "type": "image",
           "disabled": true,
           "settings": {
-            "image": "shopify://shop_images/Header_Asset.png",
-            "mobile_image": "shopify://shop_images/Header_mobile_Asset_2.jpg",
-            "text_position": "bottom_left",
+            "image": "shopify://shop_images/Header_Web_5845d9a2-54ee-444c-9611-c38e624f417f.jpg",
+            "mobile_image": "shopify://shop_images/Homepage_Banner_mobile.jpg",
+            "text_position": "middle_left",
             "subheading": "",
-            "title": "",
-            "title_h1": false,
-            "subtitle": "",
+            "title": "Hol dir das Empowerment Shirt",
+            "subtitle": "<p>My favorite season is the fall of the patriarchy. 100% des Gewinns gehen an UN Women Deutschland e.V.</p>",
             "subtitle_html": "",
-            "button_1_text": "BLACK FRIDAY ANGEBOTE",
-            "button_1_link": "shopify://collections/all-2",
-            "button_2_text": "",
-            "button_2_link": "",
-            "heading_font_family": "circular",
-            "heading_color": "#ffffff",
-            "text_color": "#ffffff",
-            "button_background": "#ffffff",
-            "button_text_color": "#cc0807",
-            "overlay_color": "#cc0807",
-            "overlay_opacity": 0,
-            "schedule_publishing": false,
-            "publish_date": "28.11.2025 00:01",
-            "schedule_unpublishing": false,
-            "unpublish_date": "01.01.2019 00:00"
-          }
-        }
-      },
-      "block_order": [
-        "image_ccGbEF",
-        "image_RzLQqU",
-        "image_tbjbBK",
-        "image_gaDgj7",
-        "image_qtVQKR"
-      ],
-      "settings": {
-        "section_height": "medium",
-        "transition_type": "fade",
-        "autoplay": true,
-        "cycle_speed": 6,
-        "background": "#ffe6e6",
-        "show_banner_usps": false,
-        "banner_usps_link": "https://buy.thefemalecompany.com/blogs/perioden-ratgeber/giftige-schwermetalle-in-tampons",
-        "show_hide_button": false,
-        "banner_usps_bg_color": "#ffffff",
-        "banner_usps_text_color": "#2abb53",
-        "banner_usps_heading": "🤝ZERTIFIZIERTE PRODUKTSICHERHEIT 🤝",
-        "banner_usps_svg_1": "shopify://shop_images/Icon_Certified_e82c9913-74fc-4dc5-afee-decc7f31dd88.svg",
-        "banner_usps_heading_1": "GEPRÜFT AUF ÜBER 1000 SCHADSTOFFE",
-        "banner_usps_svg_2": "shopify://shop_images/Icon_Certified_e82c9913-74fc-4dc5-afee-decc7f31dd88.svg",
-        "banner_usps_heading_2": "LABORTEST JULY24: FREI VON ARSEN & BLEI",
-        "banner_usps_svg_3": "shopify://shop_images/Icon_Certified_e82c9913-74fc-4dc5-afee-decc7f31dd88.svg",
-        "banner_usps_heading_3": "OHNE BIOZIDE & OHNE PFAS",
-        "banner_usps_svg_4": "shopify://shop_images/Icon_Certified_e82c9913-74fc-4dc5-afee-decc7f31dd88.svg",
-        "banner_usps_heading_4": "OEKO-TEX100 STANDARD"
-      }
-    },
-    "slideshow_NWyTdV": {
-      "type": "slideshow",
-      "blocks": {
-        "image_R9B3De": {
-          "type": "image",
-          "disabled": true,
-          "settings": {
-            "image": "shopify://shop_images/Header_mobile_Asset_1_23ddca9f-e213-496c-a75e-cfdd782b7c65.jpg",
-            "mobile_image": "shopify://shop_images/Header_Web_Preview_4.png",
-            "text_position": "bottom_left",
-            "subheading": "",
-            "title": "",
-            "title_h1": false,
-            "subtitle": "",
-            "subtitle_html": "",
-            "button_1_text": "Zum SALE",
-            "button_1_link": "shopify://collections/all-2",
+            "button_1_text": "Zum Impact Shirt",
+            "button_1_link": "https://buy.thefemalecompany.com/products/fallofthepatriarchy-shirt",
             "button_2_text": "",
             "button_2_link": "",
             "heading_font_family": "circular",
             "heading_color": "#cc0807",
-            "text_color": "#ffffff",
-            "button_background": "#cc0807",
-            "button_text_color": "#ffffff",
+            "text_color": "#cc0807",
+            "button_background": "#f1bce6",
+            "button_text_color": "#ff3f46",
             "overlay_color": "#000000",
             "overlay_opacity": 0,
-            "schedule_publishing": false,
+            "schedule_publishing": true,
             "publish_date": "06.03.2025 00:01",
             "schedule_unpublishing": false,
-            "unpublish_date": "23.11.2025 23:59"
-          }
-        },
-        "image_EKQUPT": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/Header_Web_Preview_2.png",
-            "mobile_image": "shopify://shop_images/Header_mobile_Preview_2_a6667c4b-5da4-4e33-be2b-bcb0eb0aa7d4.jpg",
-            "text_position": "bottom_left",
-            "subheading": "",
-            "title": "",
-            "title_h1": false,
-            "subtitle": "",
-            "subtitle_html": "",
-            "button_1_text": "Zum Sale",
-            "button_1_link": "shopify://collections/all-2",
-            "button_2_text": "",
-            "button_2_link": "",
-            "heading_font_family": "circular",
-            "heading_color": "#cc0807",
-            "text_color": "#cc0807",
-            "button_background": "#cc0807",
-            "button_text_color": "#ffffff",
-            "overlay_color": "#1a1a1a",
-            "overlay_opacity": 12,
-            "schedule_publishing": true,
-            "publish_date": "14.07.2025 00:01",
-            "schedule_unpublishing": true,
-            "unpublish_date": "23.11.2025 23:59"
-          }
-        },
-        "image_GkKjCR": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/Header_Web_Preview_4.png",
-            "mobile_image": "shopify://shop_images/Header_mobile_Asset_2cce4018-bb7a-49fc-9971-5d5d4f3bca5c.jpg",
-            "text_position": "bottom_left",
-            "subheading": "",
-            "title": "",
-            "title_h1": false,
-            "subtitle": "",
-            "subtitle_html": "",
-            "button_1_text": "Zum Sale",
-            "button_1_link": "shopify://collections/all-2",
-            "button_2_text": "",
-            "button_2_link": "",
-            "heading_font_family": "circular",
-            "heading_color": "#ffffff",
-            "text_color": "#ffffff",
-            "button_background": "#cc0807",
-            "button_text_color": "#ffffff",
-            "overlay_color": "#000000",
-            "overlay_opacity": 8,
-            "schedule_publishing": true,
-            "publish_date": "06.11.2025 00:01",
-            "schedule_unpublishing": false,
-            "unpublish_date": "23.11.2025 23:59"
-          }
-        },
-        "image_Dyi7Lr": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/Header_Web_Preview_3.jpg",
-            "mobile_image": "shopify://shop_images/Header_mobile_24a5b5fe-5762-40a6-92f4-006708495db0.jpg",
-            "text_position": "bottom_left",
-            "subheading": "",
-            "title": "Newsletter Only Deals",
-            "title_h1": false,
-            "subtitle": "<p>Unter allen Anmeldungen verlosen wir einen <br/>Rimowa Koffer und ein Unterwäsche Set.</p>",
-            "subtitle_html": "",
-            "button_1_text": "Jetzt Anmelden",
-            "button_1_link": "shopify://pages/gewinnspiel-rimowa",
-            "button_2_text": "",
-            "button_2_link": "",
-            "heading_font_family": "circular",
-            "heading_color": "#cc0807",
-            "text_color": "#cc0807",
-            "button_background": "#cc0807",
-            "button_text_color": "#ffffff",
-            "overlay_color": "#000000",
-            "overlay_opacity": 0,
-            "schedule_publishing": true,
-            "publish_date": "07.10.2025 00:01",
-            "schedule_unpublishing": true,
-            "unpublish_date": "23.11.2025 23:59"
-          }
-        },
-        "image_FHKyTt": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/Header_Web__1_f15607c8-b4d9-4b7b-a63f-0a2814575728.jpg",
-            "mobile_image": "shopify://shop_images/Header_mobile_704e0c07-9cc0-4aea-b11f-9706d5dbe5ea.jpg",
-            "text_position": "bottom_left",
-            "subheading": "",
-            "title": "Auslaufsicher durch die Nacht",
-            "title_h1": false,
-            "subtitle": "<p>NEU: Endlich durchschlafen mit trockenem Tragegefühl. Die Shorts mit Night Protect® Technologie – extra lange Saugeinlage.</p>",
-            "subtitle_html": "",
-            "button_1_text": "Zur Kollektion",
-            "button_1_link": "shopify://collections/sleep",
-            "button_2_text": "",
-            "button_2_link": "",
-            "heading_font_family": "circular",
-            "heading_color": "#ffffff",
-            "text_color": "#ffffff",
-            "button_background": "#5f65c3",
-            "button_text_color": "#ffffff",
-            "overlay_color": "#000000",
-            "overlay_opacity": 16,
-            "schedule_publishing": true,
-            "publish_date": "20.10.2025 00:01",
-            "schedule_unpublishing": true,
-            "unpublish_date": "23.11.2025 23:59"
+            "unpublish_date": "21.03.2025 23:59"
           }
         }
       },
       "block_order": [
-        "image_R9B3De",
-        "image_EKQUPT",
-        "image_GkKjCR",
-        "image_Dyi7Lr",
-        "image_FHKyTt"
+        "image_R8xt4t",
+        "image_TFPrUN",
+        "image_TBa6w8",
+        "image_RzLQqU",
+        "image_U6FCMT"
       ],
-      "disabled": true,
       "settings": {
         "section_height": "medium",
         "transition_type": "fade",
@@ -425,10 +200,10 @@
         "section_id": "pf-6385c830"
       }
     },
-    "expandable_slides_pyxR7e": {
+    "expandable_slides_r4RA4M": {
       "type": "expandable-slides",
       "blocks": {
-        "slide_9ANEcT": {
+        "slide_ib9KyC": {
           "type": "slide",
           "settings": {
             "title": "60 Tage Geld zurück Garantie",
@@ -444,7 +219,7 @@
             "unpublish_date": ""
           }
         },
-        "slide_8NhWz9": {
+        "slide_VtnRPR": {
           "type": "slide",
           "settings": {
             "title": "Kostenloser Versand ab 65€",
@@ -462,8 +237,8 @@
         }
       },
       "block_order": [
-        "slide_9ANEcT",
-        "slide_8NhWz9"
+        "slide_ib9KyC",
+        "slide_VtnRPR"
       ],
       "custom_css": [
         ".expandable-slides__usps-grid {grid-template-columns: repeat(3, 1fr) !important;}"
@@ -523,14 +298,6 @@
           "settings": {
             "logo": "shopify://shop_images/Bestsellers_Bubble.png",
             "link": ""
-          }
-        },
-        "logo_bKNVin": {
-          "type": "logo",
-          "disabled": true,
-          "settings": {
-            "logo": "shopify://shop_images/Frame_93_1.png",
-            "link": "shopify://collections/all-2"
           }
         },
         "logo_7GTLfP": {
@@ -621,7 +388,6 @@
       },
       "block_order": [
         "template--15545379094766__b66cd4b6-3bfe-4536-9245-9a832c26dd53-logo-1",
-        "logo_bKNVin",
         "logo_7GTLfP",
         "logo_ngbt7J",
         "template--15545379094766__b66cd4b6-3bfe-4536-9245-9a832c26dd53-logo-2",
@@ -634,10 +400,6 @@
         "template--15545379094766__b66cd4b6-3bfe-4536-9245-9a832c26dd53-logo-5",
         "logo_NwmBBy",
         "5fa4190a-f638-49ca-8aeb-1b9fdb363613"
-      ],
-      "custom_css": [
-        ".logo-list__arrow {background: #cc0807 !important;}",
-        ".icon--nav-arrow-right,.icon--nav-arrow-left {color: white;}"
       ],
       "settings": {
         "reveal_on_scroll": false,
@@ -687,7 +449,7 @@
         "allow_heading_override": false,
         "section_short_description": "<p>Auslaufsicher für bis zu 12 Stunden.<br/>Hautfreundliches Material – OEKO-TEX® 100 zertifiziert & ohne Biozide.</p>",
         "heading_size": "h2",
-        "highest_hierarchy": false,
+        "highest_hierarchy": true,
         "section_heading_font_family": "default",
         "short_description_font_size": "medium",
         "section_text_color": "#000000",
@@ -757,11 +519,11 @@
         "section_spacing_bottom_mobile": 32
       }
     },
-    "image_with_text_overlay_MEtKGt": {
+    "image_with_text_overlay_ihDKUw": {
       "type": "image-with-text-overlay",
       "name": "Image with text overlay",
       "settings": {
-        "reveal_on_scroll": false,
+        "reveal_on_scroll": true,
         "section_height": "auto",
         "image": "shopify://shop_images/Section_Bio-Baumwolle.png",
         "subheading": "",
@@ -1004,10 +766,10 @@
         "section_spacing_bottom_mobile": 0
       }
     },
-    "image-with-text": {
+    "image_with_text_gGRPWD": {
       "type": "image-with-text",
       "blocks": {
-        "item-1": {
+        "item_FnfNc6": {
           "type": "item",
           "settings": {
             "image": "shopify://shop_images/Anni_Sinja_Gruenderinnen_TheFemaleCompany.jpg",
@@ -1021,7 +783,7 @@
         }
       },
       "block_order": [
-        "item-1"
+        "item_FnfNc6"
       ],
       "settings": {
         "reveal_on_scroll": true,
@@ -1130,7 +892,7 @@
         "button_text_color": "rgba(0,0,0,0)",
         "subheading": "HAUTFREUNDLICH",
         "title": "Premium-Unterwäsche",
-        "content": "<p>Unterwäsche aus Bio-Baumwolle für jeden Tag.</p>",
+        "content": "<p>Deine Lieblingsstyles als Premium-Unterwäsche für jeden Tag.</p>",
         "section_header_heading_size": "h2",
         "section_header_highest_hierarchy": false,
         "section_header_short_description_font_size": "medium",
@@ -1411,23 +1173,21 @@
   },
   "order": [
     "marquee_fyi6zy",
-    "countdown_timer_GHVfQE",
     "slideshow",
-    "slideshow_NWyTdV",
     "pagefly_section_GqP4q7",
-    "expandable_slides_pyxR7e",
+    "expandable_slides_r4RA4M",
     "pagefly_section_3W3yCx",
     "b66cd4b6-3bfe-4536-9245-9a832c26dd53",
     "trustpilot_jPhAbM",
     "section_header_7B8RTm",
     "featured-collections",
-    "image_with_text_overlay_MEtKGt",
+    "image_with_text_overlay_ihDKUw",
     "featured_collections_ckPfxX",
     "section_header_JywTXG",
     "170722167165180778",
     "section_header_n3KcgW",
     "1643021395d0418d16",
-    "image-with-text",
+    "image_with_text_gGRPWD",
     "featured_collections_LbTHbP",
     "featured_collections_zHdDiU",
     "featured_collections_BT7iep",

@@ -6479,7 +6479,7 @@ input:checked + .popover__choice-label::after,
 .color-swatch__item::after {
   position: absolute;
   content: '';
-  border: 2px solid rgb(var(--section-background, var(--background)));
+  border: 2px solid #efefef;
   pointer-events: none;
   border-radius: inherit;
 }
@@ -17959,3 +17959,4 @@ z-index: 1;
     max-width: 100%;
   }
 }
+

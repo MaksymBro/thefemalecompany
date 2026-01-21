@@ -369,8 +369,16 @@
 
         {%- assign cart_has_gifts = false -%}
 
+        {%- if settings.fake_gift_position == 'start' -%}
+          {%- render 'fake-gift-item', is_drawer: true -%}
+        {%- endif -%}
         {% assign intelligems_total = 0 %}
         {%- for line_item in cart.items -%}
+
+          {% if settings.fake_gift_hide_normal_free_gifts and line_item.final_price <= 0 %}
+            {% continue %}
+          {% endif %}
+
           {%- for testproduct in settings.a_b_test_products -%}
             {%- if testproduct.id == line_item.product.id -%}
               {%- assign a_b_test_product_id = true -%}
@@ -592,6 +600,10 @@
             </div>
           </line-item>
         {%- endfor -%}
+
+        {%- if settings.fake_gift_position == 'end' -%}
+          {%- render 'fake-gift-item', is_drawer: true -%}
+        {%- endif -%}
 
         {%- if cart_has_gifts -%}
           <h6 class="heading heading--small">{{ 'cart.gifts.title' | t }}</h6>

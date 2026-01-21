@@ -58,7 +58,6 @@
         },
         "image_YrB8rP": {
           "type": "image",
-          "disabled": true,
           "settings": {
             "image": "shopify://shop_images/Header_Web__16_59711cf0-f500-4a9b-b7b4-fc07fe0a0ca3.jpg",
             "mobile_image": "shopify://shop_images/Header_mobile_17_788005aa-845b-4ee2-aabd-9a36141891e4.jpg",
@@ -89,7 +88,6 @@
         "image_amMaBM",
         "image_YrB8rP"
       ],
-      "disabled": true,
       "settings": {
         "section_height": "small",
         "transition_type": "sweep",
@@ -166,7 +164,6 @@
         "end_time": "10:00",
         "section_subheading": "",
         "section_heading": "Zertifizierte Produktsicherheit.",
-        "allow_heading_override": false,
         "section_short_description": "<p>Keine Biozide. Keine PFAS. Kein Silberchlorid. Getestet auf Arsen, Blei & über 1000 Schadstoffe. </p>",
         "heading_size": "h3",
         "highest_hierarchy": false,
@@ -186,10 +183,7 @@
     },
     "c5dfe7d7-23ff-4436-b583-50ac54e6c289": {
       "type": "discount-code-showcase",
-      "disabled": true,
       "settings": {
-        "fixed_discount_code": "NONE",
-        "fixed_discount_amount": "10%",
         "inner_section_background": "#ffd9d9",
         "discount_badge_background": "#ea697d",
         "discount_badge_text_color": "#ffffff",
@@ -217,7 +211,6 @@
       "block_order": [
         "reviews_io_reviewsio_rating_bar_WfLgwD"
       ],
-      "disabled": true,
       "settings": {
         "include_horizontal_margins": true,
         "include_vertical_margins": false

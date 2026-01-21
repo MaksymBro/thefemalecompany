@@ -7,7 +7,7 @@
   }
 
   {%- for block in section.blocks -%}
-    {%- liquid
+    {%- liquid 
       assign now = "now" | date: "%s"
 
       if block.settings.schedule_publishing
@@ -120,9 +120,9 @@
   <slide-show reveal-on-scroll {% if section.settings.autoplay %}auto-play{% endif %} transition-type="{{ section.settings.transition_type | escape }}" class="slideshow slideshow--{{ section.settings.section_height }}">
     <div class="slideshow__slide-list">
       {%- assign slide_counter = 0 -%}
-
+      
       {%- for block in section.blocks -%}
-        {%- liquid
+        {%- liquid 
           assign now = "now" | date: "%s"
 
           if block.settings.schedule_publishing
@@ -209,15 +209,9 @@
             {%- endif -%}
 
             {%- if block.settings.title != blank -%}
-              {% if block.settings.title_h1 == true %}
-                <h1 class="heading heading--large js-slideshow-heading">
-                  <split-lines {% if section.settings.transition_type != 'fade' %}reveal{% endif %}>{{ block.settings.title | escape }}</split-lines>
-                </h1>
-              {% else %}
               <h3 class="heading heading--large js-slideshow-heading">
                 <split-lines {% if section.settings.transition_type != 'fade' %}reveal{% endif %}>{{ block.settings.title | escape }}</split-lines>
               </h3>
-              {% endif %}
             {%- endif -%}
 
             {%- if block.settings.subtitle != blank or block.settings.subtitle_html != blank -%}
@@ -293,20 +287,20 @@
       <page-dots {% if section.settings.autoplay %}animation-timer{% endif %} class="slideshow__nav container">
         {%- assign slide_counter = 0 -%}
         {%- for block in section.blocks -%}
-          {%- liquid
+          {%- liquid 
             assign now = "now" | date: "%s"
-
+  
             if block.settings.schedule_publishing
               assign publish_date = block.settings.publish_date | date: "%s"
-
+  
               if publish_date != blank and now < publish_date
                 continue
               endif
             endif
-
+  
             if block.settings.schedule_unpublishing
               assign unpublish_date = block.settings.unpublish_date | date: "%s"
-
+  
               if unpublish_date != blank and now > unpublish_date
                 continue
               endif
@@ -582,11 +576,6 @@
           "id": "title",
           "label": "Heading",
           "default": "Slide title"
-        },{
-          "type": "checkbox",
-          "id": "title_h1",
-          "label": "Heading is H1",
-          "default": false
         },
         {
           "type": "richtext",

@@ -1,4 +1,4 @@
-{% assign css_assets = 'theme.css,custom.css,utilities.css,animate-4.1.1.min.css' | split: ',' %}
+{% assign css_assets = 'theme.css,custom.css,utilities.css,animate-4.1.1.min.css, color-swatch.css' | split: ',' %}
 {% assign deferred_css_assets = 'reviewsio.css,kraken.css,recharge.css,klaviyo.css,pagefly-custom.css,toastr.css,bloggle.css,intelligems.css'
   | split: ','
 %}
@@ -35,8 +35,7 @@
 {%- if page_description -%}
   <meta name="description" content="{{ page_description | escape }}">
 {%- endif -%}
-
-{% render 'canonical-url' %}
+<link rel="canonical" href="{{ canonical_url }}">
 {% render 'social-meta-tags' %}
 {% render 'microdata-schema' %}
 

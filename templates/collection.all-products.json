@@ -9,52 +9,6 @@
  */
 {
   "sections": {
-    "countdown_timer_i63eBK": {
-      "type": "countdown-timer",
-      "blocks": {
-        "text_EttrRX": {
-          "type": "text",
-          "settings": {
-            "text": "<p><strong>Bis zu 30% Rabatt mit unserem geheimen Code</strong> 🔥 Finde es im Checkout heraus !!</p>",
-            "offset_top_desktop": 20,
-            "offset_bottom_desktop": 20,
-            "offset_top_mobile": 10,
-            "offset_bottom_mobile": 10
-          }
-        },
-        "countdown_timer_q4TjdH": {
-          "type": "countdown_timer",
-          "settings": {
-            "show_countdown_words": true,
-            "countdown_start_date": "2025-11-09",
-            "countdown_start_time_hour": "18",
-            "countdown_start_time_minute": "00",
-            "countdown_date": "2025-11-09",
-            "countdown_time_hour": "23",
-            "countdown_time_minute": "59",
-            "timer_link": "",
-            "timer_font_size_mobile": 1,
-            "text_font_size_mobile": 0.6,
-            "timer_font_size_desktop": 4.5,
-            "text_font_size_desktop": 1.5,
-            "offset_top_desktop": 20,
-            "offset_bottom_desktop": 20,
-            "offset_top_mobile": 10,
-            "offset_bottom_mobile": 10
-          }
-        }
-      },
-      "block_order": [
-        "text_EttrRX",
-        "countdown_timer_q4TjdH"
-      ],
-      "name": "Countdown timer",
-      "settings": {
-        "countdown_text_color": "#1a1a1a",
-        "background_color": "#fff0f0",
-        "text_color": "#1a1a1a"
-      }
-    },
     "collection-banner": {
       "type": "collection-banner",
       "settings": {
@@ -107,10 +61,11 @@
     },
     "rich_text_aakhLY": {
       "type": "rich-text",
+      "disabled": true,
       "name": "Rich text",
       "settings": {
-        "subheading": "Unser Wintersale mit",
-        "title": "25% EXTRA Rabatt",
+        "subheading": "",
+        "title": "Summersale",
         "content": "",
         "button_text": "",
         "button_link": "",
@@ -118,8 +73,8 @@
         "text_width": "medium",
         "text_position": "center",
         "text_alignment": "center",
-        "background": "#ffffff",
-        "text_color": "#cc0807",
+        "background": "rgba(0,0,0,0)",
+        "text_color": "rgba(0,0,0,0)",
         "button_background": "rgba(0,0,0,0)",
         "button_text_color": "rgba(0,0,0,0)"
       }
@@ -163,7 +118,7 @@
         "max_width_logo_mobile": 100,
         "logo_background": "rgba(0,0,0,0)",
         "section_container_width": "md",
-        "section_background_color": "#ffffff",
+        "section_background_color": "rgba(0,0,0,0)",
         "section_spacing_top": 0,
         "section_spacing_bottom": 0,
         "section_spacing_different_mobile": true,
@@ -217,7 +172,6 @@
     }
   },
   "order": [
-    "countdown_timer_i63eBK",
     "collection-banner",
     "section_header_DwRctk",
     "rich_text_aakhLY",
